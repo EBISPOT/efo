@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/efo
+
+idspace: EFO
+base_url: /obo/efo
+
+products:
+- efo.owl: https://raw.githubusercontent.com/EBISPOT/efo/master/efo.owl
+- efo.obo: https://raw.githubusercontent.com/EBISPOT/efo/master/efo.obo
+
+term_browser: ontobee
+example_terms:
+- EFO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/EBISPOT/efo/v
+
+- prefix: /tracker/
+  replacement: https://github.com/EBISPOT/efo/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/EFO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/EBISPOT/efo/master/
