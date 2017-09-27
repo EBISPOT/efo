@@ -3,7 +3,7 @@
 # ----------------------------------------
 # these can be overwritten on the command line
 
-OBO=http://purl.obolibrary.org/obo
+OBO=http://www.ebi.ac.uk
 ONT=efo
 BASE=$(OBO)/$(ONT)
 SRC=$(ONT)-edit.owl
@@ -17,7 +17,8 @@ SPARQLDIR = ../sparql
 # Top-level targets
 # ----------------------------------------
 
-all: sparql_test all_imports $(ONT).owl $(ONT).obo
+#all: sparql_test all_imports $(ONT).owl $(ONT).obo
+all: all_imports $(ONT).owl
 test: sparql_test all
 prepare_release: all
 	cp $(ONT).owl $(ONT).obo $(RELEASEDIR) &&\
@@ -34,7 +35,7 @@ prepare_release: all
 # by default we use Elk to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 $(ONT).owl: $(SRC)
-	$(ROBOT)  reason -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
+	$(ROBOT) -vv reason -i $< -r HermiT reduce -r HermiT annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@
 
