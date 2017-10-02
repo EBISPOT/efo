@@ -1,0 +1,11 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?cls (count(?label) as ?label_count) WHERE
+{
+  ?cls rdfs:label ?label .
+  ?cls a owl:Class .
+  FILTER (!isBlank(?cls)) .
+  FILTER (?label_count > 1) .
+}
+GROUP BY ?cls ?label

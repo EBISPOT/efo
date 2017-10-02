@@ -5,10 +5,13 @@
 
 OBO=http://www.ebi.ac.uk
 ONT=efo
+ONT_INF=efo_inferred
+ONT_INF_ALL=efo_inferred_all
 BASE=$(OBO)/$(ONT)
 SRC=$(ONT)-edit.owl
 RELEASEDIR=../..
 ROBOT= robot
+EFO2OBO= efo2obo
 OWLTOOLS= owltools
 USECAT= --use-catalog
 SPARQLDIR = ../sparql
@@ -17,14 +20,10 @@ SPARQLDIR = ../sparql
 # Top-level targets
 # ----------------------------------------
 
-#all: sparql_test all_imports $(ONT).owl $(ONT).obo
-all: all_imports $(ONT).owl
-test: sparql_test all
+all: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo
+test: all sparql_test
 prepare_release: all
-	cp $(ONT).owl $(ONT).obo $(RELEASEDIR) &&\
-	mkdir -p $(RELEASEDIR)/imports &&\
-	cp imports/*{owl,obo} $(RELEASEDIR)/imports &&\
-	git add $(RELEASEDIR)/imports/*{obo,owl} &&\
+	cp $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(RELEASEDIR) &&\
 	(test -f subsets/*owl && cp subsets/*{owl,obo} $(RELEASEDIR)/subsets && git add $(RELEASEDIR)/subsets/* || echo "no subsets") &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 
@@ -32,12 +31,20 @@ prepare_release: all
 # Main release targets
 # ----------------------------------------
 
-# by default we use Elk to perform a reason-relax-reduce chain
-# after that we annotate the ontology with the release versionInfo
+# create the main efo release by merging and removing imrpot statments
+# this will also set the release date and version number 
 $(ONT).owl: $(SRC)
-	$(ROBOT) -vv reason -i $< -r hermit reduce -r hermit annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
-$(ONT).obo: $(ONT).owl
-	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@
+	$(ROBOT) -v merge -c true -i  $< annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
+
+$(ONT_INF).owl: $(ONT).owl
+	$(ROBOT) -v reason -s true -m true -r hermit -i $< -o $@
+
+$(ONT_INF_ALL).owl: $(ONT).owl
+	$(ROBOT) -vv merge -i $< -i $(ONT_INF).owl -o $(ONT_INF_ALL).owl
+
+$(ONT).obo: $(ONT_INF).owl
+	$(EFO2OBO) -i $(ONT_INF).owl -o $(ONT).obo
+#	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@
 
 # ----------------------------------------
 # Import modules
@@ -70,7 +77,7 @@ mirror/%.owl: $(SRC)
 # Release
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
-release: $(ONT).owl $(ONT).obo
+release: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo
 	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
 
 # ----------------------------------------
@@ -79,11 +86,11 @@ release: $(ONT).owl $(ONT).obo
 
 # these live in the ../sparql directory, and have suffix -violation.sparql
 # adding the name here will make the violation check live
-VCHECKS = equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
+VCHECKS = duplicate-label  nolabels multiple-label
 
 # run all violation checks
 VQUERIES = $(foreach V,$(VCHECKS),$(SPARQLDIR)/$V-violation.sparql)
-sparql_test: $(SRC)
+sparql_test: $(ONT).owl
 	robot verify -i $< --queries $(VQUERIES) -O reports/
 
 # ----------------------------------------

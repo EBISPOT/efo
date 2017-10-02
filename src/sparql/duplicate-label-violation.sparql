@@ -1,0 +1,16 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?cls1 ?cls2 WHERE
+{
+  ?cls1 rdfs:label ?label1 ;
+        a owl:Class .
+  ?cls2 rdfs:label ?label2 ;
+        a owl:Class .
+
+  FILTER (?cls1 != ?cls2) .
+  FILTER (!isBlank(?cls1)) .
+  FILTER (!isBlank(?cls2))  .
+  FILTER ( lcase(?label1) = lcase(?label2) )
+
+}

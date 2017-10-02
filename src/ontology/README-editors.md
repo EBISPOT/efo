@@ -2,8 +2,6 @@ These notes are for the EDITORS of efo
 
 This project was created using the [ontology starter kit](https://github.com/cmungall/ontology-starter-kit). See the site for details.
 
-For more details on ontology management, please see the [OBO tutorial](https://github.com/jamesaoverton/obo-tutorial) or the [Gene Ontology Editors Tutorial](go-protege-tutorial.readthedocs.io)
-
 ## Editors Version
 
 Make sure you have an ID range in the [idranges file](efo-idranges.owl)

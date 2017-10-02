@@ -1,0 +1,4 @@
+#!/bin/sh
+
+base=${0%/*};
+java -DentityExpansionLimit=100000000 -Xmx1g -jar $base/owl2obo.jar -f efo $@;
