@@ -91,7 +91,7 @@ VCHECKS = duplicate-label  nolabels multiple-label
 # run all violation checks
 VQUERIES = $(foreach V,$(VCHECKS),$(SPARQLDIR)/$V-violation.sparql)
 sparql_test: $(ONT).owl
-	robot verify -i $< --queries $(VQUERIES) -O reports/
+	$(ROBOT) verify -i $< --queries $(VQUERIES) -O reports/
 
 # ----------------------------------------
 # Sparql queries: Reports
