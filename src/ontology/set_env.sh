@@ -1,1 +1,1 @@
-export PATH=\$PATH:$PWD/../../bin
+export PATH=$PATH:$PWD/../../bin

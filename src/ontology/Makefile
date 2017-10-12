@@ -10,9 +10,9 @@ ONT_INF_ALL=efo_inferred_all
 BASE=$(OBO)/$(ONT)
 SRC=$(ONT)-edit.owl
 RELEASEDIR=../..
-ROBOT= robot
-EFO2OBO= efo2obo
-OWLTOOLS= owltools
+ROBOT= ../../bin/robot
+EFO2OBO= ../../bin/efo2obo
+OWLTOOLS= ../../bin/owltools
 USECAT= --use-catalog
 SPARQLDIR = ../sparql
 
@@ -78,7 +78,7 @@ mirror/%.owl: $(SRC)
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
 release: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo
-	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
+	cp $^ $(RELEASEDIR) 
 
 # ----------------------------------------
 # Sparql queries: Q/C
