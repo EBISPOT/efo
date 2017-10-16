@@ -24,7 +24,7 @@ to release:
 
 If this looks good type:
 
-    make prepare_release
+    make release
 
 This generates derived files such as efo.owl and efo.obo and places
 them in the top level (../..). The versionIRI will be added.
