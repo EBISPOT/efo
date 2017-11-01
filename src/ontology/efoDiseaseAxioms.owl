@@ -2418,13 +2418,13 @@
     <owl:Class rdf:about="&obo;UBERON_0002110">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                <owl:onProperty rdf:resource="&obo;RO_0002202"/>
                 <owl:someValuesFrom rdf:resource="&obo;UBERON_0002423"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0002202"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="&obo;UBERON_0002423"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2813,10 +2813,10 @@
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&obo;UBERON_0000974"/>
+                                    <rdf:Description rdf:about="&obo;UBERON_0000033"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                        <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
+                                        <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
                                     </owl:Restriction>
                                 </owl:unionOf>
                             </owl:Class>
@@ -2834,10 +2834,10 @@
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&obo;UBERON_0000033"/>
+                                    <rdf:Description rdf:about="&obo;UBERON_0000974"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                        <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
+                                        <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
                                     </owl:Restriction>
                                 </owl:unionOf>
                             </owl:Class>
@@ -2887,13 +2887,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000558"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000408"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000408"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000558"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3191,7 +3191,7 @@
                             <rdf:Description rdf:about="&obo;OGMS_0000063"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="&efo;EFO_0005816"/>
+                                <owl:someValuesFrom rdf:resource="&obo;HP_0002180"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3213,7 +3213,7 @@
                             <rdf:Description rdf:about="&obo;OGMS_0000063"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="&obo;HP_0002180"/>
+                                <owl:someValuesFrom rdf:resource="&efo;EFO_0005816"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3230,12 +3230,6 @@
         <rdfs:subClassOf rdf:resource="&efo;EFO_0000618"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000100"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -3248,6 +3242,12 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3341,12 +3341,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000019"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:allValuesFrom rdf:resource="&obo;UBERON_0000079"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3354,6 +3348,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom rdf:resource="&obo;UBERON_0000079"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000019"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3389,12 +3389,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -3406,6 +3400,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3823,13 +3823,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001052"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001155"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001155"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001052"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4098,13 +4098,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
+                <owl:allValuesFrom rdf:resource="&obo;UBERON_0000955"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:allValuesFrom rdf:resource="&obo;UBERON_0000955"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4246,13 +4246,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000160"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000160"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5116,13 +5116,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001817"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001044"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001044"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001817"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5183,13 +5183,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000982"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0001369"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0001369"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000982"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -5760,13 +5760,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000182"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000232"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000232"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000182"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -7167,13 +7167,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:allValuesFrom rdf:resource="&obo;UBERON_0001017"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001017"/>
+                <owl:allValuesFrom rdf:resource="&obo;UBERON_0001017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -7465,13 +7465,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000574"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0001642"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0001642"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000574"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -12073,6 +12073,12 @@
     
 
 
+    <!-- http://www.ebi.ac.uk/efo/EFO_0002662 -->
+
+    <owl:Class rdf:about="&efo;EFO_0002662"/>
+    
+
+
     <!-- http://www.ebi.ac.uk/efo/EFO_0002686 -->
 
     <owl:Class rdf:about="&efo;EFO_0002686">
@@ -12121,14 +12127,14 @@
     <owl:Class rdf:about="&efo;EFO_0002706">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000769"/>
+                <owl:onProperty rdf:resource="&ro;derives_from"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000574"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;derives_from"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000574"/>
+                <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000769"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -13873,18 +13879,14 @@
         <rdfs:subClassOf rdf:resource="&efo;EFO_0000618"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;OGMS_0000063"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="&efo;EFO_0005816"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001871"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001870"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -13905,14 +13907,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001870"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001871"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;OGMS_0000063"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                                <owl:someValuesFrom rdf:resource="&efo;EFO_0005816"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -13964,13 +13970,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002371"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001474"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001474"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002371"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -16111,13 +16117,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001043"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -16573,22 +16579,6 @@
     <owl:Class rdf:about="&efo;EFO_0004211">
         <rdfs:subClassOf rdf:resource="&efo;EFO_0000589"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;OGMS_0000063"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="&obo;GO_0008152"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -16611,6 +16601,22 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;OGMS_0000063"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                                <owl:someValuesFrom rdf:resource="&obo;GO_0008152"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -18278,13 +18284,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0005741"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0001378"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0001378"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0005741"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -19534,13 +19540,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0004243"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000677"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000677"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0004243"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -22748,12 +22754,6 @@
     <owl:Class rdf:about="&efo;EFO_0005585">
         <rdfs:subClassOf rdf:resource="&efo;EFO_1001869"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000059"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -22766,6 +22766,12 @@
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000059"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -23194,14 +23200,14 @@
     <owl:Class rdf:about="&efo;EFO_0005676">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0002200"/>
-                <owl:someValuesFrom rdf:resource="&obo;HP_0012115"/>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002107"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002107"/>
+                <owl:onProperty rdf:resource="&obo;RO_0002200"/>
+                <owl:someValuesFrom rdf:resource="&obo;HP_0012115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -23748,13 +23754,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000275"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000319"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000319"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000275"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -24198,13 +24204,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000677"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0001379"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0001379"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000677"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -25098,13 +25104,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000760"/>
+                <owl:someValuesFrom rdf:resource="&ORDO;Orphanet_636"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                <owl:someValuesFrom rdf:resource="&ORDO;Orphanet_636"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000760"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -28899,13 +28905,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_18059"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002107"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002107"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_18059"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -29009,6 +29015,12 @@
 
     <owl:Class rdf:about="&efo;EFO_0006523">
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000319"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -29021,12 +29033,6 @@
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000319"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -33421,6 +33427,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -33432,12 +33444,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -33472,12 +33478,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -33486,6 +33486,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -35324,10 +35330,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000033"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000974"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -35340,10 +35346,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000974"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000033"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -35361,10 +35367,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000033"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000974"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -35382,10 +35388,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000974"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000033"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -35522,13 +35528,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000319"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000311"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000311"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000319"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -35541,12 +35547,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000311"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -35558,6 +35558,12 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000311"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -35570,6 +35576,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0000311"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -35581,12 +35593,6 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_0000311"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -35889,6 +35895,17 @@
         <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_0007132"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -35901,17 +35918,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_0007132"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -37704,6 +37710,12 @@
     <owl:Class rdf:about="&efo;EFO_0007283">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -37716,12 +37728,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -39785,10 +39791,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001811"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001042"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001811"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001042"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -39806,10 +39812,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001042"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001811"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001042"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001811"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -39899,6 +39905,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000187"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -39916,12 +39928,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;participates_in"/>
                 <owl:someValuesFrom rdf:resource="&efo;EFO_1000096"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000187"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -39943,6 +39949,17 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000187"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_0007454"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -39954,17 +39971,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_0007454"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000187"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -41896,12 +41902,6 @@
     <owl:Axiom>
         <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
         <owl:annotatedSource rdf:resource="&efo;EFO_1000012"/>
-        <owl:annotatedTarget rdf:resource="&ORDO;Orphanet_60030"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000012"/>
         <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
@@ -41919,6 +41919,12 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000012"/>
+        <owl:annotatedTarget rdf:resource="&ORDO;Orphanet_60030"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
     </owl:Axiom>
     
 
@@ -43337,6 +43343,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -43348,12 +43360,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -43364,17 +43370,6 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000065"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -43386,6 +43381,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000065"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -43505,10 +43511,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000007"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000955"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000007"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -43521,10 +43527,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000955"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000007"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000007"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -43542,10 +43548,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0003128"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000955"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0003128"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -43584,10 +43590,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000955"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0003128"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0003128"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -44937,10 +44943,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001820"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0002073"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001820"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002073"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -44953,10 +44959,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0002073"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001820"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002073"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001820"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -47764,6 +47770,17 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000191"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -47775,17 +47792,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000191"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -47882,10 +47888,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001155"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001052"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001155"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001052"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -47903,10 +47909,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001052"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001155"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001052"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001155"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -50799,12 +50805,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -50816,6 +50816,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -50972,12 +50978,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -50989,6 +50989,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -50999,6 +51005,17 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000274"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -51010,17 +51027,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000274"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -51249,10 +51255,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000992"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000473"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000473"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -51270,10 +51276,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000473"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000992"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000473"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -51381,10 +51387,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000974"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000033"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -51397,10 +51403,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000033"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000974"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -51418,10 +51424,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000033"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000974"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -51439,10 +51445,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000974"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000033"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000974"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000033"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -51790,12 +51796,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_1000343"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -51807,6 +51807,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_1000343"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -51817,17 +51823,6 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_1000343"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000297"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -51839,6 +51834,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000297"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_1000343"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -51891,10 +51897,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001155"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000945"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001155"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -51912,10 +51918,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000945"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001155"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001155"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -52337,10 +52343,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000945"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000160"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000160"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -52358,10 +52364,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000160"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000945"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000160"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -53411,12 +53417,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000115"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -53428,6 +53428,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -53438,6 +53444,17 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000115"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000339"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -53449,17 +53466,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000339"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000115"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -53958,10 +53964,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000977"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0002358"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000977"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002358"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -53979,10 +53985,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0002358"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000977"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002358"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000977"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -55055,6 +55061,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -55066,12 +55078,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -56128,12 +56134,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000586"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -56145,6 +56145,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000586"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -56602,12 +56608,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000178"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -56619,6 +56619,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000178"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -56974,10 +56980,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000992"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001040"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001040"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -56990,10 +56996,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001040"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000992"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001040"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -57011,10 +57017,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001040"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000992"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001040"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -57032,10 +57038,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000992"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001040"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000992"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001040"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -57052,6 +57058,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -57063,12 +57075,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -57079,17 +57085,6 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000439"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -57101,6 +57096,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000439"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -57424,22 +57430,6 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000007"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000007"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&obo;UBERON_0003128"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
@@ -57460,6 +57450,22 @@
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
                                 <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;UBERON_0000007"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000007"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -57498,10 +57504,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000007"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000955"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000007"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -57519,10 +57525,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000955"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000007"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000955"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000007"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -58246,10 +58252,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000945"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000160"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000160"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -58262,10 +58268,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000160"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000945"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000160"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000945"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -58830,12 +58836,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -58849,18 +58849,13 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000490"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
+        </rdfs:subClassOf>
+    </owl:Class>
     <owl:Axiom>
         <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
         <owl:annotatedSource rdf:resource="&efo;EFO_1000490"/>
@@ -58900,6 +58895,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000490"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -59772,12 +59778,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -59789,6 +59789,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -59799,6 +59805,17 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000513"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -59810,17 +59827,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000513"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000622"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -59877,6 +59883,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000646"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -59888,12 +59900,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000646"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -59904,17 +59910,6 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000646"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000515"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -59926,6 +59921,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000515"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000646"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -60627,17 +60633,6 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000534"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -60649,6 +60644,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000534"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -60661,12 +60667,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000084"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -60678,6 +60678,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000084"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -61074,12 +61080,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -61091,6 +61091,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -61101,6 +61107,17 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1000547"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -61112,17 +61129,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1000547"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000945"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -63483,6 +63489,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_1000615"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -63494,12 +63506,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_1000615"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -63854,10 +63860,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001264"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0002108"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001264"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002108"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -63875,10 +63881,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0002108"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001264"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002108"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001264"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -64027,18 +64033,18 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002046"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
                         <owl:someValuesFrom rdf:resource="&obo;UBERON_0002046"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002046"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&efo;EFO_0000408"/>
@@ -64249,13 +64255,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002405"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001264"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001264"/>
+                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002405"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -67298,12 +67304,6 @@
     <owl:Class rdf:about="&efo;EFO_1001034">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -67316,6 +67316,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -67360,12 +67366,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000222"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -67377,6 +67377,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000222"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -67983,12 +67989,6 @@
     <owl:Class rdf:about="&efo;EFO_1001078">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -68001,6 +68001,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -68010,17 +68016,6 @@
         <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1001078"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -68033,6 +68028,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1001078"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -68132,6 +68138,12 @@
     <owl:Class rdf:about="&efo;EFO_1001084">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -68144,12 +68156,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -68159,17 +68165,6 @@
         <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1001084"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -68182,6 +68177,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1001084"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -68362,6 +68368,12 @@
     <owl:Class rdf:about="&efo;EFO_1001098">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -68374,12 +68386,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -68389,6 +68395,17 @@
         <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1001098"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -68401,17 +68418,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1001098"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -69911,17 +69917,6 @@
         <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1001202"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -69934,6 +69929,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1001202"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -70517,12 +70523,6 @@
     <owl:Class rdf:about="&efo;EFO_1001239">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -70535,6 +70535,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -70743,17 +70749,6 @@
         <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1001289"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -70766,6 +70761,17 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1001289"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -71085,6 +71091,12 @@
     <owl:Class rdf:about="&efo;EFO_1001312">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -71097,12 +71109,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                <owl:someValuesFrom rdf:resource="&obo;GO_0006954"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -72707,6 +72713,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000115"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -72718,12 +72730,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -72774,6 +72780,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_1001464"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -72785,12 +72797,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_1001464"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -72801,6 +72807,17 @@
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_1001464"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1001465"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -72812,17 +72829,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
-        <owl:annotatedSource rdf:resource="&efo;EFO_1001465"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_1001464"/>
             </owl:Restriction>
         </owl:annotatedTarget>
     </owl:Axiom>
@@ -72909,12 +72915,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
-                <owl:someValuesFrom rdf:resource="&efo;EFO_1001470"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -72926,6 +72926,12 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_1001470"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -76135,10 +76141,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0002371"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0000178"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002371"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000178"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -76156,10 +76162,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0000178"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0002371"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0000178"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0002371"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -76619,10 +76625,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001159"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001052"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001159"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001052"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -76635,10 +76641,10 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;UBERON_0001052"/>
+                            <rdf:Description rdf:about="&obo;UBERON_0001159"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001052"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001159"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -77054,6 +77060,128 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_1002019 -->
+
+    <owl:Class rdf:about="&efo;EFO_1002019">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0002662"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;UBERON_0001474"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001474"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1002019"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;UBERON_0001474"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001474"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1002019"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0002662"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_1002020 -->
+
+    <owl:Class rdf:about="&efo;EFO_1002020">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0002662"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;UBERON_0001474"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001474"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1002020"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;UBERON_0001474"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="&obo;UBERON_0001474"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    <owl:Axiom>
+        <patterns:createdBy rdf:datatype="&xsd;string">http://www.ebi.ac.uk/ontology/webulous#OPPL_pattern</patterns:createdBy>
+        <owl:annotatedSource rdf:resource="&efo;EFO_1002020"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&efo;EFO_0000784"/>
+                <owl:someValuesFrom rdf:resource="&efo;EFO_0002662"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
     
 
 
