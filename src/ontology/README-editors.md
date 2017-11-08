@@ -12,6 +12,48 @@ The editors version is [efo-edit.owl](efo-edit.owl)
 
 To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/EBISPOT/efo) for details.
 
+## Update release notes and e-mail announcement to users
+
+Release notes detailing major changes between releases are produced to aid users awareness.
+
+You will modify the release notes file:
+
+    https://github.com/EBISPOT/efo/blob/master/ExFactor%20Ontology%20release%20notes.txt
+
+The sections you will need to replace or modify should be obvious. To write the release notes use the Bubastis tool  http://www.ebi.ac.uk/efo/bubastis
+
+Historically, Bubastis used to be able to process the diff between the penultimate release (non-inferred, merged efo.owl) and the latest release. This function, however, has stopped working. Alternately, you will download the previous release onto your machine and run Bubastis by uploading files from your local machine as followed:
+
+a. Get the files of the latest and penultimate release (non-inferred) OWL files on Github history of the released EFO (top-most level efo.owl) at https://github.com/EBISPOT/efo/commits/master/efo.owl. 
+
+b. Point Bubastis to these 2 files in your local machine. Important: 'Ontology 1' in Bubastis must be the old version, 'Ontology 2' must be the new version! Leave all the 'diff options' turned on.
+
+c. Copy the "Classes modified" section of the diff into the Section 4 ("4. Change log") of the release notes file
+
+d. Copy the "New classes" section of the diff into the Section 2 ("2. New to EFO") of the release notes file
+
+e. Copy the "Deleted classes" section of the diff into the Section 3 ("3. Obsolete Classes") of the release notes file
+
+f. If any URIs are deprecated and there is a replacement URI to use (e.g. one of a pair of duplicate classes was made obsolete), document these in "Section 1. Changes to URIs". Include the old URI, old name, new URI and new name (and optionally a comment). Also, inform (by email) the ArrayExpress / Atlas database curators! Note - there is no way to know this from the diff itelf, only from your own records of the edits made !
+
+g. Update the total number of classes included in this release in "Summary" (available through Protege 'Window->Views->Ontology views->Ontology metrics')
+
+h. Set the release version number correctly
+
+i. Set the date correctly
+
+j. Add a short paragraph to "Summary:" summarising any major activity that has occurred over the previous month
+
+k. Copy the file to your directory for the external (SourceForge) repository) update both in the internal and external (SourceForge) SVN:
+
+    .../ExperimentalFactorOntology/ReleaseDocs/"ExFactor Ontology release notes.txt" (internal repository)
+    .../efo/trunk/docs/releasedocs/"ExFactor Ontology release notes.txt" (external (SourceForge) repository)
+
+l. Finally, announce the new release by mailing:
+
+    arrayexpress-atlas@ebi.ac.uk
+    efo-users@lists.sourceforge.net
+
 ## Release Manager notes
 
 You should only attempt to make a release AFTER the edit version is
