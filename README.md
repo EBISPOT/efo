@@ -46,7 +46,7 @@ Editors of this ontology should use the edit version, [src/ontology/efo-edit.owl
 
 ## Term requests and contact
 
-Submit new terms or report bugs using our [issue tracker](https://github.com/EBISPOT/efo/issues), or join [EFO mailing list](https://sourceforge.net/projects/efo/lists/efo-users) for announcement and monthly update.
+Submit new terms or report bugs using our [issue tracker](https://github.com/EBISPOT/efo/issues), or join [EFO mailing list](https://listserver.ebi.ac.uk/mailman/listinfo/efo-users) for announcement and monthly update.
 
 ## Acknowledgements
 
