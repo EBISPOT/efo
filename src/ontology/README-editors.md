@@ -54,6 +54,8 @@ l. Finally, announce the new release by mailing:
     arrayexpress-atlas@ebi.ac.uk
     efo-users@lists.sourceforge.net
     efo-users@ebi.ac.uk
+    
+NOTE THAT SOURCEFORGE MAILING LIST WILL NO LONGER BE IN USE FROM MID 2018.
 
 ## Release Manager notes
 
