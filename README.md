@@ -1,9 +1,8 @@
 #[![Build Status](https://travis-ci.org/EBISPOT/efo.svg?branch=master)](https://travis-ci.org/EBISPOT/efo)
 #[![DOI](https://zenodo.org/badge/13996/EBISPOT/efo.svg)](https://zenodo.org/badge/latestdoi/13996/EBISPOT/efo)
 
-# Do not use!
 
-This repository is currently experimental as we transition EFO development to GitHub, do not use the data in here to access EFO. Please get the latest version of EFO by visiting http://wwww.ebi.ac.uk/efo
+We are transitioning EFO development to GitHub. This is our development area for our monthly release. Please get the latest version of EFO by visiting http://wwww.ebi.ac.uk/efo.
 
 # EFO
 
