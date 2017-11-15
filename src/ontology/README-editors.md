@@ -12,7 +12,49 @@ The editors version is [efo-edit.owl](efo-edit.owl)
 
 To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/EBISPOT/efo) for details.
 
-## Update release notes and e-mail announcement to users
+
+## Release Manager notes
+
+You should only attempt to make a release AFTER the edit version is
+committed and pushed.
+
+to release:
+
+    cd src/ontology
+    make
+
+If this looks good type:
+
+    make release
+
+This generates derived files such as efo.owl and efo.obo and places
+them in the top level (../..). The versionIRI will be added.
+
+## Create and release OBO version
+
+A few manual hacks are required to get this to parse in OBO however.
+
+Open ../../efo.obo
+
+    Add EFO root for class:
+
+[Term] id: EFO:0000001
+
+name: experimental factor
+
+def: "An experimental factor in Array Express which are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This upper level class is really used to give a root class from which applications can rely on and not be tied to upper ontology classses which do change." []
+
+created_by: James Malone
+
+    Add top relationship:
+
+[Typedef]
+
+id: EFO:0000824
+
+name: relationship
+
+## Update release notes
 
 Release notes detailing major changes between releases are produced to aid users awareness.
 
@@ -44,35 +86,8 @@ i. Set the date correctly
 
 j. Add a short paragraph to "Summary:" summarising any major activity that has occurred over the previous month
 
-k. Copy the file to your directory for the external (SourceForge) repository) update both in the internal and external (SourceForge) SVN:
+k. Save the file.
 
-    .../ExperimentalFactorOntology/ReleaseDocs/"ExFactor Ontology release notes.txt" (internal repository)
-    .../efo/trunk/docs/releasedocs/"ExFactor Ontology release notes.txt" (external (SourceForge) repository)
-
-l. Finally, announce the new release by mailing:
-
-    arrayexpress-atlas@ebi.ac.uk
-    efo-users@lists.sourceforge.net
-    efo-users@ebi.ac.uk
-    
-NOTE THAT SOURCEFORGE MAILING LIST WILL NO LONGER BE IN USE FROM MID 2018.
-
-## Release Manager notes
-
-You should only attempt to make a release AFTER the edit version is
-committed and pushed.
-
-to release:
-
-    cd src/ontology
-    make
-
-If this looks good type:
-
-    make release
-
-This generates derived files such as efo.owl and efo.obo and places
-them in the top level (../..). The versionIRI will be added.
 
 Commit and push these files.
 
@@ -112,3 +127,30 @@ correct ontologies. Try it!
 
 For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
 
+## Finally, announce the new release by mailing:
+
+    arrayexpress-atlas@ebi.ac.uk
+    efo-users@lists.sourceforge.net
+    efo-users@ebi.ac.uk
+    
+NOTE THAT SOURCEFORGE MAILING LIST WILL NO LONGER BE IN USE FROM MID 2018.
+
+
+
+** Note: Should you need to delete a release/tag, follow these step and re-tag / re-release:
+Delete release (https://help.github.com/articles/editing-and-deleting-releases/):
+
+    On GitHub, navigate to the main page of the repository.
+    Under your repository name, click Releases.
+    On the Release page, click the name of the release you wish to delete.
+    In the upper-right corner of the page, click Delete.
+
+Delete tag:
+
+    Do a git pull to retrieve the tag you have created on Github
+
+    git tag -d tagName
+
+    git push --delete origin tagName
+
+********************NOW GO BACK TO FIX WHAT NEEDS TO BE FIXED AND COMMIT/PUSH/RE-TAG***************************
