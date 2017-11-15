@@ -10,19 +10,17 @@
     \::/  /       \:\__\        \::/  /   
      \/__/         \/__/         \/__/    
 EFO - Release Notes
-ArrayExpress Experimental Factor Ontology version 2.89
-Date Released: 16th October 2017
-Class Count: 20460
+ArrayExpress Experimental Factor Ontology version 2.90
+Date Released: 15th November 2017
+Class Count: 20462
 
 Summary: 
 
 ***!!!***
 
-IMPORTANT NOTICE - We are migrating to Github repo. From EFO 2.90 on, all our files will be released from Github. The transition should be seamless once we have everything ready for 2.90 release in November 2017. All current release files 2.89 are still accessible through our Sourceforge portal while we are testing our pipeline between now and next month’s release.
+IMPORTANT NOTICE - We have moved to Github. From EFO 2.90 on, all our files will be released from Github. The transition should be seamless once we have everything ready for 2.90 release in November 2017. 
 
 ***!!!***
-
-EFO 2.89 contains 48 additional classes from 2.88 release, most of which are measurement and disease requests from GWAS Catalog. For full details of term modifications and new terms, please see the log below.
 
 
 ----------------------------------
@@ -38,287 +36,46 @@ EFO 2.89 contains 48 additional classes from 2.88 release, most of which are mea
 1. Changes to URIs
 
 New classes:
-Class: http://www.ebi.ac.uk/efo/EFO_0008350
-Label: alpha-linoleic acid measurement
-+   'alpha-linoleic acid measurement' SubClassOf 'fatty acid measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_1002020
+Label: polyarticular juvenile idiopathic arthritis, rheumatoid factor negative
++   'polyarticular juvenile idiopathic arthritis, rheumatoid factor negative' SubClassOf 'systemic juvenile idiopathic arthritis'
++   'polyarticular juvenile idiopathic arthritis, rheumatoid factor negative' SubClassOf 'has_disease_location' some ('bone' or ('part_of' some 'bone'))
++   'polyarticular juvenile idiopathic arthritis, rheumatoid factor negative' SubClassOf 'has_disease_location' some 'dendritic cell-derived osteoclast'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0008347
-Label: response to trastuzumab
-+   'response to trastuzumab' SubClassOf 'response to antineoplastic agent'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008346
-Label: family history of upper gastrointestinal cancer
-+   'family history of upper gastrointestinal cancer' SubClassOf 'family history'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008349
-Label: thiazide-induced hyponatremia
-+   'thiazide-induced hyponatremia' SubClassOf 'Hyponatremia'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008348
-Label: response to ranibizumab
-+   'response to ranibizumab' SubClassOf 'response to drug'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008360
-Label: environmental exposure measurement
-+   'environmental exposure measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008361
-Label: environmental tobacco smoke exposure measurement
-+   'environmental tobacco smoke exposure measurement' SubClassOf 'environmental exposure measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008358
-Label: dorsolateral prefrontal cortex functional measurement
-+   'dorsolateral prefrontal cortex functional measurement' SubClassOf 'functional brain measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008357
-Label: docosatetranoic acid measurement
-+   'docosatetranoic acid measurement' SubClassOf 'fatty acid measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008356
-Label: dihomo-gamma-linoleic acid measurement
-+   'dihomo-gamma-linoleic acid measurement' SubClassOf 'fatty acid measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008355
-Label: dietary heme iron intake measurement
-+   'dietary heme iron intake measurement' SubClassOf 'diet measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008354
-Label: cognitive function measurement
-+   'cognitive function measurement' SubClassOf 'measurement'
-+   'cognitive function measurement' SubClassOf 'is_about' some 'cognition'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008353
-Label: cellular adhesion molecule measurement
-+   'cellular adhesion molecule measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008352
-Label: C9orf72 mutation status
-+   'C9orf72 mutation status' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008351
-Label: amyloid deposition measurement
-+   'amyloid deposition measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008359
-Label: eicosadienoic acid measurement
-+   'eicosadienoic acid measurement' SubClassOf 'fatty acid measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008364
-Label: generational effect measurement
-+   'generational effect measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008365
-Label: heart amyloid deposition measurement
-+   'heart amyloid deposition measurement' SubClassOf 'is_about' some 'heart'
-+   'heart amyloid deposition measurement' SubClassOf 'amyloid deposition measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008362
-Label: farm exposure measurement
-+   'farm exposure measurement' SubClassOf 'environmental exposure measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008363
-Label: gamma-linoleic acid measurement
-+   'gamma-linoleic acid measurement' SubClassOf 'fatty acid measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008368
-Label: infant grey matter volume measurement
-+   'infant grey matter volume measurement' SubClassOf 'is_about' some 'brain'
-+   'infant grey matter volume measurement' SubClassOf 'grey matter volume measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008369
-Label: infant intracranial volume measurement
-+   'infant intracranial volume measurement' SubClassOf 'is_about' some 'brain'
-+   'infant intracranial volume measurement' SubClassOf 'intracranial volume measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008366
-Label: IgG isotype profile measurement
-+   'IgG isotype profile measurement' SubClassOf 'serum IgG measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008367
-Label: infant cerebrospinal fluid volume measurement
-+   'infant cerebrospinal fluid volume measurement' SubClassOf 'is_about' some 'cerebrospinal fluid'
-+   'infant cerebrospinal fluid volume measurement' SubClassOf 'cerebrospinal fluid volume measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008372
-Label: laterality measurement
-+   'laterality measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008371
-Label: kidney amyloid deposition measurement
-+   'kidney amyloid deposition measurement' SubClassOf 'amyloid deposition measurement'
-+   'kidney amyloid deposition measurement' SubClassOf 'is_about' some 'kidney'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008370
-Label: infant white matter volume measurement
-+   'infant white matter volume measurement' SubClassOf 'white matter volume measurement'
-+   'infant white matter volume measurement' SubClassOf 'is_about' some 'brain'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008373
-Label: left ventricular ejection fraction measurement
-+   'left ventricular ejection fraction measurement' SubClassOf 'is_about' some 'heart left ventricle'
-+   'left ventricular ejection fraction measurement' SubClassOf 'ejection fraction measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008374
-Label: liver amyloid deposition measurement
-+   'liver amyloid deposition measurement' SubClassOf 'amyloid deposition measurement'
-+   'liver amyloid deposition measurement' SubClassOf 'is_about' some 'liver'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008375
-Label: macula measurement
-+   'macula measurement' SubClassOf 'measurement'
-+   'macula measurement' SubClassOf 'is_about' some 'eye'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008376
-Label: mosquito bite measurement
-+   'mosquito bite measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008377
-Label: mosquito bite reaction itch intensity measurement
-+   'mosquito bite reaction itch intensity measurement' SubClassOf 'mosquito bite measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008378
-Label: mosquito bite reaction size measurement
-+   'mosquito bite reaction size measurement' SubClassOf 'mosquito bite measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008379
-Label: P wave terminal force measurement
-+   'P wave terminal force measurement' SubClassOf 'electrocardiography'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008381
-Label: total cortical area measurement
-+   'total cortical area measurement' SubClassOf 'is_about' some 'cerebral cortex'
-+   'total cortical area measurement' SubClassOf 'brain measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008380
-Label: perceived unattractiveness to mosquitos measurement
-+   'perceived unattractiveness to mosquitos measurement' SubClassOf 'mosquito bite measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008383
-Label: treatment outcome measurement
-+   'treatment outcome measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008382
-Label: TP53 mutation status
-+   'TP53 mutation status' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008384
-Label: tumor necrosis factor receptor II measurement
-+   'tumor necrosis factor receptor II measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008385
-Label: visual acuity measurement
-+   'visual acuity measurement' SubClassOf 'is_about' some 'eye'
-+   'visual acuity measurement' SubClassOf 'measurement'
- 
-Class: http://purl.obolibrary.org/obo/HP_0002902
-Label: Hyponatremia
-+   'Hyponatremia' SubClassOf 'Abnormality of sodium homeostasis'
- 
-Class: http://purl.obolibrary.org/obo/HP_0010931
-Label: Abnormality of sodium homeostasis
-+   'Abnormality of sodium homeostasis' SubClassOf 'Abnormality of ion homeostasis'
- 
-Class: http://purl.obolibrary.org/obo/HP_0040187
-Label: Neonatal sepsis
-+   'Neonatal sepsis' SubClassOf 'sepsis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002017
-Label: differentiated thyroid carcinoma
-+   'differentiated thyroid carcinoma' SubClassOf 'carcinoma'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002018
-Label: bronchial disease
-+   'bronchial disease' SubClassOf 'respiratory system disease'
-+   'bronchial disease' SubClassOf 'has_disease_location' some 'bronchus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002015
-Label: HPV-associated cervical carcinoma
-+   'HPV-associated cervical carcinoma' SubClassOf 'cervical carcinoma'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002016
-Label: poorly differentiated follicular thyroid carcinoma
-+   'poorly differentiated follicular thyroid carcinoma' SubClassOf 'Poorly Differentiated Thyroid Gland Carcinoma'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002014
-Label: melancholia
-+   'melancholia' SubClassOf 'mood disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_1002019
+Label: oligoarticular juvenile idiopathic arthritis
++   'oligoarticular juvenile idiopathic arthritis' SubClassOf 'has_disease_location' some ('bone' or ('part_of' some 'bone'))
++   'oligoarticular juvenile idiopathic arthritis' SubClassOf 'chronic childhood arthritis'
++   'oligoarticular juvenile idiopathic arthritis' SubClassOf 'has_disease_location' some 'dendritic cell-derived osteoclast'
 
 
 ----------------------------------
 2. Changes to EFO
 
-Class: http://www.ebi.ac.uk/efo/EFO_0008255
-Label: particulate matter air pollution measurement
--   'particulate matter air pollution measurement' SubClassOf 'measurement'
-+   'particulate matter air pollution measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008360
+Class: http://www.orpha.net/ORDO/Orphanet_218
+Label: Darier disease
++   'Darier disease' SubClassOf 'has_disease_location' some 'zone of skin'
  
-Class: http://www.orpha.net/ORDO/Orphanet_70589
-Label: Bronchopulmonary dysplasia
--   'Bronchopulmonary dysplasia' SubClassOf 'respiratory system disease'
-+   'Bronchopulmonary dysplasia' SubClassOf http://www.ebi.ac.uk/efo/EFO_1002018
+Class: http://www.ebi.ac.uk/efo/EFO_0005950
+Label: head and neck neoplasia
+-   'head and neck neoplasia' SubClassOf 'disease'
++   'head and neck neoplasia' SubClassOf 'head disease'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004806
-Label: asbestos exposure measurement
--   'asbestos exposure measurement' SubClassOf 'measurement'
-+   'asbestos exposure measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008360
+Class: http://www.ebi.ac.uk/efo/EFO_0000524
+Label: head disease
+-   'head disease' EquivalentTo 'has_disease_location' some ('head' or ('part_of' some 'head'))
++   'head disease' EquivalentTo 'has_disease_location' some 'head'
++   'head disease' EquivalentTo 'has_disease_location' some 'neck'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000270
-Label: asthma
--   'asthma' SubClassOf 'respiratory system disease'
-+   'asthma' SubClassOf http://www.ebi.ac.uk/efo/EFO_1002018
+Class: http://www.ebi.ac.uk/efo/EFO_0004124
+Label: Darier's disease
+-   'Darier's disease' SubClassOf 'skin disease'
+-   'Darier's disease' SubClassOf 'has_disease_location' some 'zone of skin'
++   'Darier's disease' SubClassOf 'obsolete class'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004771
-Label: visual cortical surface area measurement
--   'visual cortical surface area measurement' SubClassOf 'measurement'
-+   'visual cortical surface area measurement' SubClassOf 'is_about' some 'visual cortex'
-+   'visual cortical surface area measurement' SubClassOf 'brain measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0000501
-Label: follicular thyroid carcinoma
-+   'follicular thyroid carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_1002017
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0000641
-Label: papillary thyroid carcinoma
-+   'papillary thyroid carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_1002017
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0007840
-Label: pesticide exposure measurement
--   'pesticide exposure measurement' SubClassOf 'measurement'
-+   'pesticide exposure measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008360
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0007908
-Label: traffic air pollution measurement
--   'traffic air pollution measurement' SubClassOf 'measurement'
-+   'traffic air pollution measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008360
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0007944
-Label: allergen exposure measurement
--   'allergen exposure measurement' SubClassOf 'measurement'
-+   'allergen exposure measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008360
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0006505
-Label: chronic bronchitis
-+   'chronic bronchitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_1002018
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0006521
-Label: calcium intake measurement
--   'calcium intake measurement' SubClassOf 'measurement'
-+   'calcium intake measurement' SubClassOf 'diet measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0006924
-Label: household air pollution measurement
--   'household air pollution measurement' SubClassOf 'measurement'
-+   'household air pollution measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008360
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0007409
-Label: ornithine carbamoyltransferase deficiency
--   'ornithine carbamoyltransferase deficiency' SubClassOf 'Tuberculosis'
-+   'ornithine carbamoyltransferase deficiency' SubClassOf 'urogenital tuberculosis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0007678
-Label: total fat intake measurement
--   'total fat intake measurement' SubClassOf 'measurement'
-+   'total fat intake measurement' SubClassOf 'diet measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0004184
+Label: nucleic acid library construction protocol
+-   'nucleic acid library construction protocol' EquivalentTo 'part_of' some 'nucleic acid library construction protocol'
 
 ----------------------------------
 3. Obsolete Classes
