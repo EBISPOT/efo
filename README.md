@@ -1,6 +1,4 @@
 #[![Build Status](https://travis-ci.org/EBISPOT/efo.svg?branch=master)](https://travis-ci.org/EBISPOT/efo)
-#[![DOI](https://zenodo.org/badge/13996/EBISPOT/efo.svg)](https://zenodo.org/badge/latestdoi/13996/EBISPOT/efo)
-
 
 We are transitioning EFO development to GitHub. This is our development area for our monthly release. Please get the latest version of EFO by visiting http://wwww.ebi.ac.uk/efo. Accessible from here are our full monthly release in OWL format (https://github.com/EBISPOT/efo/blob/master/efo.owl) and OBO format (https://github.com/EBISPOT/efo/blob/master/efo.obo). Inferred versions are also provided.
 
