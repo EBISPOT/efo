@@ -1,5 +1,7 @@
 These notes are for the EDITORS of efo
 
+For the full description of the release process including the internal-link specific information, please make sure that you see https://www.ebi.ac.uk/seqdb/confluence/display/FGPTO/EFO+Release+Process !!!! This is vital if you are the EFO developer in charge of monthly release.
+
 This project was created using the [ontology starter kit](https://github.com/cmungall/ontology-starter-kit). See the site for details.
 
 ## Editors Version
@@ -19,6 +21,10 @@ You should only attempt to make a release AFTER the edit version is
 committed and pushed.
 
 to release:
+First, update the version number in the /efo/src/ontology/version.txt. This is usually an increment of +1 in the monthly release version.
+You can do this with vi or other text editing program. Make sure to push this version.txt file before you do the release in the next step.
+
+
 
     cd src/ontology
     make
@@ -30,14 +36,25 @@ If this looks good type:
 This generates derived files such as efo.owl and efo.obo and places
 them in the top level (../..). The versionIRI will be added.
 
+At this point, please check your local copy of the top-level efo.owl and see if everything looks ok (e.g. the version is updated and reflecting the current to-be-released version, the date is correct).
+
 ## Create and release OBO version
 
 A few manual hacks are required to get this to parse in OBO however.
 
+As of EFO 2.91, the OBO generator still creates duplicate subsetdefs. This is non-critical in most cases but it appears to break EnsEMBL process. Manual clean-up is required by deleting the following duplicate lines from efo.obo at the top level. A ticket has been filed for this error in the release script.
+
 Open ../../efo.obo
+Remove the following "duplicate" line (please make sure there is one of each duplicates remain in the file)
 
-    Add EFO root for class:
+    subsetdef: efo_slim "efo slim"
+    subsetdef: grouping_class "grouping class"
+    subsetdef: organ_slim "organ slim"
+    subsetdef: uberon_slim "uberon slim"
+    subsetdef: vertebrate_core "vertebrate core"
 
+
+Add EFO root for class:
 [Term] id: EFO:0000001
 
 name: experimental factor
@@ -100,32 +117,37 @@ Finally type
     git push origin master
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
-
- * https://github.com/EBISPOT/efo/releases
  * https://github.com/EBISPOT/efo/releases/new
+Click "Edit" and make change to reflect THIS release you are working on (the one you've just pushed to master branch in the previous step).
 
 The value of the "Tag version" field MUST be
 
-    vYYYY-MM-DD
+vYYYY-MM-DD
 
-The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match
-what is in the versionIRI of the derived efo.owl (data-version in
-efo.obo).
+The initial lowercase "v" is REQUIRED. The YYYY-MM-DD must match what is in the versionIRI of the derived efo.owl (data-version in efo.obo).
 
-Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "january release")
+Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "2017-12-15 EFO 2.91")
 
 Then click "publish release"
 
-__IMPORTANT__: NO MORE THAN ONE RELEASE PER DAY.
+__IMPORTANT: NO MORE THAN ONE RELEASE PER DAY.__
 
-The PURLs are already configured to pull from github. This means that
-BOTH ontology purls and versioned ontology purls will resolve to the
-correct ontologies. Try it!
+On https://github.com/EBISPOT/efo/tags  - you should see the tag you have just added appear as the new tag on there.
 
- * http://purl.obolibrary.org/obo/efo.owl <-- current ontology PURL
- * http://purl.obolibrary.org/obo/efo/releases/YYYY-MM-DD.owl <-- change to the release you just made
+Now if you go to https://github.com/EBISPOT/efo/releases/ - you will see the tag you have just added to Github. Use this link to edit the description should you wish to.
 
-For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
+ 
+
+The PURLs are already configured to pull from github. This means that BOTH ontology purls and versioned ontology purls will resolve to the correct ontologies. Try it!
+
+    http://www.ebi.ac.uk/efo/efo.owl <-- current ontology PURL
+    http://www.ebi.ac.uk/efo/releases/vYYYY-MM-DD/efo.owl <-- change to the release you just made
+    
+## Run 'Build EFO Web' Bamboo plan
+
+    go to http://gromit.ebi.ac.uk:10001/browse/EFO
+    click on the plan 'Build EFO Web'
+    If the run is successful, manually go into the plan and promote it to wwwdev (staging), and www (prod) respectively.
 
 ## Finally, announce the new release by mailing:
 
