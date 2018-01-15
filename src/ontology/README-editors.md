@@ -29,22 +29,16 @@ You can do this with vi or other text editing program. Make sure to push this ve
     cd src/ontology
     make
 
-If this looks good type:
+This step generates efo.obo, efo.owl and its derivatives in /src/ontology. We need to manually fix efo.obo before it gets released to the top level. 
 
-    make release
-
-This generates derived files such as efo.owl and efo.obo and places
-them in the top level (../..). The versionIRI will be added.
-
-At this point, please check your local copy of the top-level efo.owl and see if everything looks ok (e.g. the version is updated and reflecting the current to-be-released version, the date is correct).
-
-## Create and release OBO version
+## Edit OBO version
 
 A few manual hacks are required to get this to parse in OBO however.
 
 As of EFO 2.91, the OBO generator still creates duplicate subsetdefs. This is non-critical in most cases but it appears to break EnsEMBL process. Manual clean-up is required by deleting the following duplicate lines from efo.obo at the top level. A ticket has been filed for this error in the release script.
 
 Open ../../efo.obo
+
 Remove the following "duplicate" line (please make sure there is one of each duplicates remain in the file)
 
     subsetdef: efo_slim "efo slim"
@@ -54,7 +48,10 @@ Remove the following "duplicate" line (please make sure there is one of each dup
     subsetdef: vertebrate_core "vertebrate core"
 
 
-Add EFO root for class:
+Now, add EFO root class and top relationship
+
+    Add EFO root for class:
+
 [Term] id: EFO:0000001
 
 name: experimental factor
@@ -70,6 +67,24 @@ created_by: James Malone
 id: EFO:0000824
 
 name: relationship
+
+ 
+
+At this point, all files should be ready to be copied over to the top-level directory.
+
+If there are no errors after you make the file, and you have edited efo.obo, type:
+
+make release
+
+
+    make release
+
+This generates derived files such as efo.owl and efo.obo and places
+them in the top level (../..). The versionIRI will be added.
+
+At this point, please check your local copy of the top-level efo.owl and see if everything looks ok (e.g. the version is updated and reflecting the current to-be-released version, the date is correct).
+
+
 
 ## Update release notes
 
