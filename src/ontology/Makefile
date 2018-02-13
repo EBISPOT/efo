@@ -20,10 +20,10 @@ SPARQLDIR = ../sparql
 # Top-level targets
 # ----------------------------------------
 
-all: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo
+all: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo
 test: all sparql_test
 prepare_release: all
-	cp $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(RELEASEDIR) &&\
+	cp $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo $(RELEASEDIR) &&\
 	(test -f subsets/*owl && cp subsets/*{owl,obo} $(RELEASEDIR)/subsets && git add $(RELEASEDIR)/subsets/* || echo "no subsets") &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 
@@ -44,6 +44,10 @@ $(ONT_INF_ALL).owl: $(ONT).owl
 
 $(ONT).obo: $(ONT_INF).owl
 	$(EFO2OBO) -i $(ONT_INF).owl -o $(ONT).obo
+
+$(ONT)_full.obo: $(ONT_INF_ALL).owl
+	$(EFO2OBO) -i $(ONT_INF_ALL).owl -o $(ONT)_full.obo
+
 #	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@
 
 # ----------------------------------------
