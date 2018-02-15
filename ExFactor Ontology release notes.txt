@@ -10,9 +10,9 @@
     \::/  /       \:\__\        \::/  /   
      \/__/         \/__/         \/__/    
 EFO - Release Notes
-ArrayExpress Experimental Factor Ontology version 2.92
-Date Released: 15th January 2018
-Class Count: 20545
+ArrayExpress Experimental Factor Ontology version 2.93
+Date Released: 15th February 2018
+Class Count: 20575
 
 Summary: 
 
@@ -22,11 +22,11 @@ IMPORTANT NOTICE - We have moved to Github. From EFO 2.90 on, all our files will
 
 ***!!!***
 
-EFO 2.92 contains 5 additional terms from 2.91 release, please see the details below for the full log of change.
+EFO 2.93 contains 30 additional terms from 2.92 release, please see the details below for the full log of change.
 
 
 ----------------------------------
-1.  	Changes to URIs
+1.  Changes to URIs
 2.	Changes to EFO
 3.	Obsolete Classes in EFO
 4.	Scope of the Ontology
@@ -38,92 +38,183 @@ EFO 2.92 contains 5 additional terms from 2.91 release, please see the details b
 1. Changes to URIs
 
 New classes:
-Class: http://www.ebi.ac.uk/efo/EFO_0008459
-Label: response to mepolizumab
-+   'response to mepolizumab' SubClassOf 'response to drug'
+Class: http://www.ebi.ac.uk/efo/EFO_0008476
+Label: delayed reward discounting measurement
++   'delayed reward discounting measurement' SubClassOf 'is_about' some 'obesity'
++   'delayed reward discounting measurement' SubClassOf 'is_about' some 'attention deficit hyperactivity disorder'
++   'delayed reward discounting measurement' SubClassOf 'is_about' some 'mental or behavioural disorder'
++   'delayed reward discounting measurement' SubClassOf 'mental or behavioural disorder biomarker'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0008458
-Label: tacrolimus measurement
-+   'tacrolimus measurement' SubClassOf 'is_about' some 'immunosuppressive agent'
-+   'tacrolimus measurement' SubClassOf 'tacrolimus hydrate'
-+   'tacrolimus measurement' SubClassOf 'measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0008469
+Label: B-type natriuretic peptide to N-terminal pro B-type natriuretic peptide ratio
++   'B-type natriuretic peptide to N-terminal pro B-type natriuretic peptide ratio' SubClassOf 'protein measurement'
++   'B-type natriuretic peptide to N-terminal pro B-type natriuretic peptide ratio' SubClassOf 'hormone measurement'
++   'B-type natriuretic peptide to N-terminal pro B-type natriuretic peptide ratio' SubClassOf 'is_about' some 'heart'
++   'B-type natriuretic peptide to N-terminal pro B-type natriuretic peptide ratio' SubClassOf 'cardiac stress biomarker measurement'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0008457
-Label: cannabis dependence measurement
-+   'cannabis dependence measurement' SubClassOf 'is_about' some 'cannabinoid'
-+   'cannabis dependence measurement' SubClassOf 'is_about' some 'cannabis dependence'
-+   'cannabis dependence measurement' SubClassOf 'mental or behavioural disorder biomarker'
+Class: http://www.ebi.ac.uk/efo/EFO_0008466
+Label: matrix metalloproteinase 8 measurement
++   'matrix metalloproteinase 8 measurement' SubClassOf 'matrix metalloproteinase measurement'
++   'matrix metalloproteinase 8 measurement' SubClassOf 'is_about' some 'inflammatory response'
++   'matrix metalloproteinase 8 measurement' SubClassOf 'is_about' some 'Abnormality of the cardiovascular system'
  
-Class: http://purl.obolibrary.org/obo/CHEBI_67194
-Label: cannabinoid
-+   'cannabinoid' SubClassOf 'chemical entity'
+Class: http://www.ebi.ac.uk/efo/EFO_0008465
+Label: glucagon-like peptide-1 measurement
++   'glucagon-like peptide-1 measurement' SubClassOf 'is_about' some 'diabetes mellitus'
++   'glucagon-like peptide-1 measurement' SubClassOf 'protein measurement'
++   'glucagon-like peptide-1 measurement' SubClassOf 'is_about' some 'glucose homeostasis'
++   'glucagon-like peptide-1 measurement' SubClassOf 'diabetes mellitus biomarker'
++   'glucagon-like peptide-1 measurement' SubClassOf 'is_about' some 'endocrine system'
++   'glucagon-like peptide-1 measurement' SubClassOf 'hormone measurement'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1002027
-Label: osteomalacia
-+   'osteomalacia' SubClassOf 'rickets'
+Class: http://www.ebi.ac.uk/efo/EFO_0008468
+Label: midregional pro atrial natriuretic peptide measurement
++   'midregional pro atrial natriuretic peptide measurement' SubClassOf 'hormone measurement'
++   'midregional pro atrial natriuretic peptide measurement' SubClassOf 'cardiac stress biomarker measurement'
++   'midregional pro atrial natriuretic peptide measurement' SubClassOf 'protein measurement'
++   'midregional pro atrial natriuretic peptide measurement' SubClassOf 'is_about' some 'heart'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1002028
-Label: cicatricial alopecia
-+   'cicatricial alopecia' SubClassOf 'Alopecia'
+Class: http://www.ebi.ac.uk/efo/EFO_0008467
+Label: behavioural inhibitory control measurement
++   'behavioural inhibitory control measurement' SubClassOf 'mental or behavioural disorder biomarker'
++   'behavioural inhibitory control measurement' SubClassOf 'is_about' some 'mental or behavioural disorder'
++   'behavioural inhibitory control measurement' SubClassOf 'is_about' some 'behavior'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008462
+Label: pregnancy induced alloimmunization
++   'pregnancy induced alloimmunization' SubClassOf 'alloimmunization'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008464
+Label: glucose-dependent insulinotropic peptide measurement
++   'glucose-dependent insulinotropic peptide measurement' SubClassOf 'is_about' some 'glucose homeostasis'
++   'glucose-dependent insulinotropic peptide measurement' SubClassOf 'hormone measurement'
++   'glucose-dependent insulinotropic peptide measurement' SubClassOf 'is_about' some 'endocrine system'
++   'glucose-dependent insulinotropic peptide measurement' SubClassOf 'protein measurement'
++   'glucose-dependent insulinotropic peptide measurement' SubClassOf 'is_about' some 'diabetes mellitus'
++   'glucose-dependent insulinotropic peptide measurement' SubClassOf 'diabetes mellitus biomarker'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008463
+Label: glucagon measurement
++   'glucagon measurement' SubClassOf 'hormone measurement'
++   'glucagon measurement' SubClassOf 'is_about' some 'glucose homeostasis'
++   'glucagon measurement' SubClassOf 'is_about' some 'endocrine pancreas'
++   'glucagon measurement' SubClassOf 'protein measurement'
++   'glucagon measurement' SubClassOf 'diabetes mellitus biomarker'
++   'glucagon measurement' SubClassOf 'is_about' some 'diabetes mellitus'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008470
+Label: dietary potassium intake measurement
++   'dietary potassium intake measurement' SubClassOf 'diet measurement'
++   'dietary potassium intake measurement' SubClassOf 'is_about' some 'potassium'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008471
+Label: cardiac stress biomarker measurement
++   'cardiac stress biomarker measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008479
+Label: genomic DNA
++   'genomic DNA' SubClassOf 'DNA'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008475
+Label: mood instability measurement
++   'mood instability measurement' SubClassOf 'mental or behavioural disorder biomarker'
++   'mood instability measurement' SubClassOf 'is_about' some 'mental or behavioural disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008474
+Label: spine bone mineral density change measurement
++   'spine bone mineral density change measurement' SubClassOf 'spine bone mineral density'
++   'spine bone mineral density change measurement' SubClassOf 'is_about' some 'bone'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008473
+Label: insulin response measurement
++   'insulin response measurement' SubClassOf 'insulin measurement'
++   'insulin response measurement' SubClassOf 'is_about' some 'diabetes mellitus'
++   'insulin response measurement' SubClassOf 'is_about' some 'endocrine pancreas'
++   'insulin response measurement' SubClassOf 'is_about' some 'glucose homeostasis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008481
+Label: cDNA
++   'cDNA' SubClassOf 'DNA'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008480
+Label: mitochondrial DNA
++   'mitochondrial DNA' SubClassOf 'DNA'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008460
+Label: colorectal health
++   'colorectal health' SubClassOf 'health trait'
+ 
+Class: http://purl.obolibrary.org/obo/UBERON_0001756
+Label: middle ear
++   'middle ear' SubClassOf 'ear'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008485
+Label: homosexuality
++   'homosexuality' SubClassOf 'phenotype'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008486
+Label: male homosexuality
++   'male homosexuality' SubClassOf 'homosexuality'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008483
+Label: response to trauma exposure
++   'response to trauma exposure' SubClassOf 'response to stimulus'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008484
+Label: response to carbamazepine
++   'response to carbamazepine' SubClassOf 'response to anticonvulsant'
++   'response to carbamazepine' SubClassOf 'is_about' some 'carbamazepine'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008487
+Label: lateral ventricle volume measurement
++   'lateral ventricle volume measurement' SubClassOf 'is_about' some 'telencephalic ventricle'
++   'lateral ventricle volume measurement' SubClassOf 'brain volume measurement'
++   'lateral ventricle volume measurement' SubClassOf 'is_about' some 'brain'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1002029
+Label: chronic rhinosinusitis with nasal polyps
++   'chronic rhinosinusitis with nasal polyps' SubClassOf 'chronic rhinosinusitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1002031
+Label: Hodgkins lymphoma, mixed cellularity
++   'Hodgkins lymphoma, mixed cellularity' SubClassOf 'Hodgkins lymphoma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1002032
+Label: primary hypertension
++   'primary hypertension' SubClassOf 'hypertension'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1002030
+Label: chronic rhinosinusitis without nasal polyps
++   'chronic rhinosinusitis without nasal polyps' SubClassOf 'chronic rhinosinusitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1002034
+Label: secondary hypertension
++   'secondary hypertension' SubClassOf 'hypertension'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1002039
+Label: renal hypertension
++   'renal hypertension' SubClassOf 'kidney disease'
++   'renal hypertension' SubClassOf 'secondary hypertension'
 
 
 ----------------------------------
 2. Changes to EFO
 
-Class: http://purl.obolibrary.org/obo/CHEBI_46938
-Label: zebularine
--   'zebularine' SubClassOf 'chemical entity'
-+   'zebularine' SubClassOf 'chemical compound'
+Class: http://www.ebi.ac.uk/efo/EFO_0004992
+Label: Otitis media
+-   'Otitis media' SubClassOf 'has_disease_location' some 'internal ear'
++   'Otitis media' SubClassOf 'has_disease_location' some http://purl.obolibrary.org/obo/UBERON_0001756
  
-Class: http://purl.obolibrary.org/obo/CHEBI_32599
-Label: magnesium sulfate
--   'magnesium sulfate' SubClassOf 'chemical entity'
-+   'magnesium sulfate' SubClassOf 'chemical compound'
+Class: http://www.ebi.ac.uk/efo/EFO_0006793
+Label: left inferior lateral ventricle volume measurement
+-   'left inferior lateral ventricle volume measurement' SubClassOf 'measurement'
++   'left inferior lateral ventricle volume measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008487
  
-Class: http://purl.obolibrary.org/obo/CHEBI_37585
-Label: sodium dihydrogenphosphate
--   'sodium dihydrogenphosphate' SubClassOf 'chemical entity'
-+   'sodium dihydrogenphosphate' SubClassOf 'chemical compound'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_37577
-Label: chemical compound
--   'chemical compound' SubClassOf 'chemical entity'
-+   'chemical compound' SubClassOf 'material entity'
-+   'chemical compound' SubClassOf 'chemical compound'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0000701
-Label: skin disease
--   'skin disease' EquivalentTo 'disease' and ('has_disease_location' some ('zone of skin' or ('part_of' some 'zone of skin')))
-+   'skin disease' EquivalentTo 'has_disease_location' some 'zone of skin'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_33250
-Label: element
--   'element' SubClassOf 'chemical entity'
-+   'element' SubClassOf 'chemical compound'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_80730
-Label: Coronatine
--   'Coronatine' SubClassOf 'chemical entity'
-+   'Coronatine' SubClassOf 'chemical compound'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_24431
-Label: chemical entity
--   'chemical entity' SubClassOf 'material entity'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_28683
-Label: kynurenine
--   'kynurenine' SubClassOf 'chemical entity'
-+   'kynurenine' SubClassOf 'chemical compound'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0005878
-Label: vitamin deficiency
--   'vitamin deficiency' SubClassOf ('has_participant' some ('chemical entity' and ('has_role' some 'vitamin'))) and ('participates_in' some ('homeostatic process' and ('has component' some 'abnormal')))
-+   'vitamin deficiency' SubClassOf ('has_participant' some ('chemical compound' and ('has_role' some 'vitamin'))) and ('participates_in' some ('homeostatic process' and ('has component' some 'abnormal')))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0004192
-Label: alopecia areata
--   'alopecia areata' SubClassOf 'skin disease'
-+   'alopecia areata' SubClassOf 'Alopecia'
+Class: http://www.ebi.ac.uk/efo/EFO_1001153
+Label: renovascular hypertension
+-   'renovascular hypertension' SubClassOf 'hypertension'
++   'renovascular hypertension' SubClassOf http://www.ebi.ac.uk/efo/EFO_1002039
+
 
 ----------------------------------
 3. Obsolete Classes
