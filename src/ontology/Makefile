@@ -57,26 +57,6 @@ $(ONT)_full.obo: $(ONT_INF_ALL).owl
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
 
-IMPORTS = 
-IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
-
-# Make this target to regenerate ALL
-all_imports: $(IMPORTS_OWL)
-
-# Use ROBOT, driven entirely by terms lists NOT from source ontology
-imports/%_import.owl: mirror/%.owl imports/%_terms.txt
-	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/%_import.owl
-
-# we use owltools for making the obo file until: https://github.com/ontodev/robot/issues/64
-imports/%_import.obo: imports/%_import.owl
-	$(OWLTOOLS) $(USECAT) $< -o -f obo $@
-
-# clone remote ontology locally, perfoming some excision of relations and annotations
-mirror/%.owl: $(SRC)
-	$(OWLTOOLS) $(OBO)/$*.owl --remove-annotation-assertions -l -s -d --remove-dangling-annotations  -o $@
-.PRECIOUS: mirror/%.owl
-
 # ----------------------------------------
 # Release
 # ----------------------------------------
