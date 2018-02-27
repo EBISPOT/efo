@@ -20,6 +20,8 @@ For new term requests, we recommend that you provide a spreadsheet-based informa
 - [Import UBERON terms](https://docs.google.com/spreadsheets/d/1rsUb2bwytKb0T47zi6yrDW6k8BsFqUeRQzhn74zCm-k/edit#gid=643263845)
 - [Import HP terms](https://docs.google.com/spreadsheets/d/11c0jbou9yLCXyxrCJVV9GtRtFN5SmLWsj1SPOBF-vu8/edit#gid=760337457)
 
+_When referencing existing terms (e.g. suggested parent class, or adding xRef to a term), please make sure that you have the  spelling/capitalisation that reflects the rdfs:label of the term._
+
 **You can also use the template to add new information to existing terms.**
 
 For other templates of term request, please contact us at efo-users@ebi.ac.uk
