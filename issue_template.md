@@ -30,7 +30,7 @@ You can attach your spreadsheet file to your term-request ticket, or give us the
 
 
 
-For a single-term request, you may also use the spreadsheet template to give us the information as describe above. Alternatively, you may  use the following section to submit the information. **Please avoid using the following form to submit request for multiple terms as it may result in delay in processing.**
+For a single-term request, you may also use the spreadsheet template to give us the information as described above. Alternatively, you may  use the following section to submit the information. **Please avoid using the following form to submit request for multiple terms as it may result in delay in processing.**
 
 ==================SINGLE-TERM REQUEST FORM==================
 
