@@ -51,8 +51,11 @@ Remove the following "duplicate" line (please make sure there is one of each dup
 Now, add EFO root class and top relationship
 
     Add EFO root for class:
+---
 
-[Term] id: EFO:0000001
+[Term] 
+
+id: EFO:0000001
 
 name: experimental factor
 
@@ -60,7 +63,11 @@ def: "An experimental factor in Array Express which are essentially the variable
 
 created_by: James Malone
 
+---
+
     Add top relationship:
+
+---
 
 [Typedef]
 
@@ -68,6 +75,7 @@ id: EFO:0000824
 
 name: relationship
 
+---
  
 
 At this point, all files should be ready to be copied over to the top-level directory.
