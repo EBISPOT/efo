@@ -180,7 +180,7 @@ The PURLs are already configured to pull from github. This means that BOTH ontol
     
 NOTE THAT SOURCEFORGE MAILING LIST WILL NO LONGER BE IN USE FROM MID 2018.
 
-
+---
 
 ** Note: Should you need to delete a release/tag, follow these step and re-tag / re-release:
 Delete release (https://help.github.com/articles/editing-and-deleting-releases/):
