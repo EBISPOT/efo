@@ -1,0 +1,14 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?cls1 WHERE
+{
+  ?cls1 a owl:Class .
+  ?cls1 rdfs:label ?label .  
+  FILTER NOT EXISTS {?cls1 rdfs:subClassOf ?cls3 }.
+  FILTER NOT EXISTS {?cls1 owl:equivalentClass ?cls2 }.
+
+  FILTER (?cls1 != URI("http://www.ebi.ac.uk/efo/EFO_0000001"))
+  FILTER (?cls1 != URI("http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"))
+
+}
