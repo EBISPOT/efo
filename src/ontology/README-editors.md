@@ -20,10 +20,13 @@ To edit, open the file in Protege. First make sure you have the repository clone
 You should only attempt to make a release AFTER the edit version is
 committed and pushed.
 
-to release:
-First, update the version number in the /efo/src/ontology/version.txt. This is usually an increment of +1 in the monthly release version.
-You can do this with vi or other text editing program. Make sure to push this version.txt file before you do the release in the next step.
+To release:
 
+First, verify that the Travis build has passed and that you have a copy of the penultimate release stored on your machine for use in a later step of the release.
+
+Update the version number in the /efo/src/ontology/version.txt. This is usually an increment of +1 in the monthly release version.
+
+You can do this with vi or other text editing program. Make sure to push this version.txt file before you do the release in the next step.
 
 
     cd src/ontology
@@ -39,7 +42,8 @@ As of EFO 2.91, the OBO generator still creates duplicate subsetdefs. This is no
 
 Open ../../efo.obo
 
-Remove the following "duplicate" line (please make sure there is one of each duplicates remain in the file)
+Remove the following "duplicate" line (please make sure there is one of each duplicates remain in the file):
+Note: *Only* remove these duplicate lines and no others. Any other duplicates should be left.
 
     subsetdef: efo_slim "efo slim"
     subsetdef: grouping_class "grouping class"
@@ -90,7 +94,7 @@ make release
 This generates derived files such as efo.owl and efo.obo and places
 them in the top level (../..). The versionIRI will be added.
 
-At this point, please check your local copy of the top-level efo.owl and see if everything looks ok (e.g. the version is updated and reflecting the current to-be-released version, the date is correct).
+At this point, please check your local copy of the **top-level** efo.owl and see if everything looks ok (e.g. the version is updated and reflecting the current to-be-released version, the date is correct).
 
 
 
@@ -98,7 +102,7 @@ At this point, please check your local copy of the top-level efo.owl and see if 
 
 Release notes detailing major changes between releases are produced to aid users awareness.
 
-You will modify the release notes file:
+You will modify your **local copy** of the release notes file, located at the top-level of the directory:
 
     https://github.com/EBISPOT/efo/blob/master/ExFactor%20Ontology%20release%20notes.txt
 
@@ -130,8 +134,17 @@ k. Save the file.
 
 
 Commit and push these files.
+To use vim for the commit message:
 
+    git status
     git commit -a
+    Press "i" to enter editing mode, enter the commit message (e.g. EFO release 2.95).
+    ESC and type ":wq" to write and quit.
+
+Alternatively, to use the terminal for the commit message:
+
+    git status
+    git commit -a -m "message here"
 
 And type a brief description of the release in the editor window
 
@@ -170,7 +183,7 @@ The PURLs are already configured to pull from github. This means that BOTH ontol
 
     go to http://gromit.ebi.ac.uk:10001/browse/EFO
     click on the plan 'Build EFO Web'
-    If the run is successful, manually go into the plan and promote it to wwwdev (staging), and www (prod) respectively.
+    If the run is successful, manually go into the plan (deployment tab) and promote it to wwwdev (staging), and www (prod) respectively.
 
 ## Finally, announce the new release by mailing:
 
