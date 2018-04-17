@@ -1,23 +1,13 @@
-## REMEMBER TO SET UP YOUR GITHUB REPO FOR TRAVIS
-## Go to: https://travis-ci.org/EBISPOT for details
 language: java
 jdk:
-  - oraclejdk8
-
-# command to run tests
+- oraclejdk8
 script: cd src/ontology && make test
-
-#after_success:
-#  coveralls
-
-# whitelist
 branches:
   only:
-    - master
-    - test-travis
-
-### UNCOMMENT THIS AND ADD YOUR DETAILS:
+  - master
+  - test-travis
 notifications:
   email:
-    - spot-ontodev@ebi.ac.uk
-  slack: ebispot:rohtEoVFwBgEm2abuOKWHoK9
+  - spot-ontodev@ebi.ac.uk
+  slack:
+    secure: BOmhSceiQHH63VJkMdhj++sQ567EB9Uy1mDFk+4SyUsJ4gf9dfFSZP+0PQjWeTxemN3tJlid+pwt/Qc7VtEwEBjoX2cx3PqwVMgK0ZrtTQTeyEy0UfnqMFCv0pbb/jwQ3V6D9/ryAkf9Q5VPr3W7sLF+c4CUxENP1f47xHFnlLejGR6lXLh1zWnJ444S8lx6KLHoJ5qTotHp88rCqphq7RrPnECE4Ni9TFIuG2UXDOq23AGGpBASJTcsiyO7vsWUYDsxzEXzHLZqGI0eahN8/ybNerv+TbxqGmkIbRbeo5/gjFQaOM62un6VAza2rxOY9UQa9+BIRKzKqqcvy8ondsLrWZGXjgUFO6GHzGWYWvNJNtdu+WlFnMjEtBy1zldPXpinQ0fOyKwYvnTvzqMrj1oZca8zqEw7GPW/rAYiECql2ZYnL7KpAzfd5QnCp/KnXNZbOcCwZlZtu9yDOE/Zc2EcpR5QJbwMTytqlo263Km2F+1YUzMoC+w8fpNA0rb070SXg+RkE5wAqw1KxZBi8FQ6otEQsFAPuHGuFF8jyhunJAoXt5jpndWz3pLUundX65Cr3w9byrUYodBtJOOSCvoCJ21A4k9ruk2ax7LPwIQ0itQZsTIQwFS3CNpTjxyCvhXHOp4EHaHpILeMAdCeJOE7weP7VghOtlUt4+zKoYg=
