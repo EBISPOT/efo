@@ -96,7 +96,7 @@ gxa_organs_slim.owl: gxa_organs.owl
 gxa-efo: $(SRC) gxa_anatomical_slim.owl gxa_cell_slim.owl gxa_organs_slim.owl
 	$(ROBOT) merge --input $(SRC) --input gxa_anatomical_slim.owl --input gxa_cell_slim.owl --input gxa_organs_slim.owl --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) -o $(SRC) 
 	
-$(ATLAS_SLIM): gxa_anatomical_slim.owl gxa_cell_slim.owl gxa_organs_slim.owl gxa_anatomical_systems.owl gxa_cell_types.owl gxa_organs.owl
+$(ATLAS_SLIM): gxa-efo gxa_anatomical_slim.owl gxa_cell_slim.owl gxa_organs_slim.owl gxa_anatomical_systems.owl gxa_cell_types.owl gxa_organs.owl
 	rm -f gxa_anatomical_slim.owl gxa_cell_slim.owl gxa_organs_slim.owl gxa_anatomical_systems.owl gxa_cell_types.owl gxa_organs.owl
 
 
