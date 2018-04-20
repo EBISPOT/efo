@@ -15,12 +15,15 @@ EFO2OBO= ../../bin/efo2obo
 OWLTOOLS= ../../bin/owltools
 USECAT= --use-catalog
 SPARQLDIR = ../sparql
+UBERONPREFIX = "UBERON: http://purl.obolibrary.org/obo/UBERON_"
+CLPREFIX = "CL: http://purl.obolibrary.org/obo/CL_"
+ATLAS_SLIM = clean
 
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
 
-all: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo
+all: $(ATLAS_SLIM) $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo
 test: all sparql_test
 prepare_release: all
 	cp $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo $(RELEASEDIR) &&\
@@ -56,6 +59,46 @@ $(ONT)_full.obo: $(ONT_INF_ALL).owl
 # Most ontologies are modularly constructed using portions of other ontologies
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
+
+# ----------------------------------------
+# Atlas slim
+# ----------------------------------------
+
+## extracting the terms from the templates
+### each template is merged with a blank upper efo to create an owl file for each
+### in order to ensure the uri is maintained during this process, the prefix is added
+
+gxa_anatomical_systems.owl: ../templates/efo-upper.owl ../templates/anatomical_systems.tsv
+	$(ROBOT) merge --input ../templates/efo-upper.owl template --merge-before --prefix $(UBERONPREFIX) --template ../templates/anatomical_systems.tsv reason -s true -m false -r ELK --output gxa_anatomical_systems.owl
+
+gxa_cell_types.owl: ../templates/efo-upper.owl ../templates/cell_types.tsv
+	$(ROBOT) merge --input ../templates/efo-upper.owl template --merge-before --prefix $(CLPREFIX) --template ../templates/cell_types.tsv reason -s true -m false -r ELK --output gxa_cell_types.owl
+
+gxa_organs.owl: ../templates/efo-upper.owl ../templates/organs.tsv
+	$(ROBOT) merge --input ../templates/efo-upper.owl template --merge-before --prefix $(UBERONPREFIX) --template ../templates/organs.tsv reason -s true -m false -r ELK --output gxa_organs.owl
+
+## adding the slim annotation
+### each template's owl file undergoes a sparql query that labels each term with the respective slim annotation
+### the output is an owl file for each
+
+gxa_anatomical_slim.owl: gxa_anatomical_systems.owl
+	$(ROBOT) query --input gxa_anatomical_systems.owl --format ttl --construct $(SPARQLDIR)/construct_slim_anatomy.sparql gxa_anatomical_slim.owl
+	
+gxa_cell_slim.owl: gxa_cell_types.owl
+	$(ROBOT) query --input gxa_cell_types.owl --format ttl --construct $(SPARQLDIR)/construct_slim_cell.sparql gxa_cell_slim.owl
+	
+gxa_organs_slim.owl: gxa_organs.owl
+	$(ROBOT) query --input gxa_organs.owl --format ttl --construct $(SPARQLDIR)/construct_slim_organs.sparql gxa_organs_slim.owl
+	
+## merging of the template slim owls and the efo-edit.owl file.
+### temporarily output into a separate owl file while testing.
+
+gxa-efo: $(SRC) gxa_anatomical_slim.owl gxa_cell_slim.owl gxa_organs_slim.owl
+	$(ROBOT) merge --input $(SRC) --input gxa_anatomical_slim.owl --input gxa_cell_slim.owl --input gxa_organs_slim.owl --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) -o $(SRC) 
+	
+$(ATLAS_SLIM): gxa_anatomical_slim.owl gxa_cell_slim.owl gxa_organs_slim.owl gxa_anatomical_systems.owl gxa_cell_types.owl gxa_organs.owl
+	rm -f gxa_anatomical_slim.owl gxa_cell_slim.owl gxa_organs_slim.owl gxa_anatomical_systems.owl gxa_cell_types.owl gxa_organs.owl
+
 
 # ----------------------------------------
 # Release
