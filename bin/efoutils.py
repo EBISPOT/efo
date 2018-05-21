@@ -12,10 +12,10 @@ def download_source_ontologies():
     data = json.loads(json_data)
 
     for ontology in data:
-        print "downloading "+ ontology["shortName"] + "..."
+        print "downloading latest version of "+ ontology["shortName"] + "..."
         try:
             ontology_file = urllib2.urlopen(ontology["ontologyUrl"])
-            with open("imports/"+ontology["shortName"]+".owl", "wb") as output:
+            with open("build/full_imports/"+ontology["shortName"]+".owl", "wb") as output:
                 output.write(ontology_file.read())
         except:
             print "couldn't download " + ontology["shortName"]
