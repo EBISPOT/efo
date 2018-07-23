@@ -107,10 +107,10 @@ extracted-efo.owl: annotated-efo.owl
 #currently the swapping script depends on having a tsv file with the EFO and mapped MONDO URIs.
 
 extracteduris.owl: extracted-efo.owl
-	python ../templates/premergeuris.py
+	python ../../binpremergeuris.py
 	
 efo-edit-skos.owl: extracteduris.owl
-	python ../templates/labels.py > efo-edit-skos.owl
+	python ../../bin/labels.py > efo-edit-skos.owl
 	
 #all terms combined with EFO
 combined.owl: efo-edit-skos.owl
