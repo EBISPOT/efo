@@ -39,7 +39,7 @@ prepare_release: all
 # Main release targets
 # ----------------------------------------
 
-# create the main efo release by merging and removing imrpot statments
+# create the main efo release by merging and removing import statements
 # this will also set the release date and version number 
 $(ONT).owl: ./results/combined.owl
 	$(ROBOT) merge --input ./results/combined.owl -c true -i  $< annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
@@ -80,8 +80,8 @@ disease_staging_subclasses.csv: $(SRC) $(SPARQLDIR)/disease_subclass.sparql
 ### THE PLAN ###
 
 #reads the template file containing all of the disease terms from EFO, HP and MONDO
-efomondoslim.owl: ../templates/all.tsv
-	$(ROBOT) merge --input $(UPPER) template --merge-before --prefix $(EFOPREFIX) --prefix $(ORDOPREFIX) --prefix $(MONDOPREFIX) --template ../templates/all.tsv reason -s true -m false -r ELK --output ./results/efomondoslim.owl
+efomondoslim.owl: ../templates/disease.tsv
+	$(ROBOT) merge --input $(UPPER) template --merge-before --prefix $(EFOPREFIX) --prefix $(ORDOPREFIX) --prefix $(MONDOPREFIX) --template ../templates/disease.tsv reason -s true -m false -r ELK --output ./results/efomondoslim.owl
 
 #constructs a slim annotation of efo_mondo for all terms
 efo-slim.owl: efomondoslim.owl
