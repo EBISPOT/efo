@@ -65,6 +65,31 @@ $(ONT)_full.obo: $(ONT_INF_ALL).owl
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
 
+IMPORTS = MY_IMPORTS_LIST
+IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
+
+# generate seed with all referenced entities
+seed.txt: $(SRC)
+	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
+
+# Generate terms.txt for each import.  # Assume OBO-style Possibly hacky step?
+# Should be able to drop this if robot can just take a big messy list of terms as input.
+
+imports/%_terms_combined.txt: seed.txt
+	cat $< imports/$*_terms.txt >  $@
+
+# Make this target to regenerate ALL
+all_imports: $(IMPORTS_OWL)
+
+# Use ROBOT, driven entirely by terms lists NOT from source ontology
+imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
+	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/%_import.owl
+
+# Add '--check false' flag if your OWL is not obo-strict
+imports/%_import.obo: imports/%_import.owl
+	$(ROBOT) convert -i $< -o $@
+
 ### PREP CODE FOR EXTRACTING EFO DISEASE TERMS FOR MAPPING ###
 
 disease_subclasses.csv: $(SRC) $(SPARQLDIR)/disease_subclass.sparql
