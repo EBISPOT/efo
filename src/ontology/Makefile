@@ -6,10 +6,9 @@
 
 OBO=http://www.ebi.ac.uk
 ONT=efo
-ONT_INF=efo_inferred
-ONT_INF_ALL=efo_inferred_all
 BASE=$(OBO)/$(ONT)
 SRC=$(ONT)-edit.owl
+BUILDDIR=build
 RELEASEDIR=../..
 ROBOT= ../../bin/robot
 EFO2OBO= ../../bin/efo2obo
@@ -23,15 +22,16 @@ GENERATED = ./results/efo-mondo-generated.owl
 EFOPREFIX = "EFO: http://www.ebi.ac.uk/efo/EFO_"
 ORDOPREFIX = "Orphanet: http://www.orpha.net/ORDO/Orphanet_"
 MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
-
+EFO3EDIT = efo-3-edit.owl
+EFOFIXER = ../../bin/efo-fixer.jar
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
 
-all:  combined.owl $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo
+all: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT)_full.owl
 test: all sparql_test
 prepare_release: all
-	cp $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo $(RELEASEDIR) &&\
+	cp $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT)_full.owl $(RELEASEDIR) &&\
 	(test -f subsets/*owl && cp subsets/*{owl,obo} $(RELEASEDIR)/subsets && git add $(RELEASEDIR)/subsets/* || echo "no subsets") &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 
@@ -41,22 +41,34 @@ prepare_release: all
 
 # create the main efo release by merging and removing import statements
 # this will also set the release date and version number 
-$(ONT).owl: ./results/combined.owl
-	$(ROBOT) merge --input ./results/combined.owl -c true -i  $< annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
+$(BUILDDIR)/$(ONT).owl: $(EFO3EDIT)
+	$(ROBOT) merge --input $(EFO3EDIT) -c true -i  $< reason -s true -m true -r hermit annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
-$(ONT_INF).owl: $(ONT).owl
-	$(ROBOT) -v reason -s true -m true -r hermit -i $< -o $@
+$(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
+	$(EFO2OBO) -i $< -o $@
 
-$(ONT_INF_ALL).owl: $(ONT).owl
-	$(ROBOT) -vv merge -i $< -i $(ONT_INF).owl -o $(ONT_INF_ALL).owl
+$(BUILDDIR)/$(ONT)_full.owl: $(EFO3EDIT)
+	cp $< $@
 
-$(ONT).obo: $(ONT_INF).owl
-	$(EFO2OBO) -i $(ONT_INF).owl -o $(ONT).obo
+# make changes to efo 2 to base efo 3
+$(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
+	java -jar $(EFOFIXER) efo-edit.owl $(BUILDDIR)/efo-edit-fixed.owl
 
-$(ONT)_full.obo: $(ONT_INF_ALL).owl
-	$(EFO2OBO) -i $(ONT_INF_ALL).owl -o $(ONT)_full.obo
+# unmerge mondo
 
-#	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@
+$(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo_efo_import.owl
+	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/mondo_efo_import.owl unmerge -i imports/mondo_efo_import.owl -o $@
+
+# add import statements to editors edition
+
+$(EFO3EDIT): efo-upper.owl $(BUILDDIR)/efo-edit-fixed-raw.owl
+	$(ROBOT) merge --collapse-import-closure false -i efo-upper.owl -i $(BUILDDIR)/efo-edit-fixed-raw.owl convert -f ofn -o $@
+
+
+# unmerge imports from edit and add import files
+
+imports/mondo_efo_import.owl: imports/mondo_efo_mappings.tsv
+	java -jar ../../bin/mondo-id-switch.jar imports/mondo_efo_mappings.tsv imports/mondo_import.owl imports/mondo_efo_import.owl && $(ROBOT) -v annotate -i imports/mondo_efo_import.owl --ontology-iri http://www.ebi.ac.uk/efo/imports/mondo_efo_import.owl -o $@
 
 # ----------------------------------------
 # Import modules
@@ -65,24 +77,14 @@ $(ONT)_full.obo: $(ONT_INF_ALL).owl
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
 
-IMPORTS = MY_IMPORTS_LIST
+IMPORTS = mondo
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
-
-# generate seed with all referenced entities
-seed.txt: $(SRC)
-	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
-
-# Generate terms.txt for each import.  # Assume OBO-style Possibly hacky step?
-# Should be able to drop this if robot can just take a big messy list of terms as input.
-
-imports/%_terms_combined.txt: seed.txt
-	cat $< imports/$*_terms.txt >  $@
 
 # Make this target to regenerate ALL
 all_imports: $(IMPORTS_OWL)
 
 # Use ROBOT, driven entirely by terms lists NOT from source ontology
-imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
+imports/%_import.owl: mirror/%.owl imports/%_terms.txt
 	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
 
@@ -90,56 +92,54 @@ imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
 imports/%_import.obo: imports/%_import.owl
 	$(ROBOT) convert -i $< -o $@
 
+
 ### PREP CODE FOR EXTRACTING EFO DISEASE TERMS FOR MAPPING ###
 
-disease_subclasses.csv: $(SRC) $(SPARQLDIR)/disease_subclass.sparql
-	$(ROBOT) query --input $(SRC) --format csv --select $(SPARQLDIR)/disease_subclass.sparql disease_subclasses.csv
+#disease_subclasses.csv: $(SRC) $(SPARQLDIR)/disease_subclass.sparql
+#	$(ROBOT) query --input $(SRC) --format csv --select $(SPARQLDIR)/disease_subclass.sparql disease_subclasses.csv
 	
-disease_staging_subclasses.csv: $(SRC) $(SPARQLDIR)/disease_subclass.sparql
-	$(ROBOT) query --input $(SRC) --format csv --select $(SPARQLDIR)/disease_staging_subclass.sparql disease_staging_subclasses.csv
+#disease_staging_subclasses.csv: $(SRC) $(SPARQLDIR)/disease_subclass.sparql
+#	$(ROBOT) query --input $(SRC) --format csv --select $(SPARQLDIR)/disease_staging_subclass.sparql disease_staging_subclasses.csv
 
-#diseaseparentchild.csv: $(SRC) $(SPARQLDIR)/diseaseparentchild.sparql
-#	$(ROBOT) query --input $(ONT).owl --format csv --select $(SPARQLDIR)/diseaseparentchild.sparql diseaseparentchild.csv
 
 
 ### THE PLAN ###
 
 #reads the template file containing all of the disease terms from EFO, HP and MONDO
-efomondoslim.owl: ../templates/disease.tsv
-	$(ROBOT) merge --input $(UPPER) template --merge-before --prefix $(EFOPREFIX) --prefix $(ORDOPREFIX) --prefix $(MONDOPREFIX) --template ../templates/disease.tsv reason -s true -m false -r ELK --output ./results/efomondoslim.owl
+#efomondoslim.owl: ../templates/disease.tsv
+#	$(ROBOT) merge --input $(UPPER) template --merge-before --prefix $(EFOPREFIX) --prefix $(ORDOPREFIX) --prefix $(MONDOPREFIX) --template ../templates/disease.tsv reason -s true -m false -r ELK --output ./results/efomondoslim.owl
 
 #constructs a slim annotation of efo_mondo for all terms
-efo-slim.owl: efomondoslim.owl
-	$(ROBOT) query --input ./results/efomondoslim.owl --format ttl --construct $(SPARQLDIR)/construct_slim.sparql ./results/efo-slim.owl
+#efo-slim.owl: efomondoslim.owl
+#	$(ROBOT) query --input ./results/efomondoslim.owl --format ttl --construct $(SPARQLDIR)/construct_slim.sparql ./results/efo-slim.owl
 
 #merges all unmapped terms into the current owl file under their mondo mapped parents
-$(PARENTSGENERATED):../templates/efoparents.tsv
-	$(ROBOT) merge --input $(MONDO) template --merge-before --prefix $(EFOPREFIX) --prefix $(ORDOPREFIX) --prefix $(MONDOPREFIX)  --template ../templates/efoparents.tsv reason -s true -m false -r ELK --output $(PARENTSGENERATED)
+#$(PARENTSGENERATED):../templates/efoparents.tsv
+#	$(ROBOT) merge --input $(MONDO) template --merge-before --prefix $(EFOPREFIX) --prefix $(ORDOPREFIX) --prefix $(MONDOPREFIX)  --template ../templates/efoparents.tsv reason -s true -m false -r ELK --output $(PARENTSGENERATED)
 
-$(GENERATED):../templates/unmapped.tsv $(PARENTSGENERATED)
-	$(ROBOT) merge --input $(PARENTSGENERATED) template --merge-before --prefix $(EFOPREFIX) --prefix $(ORDOPREFIX) --prefix $(MONDOPREFIX)  --template ../templates/unmapped.tsv reason -s true -m false -r ELK --output $(GENERATED)
+#$(GENERATED):../templates/unmapped.tsv $(PARENTSGENERATED)
+#	$(ROBOT) merge --input $(PARENTSGENERATED) template --merge-before --prefix $(EFOPREFIX) --prefix $(ORDOPREFIX) --prefix $(MONDOPREFIX)  --template ../templates/unmapped.tsv reason -s true -m false -r ELK --output $(GENERATED)
 
 #merges the unmapped terms with their parents into the owl file with the slim annotation, creating branching
-annotated-efo.owl: $(GENERATED) efo-slim.owl
-	$(ROBOT) merge --input $(GENERATED) --input ./results/efo-slim.owl --output ./results/annotated-efo.owl 
+#annotated-efo.owl: $(GENERATED) efo-slim.owl
+#	$(ROBOT) merge --input $(GENERATED) --input ./results/efo-slim.owl --output ./results/annotated-efo.owl
 	
 #all terms with the slim annotation and their child terms extracted and ready for merging with efo
-extracted-efo.owl: annotated-efo.owl
-	$(OWLTOOLS) ./results/annotated-efo.owl --extract-ontology-subset -u $(BASE).owl -s efo_mondo -o ./results/extracted-efo.owl
+#extracted-efo.owl: annotated-efo.owl
+#	$(OWLTOOLS) ./results/annotated-efo.owl --extract-ontology-subset -u $(BASE).owl -s efo_mondo -o ./results/extracted-efo.owl
 
 #add the python script that replaces the URIs here (premergeuris.py)
 #it is important to swap the URIs pre-merge with EFO to avoid problems in the file
 #currently the swapping script depends on having a tsv file with the EFO and mapped MONDO URIs.
 
-extracteduris.owl: extracted-efo.owl
-	python ../../binpremergeuris.py
+#extracteduris.owl: extracted-efo.owl
+#	python ../../binpremergeuris.py
 	
-efo-edit-skos.owl: extracteduris.owl
-	python ../../bin/labels.py > efo-edit-skos.owl
+#efo-edit-skos.owl: extracteduris.owl
+#	python ../../bin/labels.py > efo-edit-skos.owl
 	
 #all terms combined with EFO
-combined.owl: efo-edit-skos.owl
-	$(ROBOT) merge --input ./results/efo-edit-skos.owl --input ./results/extracteduris.owl --output ./results/combined.owl
+#combined.owl: efo-edit-skos.owl	$(ROBOT) merge --input ./results/efo-edit-skos.owl --input ./results/extracteduris.owl --output ./results/combined.owl
 
 ## CHANGE EFO LABELS TO SKOS:PREFLABEL ##
 
