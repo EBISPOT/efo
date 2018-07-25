@@ -47,8 +47,6 @@ $(BUILDDIR)/$(ONT).owl: $(EFO3EDIT)
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
 	$(EFO2OBO) -i $< -o $@
 
-$(BUILDDIR)/$(ONT)_full.owl: $(EFO3EDIT)
-	cp $< $@
 
 # make changes to efo 2 to base efo 3
 $(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
@@ -89,8 +87,8 @@ imports/%_import.owl: mirror/%.owl imports/%_terms.txt
 .PRECIOUS: imports/%_import.owl
 
 # Add '--check false' flag if your OWL is not obo-strict
-imports/%_import.obo: imports/%_import.owl
-	$(ROBOT) convert -i $< -o $@
+#imports/%_import.obo: imports/%_import.owl
+#	$(ROBOT) convert --check false -i $< -o $@
 
 
 ### PREP CODE FOR EXTRACTING EFO DISEASE TERMS FOR MAPPING ###
