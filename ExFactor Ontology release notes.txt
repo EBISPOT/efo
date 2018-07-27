@@ -10,9 +10,9 @@
     \::/  /       \:\__\        \::/  /   
      \/__/         \/__/         \/__/    
 EFO - Release Notes
-ArrayExpress Experimental Factor Ontology version 2.95
-Date Released: 16th April 2018
-Class Count: 21078
+ArrayExpress Experimental Factor Ontology version 2.98
+Date Released: 16th July 2018
+Class Count: 21975
 
 Summary: 
 
@@ -22,7 +22,7 @@ IMPORTANT NOTICE - We have moved to Github. From EFO 2.90 on, all our files will
 
 ***!!!***
 
-EFO 2.95 contains around 350 additional sequencing assay terms and a dozen new sequencing instrument terms, as well as updates to disease classification from 2.94 release; please see the details below for the full log of change.
+EFO 2.98 contains continued work on the disease classifications from 2.97; please see the details below for the full log of change.
 
 
 ----------------------------------
@@ -39,2288 +39,543 @@ EFO 2.95 contains around 350 additional sequencing assay terms and a dozen new s
 
 New classes:
 
-Class: http://www.ebi.ac.uk/efo/EFO_0008779
-Label: in-cell SHAPE-Seq
-+   'in-cell SHAPE-Seq' SubClassOf 'assay'
-+   'in-cell SHAPE-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008778
-Label: IMS-MDA
-+   'IMS-MDA' SubClassOf 'assay'
-+   'IMS-MDA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008777
-Label: Ig-Seq
-+   'Ig-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Ig-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008772
-Label: hyRAD
-+   'hyRAD' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'hyRAD' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008771
-Label: HydEn-seq
-+   'HydEn-seq' SubClassOf 'assay'
-+   'HydEn-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008770
-Label: HTGTS
-+   'HTGTS' SubClassOf 'assay'
-+   'HTGTS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008776
-Label: iDES
-+   'iDES' SubClassOf 'assay'
-+   'iDES' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008775
-Label: icSHAPE
-+   'icSHAPE' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'icSHAPE' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008774
-Label: iCLIP
-+   'iCLIP' SubClassOf 'assay'
-+   'iCLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008773
-Label: ICE
-+   'ICE' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'ICE' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008767
-Label: hMeDIP-seq
-+   'hMeDIP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'hMeDIP-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008766
-Label: HITS-RAP
-+   'HITS-RAP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'HITS-RAP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008769
-Label: HT-SELEX
-+   'HT-SELEX' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'HT-SELEX' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008768
-Label: HT-ChIP
-+   'HT-ChIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'HT-ChIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008761
-Label: HELP-Seq
-+   'HELP-Seq' SubClassOf 'assay'
-+   'HELP-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008760
-Label: GUIDE-seq
-+   'GUIDE-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'GUIDE-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008763
-Label: Hi-SCL
-+   'Hi-SCL' SubClassOf 'assay'
-+   'Hi-SCL' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008762
-Label: hi-CLIP
-+   'hi-CLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'hi-CLIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008765
-Label: HiTS-Flip
-+   'HiTS-Flip' SubClassOf 'assay'
-+   'HiTS-Flip' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008764
-Label: Histone meth.
-+   'Histone meth.' SubClassOf 'assay'
-+   'Histone meth.' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008799
-Label: MCC-Seq
-+   'MCC-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'MCC-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008798
-Label: MBDCap-Seq
-+   'MBDCap-Seq' SubClassOf 'assay'
-+   'MBDCap-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008797
-Label: MATQ-seq
-+   'MATQ-seq' SubClassOf 'assay'
-+   'MATQ-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008796
-Label: MARS-seq
-+   'MARS-seq' SubClassOf 'assay'
-+   'MARS-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008795
-Label: MARIO
-+   'MARIO' SubClassOf 'assay'
-+   'MARIO' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008794
-Label: MARDI
-+   'MARDI' SubClassOf 'assay'
-+   'MARDI' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008793
-Label: MALBAC
-+   'MALBAC' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'MALBAC' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008792
-Label: MAINE-Seq
-+   'MAINE-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'MAINE-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008791
-Label: MAF
-+   'MAF' SubClassOf 'assay'
-+   'MAF' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008790
-Label: m6A-seq
-+   'm6A-seq' SubClassOf 'assay'
-+   'm6A-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008789
-Label: M6A-RIP
-+   'M6A-RIP' SubClassOf 'assay'
-+   'M6A-RIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008788
-Label: m1A mapping
-+   'm1A mapping' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'm1A mapping' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008785
-Label: LIANTI
-+   'LIANTI' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'LIANTI' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008784
-Label: LAM-HTGTS
-+   'LAM-HTGTS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'LAM-HTGTS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008787
-Label: Look-Seq
-+   'Look-Seq' SubClassOf 'assay'
-+   'Look-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008786
-Label: LM-Seq
-+   'LM-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'LM-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008781
-Label: ini-seq
-+   'ini-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'ini-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008780
-Label: inDrop
-+   'inDrop' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'inDrop' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008783
-Label: IVT-SAPAS
-+   'IVT-SAPAS' SubClassOf 'assay'
-+   'IVT-SAPAS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008782
-Label: INSeq
-+   'INSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'INSeq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008720
-Label: DroNc-Seq
-+   'DroNc-Seq' SubClassOf 'assay'
-+   'DroNc-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008721
-Label: Drop-ChIP
-+   'Drop-ChIP' SubClassOf 'assay'
-+   'Drop-ChIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008728
-Label: EC-seq
-+   'EC-seq' SubClassOf 'assay'
-+   'EC-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008729
-Label: END-seq
-+   'END-seq' SubClassOf 'assay'
-+   'END-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008726
-Label: dsRNA-Seq
-+   'dsRNA-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'dsRNA-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008727
-Label: Duplex-Seq
-+   'Duplex-Seq' SubClassOf 'assay'
-+   'Duplex-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008724
-Label: DSB-seq
-+   'DSB-seq' SubClassOf 'assay'
-+   'DSB-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008725
-Label: DSBCapture
-+   'DSBCapture' SubClassOf 'assay'
-+   'DSBCapture' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008722
-Label: Drop-Seq
-+   'Drop-Seq' SubClassOf 'assay'
-+   'Drop-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008723
-Label: Droplet-CirSeq
-+   'Droplet-CirSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Droplet-CirSeq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008730
-Label: EnIGMA
-+   'EnIGMA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'EnIGMA' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008731
-Label: EPIG-Seq
-+   'EPIG-Seq' SubClassOf 'assay'
-+   'EPIG-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008732
-Label: epiGBS
-+   'epiGBS' SubClassOf 'assay'
-+   'epiGBS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008737
-Label: FAST-iCLIP
-+   'FAST-iCLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'FAST-iCLIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008738
-Label: FAST-SeqS
-+   'FAST-SeqS' SubClassOf 'assay'
-+   'FAST-SeqS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008739
-Label: fC-CET
-+   'fC-CET' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'fC-CET' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008733
-Label: eWGA
-+   'eWGA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'eWGA' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008734
-Label: ezRAD
-+   'ezRAD' SubClassOf 'assay'
-+   'ezRAD' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008735
-Label: FACS-seq
-+   'FACS-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'FACS-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008736
-Label: Fast-ATAC
-+   'Fast-ATAC' SubClassOf 'ATAC-seq'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008742
-Label: obsolete_FISSEQ
-+   'obsolete_FISSEQ' SubClassOf 'obsolete class'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008743
-Label: FiT-Seq
-+   'FiT-Seq' SubClassOf 'assay'
-+   'FiT-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008740
-Label: fC-Seal
-+   'fC-Seal' SubClassOf 'assay'
-+   'fC-Seal' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008741
-Label: fCAB-Seq
-+   'fCAB-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'fCAB-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008746
-Label: FREQ-Seq
-+   'FREQ-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'FREQ-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008747
-Label: FRISCR
-+   'FRISCR' SubClassOf 'assay'
-+   'FRISCR' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008744
-Label: FlowSeq
-+   'FlowSeq' SubClassOf 'assay'
-+   'FlowSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008745
-Label: Frag-seq
-+   'Frag-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Frag-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008748
-Label: FRT-Seq
-+   'FRT-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'FRT-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008749
-Label: Fusion-seq
-+   'Fusion-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Fusion-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008750
-Label: G4 ChIP-seq
-+   'G4 ChIP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'G4 ChIP-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008751
-Label: G4-seq
-+   'G4-seq' SubClassOf 'assay'
-+   'G4-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008752
-Label: GMUCT 1.0
-+   'GMUCT 1.0' SubClassOf 'assay'
-+   'GMUCT 1.0' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008753
-Label: GMUCT 2.0
-+   'GMUCT 2.0' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'GMUCT 2.0' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008754
-Label: GRIL-seq
-+   'GRIL-seq' SubClassOf 'assay'
-+   'GRIL-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008755
-Label: GRIP
-+   'GRIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'GRIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008756
-Label: GRO-CAP
-+   'GRO-CAP' SubClassOf 'assay'
-+   'GRO-CAP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008757
-Label: gSELEX-Seq
-+   'gSELEX-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'gSELEX-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008758
-Label: GT-seq
-+   'GT-seq' SubClassOf 'assay'
-+   'GT-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008759
-Label: GTI-Seq
-+   'GTI-Seq' SubClassOf 'assay'
-+   'GTI-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008703
-Label: CytoSeq
-+   'CytoSeq' SubClassOf 'assay'
-+   'CytoSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008702
-Label: CrY2H-seq
-+   'CrY2H-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'CrY2H-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008701
-Label: CROP-Seq
-+   'CROP-Seq' SubClassOf 'assay'
-+   'CROP-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008700
-Label: CREST-seq
-+   'CREST-seq' SubClassOf 'assay'
-+   'CREST-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008707
-Label: ddRADseq
-+   'ddRADseq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'ddRADseq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008706
-Label: DArTSeq
-+   'DArTSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'DArTSeq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008705
-Label: DAP-seq
-+   'DAP-seq' SubClassOf 'assay'
-+   'DAP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008704
-Label: DamID
-+   'DamID' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'DamID' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008708
-Label: DeepCAGE
-+   'DeepCAGE' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'DeepCAGE' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008709
-Label: Digenome-seq
-+   'Digenome-seq' SubClassOf 'assay'
-+   'Digenome-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008712
-Label: DLAF
-+   'DLAF' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'DLAF' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008711
-Label: DIP-seq
-+   'DIP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'DIP-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008714
-Label: DMS-Seq
-+   'DMS-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'DMS-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008713
-Label: DMS-MapSeq
-+   'DMS-MapSeq' SubClassOf 'assay'
-+   'DMS-MapSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008716
-Label: DNase-Seq
-+   'DNase-Seq' SubClassOf 'assay'
-+   'DNase-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008715
-Label: Dnase I SIM
-+   'Dnase I SIM' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Dnase I SIM' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008718
-Label: DP-Seq
-+   'DP-Seq' SubClassOf 'assay'
-+   'DP-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008717
-Label: DNaseI-Seq
-+   'DNaseI-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'DNaseI-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008710
-Label: Digital RNA
-+   'Digital RNA' SubClassOf 'assay'
-+   'Digital RNA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008719
-Label: dRNA-Seq
-+   'dRNA-Seq' SubClassOf 'assay'
-+   'dRNA-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008694
-Label: ClickSeq
-+   'ClickSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'ClickSeq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008695
-Label: CNV-Seq
-+   'CNV-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'CNV-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008692
-Label: CLaP
-+   'CLaP' SubClassOf 'assay'
-+   'CLaP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008693
-Label: CLASH
-+   'CLASH' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'CLASH' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008698
-Label: CPT-seq
-+   'CPT-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'CPT-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008699
-Label: CRE-Seq
-+   'CRE-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'CRE-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008696
-Label: COPRO-seq
-+   'COPRO-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'COPRO-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008697
-Label: cP-RNA-Seq
-+   'cP-RNA-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'cP-RNA-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008691
-Label: CirSeq
-+   'CirSeq' SubClassOf 'assay'
-+   'CirSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008690
-Label: CIRS-seq
-+   'CIRS-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'CIRS-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008689
-Label: Circle-Seq
-+   'Circle-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Circle-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008681
-Label: CHART
-+   'CHART' SubClassOf 'assay'
-+   'CHART' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008682
-Label: ChEC-seq
-+   'ChEC-seq' SubClassOf 'assay'
-+   'ChEC-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'genomic DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008683
-Label: Chem-Seq
-+   'Chem-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Chem-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008684
-Label: Chia-PET
-+   'Chia-PET' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Chia-PET' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008685
-Label: ChIP-BS-seq
-+   'ChIP-BS-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'ChIP-BS-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008686
-Label: ChIPmentation
-+   'ChIPmentation' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'ChIPmentation' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008687
-Label: ChIRP
-+   'ChIRP' SubClassOf 'assay'
-+   'ChIRP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008688
-Label: CIP-TAP
-+   'CIP-TAP' SubClassOf 'assay'
-+   'CIP-TAP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008680
-Label: ChAP-seq
-+   'ChAP-seq' SubClassOf 'assay'
-+   'ChAP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008677
-Label: CATCH-IT
-+   'CATCH-IT' SubClassOf 'assay'
-+   'CATCH-IT' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008676
-Label: CAST-ChIP
-+   'CAST-ChIP' SubClassOf 'assay'
-+   'CAST-ChIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008675
-Label: CaptureSeq
-+   'CaptureSeq' SubClassOf 'assay'
-+   'CaptureSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008674
-Label: Capture-HiC
-+   'Capture-HiC' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Capture-HiC' SubClassOf 'Chromosome conformation capture assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008673
-Label: CapSeq
-+   'CapSeq' SubClassOf 'assay'
-+   'CapSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008672
-Label: Capp-Seq
-+   'Capp-Seq' SubClassOf 'assay'
-+   'Capp-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008671
-Label: CAP-seq
-+   'CAP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'CAP-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008670
-Label: caMAB-seq
-+   'caMAB-seq' SubClassOf 'assay'
-+   'caMAB-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008679
-Label: CEL-Seq
-+   'CEL-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'CEL-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008678
-Label: CATCH-seq
-+   'CATCH-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'CATCH-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008664
-Label: BruUV-Seq
-+   'BruUV-Seq' SubClassOf 'assay'
-+   'BruUV-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008663
-Label: BruDRB-seq
-+   'BruDRB-seq' SubClassOf 'assay'
-+   'BruDRB-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008666
-Label: BSAS
-+   'BSAS' SubClassOf 'assay'
-+   'BSAS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008665
-Label: BS-Seq
-+   'BS-Seq' SubClassOf 'assay'
-+   'BS-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008660
-Label: BRIC-seq
-+   'BRIC-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'BRIC-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008662
-Label: BruChase-Seq
-+   'BruChase-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'BruChase-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008661
-Label: Bru-Seq
-+   'Bru-Seq' SubClassOf 'assay'
-+   'Bru-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008668
-Label: CAB-Seq
-+   'CAB-Seq' SubClassOf 'assay'
-+   'CAB-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008667
-Label: BSPP
-+   'BSPP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'BSPP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008669
-Label: CAGEscan
-+   'CAGEscan' SubClassOf 'assay'
-+   'CAGEscan' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008651
-Label: AGO-CLIP
-+   'AGO-CLIP' SubClassOf 'assay'
-+   'AGO-CLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008650
-Label: Advanved Chia-PET
-+   'Advanved Chia-PET' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Advanved Chia-PET' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008655
-Label: Barcode-Seq
-+   'Barcode-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Barcode-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008654
-Label: Bar-Seq
-+   'Bar-Seq' SubClassOf 'assay'
-+   'Bar-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'genomic DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008653
-Label: ARS-Seq
-+   'ARS-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'ARS-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008652
-Label: AHT-ChIP-Seq
-+   'AHT-ChIP-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'AHT-ChIP-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008659
-Label: Break-seq
-+   'Break-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Break-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008658
-Label: BrdU-CLIP
-+   'BrdU-CLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'BrdU-CLIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008657
-Label: BLESS
-+   'BLESS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'BLESS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008656
-Label: BisChIP-Seq
-+   'BisChIP-Seq' SubClassOf 'assay'
-+   'BisChIP-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008640
-Label: 3'T-fill
-+   '3'T-fill' SubClassOf 'assay'
-+   '3'T-fill' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008642
-Label: 3?NT method
-+   '3?NT method' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   '3?NT method' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008641
-Label: 3?-end-seq
-+   '3?-end-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   '3?-end-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008644
-Label: 3P-Seq
-+   '3P-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   '3P-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008643
-Label: 3?-Seq
-+   '3?-Seq' SubClassOf 'assay'
-+   '3?-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008646
-Label: 4sUDRB-seq
-+   '4sUDRB-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   '4sUDRB-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008645
-Label: 3-Seq
-+   '3-Seq' SubClassOf 'assay'
-+   '3-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008648
-Label: 5PSeq
-+   '5PSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   '5PSeq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008647
-Label: 5?-GRO-seq
-+   '5?-GRO-seq' SubClassOf 'assay'
-+   '5?-GRO-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008649
-Label: Aba-seq
-+   'Aba-seq' SubClassOf 'assay'
-+   'Aba-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008625
-Label: vitreous prolapse
-+   'vitreous prolapse' SubClassOf 'vitreous body disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008626
-Label: vitreous hemorrhage
-+   'vitreous hemorrhage' SubClassOf 'eye hemorrhage'
-+   'vitreous hemorrhage' SubClassOf 'vitreous body disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008623
-Label: dysthymic disorder
-+   'dysthymic disorder' SubClassOf 'mood disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008624
-Label: vitreous body disease
-+   'vitreous body disease' SubClassOf 'eye disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008627
-Label: eye hemorrhage
-+   'eye hemorrhage' SubClassOf 'eye disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008628
-Label: Hyalitis
-+   'Hyalitis' SubClassOf 'vitreous body disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008621
-Label: Microcystic Renal Disease
-+   'Microcystic Renal Disease' SubClassOf 'Polycystic Kidney Disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008622
-Label: female genital tract polyp
-+   'female genital tract polyp' SubClassOf 'polyp'
-+   'female genital tract polyp' SubClassOf 'has_disease_location' some ('female reproductive system' or ('part_of' some 'female reproductive system'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008620
-Label: Polycystic Kidney Disease
-+   'Polycystic Kidney Disease' SubClassOf 'Cystic Kidney Disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008634
-Label: ONT PremethION
-+   'ONT PremethION' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008635
-Label: Illumina iSeq 100
-+   'Illumina iSeq 100' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008636
-Label: Illumina MiniSeq
-+   'Illumina MiniSeq' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008637
-Label: Illumina NovaSeq 6000
-+   'Illumina NovaSeq 6000' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008638
-Label: 2b-RAD
-+   '2b-RAD' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   '2b-RAD' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008639
-Label: 2P-Seq
-+   '2P-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   '2P-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008630
-Label: PacBio Sequel System
-+   'PacBio Sequel System' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008631
-Label: PacBio RS II
-+   'PacBio RS II' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008632
-Label: ONT MinION
-+   'ONT MinION' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008633
-Label: ONT GridION X5
-+   'ONT GridION X5' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008607
-Label: drug-induced pemphigus
-+   'drug-induced pemphigus' SubClassOf 'pemphigus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008608
-Label: radiotherapy-induced pemphigus
-+   'radiotherapy-induced pemphigus' SubClassOf 'pemphigus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008605
-Label: IgG/IgA pemphigus
-+   'IgG/IgA pemphigus' SubClassOf 'pemphigus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008606
-Label: pemphigus herpetiformis
-+   'pemphigus herpetiformis' SubClassOf 'pemphigus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008603
-Label: pemphigus erythematosus
-+   'pemphigus erythematosus' SubClassOf 'pemphigus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008604
-Label: IgA pemphigus
-+   'IgA pemphigus' SubClassOf 'pemphigus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008601
-Label: pemphigus foliaceus
-+   'pemphigus foliaceus' SubClassOf 'pemphigus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008602
-Label: paraneoplastic pemphigus
-+   'paraneoplastic pemphigus' SubClassOf 'pemphigus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008616
-Label: Complex Cyst of Kidney
-+   'Complex Cyst of Kidney' SubClassOf 'Cystic Kidney Disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008617
-Label: Medullary Cystic Kidney Disease Type I
-+   'Medullary Cystic Kidney Disease Type I' SubClassOf 'Cystic Kidney Disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008618
-Label: Medullary Cystic Kidney Disease Type II
-+   'Medullary Cystic Kidney Disease Type II' SubClassOf 'Cystic Kidney Disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008619
-Label: Simple Cyst of Kidney
-+   'Simple Cyst of Kidney' SubClassOf 'Cystic Kidney Disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008612
-Label: vegetating cicatricial pemphigoid
-+   'vegetating cicatricial pemphigoid' SubClassOf 'mucous membrane pemphigoid'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008613
-Label: pemphigus vegetans
-+   'pemphigus vegetans' SubClassOf 'pemphigus vulgaris'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008614
-Label: Iodine Deficiency Hypothyroidism
-+   'Iodine Deficiency Hypothyroidism' SubClassOf 'hypothyroidism'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008615
-Label: Cystic Kidney Disease
-+   'Cystic Kidney Disease' SubClassOf 'kidney disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008610
-Label: ocular cicatricial pemphigoid
-+   'ocular cicatricial pemphigoid' SubClassOf 'mucous membrane pemphigoid'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008611
-Label: localised cicatricial pemphigoid
-+   'localised cicatricial pemphigoid' SubClassOf 'mucous membrane pemphigoid'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_36064
-Label: taxane
-+   'taxane' SubClassOf 'diterpene'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008928
-Label: SLBS
-+   'SLBS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SLBS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008929
-Label: SMA
-+   'SMA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'SMA' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008927
-Label: SLAF-Seq
-+   'SLAF-Seq' SubClassOf 'assay'
-+   'SLAF-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008926
-Label: SITE-Seq
-+   'SITE-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SITE-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008925
-Label: Single cell ATAC-seq (cell index)
-+   'Single cell ATAC-seq (cell index)' SubClassOf 'assay'
-+   'Single cell ATAC-seq (cell index)' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008924
-Label: Simul-seq
-+   'Simul-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Simul-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008923
-Label: SiMSen-Seq
-+   'SiMSen-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SiMSen-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008922
-Label: SHAPE-Seq
-+   'SHAPE-Seq' SubClassOf 'assay'
-+   'SHAPE-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008921
-Label: SHAPE-MaP
-+   'SHAPE-MaP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'SHAPE-MaP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008920
-Label: SeqZip
-+   'SeqZip' SubClassOf 'assay'
-+   'SeqZip' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008939
-Label: snmC-seq
-+   'snmC-seq' SubClassOf 'assay'
-+   'snmC-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008936
-Label: SMORE-Seq
-+   'SMORE-Seq' SubClassOf 'assay'
-+   'SMORE-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008935
-Label: smMIP
-+   'smMIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'smMIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008938
-Label: SNES
-+   'SNES' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SNES' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008937
-Label: snDrop-seq
-+   'snDrop-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'snDrop-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008932
-Label: SMDB
-+   'SMDB' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SMDB' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008931
-Label: Smart-seq2
-+   'Smart-seq2' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Smart-seq2' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008934
-Label: SMIT
-+   'SMIT' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'SMIT' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008933
-Label: SMiLE-seq
-+   'SMiLE-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SMiLE-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008930
-Label: Smart-Seq
-+   'Smart-Seq' SubClassOf 'assay'
-+   'Smart-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008945
-Label: SPET-seq
-+   'SPET-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'SPET-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008944
-Label: SpDamID
-+   'SpDamID' SubClassOf 'assay'
-+   'SpDamID' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008943
-Label: SPARE
-+   'SPARE' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'SPARE' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008942
-Label: Sono-Seq
-+   'Sono-Seq' SubClassOf 'assay'
-+   'Sono-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008949
-Label: SSB-Seq
-+   'SSB-Seq' SubClassOf 'assay'
-+   'SSB-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008948
-Label: SS3-Seq
-+   'SS3-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'SS3-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008947
-Label: sRNA-Seq
-+   'sRNA-Seq' SubClassOf 'assay'
-+   'sRNA-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008946
-Label: SPLAT
-+   'SPLAT' SubClassOf 'assay'
-+   'SPLAT' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008941
-Label: sNuc-Seq
-+   'sNuc-Seq' SubClassOf 'assay'
-+   'sNuc-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008940
-Label: snRNA-seq
-+   'snRNA-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'snRNA-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008954
-Label: STRT-seq-2i
-+   'STRT-seq-2i' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'STRT-seq-2i' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008953
-Label: STRT
-+   'STRT' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'STRT' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008956
-Label: SUPeR-seq
-+   'SUPeR-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'SUPeR-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008955
-Label: Structure-Seq
-+   'Structure-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Structure-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008958
-Label: TAB-Seq
-+   'TAB-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'TAB-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008957
-Label: T-WGBS
-+   'T-WGBS' SubClassOf 'assay'
-+   'T-WGBS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008959
-Label: TaDa
-+   'TaDa' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'TaDa' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008950
-Label: ssRNA-seq
-+   'ssRNA-seq' SubClassOf 'assay'
-+   'ssRNA-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008952
-Label: Strand-seq
-+   'Strand-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Strand-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008951
-Label: STATseq
-+   'STATseq' SubClassOf 'assay'
-+   'STATseq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008962
-Label: TARDIS
-+   'TARDIS' SubClassOf 'assay'
-+   'TARDIS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008963
-Label: TATL-seq
-+   'TATL-seq' SubClassOf 'assay'
-+   'TATL-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008960
-Label: TAIL-seq
-+   'TAIL-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'TAIL-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008961
-Label: TAmC-Seq
-+   'TAmC-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'TAmC-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008968
-Label: Term-Seq
-+   'Term-Seq' SubClassOf 'assay'
-+   'Term-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008969
-Label: THS-seq
-+   'THS-seq' SubClassOf 'assay'
-+   'THS-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008966
-Label: TCR Chain Paring
-+   'TCR Chain Paring' SubClassOf 'assay'
-+   'TCR Chain Paring' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008967
-Label: TCR-LA-MC PCR
-+   'TCR-LA-MC PCR' SubClassOf 'assay'
-+   'TCR-LA-MC PCR' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008964
-Label: TC-Seq
-+   'TC-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'TC-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008965
-Label: TCC
-+   'TCC' SubClassOf 'Chromosome conformation capture assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008971
-Label: TIVA
-+   'TIVA' SubClassOf 'assay'
-+   'TIVA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008972
-Label: TL-seq
-+   'TL-seq' SubClassOf 'assay'
-+   'TL-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008973
-Label: TN-Seq
-+   'TN-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'TN-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008974
-Label: Tomo-Seq
-+   'Tomo-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Tomo-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008970
-Label: TIF-Seq
-+   'TIF-Seq' SubClassOf 'assay'
-+   'TIF-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008979
-Label: Tuba-seq
-+   'Tuba-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Tuba-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008975
-Label: TRAP-Seq
-+   'TRAP-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'TRAP-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008976
-Label: TRIBE
-+   'TRIBE' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'TRIBE' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008977
-Label: TruePrime
-+   'TruePrime' SubClassOf 'assay'
-+   'TruePrime' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008978
-Label: TSS Sequencing
-+   'TSS Sequencing' SubClassOf 'assay'
-+   'TSS Sequencing' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008980
-Label: UMI Method
-+   'UMI Method' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'UMI Method' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008981
-Label: VDJ-Seq
-+   'VDJ-Seq' SubClassOf 'assay'
-+   'VDJ-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008984
-Label: WGA-X
-+   'WGA-X' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'WGA-X' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008985
-Label: WGBS
-+   'WGBS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'WGBS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008982
-Label: VirCapSeq-VERT
-+   'VirCapSeq-VERT' SubClassOf 'assay'
-+   'VirCapSeq-VERT' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008983
-Label: VirScan
-+   'VirScan' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'VirScan' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008988
-Label: ?-seq
-+   '?-seq' SubClassOf 'assay'
-+   '?-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008989
-Label: ISS
-+   'ISS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'ISS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008986
-Label: X-ChIP-seq
-+   'X-ChIP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'X-ChIP-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008987
-Label: YAMAT-Seq
-+   'YAMAT-Seq' SubClassOf 'assay'
-+   'YAMAT-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008990
-Label: FISSEQ
-+   'FISSEQ' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'FISSEQ' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008991
-Label: seqFISH
-+   'seqFISH' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'seqFISH' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008992
-Label: MERFISH
-+   'MERFISH' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'MERFISH' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008993
-Label: Ex-FISH
-+   'Ex-FISH' SubClassOf 'assay'
-+   'Ex-FISH' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008994
-Label: spatial transcriptomics
-+   'spatial transcriptomics' SubClassOf 'assay'
-+   'spatial transcriptomics' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008995
-Label: 10X sequencing
-+   '10X sequencing' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008900
-Label: RRBS
-+   'RRBS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'RRBS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008901
-Label: Safe-SeqS
-+   'Safe-SeqS' SubClassOf 'assay'
-+   'Safe-SeqS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008902
-Label: SAPAS
-+   'SAPAS' SubClassOf 'assay'
-+   'SAPAS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008903
-Label: SC3-seq
-+   'SC3-seq' SubClassOf 'assay'
-+   'SC3-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008904
-Label: scATAC-seq (Microfluidics)
-+   'scATAC-seq (Microfluidics)' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'scATAC-seq (Microfluidics)' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008905
-Label: scBS-seq
-+   'scBS-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'scBS-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008907
-Label: scDNase-seq
-+   'scDNase-seq' SubClassOf 'assay'
-+   'scDNase-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008906
-Label: scChIP-seq
-+   'scChIP-seq' SubClassOf 'assay'
-+   'scChIP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008909
-Label: SCL-exo
-+   'SCL-exo' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SCL-exo' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008908
-Label: SCI-seq
-+   'SCI-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SCI-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008911
-Label: scMT-Seq
-+   'scMT-Seq' SubClassOf 'assay'
-+   'scMT-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008912
-Label: scRC-Seq
-+   'scRC-Seq' SubClassOf 'assay'
-+   'scRC-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008910
-Label: SCMDA
-+   'SCMDA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SCMDA' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008915
-Label: scTHS-seq
-+   'scTHS-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'scTHS-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008916
-Label: scWGBS
-+   'scWGBS' SubClassOf 'assay'
-+   'scWGBS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008913
-Label: scRNA-seq
-+   'scRNA-seq' SubClassOf 'assay'
-+   'scRNA-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008914
-Label: scRRBS
-+   'scRRBS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'scRRBS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008919
-Label: Seq-Well
-+   'Seq-Well' SubClassOf 'assay'
-+   'Seq-Well' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008918
-Label: SELEX-seq
-+   'SELEX-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'SELEX-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008917
-Label: SELEX
-+   'SELEX' SubClassOf 'assay'
-+   'SELEX' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008893
-Label: Ribose-seq
-+   'Ribose-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Ribose-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008892
-Label: RiboMeth-seq
-+   'RiboMeth-seq' SubClassOf 'assay'
-+   'RiboMeth-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008891
-Label: Ribo-Seq
-+   'Ribo-Seq' SubClassOf 'assay'
-+   'Ribo-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008890
-Label: rG4-seq
-+   'rG4-seq' SubClassOf 'assay'
-+   'rG4-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008897
-Label: RNAtag-Seq
-+   'RNAtag-Seq' SubClassOf 'assay'
-+   'RNAtag-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008896
-Label: RNA-Seq
-+   'RNA-Seq' SubClassOf 'assay'
-+   'RNA-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008895
-Label: RIL-seq
-+   'RIL-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'RIL-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008894
-Label: RICC-seq
-+   'RICC-seq' SubClassOf 'assay'
-+   'RICC-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008899
-Label: RPL
-+   'RPL' SubClassOf 'assay'
-+   'RPL' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008898
-Label: RNET-seq
-+   'RNET-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'RNET-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008880
-Label: RAP
-+   'RAP' SubClassOf 'assay'
-+   'RAP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008882
-Label: RARseq
-+   'RARseq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'RARseq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008881
-Label: Rapture
-+   'Rapture' SubClassOf 'assay'
-+   'Rapture' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008884
-Label: RBNS
-+   'RBNS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'RBNS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008883
-Label: RBBS
-+   'RBBS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'RBBS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008886
-Label: RedBS-Seq
-+   'RedBS-Seq' SubClassOf 'assay'
-+   'RedBS-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008885
-Label: RC-Seq
-+   'RC-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'RC-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008888
-Label: RepeatSeq
-+   'RepeatSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'RepeatSeq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008887
-Label: Rep-Seq
-+   'Rep-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Rep-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008889
-Label: Repli-Seq
-+   'Repli-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Repli-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008829
-Label: NOIR
-+   'NOIR' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'NOIR' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008820
-Label: Mosaic-Seq
-+   'Mosaic-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Mosaic-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008824
-Label: NanoCAGE
-+   'NanoCAGE' SubClassOf 'assay'
-+   'NanoCAGE' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008823
-Label: Mseek
-+   'Mseek' SubClassOf 'assay'
-+   'Mseek' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008822
-Label: MPRA
-+   'MPRA' SubClassOf 'assay'
-+   'MPRA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008821
-Label: MPE-seq
-+   'MPE-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'MPE-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008828
-Label: Nm-seq
-+   'Nm-seq' SubClassOf 'assay'
-+   'Nm-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008827
-Label: NG Capture-C
-+   'NG Capture-C' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'NG Capture-C' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008826
-Label: NET-Seq
-+   'NET-Seq' SubClassOf 'assay'
-+   'NET-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008825
-Label: Nanogrid RNA-Seq
-+   'Nanogrid RNA-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Nanogrid RNA-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008831
-Label: NS-seq
-+   'NS-seq' SubClassOf 'assay'
-+   'NS-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008830
-Label: NOME-Seq
-+   'NOME-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'NOME-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008833
-Label: nuc-ChIP-seq
-+   'nuc-ChIP-seq' SubClassOf 'assay'
-+   'nuc-ChIP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008832
-Label: NSCR
-+   'NSCR' SubClassOf 'assay'
-+   'NSCR' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008835
-Label: nuc-seq
-+   'nuc-seq' SubClassOf 'assay'
-+   'nuc-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008834
-Label: Nuc-seq
-+   'Nuc-seq' SubClassOf 'assay'
-+   'Nuc-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008837
-Label: OK-Seq
-+   'OK-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'OK-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008836
-Label: Nucleo-Seq
-+   'Nucleo-Seq' SubClassOf 'assay'
-+   'Nucleo-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008839
-Label: OS-Seq
-+   'OS-Seq' SubClassOf 'assay'
-+   'OS-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008838
-Label: ORGANIC
-+   'ORGANIC' SubClassOf 'assay'
-+   'ORGANIC' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008809
-Label: MIDAS
-+   'MIDAS' SubClassOf 'assay'
-+   'MIDAS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008807
-Label: miCLIP-m6A
-+   'miCLIP-m6A' SubClassOf 'assay'
-+   'miCLIP-m6A' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008808
-Label: Micro-C XL
-+   'Micro-C XL' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Micro-C XL' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008806
-Label: miCLIP-m5A
-+   'miCLIP-m5A' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'miCLIP-m5A' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008805
-Label: MethylCap-Seq
-+   'MethylCap-Seq' SubClassOf 'assay'
-+   'MethylCap-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008804
-Label: Methyl-seq
-+   'Methyl-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Methyl-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008803
-Label: MeRIP-Seq
-+   'MeRIP-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'MeRIP-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008802
-Label: ME-Scan-SVA
-+   'ME-Scan-SVA' SubClassOf 'assay'
-+   'ME-Scan-SVA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008801
-Label: MDS
-+   'MDS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'MDS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008800
-Label: MDA
-+   'MDA' SubClassOf 'assay'
-+   'MDA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008818
-Label: miTRAP
-+   'miTRAP' SubClassOf 'assay'
-+   'miTRAP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008819
-Label: mNET-seq
-+   'mNET-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'mNET-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008815
-Label: MiR?CLIP
-+   'MiR?CLIP' SubClassOf 'assay'
-+   'MiR?CLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008814
-Label: MIPSTR
-+   'MIPSTR' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'MIPSTR' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008817
-Label: MitoRCA-seq
-+   'MitoRCA-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'MitoRCA-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008816
-Label: MIRA
-+   'MIRA' SubClassOf 'assay'
-+   'MIRA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008811
-Label: MiGS
-+   'MiGS' SubClassOf 'assay'
-+   'MiGS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008810
-Label: middRAD
-+   'middRAD' SubClassOf 'assay'
-+   'middRAD' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008813
-Label: Mint-ChIP
-+   'Mint-ChIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Mint-ChIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008812
-Label: MINCE-seq
-+   'MINCE-seq' SubClassOf 'assay'
-+   'MINCE-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008867
-Label: Pool-Seq
-+   'Pool-Seq' SubClassOf 'assay'
-+   'Pool-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008868
-Label: PRO-cap
-+   'PRO-cap' SubClassOf 'assay'
-+   'PRO-cap' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008865
-Label: Pol II CLIP
-+   'Pol II CLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Pol II CLIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008866
-Label: Poly(A)-ClickSeq
-+   'Poly(A)-ClickSeq' SubClassOf 'assay'
-+   'Poly(A)-ClickSeq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008869
-Label: PRO-seq
-+   'PRO-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PRO-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008860
-Label: Perturb-Seq
-+   'Perturb-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Perturb-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008863
-Label: PLATE-Seq
-+   'PLATE-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PLATE-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008864
-Label: PMA
-+   'PMA' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PMA' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008861
-Label: PhIP-seq
-+   'PhIP-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'PhIP-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008862
-Label: PIP-Seq
-+   'PIP-Seq' SubClassOf 'assay'
-+   'PIP-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008876
-Label: Pvu-Seal-seq
-+   'Pvu-Seal-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Pvu-Seal-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008877
-Label: Quartz-Seq
-+   'Quartz-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Quartz-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008878
-Label: RAD
-+   'RAD' SubClassOf 'assay'
-+   'RAD' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008879
-Label: RAD-tag
-+   'RAD-tag' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'RAD-tag' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008870
-Label: Profiler
-+   'Profiler' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'Profiler' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008871
-Label: ProP-PD
-+   'ProP-PD' SubClassOf 'assay'
-+   'ProP-PD' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008872
-Label: Pseudo-seq
-+   'Pseudo-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Pseudo-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008873
-Label: PSI-seq
-+   'PSI-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PSI-seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008874
-Label: PTB-Seq
-+   'PTB-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PTB-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008875
-Label: Pu-seq
-+   'Pu-seq' SubClassOf 'assay'
-+   'Pu-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008849
-Label: PARTE
-+   'PARTE' SubClassOf 'assay'
-+   'PARTE' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008847
-Label: PARIS
-+   'PARIS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PARIS' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008848
-Label: PARS
-+   'PARS' SubClassOf 'assay'
-+   'PARS' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008845
-Label: PAR-CLIP
-+   'PAR-CLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PAR-CLIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008846
-Label: PARE-Seq
-+   'PARE-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PARE-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008843
-Label: PAL-seq
-+   'PAL-seq' SubClassOf 'assay'
-+   'PAL-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008844
-Label: PAPERCLIP
-+   'PAPERCLIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PAPERCLIP' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008841
-Label: PAIR
-+   'PAIR' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PAIR' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008842
-Label: Paired VH:VL Antibody Repertoire Analysis
-+   'Paired VH:VL Antibody Repertoire Analysis' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Paired VH:VL Antibody Repertoire Analysis' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008840
-Label: oxBS-Seq
-+   'oxBS-Seq' SubClassOf 'assay'
-+   'oxBS-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008858
-Label: PE RAD-Seq
-+   'PE RAD-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'PE RAD-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008859
-Label: PEAT
-+   'PEAT' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PEAT' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008854
-Label: PB-seq
-+   'PB-seq' SubClassOf 'assay'
-+   'PB-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008855
-Label: PBAT
-+   'PBAT' SubClassOf 'assay'
-+   'PBAT' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008856
-Label: PD-Seq
-+   'PD-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
-+   'PD-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008857
-Label: PDZ-Seq
-+   'PDZ-Seq' SubClassOf 'assay'
-+   'PDZ-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008850
-Label: PAS-Seq
-+   'PAS-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PAS-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008851
-Label: PAT-Seq
-+   'PAT-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'PAT-Seq' SubClassOf 'assay'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008852
-Label: PAT?ChIP
-+   'PAT?ChIP' SubClassOf 'assay'
-+   'PAT?ChIP' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'DNA'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008853
-Label: Patch-seq
-+   'Patch-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
-+   'Patch-seq' SubClassOf 'assay'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_35186
-Label: terpene
-+   'terpene' SubClassOf 'isoprenoid'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_35190
-Label: diterpene
-+   'diterpene' SubClassOf 'terpene'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008559
-Label: American trypanosomiasis
-+   'American trypanosomiasis' SubClassOf 'trypanosomiasis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008557
-Label: Methicillin-Susceptible Staphylococcus Aureus Infection
-+   'Methicillin-Susceptible Staphylococcus Aureus Infection' SubClassOf 'Staphylococcus aureus infection'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008558
-Label: Vancomycin-Resistant Staphylococcus Aureus Infection
-+   'Vancomycin-Resistant Staphylococcus Aureus Infection' SubClassOf 'Staphylococcus aureus infection'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008555
-Label: Methicillin-Resistant Staphylococcus Aureus Infection
-+   'Methicillin-Resistant Staphylococcus Aureus Infection' SubClassOf 'Staphylococcus aureus infection'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008556
-Label: Methicillin-Resistant Staphylococcus Aureus Pneumonia
-+   'Methicillin-Resistant Staphylococcus Aureus Pneumonia' SubClassOf 'pneumonia'
-+   'Methicillin-Resistant Staphylococcus Aureus Pneumonia' SubClassOf 'Methicillin-Resistant Staphylococcus Aureus Infection'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008561
-Label: diaphragmatic hernia
-+   'diaphragmatic hernia' SubClassOf 'diaphragm disease'
-+   'diaphragmatic hernia' SubClassOf 'Hernia'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008560
-Label: female infertility
-+   'female infertility' SubClassOf 'realized_in' some ('disease course' and (('part_of' some 'female reproductive system') or ('has_disease_location' some 'female reproductive system')) and ('has_quality' some 'abnormal'))
-+   'female infertility' SubClassOf 'infertility'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008563
-Label: Illumina HiSeq 4000
-+   'Illumina HiSeq 4000' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008562
-Label: postpartum
-+   'postpartum' SubClassOf 'postnatal'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008565
-Label: Illumina HiSeq 2500
-+   'Illumina HiSeq 2500' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008564
-Label: Illumina HiSeq 3000
-+   'Illumina HiSeq 3000' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008567
-Label: Illumina HiSeq X
-+   'Illumina HiSeq X' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008566
-Label: Illumina NextSeq
-+   'Illumina NextSeq' SubClassOf 'high throughput sequencer'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008569
-Label: Thiamine deficiency
-+   'Thiamine deficiency' SubClassOf 'vitamin deficiency'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008568
-Label: Sleep Disorder
-+   'Sleep Disorder' SubClassOf 'mental or behavioural disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008570
-Label: Vitamin B3 deficiency
-+   'Vitamin B3 deficiency' SubClassOf 'vitamin deficiency'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008574
-Label: gangrene
-+   'gangrene' SubClassOf 'abnormality of metabolism/homeostasis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008573
-Label: alcoholic liver disease
-+   'alcoholic liver disease' SubClassOf 'liver disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008572
-Label: malnutrition
-+   'malnutrition' SubClassOf 'nutritional disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008571
-Label: viral conjunctivitis
-+   'viral conjunctivitis' SubClassOf 'Conjunctival Disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008578
-Label: sperm motility measurement
-+   'sperm motility measurement' SubClassOf 'measurement'
-+   'sperm motility measurement' SubClassOf 'is_about' some 'gonad'
-+   'sperm motility measurement' SubClassOf 'is_about' some 'reproductive process'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008577
-Label: Juvenile Osteochondrosis
-+   'Juvenile Osteochondrosis' SubClassOf 'Osteochondrosis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008576
-Label: Spinal Osteochondrosis
-+   'Spinal Osteochondrosis' SubClassOf 'Osteochondrosis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008575
-Label: Osteochondrosis
-+   'Osteochondrosis' SubClassOf 'bone disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008579
-Label: risk-taking behaviour
-+   'risk-taking behaviour' SubClassOf 'behavior'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008580
-Label: response to taxane
-+   'response to taxane' SubClassOf 'has_input' some 'taxane'
-+   'response to taxane' SubClassOf 'response to antimicrotubule agent'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008581
-Label: salivary gland disease
-+   'salivary gland disease' SubClassOf 'has_disease_location' some ('saliva-secreting gland' or ('part_of' some 'saliva-secreting gland'))
-+   'salivary gland disease' SubClassOf 'mouth disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008587
-Label: gender identity disorder
-+   'gender identity disorder' SubClassOf 'mental or behavioural disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008586
-Label: Non-ST Elevation Myocardial Infarction
-+   'Non-ST Elevation Myocardial Infarction' SubClassOf 'Subsequent ST elevation (STEMI) and non-ST elevation (NSTEMI) myocardial infarction'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008589
-Label: esterified cholesterol measurement
-+   'esterified cholesterol measurement' SubClassOf 'lipoprotein measurement'
-+   'esterified cholesterol measurement' SubClassOf 'is_about' some 'cholesterol ester'
-+   'esterified cholesterol measurement' SubClassOf 'is_about' some 'cholesterol homeostasis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008588
-Label: peritonitis
-+   'peritonitis' SubClassOf 'digestive system disease'
-+   'peritonitis' SubClassOf 'has_disease_location' some ('peritoneum' or ('part_of' some 'peritoneum'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008583
-Label: acute myocardial infarction
-+   'acute myocardial infarction' SubClassOf 'myocardial infarction'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008582
-Label: thrombin activatable fibrinolysis inhibitor activation peptide measurement
-+   'thrombin activatable fibrinolysis inhibitor activation peptide measurement' SubClassOf 'is_about' some 'blood plasma'
-+   'thrombin activatable fibrinolysis inhibitor activation peptide measurement' SubClassOf 'is_about' some 'blood coagulation'
-+   'thrombin activatable fibrinolysis inhibitor activation peptide measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008585
-Label: ST Elevation Myocardial Infarction
-+   'ST Elevation Myocardial Infarction' SubClassOf 'Subsequent ST elevation (STEMI) and non-ST elevation (NSTEMI) myocardial infarction'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008584
-Label: Subsequent ST elevation (STEMI) and non-ST elevation (NSTEMI) myocardial infarction
-+   'Subsequent ST elevation (STEMI) and non-ST elevation (NSTEMI) myocardial infarction' SubClassOf 'myocardial infarction'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008590
-Label: Status Asthmaticus
-+   'Status Asthmaticus' SubClassOf 'asthma'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008591
-Label: free cholesterol measurement
-+   'free cholesterol measurement' SubClassOf 'is_about' some 'cholesterol'
-+   'free cholesterol measurement' SubClassOf 'lipoprotein measurement'
-+   'free cholesterol measurement' SubClassOf 'is_about' some 'cholesterol homeostasis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008592
-Label: high density lipoprotein particle size measurement
-+   'high density lipoprotein particle size measurement' SubClassOf 'is_about' some 'HDL cholesterol'
-+   'high density lipoprotein particle size measurement' SubClassOf 'is_about' some 'cholesterol homeostasis'
-+   'high density lipoprotein particle size measurement' SubClassOf 'lipoprotein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008598
-Label: autoimmune bullous skin disease
-+   'autoimmune bullous skin disease' SubClassOf 'autoimmune disease'
-+   'autoimmune bullous skin disease' SubClassOf 'bullous skin disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008597
-Label: anti-p200 pemphigoid
-+   'anti-p200 pemphigoid' SubClassOf 'autoimmune bullous skin disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008596
-Label: chylomicron measurement
-+   'chylomicron measurement' SubClassOf 'is_about' some 'cholesterol homeostasis'
-+   'chylomicron measurement' SubClassOf 'lipoprotein measurement'
-+   'chylomicron measurement' SubClassOf 'is_about' some 'lipoprotein'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008595
-Label: intermediate density lipoprotein measurement
-+   'intermediate density lipoprotein measurement' SubClassOf 'lipoprotein measurement'
-+   'intermediate density lipoprotein measurement' SubClassOf 'is_about' some 'cholesterol homeostasis'
-+   'intermediate density lipoprotein measurement' SubClassOf 'is_about' some 'NHDL cholesterol'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008594
-Label: very low density lipoprotein particle size measurement
-+   'very low density lipoprotein particle size measurement' SubClassOf 'lipoprotein measurement'
-+   'very low density lipoprotein particle size measurement' SubClassOf 'is_about' some 'NHDL cholesterol'
-+   'very low density lipoprotein particle size measurement' SubClassOf 'is_about' some 'cholesterol homeostasis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008593
-Label: low density lipoprotein particle size measurement
-+   'low density lipoprotein particle size measurement' SubClassOf 'lipoprotein measurement'
-+   'low density lipoprotein particle size measurement' SubClassOf 'is_about' some 'cholesterol homeostasis'
-+   'low density lipoprotein particle size measurement' SubClassOf 'is_about' some 'LDL cholesterol'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002040
-Label: Corneal astigmatism
-+   'Corneal astigmatism' SubClassOf 'has_disease_location' some ('cornea' or ('part_of' some 'cornea'))
-+   'Corneal astigmatism' SubClassOf 'Astigmatism'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_24913
-Label: isoprenoid
-+   'isoprenoid' SubClassOf 'lipid'
-
+Class: http://purl.obolibrary.org/obo/CHEBI_33295
+Label: diagnostic agent
++   'diagnostic agent' SubClassOf 'role'
+ 
+Class: http://purl.obolibrary.org/obo/CHEBI_3901
+Label: cosyntropin
++   'cosyntropin' SubClassOf 'chemical entity'
++   'cosyntropin' SubClassOf 'has_role' some 'diagnostic agent'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0030839
+Label: knee pain
++   'knee pain' SubClassOf 'pain'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009175
+Label: response to synacthen
++   'response to synacthen' SubClassOf 'has_input' some 'cosyntropin'
++   'response to synacthen' SubClassOf 'response to drug'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009199
+Label: Pulmonary veno-occlusive disease and/or pulmonary capillary haemangiomatosis
++   'Pulmonary veno-occlusive disease and/or pulmonary capillary haemangiomatosis' SubClassOf 'pulmonary arterial hypertension'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009198
+Label: Pulmonary arterial hypertension associated with schistosomiasis
++   'Pulmonary arterial hypertension associated with schistosomiasis' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009181
+Label: growth differentiation factor 15 measurement
++   'growth differentiation factor 15 measurement' SubClassOf 'is_about' some 'blood plasma'
++   'growth differentiation factor 15 measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009182
+Label: psychotic symptom measurement
++   'psychotic symptom measurement' SubClassOf 'is_about' some 'psychotic symptoms'
++   'psychotic symptom measurement' SubClassOf 'mental or behavioural disorder biomarker'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009180
+Label: rosacea severity measurement
++   'rosacea severity measurement' SubClassOf 'is_about' some 'skin of body'
++   'rosacea severity measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009185
+Label: heart rate response to recovery post exercise
++   'heart rate response to recovery post exercise' SubClassOf 'heart rate'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009186
+Label: platelet larger cell ratio
++   'platelet larger cell ratio' SubClassOf 'platelet measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009183
+Label: empathy measurement
++   'empathy measurement' SubClassOf 'personality trait measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009184
+Label: heart rate response to exercise
++   'heart rate response to exercise' SubClassOf 'heart rate'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009179
+Label: beta-secretase 1 measurement
++   'beta-secretase 1 measurement' SubClassOf 'is_about' some 'Alzheimer's disease'
++   'beta-secretase 1 measurement' SubClassOf 'is_about' some 'brain'
++   'beta-secretase 1 measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009178
+Label: neurofilament light chain measurement
++   'neurofilament light chain measurement' SubClassOf 'is_about' some 'amyotrophic lateral sclerosis'
++   'neurofilament light chain measurement' SubClassOf 'is_about' some 'Huntington disease'
++   'neurofilament light chain measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
++   'neurofilament light chain measurement' SubClassOf 'is_about' some 'multiple sclerosis'
++   'neurofilament light chain measurement' SubClassOf 'is_about' some 'Alzheimer's disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009177
+Label: myopic maculopathy severity measurement
++   'myopic maculopathy severity measurement' SubClassOf 'is_about' some 'eye'
++   'myopic maculopathy severity measurement' SubClassOf 'is_about' some 'myopic macular degeneration'
++   'myopic maculopathy severity measurement' SubClassOf 'eye measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009176
+Label: adrenal suppression measurement
++   'adrenal suppression measurement' SubClassOf 'hormone measurement'
++   'adrenal suppression measurement' SubClassOf 'is_about' some 'adrenal gland'
++   'adrenal suppression measurement' SubClassOf 'is_about' some 'cortisol'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009190
+Label: Thyrotoxicosis
++   'Thyrotoxicosis' SubClassOf 'Hyperthyroidism'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009191
+Label: Toxic Nodular Goiter
++   'Toxic Nodular Goiter' SubClassOf 'Hyperthyroidism'
++   'Toxic Nodular Goiter' SubClassOf 'nodular goiter'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009192
+Label: Drug- or toxin-induced pulmonary arterial hypertension
++   'Drug- or toxin-induced pulmonary arterial hypertension' SubClassOf 'pulmonary arterial hypertension'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009193
+Label: Pulmonary arterial hypertension associated with another disease
++   'Pulmonary arterial hypertension associated with another disease' SubClassOf 'pulmonary arterial hypertension'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009194
+Label: Pulmonary arterial hypertension associated with HIV infection
++   'Pulmonary arterial hypertension associated with HIV infection' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009195
+Label: Pulmonary arterial hypertension associated with chronic hemolytic anemia
++   'Pulmonary arterial hypertension associated with chronic hemolytic anemia' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009196
+Label: Pulmonary arterial hypertension associated with connective tissue disease
++   'Pulmonary arterial hypertension associated with connective tissue disease' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009197
+Label: Pulmonary arterial hypertension associated with portal hypertension
++   'Pulmonary arterial hypertension associated with portal hypertension' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009188
+Label: Red cell distribution width
++   'Red cell distribution width' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009187
+Label: immature platelet fraction
++   'immature platelet fraction' SubClassOf 'platelet measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009189
+Label: Hyperthyroidism
++   'Hyperthyroidism' SubClassOf 'thyroid disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009206
+Label: Free Hemoglobin Measurement
++   'Free Hemoglobin Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009207
+Label: Glycosylated Hemoglobin Measurement
++   'Glycosylated Hemoglobin Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009208
+Label: Hemoglobin A Measurement
++   'Hemoglobin A Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009209
+Label: Hemoglobin A to Total Hemoglobin Ratio Measurement
++   'Hemoglobin A to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009200
+Label: Eisenmenger syndrome
++   'Eisenmenger syndrome' SubClassOf 'Pulmonary arterial hypertension associated with congenital heart disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009201
+Label: myopic macular degeneration
++   'myopic macular degeneration' SubClassOf 'eye disease'
++   'myopic macular degeneration' SubClassOf 'has_disease_location' some ('eye' or ('part_of' some 'eye'))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009202
+Label: Reticulocyte Mean Corpuscular Hemoglobin Measurement
++   'Reticulocyte Mean Corpuscular Hemoglobin Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009203
+Label: Carboxyhemoglobin to Total Hemoglobin Ratio Measurement
++   'Carboxyhemoglobin to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009204
+Label: Corpuscular Hemoglobin Concentration Distribution Width
++   'Corpuscular Hemoglobin Concentration Distribution Width' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009205
+Label: Corpuscular Hemoglobin Content
++   'Corpuscular Hemoglobin Content' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009245
+Label: Neutrophilic Myelocyte Count
++   'Neutrophilic Myelocyte Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009244
+Label: Neutrophilic Metamyelocyte Count
++   'Neutrophilic Metamyelocyte Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009243
+Label: Myeloid to Erythroid Ratio Measurement
++   'Myeloid to Erythroid Ratio Measurement' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009242
+Label: Myeloid Progenitor Cell Count
++   'Myeloid Progenitor Cell Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009249
+Label: Precursor Plasma Cell Count
++   'Precursor Plasma Cell Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009248
+Label: Plasma Cell Count
++   'Plasma Cell Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009247
+Label: Ovalocyte Count
++   'Ovalocyte Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009246
+Label: Neutrophils Band Form to Neutrophils Ratio Measurement
++   'Neutrophils Band Form to Neutrophils Ratio Measurement' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009251
+Label: Rubricyte Count
++   'Rubricyte Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009252
+Label: Segmented Neutrophils to Neutrophils Ratio Measurement
++   'Segmented Neutrophils to Neutrophils Ratio Measurement' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009250
+Label: Prorubricyte Count
++   'Prorubricyte Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009232
+Label: Blast Count
++   'Blast Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009231
+Label: Reticulocyte Hemoglobin Distribution Width
++   'Reticulocyte Hemoglobin Distribution Width' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009234
+Label: Blood Cell Count with Differential
++   'Blood Cell Count with Differential' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009233
+Label: Blood Cell Count Ratio Measurement
++   'Blood Cell Count Ratio Measurement' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009236
+Label: Eosinophilic Myelocyte Count
++   'Eosinophilic Myelocyte Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009235
+Label: Eosinophilic Metamyelocyte Count
++   'Eosinophilic Metamyelocyte Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009238
+Label: Immature Plasma Cell Count
++   'Immature Plasma Cell Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009237
+Label: Estimated Platelets Measurement
++   'Estimated Platelets Measurement' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009239
+Label: Mature Plasma Cell Count
++   'Mature Plasma Cell Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009240
+Label: Metarubricyte Count
++   'Metarubricyte Count' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009241
+Label: Monocytoid Cells to Leukocytes Ratio Measurement
++   'Monocytoid Cells to Leukocytes Ratio Measurement' SubClassOf 'complete blood cell count'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009227
+Label: Oxyhemoglobin to Total Hemoglobin Ratio Measurement
++   'Oxyhemoglobin to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009226
+Label: Methemoglobin to Total Hemoglobin Ratio Measurement
++   'Methemoglobin to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009225
+Label: Hemoglobin Tetramer Measurement
++   'Hemoglobin Tetramer Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009224
+Label: Hemoglobin S to Total Hemoglobin Ratio Measurement
++   'Hemoglobin S to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009223
+Label: Hemoglobin S Measurement
++   'Hemoglobin S Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009222
+Label: Hemoglobin O-Arab to Total Hemoglobin Ratio Measurement
++   'Hemoglobin O-Arab to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009221
+Label: Hemoglobin Lepore to Total Hemoglobin Ratio Measurement
++   'Hemoglobin Lepore to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009220
+Label: Hemoglobin G Coushatta to Total Hemoglobin Ratio Measurement
++   'Hemoglobin G Coushatta to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009229
+Label: Reticulocyte Corpuscular Hemoglobin Content
++   'Reticulocyte Corpuscular Hemoglobin Content' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009228
+Label: Reticulocyte Corpuscular Hemoglobin Concentration Mean
++   'Reticulocyte Corpuscular Hemoglobin Concentration Mean' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009230
+Label: Reticulocyte Corpuscular Hemoglobin Distribution Width
++   'Reticulocyte Corpuscular Hemoglobin Distribution Width' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009214
+Label: Hemoglobin Barts to Total Hemoglobin Ratio Measurement
++   'Hemoglobin Barts to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009213
+Label: Hemoglobin B Measurement
++   'Hemoglobin B Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009216
+Label: Hemoglobin C to Total Hemoglobin Ratio Measurement
++   'Hemoglobin C to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009215
+Label: Hemoglobin C Measurement
++   'Hemoglobin C Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009210
+Label: Hemoglobin A1 to Total Hemoglobin Ratio Measurement
++   'Hemoglobin A1 to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009212
+Label: Hemoglobin A2 to Total Hemoglobin Ratio Measurement
++   'Hemoglobin A2 to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009211
+Label: Hemoglobin A2 Prime to Total Hemoglobin Ratio Measurement
++   'Hemoglobin A2 Prime to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009218
+Label: Hemoglobin E to Total Hemoglobin Ratio Measurement
++   'Hemoglobin E to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009217
+Label: Hemoglobin D to Total Hemoglobin Ratio Measurement
++   'Hemoglobin D to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009219
+Label: Hemoglobin F to Total Hemoglobin Ratio Measurement
++   'Hemoglobin F to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009266
+Label: refractory celiac disease
++   'refractory celiac disease' SubClassOf 'digestive system disease'
++   'refractory celiac disease' SubClassOf 'has_disease_location' some ('epithelium of small intestine' or ('part_of' some 'epithelium of small intestine'))
++   'refractory celiac disease' SubClassOf 'has_disease_location' some ('intestinal epithelial cell' or ('part_of' some 'intestinal epithelial cell'))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009267
+Label: delirium
++   'delirium' SubClassOf 'mental or behavioural disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009264
+Label: maximum cigarettes per day measurement
++   'maximum cigarettes per day measurement' SubClassOf 'smoking behaviour measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009265
+Label: nausea and vomiting of pregnancy severity measurement
++   'nausea and vomiting of pregnancy severity measurement' SubClassOf 'is_about' some 'reproductive system'
++   'nausea and vomiting of pregnancy severity measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009257
+Label: root mean square of the successive differences of inter beat intervals
++   'root mean square of the successive differences of inter beat intervals' SubClassOf 'heart rate variability measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009258
+Label: peak-valley respiratory sinus arrhythmia or high frequency power
++   'peak-valley respiratory sinus arrhythmia or high frequency power' SubClassOf 'heart rate variability measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009259
+Label: skin carcinoma
++   'skin carcinoma' SubClassOf 'skin neoplasm'
++   'skin carcinoma' SubClassOf 'carcinoma'
++   'skin carcinoma' EquivalentTo 'carcinoma' and ('has_disease_location' some ('zone of skin' or ('part_of' some 'zone of skin')))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009253
+Label: Immature Reticulocyte Fraction Measurement
++   'Immature Reticulocyte Fraction Measurement' SubClassOf 'Blood Cell Count Ratio Measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009254
+Label: optic nerve glioblastoma
++   'optic nerve glioblastoma' SubClassOf 'glioblastoma multiforme'
++   'optic nerve glioblastoma' SubClassOf 'optic nerve neoplasm'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009255
+Label: cecal neoplasm
++   'cecal neoplasm' SubClassOf 'has_disease_location' some ('caecum' or ('part_of' some 'caecum'))
++   'cecal neoplasm' SubClassOf 'colonic neoplasm'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009256
+Label: standard deviation of the normal-to-normal inter beat intervals
++   'standard deviation of the normal-to-normal inter beat intervals' SubClassOf 'heart rate variability measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009261
+Label: response to aripiprazole
++   'response to aripiprazole' SubClassOf 'response to antipsychotic drug'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009260
+Label: non-melanoma skin carcinoma
++   'non-melanoma skin carcinoma' SubClassOf 'skin carcinoma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009263
+Label: nicotine withdrawal symptom count
++   'nicotine withdrawal symptom count' SubClassOf 'measurement'
++   'nicotine withdrawal symptom count' SubClassOf ('is_about' some 'nicotine') or ('is_about' some 'smoking behavior')
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009262
+Label: nicotine dependence symptom count
++   'nicotine dependence symptom count' SubClassOf 'measurement'
++   'nicotine dependence symptom count' SubClassOf ('is_about' some 'nicotine') or ('is_about' some 'nicotine dependence') or ('is_about' some 'smoking behavior')
 
 ----------------------------------
 2. Changes to EFO
 
-Class: http://www.orpha.net/ORDO/Orphanet_1309
-Label: Medullary sponge kidney
-+   'Medullary sponge kidney' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008615
+Class: http://www.orpha.net/ORDO/Orphanet_181396
+Label: Rare hypothyroidism
++   'Rare hypothyroidism' SubClassOf 'hypothyroidism'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0002623
-Label: septic peritonitis
--   'septic peritonitis' SubClassOf 'has_disease_location' some 'digestive system'
-+   'septic peritonitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008588
+Class: http://www.orpha.net/ORDO/Orphanet_181399
+Label: Rare hyperthyroidism
++   'Rare hyperthyroidism' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009189
  
-Class: http://www.ebi.ac.uk/efo/EFO_0003877
-Label: sleep apnea
-+   'sleep apnea' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008568
+Class: http://www.ebi.ac.uk/efo/EFO_0001361
+Label: pulmonary hypertension
++   'pulmonary hypertension' SubClassOf 'respiratory system disease'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0003826
-Label: salivary gland neoplasm
-+   'salivary gland neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008581
+Class: http://www.ebi.ac.uk/efo/EFO_0000707
+Label: squamous cell carcinoma
+-   'squamous cell carcinoma' SubClassOf 'carcinoma'
++   'squamous cell carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009260
  
-Class: http://www.orpha.net/ORDO/Orphanet_1851
-Label: Multicystic dysplastic kidney
-+   'Multicystic dysplastic kidney' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008615
+Class: http://www.orpha.net/ORDO/Orphanet_422
+Label: Idiopathic and/or familial pulmonary arterial hypertension
++   'Idiopathic and/or familial pulmonary arterial hypertension' SubClassOf 'pulmonary hypertension'
  
-Class: http://www.orpha.net/ORDO/Orphanet_731
-Label: Autosomal recessive polycystic kidney disease
-+   'Autosomal recessive polycystic kidney disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008620
+Class: http://www.orpha.net/ORDO/Orphanet_578
+Label: Mucolipidosis type 4
++   'Mucolipidosis type 4' SubClassOf 'Mucolipidosis'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004719
-Label: pemphigus vulgaris
-+   'pemphigus vulgaris' SubClassOf 'pemphigus'
+Class: http://www.ebi.ac.uk/efo/EFO_0000588
+Label: mesothelioma
+-   'mesothelioma' SubClassOf 'cancer'
++   'mesothelioma' SubClassOf 'mesothelial neoplasm'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004698
-Label: insomnia
--   'insomnia' SubClassOf 'mental or behavioural disorder'
-+   'insomnia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008568
+Class: http://www.ebi.ac.uk/efo/EFO_0004528
+Label: mean corpuscular hemoglobin concentration
++   'mean corpuscular hemoglobin concentration' SubClassOf 'hemoglobin measurement'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000614
-Label: narcolepsy with cataplexy
-+   'narcolepsy with cataplexy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008568
+Class: http://www.ebi.ac.uk/efo/EFO_0004540
+Label: chronic fatigue syndrome
+-   'chronic fatigue syndrome' SubClassOf 'mental or behavioural disorder'
++   'chronic fatigue syndrome' SubClassOf 'immune system disease'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005529
-Label: Chagas cardiomyopathy
-+   'Chagas cardiomyopathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008559
+Class: http://www.ebi.ac.uk/efo/EFO_0004218
+Label: marijuana dependence
+-   'marijuana dependence' SubClassOf 'drug dependence'
+-   'marijuana dependence' SubClassOf 'cannabis dependence'
++   'marijuana dependence' SubClassOf 'obsolete class'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001180
-Label: sialolithiasis
--   'sialolithiasis' SubClassOf 'mouth disease'
-+   'sialolithiasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008581
+Class: http://www.ebi.ac.uk/efo/EFO_1000121
+Label: Benign Smooth Muscle Neoplasm
+-   'Benign Smooth Muscle Neoplasm' SubClassOf 'neoplasm'
++   'Benign Smooth Muscle Neoplasm' SubClassOf 'smooth muscle tumor'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001179
-Label: sialadenitis
--   'sialadenitis' SubClassOf 'digestive system disease'
-+   'sialadenitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008581
+Class: http://www.ebi.ac.uk/efo/EFO_1001185
+Label: smooth muscle tumor
+-   'smooth muscle tumor' SubClassOf 'Benign Smooth Muscle Neoplasm'
++   'smooth muscle tumor' SubClassOf 'neoplasm'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005855
-Label: narcolepsy without cataplexy
-+   'narcolepsy without cataplexy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008568
+Class: http://www.ebi.ac.uk/efo/EFO_1001172
+Label: sebaceous gland neoplasm
+-   'sebaceous gland neoplasm' SubClassOf 'benign neoplasm'
++   'sebaceous gland neoplasm' SubClassOf 'skin neoplasm'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001496
-Label: Autosomal dominant polycystic kidney disease
-+   'Autosomal dominant polycystic kidney disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008620
+Class: http://www.ebi.ac.uk/efo/EFO_0005845
+Label: hemoglobin A2 measurement
+-   'hemoglobin A2 measurement' SubClassOf 'hemoglobin measurement'
++   'hemoglobin A2 measurement' SubClassOf 'hemoglobin measurement'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005246
-Label: hypersomnia
-+   'hypersomnia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008568
+Class: http://www.ebi.ac.uk/efo/EFO_0004309
+Label: platelet count
+-   'platelet count' SubClassOf 'hematological measurement'
++   'platelet count' SubClassOf 'complete blood cell count'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001345
-Label: Hepatitis, Alcoholic
--   'Hepatitis, Alcoholic' SubClassOf 'liver disease'
-+   'Hepatitis, Alcoholic' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008573
+Class: http://www.ebi.ac.uk/efo/EFO_0004308
+Label: leukocyte count
+-   'leukocyte count' SubClassOf 'hematological measurement'
++   'leukocyte count' SubClassOf 'complete blood cell count'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0006812
-Label: autoimmune thyroid disease
-+   'autoimmune thyroid disease' SubClassOf 'thyroid disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0004305
+Label: erythrocyte count
++   'erythrocyte count' SubClassOf 'complete blood cell count'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001861
-Label: traumatic diaphragmatic hernia
--   'traumatic diaphragmatic hernia' SubClassOf 'diaphragm disease'
-+   'traumatic diaphragmatic hernia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008561
+Class: http://www.ebi.ac.uk/efo/EFO_1000045
+Label: pancreatic neuroendocrine tumor
+-   'pancreatic neuroendocrine tumor' SubClassOf 'pancreatic carcinoma'
++   'pancreatic neuroendocrine tumor' SubClassOf 'pancreatic neoplasm'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001866
-Label: ventral hernia
--   'ventral hernia' SubClassOf 'muscular disease'
-+   'ventral hernia' SubClassOf 'Hernia of the abdominal wall'
+Class: http://www.ebi.ac.uk/efo/EFO_0004193
+Label: basal cell carcinoma
+-   'basal cell carcinoma' SubClassOf 'carcinoma'
++   'basal cell carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009260
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000927
-Label: Erysipelothrix infectious disease
--   'Erysipelothrix infectious disease' SubClassOf 'bacterial disease'
-+   'Erysipelothrix infectious disease' SubClassOf 'obsolete class'
+Class: http://www.orpha.net/ORDO/Orphanet_199241
+Label: Pulmonary capillary hemangiomatosis
+-   'Pulmonary capillary hemangiomatosis' SubClassOf 'Rare genetic respiratory disease'
++   'Pulmonary capillary hemangiomatosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009199
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000802
-Label: alcoholic liver cirrhosis
-+   'alcoholic liver cirrhosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008573
+Class: http://www.ebi.ac.uk/efo/EFO_0007197
+Label: cecal benign neoplasm
+-   'cecal benign neoplasm' SubClassOf 'has_disease_location' some ('caecum' or ('part_of' some 'caecum'))
++   'cecal benign neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009255
  
-Class: http://www.ebi.ac.uk/efo/EFO_0007216
-Label: congenital diaphragmatic hernia
--   'congenital diaphragmatic hernia' SubClassOf 'diaphragm disease'
-+   'congenital diaphragmatic hernia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008561
+Class: http://www.ebi.ac.uk/efo/EFO_1001970
+Label: squamous papilloma
+-   'squamous papilloma' SubClassOf 'papillary carcinoma'
++   'squamous papilloma' SubClassOf 'epithelial neoplasm'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000777
-Label: vulva fibroepithelial polyp
--   'vulva fibroepithelial polyp' SubClassOf 'polyp'
-+   'vulva fibroepithelial polyp' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008622
+Class: http://www.ebi.ac.uk/efo/EFO_1000756
+Label: pityriasis rosea
+-   'pityriasis rosea' SubClassOf 'psoriasis'
++   'pityriasis rosea' SubClassOf 'exanthem'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000749
-Label: pemphigus
-+   'pemphigus' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008598
+Class: http://www.ebi.ac.uk/efo/EFO_0007331
+Label: islet cell tumor
+-   'islet cell tumor' SubClassOf 'pancreatic carcinoma'
++   'islet cell tumor' SubClassOf 'pancreatic neoplasm'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000680
-Label: mucous membrane pemphigoid
-+   'mucous membrane pemphigoid' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008598
+Class: http://www.orpha.net/ORDO/Orphanet_31837
+Label: Pulmonary venoocclusive disease
+-   'Pulmonary venoocclusive disease' SubClassOf 'pulmonary hypertension'
+-   'Pulmonary venoocclusive disease' SubClassOf 'Rare genetic respiratory disease'
++   'Pulmonary venoocclusive disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009199
  
-Class: http://www.ebi.ac.uk/efo/EFO_0007422
-Label: parotid disease
--   'parotid disease' SubClassOf 'digestive system disease'
-+   'parotid disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008581
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0007462
-Label: REM sleep behavior disorder
--   'REM sleep behavior disorder' SubClassOf 'mental or behavioural disorder'
-+   'REM sleep behavior disorder' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008568
- 
-Class: http://www.orpha.net/ORDO/Orphanet_3135
-Label: Familial Scheuermann disease
-+   'Familial Scheuermann disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008576
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0007529
-Label: tuberculous peritonitis
--   'tuberculous peritonitis' SubClassOf 'has_disease_location' some ('peritoneum' or ('part_of' some 'peritoneum'))
-+   'tuberculous peritonitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0008588
+Class: http://www.ebi.ac.uk/efo/EFO_0009054
+Label: Pulmonary arterial hypertension associated with congenital heart disease
+-   'Pulmonary arterial hypertension associated with congenital heart disease' SubClassOf 'pulmonary hypertension'
++   'Pulmonary arterial hypertension associated with congenital heart disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009193
 
 ----------------------------------
 3. Obsolete Classes
