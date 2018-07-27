@@ -76,7 +76,7 @@ imports/mondo_efo_import.owl: imports/mondo_efo_mappings.tsv
 # These can be regenerated with make all_imports
 
 IMPORTS = mondo
-IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
+IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
 all_imports: $(IMPORTS_OWL)
