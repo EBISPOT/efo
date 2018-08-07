@@ -87,8 +87,8 @@ imports/%_import.owl: mirror/%.owl imports/%_terms.txt
 .PRECIOUS: imports/%_import.owl
 
 # Add '--check false' flag if your OWL is not obo-strict
-#imports/%_import.obo: imports/%_import.owl
-#	$(ROBOT) convert --check false -i $< -o $@
+imports/%_import.obo: imports/%_import.owl
+	$(ROBOT) convert --check false -i $< -o $@
 
 
 ### PREP CODE FOR EXTRACTING EFO DISEASE TERMS FOR MAPPING ###
