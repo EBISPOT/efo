@@ -10,9 +10,9 @@
     \::/  /       \:\__\        \::/  /   
      \/__/         \/__/         \/__/    
 EFO - Release Notes
-ArrayExpress Experimental Factor Ontology version 2.98
-Date Released: 16th July 2018
-Class Count: 21975
+ArrayExpress Experimental Factor Ontology version 2.99
+Date Released: 15th August 2018
+Class Count: 22023
 
 Summary: 
 
@@ -22,7 +22,7 @@ IMPORTANT NOTICE - We have moved to Github. From EFO 2.90 on, all our files will
 
 ***!!!***
 
-EFO 2.98 contains continued work on the disease classifications from 2.97; please see the details below for the full log of change.
+EFO 2.99 contains continued work on the disease classifications from 2.98, as well as new experimental process and measurement terms to address project-specific use cases for the Human Cell Atlas and GWAS Catalog, respectively; please see the details below for the full log of change.
 
 
 ----------------------------------
@@ -39,543 +39,675 @@ EFO 2.98 contains continued work on the disease classifications from 2.97; pleas
 
 New classes:
 
-Class: http://purl.obolibrary.org/obo/CHEBI_33295
-Label: diagnostic agent
-+   'diagnostic agent' SubClassOf 'role'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_3901
-Label: cosyntropin
-+   'cosyntropin' SubClassOf 'chemical entity'
-+   'cosyntropin' SubClassOf 'has_role' some 'diagnostic agent'
- 
-Class: http://purl.obolibrary.org/obo/HP_0030839
-Label: knee pain
-+   'knee pain' SubClassOf 'pain'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009175
-Label: response to synacthen
-+   'response to synacthen' SubClassOf 'has_input' some 'cosyntropin'
-+   'response to synacthen' SubClassOf 'response to drug'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009199
-Label: Pulmonary veno-occlusive disease and/or pulmonary capillary haemangiomatosis
-+   'Pulmonary veno-occlusive disease and/or pulmonary capillary haemangiomatosis' SubClassOf 'pulmonary arterial hypertension'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009198
-Label: Pulmonary arterial hypertension associated with schistosomiasis
-+   'Pulmonary arterial hypertension associated with schistosomiasis' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009181
-Label: growth differentiation factor 15 measurement
-+   'growth differentiation factor 15 measurement' SubClassOf 'is_about' some 'blood plasma'
-+   'growth differentiation factor 15 measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009182
-Label: psychotic symptom measurement
-+   'psychotic symptom measurement' SubClassOf 'is_about' some 'psychotic symptoms'
-+   'psychotic symptom measurement' SubClassOf 'mental or behavioural disorder biomarker'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009180
-Label: rosacea severity measurement
-+   'rosacea severity measurement' SubClassOf 'is_about' some 'skin of body'
-+   'rosacea severity measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009185
-Label: heart rate response to recovery post exercise
-+   'heart rate response to recovery post exercise' SubClassOf 'heart rate'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009186
-Label: platelet larger cell ratio
-+   'platelet larger cell ratio' SubClassOf 'platelet measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009183
-Label: empathy measurement
-+   'empathy measurement' SubClassOf 'personality trait measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009184
-Label: heart rate response to exercise
-+   'heart rate response to exercise' SubClassOf 'heart rate'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009179
-Label: beta-secretase 1 measurement
-+   'beta-secretase 1 measurement' SubClassOf 'is_about' some 'Alzheimer's disease'
-+   'beta-secretase 1 measurement' SubClassOf 'is_about' some 'brain'
-+   'beta-secretase 1 measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009178
-Label: neurofilament light chain measurement
-+   'neurofilament light chain measurement' SubClassOf 'is_about' some 'amyotrophic lateral sclerosis'
-+   'neurofilament light chain measurement' SubClassOf 'is_about' some 'Huntington disease'
-+   'neurofilament light chain measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
-+   'neurofilament light chain measurement' SubClassOf 'is_about' some 'multiple sclerosis'
-+   'neurofilament light chain measurement' SubClassOf 'is_about' some 'Alzheimer's disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009177
-Label: myopic maculopathy severity measurement
-+   'myopic maculopathy severity measurement' SubClassOf 'is_about' some 'eye'
-+   'myopic maculopathy severity measurement' SubClassOf 'is_about' some 'myopic macular degeneration'
-+   'myopic maculopathy severity measurement' SubClassOf 'eye measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009176
-Label: adrenal suppression measurement
-+   'adrenal suppression measurement' SubClassOf 'hormone measurement'
-+   'adrenal suppression measurement' SubClassOf 'is_about' some 'adrenal gland'
-+   'adrenal suppression measurement' SubClassOf 'is_about' some 'cortisol'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009190
-Label: Thyrotoxicosis
-+   'Thyrotoxicosis' SubClassOf 'Hyperthyroidism'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009191
-Label: Toxic Nodular Goiter
-+   'Toxic Nodular Goiter' SubClassOf 'Hyperthyroidism'
-+   'Toxic Nodular Goiter' SubClassOf 'nodular goiter'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009192
-Label: Drug- or toxin-induced pulmonary arterial hypertension
-+   'Drug- or toxin-induced pulmonary arterial hypertension' SubClassOf 'pulmonary arterial hypertension'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009193
-Label: Pulmonary arterial hypertension associated with another disease
-+   'Pulmonary arterial hypertension associated with another disease' SubClassOf 'pulmonary arterial hypertension'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009194
-Label: Pulmonary arterial hypertension associated with HIV infection
-+   'Pulmonary arterial hypertension associated with HIV infection' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009195
-Label: Pulmonary arterial hypertension associated with chronic hemolytic anemia
-+   'Pulmonary arterial hypertension associated with chronic hemolytic anemia' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009196
-Label: Pulmonary arterial hypertension associated with connective tissue disease
-+   'Pulmonary arterial hypertension associated with connective tissue disease' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009197
-Label: Pulmonary arterial hypertension associated with portal hypertension
-+   'Pulmonary arterial hypertension associated with portal hypertension' SubClassOf 'Pulmonary arterial hypertension associated with another disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009188
-Label: Red cell distribution width
-+   'Red cell distribution width' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009187
-Label: immature platelet fraction
-+   'immature platelet fraction' SubClassOf 'platelet measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009189
-Label: Hyperthyroidism
-+   'Hyperthyroidism' SubClassOf 'thyroid disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009206
-Label: Free Hemoglobin Measurement
-+   'Free Hemoglobin Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009207
-Label: Glycosylated Hemoglobin Measurement
-+   'Glycosylated Hemoglobin Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009208
-Label: Hemoglobin A Measurement
-+   'Hemoglobin A Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009209
-Label: Hemoglobin A to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin A to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009200
-Label: Eisenmenger syndrome
-+   'Eisenmenger syndrome' SubClassOf 'Pulmonary arterial hypertension associated with congenital heart disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009201
-Label: myopic macular degeneration
-+   'myopic macular degeneration' SubClassOf 'eye disease'
-+   'myopic macular degeneration' SubClassOf 'has_disease_location' some ('eye' or ('part_of' some 'eye'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009202
-Label: Reticulocyte Mean Corpuscular Hemoglobin Measurement
-+   'Reticulocyte Mean Corpuscular Hemoglobin Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009203
-Label: Carboxyhemoglobin to Total Hemoglobin Ratio Measurement
-+   'Carboxyhemoglobin to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009204
-Label: Corpuscular Hemoglobin Concentration Distribution Width
-+   'Corpuscular Hemoglobin Concentration Distribution Width' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009205
-Label: Corpuscular Hemoglobin Content
-+   'Corpuscular Hemoglobin Content' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009245
-Label: Neutrophilic Myelocyte Count
-+   'Neutrophilic Myelocyte Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009244
-Label: Neutrophilic Metamyelocyte Count
-+   'Neutrophilic Metamyelocyte Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009243
-Label: Myeloid to Erythroid Ratio Measurement
-+   'Myeloid to Erythroid Ratio Measurement' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009242
-Label: Myeloid Progenitor Cell Count
-+   'Myeloid Progenitor Cell Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009249
-Label: Precursor Plasma Cell Count
-+   'Precursor Plasma Cell Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009248
-Label: Plasma Cell Count
-+   'Plasma Cell Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009247
-Label: Ovalocyte Count
-+   'Ovalocyte Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009246
-Label: Neutrophils Band Form to Neutrophils Ratio Measurement
-+   'Neutrophils Band Form to Neutrophils Ratio Measurement' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009251
-Label: Rubricyte Count
-+   'Rubricyte Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009252
-Label: Segmented Neutrophils to Neutrophils Ratio Measurement
-+   'Segmented Neutrophils to Neutrophils Ratio Measurement' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009250
-Label: Prorubricyte Count
-+   'Prorubricyte Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009232
-Label: Blast Count
-+   'Blast Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009231
-Label: Reticulocyte Hemoglobin Distribution Width
-+   'Reticulocyte Hemoglobin Distribution Width' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009234
-Label: Blood Cell Count with Differential
-+   'Blood Cell Count with Differential' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009233
-Label: Blood Cell Count Ratio Measurement
-+   'Blood Cell Count Ratio Measurement' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009236
-Label: Eosinophilic Myelocyte Count
-+   'Eosinophilic Myelocyte Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009235
-Label: Eosinophilic Metamyelocyte Count
-+   'Eosinophilic Metamyelocyte Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009238
-Label: Immature Plasma Cell Count
-+   'Immature Plasma Cell Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009237
-Label: Estimated Platelets Measurement
-+   'Estimated Platelets Measurement' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009239
-Label: Mature Plasma Cell Count
-+   'Mature Plasma Cell Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009240
-Label: Metarubricyte Count
-+   'Metarubricyte Count' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009241
-Label: Monocytoid Cells to Leukocytes Ratio Measurement
-+   'Monocytoid Cells to Leukocytes Ratio Measurement' SubClassOf 'complete blood cell count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009227
-Label: Oxyhemoglobin to Total Hemoglobin Ratio Measurement
-+   'Oxyhemoglobin to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009226
-Label: Methemoglobin to Total Hemoglobin Ratio Measurement
-+   'Methemoglobin to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009225
-Label: Hemoglobin Tetramer Measurement
-+   'Hemoglobin Tetramer Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009224
-Label: Hemoglobin S to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin S to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009223
-Label: Hemoglobin S Measurement
-+   'Hemoglobin S Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009222
-Label: Hemoglobin O-Arab to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin O-Arab to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009221
-Label: Hemoglobin Lepore to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin Lepore to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009220
-Label: Hemoglobin G Coushatta to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin G Coushatta to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009229
-Label: Reticulocyte Corpuscular Hemoglobin Content
-+   'Reticulocyte Corpuscular Hemoglobin Content' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009228
-Label: Reticulocyte Corpuscular Hemoglobin Concentration Mean
-+   'Reticulocyte Corpuscular Hemoglobin Concentration Mean' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009230
-Label: Reticulocyte Corpuscular Hemoglobin Distribution Width
-+   'Reticulocyte Corpuscular Hemoglobin Distribution Width' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009214
-Label: Hemoglobin Barts to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin Barts to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009213
-Label: Hemoglobin B Measurement
-+   'Hemoglobin B Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009216
-Label: Hemoglobin C to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin C to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009215
-Label: Hemoglobin C Measurement
-+   'Hemoglobin C Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009210
-Label: Hemoglobin A1 to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin A1 to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009212
-Label: Hemoglobin A2 to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin A2 to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009211
-Label: Hemoglobin A2 Prime to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin A2 Prime to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009218
-Label: Hemoglobin E to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin E to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009217
-Label: Hemoglobin D to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin D to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009219
-Label: Hemoglobin F to Total Hemoglobin Ratio Measurement
-+   'Hemoglobin F to Total Hemoglobin Ratio Measurement' SubClassOf 'hemoglobin measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009266
-Label: refractory celiac disease
-+   'refractory celiac disease' SubClassOf 'digestive system disease'
-+   'refractory celiac disease' SubClassOf 'has_disease_location' some ('epithelium of small intestine' or ('part_of' some 'epithelium of small intestine'))
-+   'refractory celiac disease' SubClassOf 'has_disease_location' some ('intestinal epithelial cell' or ('part_of' some 'intestinal epithelial cell'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009267
-Label: delirium
-+   'delirium' SubClassOf 'mental or behavioural disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009264
-Label: maximum cigarettes per day measurement
-+   'maximum cigarettes per day measurement' SubClassOf 'smoking behaviour measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009265
-Label: nausea and vomiting of pregnancy severity measurement
-+   'nausea and vomiting of pregnancy severity measurement' SubClassOf 'is_about' some 'reproductive system'
-+   'nausea and vomiting of pregnancy severity measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009257
-Label: root mean square of the successive differences of inter beat intervals
-+   'root mean square of the successive differences of inter beat intervals' SubClassOf 'heart rate variability measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009258
-Label: peak-valley respiratory sinus arrhythmia or high frequency power
-+   'peak-valley respiratory sinus arrhythmia or high frequency power' SubClassOf 'heart rate variability measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009259
-Label: skin carcinoma
-+   'skin carcinoma' SubClassOf 'skin neoplasm'
-+   'skin carcinoma' SubClassOf 'carcinoma'
-+   'skin carcinoma' EquivalentTo 'carcinoma' and ('has_disease_location' some ('zone of skin' or ('part_of' some 'zone of skin')))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009253
-Label: Immature Reticulocyte Fraction Measurement
-+   'Immature Reticulocyte Fraction Measurement' SubClassOf 'Blood Cell Count Ratio Measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009254
-Label: optic nerve glioblastoma
-+   'optic nerve glioblastoma' SubClassOf 'glioblastoma multiforme'
-+   'optic nerve glioblastoma' SubClassOf 'optic nerve neoplasm'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009255
-Label: cecal neoplasm
-+   'cecal neoplasm' SubClassOf 'has_disease_location' some ('caecum' or ('part_of' some 'caecum'))
-+   'cecal neoplasm' SubClassOf 'colonic neoplasm'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009256
-Label: standard deviation of the normal-to-normal inter beat intervals
-+   'standard deviation of the normal-to-normal inter beat intervals' SubClassOf 'heart rate variability measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009261
-Label: response to aripiprazole
-+   'response to aripiprazole' SubClassOf 'response to antipsychotic drug'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009260
-Label: non-melanoma skin carcinoma
-+   'non-melanoma skin carcinoma' SubClassOf 'skin carcinoma'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009263
-Label: nicotine withdrawal symptom count
-+   'nicotine withdrawal symptom count' SubClassOf 'measurement'
-+   'nicotine withdrawal symptom count' SubClassOf ('is_about' some 'nicotine') or ('is_about' some 'smoking behavior')
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009262
-Label: nicotine dependence symptom count
-+   'nicotine dependence symptom count' SubClassOf 'measurement'
-+   'nicotine dependence symptom count' SubClassOf ('is_about' some 'nicotine') or ('is_about' some 'nicotine dependence') or ('is_about' some 'smoking behavior')
+Class: http://purl.obolibrary.org/obo/HP_0002655
+Label: Spondyloepiphyseal dysplasia
++   'Spondyloepiphyseal dysplasia' SubClassOf 'Skeletal dysplasia'
+ 
+Class: http://purl.obolibrary.org/obo/CHEBI_26708
+Label: sodium
++   'sodium' SubClassOf 'element'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0003789
+Label: Minicore myopathy
++   'Minicore myopathy' SubClassOf 'Abnormality of muscle morphology'
+ 
+Class: http://purl.obolibrary.org/obo/CHEBI_17996
+Label: chloride
++   'chloride' SubClassOf 'chemical entity'
+ 
+Class: http://www.ebi.ac.uk/efo/http://www.ebi.ac.uk/efo/EFO_0009278
+Label: cranial vault morphology measurement
++   'cranial vault morphology measurement' SubClassOf 'is_about' some 'head'
++   'cranial vault morphology measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009299
+Label: marfan syndrome/loeys-dietz syndrome/familial thoracic aortic aneurysms and dissections
++   'marfan syndrome/loeys-dietz syndrome/familial thoracic aortic aneurysms and dissections' SubClassOf 'Marfan and Marfan-related disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009298
+Label: hepatic failure, early-onset, and neurologic disorder due to cytochrome c oxidase deficiency
++   'hepatic failure, early-onset, and neurologic disorder due to cytochrome c oxidase deficiency' SubClassOf 'Mitochondrial oxidative phosphorylation disorder due to nuclear DNA anomalies'
++   'hepatic failure, early-onset, and neurologic disorder due to cytochrome c oxidase deficiency' SubClassOf 'Rare metabolic liver disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009297
+Label: fg syndrome
++   'fg syndrome' SubClassOf 'X-linked syndromic intellectual disability'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009301
+Label: dystonia 28, childhood-onset
++   'dystonia 28, childhood-onset' SubClassOf 'Rare genetic dystonia'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009302
+Label: amelogenesis imperfecta, type ij
++   'amelogenesis imperfecta, type ij' SubClassOf 'Hypoplastic amelogenesis imperfecta'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009303
+Label: fructosamine measurement
++   'fructosamine measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009304
+Label: percent glycated albumin
++   'percent glycated albumin' SubClassOf 'glycated albumin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009300
+Label: neurodevelopmental disorder with or without hyperkinetic movements and seizures, autosomal dominant
++   'neurodevelopmental disorder with or without hyperkinetic movements and seizures, autosomal dominant' SubClassOf 'mental retardation'
++   'neurodevelopmental disorder with or without hyperkinetic movements and seizures, autosomal dominant' SubClassOf 'Autosomal dominant non-syndromic intellectual disability'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009309
+Label: Div-Seq
++   'Div-Seq' SubClassOf 'assay'
++   'Div-Seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009305
+Label: total glycated albumin
++   'total glycated albumin' SubClassOf 'glycated albumin measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009306
+Label: atazanavir measurement
++   'atazanavir measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009307
+Label: glycated albumin measurement
++   'glycated albumin measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009308
+Label: response to long-chain n-3 PUFA dietary supplementation
++   'response to long-chain n-3 PUFA dietary supplementation' SubClassOf 'has_input' some 'fatty acid'
++   'response to long-chain n-3 PUFA dietary supplementation' SubClassOf 'response to stimulus'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009310
+Label: 10X v2 sequencing
++   '10X v2 sequencing' SubClassOf '10X sequencing'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0007437
+Label: Multiple cutaneous leiomyomas
++   'Multiple cutaneous leiomyomas' SubClassOf 'abnormality of the skin'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009288
+Label: posterior wall thickness
++   'posterior wall thickness' SubClassOf 'is_about' some 'heart'
++   'posterior wall thickness' SubClassOf 'heart function measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009289
+Label: left ventricular mass
++   'left ventricular mass' SubClassOf 'heart function measurement'
++   'left ventricular mass' SubClassOf 'is_about' some 'heart'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009286
+Label: heart relative wall thickness
++   'heart relative wall thickness' SubClassOf 'heart function measurement'
++   'heart relative wall thickness' SubClassOf 'is_about' some 'heart'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009287
+Label: interventricular septum thickness
++   'interventricular septum thickness' SubClassOf 'is_about' some 'heart'
++   'interventricular septum thickness' SubClassOf 'heart function measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009292
+Label: bone marrow aspiration
++   'bone marrow aspiration' SubClassOf 'collecting specimen from organism'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009291
+Label: E/A ratio
++   'E/A ratio' SubClassOf 'is_about' some 'heart'
++   'E/A ratio' SubClassOf 'heart function measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009290
+Label: left ventricular mass index
++   'left ventricular mass index' SubClassOf 'is_about' some 'heart'
++   'left ventricular mass index' SubClassOf 'heart function measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009296
+Label: mutyh-associated polyposis
++   'mutyh-associated polyposis' SubClassOf 'Genetic intestinal polyposis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009295
+Label: polyarteritis nodosa, childhoood-onset
++   'polyarteritis nodosa, childhoood-onset' SubClassOf 'Polyarteritis Nodosa'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009294
+Label: CITE-seq
++   'CITE-seq' SubClassOf 'realizes' some ('analyte role' and ('role_of' some 'RNA'))
++   'CITE-seq' SubClassOf 'assay'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009293
+Label: percutaneous kidney biopsy
++   'percutaneous kidney biopsy' SubClassOf 'biopsy'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0007559
+Label: Localized epidermolytic hyperkeratosis
++   'Localized epidermolytic hyperkeratosis' SubClassOf 'abnormality of the skin'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009275
+Label: premature cardiac contractions
++   'premature cardiac contractions' SubClassOf 'has_disease_location' some ('heart' or ('part_of' some 'heart'))
++   'premature cardiac contractions' SubClassOf 'cardiac arrhythmia'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009276
+Label: ventricular ectopy
++   'ventricular ectopy' SubClassOf 'has_disease_location' some ('heart' or ('part_of' some 'heart'))
++   'ventricular ectopy' SubClassOf 'premature cardiac contractions'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009277
+Label: supraventricular ectopy
++   'supraventricular ectopy' SubClassOf 'has_disease_location' some ('heart' or ('part_of' some 'heart'))
++   'supraventricular ectopy' SubClassOf 'premature cardiac contractions'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009279
+Label: response to tenofovir
++   'response to tenofovir' SubClassOf 'response to reverse transcriptase inhibitor'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009281
+Label: choroidal thickness measurement
++   'choroidal thickness measurement' SubClassOf 'eye measurement'
++   'choroidal thickness measurement' SubClassOf 'is_about' some 'eye'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009283
+Label: potassium measurement
++   'potassium measurement' SubClassOf 'measurement'
++   'potassium measurement' SubClassOf 'is_about' some 'potassium'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009282
+Label: sodium measurement
++   'sodium measurement' SubClassOf 'measurement'
++   'sodium measurement' SubClassOf 'is_about' some 'sodium'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009285
+Label: fractional shortening
++   'fractional shortening' SubClassOf 'heart function measurement'
++   'fractional shortening' SubClassOf 'is_about' some 'heart'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009284
+Label: chloride measurement
++   'chloride measurement' SubClassOf 'measurement'
++   'chloride measurement' SubClassOf 'is_about' some 'chloride'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009268
+Label: family history of Alzheimer?s disease
++   'family history of Alzheimer?s disease' SubClassOf 'family history'
++   'family history of Alzheimer?s disease' SubClassOf 'is_about' some 'Alzheimer's disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009269
+Label: ADAMTS13 measurement
++   'ADAMTS13 measurement' SubClassOf 'protein measurement'
++   'ADAMTS13 measurement' SubClassOf 'is_about' some 'blood coagulation'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009274
+Label: Epstein Barr viral capsid antigen IgG measurement
++   'Epstein Barr viral capsid antigen IgG measurement' SubClassOf 'is_about' some 'Epstein-Barr virus infection'
++   'Epstein Barr viral capsid antigen IgG measurement' SubClassOf 'serum IgG measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009273
+Label: anti-Epstein Barr virus antibody measurement
++   'anti-Epstein Barr virus antibody measurement' SubClassOf 'is_about' some 'Epstein-Barr virus infection'
++   'anti-Epstein Barr virus antibody measurement' SubClassOf 'antibody measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009272
+Label: Epstein Barr viral capsid antigen seropositivity
++   'Epstein Barr viral capsid antigen seropositivity' SubClassOf 'seropositivity measurement'
++   'Epstein Barr viral capsid antigen seropositivity' SubClassOf 'infectious disease biomarker'
++   'Epstein Barr viral capsid antigen seropositivity' SubClassOf 'is_about' some 'Epstein-Barr virus infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009271
+Label: Epstein Barr virus nuclear antigen-1 seropositivity
++   'Epstein Barr virus nuclear antigen-1 seropositivity' SubClassOf 'infectious disease biomarker'
++   'Epstein Barr virus nuclear antigen-1 seropositivity' SubClassOf 'seropositivity measurement'
++   'Epstein Barr virus nuclear antigen-1 seropositivity' SubClassOf 'is_about' some 'Epstein-Barr virus infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009270
+Label: heel bone mineral density
++   'heel bone mineral density' SubClassOf 'is_about' some 'bone'
++   'heel bone mineral density' SubClassOf 'bone density'
 
 ----------------------------------
 2. Changes to EFO
 
-Class: http://www.orpha.net/ORDO/Orphanet_181396
-Label: Rare hypothyroidism
-+   'Rare hypothyroidism' SubClassOf 'hypothyroidism'
+Class: http://www.ebi.ac.uk/efo/EFO_0001037
+Label: leaf vascular tissue
+-   'leaf vascular tissue' SubClassOf 'part_of' some 'obsolete_leaf'
++   'leaf vascular tissue' SubClassOf 'part_of' some 'leaf'
  
-Class: http://www.orpha.net/ORDO/Orphanet_181399
-Label: Rare hyperthyroidism
-+   'Rare hyperthyroidism' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009189
+Class: http://www.orpha.net/ORDO/Orphanet_3440
+Label: Waardenburg syndrome
+-   'Waardenburg syndrome' SubClassOf 'Pigmentation disorder with eye involvement, excluding albinism'
++   'Waardenburg syndrome' SubClassOf 'Pigmentation disorder with eye involvement'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0001361
-Label: pulmonary hypertension
-+   'pulmonary hypertension' SubClassOf 'respiratory system disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0002439
+Label: mesophyll cell
+-   'mesophyll cell' SubClassOf 'located_in' some 'obsolete_leaf'
++   'mesophyll cell' SubClassOf 'located_in' some 'leaf'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000707
-Label: squamous cell carcinoma
--   'squamous cell carcinoma' SubClassOf 'carcinoma'
-+   'squamous cell carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009260
+Class: http://purl.obolibrary.org/obo/CL_0002363
+Label: keratocyte
+-   'keratocyte' SubClassOf 'located_in' some 'obsolete_corneal stroma'
++   'keratocyte' SubClassOf 'located_in' some 'substantia propria of cornea'
  
-Class: http://www.orpha.net/ORDO/Orphanet_422
-Label: Idiopathic and/or familial pulmonary arterial hypertension
-+   'Idiopathic and/or familial pulmonary arterial hypertension' SubClassOf 'pulmonary hypertension'
+Class: http://www.ebi.ac.uk/efo/EFO_0001460
+Label: uninfected
+-   'obsolete_disease state' DisjointWith 'uninfected'
+-   'obsolete_syndrome' DisjointWith 'uninfected'
++   'disease' DisjointWith 'uninfected'
  
-Class: http://www.orpha.net/ORDO/Orphanet_578
-Label: Mucolipidosis type 4
-+   'Mucolipidosis type 4' SubClassOf 'Mucolipidosis'
+Class: http://www.ebi.ac.uk/efo/EFO_0001461
+Label: control
+-   'metabolic disease' DisjointWith 'control'
+-   'neoplasm' DisjointWith 'control'
+-   'respiratory system disease' DisjointWith 'control'
+-   'control' DisjointWith 'rheumatic disease'
+-   'genetic disorder' DisjointWith 'control'
+-   'head and neck disorder' DisjointWith 'control'
+-   'nervous system disease' DisjointWith 'control'
+-   'skin disease' DisjointWith 'control'
+-   'control' DisjointWith 'ocular vascular disease'
+-   'obsolete_syndrome' DisjointWith 'control'
+-   'reproductive system disease' DisjointWith 'control'
+-   'control' DisjointWith 'parathyroid disease'
+-   'immune system disease' DisjointWith 'control'
+-   'obsolete_disease state' DisjointWith 'control'
+-   'mental or behavioural disorder' DisjointWith 'control'
+-   'digestive system disease' DisjointWith 'control'
+-   'hyperplasia' DisjointWith 'control'
+-   'cardiovascular disease' DisjointWith 'control'
++   'disease' DisjointWith 'control'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000588
-Label: mesothelioma
--   'mesothelioma' SubClassOf 'cancer'
-+   'mesothelioma' SubClassOf 'mesothelial neoplasm'
+Class: http://www.orpha.net/ORDO/Orphanet_1077
+Label: Dental ankylosis
++   'Dental ankylosis' SubClassOf 'tooth disease'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004528
-Label: mean corpuscular hemoglobin concentration
-+   'mean corpuscular hemoglobin concentration' SubClassOf 'hemoglobin measurement'
+Class: http://www.orpha.net/ORDO/Orphanet_2745
+Label: Opitz G/BBB syndrome
+-   'Opitz G/BBB syndrome' SubClassOf 'X-linked syndromic intellectual disability'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004540
-Label: chronic fatigue syndrome
--   'chronic fatigue syndrome' SubClassOf 'mental or behavioural disorder'
-+   'chronic fatigue syndrome' SubClassOf 'immune system disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0002779
+Label: BJ
+-   'BJ' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('obsolete_foreskin' and ('part_of' some 'organism'))))
++   'BJ' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('prepuce of penis' and ('part_of' some 'organism'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004218
-Label: marijuana dependence
--   'marijuana dependence' SubClassOf 'drug dependence'
--   'marijuana dependence' SubClassOf 'cannabis dependence'
-+   'marijuana dependence' SubClassOf 'obsolete class'
+Class: http://purl.obolibrary.org/obo/PO_0002000
+Label: stomatal complex
+-   'stomatal complex' SubClassOf 'part_of' some 'obsolete_leaf'
++   'stomatal complex' SubClassOf 'part_of' some 'leaf'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000121
-Label: Benign Smooth Muscle Neoplasm
--   'Benign Smooth Muscle Neoplasm' SubClassOf 'neoplasm'
-+   'Benign Smooth Muscle Neoplasm' SubClassOf 'smooth muscle tumor'
+Class: http://www.ebi.ac.uk/efo/EFO_0001259
+Label: UBOC1
+-   'UBOC1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('obsolete_organ of corti' and ('part_of' some 'Mus musculus'))))
++   'UBOC1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('spiral organ of cochlea' and ('part_of' some 'Mus musculus'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001185
-Label: smooth muscle tumor
--   'smooth muscle tumor' SubClassOf 'Benign Smooth Muscle Neoplasm'
-+   'smooth muscle tumor' SubClassOf 'neoplasm'
+Class: http://www.orpha.net/ORDO/Orphanet_122
+Label: Birt-Hogg-Dub� syndrome
++   'Birt-Hogg-Dub� syndrome' SubClassOf 'hamartoma'
++   'Birt-Hogg-Dub� syndrome' SubClassOf 'Rare genetic respiratory disease'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001172
-Label: sebaceous gland neoplasm
--   'sebaceous gland neoplasm' SubClassOf 'benign neoplasm'
-+   'sebaceous gland neoplasm' SubClassOf 'skin neoplasm'
+Class: http://www.ebi.ac.uk/efo/EFO_0000716
+Label: obsolete_syndrome
+-   'normal' DisjointWith 'obsolete_syndrome'
+-   'obsolete_syndrome' DisjointWith 'control'
+-   'obsolete_syndrome' DisjointWith 'uninfected'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005845
-Label: hemoglobin A2 measurement
--   'hemoglobin A2 measurement' SubClassOf 'hemoglobin measurement'
-+   'hemoglobin A2 measurement' SubClassOf 'hemoglobin measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0000701
+Label: skin disease
+-   'normal' DisjointWith 'skin disease'
+-   'skin disease' DisjointWith 'control'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004309
-Label: platelet count
--   'platelet count' SubClassOf 'hematological measurement'
-+   'platelet count' SubClassOf 'complete blood cell count'
+Class: http://www.orpha.net/ORDO/Orphanet_348
+Label: Fructose-1,6-bisphosphatase deficiency
+-   'Fructose-1,6-bisphosphatase deficiency' SubClassOf 'carbohydrate metabolic disorder'
++   'Fructose-1,6-bisphosphatase deficiency' SubClassOf 'Disorder of carbohydrate metabolism'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004308
-Label: leukocyte count
--   'leukocyte count' SubClassOf 'hematological measurement'
-+   'leukocyte count' SubClassOf 'complete blood cell count'
+Class: http://www.ebi.ac.uk/efo/EFO_0001986
+Label: lung structure
+-   'lung structure' EquivalentTo 'part_of' some 'obsolete_lung'
++   'lung structure' EquivalentTo 'part_of' some 'lung'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004305
-Label: erythrocyte count
-+   'erythrocyte count' SubClassOf 'complete blood cell count'
+Class: http://www.ebi.ac.uk/efo/EFO_0001983
+Label: leaf component
+-   'leaf component' EquivalentTo 'part_of' some 'obsolete_leaf'
++   'leaf component' EquivalentTo 'part_of' some 'leaf'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000045
-Label: pancreatic neuroendocrine tumor
--   'pancreatic neuroendocrine tumor' SubClassOf 'pancreatic carcinoma'
-+   'pancreatic neuroendocrine tumor' SubClassOf 'pancreatic neoplasm'
+Class: http://www.orpha.net/ORDO/Orphanet_477
+Label: KID syndrome
+-   'KID syndrome' SubClassOf 'Autosomal dominant disease with diffuse palmoplantar keratoderma as a major feature'
+-   'KID syndrome' SubClassOf 'Autosomal recessive disease with diffuse palmoplantar keratoderma as a major feature'
++   'KID syndrome' SubClassOf 'Disease with diffuse palmoplantar keratoderma as a major feature'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004193
-Label: basal cell carcinoma
--   'basal cell carcinoma' SubClassOf 'carcinoma'
-+   'basal cell carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009260
+Class: http://www.orpha.net/ORDO/Orphanet_294949
+Label: Joint formation defects
+-   'Joint formation defects' SubClassOf 'Non-syndromic limb malformation'
  
-Class: http://www.orpha.net/ORDO/Orphanet_199241
-Label: Pulmonary capillary hemangiomatosis
--   'Pulmonary capillary hemangiomatosis' SubClassOf 'Rare genetic respiratory disease'
-+   'Pulmonary capillary hemangiomatosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009199
+Class: http://www.ebi.ac.uk/efo/EFO_0003861
+Label: pancreactic component
+-   'pancreactic component' EquivalentTo 'part_of' some 'obsolete_pancreas'
++   'pancreactic component' EquivalentTo 'part_of' some 'pancreas'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0007197
-Label: cecal benign neoplasm
--   'cecal benign neoplasm' SubClassOf 'has_disease_location' some ('caecum' or ('part_of' some 'caecum'))
-+   'cecal benign neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009255
+Class: http://www.ebi.ac.uk/efo/EFO_0003775
+Label: Job's syndrome
+-   'Job's syndrome' SubClassOf 'immune system disease'
++   'Job's syndrome' SubClassOf 'obsolete class'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001970
-Label: squamous papilloma
--   'squamous papilloma' SubClassOf 'papillary carcinoma'
-+   'squamous papilloma' SubClassOf 'epithelial neoplasm'
+Class: http://www.ebi.ac.uk/efo/EFO_0000319
+Label: cardiovascular disease
+-   'normal' DisjointWith 'cardiovascular disease'
+-   'cardiovascular disease' DisjointWith 'control'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000756
-Label: pityriasis rosea
--   'pityriasis rosea' SubClassOf 'psoriasis'
-+   'pityriasis rosea' SubClassOf 'exanthem'
+Class: http://www.ebi.ac.uk/efo/EFO_0000405
+Label: digestive system disease
+-   'normal' DisjointWith 'digestive system disease'
+-   'digestive system disease' DisjointWith 'control'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0007331
-Label: islet cell tumor
--   'islet cell tumor' SubClassOf 'pancreatic carcinoma'
-+   'islet cell tumor' SubClassOf 'pancreatic neoplasm'
+Class: http://www.ebi.ac.uk/efo/EFO_0000408
+Label: disease
++   'disease' DisjointWith 'control'
++   'disease' DisjointWith 'uninfected'
  
-Class: http://www.orpha.net/ORDO/Orphanet_31837
-Label: Pulmonary venoocclusive disease
--   'Pulmonary venoocclusive disease' SubClassOf 'pulmonary hypertension'
--   'Pulmonary venoocclusive disease' SubClassOf 'Rare genetic respiratory disease'
-+   'Pulmonary venoocclusive disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009199
+Class: http://www.ebi.ac.uk/efo/EFO_0000411
+Label: obsolete_disease state
+-   'obsolete_disease state' DisjointWith 'control'
+-   'obsolete_disease state' DisjointWith 'uninfected'
+-   'normal' DisjointWith 'obsolete_disease state'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009054
-Label: Pulmonary arterial hypertension associated with congenital heart disease
--   'Pulmonary arterial hypertension associated with congenital heart disease' SubClassOf 'pulmonary hypertension'
-+   'Pulmonary arterial hypertension associated with congenital heart disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009193
+Class: http://www.ebi.ac.uk/efo/EFO_0000589
+Label: metabolic disease
+-   'metabolic disease' DisjointWith 'control'
+-   'normal' DisjointWith 'metabolic disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000540
+Label: immune system disease
+-   'immune system disease' DisjointWith 'control'
+-   'normal' DisjointWith 'immune system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000524
+Label: head and neck disorder
+-   'head and neck disorder' DisjointWith 'control'
+-   'normal' DisjointWith 'head and neck disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000536
+Label: hyperplasia
+-   'normal' DisjointWith 'hyperplasia'
+-   'hyperplasia' DisjointWith 'control'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000508
+Label: genetic disorder
+-   'genetic disorder' DisjointWith 'control'
+-   'normal' DisjointWith 'genetic disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000512
+Label: reproductive system disease
+-   'normal' DisjointWith 'reproductive system disease'
+-   'reproductive system disease' DisjointWith 'control'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_946
+Label: Acrocephalosyndactyly
++   'Acrocephalosyndactyly' SubClassOf 'Syndrome with synostosis or other joint formation defect'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000684
+Label: respiratory system disease
+-   'respiratory system disease' DisjointWith 'control'
+-   'normal' DisjointWith 'respiratory system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000677
+Label: mental or behavioural disorder
+-   'mental or behavioural disorder' DisjointWith 'control'
+-   'normal' DisjointWith 'mental or behavioural disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000616
+Label: neoplasm
+-   'neoplasm' DisjointWith 'control'
+-   'normal' DisjointWith 'neoplasm'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000618
+Label: nervous system disease
+-   'nervous system disease' DisjointWith 'control'
+-   'normal' DisjointWith 'nervous system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005543
+Label: glioma
+-   'glioma' SubClassOf 'central nervous system cancer'
++   'glioma' SubClassOf 'Central Nervous System Neoplasm'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000351
+Label: malignant epitheloid mesothelioma
+-   'malignant epitheloid mesothelioma' SubClassOf 'disease'
++   'malignant epitheloid mesothelioma' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0006646
+Label: ME-180
+-   'ME-180' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('obsolete_cervix' and ('part_of' some 'Homo sapiens'))))
++   'ME-180' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('uterine cervix' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000337
+Label: Lung Sclerosing Hemangioma
+-   'Lung Sclerosing Hemangioma' SubClassOf 'lung carcinoma'
++   'Lung Sclerosing Hemangioma' SubClassOf 'adenoma'
++   'Lung Sclerosing Hemangioma' SubClassOf 'hemangioma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005710
+Label: HFF-Myc
+-   'HFF-Myc' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('obsolete_foreskin' and ('part_of' some 'Homo sapiens'))))
++   'HFF-Myc' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001215
+Label: tooth ankylosis
+-   'tooth ankylosis' SubClassOf 'has_disease_location' some ('tooth' or ('part_of' some 'tooth'))
+-   'tooth ankylosis' SubClassOf 'tooth disease'
++   'tooth ankylosis' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005753
+Label: ocular vascular disease
+-   'normal' DisjointWith 'ocular vascular disease'
+-   'control' DisjointWith 'ocular vascular disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005754
+Label: parathyroid disease
+-   'normal' DisjointWith 'parathyroid disease'
+-   'control' DisjointWith 'parathyroid disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005755
+Label: rheumatic disease
+-   'normal' DisjointWith 'rheumatic disease'
+-   'control' DisjointWith 'rheumatic disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001254
+Label: noise-induced hearing loss
++   'noise-induced hearing loss' SubClassOf 'sensorineural hearing loss'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000061
+Label: carbohydrate metabolic disorder
+-   'carbohydrate metabolic disorder' EquivalentTo ('has component' some 'abnormal') and ('participates_in' some 'carbohydrate metabolic process')
+-   'carbohydrate metabolic disorder' SubClassOf 'metabolic disease'
++   'carbohydrate metabolic disorder' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0006452
+Label: malignant epithelioid mesothelioma
++   'malignant epithelioid mesothelioma' SubClassOf 'disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001170
+Label: sea-blue histiocyte syndrome
+-   'sea-blue histiocyte syndrome' SubClassOf 'histiocytoma'
++   'sea-blue histiocyte syndrome' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001102
+Label: peroneal nerve paralysis
+-   'peroneal nerve paralysis' SubClassOf 'has_disease_location' some ('obsolete_peroneal nerve' or ('part_of' some 'obsolete_peroneal nerve'))
++   'peroneal nerve paralysis' SubClassOf 'has_disease_location' some ('fibular nerve' or ('part_of' some 'fibular nerve'))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001106
+Label: pigmented villonodular synovitis
+-   'pigmented villonodular synovitis' SubClassOf 'Tenosynovial Giant Cell Tumor'
++   'pigmented villonodular synovitis' SubClassOf 'synovitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001136
+Label: pulmonary sclerosing hemangioma
+-   'pulmonary sclerosing hemangioma' SubClassOf 'hemangioma'
++   'pulmonary sclerosing hemangioma' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001142
+Label: pyruvate carboxylase deficiency disease
+-   'pyruvate carboxylase deficiency disease' SubClassOf 'carbohydrate metabolic disorder'
++   'pyruvate carboxylase deficiency disease' SubClassOf 'Disorder of carbohydrate metabolism'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0006549
+Label: CaSki
+-   'CaSki' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('obsolete_cervix' and ('part_of' some 'Homo sapiens'))))
++   'CaSki' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('uterine cervix' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001046
+Label: Mobius syndrome
+-   'Mobius syndrome' SubClassOf 'neuropathy'
++   'Mobius syndrome' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005128
+Label: albumin:globulin ratio measurement
++   'albumin:globulin ratio measurement' SubClassOf 'protein measurement'
++   'albumin:globulin ratio measurement' SubClassOf 'is_about' some 'heart'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_356961
+Label: SLC35A2-CDG
+-   'SLC35A2-CDG' SubClassOf 'Non-X-linked congenital disorder of glycosylation with intellectual disability as a major feature'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004123
+Label: acrocephalosyndactylia
+-   'acrocephalosyndactylia' SubClassOf 'skeletal system disease'
++   'acrocephalosyndactylia' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001338
+Label: Hearing Loss, Noise-Induced
+-   'Hearing Loss, Noise-Induced' SubClassOf 'sensorineural hearing loss'
++   'Hearing Loss, Noise-Induced' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001273
+Label: Birt-Hogg-Dube Syndrome
+-   'Birt-Hogg-Dube Syndrome' SubClassOf 'neoplasm'
++   'Birt-Hogg-Dube Syndrome' SubClassOf 'obsolete class'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_401993
+Label: Cold-induced sweating syndrome-hyperthermia spectrum
+-   'Cold-induced sweating syndrome-hyperthermia spectrum' SubClassOf 'Autosomal recessive hereditary sensory and autonomic neuropathy'
++   'Cold-induced sweating syndrome-hyperthermia spectrum' SubClassOf 'Hereditary sensory and autonomic neuropathy'
+ 
+Class: http://purl.obolibrary.org/obo/PO_0009084
+Label: pericarp
+-   'pericarp' SubClassOf 'part_of' some 'obsolete_fruit'
++   'pericarp' SubClassOf 'part_of' some 'fruit'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_401849
+Label: Autosomal recessive spastic paraplegia type 72
+-   'Autosomal recessive spastic paraplegia type 72' SubClassOf 'Autosomal dominant pure spastic paraplegia'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007097
+Label: iPS DF 4.7
+-   'iPS DF 4.7' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('obsolete_foreskin' and ('part_of' some 'Homo sapiens'))))
++   'iPS DF 4.7' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007098
+Label: iPS DF 6.9
+-   'iPS DF 6.9' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('obsolete_foreskin' and ('part_of' some 'Homo sapiens'))))
++   'iPS DF 6.9' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007096
+Label: iPS DF 19.11
+-   'iPS DF 19.11' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('obsolete_foreskin' and ('part_of' some 'Homo sapiens'))))
++   'iPS DF 19.11' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007095
+Label: iPS DF 19.7
+-   'iPS DF 19.7' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('obsolete_foreskin' and ('part_of' some 'Homo sapiens'))))
++   'iPS DF 19.7' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000953
+Label: gonadal tissue neoplasm
+-   'gonadal tissue neoplasm' SubClassOf 'has_disease_location' some ('obsolete_gonad' or ('part_of' some 'obsolete_gonad'))
++   'gonadal tissue neoplasm' SubClassOf 'has_disease_location' some ('gonad' or ('part_of' some 'gonad'))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007133
+Label: adenomyoma
+-   'adenomyoma' SubClassOf 'carcinoma'
++   'adenomyoma' SubClassOf 'reproductive system neoplasm'
++   'adenomyoma' SubClassOf 'has_disease_location' some ('female reproductive system' or ('part_of' some 'female reproductive system'))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007287
+Label: glucosephosphate dehydrogenase deficiency
+-   'glucosephosphate dehydrogenase deficiency' SubClassOf 'carbohydrate metabolic disorder'
++   'glucosephosphate dehydrogenase deficiency' SubClassOf 'Disorder of carbohydrate metabolism'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001997
+Label: triple-A syndrome
+-   'triple-A syndrome' SubClassOf 'Genetic chronic primary adrenal insufficiency'
++   'triple-A syndrome' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007267
+Label: factor VIII deficiency
+-   'factor VIII deficiency' SubClassOf 'has_disease_location' some ('blood' or ('part_of' some 'blood'))
+-   'factor VIII deficiency' SubClassOf 'Hemophilia'
++   'factor VIII deficiency' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000743
+Label: nonepidermolytic palmoplantar keratoderma
+-   'nonepidermolytic palmoplantar keratoderma' SubClassOf 'palmoplantar keratosis'
++   'nonepidermolytic palmoplantar keratoderma' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003093
+Label: adrenocortical carcinoma
+-   'adrenocortical carcinoma' SubClassOf 'carcinoma'
+-   'adrenocortical carcinoma' SubClassOf 'has_disease_location' some 'adrenal cortex'
++   'adrenocortical carcinoma' SubClassOf 'obsolete class'
+ 
+Class: http://purl.obolibrary.org/obo/UBERON_0006618
+Label: atrial appendage
+-   'atrial appendage' SubClassOf 'part_of' some 'obsolete_left atrium'
++   'atrial appendage' SubClassOf 'part_of' some 'left cardiac atrium'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007318
+Label: hyperinsulinemic hypoglycemia
+-   'hyperinsulinemic hypoglycemia' SubClassOf 'carbohydrate metabolic disorder'
++   'hyperinsulinemic hypoglycemia' SubClassOf 'Disorder of carbohydrate metabolism'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007334
+Label: Klippel-Trenaunay syndrome
+-   'Klippel-Trenaunay syndrome' SubClassOf 'genetic disorder'
++   'Klippel-Trenaunay syndrome' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007341
+Label: Legg-Calve-Perthes Disease
+-   'Legg-Calve-Perthes Disease' SubClassOf 'bone disease'
+-   'Legg-Calve-Perthes Disease' SubClassOf 'has_disease_location' some ('hip' or ('part_of' some 'hip'))
++   'Legg-Calve-Perthes Disease' SubClassOf 'obsolete class'
+ 
+Class: http://purl.obolibrary.org/obo/PATO_0000461
+Label: normal
+-   'normal' DisjointWith 'rheumatic disease'
+-   'normal' DisjointWith 'reproductive system disease'
+-   'normal' DisjointWith 'skin disease'
+-   'normal' DisjointWith 'ocular vascular disease'
+-   'normal' DisjointWith 'parathyroid disease'
+-   'normal' DisjointWith 'cardiovascular disease'
+-   'normal' DisjointWith 'genetic disorder'
+-   'normal' DisjointWith 'hyperplasia'
+-   'normal' DisjointWith 'obsolete_syndrome'
+-   'normal' DisjointWith 'neoplasm'
+-   'normal' DisjointWith 'digestive system disease'
+-   'normal' DisjointWith 'head and neck disorder'
+-   'normal' DisjointWith 'immune system disease'
+-   'normal' DisjointWith 'metabolic disease'
+-   'normal' DisjointWith 'mental or behavioural disorder'
+-   'normal' DisjointWith 'obsolete_disease state'
+-   'normal' DisjointWith 'respiratory system disease'
+-   'normal' DisjointWith 'nervous system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007459
+Label: pyruvate decarboxylase deficiency
+-   'pyruvate decarboxylase deficiency' SubClassOf 'carbohydrate metabolic disorder'
++   'pyruvate decarboxylase deficiency' SubClassOf 'Disorder of carbohydrate metabolism'
+ 
+Class: http://purl.obolibrary.org/obo/CL_0000292
+Label: guard cell
+-   'guard cell' SubClassOf 'located_in' some 'obsolete_leaf'
++   'guard cell' SubClassOf 'located_in' some 'leaf'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000484
+Label: Pleural Epithelioid Mesothelioma
+-   'Pleural Epithelioid Mesothelioma' SubClassOf 'malignant epitheloid mesothelioma'
++   'Pleural Epithelioid Mesothelioma' SubClassOf 'malignant epithelioid mesothelioma'
 
 ----------------------------------
 3. Obsolete Classes
