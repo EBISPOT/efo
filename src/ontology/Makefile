@@ -28,11 +28,10 @@ EFOFIXER = ../../bin/efo-fixer.jar
 # Top-level targets
 # ----------------------------------------
 
-all: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT)_full.owl
+all: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo
 test: all sparql_test
 prepare_release: all
-	cp $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT)_full.owl $(RELEASEDIR) &&\
-	(test -f subsets/*owl && cp subsets/*{owl,obo} $(RELEASEDIR)/subsets && git add $(RELEASEDIR)/subsets/* || echo "no subsets") &&\
+	cp $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(RELEASEDIR) &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 
 # ----------------------------------------
@@ -59,8 +58,8 @@ $(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo
 
 # add import statements to editors edition
 
-$(EFO3EDIT): efo-upper.owl $(BUILDDIR)/efo-edit-fixed-raw.owl
-	$(ROBOT) merge --collapse-import-closure false -i efo-upper.owl -i $(BUILDDIR)/efo-edit-fixed-raw.owl convert -f ofn -o $@
+$(EFO3EDIT): efo-upper.owl $(BUILDDIR)/efo-edit-fixed-raw.owl ../templates/subclasses.csv
+	$(ROBOT) merge --collapse-import-closure false -i efo-upper.owl -i $(BUILDDIR)/efo-edit-fixed-raw.owl template --merge-before --template ../templates/subclasses.csv --prefix $(MONDOPREFIX) convert -f ofn -o $@
 
 
 # unmerge imports from edit and add import files
