@@ -24,8 +24,8 @@ docker-build:
   stage: package
   script:
   - docker build -t efo3-ols .
-  - docker login -u simonjupp -p $CI_BUILD_TOKEN registry.gitlab.com
-  - docker push registry.gitlab.com/marcolenzo/actuator-sample
+  - docker login -u simonjupp -p $CI_BUILD_TOKEN
+  - docker push simonjupp/efo3-ols
 
 k8s-deploy:
   image: google/cloud-sdk
@@ -34,9 +34,7 @@ k8s-deploy:
   - echo "$GOOGLE_KEY" > key.json
   - gcloud auth activate-service-account --key-file key.json
   - gcloud config set compute/zone europe-west1-c
-  - gcloud config set project actuator-sample
+  - gcloud config set project efo3-ols
   - gcloud config set container/use_client_certificate True
-  - gcloud container clusters get-credentials actuator-sample
-  - kubectl delete secret registry.gitlab.com
-  - kubectl create secret docker-registry registry.gitlab.com --docker-server=https://registry.gitlab.com --docker-username=marcolenzo --docker-password=$REGISTRY_PASSWD --docker-email=lenzo.marco@gmail.com
+  - gcloud container clusters get-credentials efo3-ols
   - kubectl apply -f deployment.yml
