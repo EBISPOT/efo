@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: efo3-ols
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: efo3-ols
+    spec:
+      containers:
+      - name: efo3-ols
+        image: simonjupp/efo3-ols
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
