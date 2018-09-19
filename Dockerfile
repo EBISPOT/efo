@@ -8,7 +8,7 @@ ADD ols/ols-config.yaml ${OLS_HOME}
 #ADD ols/obo-config.yaml ${OLS_HOME}		
 
 RUN mkdir ${OLS_HOME}/ontologies
-ADD src/ontology/build/efo.owl ${OLS_HOME}/ontologies/
+ADD efo.owl ${OLS_HOME}/ontologies/
 RUN ls -l ${OLS_HOME}/ontologies/
 
 ## Prepare configuration files
