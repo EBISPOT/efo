@@ -40,3 +40,14 @@ docker-build:
   - docker login -u _json_key --password-stdin https://eu.gcr.io < key.json
   - docker push eu.gcr.io/$GOOGLE_PROJECT_KEY/efo3-ols:latest
 
+k8s-deploy:
+  image: google/cloud-sdk
+  stage: deploy
+  script:
+  - echo "$GOOGLE_KEY" > key.json
+  - gcloud auth activate-service-account --key-file key.json
+  - gcloud config set compute/zone europe-west1-c
+  - gcloud config set project efo3-ols
+  - gcloud config set container/use_client_certificate True
+  - gcloud container clusters get-credentials efo3-ols
+  - kubectl apply -f deployment.yml
