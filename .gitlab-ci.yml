@@ -11,9 +11,10 @@ stages:
   - deploy
 
 ontology-build:
-  image: openjdk:8
+  image: openjdk:8-jdk-alpine
   stage: build
   script: 
+   - "apk add --update make"
    - "cd src/ontology"
    - "make"
   artifacts:
