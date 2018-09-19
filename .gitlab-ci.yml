@@ -16,10 +16,9 @@ ontology-build:
   script: 
    - "apk add --update make"
    - "apk add --update curl"
-   - "cd src/ontology"
-   - "./get_mirrors.sh"
-   - "make all_imports"
-   - "make"
+   - "cd src/ontology ; ./get_mirrors.sh"
+   - "cd src/ontology ; make all_imports"
+   - "cd src/ontology ; make"
   artifacts:
     paths:
       - src/ontology/build/efo.owl
