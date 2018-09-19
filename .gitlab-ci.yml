@@ -35,4 +35,8 @@ docker-build:
     - docker-socket
   script:
   - docker build -t efo3-ols .
+  - docker tag efo3-ols eu.gcr.io/$GOOGLE_PROJECT_KEY/efo3-ols
+  - echo "$GOOGLE_KEY" > key.json
+  - docker login -u _json_key --password-stdin https://eu.gcr.io < key.json
+  - docker push eu.gcr.io/$GOOGLE_PROJECT_KEY/efo3-ols:latest
 
