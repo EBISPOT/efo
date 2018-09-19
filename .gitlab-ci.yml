@@ -1,9 +1,15 @@
 image: docker:latest
 
+variables:
+  DOCKER_DRIVER: overlay
+  
+services:
+  - docker:dind
+  
 stages:
-  - build
+#   - build
   - package
-  - deploy
+#   - deploy
 
 ontology-build:
   image: openjdk:8-jdk-alpine
@@ -23,7 +29,7 @@ ontology-build:
 docker-build:
   stage: package
   tags:
-    - docker-build
+    - docker-socket
   script:
   - docker build -t efo3-ols .
 
