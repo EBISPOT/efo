@@ -28,6 +28,8 @@ ontology-build:
 
 docker-build:
   stage: package
+  dependencies: 
+    - ontology-build
   tags:
     - docker-socket
   script:
