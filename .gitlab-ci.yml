@@ -13,6 +13,8 @@ stages:
 ontology-build:
   image: openjdk:8-jdk-alpine
   stage: build
+  tags:
+    - docker
   script: 
    - "apk add --update make"
    - "apk add --update curl"
