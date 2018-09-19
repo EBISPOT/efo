@@ -22,9 +22,10 @@ ontology-build:
   - "cd src/ontology ; ./get_mirrors.sh"
   - "make all_imports"
   - "make"
+  - "cp build/efo.owl ../../efo.owl"
   artifacts:
     paths:
-      - src/ontology/build/efo.owl
+      - efo.owl
 
 docker-build:
   stage: package
