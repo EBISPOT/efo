@@ -31,6 +31,7 @@ docker-build:
   tags:
     - docker
   script:
+  - export DOCKER_HOST="tcp://localhost:2375"
   - docker build -t efo3-ols .
   - docker login -u simonjupp -p $CI_BUILD_TOKEN
   - docker push simonjupp/efo3-ols
