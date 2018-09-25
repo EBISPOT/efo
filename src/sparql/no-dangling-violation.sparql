@@ -1,6 +1,10 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+# Selects classes that have an rdfs:label and are not a subclass of another class or an equivalent class of another term or the URI of "http://www.ebi.ac.uk/efo/EFO_0000001" (experimental factor) or the URI "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass" (obsolete class).
+
+
+
 SELECT ?cls1 WHERE
 {
   ?cls1 a owl:Class .

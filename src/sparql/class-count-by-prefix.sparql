@@ -1,6 +1,10 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix obo: <http://purl.obolibrary.org/obo/>
 
+
+# Count the number of Classes using their prefixes, where the class is of the type owl:class and it is NOT blank, and return the output as prefix and number of classes and group by the prefix  **NOTE: Prefix is defined as being in the format of "http://purl.obolibrary.org/obo/"+STRING1+”_”+STRING2, e.g. http://purl.obolibrary.org/obo/HP_0030791.
+
+
 SELECT ?prefix (COUNT(DISTINCT ?cls) AS ?numberOfClasses) WHERE 
 {
   ?cls a owl:Class .

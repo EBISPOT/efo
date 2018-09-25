@@ -1,6 +1,9 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+# Selects classes (classes 1 and Classes 2 ) and their labels where two classes are distinct (i.e. are not the same and are not blank) and have the same label, to return an output of cls1 , cls2 and labels.
+
+
 SELECT ?cls1 ?cls2 ?label WHERE
 {
   ?cls1 rdfs:label ?label ;

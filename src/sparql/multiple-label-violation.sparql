@@ -1,6 +1,9 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+# Counts the number of classes with a distinct label as Label_count, If the label count is more than one, this violates the test and indicates there are duplicate labels and group the output by the classes and label
+
+
 SELECT ?cls (COUNT (DISTINCT ?label) as ?label_count) WHERE
 {
   ?cls rdfs:label ?label .

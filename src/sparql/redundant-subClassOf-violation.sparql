@@ -2,6 +2,10 @@ prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+# Selects all instances where x term is a subclass of y -parent term and, is a subclass of a parent term that is a parent to the original parent term. Eg. x is a subclass of y, y is a subclass of z, x is a subclass of z.
+
+
+
 SELECT ?x ?xl ?y ?yl ?z ?zl WHERE 
 {
   ?x rdfs:subClassOf ?y ;

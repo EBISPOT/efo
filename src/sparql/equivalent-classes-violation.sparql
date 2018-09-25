@@ -2,6 +2,12 @@ prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+
+# Selects baseClass,	baseLabel,	equivalentClass,	equivalentLabel where the baseClass has equivalentClasses and label which are NOT blank. Any equivalent classes that do not meet this criteria violate the test.
+
+
+
+
 SELECT ?baseClass ?baseLabel ?equivalentClass ?equivalentLabel WHERE 
 {
   ?baseClass owl:equivalentClass ?equivalentClass .
