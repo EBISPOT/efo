@@ -3,6 +3,10 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX replaced_by: <http://purl.obolibrary.org/obo/IAO_0100001>
 
+# Selects all classes that owl class and that do not have an rdfs:label or a replacement term or is entirely blank and order by classes
+
+
+
 SELECT ?cls WHERE {
 	?cls a owl:Class
 	FILTER NOT EXISTS {?cls rdfs:label ?lab}

@@ -1,6 +1,10 @@
 prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 
+
+# Selects all classes and xrefs, of type owl:Class, with database/ontology cross references defined defined as oboInOwl term database_cross_reference.
+
+
 SELECT ?cls ?xref WHERE 
 {
   ?cls a owl:Class ; 

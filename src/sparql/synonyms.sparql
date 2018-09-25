@@ -2,6 +2,11 @@ prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+
+# Selects all owl:Class classes with a predicate that is: an rdfs:label, oboInOwl:hasRelated synonym, oboInOwl:hasNarrowSynonym, oboInOwl:hasBroadSynonym or oboInOwl:hasExactSynonym with optional filtering.
+
+
+
 SELECT ?cls ?pred ?val ?synType
 WHERE 
   { ?cls ?pred ?val ;
