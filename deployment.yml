@@ -1,17 +1,40 @@
-apiVersion: extensions/v1beta1
-kind: Deployment
+---
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
 metadata:
-  name: efo3-ols
+  name: "efo3-ols"
+  namespace: "default"
+  labels:
+    app: "efo3-ols"
 spec:
-  replicas: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "efo3-ols"
   template:
     metadata:
       labels:
-        app: efo3-ols
+        app: "efo3-ols"
     spec:
       containers:
-      - name: efo3-ols
-        image: simonjupp/efo3-ols
+      - name: "efo3-ols"
+        image: "eu.gcr.io/efo3-ols/efo3-ols:latest"
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+---
+apiVersion: "autoscaling/v1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "efo3-ols-hpa"
+  namespace: "default"
+  labels:
+    app: "efo3-ols"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "efo3-ols"
+    apiVersion: "apps/v1beta1"
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
