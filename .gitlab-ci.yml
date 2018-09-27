@@ -1,10 +1,11 @@
 image: docker:latest
-services:
-  - docker:dind
 
 variables:
   DOCKER_DRIVER: overlay
-
+  
+services:
+  - docker:dind
+  
 stages:
   - build
   - package
@@ -16,21 +17,29 @@ ontology-build:
   tags:
     - docker
   script: 
-   - "apk add --update make"
-   - "apk add --update curl"
-   - "cd src/ontology ; ./get_mirrors.sh"
-   - "make all_imports"
-   - "make"
+  - "apk add --update make"
+  - "apk add --update curl"
+  - "cd src/ontology ; ./get_mirrors.sh"
+  - "curl https://raw.githubusercontent.com/EBISPOT/efo/master/src/ontology/efo-edit.owl > efo-edit.owl"
+  - "make all_imports"
+  - "make"
+  - "cp build/efo.owl ../../efo.owl"
   artifacts:
     paths:
-      - src/ontology/build/efo.owl
+      - efo.owl
 
 docker-build:
   stage: package
+  dependencies: 
+    - ontology-build
+  tags:
+    - docker-socket
   script:
   - docker build -t efo3-ols .
-  - docker login -u simonjupp -p $CI_BUILD_TOKEN
-  - docker push simonjupp/efo3-ols
+  - docker tag efo3-ols eu.gcr.io/$GOOGLE_PROJECT_KEY/efo3-ols
+  - echo "$GOOGLE_KEY" > key.json
+  - docker login -u _json_key --password-stdin https://eu.gcr.io < key.json
+  - docker push eu.gcr.io/$GOOGLE_PROJECT_KEY/efo3-ols:latest
 
 k8s-deploy:
   image: google/cloud-sdk
@@ -38,8 +47,8 @@ k8s-deploy:
   script:
   - echo "$GOOGLE_KEY" > key.json
   - gcloud auth activate-service-account --key-file key.json
-  - gcloud config set compute/zone europe-west1-c
+  - gcloud config set compute/zone europe-west1
   - gcloud config set project efo3-ols
-  - gcloud config set container/use_client_certificate True
   - gcloud container clusters get-credentials efo3-ols
+  - kubectl delete --ignore-not-found=true deployment efo3-ols
   - kubectl apply -f deployment.yml
