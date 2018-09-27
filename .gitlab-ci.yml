@@ -20,6 +20,7 @@ ontology-build:
   - "apk add --update make"
   - "apk add --update curl"
   - "cd src/ontology ; ./get_mirrors.sh"
+  - "curl https://raw.githubusercontent.com/EBISPOT/efo/master/src/ontology/efo-edit.owl > efo-edit.owl"
   - "make all_imports"
   - "make"
   - "cp build/efo.owl ../../efo.owl"
@@ -48,6 +49,6 @@ k8s-deploy:
   - gcloud auth activate-service-account --key-file key.json
   - gcloud config set compute/zone europe-west1
   - gcloud config set project efo3-ols
-#   - gcloud config set container/use_client_certificate True
   - gcloud container clusters get-credentials efo3-ols
+  - kubectl delete --ignore-not-found=true deployment efo3-ols
   - kubectl apply -f deployment.yml
