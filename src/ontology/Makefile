@@ -15,12 +15,13 @@ EFO2OBO= ../../bin/efo2obo
 OWLTOOLS= ../../bin/owltools
 USECAT= --use-catalog
 SPARQLDIR = ../sparql
+HANCESTROGENERATED= ./results/efo-hancestro
 
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
 
-all: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo
+all: all_imports $(HANCESTROGENERATED).owl $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo
 test: all sparql_test
 prepare_release: all
 	cp $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo $(RELEASEDIR) &&\
@@ -32,8 +33,12 @@ prepare_release: all
 # ----------------------------------------
 
 # create the main efo release by merging and removing imrpot statments
-# this will also set the release date and version number 
-$(ONT).owl: $(SRC)
+# this will also set the release date and version number
+ 
+$(HANCESTROGENERATED).owl: $(SRC)
+	$(ROBOT) -v merge -i $< -i imports/hancestro_import.owl -o $@
+
+$(ONT).owl: $(HANCESTROGENERATED).owl
 	$(ROBOT) -v merge -c true -i  $< annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
 $(ONT_INF).owl: $(ONT).owl
@@ -56,6 +61,22 @@ $(ONT)_full.obo: $(ONT_INF_ALL).owl
 # Most ontologies are modularly constructed using portions of other ontologies
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
+
+IMPORTS = hancestro
+IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS))
+
+# Make this target to regenerate ALL
+all_imports: $(IMPORTS_OWL)
+
+# Use ROBOT, driven entirely by terms lists NOT from source ontology
+imports/%_import.owl: mirror/%.owl imports/%_terms.txt
+	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -o $@
+.PRECIOUS: imports/%_import.owl
+
+# clone remote ontology locally, perfoming some excision of relations and annotations
+# mirror/%.owl: $(SRC)
+	$(OWLTOOLS) $(OBO)/$*.owl --remove-annotation-assertions -l -s -d --remove-dangling-annotations  -o $@
+.PRECIOUS: mirror/%.owl
 
 # ----------------------------------------
 # Release
