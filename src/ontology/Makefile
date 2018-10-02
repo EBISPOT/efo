@@ -4,6 +4,7 @@
 # these can be overwritten on the command line
 
 OBO=http://www.ebi.ac.uk
+OBOREAL=http://purl.obolibrary.org/obo
 ONT=efo
 ONT_INF=efo_inferred
 ONT_INF_ALL=efo_inferred_all
@@ -74,9 +75,9 @@ imports/%_import.owl: mirror/%.owl imports/%_terms.txt
 .PRECIOUS: imports/%_import.owl
 
 # clone remote ontology locally, perfoming some excision of relations and annotations
-# mirror/%.owl: $(SRC)
-	$(OWLTOOLS) $(OBO)/$*.owl --remove-annotation-assertions -l -s -d --remove-dangling-annotations  -o $@
-.PRECIOUS: mirror/%.owl
+#mirror/%.owl: $(SRC)
+#	$(OWLTOOLS) $(OBOREAL)/$*.owl --remove-annotation-assertions -l -s -d --remove-dangling-annotations  -o $@
+#.PRECIOUS: mirror/%.owl
 
 # ----------------------------------------
 # Release

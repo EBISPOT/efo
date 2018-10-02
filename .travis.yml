@@ -1,7 +1,10 @@
 language: java
 jdk:
 - oraclejdk8
-script: cd src/ontology && make test
+script: 
+  - cd src/ontology
+  - ./get_mirrors.sh
+  - make test
 branches:
   only:
   - master
