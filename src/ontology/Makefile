@@ -182,7 +182,7 @@ VCHECKS = duplicate-label  nolabels multiple-label no-webulous-uris no-dangling
 
 # run all violation checks
 VQUERIES = $(foreach V,$(VCHECKS),$(SPARQLDIR)/$V-violation.sparql)
-sparql_test: $(ONT).owl
+sparql_test: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) verify -i $< --queries $(VQUERIES) -O reports/
 
 # ----------------------------------------
