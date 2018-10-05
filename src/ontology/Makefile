@@ -37,9 +37,9 @@ prepare_release: all
 # this will also set the release date and version number
  
 $(HANCESTROGENERATED).owl: $(SRC)
-	$(ROBOT) -v merge -i $< -i imports/hancestro_import.owl -o $@
+	$(ROBOT) -v merge -i $< -i imports/hancestro_import.owl -o $(SRC)
 
-$(ONT).owl: $(HANCESTROGENERATED).owl
+$(ONT).owl: $(SRC)
 	$(ROBOT) -v merge -c true -i  $< annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
 $(ONT_INF).owl: $(ONT).owl
