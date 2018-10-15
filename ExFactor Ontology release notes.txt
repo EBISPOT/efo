@@ -10,23 +10,17 @@
     \::/  /       \:\__\        \::/  /   
      \/__/         \/__/         \/__/    
 EFO - Release Notes
-ArrayExpress Experimental Factor Ontology version 2.100
-Date Released: 17th September 2018
-Class Count: 22047
+Experimental Factor Ontology version 2.101
+Date Released: 15th October 2018
+Class Count: 22126
 
 Summary: 
 
-***!!!***
-
-IMPORTANT NOTICE - We have moved to Github. From EFO 2.90 on, all our files will be released from Github - https://github.com/EBISPOT/efo. The transition should be seamless once we have everything ready for 2.90 release in November 2017. This release note is now available from https://github.com/EBISPOT/efo/blob/master/ExFactor%20Ontology%20release%20notes.txt . 
-
-***!!!***
-
-EFO 2.100 contains continued work on the disease classifications from 2.99, as well as new experimental process and measurement terms to address project-specific use cases for the Human Cell Atlas and GWAS Catalog, respectively; please see the details below for the full log of change.
+EFO 2.101 contains continued work on the disease classifications from 2.100 in preparation for the EFO 3.0 Beta release. The ethnicity branch has been replaced with the new ancestry branch, with imported terms from HANCESTRO replacing old EFO terms. New experimental process and measurement terms have also been added to address project-specific use cases for the Human Cell Atlas and GWAS Catalog, respectively; please see the details below for the full log of change.
 
 
 ----------------------------------
-1.      Changes to URIs
+1.  Changes to URIs
 2.	Changes to EFO
 3.	Obsolete Classes in EFO
 4.	Scope of the Ontology
@@ -40,165 +34,881 @@ EFO 2.100 contains continued work on the disease classifications from 2.99, as w
 New classes:
 
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009320
-Label: RUES2
-+   'RUES2' SubClassOf 'derives_from' some ('embryonic cell line' and ('part_of' some ('embryo' and ('part_of' some 'Homo sapiens'))))
-+   'RUES2' SubClassOf 'has_quality' some 'female'
-+   'RUES2' SubClassOf 'cultured cell'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0568
+Label: African American
++   'African American' SubClassOf 'African American or Afro-Caribbean'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009321
-Label: diabetic macular edema
-+   'diabetic macular edema' SubClassOf 'diabetic retinopathy'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0575
+Label: Yoruban
++   'Yoruban' SubClassOf 'Sub-Saharan African'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009322
-Label: proliferative diabetic retinopathy
-+   'proliferative diabetic retinopathy' SubClassOf 'diabetic retinopathy'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0574
+Label: Pacific Islander
++   'Pacific Islander' SubClassOf 'Oceanian'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009323
-Label: alpha synuclein measurement
-+   'alpha synuclein measurement' SubClassOf 'is_about' some 'neurodegenerative disease'
-+   'alpha synuclein measurement' SubClassOf 'protein measurement'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0573
+Label: Native Hawaiian
++   'Native Hawaiian' SubClassOf 'Oceanian'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009324
-Label: APOL1 risk genotype carrier status
-+   'APOL1 risk genotype carrier status' SubClassOf 'carrier status'
-+   'APOL1 risk genotype carrier status' SubClassOf 'is_about' some 'chronic kidney disease'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0570
+Label: Pima Indian
++   'Pima Indian' SubClassOf 'Native American'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009325
-Label: basal ganglia growth measurement
-+   'basal ganglia growth measurement' SubClassOf 'brain growth measurement'
-+   'basal ganglia growth measurement' SubClassOf 'is_about' some 'brain development'
-+   'basal ganglia growth measurement' SubClassOf 'is_about' some 'basal ganglion'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0383
+Label: Irish
++   'Irish' SubClassOf 'isDemonymOf' some 'Republic of Ireland'
++   'Irish' SubClassOf 'European'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009326
-Label: brain growth measurement
-+   'brain growth measurement' SubClassOf 'measurement'
-+   'brain growth measurement' SubClassOf 'is_about' some 'brain'
-+   'brain growth measurement' SubClassOf 'is_about' some 'brain development'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0498
+Label: Filipino
++   'Filipino' SubClassOf 'isDemonymOf' some 'Philippines'
++   'Filipino' SubClassOf 'Asian'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009327
-Label: cerebellum growth measurement
-+   'cerebellum growth measurement' SubClassOf 'is_about' some 'brain development'
-+   'cerebellum growth measurement' SubClassOf 'brain growth measurement'
-+   'cerebellum growth measurement' SubClassOf 'is_about' some 'cerebellum'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0487
+Label: Indian
++   'Indian' SubClassOf 'South Asian'
++   'Indian' SubClassOf 'isDemonymOf' some 'India'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009328
-Label: cerebral cortex growth measurement
-+   'cerebral cortex growth measurement' SubClassOf 'brain growth measurement'
-+   'cerebral cortex growth measurement' SubClassOf 'is_about' some 'cerebral cortex'
-+   'cerebral cortex growth measurement' SubClassOf 'is_about' some 'brain development'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0463
+Label: American
++   'American' SubClassOf 'isDemonymOf' some 'United States'
++   'American' SubClassOf 'European'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009314
-Label: blood coagulation disease
-+   'blood coagulation disease' SubClassOf 'hematological system disease'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0462
+Label: British
++   'British' SubClassOf 'isDemonymOf' some 'United Kingdom'
++   'British' SubClassOf 'European'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009315
-Label: thrombophilia
-+   'thrombophilia' SubClassOf 'blood coagulation disease'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0438
+Label: Iranian
++   'Iranian' SubClassOf 'isDemonymOf' some 'Iran'
++   'Iranian' SubClassOf 'Greater Middle Eastern (Middle Eastern, North African or Persian)'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009312
-Label: proprotein convertase subtilisin/kexin type 9 measurement
-+   'proprotein convertase subtilisin/kexin type 9 measurement' SubClassOf 'measurement'
+Class: http://dbpedia.org/resource/South_Korea
+Label: South Korea
++   'South Korea' SubClassOf 'country'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009313
-Label: Linear IgA Dermatosis
-+   'Linear IgA Dermatosis' SubClassOf 'autoimmune bullous skin disease'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0290
+Label: genetically isolated population
++   'genetically isolated population' SubClassOf 'ancestry group'
++   'genetically isolated population' EquivalentTo 'hasAncestryStatus' only 'genetically isolated ancestry'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009318
-Label: HFFc6
-+   'HFFc6' SubClassOf 'cultured cell'
-+   'HFFc6' SubClassOf 'derives_from' some ('fibroblast derived cell line' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
-+   'HFFc6' SubClassOf 'has_quality' some 'male'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0304
+Label: ancestry status
++   'ancestry status' EquivalentTo 'genetically isolated ancestry' or 'admixed ancestry'
++   'ancestry status' SubClassOf 'quality'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009319
-Label: F123-CASTx129
-+   'F123-CASTx129' SubClassOf 'derives_from' some ('mouse embryonic stem cell' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
-+   'F123-CASTx129' SubClassOf 'has_quality' some 'male'
-+   'F123-CASTx129' SubClassOf 'cultured cell'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0305
+Label: genetically isolated ancestry
++   'genetically isolated ancestry' SubClassOf 'ancestry status'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009316
-Label: protein c deficiency
-+   'protein c deficiency' SubClassOf 'thrombophilia'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0306
+Label: admixed ancestry
++   'admixed ancestry' SubClassOf 'ancestry status'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009317
-Label: GM20431
-+   'GM20431' SubClassOf 'has_quality' some 'male'
-+   'GM20431' SubClassOf 'cultured cell'
-+   'GM20431' SubClassOf 'derives_from' some ('lymphoblastoid cell line' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0015
+Label: Greater Middle Eastern (Middle Eastern, North African or Persian)
++   'Greater Middle Eastern (Middle Eastern, North African or Persian)' SubClassOf 'ancestry group'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009335
-Label: white matter growth measurement
-+   'white matter growth measurement' SubClassOf 'is_about' some 'brain development'
-+   'white matter growth measurement' SubClassOf 'brain growth measurement'
-+   'white matter growth measurement' SubClassOf 'is_about' some 'brain'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0014
+Label: Hispanic or Latin American
++   'Hispanic or Latin American' SubClassOf 'hasAncestryStatus' some 'admixed ancestry'
++   'Hispanic or Latin American' SubClassOf 'ancestry group'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009334
-Label: prefrontal cortex growth measurement
-+   'prefrontal cortex growth measurement' SubClassOf 'is_about' some 'brain development'
-+   'prefrontal cortex growth measurement' SubClassOf 'brain growth measurement'
-+   'prefrontal cortex growth measurement' SubClassOf 'is_about' some 'prefrontal cortex'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0013
+Label: Native American
++   'Native American' SubClassOf 'ancestry group'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009336
-Label: velopharyngeal dysfunction
-+   'velopharyngeal dysfunction' SubClassOf 'abnormality of the mouth'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0011
+Label: Sub-Saharan African
++   'Sub-Saharan African' SubClassOf 'African'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009331
-Label: erosive tooth wear measurement
-+   'erosive tooth wear measurement' SubClassOf 'measurement'
-+   'erosive tooth wear measurement' SubClassOf 'is_about' some 'tooth'
-+   'erosive tooth wear measurement' SubClassOf 'is_about' some 'tooth disease'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0010
+Label: African
++   'African' SubClassOf 'ancestry group'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009330
-Label: Chlamydia trachomatis seropositivity
-+   'Chlamydia trachomatis seropositivity' SubClassOf 'infectious disease biomarker'
-+   'Chlamydia trachomatis seropositivity' SubClassOf 'seropositivity measurement'
-+   'Chlamydia trachomatis seropositivity' SubClassOf 'is_about' some 'Chlamydia trachomatis infectious disease'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0019
+Label: Japanese
++   'Japanese' SubClassOf 'East Asian'
++   'Japanese' SubClassOf 'isDemonymOf' some 'Japan'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009332
-Label: executive function measurement
-+   'executive function measurement' SubClassOf 'is_about' some 'unipolar depression'
-+   'executive function measurement' SubClassOf 'is_about' some 'bipolar disorder'
-+   'executive function measurement' SubClassOf 'is_about' some 'attention deficit hyperactivity disorder'
-+   'executive function measurement' SubClassOf 'is_about' some 'schizophrenia'
-+   'executive function measurement' SubClassOf 'is_about' some 'autism'
-+   'executive function measurement' SubClassOf 'is_about' some 'anxiety disorder'
-+   'executive function measurement' SubClassOf 'is_about' some 'brain'
-+   'executive function measurement' SubClassOf 'is_about' some 'executive function'
-+   'executive function measurement' SubClassOf 'mental or behavioural disorder biomarker'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0016
+Label: African American or Afro-Caribbean
++   'African American or Afro-Caribbean' SubClassOf 'hasAncestryStatus' some 'admixed ancestry'
++   'African American or Afro-Caribbean' SubClassOf 'ancestry group'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009278
-Label: cranial vault morphology measurement
-+   'cranial vault morphology measurement' SubClassOf 'is_about' some 'head'
-+   'cranial vault morphology measurement' SubClassOf 'measurement'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0017
+Label: Oceanian
++   'Oceanian' SubClassOf 'ancestry group'
  
-Class: http://purl.obolibrary.org/obo/HP_0000975
-Label: hyperhidrosis
-+   'hyperhidrosis' SubClassOf 'phenotype'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0022
+Label: Korean
++   'Korean' SubClassOf 'East Asian'
++   'Korean' SubClassOf 'isDemonymOf' some 'South Korea'
+ 
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0021
+Label: Chinese
++   'Chinese' SubClassOf 'isDemonymOf' some 'China'
++   'Chinese' SubClassOf 'East Asian'
+ 
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0027
+Label: Han Chinese
++   'Han Chinese' SubClassOf 'Chinese'
+ 
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0004
+Label: ancestry group
+Label: ancestry category
++   'ancestry group' SubClassOf 'population'
+ 
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0003
+Label: country
++   'country' SubClassOf 'organization'
+ 
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0005
+Label: European
++   'European' SubClassOf 'ancestry group'
+ 
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0006
+Label: South Asian
++   'South Asian' SubClassOf 'Asian'
+ 
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0008
+Label: Asian
++   'Asian' SubClassOf 'ancestry group'
+ 
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0009
+Label: East Asian
++   'East Asian' SubClassOf 'Asian'
+ 
+Class: http://dbpedia.org/resource/United_Kingdom
+Label: United Kingdom
++   'United Kingdom' SubClassOf 'country'
+ 
+Class: http://dbpedia.org/resource/Japan
+Label: Japan
++   'Japan' SubClassOf 'country'
+ 
+Class: http://dbpedia.org/resource/Philippines
+Label: Philippines
++   'Philippines' SubClassOf 'country'
+ 
+Class: http://dbpedia.org/resource/Iran
+Label: Iran
++   'Iran' SubClassOf 'country'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0010750
+Label: dermatochalasis
++   'dermatochalasis' SubClassOf 'Abnormality of the head'
+ 
+Class: http://dbpedia.org/resource/United_States
+Label: United States
++   'United States' SubClassOf 'country'
+ 
+Class: http://dbpedia.org/resource/India
+Label: India
++   'India' SubClassOf 'country'
+ 
+Class: http://dbpedia.org/resource/Republic_of_Ireland
+Label: Republic of Ireland
++   'Republic of Ireland' SubClassOf 'country'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009350
+Label: Anti-herpes simplex virus 2 IgG measurement
++   'Anti-herpes simplex virus 2 IgG measurement' SubClassOf 'is_about' some 'Herpes simplex infection'
++   'Anti-herpes simplex virus 2 IgG measurement' SubClassOf 'serum IgG measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009351
+Label: Anti-varicella zoster virus IgG measurement
++   'Anti-varicella zoster virus IgG measurement' SubClassOf 'serum IgG measurement'
++   'Anti-varicella zoster virus IgG measurement' SubClassOf 'is_about' some 'Varicella Zoster infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009349
+Label: Anti-herpes simplex virus 1 IgG measurement
++   'Anti-herpes simplex virus 1 IgG measurement' SubClassOf 'serum IgG measurement'
++   'Anti-herpes simplex virus 1 IgG measurement' SubClassOf 'is_about' some 'Herpes simplex infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009348
+Label: Anti-Epstein-Barr virus early antigen IgG measurement
++   'Anti-Epstein-Barr virus early antigen IgG measurement' SubClassOf 'serum IgG measurement'
++   'Anti-Epstein-Barr virus early antigen IgG measurement' SubClassOf 'is_about' some 'Epstein-Barr virus infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009347
+Label: Anti-cytomegalovirus IgG measurement
++   'Anti-cytomegalovirus IgG measurement' SubClassOf 'is_about' some 'cytomegalovirus infection'
++   'Anti-cytomegalovirus IgG measurement' SubClassOf 'serum IgG measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009346
+Label: Hepatitis B virus core antigen seropositivity
++   'Hepatitis B virus core antigen seropositivity' SubClassOf 'infectious disease biomarker'
++   'Hepatitis B virus core antigen seropositivity' SubClassOf 'is_about' some 'hepatitis B infection'
++   'Hepatitis B virus core antigen seropositivity' SubClassOf 'seropositivity measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009345
+Label: Hepatitis B virus surface antigen seropositivity
++   'Hepatitis B virus surface antigen seropositivity' SubClassOf 'seropositivity measurement'
++   'Hepatitis B virus surface antigen seropositivity' SubClassOf 'infectious disease biomarker'
++   'Hepatitis B virus surface antigen seropositivity' SubClassOf 'is_about' some 'hepatitis B infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009344
+Label: Rubella virus seropositivity
++   'Rubella virus seropositivity' SubClassOf 'is_about' some 'rubella'
++   'Rubella virus seropositivity' SubClassOf 'infectious disease biomarker'
++   'Rubella virus seropositivity' SubClassOf 'seropositivity measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009343
+Label: Mumps virus seropositivity
++   'Mumps virus seropositivity' SubClassOf 'infectious disease biomarker'
++   'Mumps virus seropositivity' SubClassOf 'is_about' some 'Mumps virus infectious disease'
++   'Mumps virus seropositivity' SubClassOf 'seropositivity measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009342
+Label: Measles virus seropositivity
++   'Measles virus seropositivity' SubClassOf 'infectious disease biomarker'
++   'Measles virus seropositivity' SubClassOf 'is_about' some 'measles'
++   'Measles virus seropositivity' SubClassOf 'seropositivity measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009341
+Label: Helicobacter pylori seropositivity
++   'Helicobacter pylori seropositivity' SubClassOf 'infectious disease biomarker'
++   'Helicobacter pylori seropositivity' SubClassOf 'is_about' some 'Helicobacter pylori infectious disease'
++   'Helicobacter pylori seropositivity' SubClassOf 'seropositivity measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009340
+Label: Varicella zoster virus seropositivity
++   'Varicella zoster virus seropositivity' SubClassOf 'infectious disease biomarker'
++   'Varicella zoster virus seropositivity' SubClassOf 'seropositivity measurement'
++   'Varicella zoster virus seropositivity' SubClassOf 'is_about' some 'Varicella Zoster infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009339
+Label: Herpes simplex virus 2 seropositivity
++   'Herpes simplex virus 2 seropositivity' SubClassOf 'infectious disease biomarker'
++   'Herpes simplex virus 2 seropositivity' SubClassOf 'is_about' some 'Herpes simplex infection'
++   'Herpes simplex virus 2 seropositivity' SubClassOf 'seropositivity measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009338
+Label: Epstein-Barr virus early antigen seropositivity
++   'Epstein-Barr virus early antigen seropositivity' SubClassOf 'is_about' some 'Epstein-Barr virus infection'
++   'Epstein-Barr virus early antigen seropositivity' SubClassOf 'seropositivity measurement'
++   'Epstein-Barr virus early antigen seropositivity' SubClassOf 'infectious disease biomarker'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009337
+Label: cell size selection
++   'cell size selection' SubClassOf 'sample enrichment'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009372
+Label: response to ketogenic diet
++   'response to ketogenic diet' SubClassOf 'response to dietary antigen'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009373
+Label: edema
++   'edema' SubClassOf 'skin disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009370
+Label: radon exposure measurement
++   'radon exposure measurement' SubClassOf 'environmental exposure measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009371
+Label: ketogenic diet
++   'ketogenic diet' SubClassOf 'diet'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009366
+Label: quality of life during menstruation measurement
++   'quality of life during menstruation measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009365
+Label: vaginal discharge
++   'vaginal discharge' SubClassOf 'vaginal inflammation'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009364
+Label: non-allergic rhinitis
++   'non-allergic rhinitis' SubClassOf 'rhinitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009363
+Label: chronic central serous retinopathy
++   'chronic central serous retinopathy' SubClassOf 'has_disease_location' some ('eye' or ('part_of' some 'eye'))
++   'chronic central serous retinopathy' SubClassOf 'retinopathy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009369
+Label: diffusing capacity of the lung for carbon monoxide
++   'diffusing capacity of the lung for carbon monoxide' SubClassOf 'pulmonary function measurement'
++   'diffusing capacity of the lung for carbon monoxide' SubClassOf 'is_about' some 'chronic obstructive pulmonary disease'
++   'diffusing capacity of the lung for carbon monoxide' SubClassOf 'is_about' some 'lung'
++   'diffusing capacity of the lung for carbon monoxide' SubClassOf 'is_about' some 'interstitial lung disease'
++   'diffusing capacity of the lung for carbon monoxide' SubClassOf 'is_about' some 'asthma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009368
+Label: factor VII activating protease measurement
++   'factor VII activating protease measurement' SubClassOf 'blood protein measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009367
+Label: glucose metabolism measurement
++   'glucose metabolism measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009360
+Label: eyelid sagging measurement
++   'eyelid sagging measurement' SubClassOf 'is_about' some 'dermatochalasis'
++   'eyelid sagging measurement' SubClassOf 'facial morphology measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009361
+Label: colorectal mucinous adenocarcinoma
++   'colorectal mucinous adenocarcinoma' SubClassOf 'colorectal adenocarcinoma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009362
+Label: nicotine withdrawal measurement
++   'nicotine withdrawal measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009353
+Label: Anti-Toxoplasma gondii IgG measurement
++   'Anti-Toxoplasma gondii IgG measurement' SubClassOf 'serum IgG measurement'
++   'Anti-Toxoplasma gondii IgG measurement' SubClassOf 'is_about' some 'toxoplasmosis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009352
+Label: Anti-Helicobacter pylori IgG measurement
++   'Anti-Helicobacter pylori IgG measurement' SubClassOf 'is_about' some 'Helicobacter pylori infectious disease'
++   'Anti-Helicobacter pylori IgG measurement' SubClassOf 'serum IgG measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009355
+Label: Anti-measles virus IgG measurement
++   'Anti-measles virus IgG measurement' SubClassOf 'is_about' some 'measles'
++   'Anti-measles virus IgG measurement' SubClassOf 'serum IgG measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009354
+Label: Anti-influenza A virus IgG measurement
++   'Anti-influenza A virus IgG measurement' SubClassOf 'serum IgG measurement'
++   'Anti-influenza A virus IgG measurement' SubClassOf 'is_about' some 'influenza infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009357
+Label: Anti-rubella virus IgG measurement
++   'Anti-rubella virus IgG measurement' SubClassOf 'is_about' some 'rubella'
++   'Anti-rubella virus IgG measurement' SubClassOf 'serum IgG measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009356
+Label: Anti-mumps virus IgG measurement
++   'Anti-mumps virus IgG measurement' SubClassOf 'serum IgG measurement'
++   'Anti-mumps virus IgG measurement' SubClassOf 'is_about' some 'Mumps virus infectious disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009359
+Label: Anti-hepatitis B virus core antigen IgG measurement
++   'Anti-hepatitis B virus core antigen IgG measurement' SubClassOf 'serum IgG measurement'
++   'Anti-hepatitis B virus core antigen IgG measurement' SubClassOf 'is_about' some 'hepatitis B infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009358
+Label: Anti-hepatitis B virus surface antigen IgG measurement
++   'Anti-hepatitis B virus surface antigen IgG measurement' SubClassOf 'serum IgG measurement'
++   'Anti-hepatitis B virus surface antigen IgG measurement' SubClassOf 'is_about' some 'hepatitis B infection'
+ 
+Class: http://dbpedia.org/resource/China
+Label: China
++   'China' SubClassOf 'country'
 
 ----------------------------------
 2. Changes to EFO
 
-Class: http://www.ebi.ac.uk/efo/EFO_0008796
-Label: MARS-seq
-+   'MARS-seq' SubClassOf 'library preparation'
+Class: http://www.ebi.ac.uk/efo/EFO_0002184
+Label: H4
+-   'H4' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('late embryo' and ('part_of' some 'Homo sapiens'))))
++   'H4' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('brain' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0008720
-Label: DroNc-Seq
-+   'DroNc-Seq' SubClassOf 'library preparation'
+Class: http://www.ebi.ac.uk/efo/EFO_0001075
+Label: ovarian carcinoma
++   'ovarian carcinoma' SubClassOf 'Malignant epithelial tumor of ovary'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000183
-Label: Hodgkins lymphoma
--   'Hodgkins lymphoma' SubClassOf 'lymphoid neoplasm'
+Class: http://www.ebi.ac.uk/efo/EFO_0002239
+Label: MOLT16
+-   'MOLT16' SubClassOf 'derives_from' some 'Caucasian'
++   'MOLT16' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
  
-Class: http://www.orpha.net/ORDO/Orphanet_217454
-Label: Rare hereditary thrombophilia
-+   'Rare hereditary thrombophilia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009315
+Class: http://www.ebi.ac.uk/efo/EFO_0002323
+Label: RWPE1
+-   'RWPE1' SubClassOf 'derives_from' some 'Caucasian'
++   'RWPE1' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
  
-Class: http://www.ebi.ac.uk/efo/http://www.ebi.ac.uk/efo/EFO_0009278
-Label: cranial vault morphology measurement
--   'cranial vault morphology measurement' SubClassOf 'is_about' some 'head'
--   'cranial vault morphology measurement' SubClassOf 'measurement'
-
+Class: http://www.ebi.ac.uk/efo/EFO_0002300
+Label: NCI-H69
+-   'NCI-H69' SubClassOf 'derives_from' some 'Caucasian'
++   'NCI-H69' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000197
+Label: mucinous carcinoma
+-   'mucinous carcinoma' SubClassOf 'carcinoma'
++   'mucinous carcinoma' SubClassOf 'adenocarcinoma'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_77
+Label: Aniridia
+-   'Aniridia' SubClassOf 'Syndromic cataract'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_70
+Label: Proximal spinal muscular atrophy
++   'Proximal spinal muscular atrophy' SubClassOf 'spinal muscular atrophy'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_2416
+Label: Congenital primary lymphedema
+-   'Congenital primary lymphedema' SubClassOf 'Conjunctival lymphangiectasia'
+-   'Congenital primary lymphedema' SubClassOf 'Primary lymphedema'
++   'Congenital primary lymphedema' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002784
+Label: GM12878
+-   'GM12878' SubClassOf 'derives_from' some 'Northern and Western European'
++   'GM12878' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002852
+Label: RERF-LC-MS
+-   'RERF-LC-MS' SubClassOf 'derives_from' some 'Japanese'
++   'RERF-LC-MS' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0019
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002858
+Label: SK-ES-1
+-   'SK-ES-1' SubClassOf 'derives_from' some 'Caucasian'
++   'SK-ES-1' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_359
+Label: Hereditary glaucoma
+-   'Hereditary glaucoma' SubClassOf 'Non-syndromic developmental defect of the eye'
++   'Hereditary glaucoma' SubClassOf 'Genetic developmental defect of the eye'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_646
+Label: Niemann-Pick disease type C
+-   'Niemann-Pick disease type C' SubClassOf 'Lipid storage disease'
++   'Niemann-Pick disease type C' SubClassOf 'Sphingolipidosis'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_398934
+Label: Malignant epithelial tumor of ovary
+-   'Malignant epithelial tumor of ovary' SubClassOf 'ovarian carcinoma'
++   'Malignant epithelial tumor of ovary' SubClassOf 'ovarian neoplasm'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_790
+Label: Retinoblastoma
+-   'Retinoblastoma' SubClassOf 'Genetic vitreous-retinal disease'
+-   'Retinoblastoma' SubClassOf 'Genetic eye tumor'
++   'Retinoblastoma' SubClassOf 'retinopathy'
++   'Retinoblastoma' SubClassOf 'neoplasm' and ('has_disease_location' some 'eye')
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_206713
+Label: Distal spinal muscular atrophy
++   'Distal spinal muscular atrophy' SubClassOf 'spinal muscular atrophy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000364
+Label: colon mucinous adenocarcinoma
+-   'colon mucinous adenocarcinoma' SubClassOf 'colorectal adenocarcinoma'
++   'colon mucinous adenocarcinoma' SubClassOf 'colon adenocarcinoma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004902
+Label: European HapMap cell line
+-   'European HapMap cell line' EquivalentTo ('is_input_of' some 'HapMap haplotype mapping') and ('derives_from' some 'Northern and Western European')
++   'European HapMap cell line' EquivalentTo ('is_input_of' some 'HapMap haplotype mapping') and ('derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005)
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004900
+Label: Yoruba
+-   'Yoruba' SubClassOf 'African'
++   'Yoruba' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004901
+Label: Northern and Western European
+-   'Northern and Western European' SubClassOf 'ethnic group'
++   'Northern and Western European' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007751
+Label: ES-E14TG2a.4
++   'ES-E14TG2a.4' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000387
+Label: mucinuos carcinoma
+-   'mucinuos carcinoma' SubClassOf 'adenocarcinoma'
++   'mucinuos carcinoma' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004561
+Label: African
+-   'African' SubClassOf 'ethnic group'
++   'African' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005698
+Label: Daoy
+-   'Daoy' SubClassOf 'derives_from' some 'Caucasian'
++   'Daoy' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005694
+Label: KMS-11
+-   'KMS-11' SubClassOf 'derives_from' some 'Japanese'
++   'KMS-11' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0019
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005726
+Label: LNCaP clone FGC
+-   'LNCaP clone FGC' SubClassOf 'part_of' some 'Caucasian'
++   'LNCaP clone FGC' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005724
+Label: MM.1S
+-   'MM.1S' SubClassOf 'part_of' some 'African American'
++   'MM.1S' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0568
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005723
+Label: GM23248
+-   'GM23248' SubClassOf 'part_of' some 'Caucasian'
++   'GM23248' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005722
+Label: SJCRH30
+-   'SJCRH30' SubClassOf 'part_of' some 'Caucasian'
++   'SJCRH30' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005721
+Label: SK-N-DZ
+-   'SK-N-DZ' SubClassOf 'part_of' some 'Caucasian'
++   'SK-N-DZ' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005720
+Label: SK-MEL-5
+-   'SK-MEL-5' SubClassOf 'part_of' some 'Caucasian'
++   'SK-MEL-5' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001204
+Label: sweat gland neoplasm
++   'sweat gland neoplasm' EquivalentTo 'neoplasm' and ('has_disease_location' some 'sweat gland')
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005712
+Label: RPMI-7951
+-   'RPMI-7951' SubClassOf 'part_of' some 'Caucasian'
++   'RPMI-7951' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005715
+Label: WERI-Rb-1
+-   'WERI-Rb-1' SubClassOf 'part_of' some 'Caucasian'
++   'WERI-Rb-1' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005714
+Label: LHCN-M2
+-   'LHCN-M2' SubClassOf 'part_of' some 'Caucasian'
++   'LHCN-M2' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005704
+Label: HuH-7.5
+-   'HuH-7.5' SubClassOf 'part_of' some 'Japanese'
++   'HuH-7.5' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0019
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005703
+Label: G401.6
+-   'G401.6' SubClassOf 'derives_from' some 'Caucasian'
++   'G401.6' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005707
+Label: 786-0
+-   '786-0' SubClassOf 'part_of' some 'Caucasian'
++   '786-0' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000065
+Label: Acinar Prostate Mucinous Adenocarcinoma
+-   'Acinar Prostate Mucinous Adenocarcinoma' SubClassOf 'mucinuos carcinoma'
++   'Acinar Prostate Mucinous Adenocarcinoma' SubClassOf 'mucinous carcinoma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005904
+Label: H7-hESC
++   'H7-hESC' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005901
+Label: ELF-1
++   'ELF-1' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005916
+Label: ES-CJ7
++   'ES-CJ7' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005915
+Label: WW6
++   'WW6' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005914
+Label: ZHBTc4-mESC
++   'ZHBTc4-mESC' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005910
+Label: ES-D3
++   'ES-D3' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005237
+Label: U-87 MG
+-   'U-87 MG' SubClassOf 'has_quality' some 'Caucasian'
++   'U-87 MG' SubClassOf 'has_quality' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005236
+Label: NT2/D1
+-   'NT2/D1' SubClassOf 'has_quality' some 'Caucasian'
++   'NT2/D1' SubClassOf 'has_quality' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005234
+Label: PFSK-1
+-   'PFSK-1' SubClassOf 'has_quality' some 'Caucasian'
++   'PFSK-1' SubClassOf 'has_quality' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005282
+Label: HS-5
+-   'HS-5' SubClassOf 'derives_from' some 'Caucasian'
++   'HS-5' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005283
+Label: HS-27A
+-   'HS-27A' SubClassOf 'derives_from' some 'Caucasian'
++   'HS-27A' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005353
+Label: GM12801
+-   'GM12801' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12801' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005352
+Label: GM20000
+-   'GM20000' SubClassOf 'derives_from' some ('Caucasian' and 'Hispanic')
++   'GM20000' SubClassOf 'derives_from' some (http://purl.obolibrary.org/obo/HANCESTRO_0005 and http://purl.obolibrary.org/obo/HANCESTRO_0014)
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005351
+Label: GM19193
+-   'GM19193' SubClassOf 'derives_from' some 'Yoruba'
++   'GM19193' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0575
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005350
+Label: GM19099
+-   'GM19099' SubClassOf 'derives_from' some 'Yoruba'
++   'GM19099' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0575
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005333
+Label: GM08714
+-   'GM08714' SubClassOf 'derives_from' some 'Caucasian'
++   'GM08714' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005332
+Label: GM18505
+-   'GM18505' SubClassOf 'derives_from' some 'Yoruba'
++   'GM18505' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0575
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005337
+Label: GM12864
+-   'GM12864' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12864' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005336
+Label: GM10847
+-   'GM10847' SubClassOf 'derives_from' some 'Caucasian'
++   'GM10847' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005335
+Label: GM10266
+-   'GM10266' SubClassOf 'derives_from' some 'Caucasian'
++   'GM10266' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005334
+Label: GM10248
+-   'GM10248' SubClassOf 'derives_from' some 'Caucasian'
++   'GM10248' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005339
+Label: GM12866
+-   'GM12866' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12866' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005338
+Label: GM12865
+-   'GM12865' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12865' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005340
+Label: GM12867
+-   'GM12867' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12867' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005342
+Label: GM12869
+-   'GM12869' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12869' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005341
+Label: GM12868
+-   'GM12868' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12868' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005344
+Label: GM12871
+-   'GM12871' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12871' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005343
+Label: GM12870
+-   'GM12870' SubClassOf 'derives_from' some 'Caucasian'
++   'GM12870' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005346
+Label: GM13977
+-   'GM13977' SubClassOf 'derives_from' some 'Caucasian'
++   'GM13977' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005345
+Label: GM13976
+-   'GM13976' SubClassOf 'derives_from' some 'Caucasian'
++   'GM13976' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0005
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005348
+Label: GM18526
+-   'GM18526' SubClassOf 'derives_from' some 'Han Chinese'
++   'GM18526' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0027
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005349
+Label: GM18951
+-   'GM18951' SubClassOf 'derives_from' some 'Japanese'
++   'GM18951' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/HANCESTRO_0019
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005384
+Label: HuH-7
+-   'HuH-7' SubClassOf 'part_of' some 'Japanese'
++   'HuH-7' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/HANCESTRO_0019
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005484
+Label: 46C
++   '46C' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_79225
+Label: Sphingolipidosis
+-   'Sphingolipidosis' SubClassOf 'Lysosomal disease'
++   'Sphingolipidosis' SubClassOf 'Lipid storage disease'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_79204
+Label: Lipid storage disease
+-   'Lipid storage disease' SubClassOf 'Sphingolipidosis'
++   'Lipid storage disease' SubClassOf 'Lysosomal disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000912
+Label: eccrine acrospiroma
+-   'eccrine acrospiroma' SubClassOf 'eccrine sweat gland cancer'
++   'eccrine acrospiroma' SubClassOf 'neoplasm' and ('has_disease_location' some 'eccrine sweat gland')
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0006275
+Label: ES-E14TG2a
++   'ES-E14TG2a' SubClassOf 'ESC derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000716
+Label: incontinentia pigmenti achromians
+-   'incontinentia pigmenti achromians' SubClassOf 'skin disease'
++   'incontinentia pigmenti achromians' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000672
+Label: Bloch-Sulzberger syndrome
+-   'Bloch-Sulzberger syndrome' SubClassOf 'pigmentation disease'
++   'Bloch-Sulzberger syndrome' SubClassOf 'obsolete class'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_79383
+Label: Lymphedema
+-   'Lymphedema' SubClassOf 'Rare genetic skin disease'
++   'Lymphedema' SubClassOf 'skin disease'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_79450
+Label: Non hereditary congenital primary lymphedema
+-   'Non hereditary congenital primary lymphedema' SubClassOf 'Congenital primary lymphedema'
++   'Non hereditary congenital primary lymphedema' SubClassOf 'obsolete class'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_79452
+Label: Milroy disease
+-   'Milroy disease' SubClassOf 'Congenital primary lymphedema'
++   'Milroy disease' SubClassOf 'Conjunctival lymphangiectasia'
++   'Milroy disease' SubClassOf 'Primary lymphedema'
++   'Milroy disease' SubClassOf 'Milroy disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003151
+Label: American
+-   'American' SubClassOf 'ethnic group'
++   'American' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003150
+Label: African American
+-   'African American' SubClassOf 'ethnic group'
++   'African American' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003153
+Label: Asian Indian
+-   'Asian Indian' SubClassOf 'ethnic group'
++   'Asian Indian' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003152
+Label: Asian
+-   'Asian' SubClassOf 'ethnic group'
++   'Asian' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003155
+Label: British
+-   'British' SubClassOf 'ethnic group'
++   'British' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003154
+Label: Asian/Pacific Islander
+-   'Asian/Pacific Islander' SubClassOf 'ethnic group'
++   'Asian/Pacific Islander' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003157
+Label: Chinese
+-   'Chinese' SubClassOf 'ethnic group'
++   'Chinese' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003156
+Label: Caucasian
+-   'Caucasian' SubClassOf 'ethnic group'
++   'Caucasian' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003159
+Label: European-American
+-   'European-American' SubClassOf 'ethnic group'
++   'European-American' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003158
+Label: Eastern Indian
+-   'Eastern Indian' SubClassOf 'ethnic group'
++   'Eastern Indian' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003162
+Label: Iranian
+-   'Iranian' SubClassOf 'ethnic group'
++   'Iranian' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003161
+Label: Han Chinese
+-   'Han Chinese' SubClassOf 'Chinese'
++   'Han Chinese' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003160
+Label: Filipino
+-   'Filipino' SubClassOf 'Asian'
++   'Filipino' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003166
+Label: Latino
+-   'Latino' SubClassOf 'ethnic group'
++   'Latino' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003165
+Label: Korean
+-   'Korean' SubClassOf 'Asian'
++   'Korean' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003164
+Label: Japanese
+-   'Japanese' SubClassOf 'Asian'
++   'Japanese' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003163
+Label: Irish
+-   'Irish' SubClassOf 'ethnic group'
++   'Irish' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003169
+Label: Hispanic
+-   'Hispanic' SubClassOf 'ethnic group'
++   'Hispanic' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003168
+Label: Hawaiian
+-   'Hawaiian' SubClassOf 'ethnic group'
++   'Hawaiian' SubClassOf 'obsolete class'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003167
+Label: Pima Indian
+-   'Pima Indian' SubClassOf 'ethnic group'
++   'Pima Indian' SubClassOf 'obsolete class'
 
 ----------------------------------
 3. Obsolete Classes
