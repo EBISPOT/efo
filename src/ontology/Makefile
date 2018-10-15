@@ -163,8 +163,6 @@ imports/%_import.obo: imports/%_import.owl
 # merge into EFO
 
 
-
-
 # ----------------------------------------
 # Release
 # ----------------------------------------

@@ -9,24 +9,26 @@
    \:\/:/  /     \:\  \        \:\/:/  /  
     \::/  /       \:\__\        \::/  /   
      \/__/         \/__/         \/__/    
+
 EFO - Release Notes
-ArrayExpress Experimental Factor Ontology version 2.100
-Date Released: 17th September 2018
-Class Count: 22047
+Experimental Factor Ontology version 3.0 Beta
+Date Released: 15th October 2018
+Class Count: 24343
 
 Summary: 
 
 ***!!!***
 
-IMPORTANT NOTICE - We have moved to Github. From EFO 2.90 on, all our files will be released from Github - https://github.com/EBISPOT/efo. The transition should be seamless once we have everything ready for 2.90 release in November 2017. This release note is now available from https://github.com/EBISPOT/efo/blob/master/ExFactor%20Ontology%20release%20notes.txt . 
+IMPORTANT NOTICE - This is a Beta release of EFO 3 NOT the main release. Please see https://www.ebi.ac.uk/efo/ for the main release.
 
 ***!!!***
 
-EFO 2.100 contains continued work on the disease classifications from 2.99, as well as new experimental process and measurement terms to address project-specific use cases for the Human Cell Atlas and GWAS Catalog, respectively; please see the details below for the full log of change.
+EFO 3.0 Beta release contains major restructuring to the disease branch in order to improve classification based on current medical understanding and in alignment with existing domain ontologies. This has been achieved through mapping the EFO disease and disease staging branches to the Monarch Disease Ontology (MONDO) - using the Ontology X-ref Service (OxO) - and importing these mapped MONDO terms into EFO. All existing EFO terms have retained the EFO ID. The MONDO ID for each mapped term is available within the annotations as a cross reference. Any new terms imported from MONDO have retained their MONDO IDs.
 
+All mapped terms (EFO terms and their MONDO mapped term) can be found in the mondo_efo_mappings.tsv file situated in the imports folder. This file contains on each line: the URI of the MONDO term, the URI of the EFO term, the MONDO label and the EFO label for each mapped pair. All terms that are mapped must be added to this file in order for the MONDO term to be extracted and merged into EFO. Additionally, all MONDO terms to be extracted that are listed in the mappings file are contained in the mondo_terms.txt file.
 
 ----------------------------------
-1.      Changes to URIs
+1.  Changes to URIs
 2.	Changes to EFO
 3.	Obsolete Classes in EFO
 4.	Scope of the Ontology
@@ -39,166 +41,12 @@ EFO 2.100 contains continued work on the disease classifications from 2.99, as w
 
 New classes:
 
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009320
-Label: RUES2
-+   'RUES2' SubClassOf 'derives_from' some ('embryonic cell line' and ('part_of' some ('embryo' and ('part_of' some 'Homo sapiens'))))
-+   'RUES2' SubClassOf 'has_quality' some 'female'
-+   'RUES2' SubClassOf 'cultured cell'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009321
-Label: diabetic macular edema
-+   'diabetic macular edema' SubClassOf 'diabetic retinopathy'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009322
-Label: proliferative diabetic retinopathy
-+   'proliferative diabetic retinopathy' SubClassOf 'diabetic retinopathy'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009323
-Label: alpha synuclein measurement
-+   'alpha synuclein measurement' SubClassOf 'is_about' some 'neurodegenerative disease'
-+   'alpha synuclein measurement' SubClassOf 'protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009324
-Label: APOL1 risk genotype carrier status
-+   'APOL1 risk genotype carrier status' SubClassOf 'carrier status'
-+   'APOL1 risk genotype carrier status' SubClassOf 'is_about' some 'chronic kidney disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009325
-Label: basal ganglia growth measurement
-+   'basal ganglia growth measurement' SubClassOf 'brain growth measurement'
-+   'basal ganglia growth measurement' SubClassOf 'is_about' some 'brain development'
-+   'basal ganglia growth measurement' SubClassOf 'is_about' some 'basal ganglion'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009326
-Label: brain growth measurement
-+   'brain growth measurement' SubClassOf 'measurement'
-+   'brain growth measurement' SubClassOf 'is_about' some 'brain'
-+   'brain growth measurement' SubClassOf 'is_about' some 'brain development'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009327
-Label: cerebellum growth measurement
-+   'cerebellum growth measurement' SubClassOf 'is_about' some 'brain development'
-+   'cerebellum growth measurement' SubClassOf 'brain growth measurement'
-+   'cerebellum growth measurement' SubClassOf 'is_about' some 'cerebellum'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009328
-Label: cerebral cortex growth measurement
-+   'cerebral cortex growth measurement' SubClassOf 'brain growth measurement'
-+   'cerebral cortex growth measurement' SubClassOf 'is_about' some 'cerebral cortex'
-+   'cerebral cortex growth measurement' SubClassOf 'is_about' some 'brain development'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009314
-Label: blood coagulation disease
-+   'blood coagulation disease' SubClassOf 'hematological system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009315
-Label: thrombophilia
-+   'thrombophilia' SubClassOf 'blood coagulation disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009312
-Label: proprotein convertase subtilisin/kexin type 9 measurement
-+   'proprotein convertase subtilisin/kexin type 9 measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009313
-Label: Linear IgA Dermatosis
-+   'Linear IgA Dermatosis' SubClassOf 'autoimmune bullous skin disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009318
-Label: HFFc6
-+   'HFFc6' SubClassOf 'cultured cell'
-+   'HFFc6' SubClassOf 'derives_from' some ('fibroblast derived cell line' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
-+   'HFFc6' SubClassOf 'has_quality' some 'male'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009319
-Label: F123-CASTx129
-+   'F123-CASTx129' SubClassOf 'derives_from' some ('mouse embryonic stem cell' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
-+   'F123-CASTx129' SubClassOf 'has_quality' some 'male'
-+   'F123-CASTx129' SubClassOf 'cultured cell'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009316
-Label: protein c deficiency
-+   'protein c deficiency' SubClassOf 'thrombophilia'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009317
-Label: GM20431
-+   'GM20431' SubClassOf 'has_quality' some 'male'
-+   'GM20431' SubClassOf 'cultured cell'
-+   'GM20431' SubClassOf 'derives_from' some ('lymphoblastoid cell line' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009335
-Label: white matter growth measurement
-+   'white matter growth measurement' SubClassOf 'is_about' some 'brain development'
-+   'white matter growth measurement' SubClassOf 'brain growth measurement'
-+   'white matter growth measurement' SubClassOf 'is_about' some 'brain'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009334
-Label: prefrontal cortex growth measurement
-+   'prefrontal cortex growth measurement' SubClassOf 'is_about' some 'brain development'
-+   'prefrontal cortex growth measurement' SubClassOf 'brain growth measurement'
-+   'prefrontal cortex growth measurement' SubClassOf 'is_about' some 'prefrontal cortex'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009336
-Label: velopharyngeal dysfunction
-+   'velopharyngeal dysfunction' SubClassOf 'abnormality of the mouth'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009331
-Label: erosive tooth wear measurement
-+   'erosive tooth wear measurement' SubClassOf 'measurement'
-+   'erosive tooth wear measurement' SubClassOf 'is_about' some 'tooth'
-+   'erosive tooth wear measurement' SubClassOf 'is_about' some 'tooth disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009330
-Label: Chlamydia trachomatis seropositivity
-+   'Chlamydia trachomatis seropositivity' SubClassOf 'infectious disease biomarker'
-+   'Chlamydia trachomatis seropositivity' SubClassOf 'seropositivity measurement'
-+   'Chlamydia trachomatis seropositivity' SubClassOf 'is_about' some 'Chlamydia trachomatis infectious disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009332
-Label: executive function measurement
-+   'executive function measurement' SubClassOf 'is_about' some 'unipolar depression'
-+   'executive function measurement' SubClassOf 'is_about' some 'bipolar disorder'
-+   'executive function measurement' SubClassOf 'is_about' some 'attention deficit hyperactivity disorder'
-+   'executive function measurement' SubClassOf 'is_about' some 'schizophrenia'
-+   'executive function measurement' SubClassOf 'is_about' some 'autism'
-+   'executive function measurement' SubClassOf 'is_about' some 'anxiety disorder'
-+   'executive function measurement' SubClassOf 'is_about' some 'brain'
-+   'executive function measurement' SubClassOf 'is_about' some 'executive function'
-+   'executive function measurement' SubClassOf 'mental or behavioural disorder biomarker'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009278
-Label: cranial vault morphology measurement
-+   'cranial vault morphology measurement' SubClassOf 'is_about' some 'head'
-+   'cranial vault morphology measurement' SubClassOf 'measurement'
- 
-Class: http://purl.obolibrary.org/obo/HP_0000975
-Label: hyperhidrosis
-+   'hyperhidrosis' SubClassOf 'phenotype'
+(n/a)
 
 ----------------------------------
 2. Changes to EFO
 
-Class: http://www.ebi.ac.uk/efo/EFO_0008796
-Label: MARS-seq
-+   'MARS-seq' SubClassOf 'library preparation'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0008720
-Label: DroNc-Seq
-+   'DroNc-Seq' SubClassOf 'library preparation'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0000183
-Label: Hodgkins lymphoma
--   'Hodgkins lymphoma' SubClassOf 'lymphoid neoplasm'
- 
-Class: http://www.orpha.net/ORDO/Orphanet_217454
-Label: Rare hereditary thrombophilia
-+   'Rare hereditary thrombophilia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009315
- 
-Class: http://www.ebi.ac.uk/efo/http://www.ebi.ac.uk/efo/EFO_0009278
-Label: cranial vault morphology measurement
--   'cranial vault morphology measurement' SubClassOf 'is_about' some 'head'
--   'cranial vault morphology measurement' SubClassOf 'measurement'
-
+(n/a)
 
 ----------------------------------
 3. Obsolete Classes
@@ -220,6 +68,7 @@ As an application focused ontology, we attempt to import and reuse classes where
 
 The full list of ontologies and external resources currently imported or mapped into EFO is as follows:
 
+The Monarch Disease Ontology (MONDO)
 Orphanet Rare Disease (version 2.0)
 UBERON anatomy ontology 
 Chemical entities of biological interest (CHEBI)
