@@ -1,46 +1,46 @@
-[![Build Status](https://travis-ci.org/EBISPOT/efo.svg?branch=master)](https://travis-ci.org/EBISPOT/efo)
-
-We are transitioning EFO development to GitHub. This is our development area for our monthly release. Please get the latest version of EFO by visiting https://www.ebi.ac.uk/efo. Accessible from here are our full monthly release in OWL format (https://github.com/EBISPOT/efo/blob/master/efo.owl) and OBO format (https://github.com/EBISPOT/efo/blob/master/efo.obo). Inferred versions are also provided.
-
 # EFO
 
 ![alt text](efo.gif?raw=true)
 
-The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for external projects such as the NHGRI GWAS catalog. 
-It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, and Cell Ontology. The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for [Open Targets](http://www.opentargets.org/). 
-EFO is developed by the EMBL-EBI [Samples, Phenotypes and Ontologies Team](http://www.ebi.ac.uk/about/spot-team) (SPOT). We also add terms for external users when requested. If you are new to ontologies, there is a [short introduction](http://ontogenesis.knowledgeblog.org/66) on the subject available and a blog post by James Malone on [what ontologies are for](http://drjamesmalone.blogspot.co.uk/2012/06/common-ontology-questions-1-what-is-it.html).
+The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the [NHGRI-EBI GWAS catalog](https://www.ebi.ac.uk/gwas/). It combines parts of several biological ontologies, such as [UBERON anatomy](http://uberon.github.io/), [ChEBI chemical compounds](https://www.ebi.ac.uk/chebi/), [Cell Ontology](https://github.com/obophenotype/cell-ontology) and, most recently, the [Monarch Disease Ontology (MONDO)](http://obofoundry.org/ontology/mondo.html). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for [Open Targets](http://www.opentargets.org/). EFO is developed by the [EMBL-EBI Samples, Phenotypes and Ontologies Team](http://www.ebi.ac.uk/about/spot-team) (SPOT). We also add terms for external users when requested. If you are new to ontologies, there is a [short introduction](http://ontogenesis.knowledgeblog.org/66) on the subject available and a blog post by James Malone on [what ontologies are for](http://drjamesmalone.blogspot.co.uk/2012/06/common-ontology-questions-1-what-is-it.html). 
+
 
 ## Browse EFO
 
-EFO is best viewed in the [EMBL-EBI Ontology Lookup Service](http://www.ebi.ac.uk/ols/ontologies/efo)
+EFO is best viewed in the Docker image of the [EMBL-EBI Ontology Lookup Service](http://35.241.144.112/ontologies/efo)
 
 ## Versions
 
+### Changes to EFO in version 3
+
+The disease branch of EFO has undergone major restructuring in order to improve classification based on current medical understanding and in alignment with existing domain ontologies. This has been achieved through mapping the EFO disease and disease staging branches to the [Monarch Disease Ontology](http://www.obofoundry.org/ontology/mondo.html) (MONDO) - using the [Ontology X-ref Service](https://www.ebi.ac.uk/spot/oxo/) (OxO) - and importing these mapped MONDO terms into EFO. All existing EFO terms have retained the EFO ID. The MONDO ID for each mapped term is available within the annotations as a cross reference. Any new terms imported from MONDO have retained their MONDO IDs. 
+
+All mapped terms (EFO terms and their MONDO mapped term) can be found in the `mondo_efo_mappings.tsv` file situated in the imports folder. This file contains on each line: the URI of the MONDO term, the URI of the EFO term, the MONDO label and the EFO label for each mapped pair. All terms that are mapped must be added to this file in order for the MONDO term to be extracted and merged into EFO. Additionally, all MONDO terms to be extracted that are listed in the mappings file are contained in the `mondo_terms.txt` file.
+
+Consequently, this will now allow us to import MONDO terms and receive requests to import terms that exist in MONDO. This will be done through adding these terms to the mondo_terms.txt file, which, in turn, extracts all terms listed in this file from MONDO in an import file which is then merged with EFO.
+
+Any terms that are imported and are not under the desired parent class can be manipulated through the subclass.csv file. This automatically corrects the term classification during the editing pipeline to the desired classification.
+
+Changes in annotation properties are:
+
+- [Alternative_term](http://www.ebi.ac.uk/efo/alternative_term) has been replaced by [has_exact_synonym](http://www.geneontology.org/formats/oboInOwl#hasExactSynonym) 
+     - This will allow us to use the spectrum of synonym annotation including [has_broad_synonym](http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym) and [has_narrow_synonym](http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym) more effectively to provide further information per each term.
+- [Bioportal_provenance](http://www.ebi.ac.uk/efo/bioportal_provenance) has been removed from EFO3 entirely. 
+     - This has cleaned up annotations, removing the imported fingerprints from bioportal provenance from previous importing.
+
+
 ### Stable release versions
 
-The latest version of the ontology can always be found at:
+The latest version of the ontology can always be found attached to each EFO 3 release, found here:
 
-http://www.ebi.ac.uk/efo/efo.owl
+[https://github.com/EBISPOT/efo/releases](https://github.com/EBISPOT/efo/releases)
 
 This is the asserted ontology and requires an OWL-DL reasoner to view the inferred classification. 
 
-### Other release versions 
-
-The latest inferred version that provides a non-redundant view of the class hierarchy can be found at:
-
-http://www.ebi.ac.uk/efo/efo_inferred.owl
-
-A merged view of the release including inferred axioms can be found at:
-
-http://www.ebi.ac.uk/efo/efo_inferred_all.owl
-
-A simple OBO version of the file can be found at:
-
-http://www.ebi.ac.uk/efo/efo.obo
 
 ### Editors' version
 
-Editors of this ontology should use the edit version, [src/ontology/efo-edit.owl](src/ontology/efo-edit.owl)
+Editors of this ontology should use the edit version, [master:src/ontology/efo-edit.owl](https://github.com/EBISPOT/efo/blob/master/src/ontology/efo-edit.owl)
 
 ## Term requests and contact
 
@@ -48,4 +48,4 @@ Submit new terms or report bugs using our [issue tracker](https://github.com/EBI
 
 ## Acknowledgements
 
-This ontology repository was created using the [ontology starter kit](https://github.com/INCATools/ontology-starter-kit)
+This ontology repository was created using the [ontology starter kit](https://github.com/INCATools/ontology-starter-kit) 
