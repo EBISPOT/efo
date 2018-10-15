@@ -27,7 +27,8 @@ Changes in annotation properties are:
      - This will allow us to use the spectrum of synonym annotation including [has_broad_synonym](http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym) and [has_narrow_synonym](http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym) more effectively to provide further information per each term.
 - [Bioportal_provenance](http://www.ebi.ac.uk/efo/bioportal_provenance) has been removed from EFO3 entirely. 
      - This has cleaned up annotations, removing the imported fingerprints from bioportal provenance from previous importing.
-
+- All definition citations have been replaced by [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref).
+- Deprecated terms are no longer children of obsolete class (http://www.geneontology.org/formats/oboInOwl#ObsoleteClass), instead, they are given the annotation property owl:Deprecated (http://www.w3.org/2002/07/owl#deprecated). 
 
 ### Stable release versions
 
@@ -40,7 +41,7 @@ This is the asserted ontology and requires an OWL-DL reasoner to view the inferr
 
 ### Editors' version
 
-Editors of this ontology should use the edit version, [master:src/ontology/efo-edit.owl](https://github.com/EBISPOT/efo/blob/master/src/ontology/efo-edit.owl)
+Editors of this ontology should use the edit version, [master src/ontology/efo-edit.owl](https://github.com/EBISPOT/efo/blob/master/src/ontology/efo-edit.owl)
 
 ## Term requests and contact
 
