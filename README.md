@@ -7,7 +7,7 @@ The Experimental Factor Ontology (EFO) provides a systematic description of many
 
 ## Browse EFO
 
-EFO is best viewed in the Docker image of the [EMBL-EBI Ontology Lookup Service](http://35.241.144.112/ontologies/efo)
+You can explore EFO 3 in a development version of the [EMBL-EBI Ontology Lookup Service](http://35.241.144.112/ontologies/efo)
 
 ## Versions
 
