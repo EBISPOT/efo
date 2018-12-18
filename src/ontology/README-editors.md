@@ -6,209 +6,63 @@ This project was created using the [ontology starter kit](https://github.com/cmu
 
 ## Editors Version
 
-The editors version is [efo-edit.owl](efo-edit.owl)
+- We currently use EFO 2 to update EFO 3, therefore any edits required to EFO 3 should be done through the efo-edit.owl procedure (pushing to GitHub), or through MONDO by submitting an issue or a pull request.
+- Once ready to update EFO 3, perform a `git pull` as usual in your current EFO directory master branch (where you edit EFO 2) to get the latest version of efo and efo-edit.owl
+- To switch to the efo3 branch: `git checkout efo3`
+- As you are now in the efo3 branch (this can be checked with `git status`!), you can perform a `git pull` to ensure the EFO 3 branch is up to date.
+- Before performing the following steps, make sure you switch to the `src/ontology` directory if you are not there already:
 
-** DO NOT EDIT efo.obo OR efo.owl in the top level directory **
+	 `cd src/ontology`
+- To update the efo-edit.owl file in the efo3 branch with the latest version from efo master branch and ensure the latest copy of mondo.owl is in the mirror folder:
 
-[../../efo.owl](../../efo.owl) is the release version
+     `./get_mirrors.sh`
+     - You may have to make `get_mirrors.sh` executable if it will not run in this way using `chmod a+x get_mirrors.sh`.
+     - Alternatively, you can run with `bash get_mirrors.sh`
+- You then need to create the import file, where terms mapped to in MONDO are extracted (all terms can be found in mondo_terms.txt) from the mondo.owl mirror file. This is done through:
+     `make all_imports`
+     - When adding a new mapping to or editing a mapping in  the mondo_efo_mappings.tsv file, it is crucial that the MONDO term is also added to/removed/edited in the mondo_terms.txt file accordingly!
+     - It is important to note that, if the mondo_terms.txt file has been edited, you will need to run this `make all_imports` command _again_ **BEFORE** running make in order to extract the correct terms from MONDO.
+- Next, EFO 3 needs to be generated through: `make`
+     - During `make``, the efo-fixer.jar makes all of the changes, such as ensuring all definitions are using IAO_00000115 rather than the prior efo:definition and all alternative_terms are now has_exact_synonym.
+Mondo-id-switcher.jar uses the tsv template of all mapped terms, mondo_efo_mappings.tsv, and switches all MONDO URIs to EFO URIs ready for import.
+- **NOTE:** When generating EFO 3 for the first time, you will encounter a warning (WARN  org.obolibrary.robot.IOHelper - Catalog imports/catalog-v001.xml does not exist. Loading ontology without catalog) when first running the make command. It is necessary for this make command to be run despite potentially resulting in failure (make: *** [efo-3-edit.owl] Error 1) as it will generate the mondo_efo_import.owl file.
+     - To resolve this error, open the mondo_efo_import.owl and efo-upper.owl files in Protege.
+     - This creates catalog-v001.xml files used by the import process to combine MONDO and EFO.
+     - The make process can then be restarted with `make -B`
+          - `-B` forces the make command to run rebuild everything from the beginning, not just files that have yet to be generated etc.
+     - To push changes to GitHub, follow the same procedure as with EFO 2 but ensure that, when running a git status, you are in efo3 not master.
+     - When performing a git push, use `git push origin efo3`.
 
-To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/EBISPOT/efo) for details.
+If you would like to switch back to editing EFO version 2 after pushing EFO 3 changes or running the EFO 3 pipeline, use `git checkout master`. If this does not work, try `git stash` then `git checkout master`.
+
+
 
 
 ## Release Manager notes
 
-You should only attempt to make a release AFTER the edit version is
-committed and pushed.
-
-To release:
-
-First, verify that the Travis build has passed and that you have a copy of the penultimate release stored on your machine for use in a later step of the release.
-
-Update the version number in the /efo/src/ontology/version.txt. This is usually an increment of +1 in the monthly release version.
-
-You can do this with vi or other text editing program. Make sure to push this version.txt file before you do the release in the next step.
-
-
-    cd src/ontology
-    make
-
-This step generates efo.obo, efo.owl and its derivatives in /src/ontology. We need to manually fix efo.obo before it gets released to the top level. 
-
-## Edit OBO version
-
-A few manual hacks are required to get this to parse in OBO however.
-
-As of EFO 2.91, the OBO generator still creates duplicate subsetdefs. This is non-critical in most cases but it appears to break EnsEMBL process. Manual clean-up is required by deleting the following duplicate lines from efo.obo at the top level. A ticket has been filed for this error in the release script.
-
-Open ../../efo.obo
-
-Remove the following "duplicate" line (please make sure there is one of each duplicates remain in the file):
-Note: *Only* remove these duplicate lines and no others. Any other duplicates should be left.
-
-    subsetdef: efo_slim "efo slim"
-    subsetdef: grouping_class "grouping class"
-    subsetdef: organ_slim "organ slim"
-    subsetdef: uberon_slim "uberon slim"
-    subsetdef: vertebrate_core "vertebrate core"
-
-
-Now, add EFO root class and top relationship
-
-    Add EFO root for class:
----
-
-[Term] 
-
-id: EFO:0000001
-
-name: experimental factor
-
-def: "An experimental factor in Array Express which are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This upper level class is really used to give a root class from which applications can rely on and not be tied to upper ontology classses which do change." []
-
-created_by: James Malone
-
----
-
-    Add top relationship:
-
----
-
-[Typedef]
-
-id: EFO:0000824
-
-name: relationship
-
----
- 
-
-At this point, all files should be ready to be copied over to the top-level directory.
-
-If there are no errors after you make the file, and you have edited efo.obo, type:
-
-make release
-
-
-    make release
-
-This generates derived files such as efo.owl and efo.obo and places
-them in the top level (../..). The versionIRI will be added.
-
-At this point, please check your local copy of the **top-level** efo.owl and see if everything looks ok (e.g. the version is updated and reflecting the current to-be-released version, the date is correct).
-
-
-
-## Update release notes
-
-Release notes detailing major changes between releases are produced to aid users awareness.
-
-You will modify your **local copy** of the release notes file, located at the top-level of the directory:
-
-    https://github.com/EBISPOT/efo/blob/master/ExFactor%20Ontology%20release%20notes.txt
-
-The sections you will need to replace or modify should be obvious. To write the release notes use the Bubastis tool  http://www.ebi.ac.uk/efo/bubastis
-
-Historically, Bubastis used to be able to process the diff between the penultimate release (non-inferred, merged efo.owl) and the latest release. This function, however, has stopped working. Alternately, you will download the previous release onto your machine and run Bubastis by uploading files from your local machine as followed:
-
-a. Get the files of the latest and penultimate release (non-inferred) OWL files on Github history of the released EFO (top-most level efo.owl) at https://github.com/EBISPOT/efo/commits/master/efo.owl. 
-
-b. Point Bubastis to these 2 files in your local machine. Important: 'Ontology 1' in Bubastis must be the old version, 'Ontology 2' must be the new version! Leave all the 'diff options' turned on.
-
-c. Copy the "Classes modified" section of the diff into the Section 4 ("4. Change log") of the release notes file
-
-d. Copy the "New classes" section of the diff into the Section 2 ("2. New to EFO") of the release notes file
-
-e. Copy the "Deleted classes" section of the diff into the Section 3 ("3. Obsolete Classes") of the release notes file
-
-f. If any URIs are deprecated and there is a replacement URI to use (e.g. one of a pair of duplicate classes was made obsolete), document these in "Section 1. Changes to URIs". Include the old URI, old name, new URI and new name (and optionally a comment). Also, inform (by email) the ArrayExpress / Atlas database curators! Note - there is no way to know this from the diff itelf, only from your own records of the edits made !
-
-g. Update the total number of classes included in this release in "Summary" (available through Protege 'Window->Views->Ontology views->Ontology metrics')
-
-h. Set the release version number correctly
-
-i. Set the date correctly
-
-j. Add a short paragraph to "Summary:" summarising any major activity that has occurred over the previous month
-
-k. Save the file.
-
-
-Commit and push these files.
-To use vim for the commit message:
-
-    git status
-    git commit -a
-    Press "i" to enter editing mode, enter the commit message (e.g. EFO release 2.95).
-    ESC and type ":wq" to write and quit.
-
-Alternatively, to use the terminal for the commit message:
-
-    git status
-    git commit -a -m "message here"
-
-And type a brief description of the release in the editor window
-
-Finally type
-
-    git push origin master
-
-IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
- * https://github.com/EBISPOT/efo/releases/new
-Click "Edit" and make change to reflect THIS release you are working on (the one you've just pushed to master branch in the previous step).
-
-The value of the "Tag version" field MUST be
-
-vYYYY-MM-DD
-
-The initial lowercase "v" is REQUIRED. The YYYY-MM-DD must match what is in the versionIRI of the derived efo.owl (data-version in efo.obo).
-
-Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "2017-12-15 EFO 2.91")
-
-Then click "publish release"
-
-__IMPORTANT: NO MORE THAN ONE RELEASE PER DAY.__
-
-On https://github.com/EBISPOT/efo/tags  - you should see the tag you have just added appear as the new tag on there.
-
-Now if you go to https://github.com/EBISPOT/efo/releases/ - you will see the tag you have just added to Github. Use this link to edit the description should you wish to.
-
- 
-
-The PURLs are already configured to pull from github. This means that BOTH ontology purls and versioned ontology purls will resolve to the correct ontologies. Try it!
-
-    http://www.ebi.ac.uk/efo/efo.owl <-- current ontology PURL
-    http://www.ebi.ac.uk/efo/releases/vYYYY-MM-DD/efo.owl <-- change to the release you just made
-    
-## Run 'Build EFO Web' Bamboo plan
-
-    go to http://gromit.ebi.ac.uk:10001/browse/EFO
-    click on the plan 'Build EFO Web'
-    If the run is successful, manually go into the plan (deployment tab) and promote it to wwwdev (staging), and www (prod) respectively.
-
-## Finally, announce the new release by mailing:
-
-    arrayexpress-atlas@ebi.ac.uk
-    efo-users@lists.sourceforge.net
-    efo-users@ebi.ac.uk
-    
-NOTE THAT SOURCEFORGE MAILING LIST WILL NO LONGER BE IN USE FROM MID 2018.
-
----
-
-** Note: Should you need to delete a release/tag, follow these step and re-tag / re-release:
-Delete release (https://help.github.com/articles/editing-and-deleting-releases/):
-
-    On GitHub, navigate to the main page of the repository.
-    Under your repository name, click Releases.
-    On the Release page, click the name of the release you wish to delete.
-    In the upper-right corner of the page, click Delete.
-
-Delete tag:
-
-    Do a git pull to retrieve the tag you have created on Github
-
-    git tag -d tagName
-
-    git push --delete origin tagName
-
-********************NOW GO BACK TO FIX WHAT NEEDS TO BE FIXED AND COMMIT/PUSH/RE-TAG***************************
+You should only attempt to make a release AFTER EFO2 has been committed and pushed.
+
+- `git checkout efo3`
+- `git pull`
+- Edit the version.txt one increment  e.g. 3.0.0 -> 3.1.0
+- `./get_mirrors.sh`
+- `make all_imports`
+- `make`
+- Once complete, check the build/efo.owl file has the correct date, correct version number and reasons well.
+- You will need to clone the Bubastis source code to run locally for the EFO3 release notes. This can be found here: https://github.com/EBISPOT/bubastis. Note: Clone into a different repo, not your EFO repo!
+     - `git clone git@github.com:EBISPOT/bubastis.git`
+     - In your bubastis top level directory: `mvn clean package`
+     - `java -jar ./target/bubastis_1_2.jar -ontology1 "https://github.com/EBISPOT/efo/releases/download/v3.x.x/efo.owl" -ontology2 PATH TO YOUR BUILD/EFO.OWL -output YOUR OUTPUT FILE TXT RECOMMENDED`
+          - If this does not work, you may need to configure and run the driver through IntelliJ or something similar.
+     - You can now copy over the diffs to the release notes, change the version, date, no. of classes and add a new summary etc.
+     - Save and exit.
+- `git status`
+- `git add -u`
+- `git status`
+- `git commit -m “EFO release 3.xxx”`
+- `git push origin efo3`
+- Go to https://github.com/EBISPOT/efo/releases/new
+     - Tag version is v.3.x.x (where 3.x.x is the version e.g. v.3.0.0 or v.3.1.0)
+     - Title is 2018-10-15 EFO 3.x.x
+     - Attach the build/efo.owl file as an asset (you can drag from your folder to the box)
+     - Write a summary of the release in the description - see previous releases for some inspiration.
