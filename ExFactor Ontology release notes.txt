@@ -10,13 +10,13 @@
     \::/  /       \:\__\        \::/  /   
      \/__/         \/__/         \/__/    
 EFO - Release Notes
-Experimental Factor Ontology version 2.103
-Date Released: 17th December 2018
-Class Count: 22261
+Experimental Factor Ontology version 2.104
+Date Released: 15th January 2019
+Class Count: 22444
 
 Summary: 
 
-EFO 2.103 contains continued work on the disease classifications from 2.102 alongside new phenotype and measurement terms have also been added to address project-specific use cases for the GWAS Catalog, respectively. We are also in the process of cleaning up cross-references to other ontologies and resources.
+EFO 2.104 contains continued work on the disease classifications from 2.102 alongside new phenotype and measurement terms have also been added to address project-specific use cases for the GWAS Catalog, respectively. There has been a large amount of work to map ICD10 terms to EFO, with some new terms being added for this purpose.
 
 ----------------------------------
 1.  Changes to URIs
@@ -32,507 +32,1758 @@ EFO 2.103 contains continued work on the disease classifications from 2.102 alon
 
 New classes:
 
- Class: http://purl.obolibrary.org/obo/HP_0000464
-Label: Abnormality of the neck
-+   'Abnormality of the neck' SubClassOf 'Abnormality of head or neck'
- 
-Class: http://purl.obolibrary.org/obo/HP_0100608
-Label: metrorrhagia
-+   'metrorrhagia' SubClassOf 'Abnormality of the endocrine system'
- 
-Class: http://purl.obolibrary.org/obo/HP_0009762
-Label: facial wrinkling
-+   'facial wrinkling' SubClassOf 'facial morphology'
- 
-Class: http://purl.obolibrary.org/obo/HP_0005986
-Label: Limitation of neck motion
-+   'Limitation of neck motion' SubClassOf 'Abnormality of the neck'
- 
-Class: http://purl.obolibrary.org/obo/HP_0031678
-Label: atherosclerotic lesion
-+   'atherosclerotic lesion' SubClassOf 'Abnormality of the vasculature'
- 
-Class: http://purl.obolibrary.org/obo/NCIT_C95746
-Label: sleepiness
-+   'sleepiness' SubClassOf 'Sleep Disorder'
- 
-Class: http://www.orpha.net/ORDO/Orphanet_363189
-Label: congenital anomaly of the great veins
-+   'congenital anomaly of the great veins' SubClassOf 'vascular disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002049
-Label: glomerular disease
-+   'glomerular disease' SubClassOf 'has_disease_location' some ('renal glomerulus' or ('part_of' some 'renal glomerulus'))
-+   'glomerular disease' SubClassOf 'kidney disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002048
-Label: kidney failure
-+   'kidney failure' SubClassOf 'kidney disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002047
-Label: spotted fever
-+   'spotted fever' SubClassOf 'rickettsiosis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002046
-Label: apocrine sweat gland disease
-+   'apocrine sweat gland disease' SubClassOf 'sweat gland disease'
-+   'apocrine sweat gland disease' SubClassOf 'has_disease_location' some ('apocrine sweat gland' or ('part_of' some 'apocrine sweat gland'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002051
-Label: facial nerve disease
-+   'facial nerve disease' SubClassOf 'peripheral nervous system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1002050
-Label: nephritis
-+   'nephritis' SubClassOf 'kidney disease'
- 
-Class: http://purl.obolibrary.org/obo/HP_0025258
-Label: Stiff neck
-+   'Stiff neck' SubClassOf 'Limitation of neck motion'
- 
-Class: http://purl.obolibrary.org/obo/NCIT_C117245
-Label: decreased attention
-+   'decreased attention' SubClassOf 'mental or behavioural disorder'
- 
-Class: http://www.orpha.net/ORDO/Orphanet_98724
-Label: congenital anomaly of the great arteries
-+   'congenital anomaly of the great arteries' SubClassOf 'vascular disease'
- 
-Class: http://purl.obolibrary.org/obo/GO_0061042
-Label: vascular wound healing
-+   'vascular wound healing' SubClassOf 'wound healing'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009395
-Label: hippocampal CA3 volume
-+   'hippocampal CA3 volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009394
-Label: hippocampal CA1 volume
-+   'hippocampal CA1 volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009393
-Label: breast pressure measurement
-+   'breast pressure measurement' SubClassOf 'breast size'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009392
-Label: glucose metabolism decline measurement
-+   'glucose metabolism decline measurement' SubClassOf 'glucose metabolism disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009391
-Label: response to tamoxifen
-+   'response to tamoxifen' SubClassOf 'has_input' some 'tamoxifen'
-+   'response to tamoxifen' SubClassOf 'response to antineoplastic agent'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009390
-Label: sum of neutrophil and eosinophil counts
-+   'sum of neutrophil and eosinophil counts' SubClassOf 'is_about' some 'blood component'
-+   'sum of neutrophil and eosinophil counts' SubClassOf 'granulocyte count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009389
-Label: sum of eosinophil and basophil counts
-+   'sum of eosinophil and basophil counts' SubClassOf 'is_about' some 'blood component'
-+   'sum of eosinophil and basophil counts' SubClassOf 'granulocyte count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009388
-Label: sum of basophil and neutrophil counts
-+   'sum of basophil and neutrophil counts' SubClassOf 'is_about' some 'blood component'
-+   'sum of basophil and neutrophil counts' SubClassOf 'granulocyte count'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009396
-Label: hippocampal CA4 volume
-+   'hippocampal CA4 volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009397
-Label: hippocampus molecular layer volume
-+   'hippocampus molecular layer volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009398
-Label: hippocampal tail volume
-+   'hippocampal tail volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009399
-Label: subiculum volume
-+   'subiculum volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009448
-Label: pulmonary fibrosis
-+   'pulmonary fibrosis' SubClassOf 'interstitial lung disease'
-+   'pulmonary fibrosis' SubClassOf 'fibrosis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009449
-Label: keratitis
-+   'keratitis' SubClassOf 'eye disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009440
-Label: age at last pregnancy measurement
-+   'age at last pregnancy measurement' SubClassOf 'is_about' some 'pregnancy'
-+   'age at last pregnancy measurement' SubClassOf 'is_about' some 'female reproductive system'
-+   'age at last pregnancy measurement' SubClassOf 'reproductive behaviour measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009441
-Label: Waldenstrom macroglobulinemia
-+   'Waldenstrom macroglobulinemia' SubClassOf 'B-cell non-Hodgkins lymphoma'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009443
-Label: BRCAX breast cancer
-+   'BRCAX breast cancer' SubClassOf 'has_disease_location' some ('breast' or ('part_of' some 'breast'))
-+   'BRCAX breast cancer' SubClassOf 'breast carcinoma'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009444
-Label: hypoxia
-+   'hypoxia' SubClassOf 'Phenotypic abnormality'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009445
-Label: anoxya
-+   'anoxya' SubClassOf 'hypoxia'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009446
-Label: asphyxia
-+   'asphyxia' SubClassOf 'hypoxia'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009447
-Label: hypoxemia
-+   'hypoxemia' SubClassOf 'hypoxia'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009450
-Label: conjunctivitis
-+   'conjunctivitis' SubClassOf 'Conjunctival Disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009439
-Label: multiple births measurement
-+   'multiple births measurement' SubClassOf 'reproductive behaviour measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009437
-Label: offspring mortality measurement
-+   'offspring mortality measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009438
-Label: number of pregnancies measurement
-+   'number of pregnancies measurement' SubClassOf 'reproductive behaviour measurement'
-+   'number of pregnancies measurement' SubClassOf 'is_about' some 'pregnancy'
-+   'number of pregnancies measurement' SubClassOf 'is_about' some 'female reproductive system'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009431
-Label: intestinal disease
-+   'intestinal disease' SubClassOf 'disease' and ('has_disease_location' some ('intestine' or ('part_of' some 'intestine')))
-+   'intestinal disease' SubClassOf 'digestive system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009432
-Label: fibroblastic disorder
-+   'fibroblastic disorder' SubClassOf 'connective tissue disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009430
-Label: neuralgia
-+   'neuralgia' SubClassOf 'peripheral neuropathy'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009435
-Label: arthritis disease activity score measurement
-+   'arthritis disease activity score measurement' SubClassOf 'measurement'
-+   'arthritis disease activity score measurement' SubClassOf 'is_about' some 'rheumatoid arthritis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009436
-Label: offspring survival measurement
-+   'offspring survival measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009433
-Label: lower respiratory tract disease
-+   'lower respiratory tract disease' SubClassOf 'respiratory system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009434
-Label: death by undetermined cause
-+   'death by undetermined cause' SubClassOf 'disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009426
-Label: necrosis
-+   'necrosis' SubClassOf 'Phenotypic abnormality'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009427
-Label: embryonic lethality
-+   'embryonic lethality' SubClassOf 'phenotype'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009428
-Label: synthetic lethality
-+   'synthetic lethality' SubClassOf 'phenotype'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009429
-Label: Mycobacterium infection
-+   'Mycobacterium infection' SubClassOf 'bacterial disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009422
-Label: CXCL5 measurement
-+   'CXCL5 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009423
-Label: CXCL6 measurement
-+   'CXCL6 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009424
-Label: Yersinia enterocolitica infectious disease
-+   'Yersinia enterocolitica infectious disease' SubClassOf 'Yersinia infectious disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009425
-Label: Yersinia pestis infectious disease
-+   'Yersinia pestis infectious disease' SubClassOf 'Yersinia infectious disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009420
-Label: CXCL12 measurement
-+   'CXCL12 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009421
-Label: CXCL13 measurement
-+   'CXCL13 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009419
-Label: CX3CL1 measurement
-+   'CX3CL1 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009417
-Label: CCL23 measurement
-+   'CCL23 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009418
-Label: CCL24 measurement
-+   'CCL24 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009415
-Label: CCL19 measurement
-+   'CCL19 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009416
-Label: CCL21 measurement
-+   'CCL21 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009413
-Label: CCL15 measurement
-+   'CCL15 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009414
-Label: CCL17 measurement
-+   'CCL17 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009411
-Label: CCL13 measurement
-+   'CCL13 measurement' SubClassOf 'blood protein measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009412
-Label: interleukin 1 alpha measurement
-+   'interleukin 1 alpha measurement' SubClassOf 'cytokine measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009410
-Label: uterine fibroid measurement
-+   'uterine fibroid measurement' SubClassOf 'is_about' some 'uterine fibroid'
-+   'uterine fibroid measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009401
-Label: hippocampal amigdala transition area volume
-+   'hippocampal amigdala transition area volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009400
-Label: presubiculum volume
-+   'presubiculum volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009403
-Label: granule cell layer dentate gyrus volume
-+   'granule cell layer dentate gyrus volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009402
-Label: hippocampus fimbria volume
-+   'hippocampus fimbria volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009405
-Label: parasubiculum volume
-+   'parasubiculum volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009404
-Label: hippocampal fissure volume
-+   'hippocampal fissure volume' SubClassOf 'hippocampal volume'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009406
-Label: glucose metabolism disease
-+   'glucose metabolism disease' SubClassOf 'metabolic disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009409
-Label: abnormal vaginal discharge itching
-+   'abnormal vaginal discharge itching' SubClassOf 'vaginal discharge'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009408
-Label: abnormal vaginal discharge smell
-+   'abnormal vaginal discharge smell' SubClassOf 'vaginal discharge'
- 
-Class: http://purl.obolibrary.org/obo/HP_0030914
-Label: abnormal peristalsis
-+   'abnormal peristalsis' SubClassOf 'Functional abnormality of the gastrointestinal tract'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009460
-Label: ACPA-negative rheumatoid arthritis
-+   'ACPA-negative rheumatoid arthritis' SubClassOf 'rheumatoid arthritis'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009456
-Label: exfoliative dermatitis
-+   'exfoliative dermatitis' SubClassOf 'inflammatory skin disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009455
-Label: lacrimal apparatus disease
-+   'lacrimal apparatus disease' SubClassOf 'eye disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009458
-Label: alcohol use disorder measurement
-+   'alcohol use disorder measurement' SubClassOf 'mental or behavioural disorder biomarker'
-+   'alcohol use disorder measurement' SubClassOf 'is_about' some 'alcohol dependence'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009457
-Label: abnormal vascular wound healing
-+   'abnormal vascular wound healing' SubClassOf 'Abnormality of the vasculature'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009452
-Label: hyperaldosteronism
-+   'hyperaldosteronism' SubClassOf 'adrenal gland hyperfunction'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009451
-Label: hypoparathyroidism
-+   'hypoparathyroidism' SubClassOf 'parathyroid disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009454
-Label: gastric ulcer
-+   'gastric ulcer' SubClassOf 'Peptic ulcer'
-+   'gastric ulcer' SubClassOf 'has_disease_location' some ('stomach' or ('part_of' some 'stomach'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009453
-Label: hemiplegia
-+   'hemiplegia' SubClassOf 'central nervous system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009459
-Label: ACPA-positive rheumatoid arthritis
-+   'ACPA-positive rheumatoid arthritis' SubClassOf 'rheumatoid arthritis'
- 
-Class: http://purl.obolibrary.org/obo/HP_0031988
-Label: muscle spasm
-+   'muscle spasm' SubClassOf 'Abnormality of muscle physiology'
- 
-Class: http://purl.obolibrary.org/obo/NCIT_C74532
-Label: nervousness
-+   'nervousness' SubClassOf 'mental or behavioural disorder'
+Class: http://purl.obolibrary.org/obo/HP_0031292
+Label: cutaneous abscess
++   'cutaneous abscess' SubClassOf 'inflammatory abnormality of the skin'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001877
+Label: abnormal erythrocyte morphology
++   'abnormal erythrocyte morphology' SubClassOf 'abnormality of blood and blood-forming tissues'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001881
+Label: abnormal leukocyte morphology
++   'abnormal leukocyte morphology' SubClassOf 'abnormality of blood and blood-forming tissues'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0002814
+Label: abnormality of the lower limb
++   'abnormality of the lower limb' SubClassOf 'abnormality of limbs'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000614
+Label: abnormal nasolacrimal system morphology
++   'abnormal nasolacrimal system morphology' SubClassOf 'abnormality of the face'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0100601
+Label: eclampsia
++   'eclampsia' SubClassOf 'abnormality of prenatal development or birth'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001787
+Label: abnormal delivery
++   'abnormal delivery' SubClassOf 'abnormality of prenatal development or birth'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001760
+Label: abnormality of the foot
++   'abnormality of the foot' SubClassOf 'abnormality of the lower limb'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0002716
+Label: lymphadenopathy
++   'lymphadenopathy' SubClassOf 'abnormality of the lymphatic system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001600
+Label: abnormality of the larynx
++   'abnormality of the larynx' SubClassOf 'Abnormality of the respiratory system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001671
+Label: abnormal cardiac septum morphology
++   'abnormal cardiac septum morphology' SubClassOf 'Abnormality of the cardiovascular system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000517
+Label: abnormality of the lens
++   'abnormality of the lens' SubClassOf 'Abnormality of the eye'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0031703
+Label: abnormal ear morphology
++   'abnormal ear morphology' SubClassOf 'Abnormality of the ear'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000069
+Label: abnormality of the ureter
++   'abnormality of the ureter' SubClassOf 'Abnormality of the urinary system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000078
+Label: abnormality of the genital system
++   'abnormality of the genital system' SubClassOf 'Phenotypic abnormality'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000077
+Label: abnormality of the kidney
++   'abnormality of the kidney' SubClassOf 'Abnormality of the urinary system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0030242
+Label: portal vein thrombosis
++   'portal vein thrombosis' SubClassOf 'Venous thrombosis'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000022
+Label: abnormality of male internal genitalia
++   'abnormality of male internal genitalia' SubClassOf 'abnormality of the genital system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001561
+Label: polyhydramnios
++   'polyhydramnios' SubClassOf 'abnormality of the amniotic fluid'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001560
+Label: abnormality of the amniotic fluid
++   'abnormality of the amniotic fluid' SubClassOf 'abnormality of prenatal development or birth'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001537
+Label: umbilical hernia
++   'umbilical hernia' SubClassOf 'Hernia of the abdominal wall'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000008
+Label: abnormality of female internal genitalia
++   'abnormality of female internal genitalia' SubClassOf 'abnormality of the genital system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0005957
+Label: breathing dysregulation
++   'breathing dysregulation' SubClassOf 'Abnormality of the respiratory system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0030160
+Label: cervicitis
++   'cervicitis' SubClassOf 'abnormality of female internal genitalia'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0004367
+Label: abnormality of glycoprotein metabolism
++   'abnormality of glycoprotein metabolism' SubClassOf 'abnormality of metabolism/homeostasis'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0004371
+Label: abnormality of glycosaminoglycan metabolism
++   'abnormality of glycosaminoglycan metabolism' SubClassOf 'abnormality of carbohydrate metabolism/homeostasis'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0004372
+Label: reduced consciousness/confusion
++   'reduced consciousness/confusion' SubClassOf 'abnormality of higher mental function'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0002921
+Label: abnormality of the cerebrospinal fluid
++   'abnormality of the cerebrospinal fluid' SubClassOf 'morphological abnormality of the central nervous system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0004338
+Label: abnormality of aromatic amino acid family metabolism
++   'abnormality of aromatic amino acid family metabolism' SubClassOf 'Abnormality of carboxylic acid metabolism'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0004329
+Label: abnormal morphology of the posterior segment of the globe
++   'abnormal morphology of the posterior segment of the globe' SubClassOf 'Abnormality of the eye'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0100249
+Label: calcification of muscles
++   'calcification of muscles' SubClassOf 'abnormality of the musculature'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001399
+Label: hepatic failure
++   'hepatic failure' SubClassOf 'Abnormality of the liver'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001325
+Label: hypoglycemic coma
++   'hypoglycemic coma' SubClassOf 'coma'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000271
+Label: abnormality of the face
++   'abnormality of the face' SubClassOf 'Abnormality of the head'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009574
+Label: intoxication
++   'intoxication' SubClassOf 'poisoning'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009575
+Label: mosquito-borne hemorragic fever
++   'mosquito-borne hemorragic fever' SubClassOf 'viral disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009572
+Label: uterine inflammatory disease
++   'uterine inflammatory disease' SubClassOf 'female reproductive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009573
+Label: high-risk pregnancy
++   'high-risk pregnancy' SubClassOf 'female reproductive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009578
+Label: placental retention
++   'placental retention' SubClassOf 'placenta disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009579
+Label: postpartum hemorrhage
++   'postpartum hemorrhage' SubClassOf 'hemorrhage'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009576
+Label: multiple gestation
++   'multiple gestation' SubClassOf 'pregnancy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009577
+Label: orthopedic nursing
++   'orthopedic nursing' SubClassOf 'medical procedure'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009582
+Label: sprain
++   'sprain' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009581
+Label: rehabilitation
++   'rehabilitation' SubClassOf 'medical procedure'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009580
+Label: prophylactic surgery
++   'prophylactic surgery' SubClassOf 'medical procedure'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009560
+Label: otitis externa
++   'otitis externa' SubClassOf 'auditory system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009555
+Label: male reproductive system disease
++   'male reproductive system disease' EquivalentTo 'disease' and ('has_disease_location' some ('male reproductive system' or ('part_of' some 'male reproductive system')))
++   'male reproductive system disease' SubClassOf 'reproductive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009554
+Label: malabsorption syndrome
++   'malabsorption syndrome' SubClassOf 'intestinal disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009557
+Label: mitral valve disease
++   'mitral valve disease' EquivalentTo 'disease' and ('has_disease_location' some ('mitral valve' or ('part_of' some 'mitral valve')))
++   'mitral valve disease' SubClassOf 'heart valve disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009556
+Label: mineral metabolism disease
++   'mineral metabolism disease' SubClassOf 'metabolic disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009551
+Label: heart valve disease
++   'heart valve disease' SubClassOf 'heart disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009550
+Label: headache disorder
++   'headache disorder' SubClassOf 'central nervous system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009553
+Label: HIV-associated cancer
++   'HIV-associated cancer' SubClassOf 'immune system disease'
++   'HIV-associated cancer' SubClassOf 'AIDS-related disease'
++   'HIV-associated cancer' SubClassOf 'cancer'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009552
+Label: hemorrhoid
++   'hemorrhoid' SubClassOf 'vascular disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009559
+Label: nerve plexus disease
++   'nerve plexus disease' SubClassOf 'peripheral neuropathy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009558
+Label: mononeuropathy
++   'mononeuropathy' SubClassOf 'peripheral neuropathy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009570
+Label: tympanic membrane disease
++   'tympanic membrane disease' SubClassOf 'auditory system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009571
+Label: urinary tract obstruction
++   'urinary tract obstruction' SubClassOf 'disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009568
+Label: tricuspid valve disease
++   'tricuspid valve disease' SubClassOf 'heart valve disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009567
+Label: Spirochaetales Infections
++   'Spirochaetales Infections' SubClassOf 'bacterial disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009566
+Label: renal tubule disease
++   'renal tubule disease' SubClassOf 'kidney disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009565
+Label: radiation-induced disorder
++   'radiation-induced disorder' SubClassOf 'disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009564
+Label: pulmonary valve disease
++   'pulmonary valve disease' SubClassOf 'heart valve disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009563
+Label: protein energy malnutrition
++   'protein energy malnutrition' SubClassOf 'nutritional deficiency disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009562
+Label: polyneuropathy
++   'polyneuropathy' SubClassOf 'peripheral neuropathy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009561
+Label: parasitic intestinal disease
++   'parasitic intestinal disease' SubClassOf 'parasitic infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009569
+Label: trigeminal nerve disease
++   'trigeminal nerve disease' SubClassOf 'peripheral nervous system disease'
++   'trigeminal nerve disease' EquivalentTo 'disease' and ('has_disease_location' some ('trigeminal nerve' or ('part_of' some 'trigeminal nerve')))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009531
+Label: aortic valve disease
++   'aortic valve disease' EquivalentTo 'disease' and ('has_disease_location' some ('aortic valve' or ('part_of' some 'aortic valve')))
++   'aortic valve disease' SubClassOf 'heart valve disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009530
+Label: anuria
++   'anuria' SubClassOf 'kidney disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009533
+Label: basal ganglia disease
++   'basal ganglia disease' SubClassOf 'brain disease'
++   'basal ganglia disease' EquivalentTo 'disease' and ('has_disease_location' some ('basal ganglion' or ('part_of' some 'basal ganglion')))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009532
+Label: autonomic nervous system disease
++   'autonomic nervous system disease' SubClassOf 'peripheral nervous system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009535
+Label: binocular vision disease
++   'binocular vision disease' SubClassOf 'ocular motility disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009534
+Label: biliary tract disease
++   'biliary tract disease' EquivalentTo 'disease' and ('has_disease_location' some ('biliary system' or ('part_of' some 'biliary system')))
++   'biliary tract disease' SubClassOf 'digestive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009537
+Label: cervical disc degenerative disorder
++   'cervical disc degenerative disorder' SubClassOf 'head and neck disorder'
++   'cervical disc degenerative disorder' SubClassOf 'vertebral joint disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009536
+Label: blepharitis
++   'blepharitis' SubClassOf 'eyelid disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009539
+Label: congenital mitral malformation
++   'congenital mitral malformation' SubClassOf 'congenital heart malformation'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009538
+Label: chronic inflammatory demyelinating polyneuropathy
++   'chronic inflammatory demyelinating polyneuropathy' SubClassOf 'polyradiculoneuropathy'
++   'chronic inflammatory demyelinating polyneuropathy' SubClassOf 'immune system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009542
+Label: disorder of appendix
++   'disorder of appendix' SubClassOf 'intestinal disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009541
+Label: disease of peritoneum
++   'disease of peritoneum' EquivalentTo 'disease' and ('has_disease_location' some ('peritoneum' or ('part_of' some 'peritoneum')))
++   'disease of peritoneum' SubClassOf 'digestive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009540
+Label: dental pulp disease
++   'dental pulp disease' SubClassOf 'tooth disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009546
+Label: eye adnexa disease
++   'eye adnexa disease' SubClassOf 'eye disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009545
+Label: esophageal varices
++   'esophageal varices' SubClassOf 'vascular disease'
++   'esophageal varices' SubClassOf 'digestive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009544
+Label: esophageal disease
++   'esophageal disease' EquivalentTo 'disease' and ('has_disease_location' some ('esophagus' or ('part_of' some 'esophagus')))
++   'esophageal disease' SubClassOf 'digestive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009543
+Label: disturbances of sensation of smell and taste
++   'disturbances of sensation of smell and taste' SubClassOf 'sensory system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009549
+Label: female reproductive system disease
++   'female reproductive system disease' EquivalentTo 'disease' and ('has_disease_location' some ('female reproductive system' or ('part_of' some 'female reproductive system')))
++   'female reproductive system disease' SubClassOf 'reproductive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009548
+Label: fallopian tube disease
++   'fallopian tube disease' SubClassOf 'female reproductive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009547
+Label: eyelid disease
++   'eyelid disease' SubClassOf 'eye disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009518
+Label: complication
++   'complication' SubClassOf 'disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009519
+Label: device complication
++   'device complication' SubClassOf 'complication'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009514
+Label: upper extremity fracture
++   'upper extremity fracture' SubClassOf 'bone fracture'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009515
+Label: wrist fracture
++   'wrist fracture' SubClassOf 'upper extremity fracture'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009516
+Label: burn
++   'burn' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009517
+Label: checkup
++   'checkup' SubClassOf 'medical procedure'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009510
+Label: peripheral nerve injury
++   'peripheral nerve injury' SubClassOf 'nervous system injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009511
+Label: abnormal PAP smear
++   'abnormal PAP smear' SubClassOf 'test result'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009512
+Label: lower extremity fracture
++   'lower extremity fracture' SubClassOf 'bone fracture'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009513
+Label: multiple bone fractures
++   'multiple bone fractures' SubClassOf 'bone fracture'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0010944
+Label: abnormality of the renal pelvis
++   'abnormality of the renal pelvis' SubClassOf 'abnormality of the kidney'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009529
+Label: anemia due to enzyme disorder
++   'anemia due to enzyme disorder' SubClassOf 'anemia'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009527
+Label: frostbite
++   'frostbite' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009528
+Label: AIDS-related disease
++   'AIDS-related disease' SubClassOf 'HIV infection'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009525
+Label: foreign body
++   'foreign body' SubClassOf 'test result'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009526
+Label: foreign body in gastrointestinal tract
++   'foreign body in gastrointestinal tract' SubClassOf 'foreign body'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009523
+Label: fecal incontinence
++   'fecal incontinence' SubClassOf 'intestinal disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009524
+Label: female genital tract fistula
++   'female genital tract fistula' SubClassOf 'reproductive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009521
+Label: dislocation
++   'dislocation' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009522
+Label: disturbance of skin sensation
++   'disturbance of skin sensation' SubClassOf 'sensory system disease'
++   'disturbance of skin sensation' SubClassOf 'peripheral nervous system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009520
+Label: contraception
++   'contraception' SubClassOf 'medical procedure'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001197
+Label: abnormality of prenatal development or birth
++   'abnormality of prenatal development or birth' SubClassOf 'Phenotypic abnormality'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009505
+Label: head injury
++   'head injury' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009506
+Label: heart injury
++   'heart injury' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009503
+Label: caustic injury
++   'caustic injury' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009504
+Label: crush injury
++   'crush injury' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009509
+Label: limb injury
++   'limb injury' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009507
+Label: knee injury
++   'knee injury' SubClassOf 'leg injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009508
+Label: leg injury
++   'leg injury' SubClassOf 'limb injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009501
+Label: CWRU1
++   'CWRU1' SubClassOf 'induced pluripotent stem cell'
++   'CWRU1' SubClassOf 'part_of' some 'connective tissue'
++   'CWRU1' SubClassOf 'part_of' some 'Homo sapiens'
++   'CWRU1' SubClassOf 'has_quality' some 'male'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009502
+Label: abdominal injury
++   'abdominal injury' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009500
+Label: HCEC 1CT
++   'HCEC 1CT' SubClassOf 'colonic epithelium cell line'
++   'HCEC 1CT' SubClassOf 'part_of' some 'Homo sapiens'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001259
+Label: coma
++   'coma' SubClassOf 'reduced consciousness/confusion'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001288
+Label: gait disturbance
++   'gait disturbance' SubClassOf 'abnormality of movement'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001094
+Label: iridocyclitis
++   'iridocyclitis' SubClassOf 'Abnormality of the eye'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0010771
+Label: pilonidal abscess
++   'pilonidal abscess' SubClassOf 'cutaneous abscess'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0003076
+Label: glycosuria
++   'glycosuria' SubClassOf 'Abnormality of urine homeostasis'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0002011
+Label: morphological abnormality of the central nervous system
++   'morphological abnormality of the central nervous system' SubClassOf 'abnormality of the nervous system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0012718
+Label: morphological abnormality of the gastrointestinal tract
++   'morphological abnormality of the gastrointestinal tract' SubClassOf 'Abnormality of the digestive system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0040064
+Label: abnormality of limbs
++   'abnormality of limbs' SubClassOf 'Phenotypic abnormality'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0011411
+Label: forceps delivery
++   'forceps delivery' SubClassOf 'abnormal delivery'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0011446
+Label: abnormality of higher mental function
++   'abnormality of higher mental function' SubClassOf 'abnormality of the nervous system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0002045
+Label: hypothermia
++   'hypothermia' SubClassOf 'abnormality of temperature regulation'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0010313
+Label: breast hypertrophy
++   'breast hypertrophy' SubClassOf 'abnormality of the breast'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0002034
+Label: abnormality of the rectum
++   'abnormality of the rectum' SubClassOf 'Abnormality of the large intestine'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0025423
+Label: abnormal larynx morphology
++   'abnormal larynx morphology' SubClassOf 'abnormality of the larynx'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0003418
+Label: back pain
++   'back pain' SubClassOf 'pain'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0012075
+Label: personality disorder
++   'personality disorder' SubClassOf 'behavioral abnormality'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0011123
+Label: inflammatory abnormality of the skin
++   'inflammatory abnormality of the skin' SubClassOf 'abnormality of the skin'
++   'inflammatory abnormality of the skin' SubClassOf 'increased inflammatory response'
+ 
+Class: http://purl.obolibrary.org/obo/GO_0019233
+Label: sensory perception of pain
++   'sensory perception of pain' SubClassOf 'sensory perception'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0012649
+Label: increased inflammatory response
++   'increased inflammatory response' SubClassOf 'abnormal inflammatory response'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0012647
+Label: abnormal inflammatory response
++   'abnormal inflammatory response' SubClassOf 'abnormality of the immune system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0012424
+Label: chorioretinitis
++   'chorioretinitis' SubClassOf 'Abnormality of the eye'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0012410
+Label: pure red cell aplasia
++   'pure red cell aplasia' SubClassOf 'abnormal erythrocyte morphology'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0005224
+Label: rectal abscess
++   'rectal abscess' SubClassOf 'abnormality of the rectum'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009499
+Label: HCEC 2CT
++   'HCEC 2CT' SubClassOf 'colonic epithelium cell line'
++   'HCEC 2CT' SubClassOf 'part_of' some 'Homo sapiens'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009495
+Label: C1 100080003
++   'C1 100080003' SubClassOf 'has_quality' some 'female'
++   'C1 100080003' SubClassOf 'olfactory neurosphere cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009496
+Label: C1 100080013
++   'C1 100080013' SubClassOf 'has_quality' some 'male'
++   'C1 100080013' SubClassOf 'olfactory neurosphere cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009497
+Label: MSLCL
++   'MSLCL' SubClassOf 'lymphoblastoid cell line'
++   'MSLCL' SubClassOf 'part_of' some 'blood'
++   'MSLCL' SubClassOf 'bearer_of' some 'type II diabetes mellitus'
++   'MSLCL' SubClassOf 'part_of' some 'Homo sapiens'
++   'MSLCL' SubClassOf 'has_quality' some 'male'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009498
+Label: MSiPS
++   'MSiPS' SubClassOf 'part_of' some 'blood'
++   'MSiPS' SubClassOf 'part_of' some 'Homo sapiens'
++   'MSiPS' SubClassOf 'has_quality' some 'male'
++   'MSiPS' SubClassOf 'induced pluripotent stem cell'
++   'MSiPS' SubClassOf 'bearer_of' some 'type II diabetes mellitus'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009490
+Label: nervous system injury
++   'nervous system injury' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009493
+Label: paroxysmal tachycardia
++   'paroxysmal tachycardia' SubClassOf 'cardiac arrhythmia'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009494
+Label: C1 100080002
++   'C1 100080002' SubClassOf 'has_quality' some 'male'
++   'C1 100080002' SubClassOf 'olfactory neurosphere cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009491
+Label: adrenocortical insufficiency
++   'adrenocortical insufficiency' SubClassOf 'adrenal gland disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009492
+Label: cardiac arrest
++   'cardiac arrest' SubClassOf 'cardiac arrhythmia'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009487
+Label: nerve compression syndrome
++   'nerve compression syndrome' SubClassOf 'peripheral neuropathy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009486
+Label: diabetic eye disease
++   'diabetic eye disease' SubClassOf 'eye disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009485
+Label: eye injury
++   'eye injury' SubClassOf 'head injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009484
+Label: uterine polyp
++   'uterine polyp' SubClassOf 'female genital tract polyp'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009489
+Label: cranial nerve palsy
++   'cranial nerve palsy' SubClassOf 'peripheral nervous system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009488
+Label: spinal cord disease
++   'spinal cord disease' SubClassOf 'central nervous system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009481
+Label: paranasal sinus disease
++   'paranasal sinus disease' SubClassOf 'head and neck disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009482
+Label: drug allergy
++   'drug allergy' SubClassOf 'allergy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009483
+Label: breast disease
++   'breast disease' SubClassOf 'disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009473
+Label: hemolysis
++   'hemolysis' SubClassOf 'pathological process'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009476
+Label: neck injury
++   'neck injury' SubClassOf 'injury'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009475
+Label: cervical polyp
++   'cervical polyp' SubClassOf 'female genital tract polyp'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009478
+Label: vocal cord polyp
++   'vocal cord polyp' SubClassOf 'polyp'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009477
+Label: vertebral joint disease
++   'vertebral joint disease' SubClassOf 'joint disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009479
+Label: throat disease
++   'throat disease' SubClassOf 'head and neck disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009471
+Label: small kidney
++   'small kidney' SubClassOf 'abnormality of the kidney'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009472
+Label: tympanic membrane perforation
++   'tympanic membrane perforation' SubClassOf 'Abnormality of the ear'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009470
+Label: soft tissue disease
++   'soft tissue disease' SubClassOf 'disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009469
+Label: Bartholin gland disease
++   'Bartholin gland disease' SubClassOf 'reproductive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009468
+Label: jaw disease
++   'jaw disease' SubClassOf 'mouth disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009467
+Label: response to anti-vascular endothelial growth factor drug
++   'response to anti-vascular endothelial growth factor drug' SubClassOf 'response to drug'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009466
+Label: L�fgren?s syndrome
++   'L�fgren?s syndrome' SubClassOf 'Sarcoidosis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009464
+Label: corneal disease
++   'corneal disease' SubClassOf 'eye disease'
++   'corneal disease' SubClassOf 'disease' and ('has_disease_location' some ('cornea' or ('part_of' some 'cornea')))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009463
+Label: infarction
++   'infarction' SubClassOf 'pathological process'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009462
+Label: granuloma
++   'granuloma' SubClassOf 'pathological process'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0007700
+Label: anterior segment developmental abnormality
++   'anterior segment developmental abnormality' SubClassOf 'Abnormality of the eye'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000765
+Label: abnormality of the thorax
++   'abnormality of the thorax' SubClassOf 'abnormality of the skeletal system'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000769
+Label: abnormality of the breast
++   'abnormality of the breast' SubClassOf 'abnormality of the thorax'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000751
+Label: personality changes
++   'personality changes' SubClassOf 'behavioral abnormality'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000952
+Label: jaundice
++   'jaundice' SubClassOf 'Abnormality of the liver'
++   'jaundice' SubClassOf 'abnormality of the skin'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0100022
+Label: abnormality of movement
++   'abnormality of movement' SubClassOf 'behavioral abnormality'
 
 ----------------------------------
 2. Changes to EFO
 
-Class: http://www.ebi.ac.uk/efo/EFO_0001054
-Label: leprosy
--   'leprosy' SubClassOf 'bacterial disease'
-+   'leprosy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009429
+Class: http://purl.obolibrary.org/obo/HP_0001999
+Label: abnormal facial shape
+-   'abnormal facial shape' SubClassOf 'Abnormality of the head'
++   'abnormal facial shape' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
  
-Class: http://www.orpha.net/ORDO/Orphanet_77292
-Label: Niemann-Pick disease type A
--   'Niemann-Pick disease type A' SubClassOf 'Sphingolipidosis'
+Class: http://purl.obolibrary.org/obo/HP_0000494
+Label: Downslanted palpebral fissures
+-   'Downslanted palpebral fissures' SubClassOf 'Abnormality of the head'
++   'Downslanted palpebral fissures' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
  
-Class: http://www.orpha.net/ORDO/Orphanet_77293
-Label: Niemann-Pick disease type B
--   'Niemann-Pick disease type B' SubClassOf 'Sphingolipidosis'
+Class: http://www.orpha.net/ORDO/Orphanet_30391
+Label: Biliary atresia
++   'Biliary atresia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
  
-Class: http://www.orpha.net/ORDO/Orphanet_99022
-Label: Niemann-Pick disease type E
--   'Niemann-Pick disease type E' SubClassOf 'Sphingolipidosis'
+Class: http://purl.obolibrary.org/obo/HP_0000478
+Label: Abnormality of the eye
++   'Abnormality of the eye' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000705
-Label: spindle cell tumor
--   'spindle cell tumor' SubClassOf 'sarcoma'
-+   'spindle cell tumor' SubClassOf 'neoplasm'
+Class: http://www.orpha.net/ORDO/Orphanet_37042
+Label: Immune dysregulation-polyendocrinopathy-enteropathy-X-linked syndrome
++   'Immune dysregulation-polyendocrinopathy-enteropathy-X-linked syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000768
-Label: idiopathic pulmonary fibrosis
--   'idiopathic pulmonary fibrosis' SubClassOf 'respiratory system disease'
-+   'idiopathic pulmonary fibrosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009448
+Class: http://www.orpha.net/ORDO/Orphanet_2190
+Label: Congenital hydronephrosis
++   'Congenital hydronephrosis' SubClassOf 'hydronephrosis'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0003914
-Label: atherosclerosis
-+   'atherosclerosis' SubClassOf 'disease has feature' some http://purl.obolibrary.org/obo/HP_0031678
+Class: http://www.ebi.ac.uk/efo/EFO_0001060
+Label: celiac disease
++   'celiac disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
  
-Class: http://purl.obolibrary.org/obo/CHEBI_24431
-Label: chemical entity
--   'chemical entity' SubClassOf 'chemical entity'
+Class: http://www.orpha.net/ORDO/Orphanet_104004
+Label: Intestinal disease due to vitamin absorption anomaly
++   'Intestinal disease due to vitamin absorption anomaly' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
  
-Class: http://www.orpha.net/ORDO/Orphanet_646
-Label: Niemann-Pick disease type C
--   'Niemann-Pick disease type C' SubClassOf 'Supranuclear oculomotor palsy'
--   'Niemann-Pick disease type C' SubClassOf 'Unclassified primitive or secondary maculopathy'
--   'Niemann-Pick disease type C' SubClassOf 'Sphingolipidosis'
+Class: http://purl.obolibrary.org/obo/HP_0000359
+Label: Abnormality of the inner ear
+-   'Abnormality of the inner ear' SubClassOf 'Abnormality of the ear'
++   'Abnormality of the inner ear' SubClassOf http://purl.obolibrary.org/obo/HP_0031703
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000366
+Label: abnormality of the nose
++   'abnormality of the nose' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000356
+Label: Abnormality of the outer ear
+-   'Abnormality of the outer ear' SubClassOf 'Abnormality of the ear'
++   'Abnormality of the outer ear' SubClassOf http://purl.obolibrary.org/obo/HP_0031703
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000348
+Label: High forehead
+-   'High forehead' SubClassOf 'Abnormality of the head'
++   'High forehead' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://purl.obolibrary.org/obo/HP_0100633
+Label: Esophagitis
++   'Esophagitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009544
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000664
+Label: Synophrys
+-   'Synophrys' SubClassOf 'Abnormality of the head'
++   'Synophrys' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://purl.obolibrary.org/obo/HP_0100543
+Label: cognitive impairment
+-   'cognitive impairment' SubClassOf 'abnormality of the nervous system'
++   'cognitive impairment' SubClassOf http://purl.obolibrary.org/obo/HP_0011446
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_34533
+Label: Corneal dystrophy
++   'Corneal dystrophy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
+ 
+Class: http://purl.obolibrary.org/obo/HP_0001634
+Label: Mitral valve prolapse
++   'Mitral valve prolapse' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009557
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_71
+Label: Chylomicron retention disease
++   'Chylomicron retention disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000535
+Label: Sparse and thin eyebrow
+-   'Sparse and thin eyebrow' SubClassOf 'Abnormality of the head'
++   'Sparse and thin eyebrow' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_37
+Label: Acrodermatitis enteropathica
++   'Acrodermatitis enteropathica' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_14
+Label: Abetalipoproteinemia
++   'Abetalipoproteinemia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000581
+Label: Blepharophimosis
+-   'Blepharophimosis' SubClassOf 'Abnormality of the head'
++   'Blepharophimosis' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000582
+Label: Upslanted palpebral fissure
+-   'Upslanted palpebral fissure' SubClassOf 'Abnormality of the head'
++   'Upslanted palpebral fissure' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_271832
+Label: Genetic soft tissue tumor
++   'Genetic soft tissue tumor' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009470
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_228426
+Label: Syndromic multisystem autoimmune disease due to Itch deficiency
++   'Syndromic multisystem autoimmune disease due to Itch deficiency' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002508
+Label: Parkinson's disease
++   'Parkinson's disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009533
+ 
+Class: http://purl.obolibrary.org/obo/DOID_10718
+Label: giardiasis
+-   'giardiasis' SubClassOf 'parasitic infection'
++   'giardiasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009561
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008553
+Label: femur fracture
+-   'femur fracture' SubClassOf 'bone fracture'
++   'femur fracture' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009512
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008560
+Label: female infertility
++   'female infertility' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0008571
+Label: viral conjunctivitis
+-   'viral conjunctivitis' SubClassOf 'Conjunctival Disorder'
++   'viral conjunctivitis' SubClassOf 'conjunctivitis'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_371861
+Label: Genetic hyperaldosteronism
++   'Genetic hyperaldosteronism' SubClassOf 'hyperaldosteronism'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000286
+Label: Epicanthus
+-   'Epicanthus' SubClassOf 'Abnormality of the head'
++   'Epicanthus' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000107
+Label: Renal cyst
+-   'Renal cyst' SubClassOf 'Abnormality of the urinary system'
++   'Renal cyst' SubClassOf http://purl.obolibrary.org/obo/HP_0000077
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000153
+Label: abnormality of the mouth
++   'abnormality of the mouth' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002921
+Label: vulvar carcinoma
++   'vulvar carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000731
+Label: uterine fibroid
++   'uterine fibroid' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_385
+Label: Neurodegeneration with brain iron accumulation
++   'Neurodegeneration with brain iron accumulation' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009556
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_391487
+Label: Autoimmune enteropathy and endocrinopathy-susceptibility to chronic infections syndrome
++   'Autoimmune enteropathy and endocrinopathy-susceptibility to chronic infections syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_428
+Label: Autosomal dominant hypocalcemia
++   'Autosomal dominant hypocalcemia' SubClassOf 'calcium metabolic disease'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0010750
+Label: dermatochalasis
+-   'dermatochalasis' SubClassOf 'Abnormality of the head'
++   'dermatochalasis' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003944
+Label: tibia fracture
+-   'tibia fracture' SubClassOf 'bone fracture'
++   'tibia fracture' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009512
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003943
+Label: humerus fracture
+-   'humerus fracture' SubClassOf 'bone fracture'
++   'humerus fracture' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009514
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003950
+Label: ulna fracture
+-   'ulna fracture' SubClassOf 'bone fracture'
++   'ulna fracture' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009514
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003957
+Label: radius fracture
+-   'radius fracture' SubClassOf 'bone fracture'
++   'radius fracture' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009514
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003958
+Label: sunburn
++   'sunburn' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009516
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003893
+Label: ovarian neoplasm
++   'ovarian neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003891
+Label: biliary tract neoplasm
++   'biliary tract neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003880
+Label: appendiceal neoplasm
++   'appendiceal neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009542
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_569
+Label: Familial or sporadic hemiplegic migraine
++   'Familial or sporadic hemiplegic migraine' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009550
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003821
+Label: migraine disorder
++   'migraine disorder' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009550
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_289573
+Label: Fatal multiple mitochondrial dysfunction syndrome
++   'Fatal multiple mitochondrial dysfunction syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009556
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003859
+Label: uterine neoplasm
++   'uterine neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_98370
+Label: Hemolytic anemia due to hexose monophosphate shunt and glutathione metabolism anomalies
++   'Hemolytic anemia due to hexose monophosphate shunt and glutathione metabolism anomalies' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009529
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_98374
+Label: Hemolytic anemia due to an erythrocyte nucleotide metabolism disorder
++   'Hemolytic anemia due to an erythrocyte nucleotide metabolism disorder' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009529
+ 
+Class: http://purl.obolibrary.org/obo/HP_0012745
+Label: Short palpebral fissure
+-   'Short palpebral fissure' SubClassOf 'Abnormality of the head'
++   'Short palpebral fissure' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003770
+Label: diabetic retinopathy
++   'diabetic retinopathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009486
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_97231
+Label: Ligneous conjunctivitis
++   'Ligneous conjunctivitis' SubClassOf 'conjunctivitis'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_661
+Label: Ondine syndrome
++   'Ondine syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009532
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000266
+Label: aortic stenosis
++   'aortic stenosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009531
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_98560
+Label: Rare palpebral disease
++   'Rare palpebral disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009547
++   'Rare palpebral disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009546
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1002040
+Label: Corneal astigmatism
++   'Corneal astigmatism' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1002021
+Label: ankle injury
+-   'ankle injury' SubClassOf 'injury'
++   'ankle injury' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009508
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_1980
+Label: Bilateral striopallidodentate calcinosis
++   'Bilateral striopallidodentate calcinosis' SubClassOf 'calcium metabolic disease'
++   'Bilateral striopallidodentate calcinosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009533
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000500
+Label: ganglioneuroma
++   'ganglioneuroma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009532
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_98602
+Label: Rare lacrimal system disease
++   'Rare lacrimal system disease' SubClassOf 'lacrimal apparatus disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004994
+Label: lumbar disc degeneration
+-   'lumbar disc degeneration' SubClassOf 'skeletal system disease'
++   'lumbar disc degeneration' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009477
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001009
+Label: kwashiorkor
+-   'kwashiorkor' SubClassOf 'nutritional deficiency disease'
++   'kwashiorkor' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009563
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_183509
+Label: Rare genetic headache
++   'Rare genetic headache' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009550
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005562
+Label: hydronephrosis
++   'hydronephrosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009571
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005540
+Label: bile duct carcinoma
++   'bile duct carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://purl.obolibrary.org/obo/HP_0012219
+Label: erythema nodosum
+-   'erythema nodosum' SubClassOf 'abnormality of the skin'
++   'erythema nodosum' SubClassOf http://purl.obolibrary.org/obo/HP_0011123
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004596
+Label: diabetes mellitus type 2 associated cataract
++   'diabetes mellitus type 2 associated cataract' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009486
+ 
+Class: http://purl.obolibrary.org/obo/HP_0011098
+Label: Speech apraxia
+-   'Speech apraxia' SubClassOf 'abnormality of the nervous system'
++   'Speech apraxia' SubClassOf http://purl.obolibrary.org/obo/HP_0011446
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000237
+Label: Endometrial Polyp
+-   'Endometrial Polyp' SubClassOf 'polyp'
++   'Endometrial Polyp' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009484
+ 
+Class: http://purl.obolibrary.org/obo/HP_0011141
+Label: age-related cataract
+-   'age-related cataract' SubClassOf 'Abnormality of the eye'
++   'age-related cataract' SubClassOf http://purl.obolibrary.org/obo/HP_0000517
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_363306
+Label: Genetic intestinal disease due to fat malabsorption
++   'Genetic intestinal disease due to fat malabsorption' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000281
+Label: Giant Cell Tumor of Soft Tissue
++   'Giant Cell Tumor of Soft Tissue' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009470
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000203
+Label: Conjunctival Disorder
+-   'Conjunctival Disorder' SubClassOf 'eye disease'
++   'Conjunctival Disorder' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009546
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004278
+Label: sudden cardiac arrest
+-   'sudden cardiac arrest' SubClassOf 'cardiac arrhythmia'
++   'sudden cardiac arrest' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009492
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004272
+Label: anemia
+-   'anemia' SubClassOf 'abnormality of blood and blood-forming tissues'
++   'anemia' SubClassOf http://purl.obolibrary.org/obo/HP_0001877
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001213
+Label: tibial neuropathy
+-   'tibial neuropathy' SubClassOf 'neuropathy'
++   'tibial neuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009558
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004254
+Label: membranous glomerulonephritis
+-   'membranous glomerulonephritis' SubClassOf 'kidney disease'
++   'membranous glomerulonephritis' SubClassOf 'nephritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001217
+Label: Treponema infectious disease
+-   'Treponema infectious disease' SubClassOf 'bacterial disease'
++   'Treponema infectious disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009567
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001218
+Label: tricuspid valve prolapse
+-   'tricuspid valve prolapse' SubClassOf 'aortic disease'
++   'tricuspid valve prolapse' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009568
  
 Class: http://www.ebi.ac.uk/efo/EFO_1001219
 Label: trigeminal neuralgia
--   'trigeminal neuralgia' SubClassOf 'neuropathy'
-+   'trigeminal neuralgia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009430
++   'trigeminal neuralgia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009569
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001246
-Label: Yersinia pseudotuberculosis infectious disease
--   'Yersinia pseudotuberculosis infectious disease' SubClassOf 'bacterial disease'
-+   'Yersinia pseudotuberculosis infectious disease' SubClassOf 'Yersinia infectious disease'
+Class: http://www.ebi.ac.uk/efo/EFO_1001224
+Label: ulnar neuropathy
+-   'ulnar neuropathy' SubClassOf 'neuropathy'
++   'ulnar neuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009558
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005774
-Label: brain disease
--   'brain disease' EquivalentTo 'disease' and ('has_disease_location' some ('brain' or ('part_of' some 'brain')))
+Class: http://www.ebi.ac.uk/efo/EFO_0005761
+Label: lupus nephritis
+-   'lupus nephritis' SubClassOf 'kidney disease'
++   'lupus nephritis' SubClassOf 'nephritis'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005803
-Label: hematological system disease
--   'hematological system disease' EquivalentTo 'has_disease_location' some ('hematopoietic system' or ('part_of' some 'hematopoietic system'))
+Class: http://www.ebi.ac.uk/efo/EFO_0004230
+Label: endometrial neoplasm
++   'endometrial neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005909
-Label: HGADFN167
--   'HGADFN167' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
-+   'HGADFN167' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
+Class: http://www.ebi.ac.uk/efo/EFO_0004233
+Label: leukopenia
+-   'leukopenia' SubClassOf 'abnormality of blood and blood-forming tissues'
++   'leukopenia' SubClassOf http://purl.obolibrary.org/obo/HP_0001881
  
-Class: http://www.ebi.ac.uk/efo/EFO_0006510
-Label: Herpes Zoster
-+   'Herpes Zoster' SubClassOf 'disease has feature' some http://www.ebi.ac.uk/efo/EFO_0009430
+Class: http://www.ebi.ac.uk/efo/EFO_0005769
+Label: calcium metabolic disease
+-   'calcium metabolic disease' SubClassOf 'metabolic disease'
++   'calcium metabolic disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009556
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001380
-Label: Niemann-Pick disease
--   'Niemann-Pick disease' SubClassOf 'neoplasm'
-+   'Niemann-Pick disease' SubClassOf 'Sphingolipidosis'
+Class: http://www.ebi.ac.uk/efo/EFO_1001239
+Label: vulvitis
+-   'vulvitis' SubClassOf 'reproductive system disease'
++   'vulvitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009318
-Label: HFFc6
--   'HFFc6' SubClassOf 'derives_from' some ('fibroblast derived cell line' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
-+   'HFFc6' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+Class: http://www.ebi.ac.uk/efo/EFO_1001240
+Label: vulvovaginitis
+-   'vulvovaginitis' SubClassOf 'reproductive system disease'
++   'vulvovaginitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_183734
+Label: Genetic gynecological tumor
++   'Genetic gynecological tumor' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_183731
+Label: Rare genetic gynecological and obstetrical diseases
++   'Rare genetic gynecological and obstetrical diseases' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005771
+Label: ovarian disease
+-   'ovarian disease' SubClassOf 'reproductive system disease'
++   'ovarian disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000062
+Label: lactose intolerance
++   'lactose intolerance' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000060
+Label: intestinal disaccharide deficiency and disaccharide malabsorption
++   'intestinal disaccharide deficiency and disaccharide malabsorption' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000079
+Label: Ampulla of Vater Carcinoma
++   'Ampulla of Vater Carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000145
+Label: breast fibrosis
++   'breast fibrosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009483
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000104
+Label: Bartholin Gland Squamous Cell Carcinoma
+-   'Bartholin Gland Squamous Cell Carcinoma' SubClassOf 'vulvar carcinoma'
++   'Bartholin Gland Squamous Cell Carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009469
++   'Bartholin Gland Squamous Cell Carcinoma' SubClassOf 'Bartholin Gland Carcinoma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000103
+Label: Bartholin Gland Carcinoma
++   'Bartholin Gland Carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009469
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000123
+Label: Bile Duct Adenoma
++   'Bile Duct Adenoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001166
+Label: sciatic neuropathy
+-   'sciatic neuropathy' SubClassOf 'neuropathy'
++   'sciatic neuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009558
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001162
+Label: rickettsiosis
+-   'rickettsiosis' SubClassOf 'bacterial disease'
++   'rickettsiosis' SubClassOf 'primary Rickettsiaceae infectious disease'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0011220
+Label: Prominent forehead
+-   'Prominent forehead' SubClassOf 'Abnormality of the head'
++   'Prominent forehead' SubClassOf http://purl.obolibrary.org/obo/HP_0000271
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001137
+Label: pulmonary subvalvular stenosis
+-   'pulmonary subvalvular stenosis' SubClassOf 'heart disease'
++   'pulmonary subvalvular stenosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009564
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001138
+Label: pulmonary valve stenosis
+-   'pulmonary valve stenosis' SubClassOf 'heart disease'
++   'pulmonary valve stenosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009564
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001139
+Label: pulpitis
++   'pulpitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009540
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001143
+Label: radial nerve lesion
+-   'radial nerve lesion' SubClassOf 'neuropathy'
++   'radial nerve lesion' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009558
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001116
+Label: polyradiculoneuropathy
+-   'polyradiculoneuropathy' SubClassOf 'neuropathy'
++   'polyradiculoneuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009562
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_183586
+Label: Genetic glomerular disease
++   'Genetic glomerular disease' SubClassOf 'glomerular disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001034
+Label: mastitis
+-   'mastitis' SubClassOf 'reproductive system disease'
++   'mastitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009483
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001033
+Label: marasmus
+-   'marasmus' SubClassOf 'nutritional deficiency disease'
++   'marasmus' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009563
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005904
+Label: H7-hESC
+-   'H7-hESC' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'H7-hESC' SubClassOf 'derives_from' some ('embryonic stem cell' and ('part_of' some ('embryo' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005916
+Label: ES-CJ7
+-   'ES-CJ7' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Mus musculus'))))
++   'ES-CJ7' SubClassOf 'derives_from' some ('embryonic stem cell' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005915
+Label: WW6
+-   'WW6' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Mus musculus'))))
++   'WW6' SubClassOf 'derives_from' some ('embryonic stem cell' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005914
+Label: ZHBTc4-mESC
+-   'ZHBTc4-mESC' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Mus musculus'))))
++   'ZHBTc4-mESC' SubClassOf 'derives_from' some ('embryonic stem cell' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005910
+Label: ES-D3
+-   'ES-D3' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Mus musculus'))))
++   'ES-D3' SubClassOf 'derives_from' some ('embryonic stem cell' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001084
+Label: parametritis
+-   'parametritis' SubClassOf 'reproductive system disease'
++   'parametritis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001085
+Label: paraneoplastic polyneuropathy
+-   'paraneoplastic polyneuropathy' SubClassOf 'neuropathy'
++   'paraneoplastic polyneuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009562
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001447
+Label: Vaginal neoplasm
++   'Vaginal neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001446
+Label: Uterine Inversion
+-   'Uterine Inversion' SubClassOf 'reproductive system disease'
++   'Uterine Inversion' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001433
+Label: Taeniasis
+-   'Taeniasis' SubClassOf 'parasitic infection'
++   'Taeniasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009561
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_284385
+Label: Familial intrahepatic cholestasis
++   'Familial intrahepatic cholestasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_156071
+Label: Keratoconus
++   'Keratoconus' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001388
+Label: Pelvic Inflammatory Disease
+-   'Pelvic Inflammatory Disease' SubClassOf 'reproductive system disease'
++   'Pelvic Inflammatory Disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0004128
+Label: hereditary nephritis
+-   'hereditary nephritis' SubClassOf 'kidney disease'
++   'hereditary nephritis' SubClassOf 'nephritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001335
+Label: Gynatresia
+-   'Gynatresia' SubClassOf 'reproductive system disease'
++   'Gynatresia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_401996
+Label: Karyomegalic interstitial nephritis
++   'Karyomegalic interstitial nephritis' SubClassOf 'nephritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0006891
+Label: breast adenosis
+-   'breast adenosis' SubClassOf 'inheres in part of' some 'breast'
+-   'breast adenosis' SubClassOf 'phenotype'
++   'breast adenosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009483
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_90354
+Label: Brittle cornea syndrome
++   'Brittle cornea syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0005484
+Label: 46C
++   '46C' SubClassOf 'derives_from' some 'embryonic stem cell'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001821
+Label: osteoradionecrosis
++   'osteoradionecrosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009565
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001800
+Label: Intervertebral Disc Displacement
+-   'Intervertebral Disc Displacement' SubClassOf 'bone disease'
++   'Intervertebral Disc Displacement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009477
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_35122
+Label: Congenital sucrase-isomaltase deficiency
++   'Congenital sucrase-isomaltase deficiency' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_53715
+Label: Tumoral calcinosis
++   'Tumoral calcinosis' SubClassOf 'calcium metabolic disease'
  
 Class: http://www.ebi.ac.uk/efo/EFO_0009380
 Label: facial neuralgia
--   'facial neuralgia' SubClassOf 'nervous system disease'
-+   'facial neuralgia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009430
++   'facial neuralgia' SubClassOf 'facial nerve disease'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001793
-Label: fetal hypoxia
--   'fetal hypoxia' SubClassOf 'hematological system disease'
-+   'fetal hypoxia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009444
+Class: http://www.ebi.ac.uk/efo/EFO_1001864
+Label: uterine prolapse
++   'uterine prolapse' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001766
-Label: brain hypoxia
--   'brain hypoxia' SubClassOf 'brain disease'
-+   'brain hypoxia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009444
-+   'brain hypoxia' EquivalentTo 'has part' some ('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'brain'))
+Class: http://www.orpha.net/ORDO/Orphanet_209978
+Label: Alternating hemiplegia
++   'Alternating hemiplegia' SubClassOf 'hemiplegia'
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000987
-Label: intestinal perforation
--   'intestinal perforation' SubClassOf 'digestive system disease'
-+   'intestinal perforation' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009431
+Class: http://www.ebi.ac.uk/efo/EFO_0009449
+Label: keratitis
+-   'keratitis' SubClassOf 'eye disease'
++   'keratitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009172
-Label: thyroxine-binding globulin quantitative trait locus
--   'thyroxine-binding globulin quantitative trait locus' SubClassOf 'protein'
-+   'thyroxine-binding globulin quantitative trait locus' SubClassOf 'protein measurement'
+Class: http://www.orpha.net/ORDO/Orphanet_199282
+Label: Harlequin syndrome
++   'Harlequin syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009532
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000846
-Label: brain hypoxia-Ischemia
--   'brain hypoxia-Ischemia' SubClassOf 'brain disease'
-+   'brain hypoxia-Ischemia' SubClassOf 'ischemia'
-+   'brain hypoxia-Ischemia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009444
+Class: http://www.orpha.net/ORDO/Orphanet_88993
+Label: Esophageal malformation
++   'Esophageal malformation' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009544
  
-Class: http://www.ebi.ac.uk/efo/EFO_0007461
-Label: recurrent pneumonia
-+   'recurrent pneumonia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009429
+Class: http://www.ebi.ac.uk/efo/EFO_1001792
+Label: femoral neck fracture
+-   'femoral neck fracture' SubClassOf 'bone fracture'
++   'femoral neck fracture' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009512
  
-Class: http://www.orpha.net/ORDO/Orphanet_79452
-Label: Milroy disease
--   'Milroy disease' SubClassOf 'Milroy disease'
+Class: http://www.ebi.ac.uk/efo/EFO_1001762
+Label: autonomic dysreflexia
++   'autonomic dysreflexia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009532
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001782
+Label: dental pulp exposure
+-   'dental pulp exposure' SubClassOf 'mouth disease'
++   'dental pulp exposure' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009540
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001785
+Label: diffuse esophageal spasm
++   'diffuse esophageal spasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009544
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001788
+Label: Eye Burns
+-   'Eye Burns' SubClassOf 'pain'
++   'Eye Burns' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009516
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009455
+Label: lacrimal apparatus disease
+-   'lacrimal apparatus disease' SubClassOf 'eye disease'
++   'lacrimal apparatus disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009547
++   'lacrimal apparatus disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009546
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_208593
+Label: Genetic hypoparathyroidism
+-   'Genetic hypoparathyroidism' SubClassOf 'parathyroid disease'
++   'Genetic hypoparathyroidism' SubClassOf 'hypoparathyroidism'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000962
+Label: hemometra
+-   'hemometra' SubClassOf 'reproductive system disease'
++   'hemometra' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007169
+Label: biliary dyskinesia
++   'biliary dyskinesia' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007164
+Label: Balkan nephropathy
+-   'Balkan nephropathy' SubClassOf 'kidney disease'
+-   'Balkan nephropathy' SubClassOf 'has_disease_location' some ('intestine' or ('part_of' some 'intestine'))
++   'Balkan nephropathy' SubClassOf 'nephritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007163
+Label: balantidiasis
+-   'balantidiasis' SubClassOf 'parasitic infection'
++   'balantidiasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009561
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007173
+Label: Blastocystis hominis infectious disease
+-   'Blastocystis hominis infectious disease' SubClassOf 'parasitic infection'
++   'Blastocystis hominis infectious disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009561
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000940
+Label: Frey Syndrome
++   'Frey Syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009532
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007175
+Label: blind loop syndrome
++   'blind loop syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009554
+ 
+Class: http://purl.obolibrary.org/obo/HP_0007648
+Label: Punctate cataract
+-   'Punctate cataract' SubClassOf 'Abnormality of the eye'
++   'Punctate cataract' SubClassOf http://purl.obolibrary.org/obo/HP_0000517
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007179
+Label: boutonneuse fever
+-   'boutonneuse fever' SubClassOf 'bacterial disease'
++   'boutonneuse fever' SubClassOf 'spotted fever'
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_65284
+Label: Biotin-responsive basal ganglia disease
++   'Biotin-responsive basal ganglia disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009533
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000936
+Label: femoral neuropathy
+-   'femoral neuropathy' SubClassOf 'neuropathy'
++   'femoral neuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009558
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009118
+Label: female reproductive endometrioid cancer
++   'female reproductive endometrioid cancer' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007126
+Label: Acanthamoeba keratitis
++   'Acanthamoeba keratitis' SubClassOf 'keratitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009137
+Label: renal hypodysplasia/aplasia 3
+-   'renal hypodysplasia/aplasia 3' SubClassOf 'Abnormality of the urinary system'
++   'renal hypodysplasia/aplasia 3' SubClassOf http://purl.obolibrary.org/obo/HP_0000077
+ 
+Class: http://purl.obolibrary.org/obo/HP_0006610
+Label: Wide intermamillary distance
+-   'Wide intermamillary distance' SubClassOf 'abnormality of the skeletal system'
++   'Wide intermamillary distance' SubClassOf http://purl.obolibrary.org/obo/HP_0000769
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007141
+Label: allergic conjunctivitis
+-   'allergic conjunctivitis' SubClassOf 'Conjunctival Disorder'
++   'allergic conjunctivitis' SubClassOf 'conjunctivitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007146
+Label: anisakiasis
+-   'anisakiasis' SubClassOf 'parasitic infection'
++   'anisakiasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009561
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007148
+Label: aortic valve insufficiency
+-   'aortic valve insufficiency' SubClassOf 'aortic disease'
++   'aortic valve insufficiency' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009531
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007149
+Label: appendicitis
+-   'appendicitis' SubClassOf 'digestive system disease'
++   'appendicitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009542
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007131
+Label: acute hemorrhagic conjunctivitis
++   'acute hemorrhagic conjunctivitis' SubClassOf 'viral conjunctivitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001919
+Label: Spinal cord injury
+-   'Spinal cord injury' SubClassOf 'injury'
++   'Spinal cord injury' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009490
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000879
+Label: corneal edema
+-   'corneal edema' SubClassOf 'eye disease'
++   'corneal edema' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000865
+Label: choledocholithiasis
++   'choledocholithiasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000862
+Label: cervix erosion
+-   'cervix erosion' SubClassOf 'reproductive system disease'
++   'cervix erosion' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_53691
+Label: Congenital cornea plana
++   'Congenital cornea plana' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000880
+Label: corneal neovascularization
+-   'corneal neovascularization' SubClassOf 'eye disease'
++   'corneal neovascularization' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000829
+Label: bacterial conjunctivitis
+-   'bacterial conjunctivitis' SubClassOf 'Conjunctival Disorder'
++   'bacterial conjunctivitis' SubClassOf 'conjunctivitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000838
+Label: bile reflux
+-   'bile reflux' SubClassOf 'digestive system disease'
++   'bile reflux' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000844
+Label: brachial plexus neuropathy
++   'brachial plexus neuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009559
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000842
+Label: Borrelia infectious disease
+-   'Borrelia infectious disease' SubClassOf 'bacterial disease'
++   'Borrelia infectious disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009567
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000850
+Label: burning mouth syndrome
++   'burning mouth syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009550
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000803
+Label: alcoholic neuropathy
+-   'alcoholic neuropathy' SubClassOf 'neuropathy'
++   'alcoholic neuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009562
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000818
+Label: arcus senilis
+-   'arcus senilis' SubClassOf 'eye disease'
++   'arcus senilis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009464
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1001968
+Label: soft tissue sarcoma
++   'soft tissue sarcoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009470
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007202
+Label: cervical incompetence
+-   'cervical incompetence' SubClassOf 'reproductive system disease'
++   'cervical incompetence' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007244
+Label: Ebstein anomaly
+-   'Ebstein anomaly' SubClassOf 'aortic disease'
++   'Ebstein anomaly' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009568
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000774
+Label: Narrow chest
+-   'Narrow chest' SubClassOf 'abnormality of the skeletal system'
++   'Narrow chest' SubClassOf http://purl.obolibrary.org/obo/HP_0000765
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000767
+Label: Pectus excavatum
+-   'Pectus excavatum' SubClassOf 'abnormality of the skeletal system'
++   'Pectus excavatum' SubClassOf http://purl.obolibrary.org/obo/HP_0000765
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000783
+Label: diabetic neuropathy
++   'diabetic neuropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009532
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_3337
+Label: Primary Fanconi syndrome
++   'Primary Fanconi syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009566
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007308
+Label: Herpes simplex virus keratitis
++   'Herpes simplex virus keratitis' SubClassOf 'keratitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007363
+Label: meibomian cyst
+-   'meibomian cyst' SubClassOf 'eye disease'
++   'meibomian cyst' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009536
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007315
+Label: hordeolum
+-   'hordeolum' SubClassOf 'eye disease'
++   'hordeolum' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009536
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007312
+Label: HIV wasting syndrome
+-   'HIV wasting syndrome' SubClassOf 'HIV infection'
++   'HIV wasting syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009528
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007313
+Label: HIV-associated nephropathy
++   'HIV-associated nephropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009528
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007311
+Label: HIV enteropathy
+-   'HIV enteropathy' SubClassOf 'HIV infection'
++   'HIV enteropathy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009528
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007324
+Label: inclusion conjunctivitis
++   'inclusion conjunctivitis' SubClassOf 'bacterial conjunctivitis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007333
+Label: jaw cancer
++   'jaw cancer' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009468
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007344
+Label: leptospirosis
+-   'leptospirosis' SubClassOf 'bacterial disease'
++   'leptospirosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009567
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0006275
+Label: ES-E14TG2a
++   'ES-E14TG2a' SubClassOf 'part_of' some 'Mus musculus'
++   'ES-E14TG2a' SubClassOf 'derives_from' some 'embryonic stem cell'
++   'ES-E14TG2a' SubClassOf 'part_of' some 'embryo'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0003014
+Label: breast fibrocystic disease
++   'breast fibrocystic disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009483
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000623
+Label: Vulvar Lichen Sclerosus
+-   'Vulvar Lichen Sclerosus' SubClassOf 'reproductive system disease'
++   'Vulvar Lichen Sclerosus' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000640
+Label: basal ganglia cerebrovascular disease
++   'basal ganglia cerebrovascular disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009533
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007403
+Label: ophthalmic herpes zoster
++   'ophthalmic herpes zoster' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009569
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009048
+Label: Intrahepatic cholestasis of pregnancy
++   'Intrahepatic cholestasis of pregnancy' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007472
+Label: rickettsial pneumonia
++   'rickettsial pneumonia' SubClassOf 'rickettsiosis'
+ 
+Class: http://purl.obolibrary.org/obo/HP_0007754
+Label: Macular dystrophy
+-   'Macular dystrophy' SubClassOf 'Abnormality of the eye'
++   'Macular dystrophy' SubClassOf http://purl.obolibrary.org/obo/HP_0004329
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000541
+Label: Soft Tissue Neoplasm
++   'Soft Tissue Neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009470
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000540
+Label: Soft Tissue Chondroma
++   'Soft Tissue Chondroma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009470
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_314822
+Label: Primary renal tubular acidosis
++   'Primary renal tubular acidosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009566
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007525
+Label: tricuspid valve stenosis
+-   'tricuspid valve stenosis' SubClassOf 'aortic disease'
++   'tricuspid valve stenosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009568
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0007543
+Label: vulvovaginal candidiasis
++   'vulvovaginal candidiasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009549
+ 
+Class: http://purl.obolibrary.org/obo/HP_0000964
+Label: Eczema
+-   'Eczema' SubClassOf 'abnormality of the skin'
++   'Eczema' SubClassOf http://purl.obolibrary.org/obo/HP_0011123
+ 
+Class: http://www.orpha.net/ORDO/Orphanet_156607
+Label: Genetic biliary tract disease
++   'Genetic biliary tract disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000453
+Label: Paraganglioma
++   'Paraganglioma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009532
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000400
+Label: Non-Neoplastic Bile Duct Disorder
++   'Non-Neoplastic Bile Duct Disorder' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009534
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_1000467
+Label: Peritoneal Mesothelioma
++   'Peritoneal Mesothelioma' SubClassOf 'peritoneal neoplasm'
+ 
+Class: http://purl.obolibrary.org/obo/UBERON_0000976
+Label: humerus
+-   'humerus' SubClassOf 'bone of lower extremity'
++   'humerus' SubClassOf 'limb bone'
 
 ----------------------------------
 3. Obsolete Classes
