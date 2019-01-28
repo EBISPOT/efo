@@ -40,8 +40,8 @@ prepare_release: all
 
 # create the main efo release by merging and removing import statements
 # this will also set the release date and version number 
-$(BUILDDIR)/$(ONT).owl: $(BUILDDIR)/efo-edit-tagged.owl
-	$(ROBOT) merge --input $(BUILDDIR)/efo-edit-tagged.owl -c true -i $< reason -s true -m false -r hermit annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
+$(BUILDDIR)/$(ONT).owl: $(EFO3EDIT)
+	$(ROBOT) merge --input $(EFO3EDIT) -c true -i $< reason -s true -m false -r hermit annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
 	$(EFO2OBO) -i $< -o $@
@@ -53,8 +53,8 @@ $(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
 
 # unmerge mondo
 
-$(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo_efo_import.owl
-	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/mondo_efo_import.owl unmerge -i imports/mondo_efo_import.owl -o $@
+$(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo_efo_import.owl $(BUILDDIR)/OTAR_tagged.owl
+	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/mondo_efo_import.owl -i $(BUILDDIR)/OTAR_tagged.owl unmerge -i imports/mondo_efo_import.owl -o $@
 
 # add import statements to editors edition
 
@@ -78,8 +78,6 @@ $(BUILDDIR)/OTAR_terms.owl: efo-edit.owl
 $(BUILDDIR)/OTAR_tagged.owl: $(BUILDDIR)/OTAR_terms.owl
 	$(ROBOT) query --input $(BUILDDIR)/OTAR_terms.owl --query $(SPARQLDIR)/OTAR_therapeutic_areas.sparql $@
 
-$(BUILDDIR)/efo-edit-tagged.owl: $(BUILDDIR)/OTAR_tagged.owl $(EFO3EDIT)
-	$(ROBOT) merge --input $(BUILDDIR)/OTAR_tagged.owl --input $(EFO3EDIT) --output $(BUILDDIR)/efo-edit-tagged.owl
 
 # ----------------------------------------
 # Import modules
