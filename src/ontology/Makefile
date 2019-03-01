@@ -24,6 +24,7 @@ ORDOPREFIX = "Orphanet: http://www.orpha.net/ORDO/Orphanet_"
 MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
 EFO3EDIT = efo-3-edit.owl
 EFOFIXER = ../../bin/efo-fixer.jar
+MIRRORDIR=./mirror
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
@@ -53,8 +54,8 @@ $(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
 
 # unmerge mondo
 
-$(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo_efo_import.owl $(BUILDDIR)/OTAR_tagged.owl
-	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/mondo_efo_import.owl -i $(BUILDDIR)/OTAR_tagged.owl unmerge -i imports/mondo_efo_import.owl -o $@
+$(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo_efo_import.owl $(BUILDDIR)/OTAR_tagged.owl $(BUILDDIR)/uberon_filtered.owl
+	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/mondo_efo_import.owl -i $(BUILDDIR)/uberon_filtered.owl -i $(BUILDDIR)/OTAR_tagged.owl unmerge -i imports/mondo_efo_import.owl -o $@
 
 # add import statements to editors edition
 
@@ -66,6 +67,23 @@ $(EFO3EDIT): efo-upper.owl $(BUILDDIR)/efo-edit-fixed-raw.owl ../templates/subcl
 
 imports/mondo_efo_import.owl: imports/mondo_efo_mappings.tsv
 	java -jar ../../bin/mondo-id-switch.jar imports/mondo_efo_mappings.tsv imports/mondo_import.owl imports/mondo_efo_import.owl && $(ROBOT) -v annotate -i imports/mondo_efo_import.owl --ontology-iri http://www.ebi.ac.uk/efo/imports/mondo_efo_import.owl -o $@
+
+
+
+#-------------------------------------------------
+# uberon updates module
+#-------------------------------------------------
+#Download Uberon ontology from the EBI/OLS: https://www.ebi.ac.uk/ols/ontologies/uberon/download see get_mirrors.sh file
+#Extract all Uberon terms from the efo.owl file
+
+$(BUILDDIR)/uberon_terms.txt: efo-edit.owl
+	$(ROBOT) query --input efo-edit.owl --select $(SPARQLDIR)/uberon_terms.sparql $(BUILDDIR)/uberon_terms.txt
+
+#creates the subset owl file from uberon terms
+$(BUILDDIR)/uberon_filtered.owl: $(BUILDDIR)/uberon_terms.txt
+	$(ROBOT) filter -i $(MIRRORDIR)/uberon.owl --term-file $(BUILDDIR)/uberon_terms.txt --select "annotations self descendants" -o $(BUILDDIR)/uberon_filtered.owl
+
+
 
 
 # ----------------------------------------
