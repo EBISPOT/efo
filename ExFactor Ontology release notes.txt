@@ -10,16 +10,22 @@
     \::/  /       \:\__\        \::/  /   
      \/__/         \/__/         \/__/    
 EFO - Release Notes
-Experimental Factor Ontology version 2.105
-Date Released: 18th February 2019
-Class Count: 22615
+Experimental Factor Ontology version 2.106
+Date Released: 18th March 2019
+Class Count: 22669
 
 Summary: 
 
-EFO 2.105 contains continued work on the disease classifications from 2.102 alongside new phenotype and measurement terms have also been added to address project-specific use cases for the GWAS Catalog, respectively. There has been more ICD10 terms map to EFO, for this purpose , also some terms imported from UBERON has been updated.
+EFO 2.106 is the final release of EFO version 2. It contains continued work on the disease classifications from 2.105 alongside new phenotype and measurement terms, which have also been added to address project-specific use cases for the GWAS Catalog, respectively. There has been more ICD10 terms mapped to EFO, for this purpose.
+
+Obsolete terms in this release: 1
+
+The following terms have been deprecated since the last release. Please see the 'Obsolete classes in EFO' section for replacement terms and further information. If you have any question regarding these terms, please contact us via efo-users@ebi.ac.uk.
+
+EFO_0003114	'pauciarticular juvenile rheumatoid arthritis'
 
 ----------------------------------
-1.  	Changes to URIs
+1.  Changes to URIs
 2.	Changes to EFO
 3.	Obsolete Classes in EFO
 4.	Scope of the Ontology
@@ -33,727 +39,241 @@ EFO 2.105 contains continued work on the disease classifications from 2.102 alon
 New classes:
 
 
-Class: http://purl.obolibrary.org/obo/HP_0004755
-Label: supraventricular tachycardia
-+   'supraventricular tachycardia' SubClassOf 'cardiac arrhythmia'
- 
-Class: http://purl.obolibrary.org/obo/HP_0100749
-Label: chest pain
-+   'chest pain' SubClassOf 'abnormality of the thorax'
-+   'chest pain' SubClassOf 'pain'
- 
-Class: http://purl.obolibrary.org/obo/HP_0004872
-Label: incisional hernia
-+   'incisional hernia' SubClassOf 'Hernia of the abdominal wall'
- 
-Class: http://purl.obolibrary.org/obo/HP_0000360
-Label: tinnitus
-+   'tinnitus' SubClassOf 'Hearing abnormality'
- 
-Class: http://purl.obolibrary.org/obo/HP_0100607
-Label: dysmenorrhea
-+   'dysmenorrhea' SubClassOf 'Abnormality of the endocrine system'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_3010740
-Label: ramus auricularis of the vagus nerve
-+   'ramus auricularis of the vagus nerve' SubClassOf 'vagus nerve'
- 
-Class: http://purl.obolibrary.org/obo/FBbt_00007435
-Label: endocrine system component
-+   'endocrine system component' SubClassOf 'part_of' some 'endocrine system'
-+   'endocrine system component' SubClassOf 'animal component'
- 
-Class: http://purl.obolibrary.org/obo/HP_0100309
-Label: subdural hemorrhage
-+   'subdural hemorrhage' SubClassOf 'intracranial hemorrhage'
- 
-Class: http://purl.obolibrary.org/obo/HP_0004378
-Label: abnormality of the anus
-+   'abnormality of the anus' SubClassOf 'abnormality of the gastrointestinal tract'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009700
-Label: visual perception measurement
-+   'visual perception measurement' SubClassOf 'brain measurement'
-+   'visual perception measurement' SubClassOf 'is_about' some 'visual perception'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009701
-Label: visceral:total adipose tissue ratio
-+   'visceral:total adipose tissue ratio' SubClassOf 'adipose tissue measurement'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0018244
-Label: superficial cervical thymus
-+   'superficial cervical thymus' SubClassOf 'cervical thymus'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0018245
-Label: deep cervical thymus
-+   'deep cervical thymus' SubClassOf 'cervical thymus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009695
-Label: household income
-+   'household income' SubClassOf 'quality'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009696
-Label: social deprivation
-+   'social deprivation' SubClassOf 'quality'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009693
-Label: thiopurine metabolite measurement
-+   'thiopurine metabolite measurement' SubClassOf 'is_about' some 'thiopurines'
-+   'thiopurine metabolite measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009694
-Label: beta-lactam allergy measurement
-+   'beta-lactam allergy measurement' SubClassOf 'is_about' some 'allergy'
-+   'beta-lactam allergy measurement' SubClassOf 'is_about' some 'beta-lactam'
-+   'beta-lactam allergy measurement' SubClassOf 'allergy measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009699
-Label: foot muscle strength measurement
-+   'foot muscle strength measurement' SubClassOf 'muscle measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009697
-Label: pathological complete response
-+   'pathological complete response' SubClassOf 'sign or symptom'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009698
-Label: gestational blood glucose measurement
-+   'gestational blood glucose measurement' SubClassOf 'is_about' some 'pregnancy'
-+   'gestational blood glucose measurement' SubClassOf 'is_about' some 'gestational diabetes'
-+   'gestational blood glucose measurement' SubClassOf 'glucose measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009658
-Label: adverse effect
-+   'adverse effect' SubClassOf 'disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009657
-Label: acute pharyngitis
-+   'acute pharyngitis' SubClassOf 'respiratory system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009659
-Label: aneurysm
-+   'aneurysm' SubClassOf 'vascular disease'
-+   'aneurysm' SubClassOf 'has_disease_location' some ('artery' or ('part_of' some 'artery'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009650
-Label: hyperproinsulinemia
-+   'hyperproinsulinemia' SubClassOf 'genetic disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009652
-Label: neointimal hyperplasia
-+   'neointimal hyperplasia' SubClassOf 'hyperplasia'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009651
-Label: rag2 deficiency
-+   'rag2 deficiency' SubClassOf 'immune system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009654
-Label: reference sample
-+   'reference sample' SubClassOf 'material sample'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009653
-Label: RNA-seq of total RNA
-+   'RNA-seq of total RNA' SubClassOf 'transcription profiling by high throughput sequencing'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009656
-Label: neoplastic sample
-+   'neoplastic sample' SubClassOf 'abnormal sample'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009655
-Label: abnormal sample
-+   'abnormal sample' SubClassOf 'material sample'
-+   'abnormal sample' SubClassOf 'has_quality' some 'abnormal'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009670
-Label: gingival disease
-+   'gingival disease' SubClassOf 'mouth disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009669
-Label: flatulence
-+   'flatulence' SubClassOf 'digestive system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009668
-Label: external ear disease
-+   'external ear disease' SubClassOf 'has_disease_location' some ('external ear' or ('part_of' some 'external ear'))
-+   'external ear disease' SubClassOf 'auditory system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009663
-Label: disease of genitourinary system
-+   'disease of genitourinary system' SubClassOf 'has_disease_location' some ('genitourinary system' or ('part_of' some 'genitourinary system'))
-+   'disease of genitourinary system' SubClassOf 'disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009662
-Label: common wart
-+   'common wart' SubClassOf 'benign neoplasm'
-+   'common wart' SubClassOf 'skin disease'
-+   'common wart' SubClassOf 'viral disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009661
-Label: bronchitis
-+   'bronchitis' SubClassOf 'bronchial disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009660
-Label: anus disease
-+   'anus disease' SubClassOf 'has_disease_location' some ('anal region' or ('part_of' some 'anal region'))
-+   'anus disease' SubClassOf 'intestinal disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009667
-Label: eustachian tube disease
-+   'eustachian tube disease' SubClassOf 'auditory system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009666
-Label: enthesopathy
-+   'enthesopathy' SubClassOf 'musculoskeletal system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009665
-Label: disorder of patella
-+   'disorder of patella' SubClassOf 'bone disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009664
-Label: disease of orbital region
-+   'disease of orbital region' SubClassOf 'head and neck disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009680
-Label: pleural empyema
-+   'pleural empyema' SubClassOf 'lower respiratory tract disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009681
-Label: post term pregnancy
-+   'post term pregnancy' SubClassOf 'pregnancy disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009679
-Label: paraplegia
-+   'paraplegia' SubClassOf 'palsy'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009676
-Label: musculoskeletal system disease
-+   'musculoskeletal system disease' SubClassOf 'disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009675
-Label: melanocytic nevus
-+   'melanocytic nevus' SubClassOf 'nevus'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009678
-Label: paralytic strabismus
-+   'paralytic strabismus' SubClassOf 'ocular motility disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009677
-Label: occlusion precerebral artery
-+   'occlusion precerebral artery' SubClassOf 'cerebrovascular disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009672
-Label: inner ear disease
-+   'inner ear disease' SubClassOf 'has_disease_location' some ('internal ear' or ('part_of' some 'internal ear'))
-+   'inner ear disease' SubClassOf 'auditory system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009671
-Label: hereditary ataxia
-+   'hereditary ataxia' SubClassOf 'neurodegenerative disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009674
-Label: lens disease
-+   'lens disease' SubClassOf 'eye disease'
-+   'lens disease' SubClassOf 'has_disease_location' some ('lens of camera-type eye' or ('part_of' some 'lens of camera-type eye'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009673
-Label: laryngeal disease
-+   'laryngeal disease' SubClassOf 'respiratory system disease'
-+   'laryngeal disease' SubClassOf 'has_disease_location' some ('larynx' or ('part_of' some 'larynx'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009691
-Label: vestibular disease
-+   'vestibular disease' SubClassOf 'inner ear disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009692
-Label: voice disorders
-+   'voice disorders' SubClassOf 'laryngeal disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009690
-Label: urinary system disease
-+   'urinary system disease' SubClassOf 'has_disease_location' some ('renal system' or ('part_of' some 'renal system'))
-+   'urinary system disease' SubClassOf 'disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009689
-Label: urethral disease
-+   'urethral disease' SubClassOf 'has_disease_location' some ('urethra' or ('part_of' some 'urethra'))
-+   'urethral disease' SubClassOf 'urinary system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009688
-Label: stomatitis
-+   'stomatitis' SubClassOf 'mouth disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009687
-Label: somatoform disorder
-+   'somatoform disorder' SubClassOf 'mental or behavioural disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009686
-Label: respiratory failure
-+   'respiratory failure' SubClassOf 'lung disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009685
-Label: rectal disease
-+   'rectal disease' SubClassOf 'has_disease_location' some ('rectum' or ('part_of' some 'rectum'))
-+   'rectal disease' SubClassOf 'intestinal disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009684
-Label: quadriplegia
-+   'quadriplegia' SubClassOf 'central nervous system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009683
-Label: puerperal disorder
-+   'puerperal disorder' SubClassOf 'pregnancy disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009682
-Label: pregnancy disorder
-+   'pregnancy disorder' SubClassOf 'female reproductive system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009610
-Label: cervical spondylosis
-+   'cervical spondylosis' SubClassOf 'skeletal system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009611
-Label: orbital fracture
-+   'orbital fracture' SubClassOf 'Skull Fractures'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009612
-Label: jaw fracture
-+   'jaw fracture' SubClassOf 'Skull Fractures'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009613
-Label: fibula fracture
-+   'fibula fracture' SubClassOf 'lower extremity fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009614
-Label: clavicle fracture
-+   'clavicle fracture' SubClassOf 'bone fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009615
-Label: ankle fracture
-+   'ankle fracture' SubClassOf 'lower extremity fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009616
-Label: finger fracture
-+   'finger fracture' SubClassOf 'upper extremity fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009617
-Label: knee fracture
-+   'knee fracture' SubClassOf 'lower extremity fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009618
-Label: foot fracture
-+   'foot fracture' SubClassOf 'lower extremity fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009619
-Label: neuroma
-+   'neuroma' SubClassOf 'neoplasm'
-+   'neuroma' SubClassOf 'nervous system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009622
-Label: fracture of pelvis
-+   'fracture of pelvis' SubClassOf 'bone fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009623
-Label: nose injury
-+   'nose injury' SubClassOf 'head injury'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009620
-Label: rib fracture
-+   'rib fracture' SubClassOf 'bone fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009621
-Label: shoulder fracture
-+   'shoulder fracture' SubClassOf 'bone fracture'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009626
-Label: pyloric stenosis
-+   'pyloric stenosis' SubClassOf 'stomach disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009627
-Label: collecting specimen from organ postmortem
-+   'collecting specimen from organ postmortem' SubClassOf 'collecting specimen from organism'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009624
-Label: pulmonary alveolitis
-+   'pulmonary alveolitis' SubClassOf 'lung disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009625
-Label: facial pain
-+   'facial pain' SubClassOf 'pain'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009628
-Label: abnormal result of function studies
-+   'abnormal result of function studies' SubClassOf 'test result'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009629
-Label: event
-+   'event' SubClassOf 'process'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009631
-Label: fall
-+   'fall' SubClassOf 'event'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009632
-Label: amputation
-+   'amputation' SubClassOf 'medical procedure'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009633
-Label: tissue donor
-+   'tissue donor' SubClassOf 'role'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009634
-Label: organ donor
-+   'organ donor' SubClassOf 'role'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009630
-Label: convalescence
-+   'convalescence' SubClassOf 'event'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009639
-Label: Braxton-Hicks contractions
-+   'Braxton-Hicks contractions' SubClassOf 'sign or symptom'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009635
-Label: blood donor
-+   'blood donor' SubClassOf 'role'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009636
-Label: cesarean section
-+   'cesarean section' SubClassOf 'medical procedure'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009637
-Label: pleural effusion
-+   'pleural effusion' SubClassOf 'sign or symptom'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009638
-Label: spontaneous labor and birth
-+   'spontaneous labor and birth' SubClassOf 'event'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009644
-Label: neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy
-+   'neurodevelopmental disorder with microcephaly, seizures, and cortical atrophy' SubClassOf 'genetic disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009645
-Label: neurodevelopmental disorder with or without anomalies of the brain, eye, or heart
-+   'neurodevelopmental disorder with or without anomalies of the brain, eye, or heart' SubClassOf 'genetic disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009642
-Label: follow-up
-+   'follow-up' SubClassOf 'medical procedure'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009643
-Label: pregnancy test
-+   'pregnancy test' SubClassOf 'medical procedure'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009640
-Label: family history of cancer
-+   'family history of cancer' SubClassOf 'family history'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009641
-Label: malaise
-+   'malaise' SubClassOf 'sign or symptom'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009648
-Label: parp inhibitor response
-+   'parp inhibitor response' SubClassOf 'response to drug'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009649
-Label: susceptibility to breast cancer
-+   'susceptibility to breast cancer' SubClassOf 'breast carcinoma'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009646
-Label: macrothrombocytopenia and granulocyte inclusions with or without nephritis or sensorineural hearing loss
-+   'macrothrombocytopenia and granulocyte inclusions with or without nephritis or sensorineural hearing loss' SubClassOf 'MYH9-related disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009647
-Label: epilepsy, hearing loss, and mental retardation syndrome
-+   'epilepsy, hearing loss, and mental retardation syndrome' SubClassOf 'genetic disorder'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009603
-Label: stroke outcome severity measurement
-+   'stroke outcome severity measurement' SubClassOf 'is_about' some 'Ischemic stroke'
-+   'stroke outcome severity measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009602
-Label: prostate disease
-+   'prostate disease' EquivalentTo 'disease' and ('has_disease_location' some ('prostate gland' or ('part_of' some 'prostate gland')))
-+   'prostate disease' SubClassOf 'male reproductive system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009605
-Label: pancreas disease
-+   'pancreas disease' SubClassOf 'digestive system disease'
-+   'pancreas disease' SubClassOf 'has_disease_location' some ('pancreas' or ('part_of' some 'pancreas'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009604
-Label: labyrinthitis
-+   'labyrinthitis' SubClassOf 'auditory system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009607
-Label: pituitary gland disease
-+   'pituitary gland disease' SubClassOf 'brain disease'
-+   'pituitary gland disease' SubClassOf 'has_disease_location' some ('pituitary gland' or ('part_of' some 'pituitary gland'))
-+   'pituitary gland disease' SubClassOf 'endocrine system disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009606
-Label: macular degeneration
-+   'macular degeneration' SubClassOf 'eye disease'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009609
-Label: myocarditis
-+   'myocarditis' SubClassOf 'cardiomyopathy'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009608
-Label: stomach disease
-+   'stomach disease' SubClassOf 'digestive system disease'
-+   'stomach disease' SubClassOf 'has_disease_location' some ('stomach' or ('part_of' some 'stomach'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009601
-Label: testicular disease
-+   'testicular disease' SubClassOf 'male reproductive system disease'
-+   'testicular disease' EquivalentTo 'disease' and ('has_disease_location' some ('testis' or ('part_of' some 'testis')))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009600
-Label: thyroid radioablation therapy
-+   'thyroid radioablation therapy' SubClassOf 'treatment'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009598
-Label: feeling miserable measurement
-+   'feeling miserable measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009599
-Label: feeling emotionally hurt measurement
-+   'feeling emotionally hurt measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009596
-Label: feeling tense measurement
-+   'feeling tense measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009597
-Label: feeling nervous measurement
-+   'feeling nervous measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009594
-Label: irritability measurment
-+   'irritability measurment' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009595
-Label: guilt measurement
-+   'guilt measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009583
-Label: place of residence measurement
-+   'place of residence measurement' SubClassOf 'measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009584
-Label: AQP4-IgG-positive neuromyelitis optica
-+   'AQP4-IgG-positive neuromyelitis optica' SubClassOf 'has_disease_location' some ('central nervous system' or ('part_of' some 'central nervous system'))
-+   'AQP4-IgG-positive neuromyelitis optica' SubClassOf 'neuromyelitis optica'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009585
-Label: AQP4-IgG-negative neuromyelitis optica
-+   'AQP4-IgG-negative neuromyelitis optica' SubClassOf 'neuromyelitis optica'
-+   'AQP4-IgG-negative neuromyelitis optica' SubClassOf 'has_disease_location' some ('central nervous system' or ('part_of' some 'central nervous system'))
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009586
-Label: skin hydration measurement
-+   'skin hydration measurement' SubClassOf 'skin barrier function measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009587
-Label: anhedonia measurement
-+   'anhedonia measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009588
-Label: feeling "fed-up" measurement
-+   'feeling "fed-up" measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009589
-Label: worry measurment
-+   'worry measurment' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009591
-Label: verbal memory measurement
-+   'verbal memory measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009590
-Label: visual memory measurement
-+   'visual memory measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009593
-Label: mood change measurement
-+   'mood change measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009592
-Label: social interaction measurement
-+   'social interaction measurement' SubClassOf 'emotional symptom measurement'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0001732
-Label: pharyngeal tonsil
-+   'pharyngeal tonsil' SubClassOf 'tonsil'
- 
-Class: http://purl.obolibrary.org/obo/HP_0031456
-Label: ectopic pregnancy
-+   'ectopic pregnancy' SubClassOf 'abnormality of prenatal development or birth'
- 
-Class: http://purl.obolibrary.org/obo/HP_0001279
-Label: syncope
-+   'syncope' SubClassOf 'Abnormality of the cardiovascular system'
- 
-Class: http://purl.obolibrary.org/obo/HP_0000138
-Label: ovarian cyst
-+   'ovarian cyst' SubClassOf 'abnormality of female internal genitalia'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0009114
-Label: cervical thymus
-+   'cervical thymus' SubClassOf 'thymus'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0009115
-Label: thoracic thymus
-+   'thoracic thymus' SubClassOf 'thymus'
- 
-Class: http://purl.obolibrary.org/obo/HP_0025328
-Label: antepartum hemorrhage
-+   'antepartum hemorrhage' SubClassOf 'hemorrhage'
- 
-Class: http://purl.obolibrary.org/obo/HP_0002043
-Label: esophageal stricture
-+   'esophageal stricture' SubClassOf 'esophageal disease'
-+   'esophageal stricture' SubClassOf 'stricture'
- 
-Class: http://purl.obolibrary.org/obo/HP_0002036
-Label: hiatus hernia
-+   'hiatus hernia' SubClassOf 'Abnormality of the digestive system'
-+   'hiatus hernia' SubClassOf 'Hernia'
- 
-Class: http://purl.obolibrary.org/obo/HP_0002107
-Label: pneumothorax
-+   'pneumothorax' SubClassOf 'abnormality of the lung'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0003949
-Label: tubal tonsil
-+   'tubal tonsil' SubClassOf 'tonsil'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0002368
-Label: endocrine gland
-+   'endocrine gland' SubClassOf 'gland'
- 
-Class: http://purl.obolibrary.org/obo/HP_0002321
-Label: vertigo
-+   'vertigo' SubClassOf 'Abnormality of the inner ear'
- 
-Class: http://purl.obolibrary.org/obo/HP_0011079
-Label: impacted tooth
-+   'impacted tooth' SubClassOf 'Abnormality of the head'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0007250
-Label: lingual tonsil
-+   'lingual tonsil' SubClassOf 'tonsil'
- 
-Class: http://purl.obolibrary.org/obo/HP_0011110
-Label: tonsillitis
-+   'tonsillitis' SubClassOf 'Abnormality of the digestive system'
-+   'tonsillitis' SubClassOf 'Abnormality of the head'
-+   'tonsillitis' SubClassOf 'abnormality of the lymphatic system'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0007142
-Label: left internal carotid artery
-+   'left internal carotid artery' SubClassOf 'internal carotid artery'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0007143
-Label: right internal carotid artery
-+   'right internal carotid artery' SubClassOf 'internal carotid artery'
- 
-Class: http://purl.obolibrary.org/obo/HP_0011368
-Label: epidermal thickening
-+   'epidermal thickening' SubClassOf 'abnormality of the skin'
- 
-Class: http://purl.obolibrary.org/obo/HP_0012514
-Label: lower limb pain
-+   'lower limb pain' SubClassOf 'pain'
- 
-Class: http://purl.obolibrary.org/obo/HP_0012532
-Label: chronic pain
-+   'chronic pain' SubClassOf 'pain'
-+   'chronic pain' SubClassOf 'has modifier' some 'chronic'
- 
-Class: http://purl.obolibrary.org/obo/HP_0012598
-Label: abnormal urine potassium concentration
-+   'abnormal urine potassium concentration' SubClassOf 'Abnormality of urine homeostasis'
- 
-Class: http://purl.obolibrary.org/obo/HP_0012603
-Label: abnormal urine sodium concentration
-+   'abnormal urine sodium concentration' SubClassOf 'Abnormality of urine homeostasis'
- 
-Class: http://purl.obolibrary.org/obo/HP_0012390
-Label: anal fissure
-+   'anal fissure' SubClassOf 'abnormality of the anus'
- 
-Class: http://purl.obolibrary.org/obo/HP_0012378
-Label: fatigue
-+   'fatigue' SubClassOf 'sign or symptom'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0003119
-Label: pharyngeal arch artery 2
-+   'pharyngeal arch artery 2' SubClassOf 'aortic arch'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0003118
-Label: pharyngeal arch artery 1
-+   'pharyngeal arch artery 1' SubClassOf 'aortic arch'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0008998
-Label: vasculature of brain
-+   'vasculature of brain' SubClassOf 'part_of' some 'brain'
-+   'vasculature of brain' SubClassOf 'vasculature'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0003123
-Label: pharyngeal arch artery 6
-+   'pharyngeal arch artery 6' SubClassOf 'aortic arch'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0003122
-Label: pharyngeal arch artery 5
-+   'pharyngeal arch artery 5' SubClassOf 'aortic arch'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0003121
-Label: pharyngeal arch artery 4
-+   'pharyngeal arch artery 4' SubClassOf 'aortic arch'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0003120
-Label: pharyngeal arch artery 3
-+   'pharyngeal arch artery 3' SubClassOf 'aortic arch'
- 
-Class: http://purl.obolibrary.org/obo/HP_0030766
-Label: ear pain
-+   'ear pain' SubClassOf 'pain'
- 
-Class: http://purl.obolibrary.org/obo/CHEBI_35627
-Label: beta-lactam
-+   'beta-lactam' SubClassOf 'amide'
- 
-Class: http://purl.obolibrary.org/obo/HP_0030838
-Label: hip pain
-+   'hip pain' SubClassOf 'pain'
- 
-Class: http://purl.obolibrary.org/obo/HP_0030833
-Label: neck pain
-+   'neck pain' SubClassOf 'pain'
- 
-Class: http://purl.obolibrary.org/obo/HP_0030834
-Label: shoulder pain
-+   'shoulder pain' SubClassOf 'pain'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0009480
-Label: coping behaviour measurement
-+   'coping behaviour measurement' SubClassOf 'mental or behavioural disorder biomarker'
- 
-Class: http://purl.obolibrary.org/obo/HP_0000737
-Label: irritability
-+   'irritability' SubClassOf 'Impaired social interactions'
-+   'irritability' SubClassOf 'behavioral abnormality'
- 
-Class: http://purl.obolibrary.org/obo/HP_0000720
-Label: mood swings
-+   'mood swings' SubClassOf 'behavioral abnormality'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0006849
-Label: scapula
-+   'scapula' SubClassOf 'animal component'
+Class: http://www.ebi.ac.uk/efo/EFO_0009759
+Label: Chronic Obstructive Asthma
++   'Chronic Obstructive Asthma' SubClassOf 'asthma'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009752
+Label: visuospatial impairment
++   'visuospatial impairment' SubClassOf 'mental or behavioural disorder'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009750
+Label: dissociation measurement
++   'dissociation measurement' SubClassOf 'psychological measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009751
+Label: facial asymmetry measurement
++   'facial asymmetry measurement' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009760
+Label: non-proliferative diabetic retinopathy
++   'non-proliferative diabetic retinopathy' SubClassOf 'diabetic retinopathy'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009734
+Label: unspecified juvenile idiopathic arthritis
++   'unspecified juvenile idiopathic arthritis' SubClassOf 'juvenile idiopathic arthritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009735
+Label: co-investigator
++   'co-investigator' SubClassOf 'investigator'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009736
+Label: principal investigator
++   'principal investigator' SubClassOf 'investigator'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009737
+Label: data curator
++   'data curator' SubClassOf 'curator'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009738
+Label: pathologist
++   'pathologist' SubClassOf 'role'
++   'pathologist' SubClassOf 'inheres_in' some 'Homo sapiens'
++   'pathologist' SubClassOf 'inheres_in' some 'organization'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009739
+Label: technician
++   'technician' SubClassOf 'role'
++   'technician' SubClassOf 'inheres_in' some 'Homo sapiens'
++   'technician' SubClassOf 'inheres_in' some 'organization'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009730
+Label: polyarticular juvenile idiopathic arthritis
++   'polyarticular juvenile idiopathic arthritis' SubClassOf 'juvenile idiopathic arthritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009731
+Label: polyarticular juvenile idiopathic arthritis, rheumatoid factor positive
++   'polyarticular juvenile idiopathic arthritis, rheumatoid factor positive' SubClassOf 'polyarticular juvenile idiopathic arthritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009732
+Label: enthesitis-related juvenile idiopathic arthritis
++   'enthesitis-related juvenile idiopathic arthritis' SubClassOf 'juvenile idiopathic arthritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009733
+Label: psoriasis-related juvenile idiopathic arthritis
++   'psoriasis-related juvenile idiopathic arthritis' SubClassOf 'juvenile idiopathic arthritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009747
+Label: GM25256
++   'GM25256' SubClassOf 'has_quality' some 'male'
++   'GM25256' SubClassOf 'derives_from' some ('induced pluripotent stem cell' and ('part_of' some ('skin of body' and (('part_of' some 'Homo sapiens') and ('part_of' some 'leg')))))
++   'GM25256' SubClassOf 'fibroblast derived cell line'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009748
+Label: response to ketamine
++   'response to ketamine' SubClassOf 'has_input' some 'ketamine'
++   'response to ketamine' SubClassOf 'response to drug'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009745
+Label: persistent oligoarticular juvenile idiopathic arthritis
++   'persistent oligoarticular juvenile idiopathic arthritis' SubClassOf 'oligoarticular juvenile idiopathic arthritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009746
+Label: extended oligoarticular juvenile idiopathic arthritis
++   'extended oligoarticular juvenile idiopathic arthritis' SubClassOf 'oligoarticular juvenile idiopathic arthritis'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009749
+Label: age at first sexual intercourse measurement
++   'age at first sexual intercourse measurement' SubClassOf 'reproductive behaviour measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009740
+Label: clinician
++   'clinician' SubClassOf 'inheres_in' some 'organization'
++   'clinician' SubClassOf 'inheres_in' some 'Homo sapiens'
++   'clinician' SubClassOf 'role'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009743
+Label: administrator
++   'administrator' SubClassOf 'inheres_in' some 'organization'
++   'administrator' SubClassOf 'inheres_in' some 'Homo sapiens'
++   'administrator' SubClassOf 'role'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009744
+Label: surgical resection
++   'surgical resection' SubClassOf 'collecting specimen from organism'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009741
+Label: experimental scientist
++   'experimental scientist' SubClassOf 'inheres_in' some 'Homo sapiens'
++   'experimental scientist' SubClassOf 'role'
++   'experimental scientist' SubClassOf 'inheres_in' some 'organization'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009742
+Label: computational scientist
++   'computational scientist' SubClassOf 'role'
++   'computational scientist' SubClassOf 'inheres_in' some 'Homo sapiens'
++   'computational scientist' SubClassOf 'inheres_in' some 'organization'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009720
+Label: able to hear with hearing aids
++   'able to hear with hearing aids' SubClassOf 'hearing measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009722
+Label: number of stillbirths
++   'number of stillbirths' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009721
+Label: mother's age at death
++   'mother's age at death' SubClassOf 'age'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009724
+Label: health satisfaction measurement
++   'health satisfaction measurement' SubClassOf 'wellbeing measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009723
+Label: job satisfaction measurement
++   'job satisfaction measurement' SubClassOf 'wellbeing measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009726
+Label: financial situation satisfaction measurement
++   'financial situation satisfaction measurement' SubClassOf 'wellbeing measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009725
+Label: friendship satisfaction measurement
++   'friendship satisfaction measurement' SubClassOf 'wellbeing measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009728
+Label: cochlear implant
++   'cochlear implant' SubClassOf 'medical procedure'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009727
+Label: shortness of breath
++   'shortness of breath' SubClassOf 'sign or symptom'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009729
+Label: surgery on leg artery
++   'surgery on leg artery' SubClassOf 'medical procedure'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009711
+Label: Townsend deprivation index
++   'Townsend deprivation index' SubClassOf 'quality'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009710
+Label: micrometastasis
++   'micrometastasis' SubClassOf 'metastatic neoplasm'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009715
+Label: wheezing
++   'wheezing' SubClassOf 'sign or symptom'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009714
+Label: chronic disease
++   'chronic disease' SubClassOf 'has modifier' some 'chronic'
++   'chronic disease' SubClassOf 'disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009713
+Label: number of siblings
++   'number of siblings' SubClassOf 'measurement'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009712
+Label: father's age at death
++   'father's age at death' SubClassOf 'age'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009719
+Label: artificial cardiac pacemaker
++   'artificial cardiac pacemaker' SubClassOf 'medical procedure'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009718
+Label: peak expiratory flow
++   'peak expiratory flow' SubClassOf 'test result'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009717
+Label: bilateral oophorectomy
++   'bilateral oophorectomy' SubClassOf 'medical procedure'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009716
+Label: age at first facial hair
++   'age at first facial hair' SubClassOf 'age'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009709
+Label: metastatic neoplasm
++   'metastatic neoplasm' SubClassOf 'neoplasm'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009706
+Label: latent autoimmune diabetes in adults
++   'latent autoimmune diabetes in adults' SubClassOf 'autoimmune disease'
++   'latent autoimmune diabetes in adults' SubClassOf 'type I diabetes mellitus'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009705
+Label: small intestine enteropathy
++   'small intestine enteropathy' SubClassOf 'has_disease_location' some ('digestive system' or ('part_of' some 'digestive system'))
++   'small intestine enteropathy' SubClassOf 'digestive system disease'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009708
+Label: metastasis
++   'metastasis' SubClassOf 'pathological process'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009707
+Label: fractures, ununited
++   'fractures, ununited' SubClassOf 'bone fracture'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009702
+Label: intra-individual reaction time variability measurement
++   'intra-individual reaction time variability measurement' SubClassOf 'cognitive function measurement'
++   'intra-individual reaction time variability measurement' SubClassOf 'is_about' some 'cognition'
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009704
+Label: radiation-induced brain injury
++   'radiation-induced brain injury' SubClassOf 'radiation-induced disorder'
++   'radiation-induced brain injury' SubClassOf 'has_disease_location' some ('brain' or ('part_of' some 'brain'))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0009703
+Label: red blood cell folate measurement
++   'red blood cell folate measurement' SubClassOf 'folic acid measurement'
+ 
+Class: http://purl.obolibrary.org/obo/CHEBI_6121
+Label: ketamine
++   'ketamine' SubClassOf 'chemical entity'
 
 
 
@@ -761,247 +281,285 @@ Label: scapula
 2. Changes to EFO
 
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000095
-Label: chronic lymphocytic leukemia
-+   'chronic lymphocytic leukemia' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002059
+Label: HT1080
+-   'HT1080' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'HT1080' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('connective tissue' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000206
-Label: stage II endometrioid carcinoma
--   'stage II endometrioid carcinoma' SubClassOf 'carcinoma'
-+   'stage II endometrioid carcinoma' SubClassOf 'endometrioid carcinoma'
+Class: http://www.ebi.ac.uk/efo/EFO_0002078
+Label: S1
+-   'S1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Drosophila melanogaster'))))
++   'S1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('embryo' and ('part_of' some 'Drosophila melanogaster'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000205
-Label: stage I endometrioid carcinoma
--   'stage I endometrioid carcinoma' SubClassOf 'carcinoma'
-+   'stage I endometrioid carcinoma' SubClassOf 'endometrioid carcinoma'
+Class: http://www.ebi.ac.uk/efo/EFO_0002067
+Label: K562
+-   'K562' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'K562' SubClassOf 'derives_from' some ('lymphocyte' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0002428
-Label: chronic myeloproliferative disorder
-+   'chronic myeloproliferative disorder' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002083
+Label: SW480
+-   'SW480' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'SW480' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('colon' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0008346
-Label: family history of upper gastrointestinal cancer
--   'family history of upper gastrointestinal cancer' SubClassOf 'family history'
-+   'family history of upper gastrointestinal cancer' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009640
+Class: http://www.ebi.ac.uk/efo/EFO_0002150
+Label: Caki2
+-   'Caki2' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'Caki2' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('kidney' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002157
+Label: D341Med
+-   'D341Med' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'D341Med' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('brain' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0001098
+Label: C2C12
+-   'C2C12' SubClassOf 'derives_from' some ('myoblast' and ('part_of' some ('organism part' and ('part_of' some 'Mus musculus'))))
++   'C2C12' SubClassOf 'derives_from' some ('myoblast' and ('part_of' some ('musculature' and ('part_of' some 'Mus musculus'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0001084
+Label: 3T3-L1
+-   '3T3-L1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Mus musculus'))))
++   '3T3-L1' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002246
+Label: NAMALWA
+-   'NAMALWA' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'NAMALWA' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002322
+Label: RPMI8226
+-   'RPMI8226' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'RPMI8226' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0000196
+Label: metastatic prostate cancer
++   'metastatic prostate cancer' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009709
  
 Class: http://www.ebi.ac.uk/efo/EFO_0002461
 Label: skeletal system disease
-+   'skeletal system disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009676
+-   'skeletal system disease' SubClassOf 'has_disease_location' some ('skeletal system' or ('part_of' some 'skeletal system'))
+ 
+Class: http://www.ebi.ac.uk/efo/EFO_0002617
+Label: metastatic melanoma
++   'metastatic melanoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009709
  
 Class: http://www.ebi.ac.uk/efo/EFO_0002609
 Label: chronic childhood arthritis
-+   'chronic childhood arthritis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+-   'chronic childhood arthritis' SubClassOf 'rheumatoid arthritis'
++   'chronic childhood arthritis' SubClassOf 'arthritis'
++   'chronic childhood arthritis' SubClassOf 'autoimmune disease'
  
-Class: http://purl.obolibrary.org/obo/UBERON_0001886
-Label: choroid plexus
--   'choroid plexus' SubClassOf 'brain vasculature'
-+   'choroid plexus' SubClassOf http://purl.obolibrary.org/obo/UBERON_0008998
+Class: http://www.ebi.ac.uk/efo/EFO_0001155
+Label: GM12812
+-   'GM12812' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'organism'))))
++   'GM12812' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0001846
-Label: internal ear
--   'internal ear' EquivalentTo 'part_of' some 'internal ear'
-+   'internal ear' SubClassOf 'part_of' some 'ear'
+Class: http://www.ebi.ac.uk/efo/EFO_0001156
+Label: GM12813
+-   'GM12813' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'organism'))))
++   'GM12813' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0001844
-Label: cochlea
--   'cochlea' SubClassOf 'animal component'
-+   'cochlea' SubClassOf 'internal ear'
+Class: http://www.ebi.ac.uk/efo/EFO_0001159
+Label: GM12872
+-   'GM12872' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'organism'))))
++   'GM12872' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0001756
-Label: middle ear
-+   'middle ear' SubClassOf 'part_of' some 'ear'
+Class: http://www.ebi.ac.uk/efo/EFO_0001160
+Label: GM12873
+-   'GM12873' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'organism'))))
++   'GM12873' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009538
-Label: chronic inflammatory demyelinating polyneuropathy
-+   'chronic inflammatory demyelinating polyneuropathy' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0001162
+Label: GM12875
+-   'GM12875' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'organism'))))
++   'GM12875' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0008496
-Label: chronic hepatitis
-+   'chronic hepatitis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0001161
+Label: GM12874
+-   'GM12874' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'organism'))))
++   'GM12874' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0008497
-Label: chronic lung allograft dysfunction
-+   'chronic lung allograft dysfunction' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002713
+Label: Panc1
+-   'Panc1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'Panc1' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('pancreas' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0003884
-Label: chronic kidney disease
-+   'chronic kidney disease' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002717
+Label: SH-SY5Y
+-   'SH-SY5Y' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'SH-SY5Y' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('bone marrow' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0003840
-Label: chronic progressive multiple sclerosis
-+   'chronic progressive multiple sclerosis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002786
+Label: GM12892
+-   'GM12892' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'GM12892' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.orpha.net/ORDO/Orphanet_626
-Label: Large congenital melanocytic nevus
-+   'Large congenital melanocytic nevus' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009675
+Class: http://www.ebi.ac.uk/efo/EFO_0002788
+Label: GM19238
+-   'GM19238' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'GM19238' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0001124
-Label: pectoral limb scapula
--   'pectoral limb scapula' SubClassOf 'animal component'
--   'pectoral limb scapula' SubClassOf 'develops_from' some 'appendicular skeleton'
--   'pectoral limb scapula' SubClassOf 'part_of' some 'shoulder'
--   'pectoral limb scapula' SubClassOf 'develops_from' some 'embryonic structure'
--   'pectoral limb scapula' SubClassOf 'part_of' some 'appendicular skeleton'
-+   'pectoral limb scapula' SubClassOf 'obsolete class'
+Class: http://www.ebi.ac.uk/efo/EFO_0002789
+Label: GM19239
+-   'GM19239' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'GM19239' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0002227
-Label: spiral organ of cochlea
-+   'spiral organ of cochlea' SubClassOf 'part_of' some 'cochlea'
+Class: http://www.ebi.ac.uk/efo/EFO_0002782
+Label: glioblastoma H54
+-   'glioblastoma H54' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'glioblastoma H54' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('brain' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000341
-Label: chronic obstructive pulmonary disease
-+   'chronic obstructive pulmonary disease' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002783
+Label: GM06990
+-   'GM06990' SubClassOf 'derives_from' some ('lymphoblast' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'GM06990' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000342
-Label: chronic pancreatitis
-+   'chronic pancreatitis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002784
+Label: GM12878
+-   'GM12878' SubClassOf 'derives_from' some ('B-lymphoblast' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'GM12878' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000339
-Label: chronic myelogenous leukemia
-+   'chronic myelogenous leukemia' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002785
+Label: GM12891
+-   'GM12891' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'GM12891' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0000337
-Label: chronic gastritis
-+   'chronic gastritis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002791
+Label: HeLa-S3
+-   'HeLa-S3' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'HeLa-S3' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('uterine cervix' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0001042
-Label: chordate pharynx
--   'chordate pharynx' SubClassOf 'digestive system'
--   'chordate pharynx' SubClassOf 'respiratory system'
+Class: http://www.ebi.ac.uk/efo/EFO_0002790
+Label: GM19240
+-   'GM19240' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'GM19240' SubClassOf 'derives_from' some ('B cell' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0001021
-Label: nerve
-+   'nerve' SubClassOf 'part_of' some 'nervous system'
+Class: http://www.ebi.ac.uk/efo/EFO_0002793
+Label: HL-60
+-   'HL-60' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'HL-60' SubClassOf 'derives_from' some ('lymphocyte' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0001033
-Label: gustatory system
--   'gustatory system' EquivalentTo 'part_of' some 'gustatory system'
+Class: http://www.ebi.ac.uk/efo/EFO_0001222
+Label: NIH3T3
+-   'NIH3T3' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('organism part' and ('part_of' some 'Mus musculus'))))
++   'NIH3T3' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1002023
-Label: plantar wart
-+   'plantar wart' EquivalentTo 'disease' and ('has_disease_location' some ('foot' or ('part_of' some 'foot')))
-+   'plantar wart' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009662
+Class: http://www.ebi.ac.uk/efo/EFO_0002816
+Label: C3H10T1/2
+-   'C3H10T1/2' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Mus musculus'))))
++   'C3H10T1/2' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('embryo' and ('part_of' some 'Mus musculus'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1002029
-Label: chronic rhinosinusitis with nasal polyps
-+   'chronic rhinosinusitis with nasal polyps' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002860
+Label: SK-N-MC
+-   'SK-N-MC' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'SK-N-MC' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('brain' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1002030
-Label: chronic rhinosinusitis without nasal polyps
-+   'chronic rhinosinusitis without nasal polyps' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0002869
+Label: U2OS
+-   'U2OS' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'U2OS' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('bone' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://purl.obolibrary.org/obo/UBERON_0002370
-Label: thymus
-+   'thymus' SubClassOf http://purl.obolibrary.org/obo/UBERON_0002368
+Class: http://www.ebi.ac.uk/efo/EFO_0002847
+Label: PC-9
+-   'PC-9' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'PC-9' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('lung' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005606
-Label: family history of breast cancer
--   'family history of breast cancer' SubClassOf 'family history'
-+   'family history of breast cancer' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009640
+Class: http://www.ebi.ac.uk/efo/EFO_0002824
+Label: HCT116
+-   'HCT116' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'HCT116' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('colon' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0005673
-Label: chronic mucus hypersecretion
-+   'chronic mucus hypersecretion' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0003971
+Label: MEL cell line
+-   'MEL cell line' SubClassOf 'derives_from' some ('mouse erythroleukemia cell' and ('part_of' some ('organism part' and ('part_of' some 'Mus'))))
++   'MEL cell line' SubClassOf 'derives_from' some ('mouse erythroleukemia cell' and ('part_of' some ('spleen' and ('part_of' some 'Mus'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004540
-Label: chronic fatigue syndrome
-+   'chronic fatigue syndrome' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0000305
+Label: breast carcinoma
++   'breast carcinoma' EquivalentTo 'carcinoma' and ('has_disease_location' some ('breast' or ('part_of' some 'breast')))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001200
-Label: sulfhemoglobinemia
--   'sulfhemoglobinemia' SubClassOf 'immune system disease'
-+   'sulfhemoglobinemia' SubClassOf 'hematological system disease'
+Class: http://www.ebi.ac.uk/efo/EFO_1002020
+Label: polyarticular juvenile idiopathic arthritis, rheumatoid factor negative
+-   'polyarticular juvenile idiopathic arthritis, rheumatoid factor negative' SubClassOf 'systemic juvenile idiopathic arthritis'
++   'polyarticular juvenile idiopathic arthritis, rheumatoid factor negative' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009730
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004239
-Label: chronic hepatitis B infection
-+   'chronic hepatitis B infection' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_1001012
+Label: leptomeningeal metastases
++   'leptomeningeal metastases' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009709
  
-Class: http://www.ebi.ac.uk/efo/EFO_0004220
-Label: Chronic Hepatitis C infection
-+   'Chronic Hepatitis C infection' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0005803
+Label: hematologic disease
++   'hematologic disease' EquivalentTo 'disease' and ('has_disease_location' some ('hematopoietic system' or ('part_of' some 'hematopoietic system')))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000178
-Label: Chronic Eosinophilic Leukemia, Not Otherwise Specified
-+   'Chronic Eosinophilic Leukemia, Not Otherwise Specified' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0004389
+Label: UCH-1
+-   'UCH-1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'UCH-1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('sacrum' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000179
-Label: Chronic Neutrophilic Leukemia
-+   'Chronic Neutrophilic Leukemia' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0005901
+Label: ELF-1
+-   'ELF-1' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'ELF-1' SubClassOf 'derives_from' some ('embryonic stem cell' and ('part_of' some ('embryo' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000131
-Label: Blast Phase Chronic Myelogenous Leukemia, BCR-ABL1 Positive
-+   'Blast Phase Chronic Myelogenous Leukemia, BCR-ABL1 Positive' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_1001480
+Label: metastatic colorectal cancer
++   'metastatic colorectal cancer' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009709
  
-Class: http://www.ebi.ac.uk/efo/EFO_0007940
-Label: chronic venous insufficiency
-+   'chronic venous insufficiency' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_1001364
+Label: Lymphatic Metastasis
+-   'Lymphatic Metastasis' SubClassOf 'neoplasm'
++   'Lymphatic Metastasis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009708
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000024
-Label: chronic rhinosinusitis
-+   'chronic rhinosinusitis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0005282
+Label: HS-5
+-   'HS-5' SubClassOf 'derives_from' some ('cell type' and ('part_of' some (('developmental stage' or 'organism part') and ('part_of' some 'Homo sapiens'))))
++   'HS-5' SubClassOf 'derives_from' some ('fibroblast' and ('part_of' some ('bone marrow' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1000023
-Label: chronic cystitis
-+   'chronic cystitis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0005283
+Label: HS-27A
+-   'HS-27A' SubClassOf 'derives_from' some ('cell type' and ('part_of' some (('developmental stage' or 'organism part') and ('part_of' some 'Homo sapiens'))))
++   'HS-27A' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('bone marrow' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0006505
-Label: chronic bronchitis
-+   'chronic bronchitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009661
-+   'chronic bronchitis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0009140
+Label: metastatic pancreatic neuroendocrine tumours
++   'metastatic pancreatic neuroendocrine tumours' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009709
  
-Class: http://purl.obolibrary.org/obo/UBERON_6007435
-Label: endocrine system component
--   'endocrine system component' EquivalentTo 'part_of' some 'endocrine system'
--   'endocrine system component' SubClassOf 'animal component'
-+   'endocrine system component' SubClassOf 'obsolete class'
+Class: http://www.ebi.ac.uk/efo/EFO_1000782
+Label: altitude sickness
+-   'altitude sickness' SubClassOf 'cardiovascular disease'
++   'altitude sickness' SubClassOf 'disease has feature' some 'hypoxia'
++   'altitude sickness' SubClassOf 'disease'
  
-Class: http://www.ebi.ac.uk/efo/EFO_0006953
-Label: family history of lung cancer
--   'family history of lung cancer' SubClassOf 'family history'
-+   'family history of lung cancer' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009640
+Class: http://www.ebi.ac.uk/efo/EFO_0003037
+Label: CMK
+-   'CMK' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'CMK' SubClassOf 'derives_from' some ('megakaryocyte' and ('part_of' some ('blood' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0009363
-Label: chronic central serous retinopathy
-+   'chronic central serous retinopathy' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0003044
+Label: NCI-H460
+-   'NCI-H460' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'NCI-H460' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('lung' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_0007066
-Label: chronic ulcer of skin
-+   'chronic ulcer of skin' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
+Class: http://www.ebi.ac.uk/efo/EFO_0003061
+Label: OVCAR3
+-   'OVCAR3' SubClassOf 'derives_from' some ('cell type' and ('part_of' some ('organism part' and ('part_of' some 'Homo sapiens'))))
++   'OVCAR3' SubClassOf 'derives_from' some ('epithelial cell' and ('part_of' some ('female gonad' and ('part_of' some 'Homo sapiens'))))
  
-Class: http://www.ebi.ac.uk/efo/EFO_1001779
-Label: chronic myelomonocytic leukemia
-+   'chronic myelomonocytic leukemia' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1000868
-Label: chronic inflammatory demyelinating polyradiculoneuropathy
-+   'chronic inflammatory demyelinating polyradiculoneuropathy' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1000869
-Label: chronic interstitial cystitis
-+   'chronic interstitial cystitis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
- 
-Class: http://www.ebi.ac.uk/efo/EFO_1000893
-Label: denture stomatitis
--   'denture stomatitis' SubClassOf 'digestive system disease'
-+   'denture stomatitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009688
- 
-Class: http://www.ebi.ac.uk/efo/EFO_0006343
-Label: chronic periodontitis
-+   'chronic periodontitis' SubClassOf http://purl.obolibrary.org/obo/RO_0002573 some 'chronic'
- 
-Class: http://purl.obolibrary.org/obo/UBERON_0005284
-Label: brain vasculature
--   'brain vasculature' SubClassOf 'zebrafish component'
--   'brain vasculature' SubClassOf 'animal component'
--   'brain vasculature' SubClassOf 'part_of' some 'cardiovascular system'
--   'brain vasculature' SubClassOf 'part_of' some 'brain'
-+   'brain vasculature' SubClassOf 'obsolete class'
+Class: http://www.ebi.ac.uk/efo/EFO_0007481
+Label: septicemic plague
+-   'septicemic plague' SubClassOf 'bacterial disease'
+-   'septicemic plague' SubClassOf 'has_disease_location' some ('vasculature' or ('part_of' some 'vasculature'))
++   'septicemic plague' SubClassOf 'Yersinia pestis infectious disease'
++   'septicemic plague' SubClassOf 'has_disease_location' some ('blood' or ('part_of' some 'blood'))
 
 
 ----------------------------------
 3. Obsolete Classes
 
-n/a
+Class: http://www.ebi.ac.uk/efo/EFO_0003114
+Label: pauciarticular juvenile rheumatoid arthritis
+-   'pauciarticular juvenile rheumatoid arthritis' SubClassOf 'chronic childhood arthritis'
++   'pauciarticular juvenile rheumatoid arthritis' SubClassOf 'obsolete class'
 
 ----------------------------------
 4. Scope of the Ontology
