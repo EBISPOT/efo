@@ -69,7 +69,7 @@ imports/mondo_efo_import.owl: imports/mondo_efo_mappings.tsv imports/mondo_remov
 	java -jar ../../bin/mondo-id-switch.jar imports/mondo_efo_mappings.tsv imports/mondo_remove.owl imports/mondo_efo_import.owl && $(ROBOT) -v annotate -i imports/mondo_efo_import.owl --ontology-iri http://www.ebi.ac.uk/efo/imports/mondo_efo_import.owl -o $@
 
 imports/mondo_remove.owl: imports/mondo_import.owl
-	$(ROBOT) remove -i $< -T imports/mondo_duplicates.txt -o $@
+	$(ROBOT) remove -i imports/mondo_import.owl -T imports/mondo_duplicates.txt -o $@
 
 
 #-------------------------------------------------
