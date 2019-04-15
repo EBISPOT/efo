@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/EBISPOT/efo.svg?branch=master)](https://travis-ci.org/EBISPOT/efo)
+
 # EFO
 
 ![alt text](efo.gif?raw=true)
