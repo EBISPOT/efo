@@ -29,7 +29,7 @@ MIRRORDIR=./mirror
 # Top-level targets
 # ----------------------------------------
 
-all: all_imports $(BUILDDIR)/$(ONT).owl test #$(BUILDDIR)/$(ONT).obo
+all: all_imports $(BUILDDIR)/$(ONT).owl sparql_test #$(BUILDDIR)/$(ONT).obo
 test: all sparql_test
 prepare_release: all
 	cp $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(RELEASEDIR) &&\
