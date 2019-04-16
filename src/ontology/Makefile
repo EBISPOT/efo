@@ -22,7 +22,7 @@ HANCESTROGENERATED= ./results/efo-hancestro
 # Top-level targets
 # ----------------------------------------
 
-all: all_imports $(HANCESTROGENERATED).owl $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo test
+all: all_imports $(HANCESTROGENERATED).owl $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl sparql_test #$(ONT).obo $(ONT)_full.obo
 test: all sparql_test
 prepare_release: all
 	cp $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo $(RELEASEDIR) &&\
