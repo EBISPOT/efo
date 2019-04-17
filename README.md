@@ -9,7 +9,7 @@ The Experimental Factor Ontology (EFO) provides a systematic description of many
 
 ## Browse EFO
 
-You can explore EFO 3 in a development version of the [EMBL-EBI Ontology Lookup Service](http://35.241.144.112/ontologies/efo)
+You can explore EFO 3 in the [EMBL-EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols/ontologies/efo)
 
 ## Versions
 
@@ -43,7 +43,7 @@ This is the asserted ontology and requires an OWL-DL reasoner to view the inferr
 
 ### Editors' version
 
-Editors of this ontology should use the edit version, [master src/ontology/efo-edit.owl](https://github.com/EBISPOT/efo/blob/master/src/ontology/efo-edit.owl)
+Editors of this ontology should use the edit version, [efo2 src/ontology/efo-edit.owl](https://github.com/EBISPOT/efo/blob/efo2/src/ontology/efo-edit.owl)
 
 ## Term requests and contact
 
