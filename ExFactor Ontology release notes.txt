@@ -11,18 +11,20 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.5.1
-Date Released: 18th April 2019
-Class Count: 30438
+Experimental Factor Ontology version 3.6.0
+Date Released: 15th May 2019
+Class Count: 30926
 
 Summary: 
 
-EFO 3.5.1 is a patch release of EFO 3.5.0, fixing an issue with the upper terms of the ontology.
+EFO 3.6.0 release contains further restructuring to the disease branch and further mappings to the latest MONDO release. All existing EFO terms have retained the EFO ID. The MONDO ID for each mapped term is available within the annotations as a cross reference. Any new terms imported from MONDO have retained their MONDO IDs. 
+
+All mapped terms (EFO terms and their MONDO mapped term) can be found in the mondo_efo_mappings.tsv file situated in the imports folder. This file contains on each line: the URI of the MONDO term, the URI of the EFO term, the MONDO label and the EFO label for each mapped pair. All terms that are mapped must be added to this file in order for the MONDO term to be extracted and merged into EFO. Additionally, all MONDO terms to be extracted that are listed in the mappings file are contained in the mondo_terms.txt file.
 
 General Stats:
-Number of classes changed: 12
-Number of classes added: 16
-Number of classes deleted: 1
+Number of classes changed: 64
+Number of classes added: 488
+Number of classes deleted: 0
 
 ----------------------------------
 1.	Changes to URIs
@@ -40,135 +42,2480 @@ New Classes
 
 @Classes new to this version
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009820
-Label(s): seeing a general practitioner for nerves, anxiety, tension or depression, self-reported 
-+ 'seeing a general practitioner for nerves, anxiety, tension or depression, self-reported' SubClassOf 'self-reported trait'
+Class: http://purl.obolibrary.org/obo/GO_0046883
+Label(s): regulation of hormone secretion 
++ 'regulation of hormone secretion' SubClassOf 'regulation of secretion'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009821
-Label(s): seeing a psychiatrist for nerves, anxiety, tension or depression, self-reported 
-+ 'seeing a psychiatrist for nerves, anxiety, tension or depression, self-reported' SubClassOf 'self-reported trait'
+Class: http://purl.obolibrary.org/obo/GO_0046878
+Label(s): positive regulation of saliva secretion 
++ 'positive regulation of saliva secretion' SubClassOf 'regulation of saliva secretion'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009826
-Label(s): abnormality of serum enzyme levels 
-+ 'abnormality of serum enzyme levels' SubClassOf 'abnormality of blood and blood-forming tissues'
+Class: http://purl.obolibrary.org/obo/GO_0046877
+Label(s): regulation of saliva secretion 
++ 'regulation of saliva secretion' SubClassOf 'regulation of digestive system process'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009827
-Label(s): abnormal result of diagnostic imaging 
-+ 'abnormal result of diagnostic imaging' SubClassOf 'test result'
+Class: http://purl.obolibrary.org/obo/GO_0046879
+Label(s): hormone secretion 
++ 'hormone secretion' SubClassOf 'secretion by cell'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009822
-Label(s): ability to walk or cycle unaided for 10 minutes, self-reported 
-+ 'ability to walk or cycle unaided for 10 minutes, self-reported' SubClassOf 'self-reported trait'
+Class: http://purl.obolibrary.org/obo/GO_0032277
+Label(s): negative regulation of gonadotropin secretion 
++ 'negative regulation of gonadotropin secretion' SubClassOf 'regulation of gonadotropin secretion'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009823
-Label(s): achievement of target heart rate, self-reported 
-+ 'achievement of target heart rate, self-reported' SubClassOf 'self-reported trait'
+Class: http://purl.obolibrary.org/obo/GO_0032276
+Label(s): regulation of gonadotropin secretion 
++ 'regulation of gonadotropin secretion' SubClassOf 'regulation of hormone secretion'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009824
-Label(s): bringing up phlegm, sputum or mucus on most days, self-reported 
-+ 'bringing up phlegm, sputum or mucus on most days, self-reported' SubClassOf 'self-reported trait'
+Class: http://purl.obolibrary.org/obo/UBERON_0002418
+Label(s): cartilage tissue 
++ 'cartilage tissue' SubClassOf 'skeletal tissue'
++ 'cartilage tissue' DisjointWith 'bone tissue'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009825
-Label(s): sign or symptom concerning food and fluid intake 
-+ 'sign or symptom concerning food and fluid intake' SubClassOf 'sign or symptom'
+Class: http://purl.obolibrary.org/obo/UBERON_0002481
+Label(s): bone tissue 
++ 'cartilage tissue' DisjointWith 'bone tissue'
++ 'bone tissue' SubClassOf 'skeletal tissue'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009815
-Label(s): CASCOT confidence score measurement 
-+ 'CASCOT confidence score measurement' SubClassOf 'measurement'
+Class: http://purl.obolibrary.org/obo/UBERON_0002482
+Label(s): lamellar bone 
++ 'lamellar bone' SubClassOf 'bone tissue'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009816
-Label(s): perineal laceration during delivery 
-+ 'perineal laceration during delivery' SubClassOf 'injury'
+Class: http://purl.obolibrary.org/obo/UBERON_0002483
+Label(s): trabecular bone tissue 
++ 'compact bone tissue' DisjointWith 'trabecular bone tissue'
++ 'trabecular bone tissue' SubClassOf 'bone tissue'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009817
-Label(s): ease of getting up in the morning, self-reported 
-+ 'ease of getting up in the morning, self-reported' SubClassOf 'self-reported trait'
+Class: http://purl.obolibrary.org/obo/HP_0031987
+Label(s): Diminished ability to concentrate 
++ 'Diminished ability to concentrate' SubClassOf 'behavioral abnormality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009818
-Label(s): nap during day, self-reported 
-+ 'nap during day, self-reported' SubClassOf 'self-reported trait'
+Class: http://purl.obolibrary.org/obo/GO_0010876
+Label(s): lipid localization 
++ 'lipid localization' SubClassOf 'biological process'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009812
-Label(s): secondary malignant neoplasm 
-+ 'secondary malignant neoplasm' SubClassOf 'cancer'
-+ 'secondary malignant neoplasm' SubClassOf 'secondary neoplasm'
+Class: http://purl.obolibrary.org/obo/HP_0004308
+Label(s): Ventricular arrhythmia 
++ 'Ventricular arrhythmia' SubClassOf 'Abnormality of cardiovascular system electrophysiology'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009813
-Label(s): disease characteristic 
-+ 'disease characteristic' SubClassOf 'quality'
+Class: http://purl.obolibrary.org/obo/UBERON_0002384
+Label(s): connective tissue 
++ 'connective tissue' SubClassOf 'animal component'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009814
-Label(s): number of children fathered measurement 
-+ 'number of children fathered measurement' SubClassOf 'is_about' some 'male reproductive system'
-+ 'number of children fathered measurement' SubClassOf 'reproductive behaviour measurement'
+Class: http://purl.obolibrary.org/obo/HP_0031860
+Label(s): Abnormal heart rate variability 
++ 'Abnormal heart rate variability' SubClassOf 'Abnormality of cardiovascular system electrophysiology'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009819
-Label(s): comparative body size at age 10, self-reported 
-+ 'comparative body size at age 10, self-reported' SubClassOf 'self-reported trait'
+Class: http://purl.obolibrary.org/obo/HP_0031844
+Label(s): Euphoria 
++ 'Euphoria' SubClassOf 'behavioral abnormality'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004857
+Label(s): skeletal muscle connective tissue 
++ 'skeletal muscle connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004858
+Label(s): cellular cartilage 
++ 'cellular cartilage' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016851
+Label(s): renal fascia 
++ 'renal fascia' SubClassOf 'abdominal fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002222
+Label(s): perichondrium 
++ 'perichondrium' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/GO_0007088
+Label(s): regulation of mitotic nuclear division 
++ 'regulation of mitotic nuclear division' SubClassOf 'regulation of cell cycle'
+
+Class: http://purl.obolibrary.org/obo/GO_0044062
+Label(s): regulation of excretion 
++ 'regulation of excretion' SubClassOf 'regulation of system process'
++ 'regulation of excretion' SubClassOf 'regulation of secretion'
+
+Class: http://purl.obolibrary.org/obo/GO_0044057
+Label(s): regulation of system process 
++ 'regulation of system process' SubClassOf 'regulation of biological process'
+
+Class: http://purl.obolibrary.org/obo/GO_0044058
+Label(s): regulation of digestive system process 
++ 'regulation of digestive system process' SubClassOf 'regulation of system process'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002242
+Label(s): nucleus pulposus 
++ 'nucleus pulposus' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004755
+Label(s): skeletal tissue 
++ 'skeletal tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004764
+Label(s): intramembranous bone tissue 
++ 'endochondral bone tissue' DisjointWith 'intramembranous bone tissue'
++ 'intramembranous bone tissue' SubClassOf 'bone tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004763
+Label(s): endochondral bone tissue 
++ 'endochondral bone tissue' DisjointWith 'intramembranous bone tissue'
++ 'endochondral bone tissue' SubClassOf 'bone tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004715
+Label(s): annulus fibrosus disci intervertebralis 
++ 'annulus fibrosus disci intervertebralis' DisjointWith 'fibrous ring of heart'
++ 'annulus fibrosus disci intervertebralis' SubClassOf 'annulus fibrosus'
+
+Class: http://purl.obolibrary.org/obo/GO_0010543
+Label(s): regulation of platelet activation 
++ 'regulation of platelet activation' SubClassOf 'regulation of cell activation'
++ 'regulation of platelet activation' SubClassOf 'regulation of wound healing'
+
+Class: http://purl.obolibrary.org/obo/HP_0100738
+Label(s): Abnormal eating behavior 
++ 'Abnormal eating behavior' SubClassOf 'behavioral abnormality'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000313
+Label(s): portion of cartilage tissue in tibia 
++ 'portion of cartilage tissue in tibia' SubClassOf 'lower leg connective tissue'
++ 'portion of cartilage tissue in tibia' SubClassOf 'pelvic appendage cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0012120
+Label(s): vinculum of tendon 
++ 'vinculum of tendon' SubClassOf 'tendon'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0012118
+Label(s): infraspinatus tendon 
++ 'infraspinatus tendon' SubClassOf 'shoulder connective tissue'
++ 'infraspinatus tendon' SubClassOf 'tendon'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0012119
+Label(s): vinculum tendon of wing 
++ 'vinculum tendon of wing' SubClassOf 'forelimb connective tissue'
++ 'vinculum tendon of wing' SubClassOf 'tendon'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000114
+Label(s): lung connective tissue 
++ 'lung connective tissue' SubClassOf 'thoracic segment connective tissue'
++ 'lung connective tissue' SubClassOf 'lower respiratory tract connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000121
+Label(s): perineurium 
++ 'perineurium' SubClassOf 'dense irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000124
+Label(s): epineurium 
++ 'epineurium' SubClassOf 'dense irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000123
+Label(s): endoneurium 
++ 'endoneurium' SubClassOf 'reticular tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0002104
+Label(s): Apnea 
++ 'Apnea' SubClassOf 'Abnormality of the respiratory system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0036186
+Label(s): fibroelastic connective tissue 
++ 'fibroelastic connective tissue' SubClassOf 'elastic tissue'
++ 'fibroelastic connective tissue' SubClassOf 'fibrous connective tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0002089
+Label(s): Pulmonary hypoplasia 
++ 'Pulmonary hypoplasia' SubClassOf 'abnormality of the lung'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0014848
+Label(s): tendon of quadriceps femoris 
++ 'tendon of quadriceps femoris' SubClassOf 'tendon'
++ 'tendon of quadriceps femoris' SubClassOf 'hindlimb connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000043
+Label(s): tendon 
++ 'tendon' SubClassOf 'dense regular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002516
+Label(s): epiphyseal plate 
++ 'epiphyseal plate' SubClassOf 'hyaline cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002521
+Label(s): elastic tissue 
++ 'elastic tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0002275
+Label(s): Poor motor coordination 
++ 'Poor motor coordination' SubClassOf 'Abnormality of central motor function'
+
+Class: http://purl.obolibrary.org/obo/HP_0002653
+Label(s): Bone pain 
++ 'Bone pain' SubClassOf 'Constitutional symptom'
++ 'Bone pain' SubClassOf 'abnormality of the skeletal system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0004111
+Label(s): refractory hematologic cancer 
++ 'refractory hematologic cancer' SubClassOf 'hematopoietic and lymphoid cell neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0000019
+Label(s): Urinary hesitancy 
++ 'Urinary hesitancy' SubClassOf 'Abnormality of the bladder'
+
+Class: http://purl.obolibrary.org/obo/GO_2000294
+Label(s): positive regulation of defecation 
++ 'positive regulation of defecation' SubClassOf 'regulation of defecation'
+
+Class: http://purl.obolibrary.org/obo/GO_2000292
+Label(s): regulation of defecation 
++ 'regulation of defecation' SubClassOf 'regulation of excretion'
+
+Class: http://purl.obolibrary.org/obo/HP_0000029
+Label(s): Testicular atrophy 
++ 'Testicular atrophy' SubClassOf 'abnormality of the genital system'
+
+Class: http://purl.obolibrary.org/obo/GO_0048583
+Label(s): regulation of response to stimulus 
++ 'regulation of response to stimulus' SubClassOf 'regulation of biological process'
+
+Class: http://purl.obolibrary.org/obo/GO_0061533
+Label(s): norepinephrine secretion, neurotransmission 
++ 'norepinephrine secretion, neurotransmission' SubClassOf 'secretion by cell'
+
+Class: http://purl.obolibrary.org/obo/HP_0002579
+Label(s): Gastrointestinal dysmotility 
++ 'Gastrointestinal dysmotility' SubClassOf 'Abnormal gastrointestinal motility'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0009013
+Label(s): white fibrocartilage 
++ 'white fibrocartilage' SubClassOf 'fibrocartilage'
+
+Class: http://purl.obolibrary.org/obo/HP_0000282
+Label(s): Facial edema 
++ 'Facial edema' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0012232
+Label(s): Shortened QT interval 
++ 'Shortened QT interval' SubClassOf 'Abnormal EKG'
+
+Class: http://purl.obolibrary.org/obo/HP_0012248
+Label(s): Prolonged PR interval 
++ 'Prolonged PR interval' SubClassOf 'Abnormal EKG'
+
+Class: http://purl.obolibrary.org/obo/GO_2000428
+Label(s): regulation of neutrophil aggregation 
++ 'regulation of neutrophil aggregation' SubClassOf 'regulation of cell adhesion'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000398
+Label(s): cartilage tissue of sternum 
++ 'cartilage tissue of sternum' SubClassOf 'thoracic segment connective tissue'
++ 'cartilage tissue of sternum' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0000111
+Label(s): Renal juxtaglomerular cell hypertrophy/hyperplasia 
++ 'Renal juxtaglomerular cell hypertrophy/hyperplasia' SubClassOf 'abnormality of the kidney'
+
+Class: http://purl.obolibrary.org/obo/HP_0002721
+Label(s): Immunodeficiency 
++ 'Immunodeficiency' SubClassOf 'abnormality of the immune system'
+
+Class: http://purl.obolibrary.org/obo/GO_0051930
+Label(s): regulation of sensory perception of pain 
++ 'regulation of sensory perception of pain' SubClassOf 'regulation of neurological system process'
+
+Class: http://purl.obolibrary.org/obo/HP_0000130
+Label(s): Abnormality of the uterus 
++ 'Abnormality of the uterus' SubClassOf 'abnormality of female internal genitalia'
+
+Class: http://purl.obolibrary.org/obo/GO_0014831
+Label(s): gastro-intestinal system smooth muscle contraction 
++ 'gastro-intestinal system smooth muscle contraction' SubClassOf 'smooth muscle contraction'
+
+Class: http://purl.obolibrary.org/obo/HP_0012438
+Label(s): Abnormal gallbladder physiology 
++ 'Abnormal gallbladder physiology' SubClassOf 'Abnormality of the abdominal organs'
+
+Class: http://purl.obolibrary.org/obo/GO_0014848
+Label(s): urinary tract smooth muscle contraction 
++ 'urinary tract smooth muscle contraction' SubClassOf 'smooth muscle contraction'
+
+Class: http://purl.obolibrary.org/obo/GO_0120062
+Label(s): positive regulation of gastric emptying 
++ 'positive regulation of gastric emptying' SubClassOf 'regulation of gastric emptying'
+
+Class: http://purl.obolibrary.org/obo/GO_0120061
+Label(s): negative regulation of gastric emptying 
++ 'negative regulation of gastric emptying' SubClassOf 'regulation of gastric emptying'
+
+Class: http://purl.obolibrary.org/obo/GO_0120060
+Label(s): regulation of gastric emptying 
++ 'regulation of gastric emptying' SubClassOf 'regulation of digestive system process'
+
+Class: http://purl.obolibrary.org/obo/GO_1904014
+Label(s): response to serotonin 
++ 'response to serotonin' SubClassOf 'response to stimulus'
+
+Class: http://purl.obolibrary.org/obo/GO_1904058
+Label(s): positive regulation of sensory perception of pain 
++ 'positive regulation of sensory perception of pain' SubClassOf 'regulation of sensory perception of pain'
+
+Class: http://purl.obolibrary.org/obo/GO_1904057
+Label(s): negative regulation of sensory perception of pain 
++ 'negative regulation of sensory perception of pain' SubClassOf 'regulation of sensory perception of pain'
+
+Class: http://purl.obolibrary.org/obo/HP_0012332
+Label(s): Abnormal autonomic nervous system physiology 
++ 'Abnormal autonomic nervous system physiology' SubClassOf 'abnormality of the nervous system'
+
+Class: http://purl.obolibrary.org/obo/GO_0051726
+Label(s): regulation of cell cycle 
++ 'regulation of cell cycle' SubClassOf 'regulation of cellular process'
+
+Class: http://purl.obolibrary.org/obo/HP_0012364
+Label(s): Decreased urinary potassium 
++ 'Decreased urinary potassium' SubClassOf 'abnormal urine potassium concentration'
+
+Class: http://purl.obolibrary.org/obo/GO_0061041
+Label(s): regulation of wound healing 
++ 'regulation of wound healing' SubClassOf 'regulation of response to stimulus'
+
+Class: http://purl.obolibrary.org/obo/GO_0061045
+Label(s): negative regulation of wound healing 
++ 'negative regulation of wound healing' SubClassOf 'regulation of wound healing'
+
+Class: http://purl.obolibrary.org/obo/HP_0009027
+Label(s): Foot dorsiflexor weakness 
++ 'Foot dorsiflexor weakness' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/GO_0002695
+Label(s): negative regulation of leukocyte activation 
++ 'negative regulation of leukocyte activation' SubClassOf 'regulation of leukocyte activation'
+
+Class: http://purl.obolibrary.org/obo/GO_0002694
+Label(s): regulation of leukocyte activation 
++ 'regulation of leukocyte activation' SubClassOf 'regulation of cell activation'
++ 'regulation of leukocyte activation' SubClassOf 'regulation of immune system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0002682
+Label(s): regulation of immune system process 
++ 'regulation of immune system process' SubClassOf 'regulation of biological process'
+
+Class: http://purl.obolibrary.org/obo/HP_0000616
+Label(s): Miosis 
++ 'Miosis' SubClassOf 'Abnormal pupillary function'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0010365
+Label(s): odontoid tissue 
++ 'odontoid tissue' SubClassOf 'skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0000622
+Label(s): Blurred vision 
++ 'Blurred vision' SubClassOf 'Abnormality of the eye'
+
+Class: http://purl.obolibrary.org/obo/HP_0000632
+Label(s): Lacrimation abnormality 
++ 'Lacrimation abnormality' SubClassOf 'Abnormality of the eye'
+
+Class: http://purl.obolibrary.org/obo/HP_0012590
+Label(s): Abnormal urine output 
++ 'Abnormal urine output' SubClassOf 'abnormal renal physiology'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0010211
+Label(s): granulation tissue 
++ 'granulation tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0012877
+Label(s): Retrograde ejaculation 
++ 'Retrograde ejaculation' SubClassOf 'abnormality of the genital system'
+
+Class: http://purl.obolibrary.org/obo/GO_1905747
+Label(s): negative regulation of saliva secretion 
++ 'negative regulation of saliva secretion' SubClassOf 'regulation of saliva secretion'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006008
+Label(s): fibrous ring of heart 
++ 'fibrous ring of heart' SubClassOf 'annulus fibrosus'
++ 'fibrous ring of heart' SubClassOf 'thoracic segment connective tissue'
++ 'annulus fibrosus disci intervertebralis' DisjointWith 'fibrous ring of heart'
+
+Class: http://purl.obolibrary.org/obo/HP_0000842
+Label(s): Hyperinsulinemia 
++ 'Hyperinsulinemia' SubClassOf 'Abnormal circulating hormone level'
+
+Class: http://purl.obolibrary.org/obo/HP_0000771
+Label(s): Gynecomastia 
++ 'Gynecomastia' SubClassOf 'abnormality of the breast'
+
+Class: http://purl.obolibrary.org/obo/HP_0000738
+Label(s): Hallucinations 
++ 'Hallucinations' SubClassOf 'behavioral abnormality'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008305
+Label(s): outer fibrous layer of perichondrium 
++ 'outer fibrous layer of perichondrium' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008304
+Label(s): inner chondrogenic layer of perichondrium 
++ 'inner chondrogenic layer of perichondrium' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011900
+Label(s): perimysium 
++ 'perimysium' SubClassOf 'dense irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/GO_0051046
+Label(s): regulation of secretion 
++ 'regulation of secretion' SubClassOf 'regulation of biological process'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006494
+Label(s): apex of arytenoid 
++ 'apex of arytenoid' SubClassOf 'elastic cartilage tissue'
++ 'apex of arytenoid' SubClassOf 'larynx connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006430
+Label(s): xiphoid cartilage 
++ 'xiphoid cartilage' SubClassOf 'cartilage tissue of sternum'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006431
+Label(s): xiphoid process bone 
++ 'xiphoid process bone' SubClassOf 'thoracic segment connective tissue'
++ 'xiphoid process bone' SubClassOf 'bone tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006444
+Label(s): annulus fibrosus 
++ 'annulus fibrosus' SubClassOf 'fibrocartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0018352
+Label(s): prismatic cartilage 
++ 'prismatic cartilage' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008982
+Label(s): fascia 
++ 'fascia' SubClassOf 'dense regular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006326
+Label(s): base of arytenoid 
++ 'base of arytenoid' SubClassOf 'hyaline cartilage tissue'
++ 'base of arytenoid' SubClassOf 'larynx connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006332
+Label(s): nasal capsule 
++ 'nasal capsule' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/HP_0010515
+Label(s): Aplasia/Hypoplasia of the thymus 
++ 'Aplasia/Hypoplasia of the thymus' SubClassOf 'abnormality of the lymphatic system'
+
+Class: http://purl.obolibrary.org/obo/HP_0010539
+Label(s): Thin calvarium 
++ 'Thin calvarium' SubClassOf 'Abnormality of the skull'
+
+Class: http://purl.obolibrary.org/obo/HP_0032263
+Label(s): Increased blood pressure 
++ 'Increased blood pressure' SubClassOf 'Abnormal systemic blood pressure'
+
+Class: http://purl.obolibrary.org/obo/GO_0090331
+Label(s): negative regulation of platelet aggregation 
++ 'negative regulation of platelet aggregation' SubClassOf 'regulation of platelet aggregation'
++ 'negative regulation of platelet aggregation' SubClassOf 'negative regulation of wound healing'
+
+Class: http://purl.obolibrary.org/obo/GO_0090330
+Label(s): regulation of platelet aggregation 
++ 'regulation of platelet aggregation' SubClassOf 'regulation of cell adhesion'
++ 'regulation of platelet aggregation' SubClassOf 'regulation of platelet activation'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008883
+Label(s): osteoid 
++ 'osteoid' SubClassOf 'bone tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0032155
+Label(s): Abdominal cramps 
++ 'Abdominal cramps' SubClassOf 'abdominal pain'
++ 'Abdominal cramps' SubClassOf 'pain in abdomen'
++ 'Abdominal cramps' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/GO_0090257
+Label(s): regulation of muscle system process 
++ 'regulation of muscle system process' SubClassOf 'regulation of system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0006937
+Label(s): regulation of muscle contraction 
++ 'regulation of muscle contraction' SubClassOf 'regulation of muscle system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0006939
+Label(s): smooth muscle contraction 
++ 'smooth muscle contraction' SubClassOf 'muscle system process'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0018135
+Label(s): fibrocollagenous connective tissue 
++ 'fibrocollagenous connective tissue' SubClassOf 'fibrous connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006170
+Label(s): mesonephric capsule 
++ 'mesonephric capsule' SubClassOf 'kidney capsule'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006804
+Label(s): reticular tissue 
++ 'reticular tissue' SubClassOf 'loose connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006815
+Label(s): areolar connective tissue 
++ 'areolar connective tissue' SubClassOf 'loose connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000013
+Label(s): mineralized skeletal tissue 
++ 'mineralized skeletal tissue' SubClassOf 'skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004292
+Label(s): cardiac skeleton 
++ 'cardiac skeleton' SubClassOf 'thoracic segment connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000053
+Label(s): vacuolated notochordal tissue 
++ 'vacuolated notochordal tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000086
+Label(s): secondary cartilage tissue 
++ 'secondary cartilage tissue' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000087
+Label(s): cosmine 
++ 'cosmine' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000088
+Label(s): mineralized cartilage tissue 
++ 'mineralized cartilage tissue' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000077
+Label(s): non-mineralized chondroid tissue 
++ 'non-mineralized chondroid tissue' SubClassOf 'skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000078
+Label(s): chondroid tissue 
++ 'chondroid tissue' SubClassOf 'skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000097
+Label(s): orthodentine 
++ 'orthodentine' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004269
+Label(s): upper arm connective tissue 
++ 'upper arm connective tissue' SubClassOf 'arm connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004266
+Label(s): upper leg connective tissue 
++ 'upper leg connective tissue' SubClassOf 'leg connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004268
+Label(s): lower arm connective tissue 
++ 'lower arm connective tissue' SubClassOf 'arm connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004267
+Label(s): back connective tissue 
++ 'back connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004270
+Label(s): lower leg connective tissue 
++ 'lower leg connective tissue' SubClassOf 'leg connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000108
+Label(s): non-mineralized hyaline cartilage tissue 
++ 'non-mineralized hyaline cartilage tissue' SubClassOf 'hyaline cartilage tissue'
++ 'non-mineralized hyaline cartilage tissue' SubClassOf 'non-mineralized cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000109
+Label(s): mineralized hyaline cartilage tissue 
++ 'mineralized hyaline cartilage tissue' SubClassOf 'hyaline cartilage tissue'
++ 'mineralized hyaline cartilage tissue' SubClassOf 'mineralized cartilage tissue'
++ 'mineralized hyaline cartilage tissue' SubClassOf 'mineralized skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000104
+Label(s): ganoine 
++ 'ganoine' SubClassOf 'dermis connective tissue'
++ 'ganoine' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000106
+Label(s): vasodentine 
++ 'vasodentine' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000107
+Label(s): elasmodine 
++ 'elasmodine' SubClassOf 'dermis connective tissue'
++ 'elasmodine' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000102
+Label(s): osteodentine 
++ 'osteodentine' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004109
+Label(s): cortex of humerus 
++ 'cortex of humerus' SubClassOf 'upper arm connective tissue'
++ 'cortex of humerus' SubClassOf 'compact bone tissue'
++ 'cortex of humerus' SubClassOf 'bone tissue of long bone'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006771
+Label(s): long bone epiphyseal plate proliferative zone 
++ 'long bone epiphyseal plate proliferative zone' SubClassOf 'zone of epiphyseal plate'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006772
+Label(s): long bone epiphyseal plate hypertrophic zone 
++ 'long bone epiphyseal plate hypertrophic zone' SubClassOf 'zone of epiphyseal plate'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006775
+Label(s): zone of epiphyseal plate 
++ 'zone of epiphyseal plate' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000122
+Label(s): acellular bone tissue 
++ 'cellular bone tissue' DisjointWith 'acellular bone tissue'
++ 'acellular bone tissue' SubClassOf 'mineralized bone tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000123
+Label(s): odontode tissue 
++ 'odontode tissue' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006773
+Label(s): long bone epiphyseal plate ossification zone 
++ 'long bone epiphyseal plate ossification zone' SubClassOf 'zone of epiphyseal plate'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000115
+Label(s): mineralized bone tissue 
++ 'mineralized bone tissue' SubClassOf 'bone tissue'
++ 'mineralized bone tissue' SubClassOf 'mineralized skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004129
+Label(s): growth plate cartilage 
++ 'growth plate cartilage' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4000118
+Label(s): cellular bone tissue 
++ 'cellular bone tissue' DisjointWith 'acellular bone tissue'
++ 'cellular bone tissue' SubClassOf 'mineralized bone tissue'
+
+Class: http://purl.obolibrary.org/obo/GO_0031644
+Label(s): regulation of neurological system process 
++ 'regulation of neurological system process' SubClassOf 'regulation of system process'
+
+Class: http://purl.obolibrary.org/obo/HP_0010972
+Label(s): Anemia of inadequate production 
++ 'Anemia of inadequate production' SubClassOf 'anemia'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009862
+Label(s): chromatid-type aberration frequency 
++ 'chromatid-type aberration frequency' SubClassOf 'chromosomal aberration frequency'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009863
+Label(s): anxiety measurement 
++ 'anxiety measurement' SubClassOf 'emotional symptom measurement'
++ 'anxiety measurement' SubClassOf 'is_about' some 'anxiety'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009864
+Label(s): metabolic network measurement 
++ 'metabolic network measurement' SubClassOf 'measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009865
+Label(s): transcriptome measurement 
++ 'transcriptome measurement' SubClassOf 'measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009860
+Label(s): chromosomal aberration frequency 
++ 'chromosomal aberration frequency' SubClassOf 'genomic measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009861
+Label(s): chromosome-type aberration frequency 
++ 'chromosome-type aberration frequency' SubClassOf 'chromosomal aberration frequency'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009866
+Label(s): pulmonary vascular congestion 
++ 'pulmonary vascular congestion' SubClassOf 'abnormality of the lung'
++ 'pulmonary vascular congestion' SubClassOf 'Abnormality of the vasculature'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009867
+Label(s): dysphoria 
++ 'dysphoria' SubClassOf 'mental or behavioural disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009868
+Label(s): sedation 
++ 'sedation' SubClassOf 'medical procedure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009869
+Label(s): xerostomia 
++ 'xerostomia' SubClassOf 'abnormality of the mouth'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009851
+Label(s): muscle atrophy 
++ 'muscle atrophy' SubClassOf 'Atrophy'
+
+Class: http://purl.obolibrary.org/obo/HP_0030082
+Label(s): Abnormal drinking behavior 
++ 'Abnormal drinking behavior' SubClassOf 'behavioral abnormality'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009852
+Label(s): exhaustion 
++ 'exhaustion' SubClassOf 'fatigue'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009853
+Label(s): convulsion 
++ 'convulsion' SubClassOf 'abnormality of the nervous system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009854
+Label(s): treatment resistant depression 
++ 'treatment resistant depression' SubClassOf 'unipolar depression'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009850
+Label(s): masculinization of female, CTCAE 
++ 'masculinization of female, CTCAE' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009859
+Label(s): reflective stress response 
++ 'reflective stress response' SubClassOf 'ruminative stress response'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009855
+Label(s): frontal fibrosing alopecia 
++ 'frontal fibrosing alopecia' SubClassOf 'lichen planus, familial'
++ 'frontal fibrosing alopecia' SubClassOf 'lichen planopilaris'
++ 'frontal fibrosing alopecia' SubClassOf 'has_disease_location' some 
+('skin of body' or ('part_of' some 'skin of body'))
++ 'frontal fibrosing alopecia' SubClassOf 'genetic alopecia'
++ 'frontal fibrosing alopecia' SubClassOf 'Alopecia'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009856
+Label(s): lichen planopilaris 
++ 'lichen planopilaris' SubClassOf 'lichen planus'
++ 'lichen planopilaris' SubClassOf 'has_disease_location' some 
+('skin of body' or ('part_of' some 'skin of body'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009857
+Label(s): ruminative stress response 
++ 'ruminative stress response' SubClassOf 'response to stress'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009858
+Label(s): brooding stress response 
++ 'brooding stress response' SubClassOf 'ruminative stress response'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009884
+Label(s): urinary sodium to potassium ratio 
++ 'urinary sodium to potassium ratio' SubClassOf 'urinary metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009885
+Label(s): frailty measurement 
++ 'frailty measurement' SubClassOf 'measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009886
+Label(s): blood vessel injury 
++ 'blood vessel injury' SubClassOf 'injury'
++ 'blood vessel injury' SubClassOf 'vascular disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009887
+Label(s): intrathoracic organ injury 
++ 'intrathoracic organ injury' SubClassOf 'injury'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009880
+Label(s): teratogenicity 
++ 'teratogenicity' SubClassOf 'disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009881
+Label(s): nonischemic cardiomyopathy 
++ 'nonischemic cardiomyopathy' SubClassOf 'has_disease_location' some 
+('heart' or ('part_of' some 'heart'))
++ 'nonischemic cardiomyopathy' SubClassOf 'cardiomyopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009882
+Label(s): urinary potassium to creatinine ratio 
++ 'urinary potassium to creatinine ratio' SubClassOf 'urinary metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009883
+Label(s): urinary sodium to creatinine ratio 
++ 'urinary sodium to creatinine ratio' SubClassOf 'urinary metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009888
+Label(s): trauma complication 
++ 'trauma complication' SubClassOf 'complication'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009890
+Label(s): lean mass-adjusted fat body mass 
++ 'lean mass-adjusted fat body mass' SubClassOf 'fat body mass'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009873
+Label(s): decreased cardiac output 
++ 'decreased cardiac output' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009874
+Label(s): decreased anxiety-related response 
++ 'decreased anxiety-related response' SubClassOf 'anxiety'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009875
+Label(s): thymus atrophy 
++ 'thymus atrophy' SubClassOf 'abnormality of the immune system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009876
+Label(s): abnormal lipolysis 
++ 'abnormal lipolysis' SubClassOf 'Abnormality of lipid metabolism'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009870
+Label(s): bone metastasis 
++ 'bone metastasis' SubClassOf 'metastasis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009871
+Label(s): increased heart weight 
++ 'increased heart weight' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009872
+Label(s): increased cardiac output 
++ 'increased cardiac output' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009877
+Label(s): decreased bone mass 
++ 'decreased bone mass' SubClassOf 'abnormality of the skeletal system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009878
+Label(s): drug interaction 
++ 'drug interaction' SubClassOf 'biological process'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009879
+Label(s): gastric hemorrhage 
++ 'gastric hemorrhage' SubClassOf 'Abnormality of the digestive system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009895
+Label(s): oxcarbazepine-induced hyponatremia 
++ 'oxcarbazepine-induced hyponatremia' SubClassOf 'Hyponatremia'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009891
+Label(s): carbamazepine metabolite measurement 
++ 'carbamazepine metabolite measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009892
+Label(s): facial attractiveness measurement 
++ 'facial attractiveness measurement' SubClassOf 'facial morphology measurement'
++ 'facial attractiveness measurement' SubClassOf 'is_about' some 'facial morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009893
+Label(s): response to oxcarbazepine 
++ 'response to oxcarbazepine' SubClassOf 'response to anticonvulsant'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009894
+Label(s): carbamazepine-induced hyponatremia 
++ 'carbamazepine-induced hyponatremia' SubClassOf 'Hyponatremia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006670
+Label(s): central tendon of diaphragm 
++ 'central tendon of diaphragm' SubClassOf 'thoracic segment connective tissue'
++ 'central tendon of diaphragm' SubClassOf 'respiratory system connective tissue'
++ 'central tendon of diaphragm' SubClassOf 'tendon'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009829
+Label(s): vascular smooth muscle hypertrophy 
++ 'vascular smooth muscle hypertrophy' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0007686
+Label(s): Abnormal pupillary function 
++ 'Abnormal pupillary function' SubClassOf 'Abnormality of the eye'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009840
+Label(s): tachypnea 
++ 'tachypnea' SubClassOf 'alteration in respiration'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009841
+Label(s): irregular respiration 
++ 'irregular respiration' SubClassOf 'alteration in respiration'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009842
+Label(s): respiratory depression 
++ 'respiratory depression' SubClassOf 'alteration in respiration'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009843
+Label(s): substance-induced sleep disorder 
++ 'substance-induced sleep disorder' SubClassOf 'Sleep Disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009848
+Label(s): antiemetic effect 
++ 'antiemetic effect' SubClassOf 'sign or symptom'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009849
+Label(s): sexual arousal 
++ 'sexual arousal' SubClassOf 'reproductive process'
++ 'sexual arousal' SubClassOf 'mental process'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009844
+Label(s): nightmare 
++ 'nightmare' SubClassOf 'sign or symptom'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009845
+Label(s): catalepsy 
++ 'catalepsy' SubClassOf 'nervous system disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009846
+Label(s): muscle cramp 
++ 'muscle cramp' SubClassOf 'sign or symptom'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009847
+Label(s): dizziness 
++ 'dizziness' SubClassOf 'sign or symptom'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009832
+Label(s): cellular infiltration 
++ 'cellular infiltration' SubClassOf 'single-multicellular organism process'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009837
+Label(s): bronchodilation 
++ 'bronchodilation' SubClassOf 'respiratory process'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009838
+Label(s): alteration in respiration 
++ 'alteration in respiration' SubClassOf 'sign or symptom'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009839
+Label(s): bradypnea 
++ 'bradypnea' SubClassOf 'alteration in respiration'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009833
+Label(s): kidney injury 
++ 'kidney injury' SubClassOf 'injury'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009834
+Label(s): respiratory process 
++ 'respiratory process' SubClassOf 'biological process'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009835
+Label(s): increased respiratory secretion 
++ 'increased respiratory secretion' SubClassOf 'respiratory process'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009836
+Label(s): bronchoconstriction 
++ 'bronchoconstriction' SubClassOf 'respiratory process'
+
+Class: http://purl.obolibrary.org/obo/GO_1901731
+Label(s): positive regulation of platelet aggregation 
++ 'positive regulation of platelet aggregation' SubClassOf 'regulation of platelet aggregation'
+
+Class: http://purl.obolibrary.org/obo/GO_0043400
+Label(s): cortisol secretion 
++ 'cortisol secretion' SubClassOf 'hormone secretion'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002015
+Label(s): kidney capsule 
++ 'kidney capsule' SubClassOf 'abdomen connective tissue'
++ 'kidney capsule' SubClassOf 'fibrous connective tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0030211
+Label(s): Slow pupillary light response 
++ 'Slow pupillary light response' SubClassOf 'Abnormal pupillary function'
+
+Class: http://purl.obolibrary.org/obo/GO_0045822
+Label(s): negative regulation of heart contraction 
++ 'negative regulation of heart contraction' SubClassOf 'regulation of heart contraction'
+
+Class: http://purl.obolibrary.org/obo/GO_0045823
+Label(s): positive regulation of heart contraction 
++ 'positive regulation of heart contraction' SubClassOf 'regulation of heart contraction'
+
+Class: http://purl.obolibrary.org/obo/HP_0005184
+Label(s): Prolonged QTc interval 
++ 'Prolonged QTc interval' SubClassOf 'Abnormal EKG'
+
+Class: http://purl.obolibrary.org/obo/GO_0045839
+Label(s): negative regulation of mitotic nuclear division 
++ 'negative regulation of mitotic nuclear division' SubClassOf 'regulation of mitotic nuclear division'
+
+Class: http://purl.obolibrary.org/obo/HP_0005165
+Label(s): Shortened PR interval 
++ 'Shortened PR interval' SubClassOf 'Abnormal EKG'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004402
+Label(s): bone tissue of proximal epiphysis 
++ 'bone tissue of proximal epiphysis' SubClassOf 'bone tissue of epiphysis'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004401
+Label(s): bone tissue of distal epiphysis 
++ 'bone tissue of distal epiphysis' SubClassOf 'bone tissue of epiphysis'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004400
+Label(s): bone tissue of epiphysis 
++ 'bone tissue of epiphysis' SubClassOf 'bone tissue of long bone'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016425
+Label(s): epiphyseal plate of radius 
++ 'epiphyseal plate of radius' SubClassOf 'epiphyseal plate'
++ 'epiphyseal plate of radius' SubClassOf 'pectoral appendage cartilage tissue'
++ 'epiphyseal plate of radius' SubClassOf 'lower arm connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016422
+Label(s): compact bone of long bone 
++ 'compact bone of long bone' SubClassOf 'bone tissue of long bone'
++ 'compact bone of long bone' SubClassOf 'compact bone tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016423
+Label(s): compact bone of diaphysis 
++ 'compact bone of diaphysis' SubClassOf 'bone tissue of long bone'
++ 'compact bone of diaphysis' SubClassOf 'compact bone tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016496
+Label(s): tendon of palmaris longus 
++ 'tendon of palmaris longus' SubClassOf 'wrist connective tissue'
++ 'tendon of palmaris longus' SubClassOf 'tendon'
+
+Class: http://purl.obolibrary.org/obo/GO_0033687
+Label(s): osteoblast proliferation 
++ 'osteoblast proliferation' SubClassOf 'cell proliferation'
+
+Class: http://purl.obolibrary.org/obo/GO_0043084
+Label(s): penile erection 
++ 'penile erection' SubClassOf 'reproductive process'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015764
+Label(s): dense regular elastic tissue 
++ 'dense regular elastic tissue' SubClassOf 'regular connective tissue'
++ 'dense regular elastic tissue' SubClassOf 'elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015791
+Label(s): digit connective tissue 
++ 'digit connective tissue' SubClassOf 'limb connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013120
+Label(s): eyelid submuscular connective tissue 
++ 'eyelid submuscular connective tissue' SubClassOf 'eyelid connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003838
+Label(s): abdominal segment connective tissue 
++ 'abdominal segment connective tissue' SubClassOf 'trunk connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003837
+Label(s): thoracic segment connective tissue 
++ 'thoracic segment connective tissue' SubClassOf 'trunk connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003669
+Label(s): fascia lata 
++ 'fascia lata' SubClassOf 'deep fascia'
++ 'fascia lata' SubClassOf 'upper leg connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003609
+Label(s): aorta elastic tissue 
++ 'aorta elastic tissue' SubClassOf 'blood vessel elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003617
+Label(s): trachea elastic tissue 
++ 'trachea elastic tissue' SubClassOf 'trachea connective tissue'
++ 'trachea elastic tissue' SubClassOf 'respiratory system elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003614
+Label(s): blood vessel elastic tissue 
++ 'blood vessel elastic tissue' SubClassOf 'cardiovascular system elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003613
+Label(s): cardiovascular system elastic tissue 
++ 'cardiovascular system elastic tissue' SubClassOf 'elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003616
+Label(s): bronchus elastic tissue 
++ 'bronchus elastic tissue' SubClassOf 'bronchus connective tissue'
++ 'bronchus elastic tissue' SubClassOf 'respiratory system elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003615
+Label(s): lung elastic tissue 
++ 'lung elastic tissue' SubClassOf 'respiratory system elastic tissue'
++ 'lung elastic tissue' SubClassOf 'lung connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003610
+Label(s): heart elastic tissue 
++ 'heart elastic tissue' SubClassOf 'cardiovascular system elastic tissue'
++ 'heart elastic tissue' SubClassOf 'thoracic segment connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003611
+Label(s): respiratory system elastic tissue 
++ 'respiratory system elastic tissue' SubClassOf 'respiratory system connective tissue'
++ 'respiratory system elastic tissue' SubClassOf 'elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0005609
+Label(s): Gallbladder dysfunction 
++ 'Gallbladder dysfunction' SubClassOf 'Abnormal gallbladder physiology'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003569
+Label(s): leg connective tissue 
++ 'leg connective tissue' SubClassOf 'hindlimb connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003566
+Label(s): head connective tissue 
++ 'head connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003568
+Label(s): neck connective tissue 
++ 'neck connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003567
+Label(s): abdomen connective tissue 
++ 'abdomen connective tissue' SubClassOf 'abdominal segment connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003571
+Label(s): trachea connective tissue 
++ 'trachea connective tissue' SubClassOf 'lower respiratory tract connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003570
+Label(s): respiratory system connective tissue 
++ 'respiratory system connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003577
+Label(s): knee connective tissue 
++ 'knee connective tissue' SubClassOf 'leg connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003576
+Label(s): hip connective tissue 
++ 'hip connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003579
+Label(s): shoulder connective tissue 
++ 'shoulder connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003578
+Label(s): pedal digit connective tissue 
++ 'pedal digit connective tissue' SubClassOf 'digit connective tissue'
++ 'pedal digit connective tissue' SubClassOf 'pes connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003573
+Label(s): arm connective tissue 
++ 'arm connective tissue' SubClassOf 'forelimb connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003572
+Label(s): chest connective tissue 
++ 'chest connective tissue' SubClassOf 'thoracic segment connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003575
+Label(s): wrist connective tissue 
++ 'wrist connective tissue' SubClassOf 'manus connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003574
+Label(s): elbow connective tissue 
++ 'elbow connective tissue' SubClassOf 'arm connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003580
+Label(s): lower respiratory tract connective tissue 
++ 'lower respiratory tract connective tissue' SubClassOf 'respiratory system connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003582
+Label(s): nasopharynx connective tissue 
++ 'nasopharynx connective tissue' SubClassOf 'respiratory system connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003581
+Label(s): eyelid connective tissue 
++ 'eyelid connective tissue' SubClassOf 'head connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003588
+Label(s): forelimb connective tissue 
++ 'forelimb connective tissue' SubClassOf 'limb connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003587
+Label(s): limb connective tissue 
++ 'limb connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003589
+Label(s): hindlimb connective tissue 
++ 'hindlimb connective tissue' SubClassOf 'limb connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003584
+Label(s): mammary gland connective tissue 
++ 'mammary gland connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003583
+Label(s): larynx connective tissue 
++ 'larynx connective tissue' SubClassOf 'respiratory system connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003586
+Label(s): trunk connective tissue 
++ 'trunk connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003585
+Label(s): dermis connective tissue 
++ 'dermis connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003591
+Label(s): lobar bronchus connective tissue 
++ 'lobar bronchus connective tissue' SubClassOf 'bronchus connective tissue'
++ 'lobar bronchus connective tissue' SubClassOf 'lung connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003590
+Label(s): main bronchus connective tissue 
++ 'main bronchus connective tissue' SubClassOf 'bronchus connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003593
+Label(s): thoracic cavity connective tissue 
++ 'thoracic cavity connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003592
+Label(s): bronchus connective tissue 
++ 'bronchus connective tissue' SubClassOf 'lower respiratory tract connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003599
+Label(s): tail connective tissue 
++ 'tail connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003598
+Label(s): manus connective tissue 
++ 'manus connective tissue' SubClassOf 'forelimb connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003595
+Label(s): pes connective tissue 
++ 'pes connective tissue' SubClassOf 'hindlimb connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003594
+Label(s): pelvis connective tissue 
++ 'pelvis connective tissue' SubClassOf 'abdominal segment connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003597
+Label(s): manual digit connective tissue 
++ 'manual digit connective tissue' SubClassOf 'manus connective tissue'
++ 'manual digit connective tissue' SubClassOf 'digit connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003596
+Label(s): ankle connective tissue 
++ 'ankle connective tissue' SubClassOf 'pes connective tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0040216
+Label(s): Hypoinsulinemia 
++ 'Hypoinsulinemia' SubClassOf 'Abnormal circulating hormone level'
+
+Class: http://purl.obolibrary.org/obo/HP_0040223
+Label(s): Pulmonary hemorrhage 
++ 'Pulmonary hemorrhage' SubClassOf 'hemorrhage'
+
+Class: http://purl.obolibrary.org/obo/HP_0030897
+Label(s): Decreased intestinal transit time 
++ 'Decreased intestinal transit time' SubClassOf 'Abnormal gastrointestinal motility'
+
+Class: http://purl.obolibrary.org/obo/HP_0030895
+Label(s): Abnormal gastrointestinal motility 
++ 'Abnormal gastrointestinal motility' SubClassOf 'Functional abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019054
+Label(s): congenital limb malformation 
++ 'congenital limb malformation' SubClassOf 'developmental defect during embryogenesis'
+
+Class: http://purl.obolibrary.org/obo/GO_0035932
+Label(s): aldosterone secretion 
++ 'aldosterone secretion' SubClassOf 'hormone secretion'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015433
+Label(s): blood vessel external elastic membrane 
++ 'blood vessel external elastic membrane' SubClassOf 'blood vessel elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0003154
+Label(s): Increased circulating ACTH level 
++ 'Increased circulating ACTH level' SubClassOf 'Abnormal circulating hormone level'
+
+Class: http://purl.obolibrary.org/obo/HP_0003115
+Label(s): Abnormal EKG 
++ 'Abnormal EKG' SubClassOf 'Abnormality of cardiovascular system electrophysiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003117
+Label(s): Abnormal circulating hormone level 
++ 'Abnormal circulating hormone level' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0003199
+Label(s): Decreased muscle mass 
++ 'Decreased muscle mass' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/GO_0035813
+Label(s): regulation of renal sodium excretion 
++ 'regulation of renal sodium excretion' SubClassOf 'regulation of excretion'
+
+Class: http://purl.obolibrary.org/obo/GO_0035814
+Label(s): negative regulation of renal sodium excretion 
++ 'negative regulation of renal sodium excretion' SubClassOf 'regulation of renal sodium excretion'
+
+Class: http://purl.obolibrary.org/obo/GO_0035812
+Label(s): renal sodium excretion 
++ 'renal sodium excretion' SubClassOf 'system process'
++ 'renal sodium excretion' SubClassOf 'renal system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0035815
+Label(s): positive regulation of renal sodium excretion 
++ 'positive regulation of renal sodium excretion' SubClassOf 'regulation of renal sodium excretion'
+
+Class: http://purl.obolibrary.org/obo/HP_0003470
+Label(s): Paralysis 
++ 'Paralysis' SubClassOf 'Abnormality of central motor function'
+
+Class: http://purl.obolibrary.org/obo/GO_0070092
+Label(s): regulation of glucagon secretion 
++ 'regulation of glucagon secretion' SubClassOf 'regulation of hormone secretion'
+
+Class: http://purl.obolibrary.org/obo/GO_0070094
+Label(s): positive regulation of glucagon secretion 
++ 'positive regulation of glucagon secretion' SubClassOf 'regulation of glucagon secretion'
+
+Class: http://purl.obolibrary.org/obo/GO_0008016
+Label(s): regulation of heart contraction 
++ 'regulation of heart contraction' SubClassOf 'regulation of system process'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001439
+Label(s): compact bone tissue 
++ 'compact bone tissue' DisjointWith 'trabecular bone tissue'
++ 'compact bone tissue' SubClassOf 'bone tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013493
+Label(s): abdominal fascia 
++ 'abdominal fascia' SubClassOf 'abdomen connective tissue'
++ 'abdominal fascia' SubClassOf 'fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013492
+Label(s): prevertebral cervical fascia 
++ 'prevertebral cervical fascia' SubClassOf 'cervical fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013491
+Label(s): cervical fascia 
++ 'cervical fascia' SubClassOf 'fascia'
++ 'cervical fascia' SubClassOf 'neck connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013490
+Label(s): deep cervical fascia 
++ 'deep cervical fascia' SubClassOf 'cervical fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013489
+Label(s): superficial cervical fascia 
++ 'superficial cervical fascia' SubClassOf 'cervical fascia'
+
+Class: http://purl.obolibrary.org/obo/HP_0003401
+Label(s): Paresthesia 
++ 'Paresthesia' SubClassOf 'abnormality of the nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0030956
+Label(s): Abnormality of cardiovascular system electrophysiology 
++ 'Abnormality of cardiovascular system electrophysiology' SubClassOf 'Abnormal cardiovascular system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0030972
+Label(s): Abnormal systemic blood pressure 
++ 'Abnormal systemic blood pressure' SubClassOf 'Abnormal cardiovascular system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003720
+Label(s): Generalized muscle hypertrophy 
++ 'Generalized muscle hypertrophy' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003967
+Label(s): cutaneous elastic tissue 
++ 'cutaneous elastic tissue' SubClassOf 'elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015838
+Label(s): molar dental pulp 
++ 'molar dental pulp' SubClassOf 'dental pulp'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015837
+Label(s): incisor dental pulp 
++ 'incisor dental pulp' SubClassOf 'dental pulp'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015853
+Label(s): dental pulp of median incisor tusk 
++ 'dental pulp of median incisor tusk' SubClassOf 'head connective tissue'
++ 'dental pulp of median incisor tusk' SubClassOf 'incisor dental pulp'
+
+Class: http://purl.obolibrary.org/obo/GO_0035483
+Label(s): gastric emptying 
++ 'gastric emptying' SubClassOf 'digestion'
++ 'gastric emptying' SubClassOf 'system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0060453
+Label(s): regulation of gastric acid secretion 
++ 'regulation of gastric acid secretion' SubClassOf 'regulation of digestive system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0060454
+Label(s): positive regulation of gastric acid secretion 
++ 'positive regulation of gastric acid secretion' SubClassOf 'regulation of gastric acid secretion'
+
+Class: http://purl.obolibrary.org/obo/GO_0060455
+Label(s): negative regulation of gastric acid secretion 
++ 'negative regulation of gastric acid secretion' SubClassOf 'regulation of gastric acid secretion'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003953
+Label(s): posterior stroma of cornea 
++ 'posterior stroma of cornea' SubClassOf 'head connective tissue'
++ 'anterior stroma of cornea' DisjointWith 'posterior stroma of cornea'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003952
+Label(s): anterior stroma of cornea 
++ 'anterior stroma of cornea' SubClassOf 'head connective tissue'
++ 'anterior stroma of cornea' DisjointWith 'posterior stroma of cornea'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011392
+Label(s): blood vessel internal elastic membrane 
++ 'blood vessel internal elastic membrane' SubClassOf 'blood vessel elastic tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0001300
+Label(s): Parkinsonism 
++ 'Parkinsonism' SubClassOf 'Abnormality of central motor function'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011350
+Label(s): mylohyoid raphe 
++ 'mylohyoid raphe' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011345
+Label(s): pharyngeal raphe 
++ 'pharyngeal raphe' DisjointWith 'palatine raphe'
++ 'pharyngeal raphe' SubClassOf 'respiratory system connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011348
+Label(s): raphe of soft palate 
++ 'raphe of soft palate' SubClassOf 'palatine raphe'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011349
+Label(s): pterygomandibular raphe 
++ 'pterygomandibular raphe' SubClassOf 'head connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011346
+Label(s): palatine raphe 
++ 'palatine raphe' SubClassOf 'head connective tissue'
++ 'pharyngeal raphe' DisjointWith 'palatine raphe'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011347
+Label(s): raphe of hard palate 
++ 'raphe of hard palate' SubClassOf 'palatine raphe'
+
+Class: http://purl.obolibrary.org/obo/HP_0001336
+Label(s): Myoclonus 
++ 'Myoclonus' SubClassOf 'abnormality of movement'
+
+Class: http://purl.obolibrary.org/obo/HP_0001337
+Label(s): Tremor 
++ 'Tremor' SubClassOf 'abnormality of movement'
+
+Class: http://purl.obolibrary.org/obo/HP_0001347
+Label(s): Hyperreflexia 
++ 'Hyperreflexia' SubClassOf 'abnormality of movement'
+
+Class: http://purl.obolibrary.org/obo/GO_0098900
+Label(s): regulation of action potential 
++ 'regulation of action potential' SubClassOf 'regulation of biological process'
+
+Class: http://purl.obolibrary.org/obo/GO_0098901
+Label(s): regulation of cardiac muscle cell action potential 
++ 'regulation of cardiac muscle cell action potential' SubClassOf 'regulation of action potential'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011236
+Label(s): deep fascia 
++ 'deep fascia' SubClassOf 'fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011237
+Label(s): visceral fascia 
++ 'visceral fascia' SubClassOf 'fascia'
+
+Class: http://purl.obolibrary.org/obo/GO_0050865
+Label(s): regulation of cell activation 
++ 'regulation of cell activation' SubClassOf 'regulation of cellular process'
+
+Class: http://purl.obolibrary.org/obo/HP_0001265
+Label(s): Hyporeflexia 
++ 'Hyporeflexia' SubClassOf 'abnormality of movement'
+
+Class: http://purl.obolibrary.org/obo/HP_0410204
+Label(s): Increased intestinal transit time 
++ 'Increased intestinal transit time' SubClassOf 'Abnormal gastrointestinal motility'
+
+Class: http://purl.obolibrary.org/obo/HP_0025142
+Label(s): Constitutional symptom 
++ 'Constitutional symptom' SubClassOf 'Phenotypic abnormality'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001996
+Label(s): elastic cartilage tissue 
++ 'elastic cartilage tissue' SubClassOf 'non-mineralized cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001994
+Label(s): hyaline cartilage tissue 
++ 'hyaline cartilage tissue' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001995
+Label(s): fibrocartilage 
++ 'fibrocartilage' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0035108
+Label(s): temporalis fascia 
++ 'temporalis fascia' SubClassOf 'head connective tissue'
++ 'temporalis fascia' SubClassOf 'fascia'
+
+Class: http://purl.obolibrary.org/obo/GO_0050708
+Label(s): regulation of protein secretion 
++ 'regulation of protein secretion' SubClassOf 'regulation of secretion'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001798
+Label(s): vitreous body 
++ 'vitreous body' SubClassOf 'head connective tissue'
++ 'vitreous body' SubClassOf 'loose connective tissue'
+
+Class: http://purl.obolibrary.org/obo/GO_0050728
+Label(s): negative regulation of inflammatory response 
++ 'negative regulation of inflammatory response' SubClassOf 'regulation of inflammatory response'
+
+Class: http://purl.obolibrary.org/obo/GO_0050729
+Label(s): positive regulation of inflammatory response 
++ 'positive regulation of inflammatory response' SubClassOf 'regulation of inflammatory response'
+
+Class: http://purl.obolibrary.org/obo/GO_0050727
+Label(s): regulation of inflammatory response 
++ 'regulation of inflammatory response' SubClassOf 'regulation of response to stimulus'
+
+Class: http://purl.obolibrary.org/obo/GO_0050777
+Label(s): negative regulation of immune response 
++ 'negative regulation of immune response' SubClassOf 'regulation of immune system process'
++ 'negative regulation of immune response' SubClassOf 'regulation of response to stimulus'
+
+Class: http://purl.obolibrary.org/obo/GO_0060004
+Label(s): reflex 
++ 'reflex' SubClassOf 'regulation of response to stimulus'
+
+Class: http://purl.obolibrary.org/obo/GO_0060087
+Label(s): relaxation of vascular smooth muscle 
++ 'relaxation of vascular smooth muscle' SubClassOf 'muscle system process'
++ 'relaxation of vascular smooth muscle' SubClassOf 'regulation of muscle contraction'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001823
+Label(s): nasal cartilage 
++ 'nasal cartilage' SubClassOf 'head connective tissue'
++ 'nasal cartilage' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0035096
+Label(s): fascia of tail 
++ 'fascia of tail' SubClassOf 'fascia'
++ 'fascia of tail' SubClassOf 'tail connective tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0025428
+Label(s): bronchospasm 
++ 'bronchospasm' SubClassOf 'Abnormality of the respiratory system'
+
+Class: http://purl.obolibrary.org/obo/HP_0025382
+Label(s): Hypodipsia 
++ 'Hypodipsia' SubClassOf 'Abnormal drinking behavior'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001741
+Label(s): corniculate cartilage 
++ 'corniculate cartilage' SubClassOf 'elastic cartilage tissue'
++ 'corniculate cartilage' SubClassOf 'larynx connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001754
+Label(s): dental pulp 
++ 'dental pulp' SubClassOf 'loose connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013720
+Label(s): dartos muscle of labia majora 
++ 'dartos muscle of labia majora' SubClassOf 'dartos muscle'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001751
+Label(s): dentine 
++ 'dentine' SubClassOf 'odontoid tissue'
++ 'dentine' SubClassOf 'mineralized skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001752
+Label(s): enamel 
++ 'enamel' SubClassOf 'odontoid tissue'
++ 'enamel' SubClassOf 'mineralized skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001753
+Label(s): cementum 
++ 'cementum' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013718
+Label(s): dartos muscle 
++ 'dartos muscle' SubClassOf 'fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013719
+Label(s): dartos muscle of scrotum 
++ 'dartos muscle of scrotum' SubClassOf 'dartos muscle'
+
+Class: http://purl.obolibrary.org/obo/HP_0011105
+Label(s): Hypervolemia 
++ 'Hypervolemia' SubClassOf 'Abnormality of blood circulation'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008192
+Label(s): tendon of triceps brachii 
++ 'tendon of triceps brachii' SubClassOf 'tendon'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008188
+Label(s): tendon of biceps brachii 
++ 'tendon of biceps brachii' SubClassOf 'tendon'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008187
+Label(s): hypertrophic cartilage zone 
++ 'hypertrophic cartilage zone' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011821
+Label(s): irregular connective tissue 
++ 'irregular connective tissue' SubClassOf 'connective tissue'
++ 'regular connective tissue' DisjointWith 'irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011822
+Label(s): dense irregular connective tissue 
++ 'dense irregular connective tissue' SubClassOf 'dense connective tissue'
++ 'dense irregular connective tissue' SubClassOf 'irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011825
+Label(s): loose connective tissue 
++ 'dense connective tissue' DisjointWith 'loose connective tissue'
++ 'loose connective tissue' SubClassOf 'irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011823
+Label(s): dense connective tissue 
++ 'dense connective tissue' DisjointWith 'loose connective tissue'
++ 'dense connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011824
+Label(s): fibrous connective tissue 
++ 'fibrous connective tissue' SubClassOf 'dense irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008269
+Label(s): nacre 
++ 'nacre' SubClassOf 'skeletal tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0035845
+Label(s): enthesis 
++ 'enthesis' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0035846
+Label(s): fibrous enthesis 
++ 'fibrous enthesis' SubClassOf 'enthesis'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0035847
+Label(s): fibrocartilage enthesis 
++ 'fibrocartilage enthesis' SubClassOf 'enthesis'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011895
+Label(s): endomysium 
++ 'endomysium' SubClassOf 'reticular tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011898
+Label(s): skeletal muscle endomysium 
++ 'skeletal muscle endomysium' SubClassOf 'endomysium'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011899
+Label(s): epimysium 
++ 'epimysium' SubClassOf 'dense irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011896
+Label(s): smooth muscle endomysium 
++ 'smooth muscle endomysium' SubClassOf 'endomysium'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011897
+Label(s): cardiac endomysium 
++ 'cardiac endomysium' SubClassOf 'thoracic segment connective tissue'
++ 'cardiac endomysium' SubClassOf 'endomysium'
+
+Class: http://purl.obolibrary.org/obo/HP_0001649
+Label(s): Tachycardia 
++ 'Tachycardia' SubClassOf 'Abnormality of cardiovascular system electrophysiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001662
+Label(s): Bradycardia 
++ 'Bradycardia' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001685
+Label(s): Myocardial fibrosis 
++ 'Myocardial fibrosis' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011025
+Label(s): Abnormal cardiovascular system physiology 
++ 'Abnormal cardiovascular system physiology' SubClassOf 'Abnormality of the cardiovascular system'
+
+Class: http://purl.obolibrary.org/obo/HP_0011037
+Label(s): Decreased urine output 
++ 'Decreased urine output' SubClassOf 'Abnormal urine output'
+
+Class: http://purl.obolibrary.org/obo/HP_0011028
+Label(s): Abnormality of blood circulation 
++ 'Abnormality of blood circulation' SubClassOf 'Abnormal cardiovascular system physiology'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011587
+Label(s): pre-dentine 
++ 'pre-dentine' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011588
+Label(s): pre-enamel 
++ 'pre-enamel' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011589
+Label(s): non-mineralized cartilage tissue 
++ 'non-mineralized cartilage tissue' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011675
+Label(s): perichordal ring 
++ 'perichordal ring' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011692
+Label(s): enameloid 
++ 'enameloid' SubClassOf 'mineralized skeletal tissue'
++ 'enameloid' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0001959
+Label(s): Polydipsia 
++ 'Polydipsia' SubClassOf 'Abnormal drinking behavior'
+
+Class: http://purl.obolibrary.org/obo/HP_0001962
+Label(s): Palpitations 
++ 'Palpitations' SubClassOf 'Abnormality of cardiovascular system electrophysiology'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011688
+Label(s): pre-enameloid 
++ 'pre-enameloid' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0035438
+Label(s): mucoid tissue 
++ 'mucoid tissue' SubClassOf 'loose connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0034938
+Label(s): mucocartilage tissue 
++ 'mucocartilage tissue' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007355
+Label(s): bony part of pharyngotympanic tube 
++ 'bony part of pharyngotympanic tube' SubClassOf 'bone tissue'
++ 'bony part of pharyngotympanic tube' SubClassOf 'head connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007391
+Label(s): pelvic appendage cartilage tissue 
++ 'pelvic appendage cartilage tissue' SubClassOf 'paired limb/fin cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007390
+Label(s): pectoral appendage cartilage tissue 
++ 'pectoral appendage cartilage tissue' SubClassOf 'paired limb/fin cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007389
+Label(s): paired limb/fin cartilage 
++ 'paired limb/fin cartilage' SubClassOf 'cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0034988
+Label(s): tendon of obturator internus 
++ 'tendon of obturator internus' SubClassOf 'tendon'
+
+Class: http://purl.obolibrary.org/obo/HP_0011442
+Label(s): Abnormality of central motor function 
++ 'Abnormality of central motor function' SubClassOf 'abnormality of the nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0011499
+Label(s): Mydriasis 
++ 'Mydriasis' SubClassOf 'Abnormal pupillary function'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0034690
+Label(s): external spermatic fascia 
++ 'external spermatic fascia' SubClassOf 'spermatic fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0034691
+Label(s): internal spermatic fascia 
++ 'internal spermatic fascia' SubClassOf 'spermatic fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0034712
+Label(s): yellow fibrocartilage 
++ 'yellow fibrocartilage' SubClassOf 'fibrocartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0009644
+Label(s): trachea non-cartilage connective tissue 
++ 'trachea non-cartilage connective tissue' SubClassOf 'trachea connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0009648
+Label(s): eyelid subcutaneous connective tissue 
++ 'eyelid subcutaneous connective tissue' SubClassOf 'eyelid connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0034688
+Label(s): spermatic fascia 
++ 'spermatic fascia' SubClassOf 'fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3010827
+Label(s): anterior prenasal cartilage 
++ 'anterior prenasal cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005137
+Label(s): metanephric capsule 
++ 'metanephric capsule' SubClassOf 'kidney capsule'
+
+Class: http://purl.obolibrary.org/obo/GO_0042752
+Label(s): regulation of circadian rhythm 
++ 'regulation of circadian rhythm' SubClassOf 'regulation of biological process'
+
+Class: http://purl.obolibrary.org/obo/GO_0003092
+Label(s): renal water retention 
++ 'renal water retention' SubClassOf 'system process'
++ 'renal water retention' SubClassOf 'renal system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0003012
+Label(s): muscle system process 
++ 'muscle system process' SubClassOf 'system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0003008
+Label(s): system process 
++ 'system process' SubClassOf 'multicellular organismal process'
+
+Class: http://purl.obolibrary.org/obo/GO_0040017
+Label(s): positive regulation of locomotion 
++ 'positive regulation of locomotion' SubClassOf 'regulation of locomotion'
+
+Class: http://purl.obolibrary.org/obo/GO_0040013
+Label(s): negative regulation of locomotion 
++ 'negative regulation of locomotion' SubClassOf 'regulation of locomotion'
+
+Class: http://purl.obolibrary.org/obo/GO_0040012
+Label(s): regulation of locomotion 
++ 'regulation of locomotion' SubClassOf 'regulation of biological process'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3010529
+Label(s): ovisac 
++ 'ovisac' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000190
+Label(s): foramen orbitonasale mediale 
++ 'foramen orbitonasale mediale' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000170
+Label(s): fenestra precerebralis 
++ 'fenestra precerebralis' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000171
+Label(s): fenestra prechoanalis 
++ 'fenestra prechoanalis' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/GO_1900133
+Label(s): regulation of renin secretion into blood stream 
++ 'regulation of renin secretion into blood stream' SubClassOf 'regulation of protein secretion'
+
+Class: http://purl.obolibrary.org/obo/GO_1900134
+Label(s): negative regulation of renin secretion into blood stream 
++ 'negative regulation of renin secretion into blood stream' SubClassOf 'regulation of renin secretion into blood stream'
+
+Class: http://purl.obolibrary.org/obo/GO_1900135
+Label(s): positive regulation of renin secretion into blood stream 
++ 'positive regulation of renin secretion into blood stream' SubClassOf 'regulation of renin secretion into blood stream'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000189
+Label(s): foramen orbitonasale laterale 
++ 'foramen orbitonasale laterale' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000166
+Label(s): fenestra nasobasalis 
++ 'fenestra nasobasalis' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000164
+Label(s): fenestra lateralis nasi 
++ 'fenestra lateralis nasi' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000161
+Label(s): fenestra endochoanalis 
++ 'fenestra endochoanalis' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000162
+Label(s): fenestra endonarina communis 
++ 'fenestra endonarina communis' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000160
+Label(s): fenestra dorsalis nasi 
++ 'fenestra dorsalis nasi' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000167
+Label(s): fenestra nasolateralis 
++ 'fenestra nasolateralis' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000234
+Label(s): inferior prenasal cartilage 
++ 'inferior prenasal cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000290
+Label(s): medial inferior prenasal cartilage 
++ 'medial inferior prenasal cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000291
+Label(s): medial orbitonasal foramen 
++ 'medial orbitonasal foramen' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/GO_0042322
+Label(s): negative regulation of circadian sleep/wake cycle, REM sleep 
++ 'negative regulation of circadian sleep/wake cycle, REM sleep' SubClassOf 'regulation of circadian rhythm'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4300153
+Label(s): Sharpey's fiber 
++ 'Sharpey's fiber' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/GO_0030252
+Label(s): growth hormone secretion 
++ 'growth hormone secretion' SubClassOf 'hormone secretion'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000079
+Label(s): cartilago retronarina 
++ 'cartilago retronarina' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/HP_0031284
+Label(s): Flushing 
++ 'Flushing' SubClassOf 'abnormality of the skin'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007846
+Label(s): dense regular connective tissue 
++ 'dense regular connective tissue' SubClassOf 'dense connective tissue'
++ 'dense regular connective tissue' SubClassOf 'regular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007845
+Label(s): regular connective tissue 
++ 'regular connective tissue' SubClassOf 'connective tissue'
++ 'regular connective tissue' DisjointWith 'irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007862
+Label(s): perichordal tissue 
++ 'perichordal tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000002
+Label(s): alary cartilage 
++ 'alary cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007809
+Label(s): fascia of Camper 
++ 'fascia of Camper' SubClassOf 'abdominal fascia'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007819
+Label(s): minor alar cartilage 
++ 'minor alar cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007818
+Label(s): major alar cartilage 
++ 'major alar cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000068
+Label(s): cartilago ectochoanalis 
++ 'cartilago ectochoanalis' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000069
+Label(s): cartilago infranarina 
++ 'cartilago infranarina' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007822
+Label(s): vomeronasal cartilage 
++ 'vomeronasal cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007821
+Label(s): lateral nasal cartilage 
++ 'lateral nasal cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007820
+Label(s): accessory nasal cartilage 
++ 'accessory nasal cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/HP_0031217
+Label(s): Hot flashes 
++ 'Hot flashes' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/GO_0042110
+Label(s): T cell activation 
++ 'T cell activation' SubClassOf 'leukocyte activation'
+
+Class: http://purl.obolibrary.org/obo/GO_0030157
+Label(s): pancreatic juice secretion 
++ 'pancreatic juice secretion' SubClassOf 'digestion'
++ 'pancreatic juice secretion' SubClassOf 'system process'
+
+Class: http://purl.obolibrary.org/obo/GO_0030155
+Label(s): regulation of cell adhesion 
++ 'regulation of cell adhesion' SubClassOf 'regulation of biological process'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005991
+Label(s): aortic valve anulus 
++ 'aortic valve anulus' SubClassOf 'fibrous ring of heart'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005997
+Label(s): tricuspid valve anulus 
++ 'tricuspid valve anulus' SubClassOf 'fibrous ring of heart'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005995
+Label(s): mitral valve anulus 
++ 'mitral valve anulus' SubClassOf 'fibrous ring of heart'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005993
+Label(s): pulmonary valve anulus 
++ 'pulmonary valve anulus' SubClassOf 'fibrous ring of heart'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000571
+Label(s): specialized connective tissue 
++ 'specialized connective tissue' SubClassOf 'connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000586
+Label(s): superior prenasal cartilage 
++ 'superior prenasal cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005808
+Label(s): bone tissue of long bone 
++ 'bone tissue of long bone' SubClassOf 'bone tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005809
+Label(s): cortex of manus bone 
++ 'cortex of manus bone' SubClassOf 'manus connective tissue'
++ 'cortex of manus bone' SubClassOf 'compact bone tissue'
+
+Class: http://purl.obolibrary.org/obo/GO_0032501
+Label(s): multicellular organismal process 
++ 'multicellular organismal process' SubClassOf 'biological process'
+
+Class: http://purl.obolibrary.org/obo/GO_0007586
+Label(s): digestion 
++ 'digestion' SubClassOf 'multicellular organismal process'
+
+Class: http://purl.obolibrary.org/obo/UBERON_4300212
+Label(s): acrodin 
++ 'acrodin' SubClassOf 'odontoid tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2001456
+Label(s): pectoral fin endoskeletal disc 
++ 'pectoral fin endoskeletal disc' SubClassOf 'pectoral appendage cartilage tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000381
+Label(s): paranasal commissure 
++ 'paranasal commissure' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000389
+Label(s): paries nasi 
++ 'paries nasi' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015130
+Label(s): connective tissue of prostate gland 
++ 'connective tissue of prostate gland' SubClassOf 'dense irregular connective tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015131
+Label(s): subepithelial connective tissue of prostatic gland 
++ 'subepithelial connective tissue of prostatic gland' SubClassOf 'connective tissue of prostate gland'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000333
+Label(s): olfactory foramen 
++ 'olfactory foramen' SubClassOf 'nasal opening'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000316
+Label(s): nasal opening 
++ 'nasal opening' SubClassOf 'nasal capsule'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000329
+Label(s): oblique cartilage 
++ 'oblique cartilage' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/HP_0006677
+Label(s): Prolonged QRS complex 
++ 'Prolonged QRS complex' SubClassOf 'Abnormal EKG'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000437
+Label(s): planum conchale 
++ 'planum conchale' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000438
+Label(s): planum internasale 
++ 'planum internasale' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/UBERON_3000434
+Label(s): planum antorbitale 
++ 'planum antorbitale' SubClassOf 'nasal cartilage'
+
+Class: http://purl.obolibrary.org/obo/HP_0031685
+Label(s): Abnormal stool composition 
++ 'Abnormal stool composition' SubClassOf 'Abnormality of the digestive system'
 
 
 2. Changes to EFO3
 
 
-Class: http://purl.obolibrary.org/obo/MONDO_0021126
-Label(s): syndromic or isolated 
-- 'syndromic or isolated' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'syndromic or isolated' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009813
+Class: http://purl.obolibrary.org/obo/UBERON_0014396
+Label(s): interscapular fat pad 
++ 'interscapular fat pad' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003579
 
-Class: http://purl.obolibrary.org/obo/MONDO_0021149
-Label(s): genetic vs non-genetic etiology 
-- 'genetic vs non-genetic etiology' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'genetic vs non-genetic etiology' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009813
+Class: http://www.ebi.ac.uk/efo/EFO_0000569
+Label(s): liposarcoma 
++ 'liposarcoma' SubClassOf 'rheumatic disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0021135
-Label(s): rare or common 
-- 'rare or common' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'rare or common' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009813
+Class: http://purl.obolibrary.org/obo/UBERON_0012283
+Label(s): femoral fat pad 
++ 'femoral fat pad' SubClassOf http://purl.obolibrary.org/obo/UBERON_0004266
 
-Class: http://purl.obolibrary.org/obo/MONDO_0021139
-Label(s): congenital or acquired 
-- 'congenital or acquired' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'congenital or acquired' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009813
+Class: http://purl.obolibrary.org/obo/UBERON_0012167
+Label(s): buccal fat pad 
++ 'buccal fat pad' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003566
 
-Class: http://purl.obolibrary.org/obo/MONDO_0045034
-Label(s): infectious disease characteristic 
-- 'infectious disease characteristic' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'infectious disease characteristic' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009813
+Class: http://purl.obolibrary.org/obo/HP_0100537
+Label(s): Fasciitis 
+- 'Fasciitis' EquivalentTo 'has part' some 
+('having extra processual parts' and ('inheres_in' some 'connective tissue') and ('towards' some 'inflammation (MPATH)'))
++ 'Fasciitis' EquivalentTo 'has part' some 
+('having extra processual parts' and ('inheres_in' some http://purl.obolibrary.org/obo/UBERON_0002384) and ('towards' some 'inflammation (MPATH)'))
 
-Class: http://purl.obolibrary.org/obo/MONDO_0045040
-Label(s): locational disease characteristic 
-- 'locational disease characteristic' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'locational disease characteristic' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009813
+Class: http://www.ebi.ac.uk/efo/EFO_0002167
+Label(s): DOHH2 
+- 'DOHH2' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens'))))
+- 'DOHH2' SubClassOf 'Homo sapiens cell line'
+- 'DOHH2' SubClassOf 'B cell derived cell line'
++ 'DOHH2' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('pleural effusion' and ('part_of' some 'Homo sapiens'))))
 
-Class: http://purl.obolibrary.org/obo/MONDO_0024488
-Label(s): tumor grading characteristic 
-- 'tumor grading characteristic' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'tumor grading characteristic' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009813
+Class: http://www.ebi.ac.uk/efo/EFO_0002059
+Label(s): HT1080 
+- 'HT1080' SubClassOf 'derives_from' some 
+('epithelial cell' and ('part_of' some 
+('connective tissue' and ('part_of' some 'Homo sapiens'))))
++ 'HT1080' SubClassOf 'derives_from' some 
+('epithelial cell' and ('part_of' some 
+(http://purl.obolibrary.org/obo/UBERON_0002384 and ('part_of' some 'Homo sapiens'))))
 
-Class: http://purl.obolibrary.org/obo/MONDO_0024878
-Label(s): secondary carcinoma 
-- 'secondary carcinoma' SubClassOf 'secondary malignant neoplasm'
-+ 'secondary carcinoma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009812
+Class: http://www.ebi.ac.uk/efo/EFO_0002324
+Label(s): Raji 
+- 'Raji' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens'))))
++ 'Raji' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('lymphoid tissue' and ('part_of' some 'Homo sapiens'))))
++ 'Raji' SubClassOf 'B cell derived cell line'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0022200
-Label(s): treatment for disease 
-- 'treatment for disease' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'treatment for disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009813
+Class: http://www.ebi.ac.uk/efo/EFO_0002357
+Label(s): SUDHL6 
+- 'SUDHL6' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens'))))
+- 'SUDHL6' SubClassOf 'Homo sapiens cell line'
++ 'SUDHL6' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('pleural effusion' and ('part_of' some 'Homo sapiens'))))
 
-Class: http://purl.obolibrary.org/obo/MONDO_0024881
-Label(s): secondary malignant neoplasm 
-- 'secondary malignant neoplasm' SubClassOf 'cancer'
-- 'secondary malignant neoplasm' SubClassOf 'secondary neoplasm'
+Class: http://www.ebi.ac.uk/efo/EFO_0002373
+Label(s): SW872 
+- 'SW872' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('connective tissue' and ('part_of' some 'Homo sapiens'))))
++ 'SW872' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+(http://purl.obolibrary.org/obo/UBERON_0002384 and ('part_of' some 'Homo sapiens'))))
 
-Class: http://purl.obolibrary.org/obo/MONDO_0024880
-Label(s): metastatic malignant neoplasm 
-- 'metastatic malignant neoplasm' SubClassOf 'secondary malignant neoplasm'
-+ 'metastatic malignant neoplasm' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009812
+Class: http://www.ebi.ac.uk/efo/EFO_0002369
+Label(s): SW684 
+- 'SW684' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('connective tissue' and ('part_of' some 'Homo sapiens'))))
++ 'SW684' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+(http://purl.obolibrary.org/obo/UBERON_0002384 and ('part_of' some 'Homo sapiens'))))
 
-Class: http://purl.obolibrary.org/obo/MONDO_0042489
-Label(s): disease susceptibility 
-- 'disease susceptibility' SubClassOf http://www.w3.org/2002/07/owl#Thing
-+ 'disease susceptibility' SubClassOf 'quality'
+Class: http://purl.obolibrary.org/obo/UBERON_0010410
+Label(s): inguinal fat pad 
++ 'inguinal fat pad' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003838
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000456
+Label(s): Parathyroid Gland Carcinoma 
+- 'Parathyroid Gland Carcinoma' SubClassOf 'has_disease_location' some 
+('parathyroid' or ('part_of' some 'parathyroid'))
++ 'Parathyroid Gland Carcinoma' SubClassOf 'has_disease_location' some 
+('parathyroid gland' or ('part_of' some 'parathyroid gland'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000457
+Label(s): Parathyroid Hyperplasia 
+- 'Parathyroid Hyperplasia' SubClassOf 'has_disease_location' some 
+('parathyroid' or ('part_of' some 'parathyroid'))
++ 'Parathyroid Hyperplasia' SubClassOf 'has_disease_location' some 
+('parathyroid gland' or ('part_of' some 'parathyroid gland'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0002798
+Label(s): NB4 
+- 'NB4' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism'))))
++ 'NB4' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('bone marrow' and ('part_of' some 'organism'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0002787
+Label(s): GM18507 
+- 'GM18507' SubClassOf 'lymphoblastoid cell line'
+- 'GM18507' SubClassOf 'derives_from' some 
+('lymphoblast' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens'))))
++ 'GM18507' SubClassOf 'B cell derived cell line'
++ 'GM18507' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005482
+Label(s): 416B 
+- '416B' SubClassOf 'derives_from' some 
+('myeloid lineage restricted progenitor cell' and ('part_of' some 
+('blood' and ('part_of' some 'Mus musculus'))))
++ '416B' SubClassOf 'derives_from' some 
+('myeloid lineage restricted progenitor cell' and ('part_of' some 
+('bone marrow' and ('part_of' some 'Mus musculus'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005480
+Label(s): MEL-GATA-1-ER 
+- 'MEL-GATA-1-ER' SubClassOf 'mouse cell line'
+- 'MEL-GATA-1-ER' SubClassOf 'derives_from' some 
+('erythroblast' and ('part_of' some 
+('blood' and ('part_of' some 'Mus musculus'))))
++ 'MEL-GATA-1-ER' SubClassOf 'MEL cell line'
++ 'MEL-GATA-1-ER' SubClassOf 'derives_from' some 
+('erythroblast' and ('part_of' some 
+('spleen' and ('part_of' some 'Mus musculus'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005694
+Label(s): KMS-11 
+- 'KMS-11' SubClassOf 'haemopoietic system cell line'
+- 'KMS-11' SubClassOf 'derives_from' some 
+('lymphoblast' and ('part_of' some 
+('lymphatic part of lymphoid system' and ('part_of' some 'Homo sapiens'))))
+- 'KMS-11' SubClassOf 'Homo sapiens cell line'
+- 'KMS-11' SubClassOf 'lymphoblastoid cell line'
++ 'KMS-11' SubClassOf 'derives_from' some 
+('lymphoblast' and ('part_of' some 
+('pleural effusion' and ('part_of' some 'Homo sapiens'))))
++ 'KMS-11' SubClassOf 'cultured cell'
+
+Class: http://www.orpha.net/ORDO/Orphanet_109011
+Label(s): Non-syndromic limb malformation 
+- 'Non-syndromic limb malformation' SubClassOf 'Genetic congenital limb malformation'
++ 'Non-syndromic limb malformation' SubClassOf http://purl.obolibrary.org/obo/MONDO_0019054
++ 'Non-syndromic limb malformation' SubClassOf 'Genetic congenital limb malformation'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005903
+Label(s): KBM-7 
+- 'KBM-7' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens'))))
++ 'KBM-7' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('bone marrow' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006239
+Label(s): future central tendon 
++ 'future central tendon' SubClassOf http://purl.obolibrary.org/obo/UBERON_0000043
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005802
+Label(s): cartilage disease 
++ 'cartilage disease' SubClassOf 'skeletal system disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005723
+Label(s): GM23248 
++ 'GM23248' SubClassOf 'derives_from' some 
+('fibroblast' and ('part_of' some 
+('arm' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005724
+Label(s): MM.1S 
+- 'MM.1S' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens'))))
++ 'MM.1S' SubClassOf 'B cell derived cell line'
++ 'MM.1S' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005719
+Label(s): Karpas 422 
+- 'Karpas 422' SubClassOf 'B cell derived cell line'
+- 'Karpas 422' SubClassOf 'Homo sapiens cell line'
+- 'Karpas 422' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('lymph node' and ('part_of' some 'Homo sapiens'))))
++ 'Karpas 422' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('pleural effusion' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005754
+Label(s): parathyroid disease 
+- 'parathyroid disease' EquivalentTo 'has_disease_location' some 'parathyroid'
++ 'parathyroid disease' EquivalentTo 'has_disease_location' some 'parathyroid gland'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005755
+Label(s): rheumatic disease 
+- 'rheumatic disease' EquivalentTo 'has_disease_location' some 
+('connective tissue' or 'skeletal joint')
++ 'rheumatic disease' SubClassOf 'skeletal system disease'
++ 'rheumatic disease' EquivalentTo 'has_disease_location' some 
+('skeletal joint' or http://purl.obolibrary.org/obo/UBERON_0002384)
+
+Class: http://purl.obolibrary.org/obo/UBERON_0018132
+Label(s): tail fat pad 
++ 'tail fat pad' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003599
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007096
+Label(s): iPS DF 19.11 
+- 'iPS DF 19.11' SubClassOf 'derives_from' some 
+('induced pluripotent stem cell' and ('part_of' some 
+('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
++ 'iPS DF 19.11' SubClassOf 'derives_from' some 
+('induced pluripotent stem cell' and ('part_of' some 
+('skin of prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007095
+Label(s): iPS DF 19.7 
+- 'iPS DF 19.7' SubClassOf 'derives_from' some 
+('induced pluripotent stem cell' and ('part_of' some 
+('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
++ 'iPS DF 19.7' SubClassOf 'derives_from' some 
+('induced pluripotent stem cell' and ('part_of' some 
+('skin of prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007098
+Label(s): iPS DF 6.9 
+- 'iPS DF 6.9' SubClassOf 'derives_from' some 
+('induced pluripotent stem cell' and ('part_of' some 
+('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
++ 'iPS DF 6.9' SubClassOf 'derives_from' some 
+('induced pluripotent stem cell' and ('part_of' some 
+('skin of prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007097
+Label(s): iPS DF 4.7 
+- 'iPS DF 4.7' SubClassOf 'derives_from' some 
+('induced pluripotent stem cell' and ('part_of' some 
+('prepuce of penis' and ('part_of' some 'Homo sapiens'))))
++ 'iPS DF 4.7' SubClassOf 'derives_from' some 
+('induced pluripotent stem cell' and ('part_of' some 
+('skin of prepuce of penis' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009501
+Label(s): CWRU1 
+- 'CWRU1' SubClassOf 'skeleton structure'
+- 'CWRU1' SubClassOf 'part_of' some 'connective tissue'
++ 'CWRU1' SubClassOf 'part_of' some http://purl.obolibrary.org/obo/UBERON_0002384
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004180
+Label(s): mammary gland fat 
++ 'mammary gland fat' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003584
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006671
+Label(s): orbital fat pad 
++ 'orbital fat pad' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003566
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007374
+Label(s): mixed connective tissue disease 
+- 'mixed connective tissue disease' SubClassOf 'has_disease_location' some 'connective tissue'
++ 'mixed connective tissue disease' SubClassOf 'has_disease_location' some http://purl.obolibrary.org/obo/UBERON_0002384
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016400
+Label(s): infrapatellar fat pad 
++ 'infrapatellar fat pad' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003577
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007598
+Label(s): HAP-1 
+- 'HAP-1' SubClassOf 'chronic myelogenous leukemia cell line'
++ 'HAP-1' SubClassOf 'KBM-7'
++ 'HAP-1' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('bone marrow' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://purl.obolibrary.org/obo/UBERON_0013177
+Label(s): dorsal bursa 
++ 'dorsal bursa' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003566
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001013
+Label(s): adipose tissue 
+- 'adipose tissue' SubClassOf 'animal component'
++ 'adipose tissue' SubClassOf http://purl.obolibrary.org/obo/UBERON_0011822
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003701
+Label(s): calcaneal tendon 
++ 'calcaneal tendon' SubClassOf http://purl.obolibrary.org/obo/UBERON_0004270
++ 'calcaneal tendon' SubClassOf http://purl.obolibrary.org/obo/UBERON_0000043
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003407
+Label(s): cartilage of nasal septum 
++ 'cartilage of nasal septum' SubClassOf http://purl.obolibrary.org/obo/UBERON_0001823
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003426
+Label(s): dermis adipose tissue 
++ 'dermis adipose tissue' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003585
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015454
+Label(s): pancreatic fat pad 
++ 'pancreatic fat pad' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003586
+
+Class: http://purl.obolibrary.org/obo/HP_0003549
+Label(s): Abnormality of connective tissue 
+- 'Abnormality of connective tissue' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'connective tissue'))
++ 'Abnormality of connective tissue' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some http://purl.obolibrary.org/obo/UBERON_0002384))
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001056
+Label(s): myxosarcoma 
+- 'myxosarcoma' SubClassOf 'skeletal system disease'
+- 'myxosarcoma' SubClassOf 'has_disease_location' some 
+('connective tissue' or ('part_of' some 'connective tissue'))
++ 'myxosarcoma' SubClassOf 'connective tissue disease'
++ 'myxosarcoma' SubClassOf 'has_disease_location' some 
+(http://purl.obolibrary.org/obo/UBERON_0002384 or ('part_of' some http://purl.obolibrary.org/obo/UBERON_0002384))
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001087
+Label(s): parathyroid adenoma 
+- 'parathyroid adenoma' SubClassOf 'has_disease_location' some 
+('parathyroid' or ('part_of' some 'parathyroid'))
++ 'parathyroid adenoma' SubClassOf 'has_disease_location' some 
+('parathyroid gland' or ('part_of' some 'parathyroid gland'))
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001471
+Label(s): skin of prepuce of penis 
++ 'skin of prepuce of penis' SubClassOf 'part_of' some 'prepuce of penis'
++ 'skin of prepuce of penis' EquivalentTo 'zone of skin' and ('part_of' some 'prepuce of penis')
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001173
+Label(s): secondary hyperparathyroidism 
+- 'secondary hyperparathyroidism' SubClassOf 'has_disease_location' some 
+('parathyroid' or ('part_of' some 'parathyroid'))
++ 'secondary hyperparathyroidism' SubClassOf 'has_disease_location' some 
+('parathyroid gland' or ('part_of' some 'parathyroid gland'))
+
+Class: http://www.orpha.net/ORDO/Orphanet_183536
+Label(s): Genetic congenital limb malformation 
+- 'Genetic congenital limb malformation' SubClassOf 'developmental defect during embryogenesis'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011157
+Label(s): cuneiform cartilage 
++ 'cuneiform cartilage' SubClassOf http://purl.obolibrary.org/obo/UBERON_0001996
++ 'cuneiform cartilage' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003583
+
+Class: http://purl.obolibrary.org/obo/HP_0011106
+Label(s): hypovolemia 
++ 'hypovolemia' SubClassOf http://purl.obolibrary.org/obo/HP_0011028
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001986
+Label(s): connective tissue disease 
+- 'connective tissue disease' SubClassOf 'skeletal system disease'
++ 'connective tissue disease' SubClassOf 'disease'
++ 'connective tissue disease' EquivalentTo 'disease' and ('has_disease_location' some 
+(http://purl.obolibrary.org/obo/UBERON_0002384 or ('part_of' some http://purl.obolibrary.org/obo/UBERON_0002384)))
+
+Class: http://purl.obolibrary.org/obo/CL_0000388
+Label(s): connective tissue 
+- 'connective tissue' SubClassOf 'part_of' some 'skeletal system'
+- 'connective tissue' SubClassOf 'skeleton structure'
++ 'connective tissue' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/CL_0000446
+Label(s): parathyroid 
+- 'parathyroid' SubClassOf 'gland'
++ 'parathyroid' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/CL_0000499
+Label(s): stromal cell 
+- 'stromal cell' SubClassOf 'located_in' some 'connective tissue'
++ 'stromal cell' SubClassOf 'located_in' some http://purl.obolibrary.org/obo/UBERON_0002384
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019453
+Label(s): refractory cytopenia with multilineage dysplasia 
++ 'refractory cytopenia with multilineage dysplasia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0004111
+
+Class: http://purl.obolibrary.org/obo/UBERON_0010996
+Label(s): articular cartilage of joint 
++ 'articular cartilage of joint' SubClassOf http://purl.obolibrary.org/obo/UBERON_0001994
+
+Class: http://purl.obolibrary.org/obo/CL_0000057
+Label(s): fibroblast 
+- 'fibroblast' SubClassOf 'located_in' some 'connective tissue'
++ 'fibroblast' SubClassOf 'located_in' some http://purl.obolibrary.org/obo/UBERON_0002384
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006711
+Label(s): OCI-LY7 
+- 'OCI-LY7' SubClassOf 'derives_from' some 
+('cell type' and ('part_of' some 
+('lymph node' and ('part_of' some 'Homo sapiens'))))
++ 'OCI-LY7' SubClassOf 'derives_from' some 
+('B cell' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens'))))
++ 'OCI-LY7' SubClassOf 'B cell derived cell line'
+
+Class: http://www.orpha.net/ORDO/Orphanet_404577
+Label(s): Genetic syndrome with limb malformations as a major feature 
+- 'Genetic syndrome with limb malformations as a major feature' SubClassOf 'Genetic congenital limb malformation'
++ 'Genetic syndrome with limb malformations as a major feature' SubClassOf 'Genetic congenital limb malformation'
++ 'Genetic syndrome with limb malformations as a major feature' SubClassOf http://purl.obolibrary.org/obo/MONDO_0019054
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007808
+Label(s): adipose tissue of abdominal region 
++ 'adipose tissue of abdominal region' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003567
+
+Class: http://purl.obolibrary.org/obo/UBERON_0015129
+Label(s): epicardial fat 
++ 'epicardial fat' SubClassOf http://purl.obolibrary.org/obo/UBERON_0003837
 
 
 ----------------------------------
@@ -176,10 +2523,6 @@ Label(s): disease susceptibility
 
 MONDO classes removed due to mapping:
 
-Class: http://purl.obolibrary.org/obo/MONDO_0024881
-Label(s): secondary malignant neoplasm 
-+ 'secondary malignant neoplasm' SubClassOf 'cancer'
-+ 'secondary malignant neoplasm' SubClassOf 'secondary neoplasm'
 
 
 ----------------------------------
