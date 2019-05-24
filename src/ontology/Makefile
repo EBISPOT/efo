@@ -40,7 +40,7 @@ prepare_release: all
 # ----------------------------------------
 
 # create the main efo release by merging and removing import statements
-# this will also set the release date and version number 
+# this will also set the release date and version number
 $(BUILDDIR)/$(ONT).owl: $(EFO3EDIT)
 	$(ROBOT) merge --input $(EFO3EDIT) -c true -i $< reason -s true -m false -r hermit annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
@@ -62,7 +62,6 @@ $(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo
 $(EFO3EDIT): efo-upper.owl $(BUILDDIR)/efo-edit-fixed-raw.owl ../templates/subclasses.csv
 	$(ROBOT) merge --collapse-import-closure false -i efo-upper.owl -i $(BUILDDIR)/efo-edit-fixed-raw.owl template --merge-before --template ../templates/subclasses.csv --prefix $(MONDOPREFIX) convert -f ofn -o $@
 
-
 # unmerge imports from edit and add import files
 
 imports/mondo_efo_import.owl: imports/mondo_efo_mappings.tsv imports/mondo_remove.owl
@@ -76,17 +75,26 @@ imports/mondo_remove.owl: imports/mondo_import.owl
 # uberon updates module
 #-------------------------------------------------
 #Download Uberon ontology from the EBI/OLS: https://www.ebi.ac.uk/ols/ontologies/uberon/download see get_mirrors.sh file
-#Extract all Uberon terms from the efo.owl file
 
-$(BUILDDIR)/uberon_terms.txt: efo-edit.owl
-	$(ROBOT) query --input efo-edit.owl --select $(SPARQLDIR)/uberon_terms.sparql $@
+#Extract all Uberon terms from the efo.owl file
+$(BUILDDIR)/uberon_terms.txt: $(BUILDDIR)/efo-edit-fixed.owl
+	$(ROBOT) query --input $(BUILDDIR)/efo-edit-fixed.owl --select $(SPARQLDIR)/uberon_terms.sparql $(BUILDDIR)/uberon_terms.txt
+
+#removes all annotations from the uberon_terms in efo.
+$(BUILDDIR)/efo-minus-uberon.owl: $(BUILDDIR)/efo-edit-fixed.owl $(BUILDDIR)/uberon_terms.txt
+	$(ROBOT) remove -i $(BUILDDIR)/efo-edit-fixed.owl -T $(BUILDDIR)/uberon_terms.txt  -a annotation -o $(BUILDDIR)/efo-minus-uberon.owl
 
 #creates the subset owl file from uberon terms
 $(BUILDDIR)/uberon_filtered.owl: $(BUILDDIR)/uberon_terms.txt
-	$(ROBOT) filter -i $(MIRRORDIR)/uberon.owl --term-file $(BUILDDIR)/uberon_terms.txt --select "annotations self descendants" -o $@
+	$(ROBOT) filter -i $(MIRRORDIR)/uberon.owl -T $(BUILDDIR)/uberon_terms.txt --select "annotations self" -o $(BUILDDIR)/uberon_filtered.owl
 
-$(BUILDDIR)/uberon_import.owl: $(BUILDDIR)/uberon_filtered.owl
+# unmerge imports causing duplicates from add import files
+$(BUILDDIR)/uberon_remove.owl: $(BUILDDIR)/uberon_filtered.owl
 	$(ROBOT) remove -i $< -T imports/uberon_duplicates.txt -o $@
+
+# to generate the final
+$(BUILDDIR)/uberon_import.owl: $(BUILDDIR)/uberon_remove.owl $(BUILDDIR)/efo-minus-uberon.owl
+	$(ROBOT) merge -i $(BUILDDIR)/uberon_remove.owl -i $(BUILDDIR)/efo-minus-uberon.owl -o $@
 
 
 # ----------------------------------------
@@ -127,7 +135,7 @@ imports/%_import.obo: imports/%_import.owl
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
 release: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo
-	cp $^ $(RELEASEDIR) 
+	cp $^ $(RELEASEDIR)
 
 # ----------------------------------------
 # Sparql queries: Q/C
