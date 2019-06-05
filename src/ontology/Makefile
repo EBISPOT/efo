@@ -143,7 +143,7 @@ release: $(ONT).owl $(ONT_INF).owl $(ONT_INF_ALL).owl $(ONT).obo $(ONT)_full.obo
 
 # these live in the ../sparql directory, and have suffix -violation.sparql
 # adding the name here will make the violation check live
-VCHECKS = duplicate-label  nolabels multiple-label no-webulous-uris no-dangling
+VCHECKS = duplicate-label  nolabels multiple-label no-webulous-uris no-dangling id-length
 
 # run all violation checks
 VQUERIES = $(foreach V,$(VCHECKS),$(SPARQLDIR)/$V-violation.sparql)
