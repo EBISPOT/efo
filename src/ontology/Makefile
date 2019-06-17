@@ -86,7 +86,7 @@ $(BUILDDIR)/efo-minus-uberon.owl: $(BUILDDIR)/efo-edit-fixed.owl $(BUILDDIR)/ube
 
 #creates the subset owl file from uberon terms
 $(BUILDDIR)/uberon_filtered.owl: $(BUILDDIR)/uberon_terms.txt
-	$(ROBOT) filter -i $(MIRRORDIR)/uberon.owl -T $(BUILDDIR)/uberon_terms.txt --select "annotations self" -o $(BUILDDIR)/uberon_filtered.owl
+	$(ROBOT) filter -i $(MIRRORDIR)/uberon.owl -T $(BUILDDIR)/uberon_terms.txt --select "annotations self descendants" -o $(BUILDDIR)/uberon_filtered.owl
 
 # unmerge imports causing duplicates from add import files
 $(BUILDDIR)/uberon_remove.owl: $(BUILDDIR)/uberon_filtered.owl
