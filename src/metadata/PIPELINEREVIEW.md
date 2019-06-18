@@ -4,11 +4,10 @@
 1. Get MIRRORS
 	1. mkdir -p mirror
 	1. curl https://www.ebi.ac.uk/ols/ontologies/mondo/download > mirror/mondo.owl
-	1. curl https://www.ebi.ac.uk/ols/ontologies/uberon/download > mirror/uberon.owl # http://purl.obolibrary.org/obo/uberon.owl 
+	1. curl https://www.ebi.ac.uk/ols/ontologies/uberon/download > mirror/uberon.owl # http://purl.obolibrary.org/obo/uberon.owl (*Review: Why not using PURL?*)
 	1. curl https://raw.githubusercontent.com/EBISPOT/efo/efo2/src/ontology/efo-edit.owl > efo-edit.owl
 		1. Why?
 	1. curl https://raw.githubusercontent.com/opentargets/platform-therapeutic-areas/master/tas.tsv | awk '{print $1}' > imports/OTAR_terms.txt
-	1. # Using real download link?
 	1. Removed mirror goals in Makefile? -> Should be reworked in there 
 1. Change version number: - Edit the version.txt one increment	e.g. 3.0.0 -> 3.1.0
 1. Makefile
