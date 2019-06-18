@@ -17,7 +17,7 @@
 	1. Creating efo.owl: Merge/reason/annotate efo3-edit:
 		1. efo-upper (contains imports reference to mondo_efo_import.owl)
 		1. efo-edit-fixed-raw.owl
-			1. efo-edit-fixed.owl (efo-edit manipulated by efo-fixer.jar; should be made more transparent)
+			1. efo-edit-fixed.owl (efo-edit manipulated by efo-fixer.jar; should be made more transparent) *ROBOT unmerge is used, scary operation*
 			1. OTAR_tagged.owl
 				1. imports/OTAR_terms.txt (downloaded from OTAR)
 				1. build/OTAR_terms.owl (annotations in EFO edit or OTAR terms)
