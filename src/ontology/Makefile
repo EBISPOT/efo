@@ -34,7 +34,7 @@ test: all sparql_test
 prepare_release: all
 	cp $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(RELEASEDIR) &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
-	
+
 # ----------------------------------------
 # Main release targets
 # ----------------------------------------
@@ -47,10 +47,15 @@ $(BUILDDIR)/$(ONT).owl: $(EFO3EDIT)
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
 	$(EFO2OBO) -i $< -o $@
 
+
+# make changes to efo 2 to base efo 3
+$(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
+	java -jar $(EFOFIXER) efo-edit.owl $(BUILDDIR)/efo-edit-fixed.owl
+
 # unmerge mondo
 
-$(BUILDDIR)/efo-edit-fixed-raw.owl: imports/mondo_efo_import.owl $(BUILDDIR)/OTAR_tagged.owl $(BUILDDIR)/uberon_import.owl
-	$(ROBOT) merge -i $(EFO3EDIT) -i imports/mondo_efo_import.owl -i $(BUILDDIR)/uberon_import.owl -i $(BUILDDIR)/OTAR_tagged.owl unmerge -i imports/mondo_efo_import.owl -o $@
+$(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo_efo_import.owl $(BUILDDIR)/OTAR_tagged.owl $(BUILDDIR)/uberon_import.owl
+	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/mondo_efo_import.owl -i $(BUILDDIR)/uberon_import.owl -i $(BUILDDIR)/OTAR_tagged.owl unmerge -i imports/mondo_efo_import.owl -o $@
 
 # add import statements to editors edition
 
@@ -72,12 +77,12 @@ imports/mondo_remove.owl: imports/mondo_import.owl
 #Download Uberon ontology from the EBI/OLS: https://www.ebi.ac.uk/ols/ontologies/uberon/download see get_mirrors.sh file
 
 #Extract all Uberon terms from the efo.owl file
-$(BUILDDIR)/uberon_terms.txt:
-	$(ROBOT) query --input $(BUILDDIR)/efo-edit-fixed-raw.owl --select $(SPARQLDIR)/uberon_terms.sparql $(BUILDDIR)/uberon_terms.txt
+$(BUILDDIR)/uberon_terms.txt: $(BUILDDIR)/efo-edit-fixed.owl
+	$(ROBOT) query --input $(BUILDDIR)/efo-edit-fixed.owl --select $(SPARQLDIR)/uberon_terms.sparql $(BUILDDIR)/uberon_terms.txt
 
 #removes all annotations from the uberon_terms in efo.
-$(BUILDDIR)/efo-minus-uberon.owl: $(BUILDDIR)/uberon_terms.txt
-	$(ROBOT) remove -i $(BUILDDIR)/efo-edit-fixed-raw.owl -T $(BUILDDIR)/uberon_terms.txt  -a annotation -o $(BUILDDIR)/efo-minus-uberon.owl
+$(BUILDDIR)/efo-minus-uberon.owl: $(BUILDDIR)/efo-edit-fixed.owl $(BUILDDIR)/uberon_terms.txt
+	$(ROBOT) remove -i $(BUILDDIR)/efo-edit-fixed.owl -T $(BUILDDIR)/uberon_terms.txt  -a annotation -o $(BUILDDIR)/efo-minus-uberon.owl
 
 #creates the subset owl file from uberon terms
 $(BUILDDIR)/uberon_filtered.owl: $(BUILDDIR)/uberon_terms.txt
@@ -96,8 +101,8 @@ $(BUILDDIR)/uberon_import.owl: $(BUILDDIR)/uberon_remove.owl $(BUILDDIR)/efo-min
 # OTAR therapeutic areas
 # ----------------------------------------
 
-$(BUILDDIR)/OTAR_terms.owl:
-	$(ROBOT) filter --input $(EFO3EDIT) --term-file ./imports/OTAR_terms.txt --select annotations --output $@
+$(BUILDDIR)/OTAR_terms.owl: efo-edit.owl
+	$(ROBOT) filter --input efo-edit.owl --term-file ./imports/OTAR_terms.txt --select annotations --output $@
 
 $(BUILDDIR)/OTAR_tagged.owl: $(BUILDDIR)/OTAR_terms.owl
 	$(ROBOT) query --input $(BUILDDIR)/OTAR_terms.owl --query $(SPARQLDIR)/OTAR_therapeutic_areas.sparql $@
