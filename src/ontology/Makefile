@@ -60,7 +60,7 @@ $(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo
 # add import statements to editors edition
 
 $(EFO3EDIT): efo-upper.owl $(BUILDDIR)/efo-edit-fixed-raw.owl ../templates/subclasses.csv
-	$(ROBOT) merge --collapse-import-closure false -i efo-upper.owl -i $(BUILDDIR)/efo-edit-fixed-raw.owl template --merge-before --template ../templates/subclasses.csv --prefix $(MONDOPREFIX) convert -f ofn -o $@
+	$(ROBOT) merge --include-annotations true --collapse-import-closure false -i efo-upper.owl -i $(BUILDDIR)/efo-edit-fixed-raw.owl template --merge-before --template ../templates/subclasses.csv --prefix $(MONDOPREFIX) convert -f ofn -o $@
 
 # unmerge imports from edit and add import files
 
