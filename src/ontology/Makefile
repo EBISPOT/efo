@@ -25,11 +25,12 @@ MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
 EFO3EDIT = efo-3-edit.owl
 EFOFIXER = ../../bin/efo-fixer.jar
 MIRRORDIR=./mirror
+HANCESTROGENERATED= ./build/efo-hancestro
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
 
-all: all_imports $(BUILDDIR)/$(ONT).owl sparql_test #$(BUILDDIR)/$(ONT).obo
+all: all_imports $(HANCESTROGENERATED).owl $(BUILDDIR)/$(ONT).owl sparql_test #$(BUILDDIR)/$(ONT).obo
 test: all sparql_test
 prepare_release: all
 	cp $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(RELEASEDIR) &&\
@@ -54,7 +55,7 @@ $(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
 
 # unmerge mondo
 
-$(BUILDDIR)/efo-edit-fixed-raw.owl: $(BUILDDIR)/efo-edit-fixed.owl imports/mondo_efo_import.owl $(BUILDDIR)/OTAR_tagged.owl $(BUILDDIR)/uberon_import.owl
+$(BUILDDIR)/efo-edit-fixed-raw.owl: $(HANCESTROGENERATED).owl imports/mondo_efo_import.owl $(BUILDDIR)/OTAR_tagged.owl $(BUILDDIR)/uberon_import.owl
 	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/mondo_efo_import.owl -i $(BUILDDIR)/uberon_import.owl -i $(BUILDDIR)/OTAR_tagged.owl unmerge -i imports/mondo_efo_import.owl -o $@
 
 # add import statements to editors edition
@@ -77,11 +78,11 @@ imports/mondo_remove.owl: imports/mondo_import.owl
 #Download Uberon ontology from the EBI/OLS: https://www.ebi.ac.uk/ols/ontologies/uberon/download see get_mirrors.sh file
 
 #Extract all Uberon terms from the efo.owl file
-$(BUILDDIR)/uberon_terms.txt: $(BUILDDIR)/efo-edit-fixed.owl
+$(BUILDDIR)/uberon_terms.txt: $(HANCESTROGENERATED).owl
 	$(ROBOT) query --input $(BUILDDIR)/efo-edit-fixed.owl --select $(SPARQLDIR)/uberon_terms.sparql $(BUILDDIR)/uberon_terms.txt
 
 #removes all annotations from the uberon_terms in efo.
-$(BUILDDIR)/efo-minus-uberon.owl: $(BUILDDIR)/efo-edit-fixed.owl $(BUILDDIR)/uberon_terms.txt
+$(BUILDDIR)/efo-minus-uberon.owl: $(HANCESTROGENERATED).owl $(BUILDDIR)/uberon_terms.txt
 	$(ROBOT) remove -i $(BUILDDIR)/efo-edit-fixed.owl -T $(BUILDDIR)/uberon_terms.txt  -a annotation -o $(BUILDDIR)/efo-minus-uberon.owl
 
 #creates the subset owl file from uberon terms
@@ -107,6 +108,12 @@ $(BUILDDIR)/OTAR_terms.owl: efo-edit.owl
 $(BUILDDIR)/OTAR_tagged.owl: $(BUILDDIR)/OTAR_terms.owl
 	$(ROBOT) query --input $(BUILDDIR)/OTAR_terms.owl --query $(SPARQLDIR)/OTAR_therapeutic_areas.sparql $@
 
+# ----------------------------------------
+# HANCESTRO import
+# ----------------------------------------
+
+$(HANCESTROGENERATED).owl: $(BUILDDIR)/efo-edit-fixed.owl
+	$(ROBOT) -v merge -i $< -i imports/hancestro_import.owl -o $(BUILDDIR)/efo-edit-fixed.owl
 
 # ----------------------------------------
 # Import modules
@@ -115,7 +122,7 @@ $(BUILDDIR)/OTAR_tagged.owl: $(BUILDDIR)/OTAR_terms.owl
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
 
-IMPORTS = mondo
+IMPORTS = mondo hancestro
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
