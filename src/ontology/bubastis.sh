@@ -1,0 +1,1 @@
+java -jar ../../bin/bubastis_1_3.jar -ontology1 "https://github.com/EBISPOT/efo/releases/download/current/efo.owl" -ontology2 "./build/efo.owl" -output ./build/`cat version.txt`_bubastis_diff.txt
