@@ -22,7 +22,7 @@ GENERATED = ./results/efo-mondo-generated.owl
 EFOPREFIX = "EFO: http://www.ebi.ac.uk/efo/EFO_"
 ORDOPREFIX = "Orphanet: http://www.orpha.net/ORDO/Orphanet_"
 MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
-EFO3EDIT = efo-3-edit.owl
+EFOPREPRO = $(BUILDDIR)/efo-edit-release.owl
 EFOFIXER = ../../bin/efo-fixer.jar
 MIRRORDIR=./mirror
 HANCESTROGENERATED= ./build/efo-hancestro
@@ -42,35 +42,49 @@ prepare_release: all
 
 # create the main efo release by merging and removing import statements
 # this will also set the release date and version number
-$(BUILDDIR)/$(ONT).owl: $(EFO3EDIT)
-	$(ROBOT) merge --input $(EFO3EDIT) -c true -i $< reason -s true -m false -r hermit annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`cat version.txt`/$(ONT).owl -o $@
-
-$(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
-	$(EFO2OBO) -i $< -o $@
 
 
 # make changes to efo 2 to base efo 3
 $(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
 	java -jar $(EFOFIXER) efo-edit.owl $(BUILDDIR)/efo-edit-fixed.owl
 
-# unmerge mondo
 
-$(BUILDDIR)/efo-edit-fixed-raw.owl: $(HANCESTROGENERATED).owl imports/mondo_efo_import.owl $(BUILDDIR)/OTAR_tagged.owl $(BUILDDIR)/uberon_import.owl
-	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/mondo_efo_import.owl -i $(BUILDDIR)/uberon_import.owl -i $(BUILDDIR)/OTAR_tagged.owl unmerge -i imports/mondo_efo_import.owl -o $@
+REMOVEONT=mondo hancestro
+REMOVEONT_FILES=$(patsubst %, mirror/%.owl, $(REMOVEONT))
+COMPONENTS=subclasses
+COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 
-# add import statements to editors edition
+# --include-annotations true
+$(EFOPREPRO): $(BUILDDIR)/efo-edit-fixed.owl $(REMOVEONT_FILES)
+	$(ROBOT) merge -i $< $(addprefix unmerge -i , $(REMOVEONT_FILES)) \
+	convert -f ofn -o $@
 
-$(EFO3EDIT): efo-upper.owl $(BUILDDIR)/efo-edit-fixed-raw.owl ../templates/subclasses.csv
-	$(ROBOT) merge --include-annotations true --collapse-import-closure false -i efo-upper.owl -i $(BUILDDIR)/efo-edit-fixed-raw.owl template --merge-before --template ../templates/subclasses.csv --prefix $(MONDOPREFIX) convert -f ofn -o $@
+components/subclasses.owl: ../templates/subclasses.csv
+	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
+
+t: $(EFOPREPRO)
+
+components: $(COMPONENT_FILES)
+
 
 # unmerge imports from edit and add import files
-
-imports/mondo_efo_import.owl: imports/mondo_efo_mappings.tsv imports/mondo_remove.owl
-	java -jar ../../bin/mondo-id-switch.jar imports/mondo_efo_mappings.tsv imports/mondo_remove.owl imports/mondo_efo_import.owl && $(ROBOT) -v annotate -i imports/mondo_efo_import.owl --ontology-iri http://www.ebi.ac.uk/efo/imports/mondo_efo_import.owl -o $@
 
 imports/mondo_remove.owl: imports/mondo_import.owl
 	$(ROBOT) remove -i imports/mondo_import.owl -T imports/mondo_duplicates.txt -o $@
 
+imports/mondo_efo_import.owl: imports/mondo_efo_mappings.tsv imports/mondo_remove.owl
+	java -jar ../../bin/mondo-id-switch.jar imports/mondo_efo_mappings.tsv imports/mondo_remove.owl imports/mondo_efo_import.owl &&\
+	$(ROBOT) -v annotate -i imports/mondo_efo_import.owl --ontology-iri http://www.ebi.ac.uk/efo/imports/mondo_efo_import.owl -o $@
+
+#consider using relax instead of -s true
+$(BUILDDIR)/$(ONT).owl: $(EFOPREPRO)
+	$(ROBOT) reason -i $< -s true -m false -r hermit \
+	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`cat version.txt`/$(ONT).owl -o $@
+
+$(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
+	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/`cat version.txt`/efo.owl \
+	query --update ../sparql/inject-subset-declaration.sparql \
+	convert --check false -f obo -o $@
 
 #-------------------------------------------------
 # uberon updates module
@@ -78,25 +92,32 @@ imports/mondo_remove.owl: imports/mondo_import.owl
 #Download Uberon ontology from the EBI/OLS: https://www.ebi.ac.uk/ols/ontologies/uberon/download see get_mirrors.sh file
 
 #Extract all Uberon terms from the efo.owl file
-$(BUILDDIR)/uberon_terms.txt: $(HANCESTROGENERATED).owl
-	$(ROBOT) query --input $(BUILDDIR)/efo-edit-fixed.owl --select $(SPARQLDIR)/uberon_terms.sparql $(BUILDDIR)/uberon_terms.txt
+imports/uberon_terms.txt: uberon_terms.txt efo-relations.txt
+	cat $^ > $@
 
-#removes all annotations from the uberon_terms in efo.
-$(BUILDDIR)/efo-minus-uberon.owl: $(HANCESTROGENERATED).owl $(BUILDDIR)/uberon_terms.txt
-	$(ROBOT) remove -i $(BUILDDIR)/efo-edit-fixed.owl -T $(BUILDDIR)/uberon_terms.txt  -a annotation -o $(BUILDDIR)/efo-minus-uberon.owl
-
-#creates the subset owl file from uberon terms
-$(BUILDDIR)/uberon_filtered.owl: $(BUILDDIR)/uberon_terms.txt
-	$(ROBOT) filter -i $(MIRRORDIR)/uberon.owl -T $(BUILDDIR)/uberon_terms.txt --select "annotations self descendants" -o $(BUILDDIR)/uberon_filtered.owl
+imports/uberon_import.owl: mirror/uberon.owl imports/uberon_terms.txt
+	$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ \
+	filter --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -o $@
+.PRECIOUS: imports/uberon_import.owl
 
 # unmerge imports causing duplicates from add import files
-$(BUILDDIR)/uberon_remove.owl: $(BUILDDIR)/uberon_filtered.owl
-	$(ROBOT) remove -i $< -T imports/uberon_duplicates.txt -o $@
+#$(BUILDDIR)/uberon_import.owl: $(MIRRORDIR)/uberon.owl imports/uberon_terms.txt
+	#$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ \
+	#filter -i $(MIRRORDIR)/uberon.owl -T $(BUILDDIR)/uberon_terms.txt --select "annotations self descendants" \
+	#remove -T imports/uberon_duplicates.txt -o $@
 
-# to generate the final
-$(BUILDDIR)/uberon_import.owl: $(BUILDDIR)/uberon_remove.owl $(BUILDDIR)/efo-minus-uberon.owl
-	$(ROBOT) merge -i $(BUILDDIR)/uberon_remove.owl -i $(BUILDDIR)/efo-minus-uberon.owl -o $@
+components/efo_terms.txt: $(SRC)
+	$(ROBOT) query --input $< --select $(SPARQLDIR)/efo_terms.sparql $@
 
+components/efo_uberon.owl: $(SRC) imports/uberon_terms.txt components/efo_terms.txt
+	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --trim false \
+	remove -T components/efo_terms.txt -o $@
+
+efo_no_uberon.owl: $(SRC) components/efo_uberon.owl
+	$(ROBOT) merge -i $< --collapse-import-closure false unmerge -i components/efo_uberon.owl -o $@
+
+efo-diff.txt: $(SRC) efo_no_uberon.owl
+	$(ROBOT) diff --left $< --right efo_no_uberon.owl -o $@
 
 # ----------------------------------------
 # OTAR therapeutic areas
@@ -122,7 +143,7 @@ $(HANCESTROGENERATED).owl: $(BUILDDIR)/efo-edit-fixed.owl
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
 
-IMPORTS = mondo hancestro
+IMPORTS = mondo hancestro uberon
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
