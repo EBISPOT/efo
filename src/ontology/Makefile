@@ -56,12 +56,12 @@ COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 $(EFOPREPRO): $(SRC) $(REMOVEONT_FILES) components/efo_uberon.owl
 	$(ROBOT) merge -i $< $(addprefix unmerge -i , $(REMOVEONT_FILES)) \
 	unmerge -i components/efo_uberon.owl -o $@-fixed.owl &&\
-	java -jar $(EFOFIXER) $@-fixed.owl $@ &&\
-	$(ROBOT) merge -i $< -i imports/uberon_import.owl -i imports/hancestro_import.owl -o $@
+	java -jar $(EFOFIXER) $@-fixed.owl $(BUILDDIR)/efo-edit-fixed.owl &&\
+	$(ROBOT) merge -i $(BUILDDIR)/efo-edit-fixed.owl -i imports/uberon_import.owl -i imports/hancestro_import.owl -o $@
 	#convert -f ofn
 
 components/subclasses.owl: ../templates/subclasses.csv
-	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
+	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
 
 t: $(EFOPREPRO)
 
@@ -134,8 +134,8 @@ $(BUILDDIR)/OTAR_tagged.owl: $(BUILDDIR)/OTAR_terms.owl
 # HANCESTRO import
 # ----------------------------------------
 
-$(HANCESTROGENERATED).owl: $(BUILDDIR)/efo-edit-fixed.owl
-	$(ROBOT) -v merge -i $< -i imports/hancestro_import.owl -o $(BUILDDIR)/efo-edit-fixed.owl
+#$(HANCESTROGENERATED).owl: $(BUILDDIR)/efo-edit-fixed.owl
+#	$(ROBOT) -v merge -i $< -i imports/hancestro_import.owl -o $(BUILDDIR)/efo-edit-fixed.owl
 
 # ----------------------------------------
 # Import modules
