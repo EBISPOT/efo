@@ -30,7 +30,7 @@ HANCESTROGENERATED= ./build/efo-hancestro
 # Top-level targets
 # ----------------------------------------
 
-all: all_imports $(HANCESTROGENERATED).owl $(BUILDDIR)/$(ONT).owl sparql_test #$(BUILDDIR)/$(ONT).obo
+all: all_imports $(BUILDDIR)/$(ONT).owl sparql_test #$(BUILDDIR)/$(ONT).obo
 test: all sparql_test
 prepare_release: all
 	cp $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(RELEASEDIR) &&\
@@ -45,9 +45,7 @@ prepare_release: all
 
 
 # make changes to efo 2 to base efo 3
-$(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
-	java -jar $(EFOFIXER) efo-edit.owl $(BUILDDIR)/efo-edit-fixed.owl
-
+#$(BUILDDIR)/efo-edit-fixed.owl: efo-edit.owl
 
 REMOVEONT=mondo hancestro
 REMOVEONT_FILES=$(patsubst %, mirror/%.owl, $(REMOVEONT))
@@ -55,9 +53,12 @@ COMPONENTS=subclasses
 COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 
 # --include-annotations true
-$(EFOPREPRO): $(BUILDDIR)/efo-edit-fixed.owl $(REMOVEONT_FILES)
+$(EFOPREPRO): $(SRC) $(REMOVEONT_FILES) components/efo_uberon.owl
 	$(ROBOT) merge -i $< $(addprefix unmerge -i , $(REMOVEONT_FILES)) \
-	convert -f ofn -o $@
+	unmerge -i components/efo_uberon.owl -o $@-fixed.owl &&\
+	java -jar $(EFOFIXER) $@-fixed.owl $@ &&\
+	$(ROBOT) merge -i $< -i imports/uberon_import.owl -i imports/hancestro_import.owl -o $@
+	#convert -f ofn
 
 components/subclasses.owl: ../templates/subclasses.csv
 	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
@@ -109,9 +110,9 @@ imports/uberon_import.owl: mirror/uberon.owl imports/uberon_terms.txt
 components/efo_terms.txt: $(SRC)
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/efo_terms.sparql $@
 
-components/efo_uberon.owl: $(SRC) imports/uberon_terms.txt components/efo_terms.txt
-	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --trim false \
-	remove -T components/efo_terms.txt -o $@
+#components/efo_uberon.owl: $(SRC) imports/uberon_terms.txt components/efo_terms.txt
+#	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --trim false \
+#	remove -T components/efo_terms.txt -o $@
 
 efo_no_uberon.owl: $(SRC) components/efo_uberon.owl
 	$(ROBOT) merge -i $< --collapse-import-closure false unmerge -i components/efo_uberon.owl -o $@
