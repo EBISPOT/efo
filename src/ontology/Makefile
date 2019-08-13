@@ -22,6 +22,7 @@ GENERATED = ./results/efo-mondo-generated.owl
 EFOPREFIX = "EFO: http://www.ebi.ac.uk/efo/EFO_"
 ORDOPREFIX = "Orphanet: http://www.orpha.net/ORDO/Orphanet_"
 MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
+UBERONPREFIX = "UBERON: http://purl.obolibrary.org/obo/UBERON_"
 EFOPREPRO = $(BUILDDIR)/efo-edit-release.owl
 EFOFIXER = ../../bin/efo-fixer.jar
 MIRRORDIR=./mirror
@@ -50,6 +51,11 @@ IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, impor
 # Make this target to regenerate ALL
 all_imports: $(IMPORTS_OWL)
 
+# Use ROBOT, driven entirely by terms lists NOT from source ontology
+imports/%_import.owl: mirror/%.owl imports/%_terms.txt
+	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/%_import.owl
+
 imports/mondo_terms.txt: iri_dependencies/mondo_terms.txt
 	cat $^ | sort | uniq > $@
 
@@ -60,15 +66,14 @@ imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependenc
 imports/uberon_terms.txt: iri_dependencies/uberon_terms.txt iri_dependencies/efo-relations.txt
 	cat $^ | sort | uniq > $@
 	
-imports/uberon_import.owl: mirror/uberon.owl imports/uberon_terms.txt
-	$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ \
-	filter --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -o $@
+imports/uberon_bot.owl: mirror/uberon.owl imports/uberon_terms.txt
+	$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ -o $@
+
+imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt
+	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -o $@
 .PRECIOUS: imports/uberon_import.owl
 
-# Use ROBOT, driven entirely by terms lists NOT from source ontology
-imports/%_import.owl: mirror/%.owl imports/%_terms.txt
-	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/%_import.owl
+
 
 # ----------------------------------------
 # Components
@@ -81,11 +86,11 @@ FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
 FOREIGN_AXIOM_FILES_DIFF=$(patsubst %, qc/diff_efo-%.txt, $(FOREIGN_AXIOMS))
 
 components/subclasses.owl: ../templates/subclasses.csv
-	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
+	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
 
 components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl
 	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
-	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/imports/mondo_efo_import.owl -o $@
+	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/imports/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
 
 components/efo_terms.txt: $(SRC) $(SPARQLDIR)/efo_terms.sparql
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/efo_terms.sparql $@.tmp &&\
@@ -122,6 +127,7 @@ foreign_axioms: $(FOREIGN_AXIOM_FILES)
 foreign_axiom_diff: $(FOREIGN_AXIOM_FILES_DIFF)
 	
 nuclear_strike: $(SRC) foreign_axiom_diff
+	cp $(SRC) cp-$(SRC)
 	$(ROBOT) merge -i $< $(addprefix unmerge -i , $(FOREIGN_AXIOM_FILES)) -o $(SRC)
 
 # ----------------------------------------
@@ -148,7 +154,7 @@ $(BUILDDIR)/$(ONT).owl: $(SRC)
 	reason -s true -m false -r hermit \
 	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`cat version.txt`/$(ONT).owl -o $@
 
-$(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
+$(BUILDDIR)/$(ONT).obo: #$(BUILDDIR)/$(ONT).owl
 	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/`cat version.txt`/efo.owl \
 	query --update ../sparql/inject-subset-declaration.sparql \
 	convert --check false -f obo -o $@
@@ -179,3 +185,46 @@ REPORTS = basic-report class-count-by-prefix edges xrefs obsoletes synonyms
 REPORT_ARGS = $(foreach V,$(REPORTS),-s $(SPARQLDIR)/$V.sparql reports/$V.tsv)
 all_reports: $(BUILDDIR)/$(ONT).owl
 	robot query -f tsv -i $< $(REPORT_ARGS)
+	
+DIFF_REPORTS=efo.owl efo.obo
+DIFF_REPORTS_FILES=$(patsubst %, qc/diff_%_latest_release.txt, $(DIFF_REPORTS))
+ENTITY_DIFF_FILES=$(patsubst %, qc/diff_%_entities.txt, $(DIFF_REPORTS))
+	
+qc/diff_%_latest_release.txt: $(BUILDDIR)/%
+	$(ROBOT) diff --left $< --right-iri https://www.ebi.ac.uk/efo/$* -o $@
+	
+qc/current_%_entities.txt: $(BUILDDIR)/%
+	$(ROBOT) query --input $< --select $(SPARQLDIR)/all_classes.sparql $@.tmp &&\
+	cat $@.tmp  | sort | uniq > $@ &&\
+	rm $@.tmp
+.PRECIOUS: qc/current_%_entities.txt
+
+#$(BUILDDIR)/efo.owl:
+#	echo "skipped"
+	
+#$(BUILDDIR)/efo.obo:
+#	echo "skipped"
+
+qc/latest_%_entities.txt: 
+	$(ROBOT) query --input-iri https://www.ebi.ac.uk/efo/$* --select $(SPARQLDIR)/all_classes.sparql $@.tmp &&\
+	cat $@.tmp  | sort | uniq > $@ &&\
+	rm $@.tmp
+.PRECIOUS: qc/latest_%_entities.txt
+
+qc/diff_%_entities.txt: qc/current_%_entities.txt qc/latest_%_entities.txt
+	diff $^ > $@ || true
+
+qc/uberon_consider_terms.txt: imports/uberon_bot.owl
+	$(ROBOT) query --input $< --select $(SPARQLDIR)/uberon_terms.sparql $@.tmp &&\
+	cat $@.tmp  | sort | uniq > $@ &&\
+	rm $@.tmp
+	
+qc/uberon_current_terms.txt: $(BUILDDIR)/$(ONT).owl
+	$(ROBOT) query --input $< --select $(SPARQLDIR)/uberon_terms.sparql $@.tmp &&\
+	cat $@.tmp  | sort | uniq > $@ &&\
+	rm $@.tmp
+	
+qc/uberon_diff.txt: qc/uberon_consider_terms.txt qc/uberon_current_terms.txt
+	diff -u $^ | grep '^-[^-]' | sed 's/^-//'
+
+all_diffs: $(ENTITY_DIFF_FILES) $(DIFF_REPORTS_FILES)
