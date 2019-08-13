@@ -12,8 +12,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?term
 WHERE {
-  { ?s1 ?p1 ?term . }
-  UNION
-  { ?term ?p2 ?o2 . }
-  FILTER(isIRI(?term) && (regex(str(?term), "http://purl.obolibrary.org/obo/UBERON_")))
+  ?term a owl:Class . 
+  FILTER(isIRI(?term) && !regex(str(?term), "http://www.ebi.ac.uk/efo/EFO_")&& !regex(str(?term), "http://purl.obolibrary.org/obo/HANCESTRO_")&& !regex(str(?term), "http://purl.obolibrary.org/obo/UBERON_"))
 }
