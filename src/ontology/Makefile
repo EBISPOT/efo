@@ -56,7 +56,7 @@ imports/%_import.owl: mirror/%.owl imports/%_terms.txt
 	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
 
-imports/mondo_terms.txt: iri_dependencies/mondo_terms.txt
+imports/%_terms.txt: iri_dependencies/%_terms.txt
 	cat $^ | sort | uniq > $@
 
 imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_blacklist.txt
@@ -65,7 +65,7 @@ imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependenc
 	
 imports/uberon_terms.txt: iri_dependencies/uberon_terms.txt iri_dependencies/efo-relations.txt
 	cat $^ | sort | uniq > $@
-	
+
 imports/uberon_bot.owl: mirror/uberon.owl imports/uberon_terms.txt
 	$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ -o $@
 
@@ -154,7 +154,7 @@ $(BUILDDIR)/$(ONT).owl: $(SRC)
 	reason -s true -m false -r hermit \
 	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`cat version.txt`/$(ONT).owl -o $@
 
-$(BUILDDIR)/$(ONT).obo: #$(BUILDDIR)/$(ONT).owl
+$(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/`cat version.txt`/efo.owl \
 	query --update ../sparql/inject-subset-declaration.sparql \
 	convert --check false -f obo -o $@
@@ -186,7 +186,7 @@ REPORT_ARGS = $(foreach V,$(REPORTS),-s $(SPARQLDIR)/$V.sparql reports/$V.tsv)
 all_reports: $(BUILDDIR)/$(ONT).owl
 	robot query -f tsv -i $< $(REPORT_ARGS)
 	
-DIFF_REPORTS=efo.owl efo.obo
+DIFF_REPORTS=efo.owl
 DIFF_REPORTS_FILES=$(patsubst %, qc/diff_%_latest_release.txt, $(DIFF_REPORTS))
 ENTITY_DIFF_FILES=$(patsubst %, qc/diff_%_entities.txt, $(DIFF_REPORTS))
 	
