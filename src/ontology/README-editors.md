@@ -63,3 +63,11 @@ You should only attempt to make a release AFTER EFO2 has been committed and push
 - Build EFO web through Bamboo
      - Push to staging and check the wwwdev site, if all looks good then push to production
 - Inform our efo-users@ebi.ac.uk and arrayexpress-atlas@ebi.ac.uk mailing lists of the new release.
+
+
+# EFO Migration steps (30. September 2019)
+
+1. `cd src/ontology/migration2019`
+1. `bash ./pre-migration.sh`
+1. Manually copying the import statements from import-stamentens.owl to efo-edit.owl
+1. `bash ./migration.sh`
