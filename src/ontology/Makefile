@@ -52,14 +52,14 @@ IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, impor
 all_imports: $(IMPORTS_OWL)
 
 # Use ROBOT, driven entirely by terms lists NOT from source ontology
-imports/%_import.owl: mirror/%.owl imports/%_terms.txt
+imports/%_import.owl: mirror/%.owl imports/%_terms.txt $(SRC)
 	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
 
 imports/%_terms.txt: iri_dependencies/%_terms.txt
 	cat $^ | sort | uniq > $@
 
-imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_blacklist.txt
+imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_blacklist.txt $(SRC)
 	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_blacklist.txt -o $@
 .PRECIOUS: imports/mondo_import.owl
 	
@@ -69,7 +69,7 @@ imports/uberon_terms.txt: iri_dependencies/uberon_terms.txt iri_dependencies/efo
 imports/uberon_bot.owl: mirror/uberon.owl imports/uberon_terms.txt
 	$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ -o $@
 
-imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt
+imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt $(SRC)
 	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -o $@
 .PRECIOUS: imports/uberon_import.owl
 
