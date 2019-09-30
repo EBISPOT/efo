@@ -114,11 +114,11 @@ components/efo_%.owl: $(SRC) qc/%_terms.txt components/efo_terms.txt components/
 	remove -T components/efo_terms.txt -o $@
 
 qc/efo_no_%.owl: $(SRC) components/efo_%.owl
-	$(ROBOT) merge -i $< --collapse-import-closure false unmerge -i components/efo_$*.owl -o $@
+	$(ROBOT) remove --catalog catalog-v001.xml -i $< --select imports unmerge -i components/efo_$*.owl -o $@
 .PRECIOUS: qc/efo_no_%.owl
 
 qc/diff_efo-%.txt: $(SRC) qc/efo_no_%.owl
-	$(ROBOT) diff --left $< --right qc/efo_no_$*.owl -o $@
+	$(ROBOT) diff --catalog catalog-v001.xml --left $< --right qc/efo_no_$*.owl -o $@
 
 all_components: $(COMPONENT_FILES)
 
