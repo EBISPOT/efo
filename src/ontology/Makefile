@@ -70,7 +70,7 @@ imports/uberon_bot.owl: mirror/uberon.owl imports/uberon_terms.txt
 	$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ -o $@
 
 imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt $(SRC)
-	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -o $@
+	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/uberon_import.owl
 
 
