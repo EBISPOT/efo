@@ -18,5 +18,7 @@ sed -i '' '/[-+] AnnotationAssertion.*rdfs[:]label.*/d' efo-edit-diff.txt
 sed -i '' '/[-+] Declaration/d' efo-edit-diff.txt
 sed -i '' '/.*ObsoleteClass/d' efo-edit-diff.txt
 sed -i '' '/[-+] SubAnnotationPropertyOf.*_definition_citation>/d' efo-edit-diff.txt
-
+cd ..
+cp ./migration2019/efo-edit-fixed.owl efo-edit.owl && echo "efo-edit.owl updated from efo-edit-fixed.owl."
+make nuclear_strike
 echo "Pre-migration done. IMPORTANT: Please manually add the import statements from import-statements.owl to efo-edit-fixed.owl!"
