@@ -52,14 +52,14 @@ IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, impor
 all_imports: $(IMPORTS_OWL)
 
 # Use ROBOT, driven entirely by terms lists NOT from source ontology
-imports/%_import.owl: mirror/%.owl imports/%_terms.txt
+imports/%_import.owl: mirror/%.owl imports/%_terms.txt $(SRC)
 	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
 
 imports/%_terms.txt: iri_dependencies/%_terms.txt
 	cat $^ | sort | uniq > $@
 
-imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_blacklist.txt
+imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_blacklist.txt $(SRC)
 	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_blacklist.txt -o $@
 .PRECIOUS: imports/mondo_import.owl
 	
@@ -69,8 +69,8 @@ imports/uberon_terms.txt: iri_dependencies/uberon_terms.txt iri_dependencies/efo
 imports/uberon_bot.owl: mirror/uberon.owl imports/uberon_terms.txt
 	$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ -o $@
 
-imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt
-	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -o $@
+imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt $(SRC)
+	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/uberon_import.owl
 
 
@@ -114,11 +114,11 @@ components/efo_%.owl: $(SRC) qc/%_terms.txt components/efo_terms.txt components/
 	remove -T components/efo_terms.txt -o $@
 
 qc/efo_no_%.owl: $(SRC) components/efo_%.owl
-	$(ROBOT) merge -i $< --collapse-import-closure false unmerge -i components/efo_$*.owl -o $@
+	$(ROBOT) remove --catalog catalog-v001.xml -i $< --select imports unmerge -i components/efo_$*.owl -o $@
 .PRECIOUS: qc/efo_no_%.owl
 
 qc/diff_efo-%.txt: $(SRC) qc/efo_no_%.owl
-	$(ROBOT) diff --left $< --right qc/efo_no_$*.owl -o $@
+	$(ROBOT) diff --catalog catalog-v001.xml --left $< --right qc/efo_no_$*.owl -o $@
 
 all_components: $(COMPONENT_FILES)
 
