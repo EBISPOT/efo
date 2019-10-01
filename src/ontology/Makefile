@@ -90,7 +90,7 @@ components/subclasses.owl: ../templates/subclasses.csv
 
 components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl
 	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
-	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/imports/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
+	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
 
 components/efo_terms.txt: $(SRC) $(SPARQLDIR)/efo_terms.sparql
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/efo_terms.sparql $@.tmp &&\
