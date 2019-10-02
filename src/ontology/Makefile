@@ -184,7 +184,7 @@ sparql_test: $(BUILDDIR)/$(ONT).owl
 REPORTS = basic-report class-count-by-prefix edges xrefs obsoletes synonyms
 REPORT_ARGS = $(foreach V,$(REPORTS),-s $(SPARQLDIR)/$V.sparql reports/$V.tsv)
 all_reports: $(BUILDDIR)/$(ONT).owl
-	robot query -f tsv -i $< $(REPORT_ARGS)
+	$(ROBOT) query -f tsv -i $< $(REPORT_ARGS)
 	
 DIFF_REPORTS=efo.owl
 DIFF_REPORTS_FILES=$(patsubst %, qc/diff_%_latest_release.txt, $(DIFF_REPORTS))
