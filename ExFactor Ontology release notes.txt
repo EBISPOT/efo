@@ -11,18 +11,18 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.8.0
-Date Released: 15th July 2019
-Class Count: 36676
+Experimental Factor Ontology version 3.10.0
+Date Released: 16th September 2019
+Class Count: 36760
 
 Summary: 
 
-EFO 3.8.0 release includes further alignments between EFO and MONDO, as well as a substantial import of Uberon terms.
+EFO 3.10.0 release includes further alignments between EFO and MONDO and further terms required for the GWAS Catalog.
 
 General Stats:
-Number of classes changed: 78
-Number of classes added: 147
-Number of classes deleted: 4
+Number of classes changed: 155
+Number of classes added: 50
+Number of classes deleted: 0
 
 ----------------------------------
 1.	Changes to URIs
@@ -38,809 +38,237 @@ Number of classes deleted: 4
 
 New Classes
 
-@Classes new to this version
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010015
-Label(s): SCTG 
-+ 'SCTG' SubClassOf 'RNA assay'
-+ 'SCTG' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'SCTG' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'SCTG' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010016
-Label(s): HiRes-Seq 
-+ 'HiRes-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'HiRes-Seq' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010013
-Label(s): ATAC-see 
-+ 'ATAC-see' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010014
-Label(s): Omni-ATAC 
-+ 'Omni-ATAC' SubClassOf 'DNA assay'
-+ 'Omni-ATAC' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010011
-Label(s): HiChIP 
-+ 'HiChIP' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'HiChIP' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010012
-Label(s): ADPr-ChAP 
-+ 'ADPr-ChAP' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010010
-Label(s): CEL-Seq2 
-+ 'CEL-Seq2' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010019
-Label(s): m6A-LAIC-seq 
-+ 'm6A-LAIC-seq' SubClassOf 'RNA assay'
-+ 'm6A-LAIC-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010017
-Label(s): HTGTS-Rep-seq 
-+ 'HTGTS-Rep-seq' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010018
-Label(s): 2OMe-seq 
-+ '2OMe-seq' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010004
-Label(s): SCRB-Seq 
-+ 'SCRB-Seq' SubClassOf 'RNA assay'
-+ 'SCRB-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010005
-Label(s): DR-Seq 
-+ 'DR-Seq' SubClassOf 'RNA assay'
-+ 'DR-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'DR-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'DR-Seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010002
-Label(s): RRMAB-seq 
-+ 'RRMAB-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'RRMAB-seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010003
-Label(s): RASL-seq 
-+ 'RASL-seq' SubClassOf 'RNA assay'
-+ 'RASL-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010000
-Label(s): JBP1-seq 
-+ 'JBP1-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'JBP1-seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010001
-Label(s): MAB-seq 
-+ 'MAB-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'MAB-seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010008
-Label(s): irCLIP 
-+ 'irCLIP' SubClassOf 'RNA assay'
-+ 'irCLIP' SubClassOf 'IP-seq'
-+ 'irCLIP' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010009
-Label(s): pVAC-Seq 
-+ 'pVAC-Seq' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010006
-Label(s): scM&T-seq 
-+ 'scM&T-seq' SubClassOf 'DNA assay'
-+ 'scM&T-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'scM&T-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'scM&T-seq' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010007
-Label(s): scTrio-seq 
-+ 'scTrio-seq' SubClassOf 'DNA assay'
-+ 'scTrio-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'scTrio-seq' SubClassOf 'RNA assay'
-+ 'scTrio-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010037
-Label(s): INTACT 
-+ 'INTACT' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'INTACT' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010038
-Label(s): Mu-Seq 
-+ 'Mu-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'Mu-Seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010035
-Label(s): Frac-Seq 
-+ 'Frac-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'Frac-Seq' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010036
-Label(s): HITS-KIN 
-+ 'HITS-KIN' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'HITS-KIN' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010033
-Label(s): RSMA 
-+ 'RSMA' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010034
-Label(s): Cappable-Seq 
-+ 'Cappable-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'Cappable-Seq' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010031
-Label(s): BAsE-Seq 
-+ 'BAsE-Seq' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010032
-Label(s): EasyMF 
-+ 'EasyMF' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010030
-Label(s): CRISPR-UMI 
-+ 'CRISPR-UMI' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'CRISPR-UMI' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010039
-Label(s): mutARS-Seq 
-+ 'mutARS-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'mutARS-Seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010026
-Label(s): RESA?CLIP 
-+ 'RESA?CLIP' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'RESA?CLIP' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010027
-Label(s): RESA 
-+ 'RESA' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'RESA' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010024
-Label(s): AGO-PAR-CLIP 
-+ 'AGO-PAR-CLIP' SubClassOf 'RNA assay'
-+ 'AGO-PAR-CLIP' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010025
-Label(s): PASP 
-+ 'PASP' SubClassOf 'RNA assay'
-+ 'PASP' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010022
-Label(s): Smart-3Seq 
-+ 'Smart-3Seq' SubClassOf 'RNA assay'
-+ 'Smart-3Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010023
-Label(s): PELE-Seq 
-+ 'PELE-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'PELE-Seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010020
-Label(s): AGO HITS-CLIP 
-+ 'AGO HITS-CLIP' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'AGO HITS-CLIP' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010021
-Label(s): miniARS-seq 
-+ 'miniARS-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'miniARS-seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010028
-Label(s): STAP-seq 
-+ 'STAP-seq' SubClassOf 'DNA assay'
-+ 'STAP-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010029
-Label(s): SPLASH 
-+ 'SPLASH' SubClassOf 'RNA assay'
-+ 'SPLASH' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://purl.obolibrary.org/obo/HP_0002253
-Label(s): Colonic diverticula 
-+ 'Colonic diverticula' SubClassOf 'Abnormality of the large intestine'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010048
-Label(s): Fluidigm C1-based dissociation 
-+ 'Fluidigm C1-based dissociation' SubClassOf 'sample dissociation'
-+ 'Fluidigm C1-based dissociation' SubClassOf 'has_participant' some 'Fluidigm C1 microfluidics platform'
-+ 'Fluidigm C1-based dissociation' SubClassOf 'assay by Fluidigm C1 microfluidics platform'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010046
-Label(s): TAm-Seq 
-+ 'TAm-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'TAm-Seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010047
-Label(s): assay by Fluidigm C1 microfluidics platform 
-+ 'assay by Fluidigm C1 microfluidics platform' SubClassOf 'assay by instrument'
-+ 'assay by Fluidigm C1 microfluidics platform' EquivalentTo 'has_participant' some 'Fluidigm C1 microfluidics platform'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010044
-Label(s): STARR-Seq 
-+ 'STARR-Seq' SubClassOf 'DNA assay'
-+ 'STARR-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010045
-Label(s): Start-seq 
-+ 'Start-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'Start-seq' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010042
-Label(s): Ren-Seq 
-+ 'Ren-Seq' SubClassOf 'DNA assay'
-+ 'Ren-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010043
-Label(s): Stable-Seq 
-+ 'Stable-Seq' SubClassOf 'DNA assay'
-+ 'Stable-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010040
-Label(s): Nano-hmC-Seal 
-+ 'Nano-hmC-Seal' SubClassOf 'DNA assay'
-+ 'Nano-hmC-Seal' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010041
-Label(s): Nascent-Seq 
-+ 'Nascent-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'Nascent-Seq' SubClassOf 'RNA assay'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0036304
-Label(s): anatomical border 
-+ 'anatomical border' SubClassOf 'anatomical structure'
-
-Class: http://purl.obolibrary.org/obo/HP_0012664
-Label(s): Reduced ejection fraction 
-+ 'Reduced ejection fraction' SubClassOf 'Abnormality of cardiovascular system morphology'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0011941
-Label(s): lateral angle of scapula 
-+ 'lateral angle of scapula' SubClassOf 'angle of scapula'
-+ 'superior angle of scapula' DisjointWith 'lateral angle of scapula'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009983
-Label(s): MC-4C 
-+ 'MC-4C' SubClassOf '4C'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009984
-Label(s): SPRITE 
-+ 'SPRITE' SubClassOf 'ligation-free chromosome conformation capture assay'
-+ 'SPRITE' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'SPRITE' SubClassOf 'assay by high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009985
-Label(s): DNA SPRITE 
-+ 'DNA SPRITE' SubClassOf 'SPRITE'
-+ 'DNA SPRITE' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009986
-Label(s): RNA-DNA SPRITE 
-+ 'RNA-DNA SPRITE' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'RNA-DNA SPRITE' SubClassOf 'SPRITE'
-+ 'RNA-DNA SPRITE' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'RNA-DNA SPRITE' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009980
-Label(s): MC-Hi-C 
-+ 'MC-Hi-C' SubClassOf 'has_participant' some 'long read sequencer'
-+ 'MC-Hi-C' SubClassOf 'assay by long read sequencer'
-+ 'MC-Hi-C' SubClassOf 'Hi-C'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009981
-Label(s): PLAC-seq 
-+ 'PLAC-seq' SubClassOf 'IP-seq'
-+ 'PLAC-seq' SubClassOf 'ligation-mediated chromosome conformation capture assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009982
-Label(s): Trac-Loop 
-+ 'Trac-Loop' SubClassOf 'ligation-free chromosome conformation capture assay'
-+ 'Trac-Loop' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'Trac-Loop' SubClassOf 'assay by high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009987
-Label(s): GAM 
-+ 'GAM' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'GAM' SubClassOf 'assay by high throughput sequencer'
-+ 'GAM' SubClassOf 'ligation-free chromosome conformation capture assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009988
-Label(s): MARGI 
-+ 'MARGI' SubClassOf 'RNA assay'
-+ 'MARGI' SubClassOf 'DNA assay'
-+ 'MARGI' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'MARGI' SubClassOf 'assay by high throughput sequencer'
-+ 'MARGI' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'MARGI' SubClassOf 'has_participant' some 'high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009989
-Label(s): long read sequencer 
-+ 'long read sequencer' SubClassOf 'sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009972
-Label(s): NAD-seq 
-+ 'NAD-seq' SubClassOf 'DNA assay'
-+ 'NAD-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'NAD-seq' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'NAD-seq' SubClassOf 'assay by high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009973
-Label(s): CUT&RUN 
-+ 'CUT&RUN' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'CUT&RUN' SubClassOf 'DNA assay'
-+ 'CUT&RUN' SubClassOf 'assay by high throughput sequencer'
-+ 'CUT&RUN' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009974
-Label(s): in situ HiC 
-+ 'in situ HiC' SubClassOf 'assay by high throughput sequencer'
-+ 'in situ HiC' SubClassOf 'Hi-C'
-+ 'in situ HiC' SubClassOf 'has_participant' some 'high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009975
-Label(s): dilution HiC 
-+ 'dilution HiC' SubClassOf 'Hi-C'
-+ 'dilution HiC' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'dilution HiC' SubClassOf 'assay by high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009970
-Label(s): multi-stage Repli-seq 
-+ 'multi-stage Repli-seq' SubClassOf 'Repli-Seq'
-+ 'multi-stage Repli-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009971
-Label(s): TSA-seq 
-+ 'TSA-seq' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'TSA-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'TSA-seq' SubClassOf 'DNA assay'
-+ 'TSA-seq' SubClassOf 'assay by high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009976
-Label(s): DNase Hi-C 
-+ 'DNase Hi-C' SubClassOf 'assay by high throughput sequencer'
-+ 'DNase Hi-C' SubClassOf 'Hi-C'
-+ 'DNase Hi-C' SubClassOf 'has_participant' some 'high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009977
-Label(s): sci-Hi-C 
-+ 'sci-Hi-C' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'sci-Hi-C' SubClassOf 'Hi-C'
-+ 'sci-Hi-C' SubClassOf 'assay by high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009978
-Label(s): sn-Hi-C 
-+ 'sn-Hi-C' SubClassOf 'assay by high throughput sequencer'
-+ 'sn-Hi-C' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'sn-Hi-C' SubClassOf 'Hi-C'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009979
-Label(s): single cell Hi-C 
-+ 'single cell Hi-C' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'single cell Hi-C' SubClassOf 'Hi-C'
-+ 'single cell Hi-C' SubClassOf 'assay by high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009994
-Label(s): scABA-seq 
-+ 'scABA-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'scABA-seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009995
-Label(s): UMI-4C 
-+ 'UMI-4C' SubClassOf '4C'
-+ 'UMI-4C' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009996
-Label(s): ddMDA 
-+ 'ddMDA' SubClassOf 'DNA assay'
-+ 'ddMDA' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009997
-Label(s): EpiRADSeq 
-+ 'EpiRADSeq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'EpiRADSeq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009990
-Label(s): Fluidigm C1 microfluidics platform 
-+ 'Fluidigm C1 microfluidics platform' SubClassOf 'instrument'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009991
-Label(s): Nuc-Seq 
-+ 'Nuc-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'Nuc-Seq' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009992
-Label(s): Bubble-Seq 
-+ 'Bubble-Seq' SubClassOf 'RNA assay'
-+ 'Bubble-Seq' SubClassOf 'DNA assay'
-+ 'Bubble-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'Bubble-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009993
-Label(s): ChIP-BMS 
-+ 'ChIP-BMS' SubClassOf 'DNA assay'
-+ 'ChIP-BMS' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009998
-Label(s): eCLIP 
-+ 'eCLIP' SubClassOf 'IP-seq'
-+ 'eCLIP' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'eCLIP' SubClassOf 'RNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009999
-Label(s): G&T-Seq 
-+ 'G&T-Seq' SubClassOf 'RNA assay'
-+ 'G&T-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'G&T-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-+ 'G&T-Seq' SubClassOf 'DNA assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009902
-Label(s): handedness 
-+ 'handedness' SubClassOf 'functional laterality'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009925
-Label(s): Antithrombotic agent use measurement 
-+ 'Antithrombotic agent use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009926
-Label(s): Vasodilators used in cardiac diseases use measurement 
-+ 'Vasodilators used in cardiac diseases use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009927
-Label(s): Antihypertensive use measurement 
-+ 'Antihypertensive use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009928
-Label(s): Diuretic use measurement 
-+ 'Diuretic use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009923
-Label(s): Peptic ulcer and gastro-oesophageal reflux disease (GORD) drug use measurement 
-+ 'Peptic ulcer and gastro-oesophageal reflux disease (GORD) drug use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009924
-Label(s): Drugs used in diabetes use measurement 
-+ 'Drugs used in diabetes use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009929
-Label(s): Beta blocking agent use measurement 
-+ 'Beta blocking agent use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009940
-Label(s): Antidepressant use measurement 
-+ 'Antidepressant use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009941
-Label(s): Inhalant adrenergic use measurement 
-+ 'Inhalant adrenergic use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009942
-Label(s): Glucocorticoid use measurement 
-+ 'Glucocorticoid use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009947
-Label(s): nucleoside diphosphate kinase A measurement 
-+ 'nucleoside diphosphate kinase A measurement' SubClassOf 'liver disease biomarker'
-+ 'nucleoside diphosphate kinase A measurement' SubClassOf 'is_about' some 'hepatocellular carcinoma'
-+ 'nucleoside diphosphate kinase A measurement' SubClassOf 'protein measurement'
-+ 'nucleoside diphosphate kinase A measurement' SubClassOf 'is_about' some 'liver'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009948
-Label(s): chorioamnionitis 
-+ 'chorioamnionitis' SubClassOf 'disease of extraembryonic membrane'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009949
-Label(s): KANNO antigen measurement 
-+ 'KANNO antigen measurement' SubClassOf 'blood protein measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009943
-Label(s): Antihistamine use measurement 
-+ 'Antihistamine use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009944
-Label(s): Antiglaucoma preparations and miotics use measurement 
-+ 'Antiglaucoma preparations and miotics use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009945
-Label(s): psychological resilience measurement 
-+ 'psychological resilience measurement' SubClassOf 'psychological measurement'
-+ 'psychological resilience measurement' SubClassOf 'mental or behavioural disorder biomarker'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009946
-Label(s): low density lipoprotein triglyceride measurement 
-+ 'low density lipoprotein triglyceride measurement' SubClassOf 'is_about' some 'low-density lipoprotein'
-+ 'low density lipoprotein triglyceride measurement' SubClassOf 'lipid measurement'
-+ 'low density lipoprotein triglyceride measurement' SubClassOf 'lipoprotein measurement'
-+ 'low density lipoprotein triglyceride measurement' SubClassOf 'triglyceride measurement'
-+ 'low density lipoprotein triglyceride measurement' SubClassOf 'is_about' some 'cardiovascular disease'
-+ 'low density lipoprotein triglyceride measurement' SubClassOf 'is_about' some 'triglyceride'
-+ 'low density lipoprotein triglyceride measurement' SubClassOf 'cardiovascular disease biomarker measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009930
-Label(s): Calcium channel blocker use measurement 
-+ 'Calcium channel blocker use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009931
-Label(s): Agents acting on the renin-angiotensin system use measurement 
-+ 'Agents acting on the renin-angiotensin system use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009936
-Label(s): Drugs affecting bone structure and mineralization use measurement 
-+ 'Drugs affecting bone structure and mineralization use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009937
-Label(s): Opioid use measurement 
-+ 'Opioid use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009938
-Label(s): Anilide use measurement 
-+ 'Anilide use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009939
-Label(s): Antimigraine preparation use measurement 
-+ 'Antimigraine preparation use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009932
-Label(s): HMG CoA reductase inhibitor use measurement 
-+ 'HMG CoA reductase inhibitor use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009933
-Label(s): Thyroid preparation use measurement 
-+ 'Thyroid preparation use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009934
-Label(s): Immunosuppressant use measurement 
-+ 'Immunosuppressant use measurement' SubClassOf 'drug use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009935
-Label(s): Non-steroidal anti-inflammatory and antirheumatic product use measurement 
-+ 'Non-steroidal anti-inflammatory and antirheumatic product use measurement' SubClassOf 'NSAID use measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009961
-Label(s): Insulinogenic index measurement 
-+ 'Insulinogenic index measurement' SubClassOf 'insulin measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009962
-Label(s): response to radioiodine 
-+ 'response to radioiodine' SubClassOf 'response to radiation'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009963
-Label(s): bipolar I disorder 
-+ 'bipolar I disorder' SubClassOf 'bipolar disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009964
-Label(s): bipolar II disoder 
-+ 'bipolar II disoder' SubClassOf 'bipolar disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009960
-Label(s): atypical femoral fracture 
-+ 'atypical femoral fracture' SubClassOf 'lower extremity fracture'
-+ 'atypical femoral fracture' SubClassOf 'has_disease_location' some 
-('bone' or ('part_of' some 'bone'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009969
-Label(s): 2-stage Repli-seq 
-+ '2-stage Repli-seq' SubClassOf 'Repli-Seq'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009965
-Label(s): Schizoaffective disorder-bipolar type 
-+ 'Schizoaffective disorder-bipolar type' SubClassOf 'schizoaffective disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009966
-Label(s): assay by long read sequencer 
-+ 'assay by long read sequencer' SubClassOf 'assay by sequencer'
-+ 'assay by long read sequencer' EquivalentTo 'has_participant' some 'long read sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009967
-Label(s): ligation-mediated chromosome conformation capture assay 
-+ 'ligation-mediated chromosome conformation capture assay' SubClassOf 'chromosome conformation capture assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009968
-Label(s): ligation-free chromosome conformation capture assay 
-+ 'ligation-free chromosome conformation capture assay' SubClassOf 'chromosome conformation capture assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009951
-Label(s): response to surgery 
-+ 'response to surgery' SubClassOf 'response to stimulus'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009952
-Label(s): post-operative atrial fibrillation 
-+ 'post-operative atrial fibrillation' SubClassOf 'has_disease_location' some 
-('heart' or ('part_of' some 'heart'))
-+ 'post-operative atrial fibrillation' SubClassOf 'post-operative sign or symptom'
-+ 'post-operative atrial fibrillation' SubClassOf 'heart disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009953
-Label(s): post-operative myocardial infarction 
-+ 'post-operative myocardial infarction' SubClassOf 'has_disease_location' some 
-('heart' or ('part_of' some 'heart'))
-+ 'post-operative myocardial infarction' SubClassOf 'heart disease'
-+ 'post-operative myocardial infarction' SubClassOf 'post-operative sign or symptom'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009958
-Label(s): response to bisphosphonate 
-+ 'response to bisphosphonate' SubClassOf 'response to drug'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009959
-Label(s): diverticular disease 
-+ 'diverticular disease' SubClassOf 'has_disease_location' some 
-('colon' or ('part_of' some 'colon'))
-+ 'diverticular disease' SubClassOf 'intestinal disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009954
-Label(s): post-operative delirium 
-+ 'post-operative delirium' SubClassOf 'has_disease_location' some 
-('brain' or ('part_of' some 'brain'))
-+ 'post-operative delirium' SubClassOf 'post-operative sign or symptom'
-+ 'post-operative delirium' SubClassOf 'central nervous system disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009955
-Label(s): post-operative acute kidney injury 
-+ 'post-operative acute kidney injury' SubClassOf 'has_disease_location' some 
-('kidney' or ('part_of' some 'kidney'))
-+ 'post-operative acute kidney injury' SubClassOf 'kidney disease'
-+ 'post-operative acute kidney injury' SubClassOf 'post-operative sign or symptom'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009956
-Label(s): post-operative stroke 
-+ 'post-operative stroke' SubClassOf 'has_disease_location' some 
-('brain' or ('part_of' some 'brain'))
-+ 'post-operative stroke' SubClassOf 'central nervous system disease'
-+ 'post-operative stroke' SubClassOf 'post-operative sign or symptom'
-
-Class: http://www.ebi.ac.uk/efo/http://www.ebi.ac.uk/efo/EFO_0009950
+Class: http://www.ebi.ac.uk/efo/EFO_0010083
+Label(s): dentate gyrus volume measurement 
++ 'dentate gyrus volume measurement' SubClassOf 'mental or behavioural disorder biomarker'
++ 'dentate gyrus volume measurement' SubClassOf 'hippocampal volume'
++ 'dentate gyrus volume measurement' SubClassOf 'is_about' some 'dentate gyrus of hippocampal formation'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010084
+Label(s): anti-meningococcal C IgG measurement 
++ 'anti-meningococcal C IgG measurement' SubClassOf 'infectious disease biomarker'
++ 'anti-meningococcal C IgG measurement' SubClassOf 'is_about' some 'meningococcal infection'
++ 'anti-meningococcal C IgG measurement' SubClassOf 'serum IgG measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010085
+Label(s): anti-tetanus toxoid IgG measurement 
++ 'anti-tetanus toxoid IgG measurement' SubClassOf 'infectious disease biomarker'
++ 'anti-tetanus toxoid IgG measurement' SubClassOf 'serum IgG measurement'
++ 'anti-tetanus toxoid IgG measurement' SubClassOf 'is_about' some 'tetanus'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010089
+Label(s): bitter beverage consumption measurement 
++ 'bitter beverage consumption measurement' SubClassOf 'beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010100
+Label(s): multisite chronic pain 
++ 'multisite chronic pain' SubClassOf 'chronic pain'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010101
+Label(s): decreased susceptibility to hepatitis C infection 
++ 'decreased susceptibility to hepatitis C infection' SubClassOf 'abnormality of the immune system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010102
+Label(s): peginterferon alfa-2a 
++ 'peginterferon alfa-2a' SubClassOf 'drug'
++ 'peginterferon alfa-2a' SubClassOf 'has_role' some 'antineoplastic agent'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010104
+Label(s): health literacy measurement 
++ 'health literacy measurement' SubClassOf 'measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010105
+Label(s): CD4-positive T-lymphocyte count 
++ 'CD4-positive T-lymphocyte count' SubClassOf 'lymphocyte count'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010109
+Label(s): CD56-positive NK-lymphocyte cell count 
++ 'CD56-positive NK-lymphocyte cell count' SubClassOf 'lymphocyte count'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010110
+Label(s): ketone body measurement 
++ 'ketone body measurement' SubClassOf 'measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010111
+Label(s): acetoacetate measurement 
++ 'acetoacetate measurement' SubClassOf 'is_about' some 'acetoacetate'
++ 'acetoacetate measurement' SubClassOf 'ketone body measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010112
+Label(s): acetate measurement 
++ 'acetate measurement' SubClassOf 'ketone body measurement'
++ 'acetate measurement' SubClassOf 'is_about' some 'acetate'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010128
+Label(s): immunoglobulin isotype switching measurement 
++ 'immunoglobulin isotype switching measurement' SubClassOf 'antibody measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010131
+Label(s): decreased walking ability 
++ 'decreased walking ability' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010133
+Label(s): diabetic maculopathy 
++ 'diabetic maculopathy' SubClassOf 'has_disease_location' some 
+('eye' or ('part_of' some 'eye'))
++ 'diabetic maculopathy' SubClassOf 'diabetic retinopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009950
 Label(s): disease of extraembryonic membrane 
 + 'disease of extraembryonic membrane' SubClassOf 'placenta disease'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0007171
-Label(s): border of scapula 
-+ 'border of scapula' SubClassOf 'anatomical border'
+Class: http://www.ebi.ac.uk/efo/EFO_0010118
+Label(s): sphingomyelin measurement 
++ 'sphingomyelin measurement' SubClassOf 'sphingolipid measurement'
++ 'sphingomyelin measurement' SubClassOf 'is_about' some 'sphingomyelin'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0007176
-Label(s): superior angle of scapula 
-+ 'superior angle of scapula' SubClassOf 'angle of scapula'
-+ 'superior angle of scapula' DisjointWith 'lateral angle of scapula'
+Class: http://www.ebi.ac.uk/efo/EFO_0010115
+Label(s): glycerol measurement 
++ 'glycerol measurement' SubClassOf 'is_about' some 'glycerol'
++ 'glycerol measurement' SubClassOf 'measurement'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0007175
-Label(s): inferior angle of scapula 
-+ 'inferior angle of scapula' SubClassOf 'angle of scapula'
+Class: http://www.ebi.ac.uk/efo/EFO_0010132
+Label(s): decreased fine motor function 
++ 'decreased fine motor function' SubClassOf 'Abnormality of nervous system physiology'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0007174
-Label(s): medial border of scapula 
-+ 'lateral border of scapula' DisjointWith 'medial border of scapula'
-+ 'medial border of scapula' SubClassOf 'border of scapula'
+Class: http://www.ebi.ac.uk/efo/EFO_0010129
+Label(s): breakfast skipping measurement 
++ 'breakfast skipping measurement' SubClassOf 'is_about' some 'eating behaviour'
++ 'breakfast skipping measurement' SubClassOf 'is_about' some 'eating disorder'
++ 'breakfast skipping measurement' SubClassOf 'mental or behavioural disorder biomarker'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0007173
-Label(s): lateral border of scapula 
-+ 'lateral border of scapula' DisjointWith 'medial border of scapula'
-+ 'lateral border of scapula' SubClassOf 'border of scapula'
+Class: http://www.ebi.ac.uk/efo/EFO_0010127
+Label(s): serum immunoglobulin measurement 
++ 'serum immunoglobulin measurement' SubClassOf 'antibody measurement'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0007172
-Label(s): angle of scapula 
-+ 'angle of scapula' SubClassOf 'zone of bone organ'
+Class: http://www.ebi.ac.uk/efo/EFO_0010126
+Label(s): time to first cigarette measurement 
++ 'time to first cigarette measurement' SubClassOf 'is_about' some 'smoking behavior'
++ 'time to first cigarette measurement' SubClassOf 'smoking behaviour measurement'
++ 'time to first cigarette measurement' SubClassOf 'is_about' some 'nicotine dependence'
++ 'time to first cigarette measurement' SubClassOf 'mental or behavioural disorder biomarker'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300263
-Label(s): supraneural 4 cartilage 
-+ 'supraneural 4 cartilage' SubClassOf 'supraneural 4 element'
-+ 'supraneural 4 cartilage' SubClassOf 'supraneural cartilage'
+Class: http://www.ebi.ac.uk/efo/EFO_0010125
+Label(s): viral load 
++ 'viral load' SubClassOf 'measurement'
++ 'viral load' SubClassOf 'is_about' some 'infection'
++ 'viral load' SubClassOf 'infectious disease biomarker'
++ 'viral load' SubClassOf 'is_about' some 'viral disease'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300262
-Label(s): pelvic fin hook 
-+ 'pelvic fin hook' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'pelvic fin hook' SubClassOf 'mesoderm-derived structure'
-+ 'pelvic fin hook' SubClassOf 'skeletal element projection'
-+ 'pelvic fin hook' SubClassOf 'ectoderm-derived structure'
+Class: http://www.ebi.ac.uk/efo/EFO_0010124
+Label(s): response to atorvastatin 
++ 'response to atorvastatin' SubClassOf 'has_input' some 'atorvastatin'
++ 'response to atorvastatin' SubClassOf 'response to statin'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300261
-Label(s): pectoral fin hook 
-+ 'pectoral fin hook' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'pectoral fin hook' SubClassOf 'skeletal element projection'
-+ 'pectoral fin hook' SubClassOf 'mesoderm-derived structure'
-+ 'pectoral fin hook' SubClassOf 'ectoderm-derived structure'
+Class: http://www.ebi.ac.uk/efo/EFO_0010123
+Label(s): response to antiviral drug 
++ 'response to antiviral drug' SubClassOf 'response to drug'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300267
-Label(s): supraneural 8 cartilage 
-+ 'supraneural 8 cartilage' SubClassOf 'supraneural cartilage'
-+ 'supraneural 8 cartilage' SubClassOf 'supraneural 8 element'
+Class: http://www.ebi.ac.uk/efo/EFO_0010120
+Label(s): fasting blood glucose change measurement 
++ 'fasting blood glucose change measurement' SubClassOf 'fasting blood glucose measurement'
++ 'fasting blood glucose change measurement' SubClassOf 'is_about' some 'glucose'
++ 'fasting blood glucose change measurement' SubClassOf 'is_about' some 'type II diabetes mellitus'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300266
-Label(s): supraneural 7 cartilage 
-+ 'supraneural 7 cartilage' SubClassOf 'supraneural 7 element'
-+ 'supraneural 7 cartilage' SubClassOf 'supraneural cartilage'
+Class: http://www.ebi.ac.uk/efo/EFO_0010119
+Label(s): omega-3 polyunsaturated fatty acid measurement 
++ 'omega-3 polyunsaturated fatty acid measurement' SubClassOf 'fatty acid measurement'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300265
-Label(s): supraneural 6 cartilage 
-+ 'supraneural 6 cartilage' SubClassOf 'supraneural cartilage'
-+ 'supraneural 6 cartilage' SubClassOf 'supraneural 6 element'
+Class: http://www.ebi.ac.uk/efo/EFO_0010116
+Label(s): choline measurement 
++ 'choline measurement' SubClassOf 'is_about' some 'choline'
++ 'choline measurement' SubClassOf 'measurement'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300264
-Label(s): supraneural 5 cartilage 
-+ 'supraneural 5 cartilage' SubClassOf 'supraneural 5 element'
-+ 'supraneural 5 cartilage' SubClassOf 'supraneural cartilage'
+Class: http://www.ebi.ac.uk/efo/EFO_0010113
+Label(s): 3-hydroxybutyric acid measurement 
++ '3-hydroxybutyric acid measurement' SubClassOf 'ketone body measurement'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300269
-Label(s): epioccipital bridge 
-+ 'epioccipital bridge' SubClassOf 'zone of bone organ'
-+ 'epioccipital bridge' SubClassOf 'ectoderm-derived structure'
-+ 'epioccipital bridge' SubClassOf 'structure with developmental contribution from neural crest'
+Class: http://www.ebi.ac.uk/efo/EFO_0010108
+Label(s): CD19-positive B-lymphocyte count 
++ 'CD19-positive B-lymphocyte count' SubClassOf 'lymphocyte count'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300268
-Label(s): supraneural 9 cartilage 
-+ 'supraneural 9 cartilage' SubClassOf 'supraneural 9 element'
-+ 'supraneural 9 cartilage' SubClassOf 'supraneural cartilage'
+Class: http://www.ebi.ac.uk/efo/EFO_0010107
+Label(s): CD8-positive T-lymphocyte count 
++ 'CD8-positive T-lymphocyte count' SubClassOf 'lymphocyte count'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300272
-Label(s): interhaemal spine cartilage 
-+ 'interhaemal spine cartilage' SubClassOf 'cartilage element'
+Class: http://www.ebi.ac.uk/efo/EFO_0010106
+Label(s): CD3-positive T-lymphocyte count 
++ 'CD3-positive T-lymphocyte count' SubClassOf 'lymphocyte count'
 
-Class: http://purl.obolibrary.org/obo/UBERON_4300271
-Label(s): interneural spine cartilage 
-+ 'interneural spine cartilage' SubClassOf 'cartilage element'
+Class: http://www.ebi.ac.uk/efo/EFO_0010103
+Label(s): response to peginterferon alfa-2a 
++ 'response to peginterferon alfa-2a' SubClassOf 'is_about' some 'peginterferon alfa-2a'
++ 'response to peginterferon alfa-2a' SubClassOf 'response to interferon'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010099
+Label(s): chronic widespread pain 
++ 'chronic widespread pain' SubClassOf 'chronic pain'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010098
+Label(s): stress-related disorder 
++ 'stress-related disorder' SubClassOf 'mental or behavioural disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010097
+Label(s): sugar sweetened beverage consumption measurement 
++ 'sugar sweetened beverage consumption measurement' SubClassOf 'sweet beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010096
+Label(s): artificially sweetened beverage consumption measurement 
++ 'artificially sweetened beverage consumption measurement' SubClassOf 'sweet beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010095
+Label(s): non-grapefruit juice consumption measurement 
++ 'non-grapefruit juice consumption measurement' SubClassOf 'sweet beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010094
+Label(s): grapefruit juice consumption measurement 
++ 'grapefruit juice consumption measurement' SubClassOf 'bitter beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010093
+Label(s): bitter non-alcoholic beverage consumption measurement 
++ 'bitter non-alcoholic beverage consumption measurement' SubClassOf 'bitter beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010092
+Label(s): bitter alcoholic beverage consumption measurement 
++ 'bitter alcoholic beverage consumption measurement' SubClassOf 'bitter beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010091
+Label(s): tea consumption measurement 
++ 'tea consumption measurement' SubClassOf 'bitter beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010090
+Label(s): sweet beverage consumption measurement 
++ 'sweet beverage consumption measurement' SubClassOf 'beverage consumption measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010086
+Label(s): anti-Haemophilus influenzae type b polyribosylribitol phosphate IgG measurement 
++ 'anti-Haemophilus influenzae type b polyribosylribitol phosphate IgG measurement' SubClassOf 'serum IgG measurement'
++ 'anti-Haemophilus influenzae type b polyribosylribitol phosphate IgG measurement' SubClassOf 'is_about' some 'Haemophilus influenzae meningitis'
++ 'anti-Haemophilus influenzae type b polyribosylribitol phosphate IgG measurement' SubClassOf 'infectious disease biomarker'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010087
+Label(s): anti-meningococcal C serum bactericidal antibody measurement 
++ 'anti-meningococcal C serum bactericidal antibody measurement' SubClassOf 'infectious disease biomarker'
++ 'anti-meningococcal C serum bactericidal antibody measurement' SubClassOf 'is_about' some 'meningococcal infection'
++ 'anti-meningococcal C serum bactericidal antibody measurement' SubClassOf 'antibody measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010088
+Label(s): beverage consumption measurement 
++ 'beverage consumption measurement' SubClassOf 'measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010114
+Label(s): citrate measurement 
++ 'citrate measurement' SubClassOf 'measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010117
+Label(s): pyruvate measurement 
++ 'pyruvate measurement' SubClassOf 'measurement'
++ 'pyruvate measurement' SubClassOf 'is_about' some 'pyruvate'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010130
+Label(s): health study participation 
++ 'health study participation' SubClassOf 'phenotype'
+
 
 
 ----------------------------------
@@ -848,388 +276,641 @@ Label(s): interneural spine cartilage
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/UBERON_0002502
-Label(s): round window of inner ear 
-- 'round window of inner ear' SubClassOf 'neural crest-derived structure'
+Class: http://www.orpha.net/ORDO/Orphanet_3437
+Label(s): Vogt-Koyanagi-Harada disease 
++ 'Vogt-Koyanagi-Harada disease' SubClassOf 'autoimmune disease of the nervous system'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0002501
-Label(s): oval window 
-- 'oval window' SubClassOf 'neural crest-derived structure'
+Class: http://www.orpha.net/ORDO/Orphanet_1775
+Label(s): Dyskeratosis congenita 
+- 'Dyskeratosis congenita' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/UBERON_2002007
-Label(s): supraneural 4 bone 
-+ 'supraneural 4 bone' SubClassOf 'endochondral bone'
+Class: http://www.orpha.net/ORDO/Orphanet_89844
+Label(s): Lissencephaly syndrome, Norman-Roberts type 
++ 'Lissencephaly syndrome, Norman-Roberts type' SubClassOf 'neurovascular disease'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0002279
-Label(s): vestibular aqueduct 
-- 'vestibular aqueduct' SubClassOf 'neural crest-derived structure'
-+ 'vestibular aqueduct' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'vestibular aqueduct' SubClassOf 'ectoderm-derived structure'
+Class: http://purl.obolibrary.org/obo/MONDO_0014757
+Label(s): macrothrombocytopenia-lymphedema-developmental delay-facial dysmorphism-camptodactyly syndrome 
++ 'macrothrombocytopenia-lymphedema-developmental delay-facial dysmorphism-camptodactyly syndrome' SubClassOf 'neurovascular disease'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0002295
-Label(s): scala media 
-- 'scala media' SubClassOf 'neural crest-derived structure'
+Class: http://www.orpha.net/ORDO/Orphanet_1563
+Label(s): Dahlberg-Borer-Newcomer syndrome 
+- 'Dahlberg-Borer-Newcomer syndrome' SubClassOf 'congenital nervous system disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_1000077
-Label(s): AIDS-Related Primary Central Nervous System Lymphoma 
-- 'AIDS-Related Primary Central Nervous System Lymphoma' SubClassOf 'secondary carcinoma'
+Class: http://www.orpha.net/ORDO/Orphanet_1387
+Label(s): Cataract - intellectual disability - hypogonadism 
++ 'Cataract - intellectual disability - hypogonadism' SubClassOf 'congenital nervous system disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0000765
-Label(s): AIDS 
-- 'AIDS' SubClassOf 'immune system cancer'
+Class: http://www.orpha.net/ORDO/Orphanet_1381
+Label(s): Cataract - intellectual disability - anal atresia - urinary defects 
++ 'Cataract - intellectual disability - anal atresia - urinary defects' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0045013
+Class: http://www.orpha.net/ORDO/Orphanet_1375
+Label(s): Cataract - hypertrichosis - intellectual disability 
++ 'Cataract - hypertrichosis - intellectual disability' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1369
+Label(s): Congenital cataract - hypertrophic cardiomyopathy - mitochondrial myopathy 
+- 'Congenital cataract - hypertrophic cardiomyopathy - mitochondrial myopathy' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1340
+Label(s): Cardiofaciocutaneous syndrome 
+- 'Cardiofaciocutaneous syndrome' SubClassOf 'rasopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1318
+Label(s): Campomelia, Cumming type 
++ 'Campomelia, Cumming type' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_904
+Label(s): Williams syndrome 
++ 'Williams syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_902
+Label(s): Werner syndrome 
+- 'Werner syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_892
+Label(s): Von Hippel-Lindau disease 
++ 'Von Hippel-Lindau disease' SubClassOf 'congenital nervous system disorder'
++ 'Von Hippel-Lindau disease' SubClassOf 'nervous system neoplasm'
+
+Class: http://www.orpha.net/ORDO/Orphanet_881
+Label(s): Turner syndrome 
++ 'Turner syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_833
+Label(s): Encephalopathy due to sulfite oxidase deficiency 
++ 'Encephalopathy due to sulfite oxidase deficiency' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_818
+Label(s): Smith-Lemli-Opitz syndrome 
++ 'Smith-Lemli-Opitz syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_98945
+Label(s): Coloboma of macula 
++ 'Coloboma of macula' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1117
+Label(s): Aplasia cutis - myopia 
+- 'Aplasia cutis - myopia' SubClassOf 'congenital nervous system disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009576
+Label(s): megalocornea (disease) 
++ 'megalocornea (disease)' SubClassOf 'genetic disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006781
+Label(s): coffee consumption measurement 
+- 'coffee consumption measurement' SubClassOf 'measurement'
++ 'coffee consumption measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010089
+
+Class: http://www.orpha.net/ORDO/Orphanet_794
+Label(s): Saethre-Chotzen syndrome 
+- 'Saethre-Chotzen syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_792
+Label(s): X-linked retinoschisis 
++ 'X-linked retinoschisis' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_742
+Label(s): Prolidase deficiency 
++ 'Prolidase deficiency' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_710
+Label(s): Pfeiffer syndrome 
+- 'Pfeiffer syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_709
+Label(s): Peters plus syndrome 
++ 'Peters plus syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1068
+Label(s): Aniridia-intellectual disability syndrome 
++ 'Aniridia-intellectual disability syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1067
+Label(s): Aniridia - ptosis - intellectual disability - familial obesity 
++ 'Aniridia - ptosis - intellectual disability - familial obesity' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1065
+Label(s): Aniridia - cerebellar ataxia - intellectual disability 
++ 'Aniridia - cerebellar ataxia - intellectual disability' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1064
+Label(s): Aniridia - renal agenesis - psychomotor retardation 
++ 'Aniridia - renal agenesis - psychomotor retardation' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_93293
+Label(s): Okihiro syndrome 
+- 'Okihiro syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_93262
+Label(s): Crouzon syndrome - acanthosis nigricans 
+- 'Crouzon syndrome - acanthosis nigricans' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_663
+Label(s): Maternally-inherited progressive external ophthalmoplegia 
+- 'Maternally-inherited progressive external ophthalmoplegia' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_648
+Label(s): Noonan syndrome 
+- 'Noonan syndrome' SubClassOf 'rasopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_580
+Label(s): Mucopolysaccharidosis type 2 
++ 'Mucopolysaccharidosis type 2' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_579
+Label(s): Mucopolysaccharidosis type 1 
++ 'Mucopolysaccharidosis type 1' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_558
+Label(s): Marfan syndrome 
+- 'Marfan syndrome' SubClassOf 'congenital nervous system disorder'
+- 'Marfan syndrome' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_534
+Label(s): Oculocerebrorenal syndrome 
++ 'Oculocerebrorenal syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1571
+Label(s): Knobloch syndrome 
++ 'Knobloch syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_414
+Label(s): Gyrate atrophy of choroid and retina 
++ 'Gyrate atrophy of choroid and retina' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3088
+Label(s): Revesz syndrome 
++ 'Revesz syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009179
+Label(s): recessive dystrophic epidermolysis bullosa 
+- 'recessive dystrophic epidermolysis bullosa' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_394
+Label(s): Classical homocystinuria 
++ 'Classical homocystinuria' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3103
+Label(s): Roberts syndrome 
+- 'Roberts syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_357058
+Label(s): Autosomal recessive cutis laxa type 2A 
++ 'Autosomal recessive cutis laxa type 2A' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_209
+Label(s): Cutis laxa 
+- 'Cutis laxa' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_207
+Label(s): Crouzon disease 
+- 'Crouzon disease' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_180
+Label(s): Choroideremia 
++ 'Choroideremia' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_139
+Label(s): CHILD syndrome 
++ 'CHILD syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_100
+Label(s): Ataxia-telangiectasia 
++ 'Ataxia-telangiectasia' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3378
+Label(s): Trisomy 13 
++ 'Trisomy 13' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001358
+Label(s): post-traumatic stress disorder 
++ 'post-traumatic stress disorder' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010098
+
+Class: http://www.orpha.net/ORDO/Orphanet_91494
+Label(s): Macular coloboma - cleft palate - hallux valgus 
++ 'Macular coloboma - cleft palate - hallux valgus' SubClassOf 'congenital nervous system disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007563
+Label(s): epistaxis, hereditary 
++ 'epistaxis, hereditary' SubClassOf 'genetic disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_35093
+Label(s): Isolated scaphocephaly 
+- 'Isolated scaphocephaly' SubClassOf 'congenital nervous system disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020226
+Label(s): chromosomal anomaly with cataract 
+- 'chromosomal anomaly with cataract' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_324737
+Label(s): SRD5A3-CDG 
++ 'SRD5A3-CDG' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_158668
+Label(s): Epidermolysis bullosa simplex due to plakophilin deficiency 
+- 'Epidermolysis bullosa simplex due to plakophilin deficiency' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3194
+Label(s): Stern-Lubinsky-Durrie syndrome 
+- 'Stern-Lubinsky-Durrie syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_98609
+Label(s): EEC syndrome and related syndrome 
+- 'EEC syndrome and related syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009948
+Label(s): chorioamnionitis 
+- 'chorioamnionitis' SubClassOf 'disease of extraembryonic membrane'
++ 'chorioamnionitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009950
+
+Class: http://www.orpha.net/ORDO/Orphanet_87
+Label(s): Apert syndrome 
+- 'Apert syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_183619
+Label(s): Genetic eye tumor 
++ 'Genetic eye tumor' SubClassOf 'has modifier' some 'rare'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007463
+Label(s): renal tuberculosis 
++ 'renal tuberculosis' SubClassOf 'abdominal tuberculosis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007492
+Label(s): splenic tuberculosis 
++ 'splenic tuberculosis' SubClassOf 'abdominal tuberculosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000369
+Label(s): abdominal tuberculosis 
+- 'abdominal tuberculosis' SubClassOf 'inflammatory disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_183557
+Label(s): Genetic developmental defect of the eye 
+- 'Genetic developmental defect of the eye' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_35173
+Label(s): X-linked dominant chondrodysplasia punctata 
+- 'X-linked dominant chondrodysplasia punctata' SubClassOf 'congenital nervous system disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0017212
+Label(s): paraneoplastic uveitis 
+- 'paraneoplastic uveitis' SubClassOf 'paraneoplastic neurologic syndrome'
++ 'paraneoplastic uveitis' SubClassOf 'paraneoplastic syndrome'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000866
+Label(s): choroid cancer 
++ 'choroid cancer' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2875
+Label(s): Phakomatosis pigmentovascularis 
++ 'Phakomatosis pigmentovascularis' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2836
+Label(s): PEHO syndrome 
++ 'PEHO syndrome' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2712
+Label(s): Oculofaciocardiodental syndrome 
++ 'Oculofaciocardiodental syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_171844
+Label(s): Blindness-scoliosis-arachnodactyly syndrome 
+- 'Blindness-scoliosis-arachnodactyly syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0002713
+Label(s): Panc1 
++ 'Panc1' SubClassOf 'has_quality' some 'male'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009403
+Label(s): granule cell layer dentate gyrus volume 
+- 'granule cell layer dentate gyrus volume' SubClassOf 'hippocampal volume'
++ 'granule cell layer dentate gyrus volume' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010083
+
+Class: http://www.orpha.net/ORDO/Orphanet_2556
+Label(s): Microphthalmia with linear skin defects syndrome 
++ 'Microphthalmia with linear skin defects syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3134
+Label(s): SCARF syndrome 
++ 'SCARF syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2484
+Label(s): Osteodysplasty, Melnick-Needles type 
++ 'Osteodysplasty, Melnick-Needles type' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2479
+Label(s): Megalocornea-intellectual disability syndrome 
++ 'Megalocornea-intellectual disability syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2407
+Label(s): LOC syndrome 
+- 'LOC syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0002509
+Label(s): progressive external ophthalmoplegia 
+- 'progressive external ophthalmoplegia' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_319195
+Label(s): Chondroectodermal dysplasia with night blindness 
+- 'Chondroectodermal dysplasia with night blindness' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009321
+Label(s): diabetic macular edema 
+- 'diabetic macular edema' SubClassOf 'diabetic retinopathy'
++ 'diabetic macular edema' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010133
+
+Class: http://www.orpha.net/ORDO/Orphanet_2308
+Label(s): Jacobsen syndrome 
+- 'Jacobsen syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_89842
+Label(s): Recessive dystrophic epidermolysis bullosa-generalized other 
+- 'Recessive dystrophic epidermolysis bullosa-generalized other' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2222
+Label(s): Hypertrichosis lanuginosa congenita 
+- 'Hypertrichosis lanuginosa congenita' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_79477
+Label(s): Griscelli disease type 2 
+- 'Griscelli disease type 2' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_98645
+Label(s): Cerebral disease with cataract 
++ 'Cerebral disease with cataract' SubClassOf 'nervous system disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2136
+Label(s): Hennekam syndrome 
++ 'Hennekam syndrome' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_79404
+Label(s): Junctional epidermolysis bullosa, Herlitz type 
+- 'Junctional epidermolysis bullosa, Herlitz type' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2090
+Label(s): GMS syndrome 
++ 'GMS syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_69088
+Label(s): Anhidrotic ectodermal dysplasia - immunodeficiency - osteopetrosis - lymphedema 
+- 'Anhidrotic ectodermal dysplasia - immunodeficiency - osteopetrosis - lymphedema' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_369970
+Label(s): Microcornea-myopic chorioretinal atrophy-telecanthus syndrome 
++ 'Microcornea-myopic chorioretinal atrophy-telecanthus syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_98733
+Label(s): Noonan syndrome and Noonan-related syndrome 
++ 'Noonan syndrome and Noonan-related syndrome' SubClassOf 'rasopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_35737
+Label(s): Morning glory syndrome 
++ 'Morning glory syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0060502
+Label(s): neurodevelopmental disorder with progressive microcephaly, spasticity, and brain anomalies 
+- 'neurodevelopmental disorder with progressive microcephaly, spasticity, and brain anomalies' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000699
+Label(s): Sjogren syndrome 
+- 'Sjogren syndrome' SubClassOf 'autoimmune disease of the nervous system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007302
+Label(s): hepatic tuberculosis 
++ 'hepatic tuberculosis' SubClassOf 'inflammatory disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002311
+Label(s): retinal vascular disease 
++ 'retinal vascular disease' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_90186
+Label(s): Meige disease 
++ 'Meige disease' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3434
+Label(s): MMEP syndrome 
++ 'MMEP syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_99718
+Label(s): Leber plus disease 
+- 'Leber plus disease' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007280
+Label(s): gastrointestinal tuberculosis 
+- 'gastrointestinal tuberculosis' SubClassOf 'inflammatory disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_90354
+Label(s): Brittle cornea syndrome 
+- 'Brittle cornea syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_581
+Label(s): Mucopolysaccharidosis type 3 
++ 'Mucopolysaccharidosis type 3' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2377
+Label(s): Laurence-Moon syndrome 
++ 'Laurence-Moon syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/http://www.ebi.ac.uk/efo/EFO_0009950
 Label(s): disease of extraembryonic membrane 
 - 'disease of extraembryonic membrane' SubClassOf 'placenta disease'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0002819
-Label(s): apex of cochlea 
-- 'apex of cochlea' SubClassOf 'neural crest-derived structure'
-+ 'apex of cochlea' SubClassOf 'ectoderm-derived structure'
-+ 'apex of cochlea' SubClassOf 'structure with developmental contribution from neural crest'
+Class: http://www.orpha.net/ORDO/Orphanet_2409
+Label(s): Lowry-MacLean syndrome 
++ 'Lowry-MacLean syndrome' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0014626
-Label(s): base of cochlear canal 
-- 'base of cochlear canal' SubClassOf 'neural crest-derived structure'
-+ 'base of cochlear canal' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'base of cochlear canal' SubClassOf 'ectoderm-derived structure'
+Class: http://www.ebi.ac.uk/efo/EFO_0005753
+Label(s): ocular vascular disease 
+- 'ocular vascular disease' SubClassOf 'neurovascular disease'
++ 'ocular vascular disease' SubClassOf 'vascular disease'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0014624
-Label(s): basis modioli 
-- 'basis modioli' SubClassOf 'neural crest-derived structure'
-+ 'basis modioli' SubClassOf 'ectoderm-derived structure'
-+ 'basis modioli' SubClassOf 'structure with developmental contribution from neural crest'
+Class: http://www.ebi.ac.uk/efo/EFO_0005751
+Label(s): eye allergy 
+- 'eye allergy' SubClassOf 'inflammatory disease'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0014629
-Label(s): terminal part of the cochlear canal 
-- 'terminal part of the cochlear canal' SubClassOf 'neural crest-derived structure'
-+ 'terminal part of the cochlear canal' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'terminal part of the cochlear canal' SubClassOf 'ectoderm-derived structure'
+Class: http://purl.obolibrary.org/obo/MONDO_0043885
+Label(s): eye infectious disease 
+- 'eye infectious disease' SubClassOf 'infectious disease of the nervous system'
++ 'eye infectious disease' SubClassOf 'infectious disease'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0014628
-Label(s): vestibular fissure of the cochlear canal 
-- 'vestibular fissure of the cochlear canal' SubClassOf 'neural crest-derived structure'
-+ 'vestibular fissure of the cochlear canal' SubClassOf 'ectoderm-derived structure'
-+ 'vestibular fissure of the cochlear canal' SubClassOf 'structure with developmental contribution from neural crest'
+Class: http://www.orpha.net/ORDO/Orphanet_77299
+Label(s): Microphthalmia - brain atrophy 
++ 'Microphthalmia - brain atrophy' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0010066
-Label(s): tympanic plate 
-- 'tympanic plate' SubClassOf 'neural crest-derived structure'
-+ 'tympanic plate' SubClassOf 'structure with developmental contribution from neural crest'
+Class: http://www.orpha.net/ORDO/Orphanet_314585
+Label(s): 15q overgrowth syndrome 
++ '15q overgrowth syndrome' SubClassOf 'congenital nervous system disorder'
 
-Class: http://www.orpha.net/ORDO/Orphanet_79430
-Label(s): Hermansky-Pudlak syndrome 
-+ 'Hermansky-Pudlak syndrome' SubClassOf 'syndromic disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0018699
+Label(s): pseudohypoparathyroidism with Albright hereditary osteodystrophy 
+- 'pseudohypoparathyroidism with Albright hereditary osteodystrophy' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0010188
-Label(s): protuberance 
-- 'protuberance' SubClassOf 'surface structure'
-+ 'protuberance' SubClassOf 'zone of organ'
+Class: http://www.orpha.net/ORDO/Orphanet_35099
+Label(s): Isolated brachycephaly 
+- 'Isolated brachycephaly' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0006495
-Label(s): osseus cochlear canal 
-- 'osseus cochlear canal' SubClassOf 'neural crest-derived structure'
-+ 'osseus cochlear canal' SubClassOf 'ectoderm-derived structure'
-+ 'osseus cochlear canal' SubClassOf 'structure with developmental contribution from neural crest'
+Class: http://www.orpha.net/ORDO/Orphanet_2707
+Label(s): Oculocerebrofacial syndrome, Kaufman type 
++ 'Oculocerebrofacial syndrome, Kaufman type' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0018413
-Label(s): facial nerve canal 
-- 'facial nerve canal' SubClassOf 'neural crest-derived structure'
+Class: http://www.orpha.net/ORDO/Orphanet_2709
+Label(s): Oculodental syndrome, Rutherfurd type 
+- 'Oculodental syndrome, Rutherfurd type' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0018364
-Label(s): suprameatal foramen 
-- 'suprameatal foramen' SubClassOf 'neural crest-derived structure'
-- 'suprameatal foramen' SubClassOf 'foramen of skull'
-+ 'suprameatal foramen' SubClassOf 'bone foramen'
+Class: http://www.orpha.net/ORDO/Orphanet_2719
+Label(s): Oculocerebral hypopigmentation syndrome, Cross type 
+- 'Oculocerebral hypopigmentation syndrome, Cross type' SubClassOf 'congenital nervous system disorder'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0006106
-Label(s): cochlear canal 
-- 'cochlear canal' SubClassOf 'neural crest-derived structure'
-+ 'cochlear canal' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'cochlear canal' SubClassOf 'ectoderm-derived structure'
+Class: http://www.orpha.net/ORDO/Orphanet_2745
+Label(s): Opitz G/BBB syndrome 
+- 'Opitz G/BBB syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_35098
+Label(s): Isolated plagiocephaly 
+- 'Isolated plagiocephaly' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007126
+Label(s): Acanthamoeba keratitis 
++ 'Acanthamoeba keratitis' SubClassOf 'has modifier' some 'rare'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2909
+Label(s): Rothmund-Thomson syndrome 
+- 'Rothmund-Thomson syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2962
+Label(s): De Barsy syndrome 
++ 'De Barsy syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_324
+Label(s): Fabry disease 
++ 'Fabry disease' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_391677
+Label(s): Short stature-optic atrophy-Pelger-Huët anomaly syndrome 
+- 'Short stature-optic atrophy-Pelger-Huët anomaly syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3226
+Label(s): Deafness - lymphedema - leukemia 
++ 'Deafness - lymphedema - leukemia' SubClassOf 'nervous system neoplasm'
++ 'Deafness - lymphedema - leukemia' SubClassOf 'neurovascular disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001058
+Label(s): sensory system disease 
+- 'sensory system disease' SubClassOf 'nervous system disease'
++ 'sensory system disease' SubClassOf 'disease by anatomical system'
++ 'sensory system disease' SubClassOf 'nervous system disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021666
+Label(s): ear infection 
+- 'ear infection' SubClassOf 'infectious disease of the nervous system'
++ 'ear infection' SubClassOf 'infectious disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003866
+Label(s): paranasal sinus neoplasm 
+- 'paranasal sinus neoplasm' SubClassOf 'nervous system neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003824
+Label(s): eye neoplasm 
+- 'eye neoplasm' SubClassOf 'nervous system neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005223
+Label(s): acute stress reaction 
++ 'acute stress reaction' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010098
+
+Class: http://www.orpha.net/ORDO/Orphanet_75377
+Label(s): Central areolar choroidal dystrophy 
++ 'Central areolar choroidal dystrophy' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_90349
+Label(s): Autosomal recessive cutis laxa type 1 
+- 'Autosomal recessive cutis laxa type 1' SubClassOf 'neurovascular disease'
++ 'Autosomal recessive cutis laxa type 1' SubClassOf 'vascular disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001013
+Label(s): lethal midline granuloma 
+- 'lethal midline granuloma' SubClassOf 'nervous system neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021233
+Label(s): ear neoplasm 
+- 'ear neoplasm' SubClassOf 'nervous system neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021231
+Label(s): retina neoplasm 
++ 'retina neoplasm' SubClassOf 'nervous system neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001302
+Label(s): Cytomegalovirus Retinitis 
++ 'Cytomegalovirus Retinitis' SubClassOf 'infectious disease of the nervous system'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3366
+Label(s): Isolated trigonocephaly 
+- 'Isolated trigonocephaly' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3342
+Label(s): Arterial tortuosity syndrome 
+- 'Arterial tortuosity syndrome' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_238468
+Label(s): Hypohidrotic ectodermal dysplasia 
+- 'Hypohidrotic ectodermal dysplasia' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_85275
+Label(s): Microphthalmia - ankyloblepharon - intellectual disability 
++ 'Microphthalmia - ankyloblepharon - intellectual disability' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_783
+Label(s): Rubinstein-Taybi syndrome 
++ 'Rubinstein-Taybi syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_79213
+Label(s): Mucopolysaccharidosis 
+- 'Mucopolysaccharidosis' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3205
+Label(s): Sturge-Weber syndrome 
++ 'Sturge-Weber syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1997
+Label(s): Blepharo-cheilo-odontic syndrome 
+- 'Blepharo-cheilo-odontic syndrome' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001069
+Label(s): ocular hypertension 
+- 'ocular hypertension' SubClassOf 'neurovascular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_63440
+Label(s): Isolated oxycephaly 
+- 'Isolated oxycephaly' SubClassOf 'congenital nervous system disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1900
+Label(s): Ehlers-Danlos syndrome, kyphoscoliotic type 
+- 'Ehlers-Danlos syndrome, kyphoscoliotic type' SubClassOf 'congenital nervous system disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018675
+Label(s): IgG4-related ophthalmic disease 
+- 'IgG4-related ophthalmic disease' SubClassOf 'autoimmune disease of the nervous system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0004756
+Label(s): nasal cavity neoplasm 
+- 'nasal cavity neoplasm' SubClassOf 'nervous system neoplasm'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1806
+Label(s): Ectodermal dysplasia - blindness 
+- 'Ectodermal dysplasia - blindness' SubClassOf 'congenital nervous system disorder'
 
 Class: http://www.ebi.ac.uk/efo/EFO_0003110
 Label(s): villitis 
 - 'villitis' SubClassOf 'disease of extraembryonic membrane'
-+ 'villitis' SubClassOf http://www.ebi.ac.uk/efo/http://www.ebi.ac.uk/efo/EFO_0009950
++ 'villitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009950
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009528
-Label(s): AIDS-related disease 
-- 'AIDS-related disease' SubClassOf 'secondary carcinoma'
-- 'AIDS-related disease' SubClassOf 'virus associated tumor'
-+ 'AIDS-related disease' SubClassOf 'post-viral disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0007407
+Label(s): oral tuberculosis 
++ 'oral tuberculosis' SubClassOf 'inflammatory disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009553
-Label(s): HIV-associated cancer 
-+ 'HIV-associated cancer' SubClassOf 'urogenital neoplasm'
+Class: http://purl.obolibrary.org/obo/MONDO_0031012
+Label(s): autoimmune uveitis 
+- 'autoimmune uveitis' SubClassOf 'autoimmune disease of the nervous system'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0006724
-Label(s): osseus spiral lamina 
-- 'osseus spiral lamina' SubClassOf 'neural crest-derived structure'
-+ 'osseus spiral lamina' SubClassOf 'ectoderm-derived structure'
-+ 'osseus spiral lamina' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0006723
-Label(s): cochlear modiolus 
-- 'cochlear modiolus' SubClassOf 'neural crest-derived structure'
-+ 'cochlear modiolus' SubClassOf 'ectoderm-derived structure'
-+ 'cochlear modiolus' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0006668
-Label(s): carotid canal 
-- 'carotid canal' SubClassOf 'neural crest-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2000442
-Label(s): supraneural bone 
-- 'supraneural bone' SubClassOf 'endochondral bone'
-+ 'supraneural bone' SubClassOf 'bone'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007198
-Label(s): central nervous system AIDS arteritis 
-- 'central nervous system AIDS arteritis' SubClassOf 'central nervous system cancer'
-- 'central nervous system AIDS arteritis' SubClassOf 'vascular cancer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007313
-Label(s): HIV-associated nephropathy 
-- 'HIV-associated nephropathy' SubClassOf 'kidney neoplasm'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007312
-Label(s): HIV wasting syndrome 
-- 'HIV wasting syndrome' SubClassOf 'immune system cancer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007688
-Label(s): Chromosome conformation capture assay 
-- 'Chromosome conformation capture assay' SubClassOf 'assay'
-+ 'Chromosome conformation capture assay' SubClassOf 'DNA assay'
-+ 'Chromosome conformation capture assay' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007690
-Label(s): 4C 
-- '4C' SubClassOf 'Chromosome conformation capture assay'
-+ '4C' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009967
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007693
-Label(s): Hi-C 
-- 'Hi-C' SubClassOf 'Chromosome conformation capture assay'
-+ 'Hi-C' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009968
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007692
-Label(s): 5C 
-- '5C' SubClassOf 'Chromosome conformation capture assay'
-+ '5C' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009967
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007542
-Label(s): visna 
-- 'visna' SubClassOf 'central nervous system cancer'
-- 'visna' SubClassOf 'brain neoplasm'
-+ 'visna' SubClassOf 'central nervous system disease'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0013173
-Label(s): anterior part of tympanic bone 
-- 'anterior part of tympanic bone' SubClassOf 'neural crest-derived structure'
-+ 'anterior part of tympanic bone' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0003700
-Label(s): temporomandibular joint 
-- 'temporomandibular joint' SubClassOf 'neural crest-derived structure'
-+ 'temporomandibular joint' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001357
-Label(s): Lentivirus Infections 
-- 'Lentivirus Infections' SubClassOf 'Uterine Carcinosarcoma'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001460
-Label(s): diverticulitis 
-+ 'diverticulitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009959
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010227
-Label(s): retinitis pigmentosa 3 
-- 'retinitis pigmentosa 3' SubClassOf 'Retinitis pigmentosa'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0011220
-Label(s): mastoid process of temporal bone 
-- 'mastoid process of temporal bone' SubClassOf 'neural crest-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0011319
-Label(s): disk of temporomandibular joint 
-- 'disk of temporomandibular joint' SubClassOf 'neural crest-derived structure'
-+ 'disk of temporomandibular joint' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0011318
-Label(s): capsule of temporomandibular joint 
-- 'capsule of temporomandibular joint' SubClassOf 'neural crest-derived structure'
-+ 'capsule of temporomandibular joint' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0011320
-Label(s): ligament of temporomandibular joint 
-- 'ligament of temporomandibular joint' SubClassOf 'neural crest-derived structure'
-+ 'ligament of temporomandibular joint' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://www.orpha.net/ORDO/Orphanet_183666
-Label(s): Hyper-IgM syndrome without susceptibility to opportunistic infections 
-- 'Hyper-IgM syndrome without susceptibility to opportunistic infections' SubClassOf 'hyper-IgM syndrome'
-+ 'Hyper-IgM syndrome without susceptibility to opportunistic infections' SubClassOf 'hyper-IgM syndrome'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001864
-Label(s): scala tympani 
-- 'scala tympani' SubClassOf 'neural crest-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001863
-Label(s): scala vestibuli 
-- 'scala vestibuli' SubClassOf 'neural crest-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001839
-Label(s): bony labyrinth 
-- 'bony labyrinth' SubClassOf 'neural crest-derived structure'
-+ 'bony labyrinth' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'bony labyrinth' SubClassOf 'ectoderm-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001844
-Label(s): cochlea 
-- 'cochlea' SubClassOf 'neural crest-derived structure'
-+ 'cochlea' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'cochlea' SubClassOf 'ectoderm-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001678
-Label(s): temporal bone 
-- 'temporal bone' SubClassOf 'facial bone'
-- 'temporal bone' SubClassOf 'lateral structure'
-+ 'temporal bone' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001695
-Label(s): squamous part of temporal bone 
-- 'squamous part of temporal bone' SubClassOf 'facial bone'
-+ 'squamous part of temporal bone' SubClassOf 'neural crest-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001694
-Label(s): petrous part of temporal bone 
-- 'petrous part of temporal bone' SubClassOf 'neural crest-derived structure'
-
-Class: http://www.orpha.net/ORDO/Orphanet_183663
-Label(s): Hyper-IgM syndrome with susceptibility to opportunistic infections 
-- 'Hyper-IgM syndrome with susceptibility to opportunistic infections' SubClassOf 'hyper-IgM syndrome'
-+ 'Hyper-IgM syndrome with susceptibility to opportunistic infections' SubClassOf 'hyper-IgM syndrome'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0034971
-Label(s): aortic body 
-- 'aortic body' SubClassOf 'digestive system element'
-+ 'aortic body' SubClassOf 'thoracic segment organ'
-
-Class: http://purl.obolibrary.org/obo/UBERON_4200085
-Label(s): obsolete glenoid head of scapula 
-- 'obsolete glenoid head of scapula' SubClassOf 'zone of bone organ'
-
-Class: http://purl.obolibrary.org/obo/UBERON_3010730
-Label(s): pterygoideus 
-- 'pterygoideus' SubClassOf 'trigeminal nerve muscle'
-- 'pterygoideus' SubClassOf 'mandibular muscle'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0005456
-Label(s): jugular foramen 
-- 'jugular foramen' SubClassOf 'neural crest-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0005411
-Label(s): bony otic capsule 
-- 'bony otic capsule' SubClassOf 'facial bone'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001888
-Label(s): supraneural 1 bone 
-+ 'supraneural 1 bone' SubClassOf 'endochondral bone'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001816
-Label(s): anterior nuchal plate 
-- 'anterior nuchal plate' SubClassOf 'endochondral bone'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0007833
-Label(s): osseus semicircular canal 
-- 'osseus semicircular canal' SubClassOf 'neural crest-derived structure'
-+ 'osseus semicircular canal' SubClassOf 'ectoderm-derived structure'
-+ 'osseus semicircular canal' SubClassOf 'structure with developmental contribution from neural crest'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0005236
-Label(s): osseus labyrinth vestibule 
-- 'osseus labyrinth vestibule' SubClassOf 'neural crest-derived structure'
-+ 'osseus labyrinth vestibule' SubClassOf 'structure with developmental contribution from neural crest'
-+ 'osseus labyrinth vestibule' SubClassOf 'ectoderm-derived structure'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001191
-Label(s): supraneural 2 bone 
-+ 'supraneural 2 bone' SubClassOf 'endochondral bone'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001192
-Label(s): supraneural 3 bone 
-+ 'supraneural 3 bone' SubClassOf 'endochondral bone'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001193
-Label(s): supraneural 8 bone 
-+ 'supraneural 8 bone' SubClassOf 'endochondral bone'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008674
-Label(s): Capture-HiC 
-- 'Capture-HiC' SubClassOf 'Chromosome conformation capture assay'
-- 'Capture-HiC' SubClassOf 'DNA assay'
-+ 'Capture-HiC' SubClassOf 'Hi-C'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008661
-Label(s): Bru-Seq 
-+ 'Bru-Seq' SubClassOf 'IP-seq'
-
-Class: http://www.orpha.net/ORDO/Orphanet_247522
-Label(s): Primary ciliary dyskinesia - retinitis pigmentosa 
-- 'Primary ciliary dyskinesia - retinitis pigmentosa' SubClassOf 'retinitis pigmentosa 3'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008684
-Label(s): Chia-PET 
-- 'Chia-PET' SubClassOf 'DNA assay'
-+ 'Chia-PET' SubClassOf http://www.ebi.ac.uk/efo/EFO_0009967
-+ 'Chia-PET' SubClassOf 'IP-seq'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001163
-Label(s): supraneural 7 bone 
-+ 'supraneural 7 bone' SubClassOf 'endochondral bone'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001164
-Label(s): supraneural 6 bone 
-+ 'supraneural 6 bone' SubClassOf 'endochondral bone'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001165
-Label(s): supraneural 5 bone 
-+ 'supraneural 5 bone' SubClassOf 'endochondral bone'
-
-Class: http://purl.obolibrary.org/obo/UBERON_2001166
-Label(s): supraneural 9 bone 
-+ 'supraneural 9 bone' SubClassOf 'endochondral bone'
-
-Class: http://www.orpha.net/ORDO/Orphanet_284811
-Label(s): Syndromic oculocutaneous albinism 
-- 'Syndromic oculocutaneous albinism' SubClassOf 'syndromic disease'
-- 'Syndromic oculocutaneous albinism' EquivalentTo 'Oculocutaneous albinism' and ('has modifier' some 'has a syndromic presentation')
-- 'Syndromic oculocutaneous albinism' SubClassOf 'Oculocutaneous albinism'
-+ 'Syndromic oculocutaneous albinism' SubClassOf 'genetic skin disease'
-+ 'Syndromic oculocutaneous albinism' SubClassOf 'Genetic hypopigmentation of the skin'
-+ 'Syndromic oculocutaneous albinism' SubClassOf 'Disorder of melanin metabolism'
-+ 'Syndromic oculocutaneous albinism' SubClassOf 'Oculocutaneous or ocular albinism'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008896
-Label(s): RNA-Seq 
-+ 'RNA-Seq' SubClassOf 'assay by high throughput sequencer'
-+ 'RNA-Seq' SubClassOf 'has_participant' some 'high throughput sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008891
-Label(s): Ribo-seq 
-- 'Ribo-seq' SubClassOf 'assay by sequencer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008889
-Label(s): Repli-Seq 
-+ 'Repli-Seq' SubClassOf 'IP-seq'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008808
-Label(s): Micro-C XL 
-- 'Micro-C XL' SubClassOf 'DNA assay'
-+ 'Micro-C XL' SubClassOf 'has_participant' some 'high throughput sequencer'
-+ 'Micro-C XL' SubClassOf 'Hi-C'
-+ 'Micro-C XL' SubClassOf 'assay by high throughput sequencer'
 
 
 
@@ -1238,22 +919,6 @@ Label(s): Micro-C XL
 
 @Classes deleted from this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0045013
-Label(s): disease of extraembryonic membrane 
-+ 'disease of extraembryonic membrane' SubClassOf 'placenta disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010227
-Label(s): retinitis pigmentosa 3 
-+ 'retinitis pigmentosa 3' SubClassOf 'Retinitis pigmentosa'
-
-Class: http://purl.obolibrary.org/obo/UBERON_4200085
-Label(s): obsolete glenoid head of scapula 
-+ 'obsolete glenoid head of scapula' SubClassOf 'zone of bone organ'
-
-Class: http://purl.obolibrary.org/obo/UBERON_3010730
-Label(s): pterygoideus 
-+ 'pterygoideus' SubClassOf 'trigeminal nerve muscle'
-+ 'pterygoideus' SubClassOf 'mandibular muscle'
 
 
 ----------------------------------
