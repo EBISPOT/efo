@@ -228,3 +228,19 @@ qc/uberon_diff.txt: qc/uberon_consider_terms.txt qc/uberon_current_terms.txt
 	diff -u $^ | grep '^-[^-]' | sed 's/^-//'
 
 all_diffs: $(ENTITY_DIFF_FILES) $(DIFF_REPORTS_FILES)
+
+	# ----------------------------------------
+	# Custom SPARQL queries
+	# ----------------------------------------
+
+measurement_anatomy: $(SRC) $(SPARQLDIR)/measurementisaboutanatomy.sparql
+	$(ROBOT) reason -r HERMIT -i $< materialize -r ELK --term IAO:0000136 query --use-graphs true -q $(SPARQLDIR)/measurementisaboutanatomy.sparql $@.csv
+	
+measurement_grouping: $(SRC) $(SPARQLDIR)/measurementgroupingclasses.sparql
+	$(ROBOT) reason -r HERMIT -i $< materialize -r ELK --term IAO:0000136 query --use-graphs true -q $(SPARQLDIR)/measurementgroupingclasses.sparql $@.csv
+	
+define_measurements.owl: ../templates/definemeasurements.tsv
+	$(ROBOT) template -i $< --prefix "EFO: http://www.ebi.ac.uk/efo/EFO_" --prefix "UBERON: http://purl.obolibrary.org/obo/UBERON_" -o $@
+	
+merge_defined_measurements: $(SRC) define_measurements.owl
+	$(ROBOT) merge -i $< -i define_measurements.owl -o $@.owl
