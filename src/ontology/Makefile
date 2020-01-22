@@ -252,7 +252,7 @@ $(BUILDDIR)/$(ONT)-iipo.owl: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) materialize -i $< -r ELK --term IAO:0000136 query --use-graphs true --update $(SPARQLDIR)/updatemeasurementisaboutanatomytoinheresin.ru remove --term http://purl.obolibrary.org/obo/IAO_0000136 --output $@
 
 $(BUILDDIR)/$(ONT)-iipo-def.owl: $(BUILDDIR)/$(ONT)-iipo.owl $(BUILDDIR)/define_measurements.owl
-	$(ROBOT) merge -i $< -i $(BUILDDIR)/define_measurements.owl -o reason -r HERMIT remove --term http://purl.obolibrary.org/obo/RO_0002314 $@
+	$(ROBOT) merge -i $< -i $(BUILDDIR)/define_measurements.owl reason -r HERMIT remove --term http://purl.obolibrary.org/obo/RO_0002314 -o $@
 
 iipo_exp.txt: $(BUILDDIR)/$(ONT)-mod.owl $(BUILDDIR)/$(ONT)-iipo-def.owl
 	$(ROBOT) diff --left $(BUILDDIR)/$(ONT)-mod.owl --right $(BUILDDIR)/$(ONT)-iipo-def.owl -o $@
