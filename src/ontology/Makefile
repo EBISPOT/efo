@@ -45,7 +45,7 @@ qc: sparql_test all_reports
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon
+IMPORTS = mondo hancestro uberon hp
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
@@ -73,7 +73,33 @@ imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt $(SRC
 	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/uberon_import.owl
 
+# ----------------------------------------
+# HPO 
+# ----------------------------------------
+	
+# make HPO seed
+iri_dependencies/hp_terms.txt: mirror/hp.owl
+	$(ROBOT) query -i $(MIRRORDIR)/hp.owl -q $(SPARQLDIR)/hp_terms.sparql $@
 
+#unmerge hpo.owl from efo-edit.owl
+
+unmerge_hpo.owl: $(SRC) mirror/hp.owl
+	$(ROBOT) unmerge -i $< -i mirror/hp.owl -o $@
+
+#filter hpo
+
+o-hpo.owl: unmerge_hpo.owl iri_dependencies/hp_terms.txt
+	$(ROBOT) filter -i $< --term-file iri_dependencies/hp_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -o $@
+
+#imports/hp_terms.txt: iri_dependencies/hp_terms.txt
+#	cat $^ | sort | uniq > $@
+
+#imports/hp_bot.owl: mirror/hp.owl imports/hp_terms.txt
+#	$(ROBOT) extract -i $< -T imports/hp_terms.txt --method BOT -O $(BASE)/$@ -o $@
+
+#imports/hp_import.owl: imports/hp_bot.owl imports/hp_terms.txt $(SRC)
+#	$(ROBOT) filter -i $< --term-file imports/hp_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
+#.PRECIOUS: imports/hp_import.owl
 
 # ----------------------------------------
 # Components
