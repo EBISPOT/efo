@@ -71,3 +71,16 @@ You should only attempt to make a release AFTER EFO2 has been committed and push
 1. `bash ./pre-migration.sh`
 1. Manually copying the import statements from import-stamentens.owl to efo-edit.owl
 1. `bash ./migration.sh`
+
+# Step-by-step guide to create a dynamic import
+
+1. The first thing we need is a list of all terms from the the new ontologies as they are used in efo-edit.owl. Use a custom sparql query to get a terms list (analogous to say src/sparql/hp_terms.sparql), call it TERMFILE
+1. Determine which axioms to preserve:
+   1. Download a mirror of the ontology that is supposed to be integrated. Usually we just add the ontology to the src/ontology/mirror directory.
+   1. Created a filtered version of the mirror using the -T TERMFILE (on the mirror) with trim false (FILTERED_MIRROR).
+   1. Unmerge FILTERED_MIRROR from the efo-edit file.
+   1. Created a filtered version of the efo-edit file using the -T TERMFILE) with trim false (FILTERED_EDIT). This will give you all axioms that are HP related, but not in HP itself. Save as functional syntax and review.
+	 1. From FILTERED_EDIT, extract all dbxrefs, and whatever else you want to preserve to PRESERVE
+1. Run ROBOT remove query with trim true and the TERMFILE as input.
+1. Merge PRESERVE back into EFO edit.owl
+1. 
