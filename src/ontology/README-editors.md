@@ -85,6 +85,7 @@ You should only attempt to make a release AFTER EFO2 has been committed and push
       1. Run ROBOT remove query with trim true and the TERMFILE as input. (pipeline does this)
       1. Merge PRESERVE back into EFO edit.owl (pipeline does this)
       1. Review the efo-edit.owl diff now and undo unintended changes.
+      1. LOGICAL DEFINITIONS ARE CURRENTLY NOT REMOVED! For HP, these had to be removed (semi) manually using ROBOT remove equivalent.
 1. Add relevant import redirect to catalog.xml
 1. Add ontology to the list of imports `IMPORTS = mondo hancestro uberon hp`
 1. Add the `imports/hp_terms.txt` and `imports/hp_import.owl` goals as specified for your specific ontology import 
