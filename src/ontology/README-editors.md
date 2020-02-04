@@ -12,7 +12,7 @@ This project was created using the [ontology starter kit](https://github.com/cmu
 - As you are now in the master branch (this can be checked with `git status`!), you can perform a `git pull` to ensure the EFO 3 master branch is up to date.
 - Before performing the following steps, make sure you switch to the `src/ontology` directory if you are not there already:
 
-	 `cd src/ontology`
+   `cd src/ontology`
 - If you require any new mappings to be added, this should be done now by adding to the `mondo_efo_mappings.tsv` and the `mondo_terms.txt` files accordingly.
 - To update the efo-edit.owl file in the master branch with the latest version from efo2 and ensure the latest copy of mondo.owl, uberon.owl and OTAR therapeutic areas file is in the mirror folder:
      `./get_mirrors.sh`
@@ -71,3 +71,26 @@ You should only attempt to make a release AFTER EFO2 has been committed and push
 1. `bash ./pre-migration.sh`
 1. Manually copying the import statements from import-stamentens.owl to efo-edit.owl
 1. `bash ./migration.sh`
+
+# Step-by-step guide to create a dynamic import
+
+1. The first thing we need is a list of all terms from the the new ontologies as they are used in efo-edit.owl. Use a custom sparql query to get a terms list (analogous to say src/sparql/hp_terms.sparql), using `make xyz_terms_in_src`.
+1. Download a mirror of the ontology that is supposed to be integrated. Usually we just add the ontology to the src/ontology/mirror directory. Add a respective command to `get_mirrors.sh`.
+1. Determine which axioms to preserve:
+   1. Created a filtered version of the mirror using the -T TERMFILE (on the mirror) with trim false (FILTERED_MIRROR).
+   1. Unmerge FILTERED_MIRROR from the efo-edit file.
+   1. Created a filtered version of the efo-edit file using the -T TERMFILE) with trim false (FILTERED_EDIT). This will give you all axioms that are HP related, but not in HP itself. Save as functional syntax and review.
+   1. From FILTERED_EDIT, extract all dbxrefs, and whatever else you want to preserve to PRESERVE, encoding in a CONSTRUCT sparql query (example: `preserve_hpo_axioms.sparql`)
+   1. Once the query is done and in the correct place, you can run the full (following) pipeline using `make dump_xyz`, e.g. `make dump_hp`
+      1. Run ROBOT remove query with trim true and the TERMFILE as input. (pipeline does this)
+      1. Merge PRESERVE back into EFO edit.owl (pipeline does this)
+      1. Review the efo-edit.owl diff now and undo unintended changes.
+      1. LOGICAL DEFINITIONS ARE CURRENTLY NOT REMOVED! For HP, these had to be removed (semi) manually using ROBOT remove equivalent.
+1. Add relevant import redirect to catalog.xml
+1. Add ontology to the list of imports `IMPORTS = mondo hancestro uberon hp`
+1. Add the `imports/hp_terms.txt` and `imports/hp_import.owl` goals as specified for your specific ontology import 
+1. Add ontology import statement to efo-edit.owl
+1. Run release
+1. Run `make all_diffs` and make sure all is in order (entity diff and axiom diff ROBOT most importantly)
+
+

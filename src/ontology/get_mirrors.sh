@@ -8,6 +8,9 @@ curl -L https://www.ebi.ac.uk/ols/ontologies/mondo/download > mirror/mondo.owl
 echo "Fetching UBERON..."
 curl -L https://www.ebi.ac.uk/ols/ontologies/uberon/download > mirror/uberon.owl
 
+echo "Fetching HPO..."
+curl -L https://www.ebi.ac.uk/ols/ontologies/hp/download > mirror/hp.owl
+
 #efo-edit.owl from efo2 branch is no longer needed, edit master efo-edit.owl instead.
 #curl -L https://raw.githubusercontent.com/EBISPOT/efo/efo2/src/ontology/efo-edit.owl > efo-edit.owl
 
