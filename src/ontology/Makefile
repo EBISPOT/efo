@@ -45,7 +45,7 @@ qc: sparql_test all_reports
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon
+IMPORTS = mondo hancestro uberon hp
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
@@ -65,13 +65,69 @@ imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependenc
 	
 imports/uberon_terms.txt: iri_dependencies/uberon_terms.txt iri_dependencies/efo-relations.txt
 	cat $^ | sort | uniq > $@
+	
+imports/hp_terms.txt: iri_dependencies/hp_terms.txt iri_dependencies/efo-relations.txt
+	cat $^ | sort | uniq > $@
 
-imports/uberon_bot.owl: mirror/uberon.owl imports/uberon_terms.txt
-	$(ROBOT) extract -i $< -T imports/uberon_terms.txt --method BOT -O $(BASE)/$@ -o $@
+imports/%_bot.owl: mirror/%.owl imports/%_terms.txt
+	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
 
 imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt $(SRC)
 	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/uberon_import.owl
+	
+imports/hp_import.owl: imports/hp_bot.owl imports/hp_terms.txt $(SRC)
+	$(ROBOT) filter -i $< --term-file imports/hp_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/hp_import.owl
+
+# ----------------------------------------
+# Pipeline for removing a merged ontology
+# and replacing by dynamic import
+# ----------------------------------------
+
+# 1. make seed of all terms currently used in EFO edit, for example all HP terms. 
+# For this you need to create the respective xyz_terms.sparql query.
+
+# this is only used to create initial term list and then never again
+%_terms_in_src: $(SRC) $(SPARQLDIR)/%_terms.sparql
+	$(ROBOT) query -i $< -q $(SPARQLDIR)/$*_terms.sparql iri_dependencies/$*_terms.txt
+
+build/filtered-%-mirror.owl: mirror/%.owl iri_dependencies/%_terms.txt
+	$(ROBOT) filter -i mirror/%.owl -T imports/$*_terms.txt --trim false -o $@
+
+build/efo-edit-without-%.owl: $(SRC) build/filtered-%-mirror.owl
+	$(ROBOT) remove -i $< --select imports --trim false unmerge -i build/filtered-$*-mirror.owl -o $@
+
+build/remaining-%.ofn: build/efo-edit-without-%.owl iri_dependencies/%_terms.txt
+	$(ROBOT) filter -i $< --term-file iri_dependencies/$*_terms.txt --trim false -o $@
+
+#These are only the x-refs that are NOT in the ontology mirror
+build/preserve-axioms-%.ttl: build/remaining-%.ofn
+	$(ROBOT) query -i $< -c $(SPARQLDIR)/preserve_$*_axioms.sparql $@
+
+build/preserve-axioms-%.owl: build/preserve-axioms-%.ttl
+	$(ROBOT) convert -i $< -f owl -o $@
+
+# 2. Dump all axioms from the ontology apart from the set of preserved axioms. 
+# Preserved axioms are extracted using the preserve_xyz_axioms.sparql query (for example xrefs.)
+
+dump_%: $(SRC) build/preserve-axioms-%.owl
+	$(ROBOT) remove -i $< -T iri_dependencies/$*_terms.txt --axioms "annotation" --trim true \
+		remove -T iri_dependencies/$*_terms.txt --trim false \
+		merge -i build/preserve-axioms-$*.owl --collapse-import-closure false -o $(SRC)
+
+efo_edit_git_diff.txt:
+	git diff $(SRC) > efo_edit_git_diff.txt
+	
+EFO_MASTER=https://raw.githubusercontent.com/EBISPOT/efo/master/src/ontology/efo-edit.owl
+
+master-$(SRC):
+	wget $(EFO_MASTER) -O $@
+
+efo_edit_robot_diff.txt: master-$(SRC)
+	$(ROBOT) diff --left $(SRC) --right master-$(SRC) -o $@
+
+edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
 
 
 
