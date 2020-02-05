@@ -284,3 +284,31 @@ qc/uberon_diff.txt: qc/uberon_consider_terms.txt qc/uberon_current_terms.txt
 	diff -u $^ | grep '^-[^-]' | sed 's/^-//'
 
 all_diffs: $(ENTITY_DIFF_FILES) $(DIFF_REPORTS_FILES)
+
+	# ----------------------------------------
+	# Custom SPARQL queries
+	# ----------------------------------------
+
+#$(BUILDDIR)/$(ONT).owl:
+#	echo "Skipped."
+
+$(BUILDDIR)/$(ONT)-mod.owl: $(BUILDDIR)/$(ONT).owl
+	$(ROBOT) remove -i $(BUILDDIR)/$(ONT).owl --term http://purl.obolibrary.org/obo/IAO_0000136 --term http://purl.obolibrary.org/obo/RO_0002314 -o $@
+
+measurement_anatomy: $(BUILDDIR)/$(ONT).owl $(SPARQLDIR)/measurementisaboutanatomy.sparql
+	$(ROBOT) materialize -i $< -r ELK --term IAO:0000136 query --use-graphs true -q $(SPARQLDIR)/measurementisaboutanatomy.sparql $@.csv
+
+measurement_grouping: $(BUILDDIR)/$(ONT).owl $(SPARQLDIR)/measurementgroupingclasses.sparql
+	$(ROBOT) materialize -i $< -r ELK --term IAO:0000136 query --use-graphs true -q $(SPARQLDIR)/measurementgroupingclasses.sparql $@.csv
+
+$(BUILDDIR)/define_measurements.owl: $(BUILDDIR)/$(ONT).owl ../templates/definemeasurements.tsv
+	$(ROBOT) template -i $< --template ../templates/definemeasurements.tsv --prefix "EFO: http://www.ebi.ac.uk/efo/EFO_" --prefix "RO: http://purl.obolibrary.org/obo/RO_" --prefix "UBERON: http://purl.obolibrary.org/obo/UBERON_" -o $@
+
+$(BUILDDIR)/$(ONT)-iipo.owl: $(BUILDDIR)/$(ONT).owl
+	$(ROBOT) materialize -i $< -r ELK --term IAO:0000136 query --use-graphs true --update $(SPARQLDIR)/updatemeasurementisaboutanatomytoinheresin.ru remove --term http://purl.obolibrary.org/obo/IAO_0000136 --output $@
+
+$(BUILDDIR)/$(ONT)-iipo-def.owl: $(BUILDDIR)/$(ONT)-iipo.owl $(BUILDDIR)/define_measurements.owl
+	$(ROBOT) merge -i $< -i $(BUILDDIR)/define_measurements.owl reason -r HERMIT remove --term http://purl.obolibrary.org/obo/RO_0002314 -o $@
+
+iipo_exp.txt: $(BUILDDIR)/$(ONT)-mod.owl $(BUILDDIR)/$(ONT)-iipo-def.owl
+	$(ROBOT) diff --left $(BUILDDIR)/$(ONT)-mod.owl --right $(BUILDDIR)/$(ONT)-iipo-def.owl -o $@
