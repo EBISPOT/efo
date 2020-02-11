@@ -208,15 +208,15 @@ release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json
 $(BUILDDIR)/$(ONT).owl: $(SRC)
 	$(ROBOT) merge -i $< \
 	reason -s true -m false -r hermit \
-	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/`cat version.txt`/$(ONT).owl -o $@
+	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT).owl -o $@
 
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
-	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/`cat version.txt`/efo.owl \
+	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo.owl \
 	query --update ../sparql/inject-subset-declaration.sparql \
 	convert --check false -f obo -o $@
 	
 $(BUILDDIR)/$(ONT).json: $(BUILDDIR)/$(ONT).owl
-	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/`cat version.txt`/efo.owl \
+	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo.owl \
 	query --update ../sparql/inject-subset-declaration.sparql \
 	convert -f json -o $@
 
