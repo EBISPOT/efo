@@ -11,18 +11,18 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.14.0
-Date Released: 15th January 2020
-Class Count: 26765
+Experimental Factor Ontology version 3.15.0
+Date Released: 17th February 2020
+Class Count: 26818
 
 Summary: 
 
-EFO 3.14.0 release includes further alignments between EFO and MONDO and further terms required for the GWAS Catalog. A general review of disease terms, especially in terms of their placement, continued and stemmed from our work on the Open Targets Therapeutic Areas. BFO terms have also been updated to the newest version of BFO, therefore all SNAP URIs have been updated to BFO IDs. Please see the obsolete classes for these SNAP IDs.
+EFO 3.15.0 release includes further alignments between EFO and MONDO and further terms required for the GWAS Catalog.
 
 General Stats:
-Number of classes changed: 9
-Number of classes added: 7
-Number of classes deleted: 0
+Number of classes changed: 665
+Number of classes added: 61
+Number of classes deleted: 8
 
 ----------------------------------
 1.	Changes to URIs
@@ -36,107 +36,3538 @@ Number of classes deleted: 0
 
 1. Changes to URIs
 
----
-!New class!: IRI http://purl.obolibrary.org/obo/MONDO_0018356
-label: secondary neonatal autoimmune disease
-+ 'secondary neonatal autoimmune disease' SubClassOf 'systemic autoimmune disease'
+@Classes new to this version
 
----
-!New class!: IRI http://www.ebi.ac.uk/efo/EFO_0010552
-label: social environment measurement
-+ 'social environment measurement' SubClassOf 'measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0018588
+Label(s): ALECT2 amyloidosis 
++ 'ALECT2 amyloidosis' SubClassOf 'amyloidosis'
 
----
-!New class!: IRI http://www.ebi.ac.uk/efo/EFO_0010556
-label: Left ventricular mass to end-diastolic volume ratio
-+ 'Left ventricular mass to end-diastolic volume ratio' SubClassOf 'is_about' some 'heart'
-+ 'Left ventricular mass to end-diastolic volume ratio' SubClassOf 'heart function measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0010592
+Label(s): tumor necrosis factor ligand superfamily member 8 measurement 
++ 'tumor necrosis factor ligand superfamily member 8 measurement' SubClassOf 'blood protein measurement'
 
----
-!New class!: IRI http://www.ebi.ac.uk/efo/EFO_0010555
-label: left ventricular stroke volume measurement
-+ 'left ventricular stroke volume measurement' SubClassOf 'is_about' some 'heart'
-+ 'left ventricular stroke volume measurement' SubClassOf 'heart function measurement'
+Class: http://purl.obolibrary.org/obo/HP_0001952
+Label(s): Glucose intolerance 
++ 'Glucose intolerance' SubClassOf 'Abnormal glucose homeostasis'
 
----
-!New class!: IRI http://www.ebi.ac.uk/efo/EFO_0010551
-label: xanthurenate measurement
-+ 'xanthurenate measurement' SubClassOf 'carboxylic acid measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0027407
+Label(s): Kleefstra syndrome 1 
++ 'Kleefstra syndrome 1' SubClassOf 'Kleefstra syndrome'
 
----
-!New class!: IRI http://www.ebi.ac.uk/efo/EFO_0010553
-label: cocaine use measurement
-+ 'cocaine use measurement' SubClassOf 'is_about' some 'cocaine use disorder'
-+ 'cocaine use measurement' SubClassOf 'is_about' some 'cocaine dependence'
-+ 'cocaine use measurement' SubClassOf 'is_about' some 'cocaine'
-+ 'cocaine use measurement' SubClassOf 'mental or behavioural disorder biomarker'
-+ 'cocaine use measurement' SubClassOf 'drug use measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0014731
+Label(s): seizures-scoliosis-macrocephaly syndrome 
++ 'seizures-scoliosis-macrocephaly syndrome' SubClassOf 'syndromic intellectual disability'
++ 'seizures-scoliosis-macrocephaly syndrome' SubClassOf 'Disorder of O-xylosylglycan synthesis'
++ 'seizures-scoliosis-macrocephaly syndrome' SubClassOf 'Congenital disorder of glycosylation with epilepsy as a major feature'
 
----
-!New class!: IRI http://www.ebi.ac.uk/efo/EFO_0010554
-label: retinal vasculature measurement
-+ 'retinal vasculature measurement' SubClassOf 'is_about' some 'eye'
-+ 'retinal vasculature measurement' SubClassOf 'eye measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0010557
+Label(s): lactose tolerance test 
++ 'lactose tolerance test' SubClassOf 'is_about' some 'lactose intolerance'
++ 'lactose tolerance test' SubClassOf 'measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010566
+Label(s): intellectual developmental disorder 60 with seizures 
++ 'intellectual developmental disorder 60 with seizures' SubClassOf 'autosomal dominant disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010567
+Label(s): spastic tetraplegia and axial hypotonia, progressive 
++ 'spastic tetraplegia and axial hypotonia, progressive' SubClassOf 'autosomal recessive disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010576
+Label(s): liver fibrosis measurement 
++ 'liver fibrosis measurement' SubClassOf 'is_about' some 'liver'
++ 'liver fibrosis measurement' SubClassOf 'liver disease biomarker'
++ 'liver fibrosis measurement' SubClassOf 'is_about' some 'Hepatic fibrosis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010577
+Label(s): response to dimethyl fumarate 
++ 'response to dimethyl fumarate' SubClassOf 'has_input' some 'dimethyl fumarate'
++ 'response to dimethyl fumarate' SubClassOf 'response to drug'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010596
+Label(s): monocyte chemotactic protein 1 measurement 
++ 'monocyte chemotactic protein 1 measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010597
+Label(s): NF-kappa-B essential modulator measurement 
++ 'NF-kappa-B essential modulator measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010599
+Label(s): ST2 protein measurement 
++ 'ST2 protein measurement' SubClassOf 'blood protein measurement'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0010743
+Label(s): meningeal cluster 
++ 'meningeal cluster' SubClassOf 'part of' some 'central nervous system'
++ 'meningeal cluster' SubClassOf 'anatomical entity'
+
+Class: http://purl.obolibrary.org/obo/HP_0200023
+Label(s): Priapism 
++ 'Priapism' SubClassOf 'Abnormality of the genital system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009410
+Label(s): Addison disease 
++ 'Addison disease' SubClassOf 'acquired chronic primary adrenal insufficiency'
++ 'Addison disease' SubClassOf 'adrenocortical insufficiency'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014665
+Label(s): Charcot-Marie-Tooth disease axonal type 2V 
++ 'Charcot-Marie-Tooth disease axonal type 2V' SubClassOf 'Autosomal dominant Charcot-Marie-Tooth disease type 2'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014455
+Label(s): cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome 
++ 'cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome' SubClassOf 'Syndromic cataract'
++ 'cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome' SubClassOf 'Rare hereditary metabolic disease with peripheral neuropathy'
++ 'cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome' SubClassOf 'Mitochondrial disorder due to a defect in mitochondrial protein synthesis'
++ 'cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome' SubClassOf 'Neurometabolic disease'
++ 'cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome' SubClassOf 'Syndromic genetic deafness'
++ 'cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome' SubClassOf 'genetic endocrine growth disease'
++ 'cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome' SubClassOf 'rare endocrine growth disease'
++ 'cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome' SubClassOf 'Spondyloepiphyseal dysplasia and spondyloepimetaphyseal dysplasia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0015446
+Label(s): atypical coarctation of aorta 
++ 'atypical coarctation of aorta' SubClassOf 'Aortic Coarctation'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010587
+Label(s): interleukin-2 receptor subunit alpha measurement 
++ 'interleukin-2 receptor subunit alpha measurement' SubClassOf 'cytokine measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010601
+Label(s): hepatitis A virus cellular receptor 1 measurement 
++ 'hepatitis A virus cellular receptor 1 measurement' SubClassOf 'blood protein measurement'
+
+Class: http://purl.obolibrary.org/obo/HP_0003674
+Label(s): Onset 
++ 'Onset' SubClassOf 'clinical temporal measurement'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007631
+Label(s): chromosome 16p12.1 deletion syndrome, 520kb 
++ 'chromosome 16p12.1 deletion syndrome, 520kb' SubClassOf 'syndrome caused by partial chromosomal deletion'
++ 'chromosome 16p12.1 deletion syndrome, 520kb' SubClassOf 'syndromic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010559
+Label(s): anti-drug antibody measurement 
++ 'anti-drug antibody measurement' SubClassOf 'antibody measurement'
++ 'anti-drug antibody measurement' SubClassOf 'is_about' some 'adverse effect'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010561
+Label(s): neurodevelopmental disorder with cataracts, poor growth, and dysmorphic facies 
++ 'neurodevelopmental disorder with cataracts, poor growth, and dysmorphic facies' SubClassOf 'autosomal recessive disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010562
+Label(s): neurodevelopmental disorder with cerebellar hypoplasia and spasticity 
++ 'neurodevelopmental disorder with cerebellar hypoplasia and spasticity' SubClassOf 'autosomal recessive disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010570
+Label(s): ventricular enlargement measurement 
++ 'ventricular enlargement measurement' SubClassOf 'is_about' some 'Ventriculomegaly'
++ 'ventricular enlargement measurement' SubClassOf 'brain measurement'
++ 'ventricular enlargement measurement' SubClassOf 'is_about' some 'brain ventricle'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010573
+Label(s): kallikrein-11 measurement 
++ 'kallikrein-11 measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010574
+Label(s): epithelial cell adhesion molecule measurement 
++ 'epithelial cell adhesion molecule measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010583
+Label(s): alpha fetoprotein measurement 
++ 'alpha fetoprotein measurement' SubClassOf 'blood protein measurement'
++ 'alpha fetoprotein measurement' SubClassOf 'cancer biomarker measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010584
+Label(s): cancer antigen 19.9 measurement 
++ 'cancer antigen 19.9 measurement' SubClassOf 'blood protein measurement'
++ 'cancer antigen 19.9 measurement' SubClassOf 'cancer biomarker measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010593
+Label(s): cystatin B measurement 
++ 'cystatin B measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010594
+Label(s): Fms-related tyrosine kinase 3 ligand measurement 
++ 'Fms-related tyrosine kinase 3 ligand measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010602
+Label(s): brain age measurement 
++ 'brain age measurement' SubClassOf 'is_about' some 'aging'
++ 'brain age measurement' SubClassOf 'measurement'
++ 'brain age measurement' SubClassOf 'is_about' some 'brain'
++ 'brain age measurement' SubClassOf 'brain measurement'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010432
+Label(s): thrombophilia, X-linked, due to factor 9 defect 
++ 'thrombophilia, X-linked, due to factor 9 defect' SubClassOf 'thrombophilia'
++ 'thrombophilia, X-linked, due to factor 9 defect' SubClassOf 'Rare genetic coagulation disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014842
+Label(s): intellectual disability, autosomal dominant 41 
++ 'intellectual disability, autosomal dominant 41' SubClassOf 'Autosomal dominant non-syndromic intellectual disability'
+
+Class: http://purl.obolibrary.org/obo/CHEBI_76004
+Label(s): dimethyl fumarate 
++ 'dimethyl fumarate' SubClassOf 'chemical entity'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010600
+Label(s): angiopoietin-1 receptor measurement 
++ 'angiopoietin-1 receptor measurement' SubClassOf 'endothelial growth factor measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010598
+Label(s): platelet endothelial cell adhesion molecule measurement 
++ 'platelet endothelial cell adhesion molecule measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010595
+Label(s): heat shock protein beta-1 measurement 
++ 'heat shock protein beta-1 measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010590
+Label(s): matrix metalloproteinase 12 measurement 
++ 'matrix metalloproteinase 12 measurement' SubClassOf 'matrix metalloproteinase measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010589
+Label(s): matrix metalloproteinase 10 measurement 
++ 'matrix metalloproteinase 10 measurement' SubClassOf 'matrix metalloproteinase measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010588
+Label(s): matrix metalloproteinase 1 measurement 
++ 'matrix metalloproteinase 1 measurement' SubClassOf 'matrix metalloproteinase measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010586
+Label(s): CD40 measurement 
++ 'CD40 measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010581
+Label(s): organophosphate poisoning 
++ 'organophosphate poisoning' SubClassOf 'poisoning'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010580
+Label(s): blastic plasmacytoid dendritic cell neoplasm 
++ 'blastic plasmacytoid dendritic cell neoplasm' SubClassOf 'hematopoietic and lymphoid cell neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010579
+Label(s): proteome 
++ 'proteome' SubClassOf 'material entity'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010578
+Label(s): complex trait 
++ 'complex trait' SubClassOf 'quality'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010575
+Label(s): vascular endothelial growth factor D measurement 
++ 'vascular endothelial growth factor D measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010569
+Label(s): clinical modifier 
++ 'clinical modifier' SubClassOf 'quality'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010568
+Label(s): neurodevelopmental disorder with hypotonia and variable intellectual and behavioral abnormalities 
++ 'neurodevelopmental disorder with hypotonia and variable intellectual and behavioral abnormalities' SubClassOf 'autosomal dominant disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010564
+Label(s): glycosylphosphatidylinositol biosynthesis defect 21 
++ 'glycosylphosphatidylinositol biosynthesis defect 21' SubClassOf 'autosomal recessive disease'
++ 'glycosylphosphatidylinositol biosynthesis defect 21' SubClassOf 'Disorder of lipid metabolism'
++ 'glycosylphosphatidylinositol biosynthesis defect 21' SubClassOf 'disorder of GPI anchor biosynthesis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010563
+Label(s): neurodevelopmental disorder with structural brain anomalies and dysmorphic facies 
++ 'neurodevelopmental disorder with structural brain anomalies and dysmorphic facies' SubClassOf 'autosomal dominant disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010560
+Label(s): neurodevelopmental disorder with ataxia, hypotonia, and microcephaly 
++ 'neurodevelopmental disorder with ataxia, hypotonia, and microcephaly' SubClassOf 'autosomal recessive disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010558
+Label(s): preprint 
++ 'preprint' SubClassOf 'publication status'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010565
+Label(s): myopathy, congenital, progressive, with scoliosis 
++ 'myopathy, congenital, progressive, with scoliosis' SubClassOf 'Congenital myopathy'
++ 'myopathy, congenital, progressive, with scoliosis' SubClassOf 'autosomal recessive disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010572
+Label(s): growth rate measurement 
++ 'growth rate measurement' SubClassOf 'body weights and measures'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010591
+Label(s): matrix metalloproteinase 7 measurement 
++ 'matrix metalloproteinase 7 measurement' SubClassOf 'matrix metalloproteinase measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010582
+Label(s): Morton Neuroma 
++ 'Morton Neuroma' SubClassOf 'neuroma'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010585
+Label(s): cancer antigen 15.3 measurement 
++ 'cancer antigen 15.3 measurement' SubClassOf 'blood protein measurement'
++ 'cancer antigen 15.3 measurement' SubClassOf 'cancer biomarker measurement'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024519
+Label(s): renal hypodysplasia/aplasia 1 
++ 'renal hypodysplasia/aplasia 1' SubClassOf 'renal agenesis (disease)'
 
 ----------------------------------
 2. Changes to EFO3
 
----
-Class changed: IRI http://www.ebi.ac.uk/efo/EFO_0004537
-label: neonatal systemic lupus erythematosus
-+ 'neonatal systemic lupus erythematosus' SubClassOf 'systemic lupus erythematosus'
-+ 'neonatal systemic lupus erythematosus' SubClassOf 'lupus erythematosus'
-+ 'neonatal systemic lupus erythematosus' SubClassOf http://purl.obolibrary.org/obo/MONDO_0018356
+@Classes modified from previous
+
+Class: http://purl.obolibrary.org/obo/HP_0008770
+Label(s): Obsessive-compulsive trait 
+- 'Obsessive-compulsive trait' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0006789
+Label(s): Mitochondrial encephalopathy 
+- 'Mitochondrial encephalopathy' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009871
+Label(s): increased heart weight 
++ 'increased heart weight' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009872
+Label(s): increased cardiac output 
++ 'increased cardiac output' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009873
+Label(s): decreased cardiac output 
++ 'decreased cardiac output' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0011504
+Label(s): Bull's eye maculopathy 
++ 'Bull's eye maculopathy' SubClassOf 'Abnormal macular morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009866
+Label(s): pulmonary vascular congestion 
++ 'pulmonary vascular congestion' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000682
+Label(s): Abnormality of dental enamel 
++ 'Abnormality of dental enamel' SubClassOf 'Abnormality of the dentition'
++ 'Abnormality of dental enamel' SubClassOf 'Abnormality of connective tissue'
++ 'Abnormality of dental enamel' SubClassOf 'abnormality of the skeletal system'
+
+Class: http://purl.obolibrary.org/obo/HP_0000664
+Label(s): Synophrys 
++ 'Synophrys' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0030151
+Label(s): Cholangitis 
+- 'Cholangitis' SubClassOf 'Abnormality of the liver'
++ 'Cholangitis' SubClassOf 'increased inflammatory response'
++ 'Cholangitis' SubClassOf 'Abnormal biliary tract morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000639
+Label(s): Nystagmus 
+- 'Nystagmus' SubClassOf 'Abnormality of the inner ear'
++ 'Nystagmus' SubClassOf 'Abnormality of the eye'
+
+Class: http://purl.obolibrary.org/obo/HP_0045059
+Label(s): Hyperkeratotic papule 
+- 'Hyperkeratotic papule' SubClassOf 'Abnormality of skin morphology'
++ 'Hyperkeratotic papule' SubClassOf 'epidermal thickening'
+
+Class: http://purl.obolibrary.org/obo/HP_0030160
+Label(s): cervicitis 
+- 'cervicitis' SubClassOf 'abnormality of female internal genitalia'
++ 'cervicitis' SubClassOf 'Abnormality of the uterus'
+
+Class: http://purl.obolibrary.org/obo/HP_0000618
+Label(s): Blindness 
++ 'Blindness' SubClassOf 'Reduced visual acuity'
+
+Class: http://purl.obolibrary.org/obo/HP_0000610
+Label(s): Abnormal choroid morphology 
+- 'Abnormal choroid morphology' SubClassOf 'Abnormality of the vasculature'
+- 'Abnormal choroid morphology' SubClassOf 'Abnormality of the eye'
++ 'Abnormal choroid morphology' SubClassOf 'abnormal morphology of the posterior segment of the globe'
+
+Class: http://purl.obolibrary.org/obo/HP_0005085
+Label(s): Limited knee flexion/extension 
++ 'Limited knee flexion/extension' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0005562
+Label(s): Multiple renal cysts 
+- 'Multiple renal cysts' SubClassOf 'Abnormal renal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0005033
+Label(s): Distal ulnar hypoplasia 
+- 'Distal ulnar hypoplasia' SubClassOf 'abnormality of limbs'
++ 'Distal ulnar hypoplasia' SubClassOf 'Abnormal upper limb bone morphology'
++ 'Distal ulnar hypoplasia' SubClassOf 'Upper limb undergrowth'
+
+Class: http://purl.obolibrary.org/obo/HP_0008873
+Label(s): Disproportionate short-limb short stature 
+- 'Disproportionate short-limb short stature' SubClassOf 'abnormality of limbs'
+
+Class: http://purl.obolibrary.org/obo/HP_0031284
+Label(s): Flushing 
+- 'Flushing' SubClassOf 'abnormality of the skin'
++ 'Flushing' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000598
+Label(s): Abnormality of the ear 
+- 'Abnormality of the ear' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'ear'))
+
+Class: http://www.orpha.net/ORDO/Orphanet_974
+Label(s): Adams-Oliver syndrome 
++ 'Adams-Oliver syndrome' SubClassOf 'genetic skin disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0000572
+Label(s): Visual loss 
+- 'Visual loss' SubClassOf 'Abnormality of vision'
+
+Class: http://purl.obolibrary.org/obo/HP_0000540
+Label(s): hypermetropia 
+- 'hypermetropia' SubClassOf 'Abnormality of the eye'
++ 'hypermetropia' SubClassOf 'Abnormality of refraction'
+
+Class: http://purl.obolibrary.org/obo/HP_0000535
+Label(s): Sparse and thin eyebrow 
++ 'Sparse and thin eyebrow' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0000529
+Label(s): Progressive visual loss 
++ 'Progressive visual loss' SubClassOf 'Visual loss'
+
+Class: http://purl.obolibrary.org/obo/HP_0000527
+Label(s): Long eyelashes 
++ 'Long eyelashes' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0000505
+Label(s): Visual impairment 
++ 'Visual impairment' SubClassOf 'Abnormality of vision'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000391
+Label(s): Nasal Cavity Polyp 
+- 'Nasal Cavity Polyp' SubClassOf 'nasal cavity neoplasm'
++ 'Nasal Cavity Polyp' SubClassOf 'nasal cavity disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0010515
+Label(s): Aplasia/Hypoplasia of the thymus 
++ 'Aplasia/Hypoplasia of the thymus' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0008935
+Label(s): Generalized neonatal hypotonia 
+- 'Generalized neonatal hypotonia' SubClassOf 'Abnormal muscle tone'
+
+Class: http://purl.obolibrary.org/obo/HP_0007305
+Label(s): CNS demyelination 
++ 'CNS demyelination' SubClassOf 'morphological abnormality of the central nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0006536
+Label(s): obstructive lung disease 
+- 'obstructive lung disease' SubClassOf 'Abnormal lung morphology'
++ 'obstructive lung disease' SubClassOf 'Abnormality of the respiratory system'
+
+Class: http://purl.obolibrary.org/obo/HP_0100508
+Label(s): abnormality of vitamin metabolism 
+- 'abnormality of vitamin metabolism' EquivalentTo 'has part' some 
+('quality' and ('inheres_in' some 'vitamin metabolic process') and ('has component' some 'abnormal'))
+
+Class: http://purl.obolibrary.org/obo/HP_0006521
+Label(s): Pulmonary lymphangiectasia 
+- 'Pulmonary lymphangiectasia' SubClassOf 'Abnormality of the vasculature'
++ 'Pulmonary lymphangiectasia' SubClassOf 'abnormality of the lymphatic system'
++ 'Pulmonary lymphangiectasia' SubClassOf 'Abnormality of cardiovascular system morphology'
++ 'Pulmonary lymphangiectasia' SubClassOf 'Abnormal lung morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000479
+Label(s): Abnormal retinal morphology 
+- 'Abnormal retinal morphology' SubClassOf 'Abnormality of the eye'
++ 'Abnormal retinal morphology' SubClassOf 'abnormal morphology of the posterior segment of the globe'
+
+Class: http://purl.obolibrary.org/obo/HP_0000478
+Label(s): Abnormality of the eye 
+- 'Abnormality of the eye' SubClassOf 'abnormality of the face'
+- 'Abnormality of the eye' EquivalentTo 'has part' some 
+('quality' and ('inheres_in' some 'eyeball of camera-type eye') and ('has component' some 'abnormal'))
++ 'Abnormality of the eye' SubClassOf 'Phenotypic abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0000473
+Label(s): Torticollis 
++ 'Torticollis' SubClassOf 'Dystonia'
++ 'Torticollis' SubClassOf 'Abnormality of central motor function'
++ 'Torticollis' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000470
+Label(s): Short neck 
+- 'Short neck' SubClassOf 'Abnormality of skeletal morphology'
++ 'Short neck' SubClassOf 'Abnormality of the cervical spine'
+
+Class: http://purl.obolibrary.org/obo/HP_0000430
+Label(s): Underdeveloped nasal alae 
+- 'Underdeveloped nasal alae' SubClassOf 'abnormality of the skeletal system'
+- 'Underdeveloped nasal alae' SubClassOf 'Abnormality of connective tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0000408
+Label(s): Progressive sensorineural hearing impairment 
++ 'Progressive sensorineural hearing impairment' SubClassOf 'Progressive hearing impairment'
+
+Class: http://purl.obolibrary.org/obo/HP_0000407
+Label(s): Sensorineural Hearing Loss Sensorineural hearing impairment Sensorineural hearing loss 
++ 'Sensorineural hearing impairment' SubClassOf 'Abnormality of the inner ear'
+
+Class: http://purl.obolibrary.org/obo/HP_0006487
+Label(s): Bowing of the long bones 
++ 'Bowing of the long bones' SubClassOf 'abnormality of limbs'
++ 'Bowing of the long bones' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0006467
+Label(s): Limited shoulder movement 
+- 'Limited shoulder movement' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000765
+Label(s): abnormality of the thorax 
+- 'abnormality of the thorax' SubClassOf 'abnormality of the skeletal system'
++ 'abnormality of the thorax' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000767
+Label(s): Pectus excavatum 
++ 'Pectus excavatum' SubClassOf 'Abnormality of the sternum'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009484
+Label(s): uterine polyp 
+- 'uterine polyp' SubClassOf 'tumor of uterus'
++ 'uterine polyp' SubClassOf 'uterine disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008575
+Label(s): Osteochondrosis 
+- 'Osteochondrosis' SubClassOf 'osteonecrosis'
++ 'Osteochondrosis' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0000384
+Label(s): Preauricular skin tag 
+- 'Preauricular skin tag' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000368
+Label(s): Low-set, posteriorly rotated ears 
++ 'Low-set, posteriorly rotated ears' SubClassOf 'Low-set ears'
+
+Class: http://purl.obolibrary.org/obo/HP_0000366
+Label(s): abnormality of the nose 
+- 'abnormality of the nose' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'nose'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009457
+Label(s): abnormal vascular wound healing 
++ 'abnormal vascular wound healing' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000359
+Label(s): Abnormality of the inner ear 
+- 'Abnormality of the inner ear' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'internal ear'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000356
+Label(s): Abnormality of the outer ear External ear malformations 
+- 'External ear malformations' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'external ear'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000331
+Label(s): Short chin 
+- 'Short chin' SubClassOf 'abnormality of the mouth'
++ 'Short chin' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0000327
+Label(s): Hypoplasia of the maxilla 
+- 'Hypoplasia of the maxilla' SubClassOf 'Abnormality of skeletal morphology'
+- 'Hypoplasia of the maxilla' SubClassOf 'abnormality of the mouth'
+
+Class: http://purl.obolibrary.org/obo/HP_0000325
+Label(s): Triangular face 
+- 'Triangular face' SubClassOf 'abnormality of the face'
++ 'Triangular face' SubClassOf 'abnormal facial shape'
+
+Class: http://purl.obolibrary.org/obo/HP_0000319
+Label(s): Smooth philtrum 
+- 'Smooth philtrum' SubClassOf 'Abnormality of mouth shape'
++ 'Smooth philtrum' SubClassOf 'abnormality of the mouth'
+
+Class: http://purl.obolibrary.org/obo/HP_0000307
+Label(s): Pointed chin 
+- 'Pointed chin' SubClassOf 'Abnormality of mouth shape'
++ 'Pointed chin' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0000303
+Label(s): Mandibular prognathia 
+- 'Mandibular prognathia' SubClassOf 'Abnormality of skeletal morphology'
++ 'Mandibular prognathia' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0001967
+Label(s): Diffuse mesangial sclerosis 
++ 'Diffuse mesangial sclerosis' SubClassOf 'Abnormal renal cortex morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001956
+Label(s): Truncal obesity 
++ 'Truncal obesity' SubClassOf 'Increased body weight'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021400
+Label(s): polyp of colon 
+- 'polyp of colon' SubClassOf 'colonic neoplasm'
++ 'polyp of colon' SubClassOf 'colonic disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0001943
+Label(s): Hypoglycemia 
+- 'Hypoglycemia' EquivalentTo 'has part' some 
+('decreased concentration' and ('inheres_in' some 'blood') and ('has component' some 'pathological') and ('towards' some 'glucose'))
+
+Class: http://purl.obolibrary.org/obo/HP_0001939
+Label(s): abnormality of metabolism/homeostasis 
+- 'abnormality of metabolism/homeostasis' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'metabolic process'))
+
+Class: http://purl.obolibrary.org/obo/HP_0001933
+Label(s): Subcutaneous hemorrhage 
++ 'Subcutaneous hemorrhage' SubClassOf 'Abnormal bleeding'
+
+Class: http://purl.obolibrary.org/obo/HP_0030839
+Label(s): knee pain 
++ 'knee pain' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0001915
+Label(s): aplastic anemia 
++ 'aplastic anemia' SubClassOf 'Pancytopenia'
+
+Class: http://purl.obolibrary.org/obo/HP_0000294
+Label(s): Low anterior hairline 
++ 'Low anterior hairline' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0000282
+Label(s): Facial edema 
++ 'Facial edema' SubClassOf 'abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0000280
+Label(s): Coarse facial features 
+- 'Coarse facial features' SubClassOf 'abnormality of the face'
++ 'Coarse facial features' SubClassOf 'abnormal facial shape'
+
+Class: http://purl.obolibrary.org/obo/HP_0000278
+Label(s): Retrognathia 
+- 'Retrognathia' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000276
+Label(s): Long face 
+- 'Long face' SubClassOf 'abnormality of the face'
++ 'Long face' SubClassOf 'abnormal facial shape'
+
+Class: http://purl.obolibrary.org/obo/HP_0000272
+Label(s): Malar flattening 
++ 'Malar flattening' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0000269
+Label(s): Prominent occiput 
+- 'Prominent occiput' SubClassOf 'abnormality of the face'
+- 'Prominent occiput' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://www.orpha.net/ORDO/Orphanet_646
+Label(s): Niemann-Pick disease type C 
+- 'Niemann-Pick disease type C' SubClassOf 'Neurometabolic disease'
+- 'Niemann-Pick disease type C' SubClassOf 'secondary interstitial lung disease in childhood and adulthood associated with a metabolic disease'
+- 'Niemann-Pick disease type C' SubClassOf 'Supranuclear oculomotor palsy'
+- 'Niemann-Pick disease type C' SubClassOf 'Monogenic disease with epilepsy'
+- 'Niemann-Pick disease type C' SubClassOf 'Unclassified primitive or secondary maculopathy'
+- 'Niemann-Pick disease type C' SubClassOf 'cerebral lipidosis with dementia'
+- 'Niemann-Pick disease type C' SubClassOf 'sphingolipidosis with epilepsy'
++ 'Niemann-Pick disease type C' SubClassOf 'Neurometabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009354
+Label(s): Anti-influenza A virus IgG measurement 
+- 'Anti-influenza A virus IgG measurement' SubClassOf 'is_about' some 'influenza infection'
++ 'Anti-influenza A virus IgG measurement' SubClassOf 'is_about' some 'influenza'
++ 'Anti-influenza A virus IgG measurement' SubClassOf 'infectious disease biomarker'
++ 'Anti-influenza A virus IgG measurement' SubClassOf 'respiratory disease biomarker'
+
+Class: http://purl.obolibrary.org/obo/HP_0000252
+Label(s): Microcephaly 
+- 'Microcephaly' SubClassOf 'abnormality of the skeletal system'
++ 'Microcephaly' SubClassOf 'abnormality of brain morphology'
++ 'Microcephaly' SubClassOf 'Abnormality of the skull'
+
+Class: http://purl.obolibrary.org/obo/HP_0007924
+Label(s): Slow decrease in visual acuity 
+- 'Slow decrease in visual acuity' SubClassOf 'Visual loss'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021398
+Label(s): polyp of rectum 
+- 'polyp of rectum' SubClassOf 'rectal neoplasm'
++ 'polyp of rectum' SubClassOf 'rectal disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0000238
+Label(s): Hydrocephalus 
++ 'Hydrocephalus' SubClassOf 'abnormality of the cerebrospinal fluid'
+
+Class: http://purl.obolibrary.org/obo/HP_0000236
+Label(s): Abnormality of the anterior fontanelle 
+- 'Abnormality of the anterior fontanelle' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000225
+Label(s): Gingival bleeding 
+- 'Gingival bleeding' EquivalentTo 'has part' some 
+('increased amount' and ('inheres_in' some 
+('hemorrhage' and ('part of' some 'gingiva'))) and ('has component' some 'abnormal'))
++ 'Gingival bleeding' SubClassOf 'Abnormal bleeding'
+
+Class: http://purl.obolibrary.org/obo/HP_0000219
+Label(s): Thin upper lip vermilion 
++ 'Thin upper lip vermilion' SubClassOf 'Thin vermilion border'
+
+Class: http://purl.obolibrary.org/obo/HP_0000201
+Label(s): Pierre-Robin sequence 
+- 'Pierre-Robin sequence' SubClassOf 'cleft palate'
+- 'Pierre-Robin sequence' SubClassOf 'Micrognathia'
++ 'Pierre-Robin sequence' SubClassOf 'abnormality of the mouth'
+
+Class: http://purl.obolibrary.org/obo/HP_0001891
+Label(s): iron deficiency anemia 
+- 'iron deficiency anemia' SubClassOf 'anemia'
++ 'iron deficiency anemia' SubClassOf 'Anemia of inadequate production'
+
+Class: http://purl.obolibrary.org/obo/HP_0001881
+Label(s): abnormal leukocyte morphology 
++ 'abnormal leukocyte morphology' SubClassOf 'abnormality of the immune system'
+
+Class: http://purl.obolibrary.org/obo/HP_0001876
+Label(s): Pancytopenia 
+- 'Pancytopenia' SubClassOf 'thrombocytopenia'
+- 'Pancytopenia' SubClassOf 'abnormal leukocyte morphology'
++ 'Pancytopenia' SubClassOf 'abnormality of blood and blood-forming tissues'
+
+Class: http://purl.obolibrary.org/obo/HP_0001873
+Label(s): thrombocytopenia 
+- 'thrombocytopenia' EquivalentTo 'has part' some 
+('decreased concentration' and ('inheres_in' some 'platelet') and ('has component' some 'abnormal'))
+
+Class: http://purl.obolibrary.org/obo/HP_0001871
+Label(s): abnormality of blood and blood-forming tissues 
+- 'abnormality of blood and blood-forming tissues' EquivalentTo 'has part' some 
+('quality' and ('inheres_in' some 'hematopoietic system') and ('has component' some 'abnormal'))
+
+Class: http://purl.obolibrary.org/obo/HP_0003086
+Label(s): Acromesomelia 
+- 'Acromesomelia' SubClassOf 'abnormality of limbs'
+
+Class: http://purl.obolibrary.org/obo/HP_0001848
+Label(s): Calcaneovalgus deformity 
+- 'Calcaneovalgus deformity' SubClassOf 'abnormality of limbs'
++ 'Calcaneovalgus deformity' SubClassOf 'abnormality of the foot'
++ 'Calcaneovalgus deformity' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001845
+Label(s): Overlapping toe 
++ 'Overlapping toe' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0001840
+Label(s): Metatarsus adductus 
+- 'Metatarsus adductus' SubClassOf 'abnormality of limbs'
++ 'Metatarsus adductus' SubClassOf 'Abnormality of skeletal morphology'
++ 'Metatarsus adductus' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0001831
+Label(s): Short toe 
++ 'Short toe' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0001824
+Label(s): weight loss 
+- 'weight loss' SubClassOf 'abnormality of body weight'
+- 'weight loss' EquivalentTo 'body weight loss'
++ 'weight loss' SubClassOf 'Decreased body weight'
+
+Class: http://purl.obolibrary.org/obo/HP_0002037
+Label(s): Inflammation of the large intestine 
+- 'Inflammation of the large intestine' SubClassOf 'Abnormality of the intestine'
++ 'Inflammation of the large intestine' SubClassOf 'Abnormality of the large intestine'
+
+Class: http://purl.obolibrary.org/obo/HP_0003011
+Label(s): abnormality of the musculature 
+- 'abnormality of the musculature' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'musculature'))
+
+Class: http://purl.obolibrary.org/obo/HP_0040188
+Label(s): Osteochondritis 
+- 'Osteochondritis' SubClassOf 'abnormality of the skeletal system'
++ 'Osteochondritis' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0040183
+Label(s): Encopresis 
+- 'Encopresis' SubClassOf 'Abnormality of the abdominal organs'
++ 'Encopresis' SubClassOf 'Abnormality of the digestive system'
++ 'Encopresis' SubClassOf 'Constitutional symptom'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008757
+Label(s): gSELEX-Seq 
++ 'gSELEX-Seq' SubClassOf 'SELEX-seq'
+
+Class: http://purl.obolibrary.org/obo/HP_0000179
+Label(s): Thick lower lip vermilion 
++ 'Thick lower lip vermilion' SubClassOf 'Thick vermilion border'
+
+Class: http://purl.obolibrary.org/obo/HP_0000164
+Label(s): Abnormality of the dentition 
+- 'Abnormality of the dentition' SubClassOf 'abnormality of the skeletal system'
+
+Class: http://purl.obolibrary.org/obo/HP_0000161
+Label(s): Median cleft lip 
+- 'Median cleft lip' SubClassOf 'Abnormality of mouth shape'
+
+Class: http://purl.obolibrary.org/obo/HP_0000153
+Label(s): abnormality of the mouth 
+- 'abnormality of the mouth' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'mouth'))
+
+Class: http://purl.obolibrary.org/obo/HP_0009763
+Label(s): Limb pain 
+- 'Limb pain' SubClassOf 'Abnormality of skeletal morphology'
++ 'Limb pain' SubClassOf 'abnormality of the skeletal system'
++ 'Limb pain' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0000132
+Label(s): Menorrhagia 
+- 'Menorrhagia' SubClassOf 'abnormality of blood and blood-forming tissues'
++ 'Menorrhagia' SubClassOf 'Abnormal bleeding'
++ 'Menorrhagia' SubClassOf 'Abnormality of the endocrine system'
++ 'Menorrhagia' SubClassOf 'abnormality of female internal genitalia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_506
+Label(s): Leigh syndrome 
+- 'Leigh syndrome' SubClassOf 'Leigh disease'
++ 'Leigh syndrome' SubClassOf 'Syndrome with a symptomatic strabismus'
++ 'Leigh syndrome' SubClassOf 'Mitochondrial disease with peripheral neuropathy'
++ 'Leigh syndrome' SubClassOf 'Supranuclear oculomotor palsy'
++ 'Leigh syndrome' SubClassOf 'Mitochondrial disease with eye involvement'
++ 'Leigh syndrome' SubClassOf 'Neurometabolic disease'
++ 'Leigh syndrome' SubClassOf 'Unclassified primitive or secondary maculopathy'
++ 'Leigh syndrome' SubClassOf 'Mitochondrial oxidative phosphorylation disorder due to nuclear DNA anomalies'
+
+Class: http://purl.obolibrary.org/obo/HP_0000111
+Label(s): Renal juxtaglomerular cell hypertrophy/hyperplasia 
+- 'Renal juxtaglomerular cell hypertrophy/hyperplasia' SubClassOf 'abnormality of the kidney'
++ 'Renal juxtaglomerular cell hypertrophy/hyperplasia' SubClassOf 'Abnormal renal cortex morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000145
+Label(s): breast fibrosis 
+- 'breast fibrosis' SubClassOf 'neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0000107
+Label(s): Renal cyst 
++ 'Renal cyst' SubClassOf 'Abnormal renal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000103
+Label(s): polyuria 
+- 'polyuria' EquivalentTo 'has part' some 
+('increased rate' and ('inheres_in' some 'micturition'))
+- 'polyuria' SubClassOf 'abnormal renal physiology'
++ 'polyuria' SubClassOf 'Abnormal urine output'
+
+Class: http://purl.obolibrary.org/obo/HP_0001798
+Label(s): Anonychia 
++ 'Anonychia' SubClassOf 'Aplasia/Hypoplasia of the nails'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021239
+Label(s): urethra neoplasm 
+- 'urethra neoplasm' SubClassOf 'urethral disease'
+- 'urethra neoplasm' SubClassOf 'urinary system neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0001776
+Label(s): Bilateral talipes equinovarus 
+- 'Bilateral talipes equinovarus' SubClassOf 'Talipes'
+
+Class: http://purl.obolibrary.org/obo/HP_0001773
+Label(s): Short foot 
+- 'Short foot' SubClassOf 'abnormality of limbs'
++ 'Short foot' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0001770
+Label(s): Toe syndactyly 
++ 'Toe syndactyly' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0001643
+Label(s): Patent ductus arteriosus 
++ 'Patent ductus arteriosus' SubClassOf 'Abnormality of the vasculature'
+
+Class: http://purl.obolibrary.org/obo/HP_0001762
+Label(s): Talipes equinovarus 
++ 'Talipes equinovarus' SubClassOf 'Talipes'
+
+Class: http://purl.obolibrary.org/obo/HP_0001761
+Label(s): Pes cavus 
++ 'Pes cavus' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0001744
+Label(s): Splenomegaly 
++ 'Splenomegaly' SubClassOf 'Abnormality of the abdominal organs'
+
+Class: http://www.orpha.net/ORDO/Orphanet_70472
+Label(s): Congenital lactic acidosis, Saguenay-Lac-Saint-Jean type 
+- 'Congenital lactic acidosis, Saguenay-Lac-Saint-Jean type' SubClassOf 'Leigh syndrome'
+- 'Congenital lactic acidosis, Saguenay-Lac-Saint-Jean type' SubClassOf 'Leigh disease'
++ 'Congenital lactic acidosis, Saguenay-Lac-Saint-Jean type' SubClassOf 'Leigh syndrome'
+
+Class: http://purl.obolibrary.org/obo/HP_0040083
+Label(s): Toe walking 
+- 'Toe walking' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0040082
+Label(s): Happy demeanor 
+- 'Happy demeanor' SubClassOf 'behavioral abnormality'
++ 'Happy demeanor' SubClassOf 'Abnormal emotion/affect behavior'
+
+Class: http://purl.obolibrary.org/obo/HP_0040070
+Label(s): Abnormal upper limb bone morphology 
++ 'Abnormal upper limb bone morphology' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0006101
+Label(s): Finger syndactyly 
++ 'Finger syndactyly' SubClassOf 'Abnormal digit morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000093
+Label(s): Proteinuria 
+- 'Proteinuria' EquivalentTo 'has part' some 
+('increased concentration' and ('inheres_in' some 
+('protein' and ('part of' some 'urine'))) and ('has component' some 'abnormal'))
+
+Class: http://purl.obolibrary.org/obo/HP_0001800
+Label(s): Hypoplastic toenails 
+- 'Hypoplastic toenails' SubClassOf 'abnormality of the skin'
+- 'Hypoplastic toenails' SubClassOf 'abnormality of the foot'
++ 'Hypoplastic toenails' SubClassOf 'Abnormality of the toenails'
+
+Class: http://purl.obolibrary.org/obo/HP_0008956
+Label(s): Proximal lower limb amyotrophy 
++ 'Proximal lower limb amyotrophy' SubClassOf 'abnormality of the lower limb'
+
+Class: http://purl.obolibrary.org/obo/HP_0007754
+Label(s): Macular dystrophy 
++ 'Macular dystrophy' SubClassOf 'Abnormal macular morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0030084
+Label(s): Clinodactyly 
++ 'Clinodactyly' SubClassOf 'Abnormal digit morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000054
+Label(s): Micropenis 
++ 'Micropenis' SubClassOf 'abnormality of the genital system'
+
+Class: http://purl.obolibrary.org/obo/HP_0007722
+Label(s): Retinal pigment epithelial atrophy 
+- 'Retinal pigment epithelial atrophy' SubClassOf 'abnormality of the nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0000044
+Label(s): Hypogonadotrophic hypogonadism 
++ 'Hypogonadotrophic hypogonadism' SubClassOf 'abnormality of the genital system'
+
+Class: http://purl.obolibrary.org/obo/HP_0000020
+Label(s): Urinary incontinence 
++ 'Urinary incontinence' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0000014
+Label(s): Abnormality of the bladder 
+- 'Abnormality of the bladder' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'urinary bladder'))
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021154
+Label(s): dermis disease 
+- 'dermis disease' SubClassOf 'integumentary system disease'
++ 'dermis disease' SubClassOf 'skin disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0001685
+Label(s): Myocardial fibrosis 
+- 'Myocardial fibrosis' SubClassOf 'Abnormality of cardiovascular system morphology'
++ 'Myocardial fibrosis' SubClassOf 'Abnormal heart morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001679
+Label(s): abnormality of the aorta 
+- 'abnormality of the aorta' SubClassOf 'Abnormality of the cardiovascular system'
++ 'abnormality of the aorta' SubClassOf 'Abnormality of cardiovascular system morphology'
++ 'abnormality of the aorta' SubClassOf 'Abnormality of the vasculature'
+
+Class: http://purl.obolibrary.org/obo/HP_0001671
+Label(s): abnormal cardiac septum morphology 
+- 'abnormal cardiac septum morphology' SubClassOf 'Abnormality of the cardiovascular system'
++ 'abnormal cardiac septum morphology' SubClassOf 'Abnormal heart morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0006159
+Label(s): Mesoaxial hand polydactyly 
+- 'Mesoaxial hand polydactyly' SubClassOf 'Abnormal upper limb bone morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001662
+Label(s): Bradycardia 
+- 'Bradycardia' SubClassOf 'Abnormality of cardiovascular system morphology'
++ 'Bradycardia' SubClassOf 'Abnormality of cardiovascular system electrophysiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001660
+Label(s): Truncus arteriosus 
++ 'Truncus arteriosus' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021111
+Label(s): ureter neoplasm 
+- 'ureter neoplasm' SubClassOf 'urinary system neoplasm'
+- 'ureter neoplasm' SubClassOf 'ureteral disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0010944
+Label(s): abnormality of the renal pelvis 
+- 'abnormality of the renal pelvis' SubClassOf 'abnormality of the kidney'
++ 'abnormality of the renal pelvis' SubClassOf 'Abnormal renal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001657
+Label(s): prolonged QT interval 
+- 'prolonged QT interval' SubClassOf 'Abnormality of the cardiovascular system'
++ 'prolonged QT interval' SubClassOf 'Abnormal EKG'
+
+Class: http://purl.obolibrary.org/obo/HP_0001655
+Label(s): Patent foramen ovale 
+- 'Patent foramen ovale' SubClassOf 'Abnormality of the cardiovascular system'
++ 'Patent foramen ovale' SubClassOf 'abnormal cardiac septum morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001653
+Label(s): Mitral regurgitation 
++ 'Mitral regurgitation' SubClassOf 'Abnormal mitral valve physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001651
+Label(s): Dextrocardia 
+- 'Dextrocardia' SubClassOf 'Abnormality of the cardiovascular system'
++ 'Dextrocardia' SubClassOf 'Abnormal heart morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001647
+Label(s): Bicuspid aortic valve 
+- 'Bicuspid aortic valve' SubClassOf 'Abnormality of cardiovascular system morphology'
++ 'Bicuspid aortic valve' SubClassOf 'Abnormal heart morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001642
+Label(s): Pulmonic stenosis 
++ 'Pulmonic stenosis' SubClassOf 'Abnormal cardiovascular system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001636
+Label(s): tetralogy of fallot 
+- 'tetralogy of fallot' SubClassOf 'Abnormality of the cardiovascular system'
++ 'tetralogy of fallot' SubClassOf 'Abnormality of the vasculature'
++ 'tetralogy of fallot' SubClassOf 'Abnormal heart morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001634
+Label(s): Mitral valve prolapse 
+- 'Mitral valve prolapse' SubClassOf 'Abnormality of the cardiovascular system'
++ 'Mitral valve prolapse' SubClassOf 'Abnormal heart morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001620
+Label(s): High pitched voice 
+- 'High pitched voice' SubClassOf 'abnormality of the mouth'
+- 'High pitched voice' SubClassOf 'abnormality of the larynx'
++ 'High pitched voice' SubClassOf 'Phenotypic abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0001611
+Label(s): Nasal speech 
+- 'Nasal speech' SubClassOf 'abnormality of the mouth'
+- 'Nasal speech' SubClassOf 'abnormality of the larynx'
++ 'Nasal speech' SubClassOf 'Phenotypic abnormality'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016743
+Label(s): tumor of meninges 
+- 'tumor of meninges' SubClassOf 'has modifier' some 'rare'
+- 'tumor of meninges' SubClassOf 'Central Nervous System Neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0007663
+Label(s): Reduced visual acuity 
+- 'Reduced visual acuity' SubClassOf 'Abnormality of vision'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009047
+Label(s): Hyperpigmentation of the skin 
++ 'Hyperpigmentation of the skin' SubClassOf 'inheres in part of' some 'zone of skin'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021057
+Label(s): classic or attenuated familial adenomatous polyposis 
++ 'classic or attenuated familial adenomatous polyposis' SubClassOf 'Genetic digestive tract tumor'
++ 'classic or attenuated familial adenomatous polyposis' SubClassOf 'intestinal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0001597
+Label(s): Abnormality of the nail 
+- 'Abnormality of the nail' SubClassOf 'abnormality of limbs'
+
+Class: http://purl.obolibrary.org/obo/HP_0001591
+Label(s): Bell-shaped thorax 
+- 'Bell-shaped thorax' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001830
+Label(s): Postaxial foot polydactyly 
++ 'Postaxial foot polydactyly' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0010863
+Label(s): Receptive language delay 
++ 'Receptive language delay' SubClassOf 'Delayed speech and language development'
+
+Class: http://purl.obolibrary.org/obo/HP_0010862
+Label(s): Delayed fine motor development 
+- 'Delayed fine motor development' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001863
+Label(s): Toe clinodactyly 
+- 'Toe clinodactyly' SubClassOf 'Abnormal digit morphology'
++ 'Toe clinodactyly' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0001548
+Label(s): overgrowth 
+- 'overgrowth' SubClassOf 'growth abnormality'
++ 'overgrowth' SubClassOf 'Tall stature'
+
+Class: http://purl.obolibrary.org/obo/HP_0010813
+Label(s): Abnormal number of hair whorls 
+- 'Abnormal number of hair whorls' SubClassOf 'Abnormal digit morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0100880
+Label(s): Nephrogenic rest 
+- 'Nephrogenic rest' SubClassOf 'abnormal renal physiology'
++ 'Nephrogenic rest' SubClassOf 'Abnormal renal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001507
+Label(s): growth abnormality 
+- 'growth abnormality' SubClassOf 'phenotype'
++ 'growth abnormality' SubClassOf 'Phenotypic abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0000283
+Label(s): Broad face 
+- 'Broad face' SubClassOf 'abnormality of the face'
++ 'Broad face' SubClassOf 'abnormal facial shape'
+
+Class: http://purl.obolibrary.org/obo/HP_0002167
+Label(s): Neurological speech impairment 
+- 'Neurological speech impairment' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0007968
+Label(s): Remnants of the hyaloid vascular system 
+- 'Remnants of the hyaloid vascular system' SubClassOf 'Abnormality of the eye'
+- 'Remnants of the hyaloid vascular system' SubClassOf 'Abnormality of the vasculature'
++ 'Remnants of the hyaloid vascular system' SubClassOf 'abnormal morphology of the posterior segment of the globe'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004537
+Label(s): neonatal systemic lupus erythematosus 
 - 'neonatal systemic lupus erythematosus' SubClassOf 'systemic lupus erythematosus'
----
-Class changed: IRI http://purl.obolibrary.org/obo/UBERON_0002539
-label: pharyngeal arch
-- 'pharyngeal arch' SubClassOf 'part of' some 'integumental system'
----
-Class changed: IRI http://purl.obolibrary.org/obo/UBERON_0003917
-label: arthropod fat body
-+ 'arthropod fat body' SubClassOf 'anatomical structure'
-- 'arthropod fat body' SubClassOf 'adipose tissue'
----
-Class changed: IRI http://purl.obolibrary.org/obo/OBI_0000070
-label: assay
-- 'assay' SubClassOf 'has_participant' some 'instrument'
----
-Class changed: IRI http://www.ebi.ac.uk/efo/EFO_0006936
-label: optic disc measurement
-+ 'optic disc measurement' SubClassOf 'eye measurement'
-- 'optic disc measurement' SubClassOf 'measurement'
----
-Class changed: IRI http://www.ebi.ac.uk/efo/EFO_0008907
-label: scDNase-seq
-+ 'scDNase-seq' SubClassOf 'DNase-Hypersensitivity seq'
-- 'scDNase-seq' SubClassOf 'realizes' some 
+- 'neonatal systemic lupus erythematosus' SubClassOf 'lupus erythematosus'
++ 'neonatal systemic lupus erythematosus' SubClassOf 'systemic lupus erythematosus'
+
+Class: http://purl.obolibrary.org/obo/HP_0007552
+Label(s): Abnormal subcutaneous fat tissue distribution 
+- 'Abnormal subcutaneous fat tissue distribution' SubClassOf 'Abnormality of connective tissue'
++ 'Abnormal subcutaneous fat tissue distribution' SubClassOf 'Abnormality of adipose tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0040223
+Label(s): Pulmonary hemorrhage 
++ 'Pulmonary hemorrhage' SubClassOf 'Abnormal bleeding'
++ 'Pulmonary hemorrhage' SubClassOf 'Abnormal lung morphology'
++ 'Pulmonary hemorrhage' SubClassOf 'Abnormality of blood circulation'
+
+Class: http://purl.obolibrary.org/obo/HP_0032155
+Label(s): Abdominal cramps 
+- 'Abdominal cramps' SubClassOf 'pain in abdomen'
+- 'Abdominal cramps' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0001919
+Label(s): Acute kidney injury 
+- 'Acute kidney injury' SubClassOf 'abnormal renal physiology'
++ 'Acute kidney injury' SubClassOf 'Renal insufficiency'
+
+Class: http://purl.obolibrary.org/obo/HP_0010771
+Label(s): pilonidal abscess 
++ 'pilonidal abscess' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0010747
+Label(s): Medial flaring of the eyebrow 
+- 'Medial flaring of the eyebrow' SubClassOf 'Abnormality of skin morphology'
++ 'Medial flaring of the eyebrow' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0010743
+Label(s): Short metatarsal 
+- 'Short metatarsal' SubClassOf 'abnormality of limbs'
++ 'Short metatarsal' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0002617
+Label(s): Dilatation 
++ 'Dilatation' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001976
+Label(s): Reduced antithrombin III activity 
+- 'Reduced antithrombin III activity' SubClassOf 'abnormality of metabolism/homeostasis'
++ 'Reduced antithrombin III activity' SubClassOf 'abnormality of blood and blood-forming tissues'
+
+Class: http://purl.obolibrary.org/obo/HP_0010720
+Label(s): Abnormal hair pattern 
+- 'Abnormal hair pattern' SubClassOf 'abnormality of the skin'
++ 'Abnormal hair pattern' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0004798
+Label(s): Recurrent infection of the gastrointestinal tract 
+- 'Recurrent infection of the gastrointestinal tract' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'Recurrent infection of the gastrointestinal tract' SubClassOf 'Functional abnormality of the gastrointestinal tract'
++ 'Recurrent infection of the gastrointestinal tract' SubClassOf 'recurrent infection'
+
+Class: http://purl.obolibrary.org/obo/HP_0000311
+Label(s): Round face 
+- 'Round face' SubClassOf 'abnormality of the face'
++ 'Round face' SubClassOf 'abnormal facial shape'
+
+Class: http://purl.obolibrary.org/obo/HP_0001822
+Label(s): Hallux valgus 
++ 'Hallux valgus' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0000364
+Label(s): Hearing abnormality 
+- 'Hearing abnormality' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'sensory perception of sound'))
+
+Class: http://purl.obolibrary.org/obo/HP_0003231
+Label(s): Hypertyrosinemia 
+- 'Hypertyrosinemia' SubClassOf 'abnormality of metabolism/homeostasis'
++ 'Hypertyrosinemia' SubClassOf 'abnormality of aromatic amino acid family metabolism'
+
+Class: http://purl.obolibrary.org/obo/HP_0000726
+Label(s): dementia 
+- 'dementia' SubClassOf 'cognitive impairment'
++ 'dementia' SubClassOf 'cognitive decline'
+
+Class: http://www.orpha.net/ORDO/Orphanet_109
+Label(s): Bannayan-Riley-Ruvalcaba syndrome 
+- 'Bannayan-Riley-Ruvalcaba syndrome' SubClassOf 'brain neoplasm'
+- 'Bannayan-Riley-Ruvalcaba syndrome' SubClassOf 'rare genetic vascular tumor'
++ 'Bannayan-Riley-Ruvalcaba syndrome' SubClassOf 'Genetic vascular anomaly'
+
+Class: http://purl.obolibrary.org/obo/HP_0003298
+Label(s): Spina bifida occulta 
+- 'Spina bifida occulta' SubClassOf 'Abnormality of skeletal morphology'
++ 'Spina bifida occulta' SubClassOf 'morphological abnormality of the central nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0001399
+Label(s): hepatic failure 
+- 'hepatic failure' SubClassOf 'Abnormality of the liver'
++ 'hepatic failure' SubClassOf 'Abnormality of the digestive system'
+
+Class: http://purl.obolibrary.org/obo/HP_0001395
+Label(s): Hepatic fibrosis 
+- 'Hepatic fibrosis' EquivalentTo 'has part' some 
+('increased amount' and ('inheres_in' some 
+('fibrosis' and ('part of' some 'liver'))) and ('has component' some 'abnormal'))
+- 'Hepatic fibrosis' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0001385
+Label(s): Hip dysplasia 
+- 'Hip dysplasia' SubClassOf 'abnormality of limbs'
+
+Class: http://purl.obolibrary.org/obo/HP_0010668
+Label(s): Abnormality of the zygomatic bone 
+- 'Abnormality of the zygomatic bone' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001439
+Label(s): Trilogy of Fallot 
++ 'Trilogy of Fallot' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0010650
+Label(s): Hypoplasia of the premaxilla 
+- 'Hypoplasia of the premaxilla' SubClassOf 'Abnormality of skeletal morphology'
+- 'Hypoplasia of the premaxilla' SubClassOf 'abnormality of the mouth'
+
+Class: http://purl.obolibrary.org/obo/HP_0001350
+Label(s): Slurred speech 
+- 'Slurred speech' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001348
+Label(s): Brisk reflexes 
+- 'Brisk reflexes' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001344
+Label(s): Absent speech 
++ 'Absent speech' SubClassOf 'Neurological speech impairment'
++ 'Absent speech' SubClassOf 'Delayed speech and language development'
+
+Class: http://purl.obolibrary.org/obo/HP_0001338
+Label(s): Partial agenesis of the corpus callosum 
+- 'Partial agenesis of the corpus callosum' SubClassOf 'Aplasia/Hypoplasia of the corpus callosum'
+
+Class: http://purl.obolibrary.org/obo/HP_0001332
+Label(s): Dystonia 
++ 'Dystonia' SubClassOf 'abnormality of movement'
+
+Class: http://purl.obolibrary.org/obo/HP_0001328
+Label(s): Specific learning disability 
+- 'Specific learning disability' SubClassOf 'abnormality of the nervous system'
++ 'Specific learning disability' SubClassOf 'Neurodevelopmental abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0010609
+Label(s): skin tags 
+- 'skin tags' SubClassOf 'abnormality of the skin'
++ 'skin tags' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001319
+Label(s): Neonatal hypotonia 
++ 'Neonatal hypotonia' SubClassOf 'muscular hypotonia'
+
+Class: http://purl.obolibrary.org/obo/HP_0001315
+Label(s): Reduced tendon reflexes 
+- 'Reduced tendon reflexes' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001310
+Label(s): Dysmetria 
++ 'Dysmetria' SubClassOf 'Ataxia'
+
+Class: http://purl.obolibrary.org/obo/HP_0002986
+Label(s): Radial bowing 
+- 'Radial bowing' SubClassOf 'Abnormality of skeletal morphology'
++ 'Radial bowing' SubClassOf 'Bowing of the long bones'
+
+Class: http://purl.obolibrary.org/obo/HP_0002980
+Label(s): Femoral bowing 
++ 'Femoral bowing' SubClassOf 'Bowing of the legs'
+
+Class: http://purl.obolibrary.org/obo/HP_0007370
+Label(s): Aplasia/Hypoplasia of the corpus callosum 
+- 'Aplasia/Hypoplasia of the corpus callosum' SubClassOf 'Abnormality of the cerebral white matter'
++ 'Aplasia/Hypoplasia of the corpus callosum' SubClassOf 'Abnormality of the corpus callosum'
+
+Class: http://purl.obolibrary.org/obo/HP_0007340
+Label(s): Lower limb Muscle weakness 
++ 'Lower limb Muscle weakness' SubClassOf 'Limb muscle weakness'
+
+Class: http://purl.obolibrary.org/obo/HP_0007333
+Label(s): Hypoplasia of the frontal lobes 
++ 'Hypoplasia of the frontal lobes' SubClassOf 'Cerebral hypoplasia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_255249
+Label(s): Leigh syndrome with nephrotic syndrome 
+- 'Leigh syndrome with nephrotic syndrome' SubClassOf 'Leigh syndrome'
+- 'Leigh syndrome with nephrotic syndrome' SubClassOf 'Leigh disease'
++ 'Leigh syndrome with nephrotic syndrome' SubClassOf 'Leigh syndrome'
+
+Class: http://purl.obolibrary.org/obo/HP_0007313
+Label(s): cerebral degeneration 
+- 'cerebral degeneration' SubClassOf 'abnormality of the nervous system'
++ 'cerebral degeneration' SubClassOf 'Brain atrophy'
+
+Class: http://purl.obolibrary.org/obo/HP_0008997
+Label(s): Proximal muscle weakness in upper limbs 
+- 'Proximal muscle weakness in upper limbs' SubClassOf 'abnormality of limbs'
++ 'Proximal muscle weakness in upper limbs' SubClassOf 'Abnormality of the upper limb'
++ 'Proximal muscle weakness in upper limbs' SubClassOf 'Limb muscle weakness'
+
+Class: http://purl.obolibrary.org/obo/HP_0008981
+Label(s): Calf muscle hypertrophy 
+- 'Calf muscle hypertrophy' SubClassOf 'abnormality of limbs'
++ 'Calf muscle hypertrophy' SubClassOf 'abnormality of the lower limb'
++ 'Calf muscle hypertrophy' SubClassOf 'Abnormality of muscle size'
+
+Class: http://purl.obolibrary.org/obo/HP_0001298
+Label(s): Encephalopathy 
++ 'Encephalopathy' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001279
+Label(s): syncope 
+- 'syncope' SubClassOf 'Abnormality of the cardiovascular system'
++ 'syncope' SubClassOf 'Abnormal cardiovascular system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001276
+Label(s): Hypertonia 
++ 'Hypertonia' SubClassOf 'Abnormality of central motor function'
++ 'Hypertonia' SubClassOf 'Abnormal muscle tone'
+
+Class: http://purl.obolibrary.org/obo/HP_0001274
+Label(s): Agenesis of corpus callosum 
++ 'Agenesis of corpus callosum' SubClassOf 'Aplasia/Hypoplasia of the corpus callosum'
+
+Class: http://purl.obolibrary.org/obo/HP_0001273
+Label(s): Abnormality of the corpus callosum 
++ 'Abnormality of the corpus callosum' SubClassOf 'Abnormality of the cerebral white matter'
+
+Class: http://purl.obolibrary.org/obo/HP_0008942
+Label(s): Acute rhabdomyolysis 
++ 'Acute rhabdomyolysis' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0010554
+Label(s): Cutaneous finger syndactyly 
+- 'Cutaneous finger syndactyly' SubClassOf 'Abnormal digit morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001269
+Label(s): Hemiparesis 
++ 'Hemiparesis' SubClassOf 'Abnormality of central motor function'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004723
+Label(s): coronary artery calcification 
++ 'coronary artery calcification' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0001265
+Label(s): Hyporeflexia 
+- 'Hyporeflexia' SubClassOf 'abnormality of movement'
++ 'Hyporeflexia' SubClassOf 'Reduced tendon reflexes'
+
+Class: http://purl.obolibrary.org/obo/HP_0001263
+Label(s): global developmental delay 
++ 'global developmental delay' SubClassOf 'Neurodevelopmental abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0001260
+Label(s): Dysarthria 
++ 'Dysarthria' SubClassOf 'Neurological speech impairment'
+
+Class: http://purl.obolibrary.org/obo/HP_0001258
+Label(s): Spastic paraplegia 
+- 'Spastic paraplegia' SubClassOf 'Abnormality of muscle physiology'
++ 'Spastic paraplegia' SubClassOf 'Lower limb spasticity'
+
+Class: http://purl.obolibrary.org/obo/HP_0001257
+Label(s): Spasticity 
+- 'Spasticity' SubClassOf 'Abnormality of nervous system physiology'
+- 'Spasticity' SubClassOf 'Abnormal muscle tone'
+
+Class: http://purl.obolibrary.org/obo/HP_0001252
+Label(s): muscular hypotonia 
++ 'muscular hypotonia' SubClassOf 'Abnormal muscle tone'
+
+Class: http://purl.obolibrary.org/obo/HP_0001251
+Label(s): Ataxia 
+- 'Ataxia' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001250
+Label(s): Seizures 
+- 'Seizures' SubClassOf 'abnormality of the nervous system'
++ 'Seizures' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001249
+Label(s): Intellectual disability 
++ 'Intellectual disability' SubClassOf 'Neurodevelopmental abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0010517
+Label(s): Ectopic thymus tissue 
++ 'Ectopic thymus tissue' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0010511
+Label(s): Long toe 
++ 'Long toe' SubClassOf 'Abnormal digit morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0010508
+Label(s): Metatarsus valgus 
+- 'Metatarsus valgus' SubClassOf 'abnormality of limbs'
++ 'Metatarsus valgus' SubClassOf 'abnormality of the foot'
++ 'Metatarsus valgus' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002840
+Label(s): lymphadenitis 
++ 'lymphadenitis' SubClassOf 'increased inflammatory response'
+
+Class: http://purl.obolibrary.org/obo/HP_0002829
+Label(s): arthralgia 
+- 'arthralgia' SubClassOf 'abnormality of the skeletal system'
++ 'arthralgia' SubClassOf 'Constitutional symptom'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001669
+Label(s): influenza infection 
+- 'influenza infection' SubClassOf 'infection'
++ 'influenza infection' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0007256
+Label(s): Abnormal pyramidal sign 
+- 'Abnormal pyramidal sign' SubClassOf 'Abnormality of nervous system physiology'
+- 'Abnormal pyramidal sign' SubClassOf 'abnormality of metabolism/homeostasis'
+- 'Abnormal pyramidal sign' SubClassOf 'abnormality of brain morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0006695
+Label(s): Atrioventricular canal defect 
+- 'Atrioventricular canal defect' SubClassOf 'Abnormality of the cardiovascular system'
++ 'Atrioventricular canal defect' SubClassOf 'abnormal cardiac septum morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0001195
+Label(s): Single umbilical artery 
+- 'Single umbilical artery' SubClassOf 'Abnormality of the vasculature'
++ 'Single umbilical artery' SubClassOf 'Abnormality of the cardiovascular system'
+
+Class: http://purl.obolibrary.org/obo/HP_0001182
+Label(s): Tapered finger 
++ 'Tapered finger' SubClassOf 'Long fingers'
+
+Class: http://purl.obolibrary.org/obo/HP_0001123
+Label(s): Visual field defect 
+- 'Visual field defect' SubClassOf 'Abnormality of vision'
+
+Class: http://purl.obolibrary.org/obo/HP_0001103
+Label(s): Abnormal macular morphology 
+- 'Abnormal macular morphology' SubClassOf 'abnormality of the nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0000622
+Label(s): Blurred vision 
+- 'Blurred vision' SubClassOf 'Abnormality of the eye'
++ 'Blurred vision' SubClassOf 'Abnormality of vision'
+
+Class: http://purl.obolibrary.org/obo/HP_0002788
+Label(s): Recurrent upper respiratory tract infections 
+- 'Recurrent upper respiratory tract infections' SubClassOf 'Abnormality of the digestive system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004138
+Label(s): bundle branch block 
++ 'bundle branch block' SubClassOf 'cardiac ventricle disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0007126
+Label(s): Proximal amyotrophy 
+- 'Proximal amyotrophy' SubClassOf 'abnormality of limbs'
+
+Class: http://purl.obolibrary.org/obo/HP_0000934
+Label(s): Chondrocalcinosis 
++ 'Chondrocalcinosis' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021396
+Label(s): polyp of vulva 
+- 'polyp of vulva' SubClassOf 'vulvar neoplasm'
++ 'polyp of vulva' SubClassOf 'female reproductive system disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2930
+Label(s): Cronkhite-Canada syndrome 
+- 'Cronkhite-Canada syndrome' SubClassOf 'skin neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0000707
+Label(s): abnormality of the nervous system 
+- 'abnormality of the nervous system' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'nervous system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000736
+Label(s): Short attention span 
+- 'Short attention span' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011950
+Label(s): Bronchiolitis 
+- 'Bronchiolitis' SubClassOf 'Abnormal lung morphology'
++ 'Bronchiolitis' SubClassOf 'Recurrent respiratory infections'
+
+Class: http://purl.obolibrary.org/obo/HP_0000750
+Label(s): Delayed speech and language development 
+- 'Delayed speech and language development' SubClassOf 'abnormality of the nervous system'
++ 'Delayed speech and language development' SubClassOf 'Neurodevelopmental abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0002652
+Label(s): Skeletal dysplasia 
+- 'Skeletal dysplasia' SubClassOf 'abnormality of the skeletal system'
++ 'Skeletal dysplasia' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002647
+Label(s): Aortic dissection 
+- 'Aortic dissection' SubClassOf 'Abnormality of the vasculature'
++ 'Aortic dissection' SubClassOf 'abnormality of the aorta'
+
+Class: http://purl.obolibrary.org/obo/HP_0011913
+Label(s): Lumbar hypertrichosis 
+- 'Lumbar hypertrichosis' SubClassOf 'abnormality of the skin'
++ 'Lumbar hypertrichosis' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0000790
+Label(s): Hematuria 
++ 'Hematuria' SubClassOf 'abnormal renal physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002616
+Label(s): Aortic root aneurysm 
++ 'Aortic root aneurysm' SubClassOf 'abnormality of the aorta'
+
+Class: http://www.orpha.net/ORDO/Orphanet_91135
+Label(s): Body skin hyperlaxity due to vitamin K-dependent coagulation factor deficiency 
++ 'Body skin hyperlaxity due to vitamin K-dependent coagulation factor deficiency' SubClassOf 'disease shares features of' some 'pseudoxanthoma elasticum (inherited or acquired)'
+
+Class: http://purl.obolibrary.org/obo/HP_0012718
+Label(s): morphological abnormality of the gastrointestinal tract 
+- 'morphological abnormality of the gastrointestinal tract' SubClassOf 'Abnormality of the digestive system'
++ 'morphological abnormality of the gastrointestinal tract' SubClassOf 'abnormality of the gastrointestinal tract'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000911
+Label(s): dystocia 
+- 'dystocia' SubClassOf 'reproductive system disease'
+- 'dystocia' SubClassOf 'pregnancy disorder'
++ 'dystocia' SubClassOf 'pregnancy disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021416
+Label(s): polyp of gallbladder 
+- 'polyp of gallbladder' SubClassOf 'gallbladder neoplasm'
++ 'polyp of gallbladder' SubClassOf 'gallbladder disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000938
+Label(s): fibromuscular dysplasia 
+- 'fibromuscular dysplasia' SubClassOf 'cardiovascular disease'
++ 'fibromuscular dysplasia' SubClassOf 'genetic disorder'
++ 'fibromuscular dysplasia' SubClassOf 'arterial disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005618
+Label(s): thoracic aortic raised atherosclerotic lesion 
++ 'thoracic aortic raised atherosclerotic lesion' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
++ 'thoracic aortic raised atherosclerotic lesion' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'aorta'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005601
+Label(s): abdominal aortic raised atherosclerotic lesion 
++ 'abdominal aortic raised atherosclerotic lesion' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
++ 'abdominal aortic raised atherosclerotic lesion' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'aorta'))
+
+Class: http://www.orpha.net/ORDO/Orphanet_2869
+Label(s): Peutz-Jeghers syndrome 
++ 'Peutz-Jeghers syndrome' SubClassOf 'Genetic digestive tract tumor'
++ 'Peutz-Jeghers syndrome' SubClassOf 'intestinal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0002597
+Label(s): Abnormality of the vasculature 
+- 'Abnormality of the vasculature' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'vasculature'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000833
+Label(s): Glucose intolerance 
+- 'Glucose intolerance' SubClassOf 'abnormal glucose tolerance'
++ 'Glucose intolerance' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0002575
+Label(s): Tracheoesophageal fistula 
++ 'Tracheoesophageal fistula' SubClassOf 'Abnormality of the respiratory system'
+
+Class: http://purl.obolibrary.org/obo/HP_0002574
+Label(s): Episodic abdominal pain 
+- 'Episodic abdominal pain' SubClassOf 'pain in abdomen'
+
+Class: http://purl.obolibrary.org/obo/HP_0000842
+Label(s): Hyperinsulinemia 
++ 'Hyperinsulinemia' SubClassOf 'Abnormal glucose homeostasis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000971
+Label(s): hyperemesis gravidarum 
+- 'hyperemesis gravidarum' SubClassOf 'pregnancy disorder'
+- 'hyperemesis gravidarum' SubClassOf 'reproductive system disease'
++ 'hyperemesis gravidarum' SubClassOf 'pregnancy disorder'
+
+Class: http://purl.obolibrary.org/obo/HP_0002555
+Label(s): Absent pubic hair 
+- 'Absent pubic hair' SubClassOf 'abnormality of the skin'
++ 'Absent pubic hair' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0000892
+Label(s): Bifid ribs 
+- 'Bifid ribs' SubClassOf 'Abnormality of skeletal morphology'
++ 'Bifid ribs' SubClassOf 'abnormality of the thorax'
+
+Class: http://purl.obolibrary.org/obo/HP_0002515
+Label(s): Waddling gait 
++ 'Waddling gait' SubClassOf 'gait disturbance'
+
+Class: http://purl.obolibrary.org/obo/HP_0001082
+Label(s): Cholecystitis 
++ 'Cholecystitis' SubClassOf 'Abnormal gallbladder physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0031122
+Label(s): Two-raphe bicuspid aortic valve 
+- 'Two-raphe bicuspid aortic valve' SubClassOf 'Abnormal heart morphology'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1117
+Label(s): Aplasia cutis - myopia 
++ 'Aplasia cutis - myopia' SubClassOf 'genetic skin disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1115
+Label(s): Recessive aplasia cutis congenita of limbs 
++ 'Recessive aplasia cutis congenita of limbs' SubClassOf 'genetic skin disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000595
+Label(s): sexual disorder 
+- 'sexual disorder' SubClassOf 'psychiatric disorder'
+
+Class: http://purl.obolibrary.org/obo/HP_0002474
+Label(s): Expressive language delay 
++ 'Expressive language delay' SubClassOf 'Delayed speech and language development'
+
+Class: http://purl.obolibrary.org/obo/HP_0000952
+Label(s): jaundice 
+- 'jaundice' SubClassOf 'abnormality of the skin'
++ 'jaundice' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000957
+Label(s): Cafe-au-lait spot 
++ 'Cafe-au-lait spot' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000964
+Label(s): Eczema 
+- 'Eczema' EquivalentTo 'has part' some 
+('having extra processual parts' and ('inheres_in' some 'blood vessel') and ('towards' some 'skin of body'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002448
+Label(s): Progressive encephalopathy 
+- 'Progressive encephalopathy' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002360
+Label(s): meninx 
++ 'meninx' SubClassOf 'part of' some http://purl.obolibrary.org/obo/UBERON_0010743
+
+Class: http://www.orpha.net/ORDO/Orphanet_1003
+Label(s): Scalp defects - postaxial polydactyly 
++ 'Scalp defects - postaxial polydactyly' SubClassOf 'genetic skin disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0010059
+Label(s): Broad hallux phalanx 
++ 'Broad hallux phalanx' SubClassOf 'abnormality of the foot'
+
+Class: http://purl.obolibrary.org/obo/HP_0010049
+Label(s): Short metacarpal 
+- 'Short metacarpal' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0008404
+Label(s): Nail dystrophy 
+- 'Nail dystrophy' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0005487
+Label(s): Prominent metopic ridge 
+- 'Prominent metopic ridge' SubClassOf 'Abnormality of skeletal morphology'
++ 'Prominent metopic ridge' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0000863
+Label(s): Central diabetes insipidus 
++ 'Central diabetes insipidus' SubClassOf 'abnormality of brain morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002385
+Label(s): Paraparesis 
+- 'Paraparesis' SubClassOf 'Abnormality of nervous system physiology'
+- 'Paraparesis' SubClassOf 'abnormality of brain morphology'
+- 'Paraparesis' SubClassOf 'abnormality of metabolism/homeostasis'
++ 'Paraparesis' SubClassOf 'Abnormality of central motor function'
+
+Class: http://purl.obolibrary.org/obo/HP_0002384
+Label(s): Focal impaired awareness seizure 
+- 'Focal impaired awareness seizure' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0030096
+Label(s): Abnormal muscle fiber dystrophin expression 
+- 'Abnormal muscle fiber dystrophin expression' SubClassOf 'abnormality of the musculature'
+- 'Abnormal muscle fiber dystrophin expression' SubClassOf 'abnormality of metabolism/homeostasis'
++ 'Abnormal muscle fiber dystrophin expression' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000782
+Label(s): altitude sickness 
+- 'altitude sickness' SubClassOf 'respiratory system disease'
+- 'altitude sickness' SubClassOf 'cardiovascular disease'
++ 'altitude sickness' SubClassOf 'respiratory system disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0002376
+Label(s): Developmental regression 
++ 'Developmental regression' SubClassOf 'Neurodevelopmental abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0002373
+Label(s): febrile seizures 
+- 'febrile seizures' SubClassOf 'abnormality of the nervous system'
++ 'febrile seizures' SubClassOf 'Seizures'
+
+Class: http://purl.obolibrary.org/obo/HP_0002355
+Label(s): Difficulty walking 
++ 'Difficulty walking' SubClassOf 'gait disturbance'
+
+Class: http://purl.obolibrary.org/obo/HP_0002353
+Label(s): EEG abnormality 
++ 'EEG abnormality' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002352
+Label(s): Leukoencephalopathy 
+- 'Leukoencephalopathy' SubClassOf 'Abnormality of the cerebral white matter'
++ 'Leukoencephalopathy' SubClassOf 'abnormality of brain morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002344
+Label(s): Progressive neurologic deterioration 
+- 'Progressive neurologic deterioration' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000733
+Label(s): Stereotypy 
++ 'Stereotypy' SubClassOf 'abnormality of movement'
+
+Class: http://purl.obolibrary.org/obo/HP_0011611
+Label(s): Interrupted aortic arch 
+- 'Interrupted aortic arch' SubClassOf 'Abnormality of the vasculature'
++ 'Interrupted aortic arch' SubClassOf 'abnormality of the aorta'
+
+Class: http://purl.obolibrary.org/obo/HP_0002315
+Label(s): Headache 
+- 'Headache' SubClassOf 'abnormality of the nervous system'
++ 'Headache' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002313
+Label(s): Spastic paraparesis 
++ 'Spastic paraparesis' SubClassOf 'Lower limb spasticity'
++ 'Spastic paraparesis' SubClassOf 'Paraparesis'
+
+Class: http://purl.obolibrary.org/obo/HP_0002307
+Label(s): Drooling 
+- 'Drooling' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002304
+Label(s): Akinesia 
++ 'Akinesia' SubClassOf 'abnormality of movement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000700
+Label(s): fibroepithelial polyp of urethra 
+- 'fibroepithelial polyp of urethra' SubClassOf 'urethra neoplasm'
++ 'fibroepithelial polyp of urethra' SubClassOf 'urethral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020634
+Label(s): grade III meningioma 
+- 'grade III meningioma' EquivalentTo 'meningioma (disease)' and ('has modifier' some 'tumor grade 3, general grading system')
+- 'grade III meningioma' SubClassOf 'meningioma (disease)'
++ 'grade III meningioma' SubClassOf 'Meningioma'
++ 'grade III meningioma' EquivalentTo 'Meningioma' and ('has modifier' some 'tumor grade 3, general grading system')
+
+Class: http://purl.obolibrary.org/obo/HP_0011555
+Label(s): Double inlet left ventricle 
+- 'Double inlet left ventricle' SubClassOf 'Abnormality of the cardiovascular system'
++ 'Double inlet left ventricle' SubClassOf 'Abnormal heart morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008769
+Label(s): HT-SELEX 
+- 'HT-SELEX' SubClassOf 'DNA assay'
++ 'HT-SELEX' SubClassOf 'SELEX-seq'
+
+Class: http://purl.obolibrary.org/obo/HP_0008365
+Label(s): Abnormality of the talus 
+- 'Abnormality of the talus' SubClassOf 'abnormality of limbs'
++ 'Abnormality of the talus' SubClassOf 'abnormality of the foot'
++ 'Abnormality of the talus' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0008348
+Label(s): Decreased circulating IgG2 level 
++ 'Decreased circulating IgG2 level' SubClassOf 'abnormality of the immune system'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2556
+Label(s): Microphthalmia with linear skin defects syndrome 
++ 'Microphthalmia with linear skin defects syndrome' SubClassOf 'genetic skin disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006927
+Label(s): severe aplastic anemia 
++ 'severe aplastic anemia' SubClassOf 'has part' some 
+('quality' and ('inheres_in' some 'hematopoietic system') and ('has component' some 'abnormal'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006926
+Label(s): acquired aplastic anemia 
++ 'acquired aplastic anemia' SubClassOf 'has part' some 
+('quality' and ('inheres_in' some 'hematopoietic system') and ('has component' some 'abnormal'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002283
+Label(s): Global brain atrophy 
++ 'Global brain atrophy' SubClassOf 'Brain atrophy'
+
+Class: http://purl.obolibrary.org/obo/HP_0009944
+Label(s): Partial duplication of thumb phalanx 
+- 'Partial duplication of thumb phalanx' SubClassOf 'Abnormal upper limb bone morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002269
+Label(s): Abnormality of neuronal migration 
++ 'Abnormality of neuronal migration' SubClassOf 'morphological abnormality of the central nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0002267
+Label(s): Exaggerated startle response 
+- 'Exaggerated startle response' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002251
+Label(s): megacolon 
+- 'megacolon' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'megacolon' SubClassOf 'Abnormality of the intestine'
++ 'megacolon' SubClassOf 'abnormality of the nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0002250
+Label(s): Abnormality of the large intestine 
+- 'Abnormality of the large intestine' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'large intestine'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002239
+Label(s): gastrointestinal hemorrhage 
+- 'gastrointestinal hemorrhage' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'gastrointestinal hemorrhage' SubClassOf 'Functional abnormality of the gastrointestinal tract'
++ 'gastrointestinal hemorrhage' SubClassOf 'Abnormal bleeding'
++ 'gastrointestinal hemorrhage' SubClassOf 'Abnormality of blood circulation'
+
+Class: http://purl.obolibrary.org/obo/HP_0002236
+Label(s): Frontal upsweep of hair 
+- 'Frontal upsweep of hair' SubClassOf 'Abnormal digit morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002221
+Label(s): Absent axillary hair 
+- 'Absent axillary hair' SubClassOf 'abnormality of the skin'
++ 'Absent axillary hair' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0002205
+Label(s): Recurrent respiratory infections 
+- 'Recurrent respiratory infections' SubClassOf 'abnormality of the immune system'
++ 'Recurrent respiratory infections' SubClassOf 'recurrent infection'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000609
+Label(s): Ureter Carcinoma 
+- 'Ureter Carcinoma' SubClassOf 'ureteral neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0025258
+Label(s): Stiff neck 
++ 'Stiff neck' SubClassOf 'abnormality of the skeletal system'
+
+Class: http://purl.obolibrary.org/obo/HP_0003865
+Label(s): Bowed humerus 
+- 'Bowed humerus' SubClassOf 'Abnormality of skeletal morphology'
++ 'Bowed humerus' SubClassOf 'Bowing of the long bones'
+
+Class: http://www.orpha.net/ORDO/Orphanet_96147
+Label(s): Kleefstra syndrome due to 9q34 microdeletion 
+- 'Kleefstra syndrome due to 9q34 microdeletion' SubClassOf 'Kleefstra syndrome'
++ 'Kleefstra syndrome due to 9q34 microdeletion' SubClassOf http://purl.obolibrary.org/obo/MONDO_0027407
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005262
+Label(s): mitral annular calcification 
++ 'mitral annular calcification' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005251
+Label(s): hypotension 
+- 'hypotension' SubClassOf 'arterial disorder'
+- 'hypotension' SubClassOf 'cardiovascular disease'
++ 'hypotension' SubClassOf 'arterial disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005245
+Label(s): body weight loss 
+- 'weight loss' EquivalentTo 'body weight loss'
+
+Class: http://purl.obolibrary.org/obo/HP_0008277
+Label(s): Abnormality of zinc homeostasis 
+- 'Abnormality of zinc homeostasis' EquivalentTo 'has part' some 
+('quality' and ('inheres_in' some 'zinc ion homeostasis') and ('has component' some 'abnormal'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006892
+Label(s): cutaneous precancerous condition 
++ 'cutaneous precancerous condition' SubClassOf 'inheres in part of' some 'zone of skin'
+
+Class: http://purl.obolibrary.org/obo/HP_0005639
+Label(s): Hyperextensible hand joints 
+- 'Hyperextensible hand joints' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006851
+Label(s): malignant 
+- 'malignant' SubClassOf 'clinical modifier'
++ 'malignant' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010569
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006834
+Label(s): septic shock 
++ 'septic shock' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002180
+Label(s): neurodegeneration 
++ 'neurodegeneration' SubClassOf 'morphological abnormality of the central nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0002169
+Label(s): Clonus 
+- 'Clonus' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002164
+Label(s): Nail dysplasia 
+- 'Nail dysplasia' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002079
+Label(s): Hypoplasia of the corpus callosum 
++ 'Hypoplasia of the corpus callosum' SubClassOf 'Aplasia/Hypoplasia of the corpus callosum'
+
+Class: http://purl.obolibrary.org/obo/HP_0009826
+Label(s): Limb undergrowth 
++ 'Limb undergrowth' SubClassOf 'abnormality of limbs'
+
+Class: http://purl.obolibrary.org/obo/HP_0002148
+Label(s): Hypophosphatemia 
+- 'Hypophosphatemia' SubClassOf 'abnormality of blood and blood-forming tissues'
+- 'Hypophosphatemia' EquivalentTo 'has part' some 
+('decreased concentration' and ('inheres_in' some 
+('phosphate' and ('part of' some 'blood'))) and ('has component' some 'abnormal'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002141
+Label(s): Gait imbalance 
+- 'Gait imbalance' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002136
+Label(s): Broad-based gait 
+- 'Broad-based gait' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0009800
+Label(s): Maternal diabetes 
+- 'Maternal diabetes' SubClassOf 'Glucose intolerance'
++ 'Maternal diabetes' SubClassOf http://purl.obolibrary.org/obo/HP_0001952
++ 'Maternal diabetes' SubClassOf 'abnormality of prenatal development or birth'
++ 'Maternal diabetes' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0002123
+Label(s): Generalized myoclonic seizures 
+- 'Generalized myoclonic seizures' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002121
+Label(s): Absence seizure 
+- 'Absence seizure' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002120
+Label(s): Cerebral cortical atrophy 
+- 'Cerebral cortical atrophy' SubClassOf 'abnormality of brain morphology'
++ 'Cerebral cortical atrophy' SubClassOf 'Brain atrophy'
+
+Class: http://purl.obolibrary.org/obo/HP_0002104
+Label(s): Apnea 
+- 'Apnea' SubClassOf 'Abnormality of the respiratory system'
++ 'Apnea' SubClassOf 'Abnormal pattern of respiration'
+
+Class: http://purl.obolibrary.org/obo/HP_0003756
+Label(s): Skeletal myopathy 
++ 'Skeletal myopathy' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003749
+Label(s): Pelvic girdle muscle weakness 
+- 'Pelvic girdle muscle weakness' SubClassOf 'Lower limb Muscle weakness'
+
+Class: http://purl.obolibrary.org/obo/HP_0003720
+Label(s): Generalized muscle hypertrophy 
+- 'Generalized muscle hypertrophy' SubClassOf 'Abnormality of muscle morphology'
++ 'Generalized muscle hypertrophy' SubClassOf 'Abnormality of muscle size'
+
+Class: http://purl.obolibrary.org/obo/HP_0003710
+Label(s): Exercise-induced muscle cramps 
+- 'Exercise-induced muscle cramps' SubClassOf 'muscle spasm'
++ 'Exercise-induced muscle cramps' SubClassOf 'Abnormality of muscle physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0031988
+Label(s): muscle spasm 
+- 'muscle spasm' SubClassOf 'Abnormality of muscle physiology'
++ 'muscle spasm' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006792
+Label(s): Lewy body dementia 
++ 'Lewy body dementia' SubClassOf 'inheres_in' some 'brain'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2380
+Label(s): Legg-Calvé-Perthes disease 
+- 'Legg-Calvé-Perthes disease' SubClassOf 'Osteochondrosis'
+- 'Legg-Calvé-Perthes disease' SubClassOf 'Osteochondrosis of genetic origin'
++ 'Legg-Calvé-Perthes disease' SubClassOf 'Osteonecrosis of genetic origin'
+
+Class: http://www.orpha.net/ORDO/Orphanet_70474
+Label(s): Leigh syndrome with cardiomyopathy 
+- 'Leigh syndrome with cardiomyopathy' SubClassOf 'Leigh syndrome'
++ 'Leigh syndrome with cardiomyopathy' SubClassOf 'Leigh syndrome'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006835
+Label(s): pyoderma gangrenosum 
++ 'pyoderma gangrenosum' SubClassOf 'inheres in part of' some 'zone of skin'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006852
+Label(s): metastatic 
+- 'metastatic' SubClassOf 'clinical modifier'
++ 'metastatic' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010569
+
+Class: http://purl.obolibrary.org/obo/HP_0011398
+Label(s): Central hypotonia 
++ 'Central hypotonia' SubClassOf 'Abnormality of central motor function'
++ 'Central hypotonia' SubClassOf 'Abnormal muscle tone'
+
+Class: http://purl.obolibrary.org/obo/HP_0009762
+Label(s): facial wrinkling 
++ 'facial wrinkling' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002088
+Label(s): abnormality of the lung Abnormal lung morphology 
+- 'Abnormal lung morphology' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'lung'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002086
+Label(s): Abnormality of the respiratory system 
+- 'Abnormality of the respiratory system' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'respiratory system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002080
+Label(s): Intention tremor 
+- 'Intention tremor' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006888
+Label(s): vascular malformation 
++ 'vascular malformation' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002069
+Label(s): Generalized tonic-clonic seizures 
+- 'Generalized tonic-clonic seizures' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002068
+Label(s): Neuromuscular dysphagia 
+- 'Neuromuscular dysphagia' SubClassOf 'Abnormality of esophagus physiology'
+- 'Neuromuscular dysphagia' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0009722
+Label(s): Dental enamel pits 
+- 'Dental enamel pits' SubClassOf 'Abnormality of the dentition'
++ 'Dental enamel pits' SubClassOf 'Abnormality of dental enamel'
+
+Class: http://purl.obolibrary.org/obo/HP_0002043
+Label(s): esophageal stricture 
++ 'esophageal stricture' SubClassOf 'Abnormality of esophagus morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002033
+Label(s): Poor suck 
+- 'Poor suck' SubClassOf 'behavioral abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0002031
+Label(s): Abnormality of esophagus morphology 
++ 'Abnormality of esophagus morphology' SubClassOf 'morphological abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/HP_0002007
+Label(s): Frontal bossing 
++ 'Frontal bossing' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0003690
+Label(s): Limb muscle weakness 
+- 'Limb muscle weakness' SubClassOf 'abnormality of the musculature'
++ 'Limb muscle weakness' SubClassOf 'Abnormality of muscle morphology'
++ 'Limb muscle weakness' SubClassOf 'abnormality of limbs'
++ 'Limb muscle weakness' SubClassOf 'Muscle weakness'
+
+Class: http://purl.obolibrary.org/obo/HP_0000708
+Label(s): behavioral abnormality 
+- 'behavioral abnormality' SubClassOf 'abnormality of the nervous system'
+- 'behavioral abnormality' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'behavior'))
++ 'behavioral abnormality' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002901
+Label(s): Hypocalcemia 
+- 'Hypocalcemia' EquivalentTo 'has part' some 
+('decreased concentration' and ('inheres_in' some 'blood') and ('towards' some 'calcium'))
+
+Class: http://purl.obolibrary.org/obo/HP_0008066
+Label(s): Abnormal blistering of the skin 
++ 'Abnormal blistering of the skin' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002110
+Label(s): Bronchiectasis 
+- 'Bronchiectasis' SubClassOf 'Abnormality of bronchi'
++ 'Bronchiectasis' SubClassOf 'Abnormality of the respiratory system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018859
+Label(s): Leigh disease 
+- 'Leigh disease' SubClassOf 'Mitochondrial oxidative phosphorylation disorder due to nuclear DNA anomalies'
+- 'Leigh disease' SubClassOf 'Unclassified primitive or secondary maculopathy'
+- 'Leigh disease' SubClassOf 'Syndrome with a symptomatic strabismus'
+- 'Leigh disease' SubClassOf 'Supranuclear oculomotor palsy'
+- 'Leigh disease' SubClassOf 'Mitochondrial disease with eye involvement'
+- 'Leigh disease' SubClassOf 'Neurometabolic disease'
+- 'Leigh disease' SubClassOf 'Mitochondrial disease with peripheral neuropathy'
+
+Class: http://purl.obolibrary.org/obo/HP_0011276
+Label(s): Vascular skin abnormality 
++ 'Vascular skin abnormality' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011446
+Label(s): abnormality of higher mental function 
+- 'abnormality of higher mental function' SubClassOf 'abnormality of the nervous system'
++ 'abnormality of higher mental function' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002573
+Label(s): rectal bleeding 
+- 'rectal bleeding' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'rectal bleeding' SubClassOf 'gastrointestinal hemorrhage'
++ 'rectal bleeding' SubClassOf 'diarrhea'
+
+Class: http://purl.obolibrary.org/obo/HP_0003549
+Label(s): Abnormality of connective tissue 
+- 'Abnormality of connective tissue' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'connective tissue'))
+
+Class: http://purl.obolibrary.org/obo/HP_0003547
+Label(s): Shoulder girdle muscle weakness 
+- 'Shoulder girdle muscle weakness' SubClassOf 'Abnormality of muscle physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003530
+Label(s): Glutaric acidemia 
++ 'Glutaric acidemia' SubClassOf 'Abnormality of carboxylic acid metabolism'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001923
+Label(s): varicose ulcer 
++ 'varicose ulcer' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001913
+Label(s): Purpura Fulminans 
++ 'Purpura Fulminans' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000299
+Label(s): Hyperplastic Polyp 
+- 'Hyperplastic Polyp' SubClassOf 'stomach neoplasm'
+- 'Hyperplastic Polyp' SubClassOf 'colonic neoplasm'
++ 'Hyperplastic Polyp' SubClassOf 'gastrointestinal disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000280
+Label(s): Gastrointestinal Hamartoma 
++ 'Gastrointestinal Hamartoma' SubClassOf 'digestive system neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000268
+Label(s): Gastric Adenoma 
++ 'Gastric Adenoma' SubClassOf 'stomach neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0004363
+Label(s): Abnormality of calcium homeostasis 
+- 'Abnormality of calcium homeostasis' SubClassOf 'abnormality of metabolism/homeostasis'
+- 'Abnormality of calcium homeostasis' EquivalentTo 'has part' some 
+('quality' and ('inheres_in' some 'calcium ion homeostasis') and ('has component' some 'abnormal'))
++ 'Abnormality of calcium homeostasis' SubClassOf 'Abnormality of ion homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0004386
+Label(s): gastrointestinal inflammation 
+- 'gastrointestinal inflammation' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'gastrointestinal inflammation' SubClassOf 'increased inflammatory response'
++ 'gastrointestinal inflammation' SubClassOf 'Functional abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/HP_0012736
+Label(s): Profound global developmental delay 
+- 'Profound global developmental delay' SubClassOf 'Neurodevelopmental abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0003429
+Label(s): CNS hypomyelination 
++ 'CNS hypomyelination' SubClassOf 'Abnormal myelination'
++ 'CNS hypomyelination' SubClassOf 'morphological abnormality of the central nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0012042
+Label(s): aspirin induced asthma 
++ 'aspirin induced asthma' SubClassOf 'Abnormality of the respiratory system'
+
+Class: http://www.orpha.net/ORDO/Orphanet_83629
+Label(s): Leukoencephalopathy - metaphyseal chondrodysplasia 
+- 'Leukoencephalopathy - metaphyseal chondrodysplasia' SubClassOf 'Genetic neurodegenerative disease'
++ 'Leukoencephalopathy - metaphyseal chondrodysplasia' SubClassOf 'Genetic neurodegenerative disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0012076
+Label(s): Borderline personality disorder 
+- 'Borderline personality disorder' SubClassOf 'behavioral abnormality'
++ 'Borderline personality disorder' SubClassOf 'personality disorder'
+
+Class: http://purl.obolibrary.org/obo/HP_0011098
+Label(s): Speech apraxia 
++ 'Speech apraxia' SubClassOf 'Abnormality of central motor function'
+
+Class: http://purl.obolibrary.org/obo/HP_0200042
+Label(s): Skin ulcer 
+- 'Skin ulcer' SubClassOf 'abnormality of the skin'
++ 'Skin ulcer' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011015
+Label(s): Abnormality of blood glucose concentration 
+- 'Abnormality of blood glucose concentration' EquivalentTo 'has part' some 
+('concentration of' and ('inheres_in' some 'blood') and ('has component' some 'abnormal') and ('towards' some 'glucose'))
+
+Class: http://purl.obolibrary.org/obo/HP_0100281
+Label(s): Chronic colitis 
+- 'Chronic colitis' SubClassOf 'Abnormality of the large intestine'
++ 'Chronic colitis' SubClassOf 'Inflammation of the large intestine'
+
+Class: http://purl.obolibrary.org/obo/HP_0003326
+Label(s): Myalgia 
+- 'Myalgia' SubClassOf 'Abnormality of muscle physiology'
++ 'Myalgia' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0003325
+Label(s): Limb-girdle muscle weakness 
+- 'Limb-girdle muscle weakness' SubClassOf 'abnormality of the musculature'
++ 'Limb-girdle muscle weakness' SubClassOf 'Muscle weakness'
++ 'Limb-girdle muscle weakness' SubClassOf 'abnormality of limbs'
++ 'Limb-girdle muscle weakness' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003306
+Label(s): Spinal rigidity 
+- 'Spinal rigidity' SubClassOf 'Abnormality of skeletal morphology'
+- 'Spinal rigidity' SubClassOf 'abnormality of the nervous system'
++ 'Spinal rigidity' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0004969
+Label(s): Peripheral pulmonary artery stenosis 
+- 'Peripheral pulmonary artery stenosis' SubClassOf 'Abnormality of the cardiovascular system'
++ 'Peripheral pulmonary artery stenosis' SubClassOf 'Abnormality of the vasculature'
++ 'Peripheral pulmonary artery stenosis' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0004933
+Label(s): Ascending aortic dissection 
+- 'Ascending aortic dissection' SubClassOf 'Abnormality of the vasculature'
++ 'Ascending aortic dissection' SubClassOf 'Aortic dissection'
+
+Class: http://purl.obolibrary.org/obo/HP_0002624
+Label(s): Venous abnormality 
++ 'Venous abnormality' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005600
+Label(s): abdominal aortic fatty streak 
++ 'abdominal aortic fatty streak' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'aorta'))
++ 'abdominal aortic fatty streak' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005616
+Label(s): coronary artery raised atherosclerotic lesion 
++ 'coronary artery raised atherosclerotic lesion' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005617
+Label(s): thoracic aortic fatty streak 
++ 'thoracic aortic fatty streak' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
++ 'thoracic aortic fatty streak' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'aorta'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007940
+Label(s): chronic venous insufficiency 
++ 'chronic venous insufficiency' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0003270
+Label(s): Abdominal distention 
+- 'Abdominal distention' SubClassOf 'abnormality of the abdomen morphology'
++ 'Abdominal distention' SubClassOf 'Abdominal symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0012532
+Label(s): chronic pain 
++ 'chronic pain' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0012520
+Label(s): Perivascular spaces 
+- 'Perivascular spaces' SubClassOf 'Abnormality of the cardiovascular system'
+- 'Perivascular spaces' SubClassOf 'abnormality of brain morphology'
++ 'Perivascular spaces' SubClassOf 'abnormality of the cerebral vasculature'
+
+Class: http://www.orpha.net/ORDO/Orphanet_399391
+Label(s): Osteochondrosis of genetic origin 
+- 'Osteochondrosis of genetic origin' EquivalentTo 'Osteochondrosis' and ('has modifier' some 'inherited')
+- 'Osteochondrosis of genetic origin' SubClassOf 'Osteochondrosis'
+
+Class: http://purl.obolibrary.org/obo/HP_0003212
+Label(s): Increased circulating total IgE level 
++ 'Increased circulating total IgE level' SubClassOf 'abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002998
+Label(s): skull base meningioma 
+- 'skull base meningioma' SubClassOf 'meningioma (disease)'
++ 'skull base meningioma' SubClassOf 'Meningioma'
+
+Class: http://purl.obolibrary.org/obo/HP_0012278
+Label(s): Abnormal circulating serine concentration 
+- 'Abnormal circulating serine concentration' SubClassOf 'abnormality of metabolism/homeostasis'
++ 'Abnormal circulating serine concentration' SubClassOf 'Abnormality of carboxylic acid metabolism'
+
+Class: http://purl.obolibrary.org/obo/HP_0000929
+Label(s): Abnormality of the skull 
++ 'Abnormality of the skull' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0004209
+Label(s): Clinodactyly of the 5th finger 
++ 'Clinodactyly of the 5th finger' SubClassOf 'Finger clinodactyly'
+
+Class: http://purl.obolibrary.org/obo/HP_0004840
+Label(s): Hypochromic microcytic anemia 
+- 'Hypochromic microcytic anemia' SubClassOf 'anemia'
++ 'Hypochromic microcytic anemia' SubClassOf 'Anemia of inadequate production'
+
+Class: http://purl.obolibrary.org/obo/HP_0009028
+Label(s): Generalized weakness of limb muscles 
+- 'Generalized weakness of limb muscles' SubClassOf 'Limb-girdle muscle weakness'
+- 'Generalized weakness of limb muscles' SubClassOf 'Limb muscle weakness'
++ 'Generalized weakness of limb muscles' SubClassOf 'Abnormality of muscle morphology'
++ 'Generalized weakness of limb muscles' SubClassOf 'abnormality of limbs'
+
+Class: http://purl.obolibrary.org/obo/HP_0030833
+Label(s): neck pain 
++ 'neck pain' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016642
+Label(s): meningioma (disease) 
+- 'meningioma (disease)' SubClassOf 'tumor of meninges'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007879
+Label(s): petaloid toenail 
++ 'petaloid toenail' SubClassOf 'has part' some 
+('quality' and ('inheres_in' some 'nail') and ('has component' some 'abnormal'))
+
+Class: http://purl.obolibrary.org/obo/HP_0002172
+Label(s): Postural instability 
+- 'Postural instability' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0012448
+Label(s): Delayed myelination 
++ 'Delayed myelination' SubClassOf 'Abnormal myelination'
+
+Class: http://purl.obolibrary.org/obo/HP_0012443
+Label(s): abnormality of brain morphology 
++ 'abnormality of brain morphology' SubClassOf 'morphological abnormality of the central nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0003150
+Label(s): Glutaric aciduria 
+- 'Glutaric aciduria' SubClassOf 'Abnormality of carboxylic acid metabolism'
++ 'Glutaric aciduria' SubClassOf 'Abnormality of urine homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0012438
+Label(s): Abnormal gallbladder physiology 
+- 'Abnormal gallbladder physiology' SubClassOf 'Abnormality of the abdominal organs'
++ 'Abnormal gallbladder physiology' SubClassOf 'Abnormality of the liver'
+
+Class: http://purl.obolibrary.org/obo/HP_0003065
+Label(s): Patellar hypoplasia 
+- 'Patellar hypoplasia' SubClassOf 'Lower limb undergrowth'
++ 'Patellar hypoplasia' SubClassOf 'abnormality of the lower limb'
++ 'Patellar hypoplasia' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003110
+Label(s): Abnormality of urine homeostasis 
+- 'Abnormality of urine homeostasis' EquivalentTo 'has part' some 
+('quality' and ('inheres_in' some 
+('homeostatic process' and ('part of' some 'urine'))) and ('has component' some 'abnormal'))
++ 'Abnormality of urine homeostasis' SubClassOf 'abnormality of the urinary system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0004755
+Label(s): supraventricular tachycardia 
++ 'supraventricular tachycardia' SubClassOf 'Tachycardia'
+
+Class: http://purl.obolibrary.org/obo/HP_0002979
+Label(s): Bowing of the legs 
+- 'Bowing of the legs' SubClassOf 'Abnormality of skeletal morphology'
+- 'Bowing of the legs' SubClassOf 'abnormality of limbs'
++ 'Bowing of the legs' SubClassOf 'Bowing of the long bones'
++ 'Bowing of the legs' SubClassOf 'abnormality of the lower limb'
+
+Class: http://purl.obolibrary.org/obo/HP_0100851
+Label(s): Abnormal emotion/affect behavior 
+- 'Abnormal emotion/affect behavior' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0100825
+Label(s): Cheilitis 
++ 'Cheilitis' SubClassOf 'abnormality of the mouth'
+
+Class: http://purl.obolibrary.org/obo/HP_0009130
+Label(s): Hand muscle atrophy 
+- 'Hand muscle atrophy' SubClassOf 'abnormality of the musculature'
++ 'Hand muscle atrophy' SubClassOf 'Abnormality of muscle size'
+
+Class: http://purl.obolibrary.org/obo/HP_0009124
+Label(s): Abnormality of adipose tissue 
+- 'Abnormality of adipose tissue' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'adipose tissue'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007743
+Label(s): influenza A severity measurement 
+- 'influenza A severity measurement' SubClassOf 'is_about' some 'influenza infection'
+- 'influenza A severity measurement' SubClassOf 'measurement'
++ 'influenza A severity measurement' SubClassOf 'is_about' some 'influenza'
++ 'influenza A severity measurement' SubClassOf 'respiratory disease biomarker'
++ 'influenza A severity measurement' SubClassOf 'infectious disease biomarker'
+
+Class: http://purl.obolibrary.org/obo/HP_0004796
+Label(s): gastrointestinal obstruction 
+- 'gastrointestinal obstruction' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'gastrointestinal obstruction' SubClassOf 'Functional abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/HP_0012389
+Label(s): Appendicular hypotonia 
+- 'Appendicular hypotonia' SubClassOf 'Abnormal muscle tone'
+
+Class: http://purl.obolibrary.org/obo/HP_0012378
+Label(s): fatigue 
++ 'fatigue' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0003111
+Label(s): Abnormality of ion homeostasis 
+- 'Abnormality of ion homeostasis' EquivalentTo 'has part' some 
+('concentration of' and ('has component' some 'abnormal') and ('towards' some 'monoatomic ion'))
+
+Class: http://purl.obolibrary.org/obo/HP_0003119
+Label(s): Abnormality of lipid metabolism 
+- 'Abnormality of lipid metabolism' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'lipid metabolic process'))
+
+Class: http://purl.obolibrary.org/obo/HP_0003074
+Label(s): Hyperglycemia 
+- 'Hyperglycemia' EquivalentTo 'has part' some 
+('increased concentration' and ('inheres_in' some 'blood') and ('has component' some 'pathological') and ('towards' some 'glucose'))
+
+Class: http://purl.obolibrary.org/obo/HP_0003073
+Label(s): hypoalbuminemia 
+- 'hypoalbuminemia' SubClassOf 'abnormality of blood and blood-forming tissues'
+- 'hypoalbuminemia' EquivalentTo 'has part' some 
+('decreased concentration' and ('inheres_in' some 
+('serum albumin' and ('part of' some 'blood'))) and ('has component' some 'abnormal'))
+- 'hypoalbuminemia' SubClassOf 'Abnormality of nitrogen compound homeostasis'
++ 'hypoalbuminemia' SubClassOf 'abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0003072
+Label(s): Hypercalcemia 
+- 'Hypercalcemia' EquivalentTo 'has part' some 
+('increased concentration' and ('inheres_in' some 'blood') and ('towards' some 'calcium'))
+
+Class: http://purl.obolibrary.org/obo/HP_0030914
+Label(s): abnormal peristalsis 
+- 'abnormal peristalsis' SubClassOf 'Functional abnormality of the gastrointestinal tract'
++ 'abnormal peristalsis' SubClassOf 'Gastrointestinal dysmotility'
+
+Class: http://purl.obolibrary.org/obo/HP_0003031
+Label(s): Ulnar bowing 
+- 'Ulnar bowing' SubClassOf 'Abnormality of skeletal morphology'
++ 'Ulnar bowing' SubClassOf 'Bowing of the long bones'
+
+Class: http://purl.obolibrary.org/obo/HP_0003179
+Label(s): Protrusio acetabuli 
++ 'Protrusio acetabuli' SubClassOf 'abnormality of the lower limb'
+
+Class: http://purl.obolibrary.org/obo/HP_0012304
+Label(s): Hypoplastic aortic arch 
+- 'Hypoplastic aortic arch' SubClassOf 'Abnormality of the vasculature'
++ 'Hypoplastic aortic arch' SubClassOf 'abnormality of the aorta'
+
+Class: http://www.orpha.net/ORDO/Orphanet_168448
+Label(s): Spondyloepimetaphyseal dysplasia, Bieganski type 
++ 'Spondyloepimetaphyseal dysplasia, Bieganski type' SubClassOf 'Genetic neurodegenerative disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0004696
+Label(s): Talipes cavus equinovarus 
+- 'Talipes cavus equinovarus' SubClassOf 'Talipes'
+
+Class: http://purl.obolibrary.org/obo/HP_0012470
+Label(s): Setting-sun eye phenomenon 
+- 'Setting-sun eye phenomenon' SubClassOf 'behavioral abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0100763
+Label(s): abnormality of the lymphatic system 
++ 'abnormality of the lymphatic system' SubClassOf 'Abnormality of the vasculature'
+
+Class: http://purl.obolibrary.org/obo/HP_0002442
+Label(s): Dyscalculia 
+- 'Dyscalculia' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0100755
+Label(s): Abnormality of salivation 
+- 'Abnormality of salivation' SubClassOf 'abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0004605
+Label(s): Absent vertebral body mineralization 
+- 'Absent vertebral body mineralization' SubClassOf 'Abnormality of skeletal morphology'
++ 'Absent vertebral body mineralization' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0100749
+Label(s): chest pain 
++ 'chest pain' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0100727
+Label(s): Histiocytosis 
+- 'Histiocytosis' SubClassOf 'abnormality of blood and blood-forming tissues'
++ 'Histiocytosis' SubClassOf 'abnormal leukocyte morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0009053
+Label(s): Distal lower limb Muscle weakness 
++ 'Distal lower limb Muscle weakness' SubClassOf 'abnormality of the lower limb'
++ 'Distal lower limb Muscle weakness' SubClassOf 'Lower limb Muscle weakness'
+
+Class: http://purl.obolibrary.org/obo/HP_0009049
+Label(s): Peroneal muscle atrophy 
+- 'Peroneal muscle atrophy' SubClassOf 'abnormality of limbs'
++ 'Peroneal muscle atrophy' SubClassOf 'abnormality of the lower limb'
+
+Class: http://purl.obolibrary.org/obo/HP_0100704
+Label(s): Cerebral visual impairment 
+- 'Cerebral visual impairment' SubClassOf 'Abnormality of vision'
+
+Class: http://purl.obolibrary.org/obo/HP_0009027
+Label(s): Foot dorsiflexor weakness 
+- 'Foot dorsiflexor weakness' SubClassOf 'abnormality of the foot'
++ 'Foot dorsiflexor weakness' SubClassOf 'Limb muscle weakness'
+
+Class: http://purl.obolibrary.org/obo/HP_0009020
+Label(s): Exercise-induced muscle fatigue 
+- 'Exercise-induced muscle fatigue' SubClassOf 'Muscle weakness'
++ 'Exercise-induced muscle fatigue' SubClassOf 'Abnormality of muscle physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0012262
+Label(s): Abnormal ciliary motility 
+- 'Abnormal ciliary motility' SubClassOf 'abnormality of metabolism/homeostasis'
++ 'Abnormal ciliary motility' SubClassOf 'Abnormality of the respiratory system'
+
+Class: http://purl.obolibrary.org/obo/HP_0030838
+Label(s): hip pain 
++ 'hip pain' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0030834
+Label(s): shoulder pain 
++ 'shoulder pain' SubClassOf 'Constitutional symptom'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001369
+Label(s): Meningomyelocele 
++ 'Meningomyelocele' SubClassOf 'central nervous system disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0012234
+Label(s): agranulocytosis 
+- 'agranulocytosis' SubClassOf 'abnormality of the immune system'
+- 'agranulocytosis' EquivalentTo 'has part' some 
+('decreased concentration' and ('inheres_in' some 'granulocyte') and ('has component' some 'abnormal'))
++ 'agranulocytosis' SubClassOf 'abnormal leukocyte morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0012514
+Label(s): lower limb pain 
+- 'lower limb pain' SubClassOf 'pain'
++ 'lower limb pain' SubClassOf 'Limb pain'
+
+Class: http://purl.obolibrary.org/obo/HP_0012211
+Label(s): abnormal renal physiology 
++ 'abnormal renal physiology' SubClassOf 'abnormality of the kidney'
+
+Class: http://purl.obolibrary.org/obo/HP_0003274
+Label(s): Hypoplastic acetabulae 
+- 'Hypoplastic acetabulae' SubClassOf 'Lower limb undergrowth'
++ 'Hypoplastic acetabulae' SubClassOf 'abnormality of the lower limb'
++ 'Hypoplastic acetabulae' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0012424
+Label(s): chorioretinitis 
+- 'chorioretinitis' SubClassOf 'Abnormality of the eye'
++ 'chorioretinitis' SubClassOf 'Abnormal choroid morphology'
++ 'chorioretinitis' SubClassOf 'Abnormal retinal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0012207
+Label(s): Reduced sperm motility 
+- 'Reduced sperm motility' SubClassOf 'abnormality of male internal genitalia'
++ 'Reduced sperm motility' SubClassOf 'abnormality of the genital system'
+
+Class: http://purl.obolibrary.org/obo/HP_0004443
+Label(s): Lambdoidal craniosynostosis 
+- 'Lambdoidal craniosynostosis' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008622
+Label(s): female genital tract polyp 
+- 'female genital tract polyp' SubClassOf 'urogenital neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0000758
+Label(s): Impaired use of nonverbal behaviors 
+- 'Impaired use of nonverbal behaviors' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003108
+Label(s): Hyperglycinuria 
++ 'Hyperglycinuria' SubClassOf 'Abnormality of urine homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0004552
+Label(s): Scarring alopecia of scalp 
++ 'Scarring alopecia of scalp' SubClassOf 'Alopecia of scalp'
++ 'Scarring alopecia of scalp' SubClassOf 'Abnormality of skin morphology'
++ 'Scarring alopecia of scalp' SubClassOf 'Abnormality of connective tissue'
+
+Class: http://purl.obolibrary.org/obo/HP_0100698
+Label(s): Subcutaneous neurofibromas 
++ 'Subcutaneous neurofibromas' SubClassOf 'abnormality of the nervous system'
++ 'Subcutaneous neurofibromas' SubClassOf 'abnormality of the skin'
+
+Class: http://purl.obolibrary.org/obo/HP_0004532
+Label(s): Sacral hypertrichosis 
+- 'Sacral hypertrichosis' SubClassOf 'abnormality of the skin'
++ 'Sacral hypertrichosis' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0100659
+Label(s): abnormality of the cerebral vasculature 
++ 'abnormality of the cerebral vasculature' SubClassOf 'abnormality of brain morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000775
+Label(s): Abnormality of the diaphragm 
+- 'Abnormality of the diaphragm' SubClassOf 'abnormality of the musculature'
++ 'Abnormality of the diaphragm' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0100633
+Label(s): Esophagitis 
++ 'Esophagitis' SubClassOf 'Abnormality of esophagus morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000786
+Label(s): Primary amenorrhea 
++ 'Primary amenorrhea' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008627
+Label(s): ureter cancer 
+- 'ureter cancer' SubClassOf 'ureter neoplasm'
++ 'ureter cancer' SubClassOf 'ureteral neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0100608
+Label(s): metrorrhagia 
++ 'metrorrhagia' SubClassOf 'abnormality of female internal genitalia'
+
+Class: http://purl.obolibrary.org/obo/HP_0030775
+Label(s): Modic type vertebral endplate changes 
+- 'Modic type vertebral endplate changes' SubClassOf 'abnormality of the skeletal system'
++ 'Modic type vertebral endplate changes' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0012194
+Label(s): Episodic hemiplegia 
+- 'Episodic hemiplegia' SubClassOf 'abnormality of metabolism/homeostasis'
+- 'Episodic hemiplegia' SubClassOf 'abnormality of brain morphology'
+- 'Episodic hemiplegia' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003319
+Label(s): Abnormality of the cervical spine 
+- 'Abnormality of the cervical spine' SubClassOf 'Abnormality of the neck'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0045056
+Label(s): grade II meningioma 
+- 'grade II meningioma' SubClassOf 'meningioma (disease)'
+- 'grade II meningioma' EquivalentTo 'meningioma (disease)' and ('has modifier' some 'tumor grade 2, general grading system')
++ 'grade II meningioma' SubClassOf 'Meningioma'
++ 'grade II meningioma' EquivalentTo 'Meningioma' and ('has modifier' some 'tumor grade 2, general grading system')
+
+Class: http://purl.obolibrary.org/obo/HP_0002509
+Label(s): Limb hypertonia 
+- 'Limb hypertonia' SubClassOf 'Abnormality of nervous system physiology'
+- 'Limb hypertonia' SubClassOf 'Abnormal muscle tone'
++ 'Limb hypertonia' SubClassOf 'Abnormality of muscle morphology'
++ 'Limb hypertonia' SubClassOf 'Hypertonia'
++ 'Limb hypertonia' SubClassOf 'abnormality of limbs'
+
+Class: http://purl.obolibrary.org/obo/HP_0012664
+Label(s): Reduced ejection fraction 
+- 'Reduced ejection fraction' SubClassOf 'Abnormality of cardiovascular system morphology'
++ 'Reduced ejection fraction' SubClassOf 'Abnormal cardiovascular system physiology'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2495
+Label(s): Meningioma 
+- 'Meningioma' SubClassOf 'endocrine neoplasm'
+- 'Meningioma' SubClassOf 'meningeal neoplasm'
+- 'Meningioma' SubClassOf 'has_disease_location' some 'endocrine system'
++ 'Meningioma' SubClassOf 'meningeal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0100595
+Label(s): Camptocormia 
+- 'Camptocormia' SubClassOf 'Abnormality of skeletal morphology'
++ 'Camptocormia' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0011009
+Label(s): acute 
+- 'acute' SubClassOf 'clinical modifier'
++ 'acute' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010569
+
+Class: http://purl.obolibrary.org/obo/HP_0004448
+Label(s): Fulminant hepatic failure 
+- 'Fulminant hepatic failure' SubClassOf 'hepatic failure'
++ 'Fulminant hepatic failure' SubClassOf 'Acute hepatic failure'
+
+Class: http://purl.obolibrary.org/obo/HP_0011010
+Label(s): chronic 
+- 'chronic' SubClassOf 'clinical modifier'
++ 'chronic' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010569
+
+Class: http://purl.obolibrary.org/obo/HP_0011014
+Label(s): Abnormal glucose homeostasis 
+- 'Abnormal glucose homeostasis' SubClassOf 'abnormality of carbohydrate metabolism/homeostasis'
++ 'Abnormal glucose homeostasis' SubClassOf 'abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0100585
+Label(s): Telangiectasia of the skin 
+- 'Telangiectasia of the skin' SubClassOf 'Abnormality of skin morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011024
+Label(s): abnormality of the gastrointestinal tract 
+- 'abnormality of the gastrointestinal tract' SubClassOf 'Abnormality of the abdominal organs'
++ 'abnormality of the gastrointestinal tract' SubClassOf 'Abnormality of the digestive system'
+
+Class: http://purl.obolibrary.org/obo/HP_0011031
+Label(s): abnormality of iron homeostasis 
+- 'abnormality of iron homeostasis' EquivalentTo 'has part' some 
+('quality' and ('inheres_in' some 'iron ion homeostasis') and ('has component' some 'abnormal'))
+
+Class: http://purl.obolibrary.org/obo/HP_0011808
+Label(s): Decreased patellar reflex 
+- 'Decreased patellar reflex' SubClassOf 'abnormality of limbs'
+- 'Decreased patellar reflex' SubClassOf 'Reduced tendon reflexes'
++ 'Decreased patellar reflex' SubClassOf 'Hyporeflexia'
++ 'Decreased patellar reflex' SubClassOf 'abnormality of the lower limb'
+
+Class: http://purl.obolibrary.org/obo/HP_0002540
+Label(s): Inability to walk 
++ 'Inability to walk' SubClassOf 'gait disturbance'
+
+Class: http://purl.obolibrary.org/obo/HP_0004401
+Label(s): Meconium ileus 
++ 'Meconium ileus' SubClassOf 'Abnormality of the intestine'
++ 'Meconium ileus' SubClassOf 'Gastrointestinal dysmotility'
+
+Class: http://purl.obolibrary.org/obo/HP_0100543
+Label(s): cognitive impairment 
+- 'cognitive impairment' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cognition'))
+
+Class: http://purl.obolibrary.org/obo/HP_0100537
+Label(s): Fasciitis 
+- 'Fasciitis' EquivalentTo 'has part' some 
+('having extra processual parts' and ('inheres_in' some 'connective tissue') and ('towards' some 'inflammation (MPATH)'))
++ 'Fasciitis' SubClassOf 'Abnormality of connective tissue'
++ 'Fasciitis' SubClassOf 'increased inflammatory response'
+
+Class: http://purl.obolibrary.org/obo/HP_0011079
+Label(s): impacted tooth 
+- 'impacted tooth' SubClassOf 'Abnormality of the head'
++ 'impacted tooth' SubClassOf 'Abnormality of the dentition'
+
+Class: http://purl.obolibrary.org/obo/HP_0002943
+Label(s): Thoracic scoliosis 
+- 'Thoracic scoliosis' SubClassOf 'Abnormality of skeletal morphology'
++ 'Thoracic scoliosis' SubClassOf 'Abnormality of the vertebral column'
++ 'Thoracic scoliosis' SubClassOf 'abnormality of the thorax'
+
+Class: http://purl.obolibrary.org/obo/HP_0002944
+Label(s): Thoracolumbar scoliosis 
++ 'Thoracolumbar scoliosis' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0011736
+Label(s): Primary hyperaldosteronism 
+- 'Primary hyperaldosteronism' SubClassOf 'abnormality of metabolism/homeostasis'
+- 'Primary hyperaldosteronism' SubClassOf 'Abnormal circulating hormone level'
++ 'Primary hyperaldosteronism' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0003401
+Label(s): Paresthesia 
+- 'Paresthesia' SubClassOf 'abnormality of the nervous system'
++ 'Paresthesia' SubClassOf 'Sensory neuropathy'
+
+Class: http://purl.obolibrary.org/obo/HP_0003418
+Label(s): back pain 
++ 'back pain' SubClassOf 'Constitutional symptom'
++ 'back pain' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0003458
+Label(s): EMG: myopathic abnormalities 
++ 'EMG: myopathic abnormalities' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0012115
+Label(s): hepatitis 
+- 'hepatitis' EquivalentTo 'has part' some 
+('increased rate' and ('inheres_in' some 
+('inflammatory response' and ('part of' some 'liver'))) and ('has component' some 'abnormal'))
+- 'hepatitis' SubClassOf 'Abnormality of the endocrine system'
++ 'hepatitis' SubClassOf 'increased inflammatory response'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011789
+Label(s): familial meningioma 
+- 'familial meningioma' EquivalentTo 'meningioma (disease)' and ('has modifier' some 'inherited')
+- 'familial meningioma' SubClassOf 'meningioma (disease)'
++ 'familial meningioma' EquivalentTo 'Meningioma' and ('has modifier' some 'inherited')
++ 'familial meningioma' SubClassOf 'Meningioma'
+
+Class: http://purl.obolibrary.org/obo/HP_0004378
+Label(s): abnormality of the anus 
+- 'abnormality of the anus' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'abnormality of the anus' SubClassOf 'morphological abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/HP_0004371
+Label(s): abnormality of glycosaminoglycan metabolism 
+- 'abnormality of glycosaminoglycan metabolism' SubClassOf 'abnormality of carbohydrate metabolism/homeostasis'
++ 'abnormality of glycosaminoglycan metabolism' SubClassOf 'abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0004367
+Label(s): abnormality of glycoprotein metabolism 
+- 'abnormality of glycoprotein metabolism' SubClassOf 'abnormality of metabolism/homeostasis'
++ 'abnormality of glycoprotein metabolism' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0011106
+Label(s): Hypovolemia hypovolemia 
+- 'Hypovolemia' SubClassOf 'abnormality of blood and blood-forming tissues'
+
+Class: http://purl.obolibrary.org/obo/HP_0011107
+Label(s): Recurrent aphthous stomatitis 
++ 'Recurrent aphthous stomatitis' SubClassOf 'increased inflammatory response'
+
+Class: http://purl.obolibrary.org/obo/HP_0011110
+Label(s): tonsillitis 
+- 'tonsillitis' SubClassOf 'Abnormality of the digestive system'
+- 'tonsillitis' SubClassOf 'Abnormality of the head'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002436
+Label(s): nose disease 
++ 'nose disease' SubClassOf 'otorhinolaryngologic disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0004326
+Label(s): cachexia 
+- 'cachexia' SubClassOf 'body weight loss'
+
+Class: http://purl.obolibrary.org/obo/HP_0025031
+Label(s): Abnormality of the digestive system 
+- 'Abnormality of the digestive system' EquivalentTo 'has part' some 
+('quality' and ('inheres_in' some 'digestive system') and ('has component' some 'abnormal'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007328
+Label(s): influenza 
+- 'influenza' SubClassOf 'has phenotype' some 'influenza infection'
+
+Class: http://purl.obolibrary.org/obo/HP_0000817
+Label(s): Poor eye contact 
+- 'Poor eye contact' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000902
+Label(s): Rib fusion 
+- 'Rib fusion' SubClassOf 'Abnormality of skeletal morphology'
++ 'Rib fusion' SubClassOf 'abnormality of the thorax'
+
+Class: http://purl.obolibrary.org/obo/HP_0012823
+Label(s): clinical modifier 
+- 'clinical modifier' SubClassOf 'quality'
++ 'clinical modifier' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008917
+Label(s): SELEX 
+- 'SELEX' SubClassOf 'DNA assay'
+- 'SELEX' SubClassOf 'realizes' some 
 ('analyte role' and ('role_of' some 'DNA'))
-- 'scDNase-seq' SubClassOf 'DNA assay'
----
-Class changed: IRI http://www.ebi.ac.uk/efo/EFO_0008717
-label: DNaseI-Seq
-+ 'DNaseI-Seq' SubClassOf http://www.w3.org/2002/07/owl#Thing
-- 'DNaseI-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
-- 'DNaseI-Seq' SubClassOf 'DNA assay'
----
-Class changed: IRI http://www.ebi.ac.uk/efo/EFO_0008716
-label: DNase-Seq
-+ 'DNase-Seq' SubClassOf http://www.w3.org/2002/07/owl#Thing
-- 'DNase-Seq' SubClassOf 'DNA assay'
-- 'DNase-Seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'DNA'))
----
-Class changed: IRI http://www.ebi.ac.uk/efo/EFO_0002687
-label: ischemia reperfusion injury
-- 'ischemia reperfusion injury' SubClassOf 'has_disease_location' some 'myocardium'
-- 'ischemia reperfusion injury' SubClassOf 'cardiomyopathy'
++ 'SELEX' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0004299
+Label(s): Hernia of the abdominal wall 
++ 'Hernia of the abdominal wall' SubClassOf 'Abnormality of the digestive system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002353
+Label(s): glottis neoplasm 
+- 'glottis neoplasm' SubClassOf 'laryngeal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0002063
+Label(s): Rigidity 
+- 'Rigidity' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011203
+Label(s): EEG with abnormally slow frequencies 
+- 'EEG with abnormally slow frequencies' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002637
+Label(s): Cerebral ischemia 
++ 'Cerebral ischemia' SubClassOf 'abnormality of the cerebral vasculature'
++ 'Cerebral ischemia' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0100309
+Label(s): subdural hemorrhage 
++ 'subdural hemorrhage' SubClassOf 'Abnormal bleeding'
++ 'subdural hemorrhage' SubClassOf 'Abnormality of blood circulation'
++ 'subdural hemorrhage' SubClassOf 'abnormality of the cerebral vasculature'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024292
+Label(s): gastrointestinal polyp 
+- 'gastrointestinal polyp' SubClassOf 'digestive system neoplasm'
++ 'gastrointestinal polyp' SubClassOf 'digestive system disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0000753
+Label(s): Autism with high cognitive abilities 
+- 'Autism with high cognitive abilities' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://www.orpha.net/ORDO/Orphanet_228215
+Label(s): Genetic dermis elastic tissue disorder 
++ 'Genetic dermis elastic tissue disorder' SubClassOf 'genetic skin disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0002015
+Label(s): Dysphagia 
+- 'Dysphagia' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'Dysphagia' SubClassOf 'Abnormality of nervous system physiology'
++ 'Dysphagia' SubClassOf 'Abnormality of esophagus physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002027
+Label(s): abdominal pain 
+- 'abdominal pain' EquivalentTo 'pain in abdomen'
++ 'abdominal pain' SubClassOf 'Abdominal symptom'
++ 'abdominal pain' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0002035
+Label(s): rectal prolapse 
+- 'rectal prolapse' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'rectal prolapse' SubClassOf 'abnormality of the rectum'
+
+Class: http://purl.obolibrary.org/obo/HP_0002036
+Label(s): hiatus hernia Hiatus hernia 
+- 'Hiatus hernia' SubClassOf 'Abnormality of the digestive system'
++ 'Hiatus hernia' SubClassOf 'morphological abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/HP_0009737
+Label(s): Lisch nodules 
++ 'Lisch nodules' SubClassOf 'abnormality of the face'
+
+Class: http://purl.obolibrary.org/obo/HP_0011343
+Label(s): Moderate global developmental delay 
+- 'Moderate global developmental delay' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0100256
+Label(s): senile plaques 
+- 'senile plaques' SubClassOf 'abnormality of the nervous system'
++ 'senile plaques' SubClassOf 'morphological abnormality of the central nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0100249
+Label(s): calcification of muscles 
+- 'calcification of muscles' SubClassOf 'abnormality of the musculature'
++ 'calcification of muscles' SubClassOf 'abnormality of the skeletal system'
++ 'calcification of muscles' SubClassOf 'Abnormality of muscle morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011368
+Label(s): epidermal thickening 
+- 'epidermal thickening' SubClassOf 'abnormality of the skin'
++ 'epidermal thickening' SubClassOf 'Thickened skin'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007190
+Label(s): campylobacteriosis 
+- 'campylobacteriosis' SubClassOf 'disease has feature' some 'dysentery'
+- 'campylobacteriosis' SubClassOf 'gastrointestinal disease'
++ 'campylobacteriosis' SubClassOf 'digestive system infectious disease'
++ 'campylobacteriosis' SubClassOf 'gastroenteritis'
+
+Class: http://purl.obolibrary.org/obo/HP_0005181
+Label(s): Premature coronary artery atherosclerosis 
++ 'Premature coronary artery atherosclerosis' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0008158
+Label(s): Hyperapobetalipoproteinemia 
+- 'Hyperapobetalipoproteinemia' SubClassOf 'abnormality of metabolism/homeostasis'
++ 'Hyperapobetalipoproteinemia' SubClassOf 'Abnormality of lipid metabolism'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008277
+Label(s): stomach polyp 
+- 'stomach polyp' SubClassOf 'stomach neoplasm'
++ 'stomach polyp' SubClassOf 'stomach disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0060766
+Label(s): anal polyp 
+- 'anal polyp' SubClassOf 'anal neoplasm'
++ 'anal polyp' SubClassOf 'anus disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0005775
+Label(s): Multiple skeletal anomalies 
+- 'Multiple skeletal anomalies' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001064
+Label(s): Down syndrome 
+- 'Down syndrome' SubClassOf 'syndromic intellectual disability'
+- 'Down syndrome' SubClassOf 'congenital nervous system disorder'
+- 'Down syndrome' SubClassOf 'Rare genetic neurological disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004859
+Label(s): abdominal aortic artery calcification 
++ 'abdominal aortic artery calcification' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0009816
+Label(s): Lower limb undergrowth 
++ 'Lower limb undergrowth' SubClassOf 'abnormality of the lower limb'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0002687
+Label(s): ischemia reperfusion injury 
+- 'ischemia reperfusion injury' SubClassOf 'cardiovascular disease'
++ 'ischemia reperfusion injury' SubClassOf 'injury'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002134
+Label(s): physiological sexual disorder 
+- 'physiological sexual disorder' SubClassOf 'sexual disorder'
++ 'physiological sexual disorder' SubClassOf 'reproductive system disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0011442
+Label(s): Abnormality of central motor function 
+- 'Abnormality of central motor function' SubClassOf 'abnormality of the nervous system'
++ 'Abnormality of central motor function' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002747
+Label(s): Respiratory insufficiency due to muscle weakness 
++ 'Respiratory insufficiency due to muscle weakness' SubClassOf 'Respiratory insufficiency'
+
+Class: http://purl.obolibrary.org/obo/HP_0002938
+Label(s): Lumbar hyperlordosis 
+- 'Lumbar hyperlordosis' SubClassOf 'Abnormality of skeletal morphology'
++ 'Lumbar hyperlordosis' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0002608
+Label(s): AIDS dementia 
++ 'AIDS dementia' SubClassOf 'inheres_in' some 'brain'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007066
+Label(s): chronic ulcer of skin 
++ 'chronic ulcer of skin' SubClassOf 'inheres in part of' some 'zone of skin'
+
+Class: http://purl.obolibrary.org/obo/HP_0005613
+Label(s): Aplasia/hypoplasia of the femur 
+- 'Aplasia/hypoplasia of the femur' SubClassOf 'Abnormality of the cerebral white matter'
++ 'Aplasia/hypoplasia of the femur' SubClassOf 'abnormality of the lower limb'
+
+Class: http://purl.obolibrary.org/obo/HP_0002987
+Label(s): Elbow flexion contracture 
++ 'Elbow flexion contracture' SubClassOf 'Limb joint contracture'
++ 'Elbow flexion contracture' SubClassOf 'Abnormality of upper limb joint'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010274
+Label(s): thoracic aortic artery calcification 
++ 'thoracic aortic artery calcification' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010247
+Label(s): incident 
+- 'incident' SubClassOf 'clinical modifier'
++ 'incident' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010569
+
+Class: http://purl.obolibrary.org/obo/HP_0002208
+Label(s): Coarse hair 
+- 'Coarse hair' SubClassOf 'abnormality of the skin'
++ 'Coarse hair' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0031844
+Label(s): Euphoria 
+- 'Euphoria' SubClassOf 'behavioral abnormality'
++ 'Euphoria' SubClassOf 'Abnormal emotion/affect behavior'
+
+Class: http://www.orpha.net/ORDO/Orphanet_363314
+Label(s): Genetic intestinal polyposis 
+- 'Genetic intestinal polyposis' SubClassOf 'Genetic digestive tract tumor'
+- 'Genetic intestinal polyposis' SubClassOf 'intestinal neoplasm'
++ 'Genetic intestinal polyposis' SubClassOf 'has modifier' some 'rare'
++ 'Genetic intestinal polyposis' SubClassOf 'intestinal disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0002242
+Label(s): Abnormality of the intestine 
+- 'Abnormality of the intestine' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'intestine'))
+- 'Abnormality of the intestine' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'Abnormality of the intestine' SubClassOf 'morphological abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/HP_0002243
+Label(s): Protein-losing enteropathy 
++ 'Protein-losing enteropathy' SubClassOf 'Abnormality of the intestine'
+
+Class: http://purl.obolibrary.org/obo/HP_0004482
+Label(s): Relative macrocephaly 
+- 'Relative macrocephaly' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002290
+Label(s): Poliosis 
+- 'Poliosis' SubClassOf 'Hypopigmentation of the skin'
++ 'Poliosis' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0011565
+Label(s): Common atrium 
+- 'Common atrium' SubClassOf 'Abnormality of the cardiovascular system'
++ 'Common atrium' SubClassOf 'Abnormal heart morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0100033
+Label(s): Tics 
+- 'Tics' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002108
+Label(s): spontaneous pneumothorax 
+- 'spontaneous pneumothorax' SubClassOf 'Abnormality of the respiratory system'
++ 'spontaneous pneumothorax' SubClassOf 'pneumothorax'
+
+Class: http://purl.obolibrary.org/obo/HP_0002109
+Label(s): Abnormality of bronchi 
+- 'Abnormality of bronchi' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'bronchus'))
+- 'Abnormality of bronchi' SubClassOf 'Abnormality of the respiratory system'
++ 'Abnormality of bronchi' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0100023
+Label(s): Recurrent hand flapping 
+- 'Recurrent hand flapping' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0100022
+Label(s): abnormality of movement 
+- 'abnormality of movement' SubClassOf 'behavioral abnormality'
++ 'abnormality of movement' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000713
+Label(s): Agitation 
+- 'Agitation' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000091
+Label(s): Appendix Hyperplastic Polyp 
+- 'Appendix Hyperplastic Polyp' SubClassOf 'appendiceal neoplasm'
++ 'Appendix Hyperplastic Polyp' SubClassOf 'disorder of appendix'
+
+Class: http://purl.obolibrary.org/obo/HP_0000725
+Label(s): Psychotic episodes 
+- 'Psychotic episodes' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0005532
+Label(s): Macrocytic dyserythropoietic anemia 
+- 'Macrocytic dyserythropoietic anemia' SubClassOf 'anemia'
++ 'Macrocytic dyserythropoietic anemia' SubClassOf 'Anemia of inadequate production'
+
+Class: http://purl.obolibrary.org/obo/HP_0030190
+Label(s): Oral motor hypotonia 
+- 'Oral motor hypotonia' SubClassOf 'Abnormal muscle tone'
+
+Class: http://purl.obolibrary.org/obo/HP_0011007
+Label(s): age of onset 
+- 'age of onset' SubClassOf 'clinical temporal measurement'
++ 'age of onset' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0008388
+Label(s): Abnormality of the toenails 
+- 'Abnormality of the toenails' SubClassOf 'abnormality of the integument'
++ 'Abnormality of the toenails' SubClassOf 'Abnormality of the nail'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000556
+Label(s): ischemia 
++ 'ischemia' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009478
+Label(s): vocal cord polyp 
+- 'vocal cord polyp' SubClassOf 'glottis neoplasm'
++ 'vocal cord polyp' SubClassOf 'laryngeal disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008577
+Label(s): Juvenile Osteochondrosis 
+- 'Juvenile Osteochondrosis' SubClassOf 'Osteochondrosis'
++ 'Juvenile Osteochondrosis' SubClassOf 'bone disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008576
+Label(s): Spinal Osteochondrosis 
+- 'Spinal Osteochondrosis' SubClassOf 'Osteochondrosis'
++ 'Spinal Osteochondrosis' SubClassOf 'bone disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0030114
+Label(s): Absent muscle fiber dysferlin 
+- 'Absent muscle fiber dysferlin' SubClassOf 'abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0002808
+Label(s): Kyphosis 
+- 'Kyphosis' SubClassOf 'Abnormality of skeletal morphology'
++ 'Kyphosis' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0002317
+Label(s): Unsteady gait 
+- 'Unsteady gait' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009678
+Label(s): paralytic strabismus 
+- 'paralytic strabismus' SubClassOf 'strabismus'
+
+Class: http://purl.obolibrary.org/obo/HP_0025328
+Label(s): antepartum hemorrhage 
++ 'antepartum hemorrhage' SubClassOf 'Abnormal bleeding'
++ 'antepartum hemorrhage' SubClassOf 'Abnormality of blood circulation'
+
+Class: http://purl.obolibrary.org/obo/HP_0002162
+Label(s): Low posterior hairline 
+- 'Low posterior hairline' SubClassOf 'Abnormal digit morphology'
++ 'Low posterior hairline' SubClassOf 'Abnormality of the neck'
++ 'Low posterior hairline' SubClassOf 'Abnormality of the head'
+
+Class: http://purl.obolibrary.org/obo/HP_0002378
+Label(s): Hand tremor 
+- 'Hand tremor' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002395
+Label(s): Lower limb hyperreflexia 
+- 'Lower limb hyperreflexia' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011659
+Label(s): Tetralogy of Fallot with absent pulmonary valve 
+- 'Tetralogy of Fallot with absent pulmonary valve' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0005484
+Label(s): Postnatal microcephaly 
+- 'Postnatal microcephaly' SubClassOf 'growth abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0005469
+Label(s): Flat occiput 
+- 'Flat occiput' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0005465
+Label(s): Facial hyperostosis 
+- 'Facial hyperostosis' SubClassOf 'Abnormality of the skull'
+- 'Facial hyperostosis' SubClassOf 'Abnormality of skeletal morphology'
++ 'Facial hyperostosis' SubClassOf 'abnormality of the face'
++ 'Facial hyperostosis' SubClassOf 'Abnormality of facial skeleton'
+
+Class: http://purl.obolibrary.org/obo/HP_0004296
+Label(s): Abnormality of gastrointestinal vasculature 
+- 'Abnormality of gastrointestinal vasculature' SubClassOf 'abnormality of the gastrointestinal tract'
++ 'Abnormality of gastrointestinal vasculature' SubClassOf 'morphological abnormality of the gastrointestinal tract'
++ 'Abnormality of gastrointestinal vasculature' SubClassOf 'Abnormality of the vasculature'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010059
+Label(s): cerebral microbleeds 
++ 'cerebral microbleeds' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0031678
+Label(s): atherosclerotic lesion 
++ 'atherosclerotic lesion' SubClassOf 'Abnormality of cardiovascular system morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000999
+Label(s): pyoderma 
++ 'pyoderma' SubClassOf 'inflammatory abnormality of the skin'
+
+Class: http://purl.obolibrary.org/obo/HP_0001270
+Label(s): Motor delay 
++ 'Motor delay' SubClassOf 'Neurodevelopmental abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0000975
+Label(s): hyperhidrosis 
+- 'hyperhidrosis' SubClassOf 'phenotype'
++ 'hyperhidrosis' SubClassOf 'abnormality of the integument'
+
+Class: http://purl.obolibrary.org/obo/HP_0000960
+Label(s): Sacral dimple 
+- 'Sacral dimple' SubClassOf 'Abnormality of skeletal morphology'
++ 'Sacral dimple' SubClassOf 'Abnormality of the vertebral column'
+
+Class: http://purl.obolibrary.org/obo/HP_0000954
+Label(s): Single transverse palmar crease 
++ 'Single transverse palmar crease' SubClassOf 'Abnormality of skin morphology'
++ 'Single transverse palmar crease' SubClassOf 'Abnormality of the upper limb'
+
+Class: http://purl.obolibrary.org/obo/HP_0002465
+Label(s): Poor speech 
++ 'Poor speech' SubClassOf 'Neurological speech impairment'
+
+Class: http://purl.obolibrary.org/obo/HP_0000938
+Label(s): osteopenia 
+- 'osteopenia' SubClassOf 'abnormality of the skeletal system'
++ 'osteopenia' SubClassOf 'Reduced bone mineral density'
+
+Class: http://purl.obolibrary.org/obo/HP_0000932
+Label(s): Abnormality of the posterior cranial fossa 
+- 'Abnormality of the posterior cranial fossa' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000921
+Label(s): Missing ribs 
+- 'Missing ribs' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000184
+Label(s): Colon Inflammatory Polyp 
++ 'Colon Inflammatory Polyp' SubClassOf 'colonic neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0030766
+Label(s): ear pain 
++ 'ear pain' SubClassOf 'Abnormality of the ear'
++ 'ear pain' SubClassOf 'Constitutional symptom'
+
+Class: http://purl.obolibrary.org/obo/HP_0008513
+Label(s): Bilateral conductive hearing impairment 
++ 'Bilateral conductive hearing impairment' SubClassOf 'abnormal ear morphology'
++ 'Bilateral conductive hearing impairment' SubClassOf 'Hearing abnormality'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003432
+Label(s): strabismus 
+- 'strabismus' SubClassOf 'ocular motility disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0007559
+Label(s): Localized epidermolytic hyperkeratosis 
+- 'Localized epidermolytic hyperkeratosis' SubClassOf 'abnormality of the skin'
++ 'Localized epidermolytic hyperkeratosis' SubClassOf 'epidermal thickening'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003913
+Label(s): angina pectoris 
++ 'angina pectoris' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003907
+Label(s): deep vein thrombosis 
++ 'deep vein thrombosis' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'vein'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000662
+Label(s): polyp 
+- 'polyp' SubClassOf 'neoplasm'
++ 'polyp' SubClassOf 'cell proliferation disorder'
+
+Class: http://purl.obolibrary.org/obo/HP_0006957
+Label(s): Loss of ability to walk 
+- 'Loss of ability to walk' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0006915
+Label(s): Inability to walk by childhood/adolescence 
+- 'Inability to walk by childhood/adolescence' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021392
+Label(s): polyp of large intestine 
+- 'polyp of large intestine' SubClassOf 'intestinal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0002900
+Label(s): hypokalemia 
+- 'hypokalemia' EquivalentTo 'has part' some 
+('decreased concentration' and ('inheres_in' some 
+('potassium' and ('part of' some 'blood'))) and ('has component' some 'abnormal'))
+- 'hypokalemia' SubClassOf 'abnormality of blood and blood-forming tissues'
+
+Class: http://purl.obolibrary.org/obo/HP_0002536
+Label(s): Abnormal cortical gyration 
++ 'Abnormal cortical gyration' SubClassOf 'Abnormality of neuronal migration'
+
+Class: http://purl.obolibrary.org/obo/HP_0000857
+Label(s): Neonatal insulin-dependent diabetes mellitus 
++ 'Neonatal insulin-dependent diabetes mellitus' SubClassOf http://purl.obolibrary.org/obo/HP_0001952
++ 'Neonatal insulin-dependent diabetes mellitus' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0011848
+Label(s): Abdominal colic 
+- 'Abdominal colic' SubClassOf 'pain in abdomen'
+
+Class: http://purl.obolibrary.org/obo/HP_0011868
+Label(s): Sciatica 
+- 'Sciatica' SubClassOf 'abnormality of the skeletal system'
++ 'Sciatica' SubClassOf 'back pain'
+
+Class: http://purl.obolibrary.org/obo/HP_0000800
+Label(s): Cystic renal dysplasia 
+- 'Cystic renal dysplasia' SubClassOf 'Abnormal renal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0005281
+Label(s): Hypoplastic nasal bridge 
+- 'Hypoplastic nasal bridge' SubClassOf 'abnormality of the skeletal system'
+
+Class: http://purl.obolibrary.org/obo/HP_0005241
+Label(s): Total intestinal aganglionosis 
++ 'Total intestinal aganglionosis' SubClassOf 'abnormality of the nervous system'
+
+Class: http://purl.obolibrary.org/obo/HP_0005224
+Label(s): rectal abscess 
++ 'rectal abscess' SubClassOf 'abnormality of the immune system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003855
+Label(s): intestinal polyp 
+- 'intestinal polyp' SubClassOf 'intestinal neoplasm'
++ 'intestinal polyp' SubClassOf 'intestinal disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003851
+Label(s): meningeal neoplasm 
+- 'meningeal neoplasm' EquivalentTo 'neoplasm' and ('has_disease_location' some 'meninx')
+- 'meningeal neoplasm' SubClassOf 'neoplasm'
++ 'meningeal neoplasm' SubClassOf 'Central Nervous System Neoplasm'
++ 'meningeal neoplasm' SubClassOf 'has modifier' some 'rare'
++ 'meningeal neoplasm' EquivalentTo 'neoplasm' and ('has_disease_location' some http://purl.obolibrary.org/obo/UBERON_0010743)
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003844
+Label(s): ureteral neoplasm 
+- 'ureteral neoplasm' SubClassOf 'urinary system disease'
+- 'ureteral neoplasm' SubClassOf 'neoplasm'
++ 'ureteral neoplasm' SubClassOf 'urinary system neoplasm'
++ 'ureteral neoplasm' SubClassOf 'ureteral disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0006834
+Label(s): Developmental stagnation at onset of seizures 
+- 'Developmental stagnation at onset of seizures' SubClassOf 'Abnormality of nervous system physiology'
++ 'Developmental stagnation at onset of seizures' SubClassOf 'Neurodevelopmental abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0007034
+Label(s): Generalized hyperreflexia 
+- 'Generalized hyperreflexia' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0006829
+Label(s): Severe muscular hypotonia 
+- 'Severe muscular hypotonia' SubClassOf 'Abnormal muscle tone'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000237
+Label(s): Endometrial Polyp 
+- 'Endometrial Polyp' SubClassOf 'endometrium neoplasm'
++ 'Endometrial Polyp' SubClassOf 'endometrial disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0000769
+Label(s): abnormality of the breast 
+- 'abnormality of the breast' SubClassOf 'abnormality of the thorax'
++ 'abnormality of the breast' SubClassOf 'Phenotypic abnormality'
+
+Class: http://purl.obolibrary.org/obo/HP_0000766
+Label(s): Abnormality of the sternum 
+- 'Abnormality of the sternum' SubClassOf 'Abnormality of skeletal morphology'
+
+Class: http://purl.obolibrary.org/obo/HP_0002659
+Label(s): Increased susceptibility to fractures 
+- 'Increased susceptibility to fractures' SubClassOf 'Abnormality of skeletal morphology'
++ 'Increased susceptibility to fractures' SubClassOf 'abnormality of the skeletal system'
+
+Class: http://purl.obolibrary.org/obo/HP_0000737
+Label(s): irritability 
+- 'irritability' SubClassOf 'Impaired social interactions'
++ 'irritability' SubClassOf 'Abnormal emotion/affect behavior'
+
+Class: http://purl.obolibrary.org/obo/HP_0000732
+Label(s): Inflexible adherence to routines or rituals 
+- 'Inflexible adherence to routines or rituals' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009829
+Label(s): vascular smooth muscle hypertrophy 
++ 'vascular smooth muscle hypertrophy' SubClassOf 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'cardiovascular system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000720
+Label(s): mood swings 
+- 'mood swings' SubClassOf 'behavioral abnormality'
++ 'mood swings' SubClassOf 'Abnormal emotion/affect behavior'
+
+Class: http://purl.obolibrary.org/obo/HP_0000712
+Label(s): Emotional lability 
+- 'Emotional lability' SubClassOf 'Abnormality of nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0005184
+Label(s): Prolonged QTc interval 
+- 'Prolonged QTc interval' SubClassOf 'Abnormal EKG'
++ 'Prolonged QTc interval' SubClassOf 'prolonged QT interval'
+
+Class: http://purl.obolibrary.org/obo/HP_0000818
+Label(s): Abnormality of the endocrine system 
+- 'Abnormality of the endocrine system' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'endocrine system'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000820
+Label(s): Abnormality of the thyroid gland 
+- 'Abnormality of the thyroid gland' EquivalentTo 'has part' some 
+('quality' and ('has component' some 'abnormal') and ('inheres in part of' some 'thyroid gland'))
+
+Class: http://purl.obolibrary.org/obo/HP_0000823
+Label(s): Delayed puberty 
++ 'Delayed puberty' SubClassOf 'growth delay'
+
+Class: http://purl.obolibrary.org/obo/HP_0012098
+Label(s): Edema of the dorsum of feet 
+- 'Edema of the dorsum of feet' SubClassOf 'abnormality of limbs'
++ 'Edema of the dorsum of feet' SubClassOf 'abnormality of the lower limb'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003766
+Label(s): pain in abdomen 
+- 'abdominal pain' EquivalentTo 'pain in abdomen'
+
+Class: http://purl.obolibrary.org/obo/HP_0001094
+Label(s): iridocyclitis 
++ 'iridocyclitis' SubClassOf 'increased inflammatory response'
 
 ----------------------------------
 
 3. Obsolete Classes in EFO
 
+@Classes deleted from this version
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021239
+Label(s): urethra neoplasm 
++ 'urethra neoplasm' SubClassOf 'urethral disease'
++ 'urethra neoplasm' SubClassOf 'urinary system neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021111
+Label(s): ureter neoplasm 
++ 'ureter neoplasm' SubClassOf 'urinary system neoplasm'
++ 'ureter neoplasm' SubClassOf 'ureteral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016743
+Label(s): tumor of meninges 
++ 'tumor of meninges' SubClassOf 'has modifier' some 'rare'
++ 'tumor of meninges' SubClassOf 'Central Nervous System Neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000595
+Label(s): sexual disorder 
++ 'sexual disorder' SubClassOf 'psychiatric disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018859
+Label(s): Leigh disease 
++ 'Leigh disease' SubClassOf 'Mitochondrial oxidative phosphorylation disorder due to nuclear DNA anomalies'
++ 'Leigh disease' SubClassOf 'Unclassified primitive or secondary maculopathy'
++ 'Leigh disease' SubClassOf 'Syndrome with a symptomatic strabismus'
++ 'Leigh disease' SubClassOf 'Supranuclear oculomotor palsy'
++ 'Leigh disease' SubClassOf 'Mitochondrial disease with eye involvement'
++ 'Leigh disease' SubClassOf 'Neurometabolic disease'
++ 'Leigh disease' SubClassOf 'Mitochondrial disease with peripheral neuropathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016642
+Label(s): meningioma (disease) 
++ 'meningioma (disease)' SubClassOf 'tumor of meninges'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002353
+Label(s): glottis neoplasm 
++ 'glottis neoplasm' SubClassOf 'laryngeal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003432
+Label(s): strabismus 
++ 'strabismus' SubClassOf 'ocular motility disease'
 
 
 ----------------------------------
