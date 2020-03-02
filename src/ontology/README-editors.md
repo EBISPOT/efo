@@ -81,9 +81,11 @@ You should only attempt to make a release AFTER EFO2 has been committed and push
    1. Once the query is done and in the correct place, you can run the full migration pipeline using `make dump_xyz`, e.g. `make dump_hp`
 1. Review the efo-edit.owl diff now and undo unintended changes.
    1. LOGICAL DEFINITIONS ARE CURRENTLY NOT REMOVED! For HP, these had to be removed (semi) manually using ROBOT remove equivalent.
+	 1. I would recommend to run build/efo-edit-functional.owl and search equivalentclass axioms in Atom with a query such as `EquivalentClasses[(]obo:CL`
+	 1. In the last meeting (Zoe, Nico) we decided to preserve logical axioms by default, due to the major effort an reviewing them all individually (it is impossible to tell which ones come from which context)
 1. Add relevant import redirect to catalog.xml
 1. Add ontology to the list of imports `IMPORTS = mondo hancestro uberon hp`
-1. Add the `imports/hp_terms.txt` and `imports/hp_import.owl` goals as specified for your specific ontology import 
+1. Add the `imports/hp_terms.txt` and `imports/hp_import.owl` goals as specified for your specific ontology import ONLY if you need to customise it. By default, if you dont add anything, the module that is extracted contains only those terms that are specified in `iri_dependencies/%_terms.txt` and relations in `iri_dependencies/efo_relations.txt`.
 1. Add ontology import statement to efo-edit.owl
 1. Run release
 1. Run `make all_diffs` and make sure all is in order (entity diff and axiom diff ROBOT most importantly)
