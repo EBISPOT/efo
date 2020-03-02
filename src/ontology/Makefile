@@ -45,40 +45,33 @@ qc: sparql_test all_reports
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon hp
+IMPORTS = mondo hancestro uberon hp cl
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
 all_imports: $(IMPORTS_OWL)
 
-# Use ROBOT, driven entirely by terms lists NOT from source ontology
-imports/%_import.owl: mirror/%.owl imports/%_terms.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/%_import.owl
-
-imports/%_terms.txt: iri_dependencies/%_terms.txt
-	cat $^ | sort | uniq > $@
-
-imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_blacklist.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_blacklist.txt -o $@
-.PRECIOUS: imports/mondo_import.owl
-	
-imports/uberon_terms.txt: iri_dependencies/uberon_terms.txt iri_dependencies/efo-relations.txt
-	cat $^ | sort | uniq > $@
-	
-imports/hp_terms.txt: iri_dependencies/hp_terms.txt iri_dependencies/efo-relations.txt
-	cat $^ | sort | uniq > $@
-
 imports/%_bot.owl: mirror/%.owl imports/%_terms.txt
 	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
 
-imports/uberon_import.owl: imports/uberon_bot.owl imports/uberon_terms.txt $(SRC)
-	$(ROBOT) filter -i $< --term-file imports/uberon_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/uberon_import.owl
+# Use ROBOT, driven entirely by terms lists NOT from source ontology
+imports/%_import.owl: imports/%_bot.owl imports/%_terms.txt $(SRC)
+#	$(ROBOT) filter -i $< --term-file imports/$*_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
+	echo "SKIPPED IMPORT"
+.PRECIOUS: imports/%_import.owl
+
+imports/%_terms.txt: iri_dependencies/%_terms.txt iri_dependencies/efo-relations.txt
+	cat $^ | sort | uniq > $@
+
+imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_blacklist.txt $(SRC)
+#	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_blacklist.txt -o $@
+	echo "SKIPPED IMPORT"
+.PRECIOUS: imports/mondo_import.owl
 	
-imports/hp_import.owl: imports/hp_bot.owl imports/hp_terms.txt $(SRC)
-	$(ROBOT) filter -i $< --term-file imports/hp_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/hp_import.owl
+imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt $(SRC)
+#	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ -o $@
+	echo "SKIPPED IMPORT"
+.PRECIOUS: imports/hancestro_import.owl
 
 # ----------------------------------------
 # Pipeline for removing a merged ontology
@@ -93,7 +86,7 @@ imports/hp_import.owl: imports/hp_bot.owl imports/hp_terms.txt $(SRC)
 	$(ROBOT) query -i $< -q $(SPARQLDIR)/$*_terms.sparql iri_dependencies/$*_terms.txt
 
 build/filtered-%-mirror.owl: mirror/%.owl iri_dependencies/%_terms.txt
-	$(ROBOT) filter -i mirror/%.owl -T imports/$*_terms.txt --trim false -o $@
+	$(ROBOT) filter -i mirror/$*.owl -T iri_dependencies/$*_terms.txt --trim false -o $@
 
 build/efo-edit-without-%.owl: $(SRC) build/filtered-%-mirror.owl
 	$(ROBOT) remove -i $< --select imports --trim false unmerge -i build/filtered-$*-mirror.owl -o $@
@@ -115,6 +108,9 @@ dump_%: $(SRC) build/preserve-axioms-%.owl
 	$(ROBOT) remove -i $< -T iri_dependencies/$*_terms.txt --axioms "annotation" --trim true \
 		remove -T iri_dependencies/$*_terms.txt --trim false \
 		merge -i build/preserve-axioms-$*.owl --collapse-import-closure false -o $(SRC)
+		
+build/efo-edit-functional.owl: $(SRC)
+	$(ROBOT) convert -i $(SRC) -f ofn -o $@
 
 efo_edit_git_diff.txt:
 	git diff $(SRC) > efo_edit_git_diff.txt
@@ -145,8 +141,9 @@ components/subclasses.owl: ../templates/subclasses.csv
 	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
 
 components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl
-	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
-	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
+#	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
+#	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
+	echo "SKIPPED COMPONENT"
 
 components/efo_terms.txt: $(SRC) $(SPARQLDIR)/efo_terms.sparql
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/efo_terms.sparql $@.tmp &&\
