@@ -74,18 +74,13 @@ You should only attempt to make a release AFTER EFO2 has been committed and push
 
 # Step-by-step guide to create a dynamic import
 
-1. The first thing we need is a list of all terms from the the new ontologies as they are used in efo-edit.owl. Use a custom sparql query to get a terms list (analogous to say src/sparql/hp_terms.sparql), using `make xyz_terms_in_src`.
+1. The first thing we need is a list of all terms from the the new ontologies as they are used in efo-edit.owl. Use a custom sparql query to get a terms list (analogous to say `src/sparql/hp_terms.sparql`), using `make xyz_terms_in_src`. The make goal is already present with a wildcard - you dont need to add anything. Example: `make hp_terms_in_src`
 1. Download a mirror of the ontology that is supposed to be integrated. Usually we just add the ontology to the src/ontology/mirror directory. Add a respective command to `get_mirrors.sh`.
 1. Determine which axioms to preserve:
-   1. Created a filtered version of the mirror using the -T TERMFILE (on the mirror) with trim false (FILTERED_MIRROR).
-   1. Unmerge FILTERED_MIRROR from the efo-edit file.
-   1. Created a filtered version of the efo-edit file using the -T TERMFILE) with trim false (FILTERED_EDIT). This will give you all axioms that are HP related, but not in HP itself. Save as functional syntax and review.
-   1. From FILTERED_EDIT, extract all dbxrefs, and whatever else you want to preserve to PRESERVE, encoding in a CONSTRUCT sparql query (example: `preserve_hpo_axioms.sparql`)
-   1. Once the query is done and in the correct place, you can run the full (following) pipeline using `make dump_xyz`, e.g. `make dump_hp`
-      1. Run ROBOT remove query with trim true and the TERMFILE as input. (pipeline does this)
-      1. Merge PRESERVE back into EFO edit.owl (pipeline does this)
-      1. Review the efo-edit.owl diff now and undo unintended changes.
-      1. LOGICAL DEFINITIONS ARE CURRENTLY NOT REMOVED! For HP, these had to be removed (semi) manually using ROBOT remove equivalent.
+   1. Create a new CONSTRUCT sparql query, for example by duplicating `../sparql/preserve_hp_axioms.sparql` (to, for example: `../sparql/preserve_cl_axioms.sparql`). This query needs to capture all axioms you want to preserve which contain classes from the namespace you are about to remove.
+   1. Once the query is done and in the correct place, you can run the full migration pipeline using `make dump_xyz`, e.g. `make dump_hp`
+1. Review the efo-edit.owl diff now and undo unintended changes.
+   1. LOGICAL DEFINITIONS ARE CURRENTLY NOT REMOVED! For HP, these had to be removed (semi) manually using ROBOT remove equivalent.
 1. Add relevant import redirect to catalog.xml
 1. Add ontology to the list of imports `IMPORTS = mondo hancestro uberon hp`
 1. Add the `imports/hp_terms.txt` and `imports/hp_import.owl` goals as specified for your specific ontology import 
