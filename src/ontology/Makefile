@@ -56,21 +56,18 @@ imports/%_bot.owl: mirror/%.owl imports/%_terms.txt
 
 # Use ROBOT, driven entirely by terms lists NOT from source ontology
 imports/%_import.owl: imports/%_bot.owl imports/%_terms.txt $(SRC)
-#	$(ROBOT) filter -i $< --term-file imports/$*_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
-	echo "SKIPPED IMPORT"
+	$(ROBOT) filter -i $< --term-file imports/$*_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
 
 imports/%_terms.txt: iri_dependencies/%_terms.txt iri_dependencies/efo-relations.txt
 	cat $^ | sort | uniq > $@
 
 imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_blacklist.txt $(SRC)
-#	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_blacklist.txt -o $@
-	echo "SKIPPED IMPORT"
+	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_blacklist.txt -o $@
 .PRECIOUS: imports/mondo_import.owl
 	
 imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt $(SRC)
-#	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ -o $@
-	echo "SKIPPED IMPORT"
+	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/hancestro_import.owl
 
 # ----------------------------------------
@@ -141,9 +138,8 @@ components/subclasses.owl: ../templates/subclasses.csv
 	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
 
 components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl
-#	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
-#	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
-	echo "SKIPPED COMPONENT"
+	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
+	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
 
 components/efo_terms.txt: $(SRC) $(SPARQLDIR)/efo_terms.sparql
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/efo_terms.sparql $@.tmp &&\
