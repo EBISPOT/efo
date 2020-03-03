@@ -105,8 +105,8 @@ build/preserve-axioms-%.owl: build/preserve-axioms-%.ttl
 # Preserved axioms are extracted using the preserve_xyz_axioms.sparql query (for example xrefs.)
 
 dump_%: $(SRC) build/preserve-axioms-%.owl
-	$(ROBOT) remove -i $< -T iri_dependencies/$*_terms.txt --axioms "annotation" --trim true \
-		remove -T iri_dependencies/$*_terms.txt --trim false \
+	$(ROBOT) remove -i $< -T iri_dependencies/$*_terms.txt --axioms "annotation" --trim true  --preserve-structure false \
+		remove -T iri_dependencies/$*_terms.txt --trim false --preserve-structure false \
 		merge -i build/preserve-axioms-$*.owl --collapse-import-closure false -o $(SRC)
 		
 build/efo-edit-functional.owl: $(SRC)
