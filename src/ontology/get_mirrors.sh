@@ -6,7 +6,7 @@ echo "Fetching MONDO..."
 #TEMPORARY REMOVAL OF OLS MIRROR DOWNLOAD
 #curl -L https://www.ebi.ac.uk/ols/ontologies/mondo/download > mirror/mondo.owl
 #TEMPORARY DOWNLOAD OF MONDO MIRROR
-curl -L https://github.com/monarch-initiative/mondo/releases/download/v2020-03-05/mondo.obo > mirror/mondo.obo && bin/robot convert -i mirror/mondo.obo -f owl -o mondo.owl
+curl -L https://github.com/monarch-initiative/mondo/releases/download/v2020-03-05/mondo.obo > mirror/mondo.obo && ../../bin/robot convert -i mirror/mondo.obo -f owl -o mondo.owl
 
 echo "Fetching UBERON..."
 curl -L https://www.ebi.ac.uk/ols/ontologies/uberon/download > mirror/uberon.owl
