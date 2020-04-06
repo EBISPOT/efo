@@ -80,7 +80,8 @@ You should only attempt to make a release AFTER EFO2 has been committed and push
    1. Create a new CONSTRUCT sparql query, for example by duplicating `../sparql/preserve_hp_axioms.sparql` (to, for example: `../sparql/preserve_cl_axioms.sparql`). This query needs to capture all axioms you want to preserve which contain classes from the namespace you are about to remove.
    1. Once the query is done and in the correct place, you can run the full migration pipeline using `make dump_xyz`, e.g. `make dump_hp`
 1. Replace the string `obo2` in the efo-edit file with `obo1` (some weird ROBOT bug!!)
-1. Review the efo-edit.owl diff now and undo unintended changes.
+1. Run `make edit_diff`
+1. Review the efo-edit.owl diff (efo_edit_git_diff and efo_edit_robot_diff) now and undo unintended changes.
    1. LOGICAL DEFINITIONS ARE CURRENTLY NOT REMOVED! For HP, these had to be removed (semi) manually using ROBOT remove equivalent.
 	 1. I would recommend to run build/efo-edit-functional.owl and search equivalentclass axioms in Atom with a query such as `EquivalentClasses[(]obo:CL`
 	 1. In the last meeting (Zoe, Nico) we decided to preserve logical axioms by default, due to the major effort an reviewing them all individually (it is impossible to tell which ones come from which context)
