@@ -17,7 +17,6 @@ curl -L https://www.ebi.ac.uk/ols/ontologies/hp/download > mirror/hp.owl
 echo "Fetching CL..."
 curl -L https://www.ebi.ac.uk/ols/ontologies/cl/download > mirror/cl.owl
 
-
 #efo-edit.owl from efo2 branch is no longer needed, edit master efo-edit.owl instead.
 #curl -L https://raw.githubusercontent.com/EBISPOT/efo/efo2/src/ontology/efo-edit.owl > efo-edit.owl
 
@@ -26,3 +25,9 @@ curl -L https://www.ebi.ac.uk/ols/ontologies/cl/download > mirror/cl.owl
 
 echo "Fetching HANCESTRO..."
 curl -L https://raw.githubusercontent.com/EBISPOT/ancestro/master/src/ontology/hancestro-edit.owl > mirror/hancestro.owl
+
+echo "Fetching FBbt..."
+curl -L https://www.ebi.ac.uk/ols/ontologies/fbbt/download > mirror/fbbt.owl
+
+echo "Fetching GO..."
+curl -L https://www.ebi.ac.uk/ols/ontologies/go/download > mirror/go.owl

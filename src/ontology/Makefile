@@ -45,7 +45,7 @@ qc: sparql_test all_reports
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon hp cl
+IMPORTS = mondo hancestro uberon hp cl fbbt
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
@@ -117,7 +117,7 @@ EFO_MASTER=https://raw.githubusercontent.com/EBISPOT/efo/master/src/ontology/efo
 master-$(SRC):
 	wget $(EFO_MASTER) -O $@
 
-efo_edit_robot_diff.txt: master-$(SRC)
+efo_edit_robot_diff.txt: master-$(SRC) $(SRC)
 	$(ROBOT) diff --left $(SRC) --right master-$(SRC) -o $@
 
 edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
@@ -255,7 +255,7 @@ qc/current_%_entities.txt: $(BUILDDIR)/%
 #	echo "skipped"
 
 qc/latest_%_entities.txt: 
-	$(ROBOT) query --input-iri https://www.ebi.ac.uk/efo/$* --select $(SPARQLDIR)/all_classes.sparql $@.tmp &&\
+	$(ROBOT) query --input-iri https://github.com/EBISPOT/efo/releases/download/current/$* --select $(SPARQLDIR)/all_classes.sparql $@.tmp &&\
 	cat $@.tmp  | sort | uniq > $@ &&\
 	rm $@.tmp
 .PRECIOUS: qc/latest_%_entities.txt
@@ -277,3 +277,13 @@ qc/uberon_diff.txt: qc/uberon_consider_terms.txt qc/uberon_current_terms.txt
 	diff -u $^ | grep '^-[^-]' | sed 's/^-//'
 
 all_diffs: $(ENTITY_DIFF_FILES) $(DIFF_REPORTS_FILES)
+	
+# ----------------------------------------
+# Adhoc queries
+# ----------------------------------------
+
+build/fbbt-self-xref.txt: $(SRC)
+	$(ROBOT) query --input $< --query $(SPARQLDIR)/remove-self-xrefs.sparql $@
+
+remove-fbbt-self-xref: $(SRC)
+	$(ROBOT) query --input $< --update $(SPARQLDIR)/remove-fbbt-xrefs.ru --output $(SRC)
