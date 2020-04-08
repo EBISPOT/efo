@@ -6,7 +6,7 @@ echo "Fetching MONDO..."
 #TEMPORARY REMOVAL OF OLS MIRROR DOWNLOAD
 #curl -L https://www.ebi.ac.uk/ols/ontologies/mondo/download > mirror/mondo.owl
 #TEMPORARY DOWNLOAD OF MONDO MIRROR
-curl -L https://github.com/monarch-initiative/mondo/releases/download/v2020-03-05/mondo.obo > mirror/mondo.obo && ../../bin/robot convert -i mirror/mondo.obo -f owl -o mirror/mondo.owl
+curl -L https://github.com/monarch-initiative/mondo/releases/download/current/mondo.obo > mirror/mondo.obo && ../../bin/robot convert -i mirror/mondo.obo -f owl -o mirror/mondo.owl
 
 echo "Fetching UBERON..."
 curl -L https://www.ebi.ac.uk/ols/ontologies/uberon/download > mirror/uberon.owl
@@ -29,5 +29,5 @@ curl -L https://raw.githubusercontent.com/EBISPOT/ancestro/master/src/ontology/h
 echo "Fetching FBbt..."
 curl -L https://www.ebi.ac.uk/ols/ontologies/fbbt/download > mirror/fbbt.owl
 
-echo "Fetching GO..."
-curl -L https://www.ebi.ac.uk/ols/ontologies/go/download > mirror/go.owl
+#echo "Fetching GO..."
+#curl -L https://www.ebi.ac.uk/ols/ontologies/go/download > mirror/go.owl
