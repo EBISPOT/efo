@@ -24,6 +24,8 @@ ORDOPREFIX = "Orphanet: http://www.orpha.net/ORDO/Orphanet_"
 MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
 UBERONPREFIX = "UBERON: http://purl.obolibrary.org/obo/UBERON_"
 HPPREFIX = "HP: http://purl.obolibrary.org/obo/HP_"
+CLPREFIX = "CL: http://purl.obolibrary.org/obo/CL_"
+BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
 EFOPREPRO = $(BUILDDIR)/efo-edit-release.owl
 EFOFIXER = ../../bin/efo-fixer.jar
 MIRRORDIR=./mirror
@@ -129,7 +131,7 @@ edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
 # Components
 # ----------------------------------------
 
-COMPONENTS=subclasses mondo_efo_import
+COMPONENTS=subclasses mondo_efo_import anatomagram_lung
 COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 FOREIGN_AXIOMS=hancestro uberon
 FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
@@ -179,6 +181,14 @@ foreign_axiom_diff: $(FOREIGN_AXIOM_FILES_DIFF)
 nuclear_strike: $(SRC) foreign_axiom_diff
 	cp $(SRC) cp-$(SRC)
 	$(ROBOT) merge -i $< $(addprefix unmerge -i , $(FOREIGN_AXIOM_FILES)) -o $(SRC)
+	
+# ----------------------------------------
+# AE anatomagrams components
+# ----------------------------------------
+
+components/anatomagram_lung.owl: ../templates/anatomagram_lung.tsv
+	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_lung.owl" -o $@
+
 
 # ----------------------------------------
 # OTAR therapeutic areas
@@ -288,3 +298,4 @@ build/fbbt-self-xref.txt: $(SRC)
 
 remove-fbbt-self-xref: $(SRC)
 	$(ROBOT) query --input $< --update $(SPARQLDIR)/remove-fbbt-xrefs.ru --output $(SRC)
+
