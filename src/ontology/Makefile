@@ -189,6 +189,9 @@ nuclear_strike: $(SRC) foreign_axiom_diff
 components/anatomagram_lung.owl: ../templates/anatomagram_lung.tsv
 	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_lung.owl" -o $@
 
+components/anatomagram_kidney.owl: ../templates/anatomagram_kidney.tsv
+	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_kidney.owl" -o $@
+
 
 # ----------------------------------------
 # OTAR therapeutic areas
