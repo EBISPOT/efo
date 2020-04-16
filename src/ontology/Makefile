@@ -212,7 +212,7 @@ components/anatomagram_pancreas.owl: ../templates/anatomagram_pancreas.tsv $(SRC
 # Release
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
-release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json
+release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json $(BUILDDIR)/$(ONT)-base.owl
 	cp $^ $(RELEASEDIR)
 	
 $(BUILDDIR)/$(ONT).owl: $(SRC)
@@ -229,6 +229,14 @@ $(BUILDDIR)/$(ONT).json: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo.owl \
 	query --update ../sparql/inject-subset-declaration.sparql \
 	convert -f json -o $@
+
+$(BUILDDIR)/$(ONT)-base.owl: build/efo.owl
+	$(ROBOT) remove --input build/efo.owl \
+		--base-iri 'http://www.ebi.ac.uk/efo/EFO_' \
+		--axioms external \
+		--preserve-structure false \
+		--trim false \
+		annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT)-base.owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT)-base.owl --output $@
 
 # ----------------------------------------
 # Sparql queries: Q/C
