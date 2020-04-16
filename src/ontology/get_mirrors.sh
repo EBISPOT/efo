@@ -9,13 +9,13 @@ echo "Fetching MONDO..."
 curl -L https://github.com/monarch-initiative/mondo/releases/download/current/mondo.obo > mirror/mondo.obo && ../../bin/robot convert -i mirror/mondo.obo -f owl -o mirror/mondo.owl
 
 echo "Fetching UBERON..."
-curl -L https://www.ebi.ac.uk/ols/ontologies/uberon/download > mirror/uberon.owl
+curl -L http://purl.obolibrary.org/obo/uberon.owl > mirror/uberon.owl
 
 echo "Fetching HPO..."
-curl -L https://www.ebi.ac.uk/ols/ontologies/hp/download > mirror/hp.owl
+curl -L http://purl.obolibrary.org/obo/hp.owl > mirror/hp.owl
 
 echo "Fetching CL..."
-curl -L https://www.ebi.ac.uk/ols/ontologies/cl/download > mirror/cl.owl
+curl -L http://purl.obolibrary.org/obo/cl.owl > mirror/cl.owl
 
 #efo-edit.owl from efo2 branch is no longer needed, edit master efo-edit.owl instead.
 #curl -L https://raw.githubusercontent.com/EBISPOT/efo/efo2/src/ontology/efo-edit.owl > efo-edit.owl
@@ -27,7 +27,7 @@ echo "Fetching HANCESTRO..."
 curl -L https://raw.githubusercontent.com/EBISPOT/ancestro/master/src/ontology/hancestro-edit.owl > mirror/hancestro.owl
 
 echo "Fetching FBbt..."
-curl -L https://www.ebi.ac.uk/ols/ontologies/fbbt/download > mirror/fbbt.owl
+curl -L http://purl.obolibrary.org/obo/fbbt.owl > mirror/fbbt.owl
 
 #echo "Fetching GO..."
 #curl -L https://www.ebi.ac.uk/ols/ontologies/go/download > mirror/go.owl
