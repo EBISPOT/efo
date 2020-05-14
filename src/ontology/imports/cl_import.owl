@@ -24,33 +24,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
     
 
 
@@ -63,18 +39,6 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
     
 
 
@@ -153,63 +117,6 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
-
-A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">external</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:id>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:shorthand>
-        <rdfs:label xml:lang="en">part of</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part of</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
-        <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
-    </owl:ObjectProperty>
     
 
 
@@ -17077,6 +16984,50 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pulmonary vessel endothelial cell</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung endothelial cell</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_2000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_2000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000349"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000499"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A specialized, enlarged, connective tissue cell of the decidua with enlarged nucleus, dense membrane‐bound secretory granules and cytoplasmic accumulation of glycogen and lipid droplets. These cells develop by the transformation of endometrial stromal cells during decidualization.</obo:IAO_0000115>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-02-20T23:06:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>BTO:0002770</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BTO:0005756</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C32429</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>decidua cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decidual stromal cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:2000002</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decidual cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_2000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A specialized, enlarged, connective tissue cell of the decidua with enlarged nucleus, dense membrane‐bound secretory granules and cytoplasmic accumulation of glycogen and lipid droplets. These cells develop by the transformation of endometrial stromal cells during decidualization.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0002770</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C32429</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:30013421</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:30429548</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wiki:Decidual_cells&amp;oldid=937509751</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wiki:Decidualization&amp;oldid=908981933</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_2000002"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>decidua cell</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0002770</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C32429</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_2000002"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>decidual stromal cell</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0005756</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:11719592</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
