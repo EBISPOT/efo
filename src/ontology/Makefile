@@ -131,7 +131,7 @@ edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
 # Components
 # ----------------------------------------
 
-COMPONENTS=subclasses mondo_efo_import anatomagram_lung anatomagram_kidney anatomagram_pancreas
+COMPONENTS=subclasses mondo_efo_import anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
 COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 FOREIGN_AXIOMS=hancestro uberon
 FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
@@ -186,15 +186,23 @@ nuclear_strike: $(SRC) foreign_axiom_diff
 # AE anatomagrams components
 # ----------------------------------------
 
-components/anatomagram_lung.owl: ../templates/anatomagram_lung.tsv $(SRC)
-	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_lung.owl" -o $@
+#components/anatomagram_lung.owl: ../templates/anatomagram_lung.tsv $(SRC)
+#	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_lung.owl" -o $@
 
-components/anatomagram_kidney.owl: ../templates/anatomagram_kidney.tsv $(SRC)
-	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_kidney.owl" -o $@
+#components/anatomagram_kidney.owl: ../templates/anatomagram_kidney.tsv $(SRC)
+#	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_kidney.owl" -o $@
 
-components/anatomagram_pancreas.owl: ../templates/anatomagram_pancreas.tsv $(SRC)
-	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_pancreas.owl" -o $@
+#components/anatomagram_pancreas.owl: ../templates/anatomagram_pancreas.tsv $(SRC)
+#	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_pancreas.owl" -o $@
 
+#components/anatomagram_liver.owl: ../templates/anatomagram_liver.tsv $(SRC)
+#	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_liver.owl" -o $@
+
+#components/anatomagram_placenta.owl: ../templates/anatomagram_liver.tsv $(SRC)
+#	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_placenta.owl" -o $@
+
+components/anatomagram_%.owl: ../templates/anatomagram_%.tsv $(SRC)
+	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_$*.owl" -o $@
 
 # ----------------------------------------
 # OTAR therapeutic areas
