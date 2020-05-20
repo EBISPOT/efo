@@ -24,51 +24,15 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
     
 
 
@@ -147,64 +111,6 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
-
-A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>human_stages_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>protein</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:id>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:shorthand>
-        <rdfs:label xml:lang="en">part of</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part of</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
-        <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
-    </owl:ObjectProperty>
     
 
 
@@ -1122,6 +1028,45 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0000112 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012211"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nonspecific term referring to disease or damage of the kidneys.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>Kidney damage</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>Kidney disease</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D007674</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:90708001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0022658</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1408258</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000112</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nephropathy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000112"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nonspecific term referring to disease or damage of the kidneys.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HPO:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000112"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>Kidney damage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-6908-9849</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000112"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>Kidney disease</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6548-5200</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0000118 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000118">
@@ -1536,6 +1481,24 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the tongue</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Glossal abnormality</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Lingual abnormality</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tongue abnormality</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
@@ -1551,24 +1514,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget>Abnormal tongue</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:skoehler</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the tongue</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Glossal abnormality</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Lingual abnormality</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7120,10 +7065,37 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0000481 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000481">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality of the cornea, which is the transparent tissue at the front of the eye that covers the iris, pupil, and anterior chamber.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007771</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007972</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1855670</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4020889</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormality of the cornea</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corneal abnormalities</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corneal abnormality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cornela disease</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000481</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal cornea morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality of the cornea, which is the transparent tissue at the front of the eye that covers the iris, pupil, and anterior chamber.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0000483 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000483">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000481"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000539"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of astigmatism associated with abnormal curvatures on the anterior and/or posterior surface of the cornea.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D001251</oboInOwl:hasDbXref>
@@ -7157,7 +7129,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0000485 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000485">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000481"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An enlargement of the cornea with normal clarity and function. Megalocornea is diagnosed with a horizontal corneal diameter of 12 mm or more at birth or 13 mm or more after two years of age.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007660</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:C562829</oboInOwl:hasDbXref>
@@ -8622,6 +8594,35 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An anomaly of visually evoked potentials (VEP), which are electrical potentials, initiated by brief visual stimuli, which are recorded from the scalp overlying the visual cortex.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:19826847</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000651 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000651">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diplopia is a condition in which a single object is perceived as two images, it is also known as double vision.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D004172</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:24982008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0012569</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Double vision</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000651</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diplopia</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000651"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diplopia is a condition in which a single object is perceived as two images, it is also known as double vision.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000651"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Double vision</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -10219,6 +10220,41 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0000802 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000802">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000078"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inability to develop or maintain an erection of the penis.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D007172</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:397803000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0242350</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Difficulty getting a full erection</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Difficulty getting an erection</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000802</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Impotence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000802"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inability to develop or maintain an erection of the penis.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000802"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Difficulty getting a full erection</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000802"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Difficulty getting an erection</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0000803 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000803">
@@ -10494,6 +10530,36 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A form of diabetes insipidus related to a failure of vasopressin (AVP) release from the hypothalamus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>HPO:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000876 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000876">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000078"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infrequent menses (less than 6 per year or more than 35 days between cycles).</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D009839</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:52073004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0028949</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Light or infrequent menstrual periods</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000876</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oligomenorrhea</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000876"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infrequent menses (less than 6 per year or more than 35 days between cycles).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:22594864</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000876"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Light or infrequent menstrual periods</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-6548-5200</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -11829,16 +11895,16 @@ applied inaccurately.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001100"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heterochromia iridis is a difference in the color of the iris in the two eyes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Different colored eyes</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ORCID:0000-0001-6908-9849</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001100"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heterochromia iridis is a difference in the color of the iris in the two eyes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11989,6 +12055,45 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visual field defects</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:skoehler</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001128 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001128">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000271"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001574"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inversion and rubbing of the eyelashes against the globe of the eye.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D058457</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:60332004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0221259</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Ingrown eyelashes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Introversion of eyelashes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Trichiasis of eyelid eyelashes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001128</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eyelash inversion.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trichiasis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001128"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inversion and rubbing of the eyelashes against the globe of the eye.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HPO:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001128"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Ingrown eyelashes</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001128"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Introversion of eyelashes</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14130,6 +14235,65 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0001388 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001388">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000924"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lack of stability of a joint.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0001380</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001383</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002771</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D007593</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:27911000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:298203008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0086437</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0158359</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Hyperlaxity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Joint instability</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Joint ligamentous laxity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lax joints</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Ligamentous laxity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loose-jointedness</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loosejointedness</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001388</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint laxity may be caused by a number of factors including intraarticular disease and injury or slacking of extraarticular structures such as joint capsules, ligaments, and muscles.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint laxity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001388"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lack of stability of a joint.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001388"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Joint instability</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>Sanford:krageth</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001388"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lax joints</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001388"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loose-jointedness</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001388"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loosejointedness</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0001392 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001392">
@@ -15315,8 +15479,8 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0001605 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001605">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003470"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031801"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A loss of the ability to move the vocal folds.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0001606</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006847</oboInOwl:hasAlternativeId>
@@ -16048,6 +16212,26 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0001693 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001693">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011028"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pattern of blood flow in the heart that deviates from the normal circuit of the circulatory system.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:442119001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0232180</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001693</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiac shunt</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001693"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pattern of blood flow in the heart that deviates from the normal circuit of the circulatory system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0001730 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001730">
@@ -16438,7 +16622,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0001770 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001770">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Webbing or fusion of the toes, involving soft parts only or including bone structure. Bony fusions are referred to as &quot;bony&quot; Syndactyly if the fusion occurs in a radio-ulnar axis. Fusions of bones of the toes in a proximo-distal axis are referred to as &quot;Symphalangism&quot;.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001828</oboInOwl:hasAlternativeId>
@@ -16608,6 +16792,41 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0001780 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001780">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An anomaly of a toe.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C2674738</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormalities of the toes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of toe</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001780</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of toe</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An anomaly of a toe.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormalities of the toes</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of toe</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0001787 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001787">
@@ -16712,8 +16931,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0001822 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001822">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lateral deviation of the great toe (i.e., in the direction of the little toe).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004682</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D000071378</oboInOwl:hasDbXref>
@@ -16773,6 +16991,7 @@ applied inaccurately.</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001830">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000924"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002814"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
@@ -16813,6 +17032,7 @@ applied inaccurately.</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001831">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000924"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002814"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
@@ -16978,8 +17198,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0001845 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001845">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes a foot digit resting on the dorsal surface of an adjacent digit when the foot is at rest.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:203541003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0920299</oboInOwl:hasDbXref>
@@ -17068,8 +17287,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0001863 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001863">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030084"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bending or curvature of a toe in the tibial direction (i.e., towards the big toe).</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Toe curvature</oboInOwl:hasBroadSynonym>
@@ -17099,9 +17317,8 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0001864 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001864">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001863"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bending or curvature of a fifth toe in the tibial direction (i.e., towards the big toe).</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Curvature of the little toe</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Curvature of the pinkie toe</oboInOwl:hasBroadSynonym>
@@ -17298,6 +17515,7 @@ applied inaccurately.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001880">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001881"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001974"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increased count of eosinophils in the blood.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D004802</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0014457</oboInOwl:hasDbXref>
@@ -17469,6 +17687,41 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Increased RBC mass</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#abbreviation"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001907 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001907">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001977"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The formation of a blood clot inside a blood vessel that subsequently travels through the blood stream from the site where it formed to another location in the body, generally leading to vascular occlusion at the distant site.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D013923</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D016769</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:13713005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:371039008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0040038</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0085307</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Blood clot in blood vessel</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thromboembolic disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thromboembolic events</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Embolism and thrombosis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001907</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thromboembolism</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001907"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The formation of a blood clot inside a blood vessel that subsequently travels through the blood stream from the site where it formed to another location in the body, generally leading to vascular occlusion at the distant site.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001907"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Blood clot in blood vessel</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-6548-5200</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17838,6 +18091,49 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diffuse sclerosis of the mesangium, as manifestated by diffuse mesangial matrix expansion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0001974 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001974">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001881"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal increase in the number of leukocytes in the blood.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D007964</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:111583006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0023518</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Elevated white blood count</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>High white blood count</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased blood leukocyte number</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001974</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leukocytosis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001974"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal increase in the number of leukocytes in the blood.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001974"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Elevated white blood count</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001974"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>High white blood count</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001974"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Increased blood leukocyte number</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -18689,6 +18985,37 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002031"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of esophagus morphology</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0002032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012718"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A developmental defect resulting in complete obliteration of the lumen of the esophagus such that the esophagus ends in a blind pouch rather than connecting to the stomach.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Fyler:4412</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D004933</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:26179002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0014850</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Birth defect in which part of esophagus did not develop</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002032</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esophageal atresia</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002032"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A developmental defect resulting in complete obliteration of the lumen of the esophagus such that the esophagus ends in a blind pouch rather than connecting to the stomach.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HPO:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002032"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Birth defect in which part of esophagus did not develop</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6548-5200</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -19996,6 +20323,37 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0002153 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002153">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003111"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormally increased potassium concentration in the blood.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D006947</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:14140009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:166689004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:238142003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0020461</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Elevated serum potassium levels</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002153</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperkalemia</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002153"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormally increased potassium concentration in the blood.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002153"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Elevated serum potassium levels</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0002162 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002162">
@@ -20278,7 +20636,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0002180 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002180">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0007367"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Progressive loss of neural cells and tissue.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D009410</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D019636</oboInOwl:hasDbXref>
@@ -23981,6 +24339,62 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0002910 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002910">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001392"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevations of the levels of SGOT and SGPT in the serum. SGOT (serum glutamic oxaloacetic transaminase) and SGPT (serum glutamic pyruvic transaminase) are transaminases primarily found in the liver and heart and are released into the bloodstream as the result of liver or heart damage. SGOT and SGPT are used clinically mainly as markers of liver damage.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001411</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003143</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003156</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003293</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006567</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006578</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008267</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008342</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D008107</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:166603001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:166643006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:75183008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0086565</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0151766</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0235996</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0438237</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0438717</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0877359</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1842003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1848701</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal liver enzymes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal liver function</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal liver function tests</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevated liver enzymes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevated serum transaminases</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevated transaminases</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>High liver enzymes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increased liver enzymes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increased liver function tests</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increased transaminases</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subclinical abnormal liver function tests</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevated liver function tests</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002910</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevated hepatic transaminase</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002910"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevations of the levels of SGOT and SGPT in the serum. SGOT (serum glutamic oxaloacetic transaminase) and SGPT (serum glutamic pyruvic transaminase) are transaminases primarily found in the liver and heart and are released into the bloodstream as the result of liver or heart damage. SGOT and SGPT are used clinically mainly as markers of liver damage.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002910"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>High liver enzymes</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0002916 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002916">
@@ -24421,6 +24835,39 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0002999 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002999">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001373"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002814"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The kneecap normally is located within the groove termed trochlea on the distal femur and can slide up and down in it. Patellar dislocation occurs if the patella fully dislocates out of the groove.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D031222</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:263029007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1135812</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Dislocated kneecap</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dislocated patellae</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dislocation of patella</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002999</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patellar dislocation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002999"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The kneecap normally is located within the groove termed trochlea on the distal femur and can slide up and down in it. Patellar dislocation occurs if the patella fully dislocates out of the groove.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002999"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Dislocated kneecap</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-6908-9849</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0003010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003010">
@@ -24509,6 +24956,28 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Curving of inner forearm bone</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ORCID:0000-0002-6548-5200</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0003040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D007592</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:399269003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0022408</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Disease of the joints</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003040</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthropathy</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003040"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Disease of the joints</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6548-5200</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -26040,6 +26509,22 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0003419 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003419">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003418"/>
+        <obo:IAO_0000115>An unpleasant sensation characterized by physical discomfort (such as pricking, throbbing, or aching) localized to the lower back.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D017116</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:279039007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0024031</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lower back pain</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003419</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low back pain</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0003429 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003429">
@@ -27407,10 +27892,32 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0004348 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004348">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term applies to all changes in bone mineral density which (depending on severity) can be seen on x-rays as a change in density and or structure of the bone. Changes may affect all bones of the organism, just certain bones or only parts of bones and include decreased mineralisation as may be seen in osteoporosis or increased mineralisation and or ossification as in osteopetrosis, exostoses or any kind of atopic calicfications of different origin and distribution. The overall amount of mineralization of the bone-organ can be measured as the amount of matter per cubic centimeter of bones, usually measured by densitometry of the lumbar spine or hip. The measurements are usually reported as g/cm3 or as a Z-score (the number of standard deviations above or below the mean for the patient&apos;s age and sex). Note that measurement with this method does not reflect local changes in other bones, and as such might not be correct with regard the hole bone-organ.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-03-11T08:10:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4021657</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of bone mineralisation and ossification</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004348</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of bone mineral density</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004348"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term applies to all changes in bone mineral density which (depending on severity) can be seen on x-rays as a change in density and or structure of the bone. Changes may affect all bones of the organism, just certain bones or only parts of bones and include decreased mineralisation as may be seen in osteoporosis or increased mineralisation and or ossification as in osteopetrosis, exostoses or any kind of atopic calicfications of different origin and distribution. The overall amount of mineralization of the bone-organ can be measured as the amount of matter per cubic centimeter of bones, usually measured by densitometry of the lumbar spine or hip. The measurements are usually reported as g/cm3 or as a Z-score (the number of standard deviations above or below the mean for the patient&apos;s age and sex). Note that measurement with this method does not reflect local changes in other bones, and as such might not be correct with regard the hole bone-organ.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0004349 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004349">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004348"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reduction of bone mineral density, that is, of the amount of matter per cubic centimeter of bones.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-03-11T08:10:00Z</oboInOwl:creation_date>
@@ -27830,6 +28337,36 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0004420 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004420">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001977"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The formation of a blood clot inside an artery.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-03-18T09:32:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:65198009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0151942</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Blood clot in artery</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004420</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arterial thrombosis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004420"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The formation of a blood clot inside an artery.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004420"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Blood clot in artery</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-6908-9849</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0004421 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004421">
@@ -28212,6 +28749,26 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An increase in amplitude of waves returned in ultrasonography of the kidney, which is generally displayed as increased brightness of the signal.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:2259758</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0004743 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004743">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012210"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chronic inflammation of the kidney affecting the interstitium of the kidneys surrounding the tubules.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:60926001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0238304</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004743</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chronic tubulointerstitial nephritis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004743"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chronic inflammation of the kidney affecting the interstitium of the kidneys surrounding the tubules.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29822,6 +30379,19 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0005881 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0005881">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:240220009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0410648</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0005881</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spinal instability</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0005957 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0005957">
@@ -31190,7 +31760,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0007366 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007366">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0007367"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012443"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-04-01T10:22:00Z</oboInOwl:creation_date>
@@ -31200,6 +31770,27 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007366</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atrophy/Degeneration affecting the brainstem</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0007367 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007367">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002011"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-04-01T10:23:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4024899</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Atrophy/Degeneration affecting the CNS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007367</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atrophy/Degeneration affecting the central nervous system</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0007367"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Atrophy/Degeneration affecting the CNS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#abbreviation"/>
+    </owl:Axiom>
     
 
 
@@ -31626,6 +32217,21 @@ applied inaccurately.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0007777 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007777">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100699"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0200065"/>
+        <obo:IAO_0000115>Fibrous connective tissue resulting from incomplete healing of a wound (i.e., a scar) located in the choroid and retina or the eye.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:53854005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0008512</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007777</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chorioretinal scar</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0007780 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007780">
@@ -31764,7 +32370,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0007957 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007957">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000481"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reduction of corneal clarity.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007844</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007883</oboInOwl:hasAlternativeId>
@@ -31997,9 +32603,8 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0008115 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0008115">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001863"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bending or curvature of a third toe in the tibial direction (i.e., towards the big toe).</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Curvature of 3rd toe</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4021555</oboInOwl:hasDbXref>
@@ -32355,6 +32960,19 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedTarget>Degenerative disc disease</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ORCID:0000-0001-6908-9849</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0008443 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0008443">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:298380006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0575157</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008443</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spinal deformities</rdfs:label>
+    </owl:Class>
     
 
 
@@ -34391,7 +35009,7 @@ applied inaccurately.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010059">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000924"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002814"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
@@ -34681,8 +35299,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0010511 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010511">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toes that appear disproportionately long compared to the foot.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-09-19T10:40:43Z</oboInOwl:creation_date>
@@ -38533,9 +39150,8 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0011918 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011918">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001760"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001780"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001863"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011297"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bending or curvature of a fourth toe in the tibial direction (i.e., towards the big toe).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-08T08:44:27Z</oboInOwl:creation_date>
@@ -39469,6 +40085,36 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0012276 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012276">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inflammation of the flexor digitorum tendon, often associated with the Kanavel signs: (i) finger held in slight flexion, (ii) fusiform swelling, (iii) tenderness along the flexor tendon sheath, and (iv) pain with passive extension of the digit.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-07T03:02:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4022974</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Trigger finger</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0012276</oboInOwl:id>
+        <rdfs:comment>Tenosynovitis refers to inflammation of the protective sheath that surrounds a tendon. Stenosing tenosynovitis, or trigger finger, is diagnosed when a patient presents with a symptomatic locking or clicking of a finger or the thumb. It is caused by a mismatch between the volume of the flexor tendon sheath and its contents. As the flexor tendon attempts to glide through a relatively stenotic sheath, it catches, producing an inability to flex or extend the digit smoothly.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital flexor tenosynovitis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012276"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inflammation of the flexor digitorum tendon, often associated with the Kanavel signs: (i) finger held in slight flexion, (ii) fusiform swelling, (iii) tenderness along the flexor tendon sheath, and (iv) pain with passive extension of the digit.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:16443118</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012276"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Trigger finger</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0012278 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012278">
@@ -39661,7 +40307,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0012382 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012382">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001693"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pattern of blood flow in the heart that deviates from the normal circuit of the circulatory system from the left side of the heart to the right.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-10-16T11:54:21Z</oboInOwl:creation_date>
@@ -39707,6 +40353,29 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <owl:annotatedTarget>Permanent flexion of the finger or toe</owl:annotatedTarget>
         <oboInOwl:hasDbXref>orcid.org/0000-0002-6548-5200</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0012388 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012388">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002088"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inflammation of the large airways of the lung with rapid onset and short course usually associated with cough, mucus production, shortness of breath, wheezing, and chest tightness.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-11-07T07:27:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:10509002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:35301006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0149514</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0012388</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acute bronchitis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012388"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inflammation of the large airways of the lung with rapid onset and short course usually associated with cough, mucus production, shortness of breath, wheezing, and chest tightness.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -39913,7 +40582,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0012444 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012444">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0007367"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012443"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partial or complete wasting (loss) of brain tissue that was once present.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
@@ -41006,6 +41675,25 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0020083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0020083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011123"/>
+        <obo:IAO_0000115>An infection of a hair follicle that extends subcutaneously, forming an abscess.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-08T16:59:51Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robinp</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>Boil</oboInOwl:hasExactSynonym>
+        <rdfs:label>Furuncle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0020083"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Boil</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0020139 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0020139">
@@ -41122,6 +41810,22 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stiff neck</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0025267 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025267">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002086"/>
+        <obo:IAO_0000115>Deep, noisy breathing during sleep accompanied by hoarse or harsh sounds caused by the vibration of respiratory structures (especially the soft palate) resulting in sound due to obstructed air movement during breathing while sleeping.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T13:24:58Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>Snore</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Snores</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Snoring symptoms</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Snoring</rdfs:label>
+    </owl:Class>
     
 
 
@@ -42271,6 +42975,18 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0031801 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031801">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
+        <obo:IAO_0000115>Any functional anomaly of the vocal cord.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-04T12:07:39Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <rdfs:label>Vocal cord dysfunction</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0031826 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031826">
@@ -42362,6 +43078,28 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0032072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002814"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115>A fluid-filled mass that is a distention of a preexisting bursa in the popliteal fossa, most commonly the gastrocnemio-semimembranosus bursa. This bursa is unique in that it communicates with the knee joint, unlike other periarticular bursae, via an opening in the joint capsule posterior to the medial femoral condyle.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-13T11:41:38Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>Baker&apos;s cyst</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Popliteal synovial cysts, also known as Baker&apos;s cysts, are commonly found in association with intraarticular knee disorders, such as osteoarthritis and meniscus tears. Histologically, the cyst walls resemble synovial tissue with fibrosis, and chronic nonspecific inflammation may be present. Osteocartilaginous loose bodies may also be found within the cyst, even if they are not seen in the knee joint. Baker cysts can be a source of posterior knee pain that persists despite surgical treatment of the intraarticular lesion, and they are routinely discovered on magnetic resonance imaging scans of the symptomatic knee. Symptoms related to a popliteal cyst origin are infrequent and may be related to size.</rdfs:comment>
+        <rdfs:label>Popliteal synovial cyst</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032072"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fluid-filled mass that is a distention of a preexisting bursa in the popliteal fossa, most commonly the gastrocnemio-semimembranosus bursa. This bursa is unique in that it communicates with the knee joint, unlike other periarticular bursae, via an opening in the joint capsule posterior to the medial femoral condyle.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:25102502</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26137182</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0032141 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032141">
@@ -42380,6 +43118,18 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0032153 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032153">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115>A partial dislocation of a joint.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-02T13:55:17Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <rdfs:label>Joint subluxation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0032155 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032155">
@@ -42389,6 +43139,26 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <rdfs:label>Abdominal cramps</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032190">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002814"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115>Abnormal structure of the meniscus of the knee, two crescent shape fibrocartilaginous pads that disperse the weight of the body and reduce friction of the knee joint during movement.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-15T11:29:05Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <rdfs:comment>The meniscus is a fibrocartilaginous structure of the knee joint that enables the even distribution of a weight-bearing load across the articular surfaces. The menisci bear between 40 to 70% of the load across the knee, and the rest of the load is transmitted directly to the articular cartilage.</rdfs:comment>
+        <rdfs:label>Abnormal meniscus morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032190"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Abnormal structure of the meniscus of the knee, two crescent shape fibrocartilaginous pads that disperse the weight of the body and reduce friction of the knee joint during movement.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:26488288</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -42453,6 +43223,24 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An abnormal decrease of the pressure within the eye.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:26253854</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0032565 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032565">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000008"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-19T10:17:59Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
+        <rdfs:comment>A breach of the continuity of the mucous membrane of the vagina caused by sloughing out of inflamed necrotic tissue, usually associated with eschars (slough or piece of dead tissue) and with violaceous to erythematous borders.</rdfs:comment>
+        <rdfs:label>Vaginal mucosal ulceration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032565"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>A breach of the continuity of the mucous membrane of the vagina caused by sloughing out of inflamed necrotic tissue, usually associated with eschars (slough or piece of dead tissue) and with violaceous to erythematous borders.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:18427055</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -42977,7 +43765,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0100256 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100256">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0007367"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senile plaques are extracellular deposits of amyloid in the gray matter of the brain.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doelkens</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-07-15T02:43:44Z</oboInOwl:creation_date>
@@ -43407,6 +44195,52 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Narrowing of an artery</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ORCID:0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0100550 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100550">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakage (tear) of a tendon.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doelkens</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-12-21T02:58:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:415749005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0151937</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rupture of tendons</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruptured tendon</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tendon rupture</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Tendon/muscle rupture</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0100550</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tendon rupture is usually painful,and accompanied by swelling, inability to move, and bunching up of the muscle normally attached to the tendon.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tendon rupture</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100550"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakage (tear) of a tendon.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:27047816</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100550"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rupture of tendons</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100550"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruptured tendon</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100550"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tendon rupture</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -44220,6 +45054,32 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0100813 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100813">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000078"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Testicular torsion is when the spermatic cord to a testicle twists, cutting off the blood supply. The most common symptom is acute testicular pain.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doelkens</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-06-09T02:03:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D013086</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:49198006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:81996005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0037856</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spermatic cord torsion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0100813</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Many of the symptoms of testicular torsion are similar to the infection epididymitis.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Testicular torsion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100813"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Testicular torsion is when the spermatic cord to a testicle twists, cutting off the blood supply. The most common symptom is acute testicular pain.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:sdoelken</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0100825 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100825">
@@ -44568,7 +45428,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0200148 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0200148">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001392"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002910"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sebastiankohler</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-06-13T01:01:21Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C2750654</oboInOwl:hasDbXref>
