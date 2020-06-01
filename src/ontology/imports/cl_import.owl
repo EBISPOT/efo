@@ -30,6 +30,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
@@ -220,6 +226,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000586"/>
+        <obo:IAO_0000115>Male germ cell is a germ cell that supports male gamete production.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:72290</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0002765</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VHOG:0001531</oboInOwl:hasDbXref>
@@ -227,6 +234,12 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male germ cell</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Male germ cell is a germ cell that supports male gamete production.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -441,8 +454,10 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <!-- http://purl.obolibrary.org/obo/CL_0000041 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000738"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000771"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fully differentiated eosinophil, a granular leukocyte with a nucleus that usually has two lobes connected by one or more slender threads, and cytoplasm containing coarse, round granules that are uniform in size and which can be stained by the dye eosin. Cells are also differentiated from other granulocytes by a small nuclear-to-cytoplasm ratio (1:3). This cell type is CD49d-positive.</obo:IAO_0000115>
+        <obo:IAO_0000116>The status of eosinophils as true professional antigen presenting cells is unclear, despite their ability to present exogenous peptides and peptides processed from exogenous proteins (in certain studies) via MHC Class II and activate T cells. Per the equivalence axioms, &apos;eosinophil&apos; is reasoned to be a subclass of &apos;professional antigen presenting cell&apos;, though the role of eosinophils as such in the body may be limited.</obo:IAO_0000116>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polymorphonuclear leucocyte</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polymorphonuclear leukocyte</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mature eosinocyte</oboInOwl:hasExactSynonym>
@@ -2135,6 +2150,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000235">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000738"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000766"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mononuclear phagocyte present in variety of tissues, typically differentiated from monocytes, capable of phagocytosing a variety of extracellular particulate material, including immune complexes, microorganisms, and dead cells.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0000801</oboInOwl:hasDbXref>
@@ -2612,6 +2628,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <!-- http://purl.obolibrary.org/obo/CL_0000451 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000451">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000738"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000842"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CL_0000542"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cell of hematopoietic origin, typically resident in particular tissues, specialized in the uptake, processing, and transport of antigens to lymph nodes for the purpose of stimulating an immune response via T cell activation. These cells are lineage negative (CD3-negative, CD19-negative, CD34-negative, and CD56-negative).</obo:IAO_0000115>
@@ -2667,19 +2684,13 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000477">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002371"/>
+        <obo:IAO_0000115>A somatic epithelial cell of the ovarian follicle/egg chamber.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>follicle cell</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBbt:00004904</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovarian follicle cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Editors note: check this. Currently used in goxp</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">follicle cell</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovarian follicle cell</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000477"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovarian follicle cell</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0007297</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -4977,6 +4988,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000785">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000236"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000738"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000945"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CL_0000816"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CL_0000817"/>
@@ -9347,6 +9359,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000787"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An unswitched memory B cell is a memory B cell that has the phenotype IgM-positive, IgD-positive, CD27-positive, CD138-negative, IgG-negative, IgE-negative, and IgA-negative.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>IgD+ memory B cell</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>non-class-switched memory B cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unswitched memory B lymphocyte</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unswitched memory B-cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unswitched memory B-lymphocyte</oboInOwl:hasExactSynonym>
@@ -9371,6 +9384,12 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>IgD+ memory B cell</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:22343568</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000970"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>non-class-switched memory B cell</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HP:0032126</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11538,7 +11557,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002032">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000988"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hematopoietic oligopotent progenitor cell that has the ability to differentiate into limited cell types but lacks lineage cell markers and self renewal capabilities. Cell lacks hematopoeitic lineage markers.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hematopoietic oligopotent progenitor cell that has the ability to differentiate into limited cell types but lacks lineage cell markers and self renewal capabilities.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-01-06T03:43:27Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
@@ -11548,9 +11567,10 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002032"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hematopoietic oligopotent progenitor cell that has the ability to differentiate into limited cell types but lacks lineage cell markers and self renewal capabilities. Cell lacks hematopoeitic lineage markers.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hematopoietic oligopotent progenitor cell that has the ability to differentiate into limited cell types but lacks lineage cell markers and self renewal capabilities.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:19022770</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13425,7 +13445,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002218">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002404"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative thymocyte that has a T cell receptor consisting of a gamma chain that has as part a Vgamma3 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-positive. This cell-type is found in the fetal thymus with highest numbers occurring at E17-E18.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative thymocyte that has a T cell receptor consisting of a gamma chain that has as part a Vgamma3 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-positive. This cell-type is found in the fetal thymus with highest numbers occurring at E17-E18.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-07T01:58:00Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immature DEC precursor</oboInOwl:hasExactSynonym>
@@ -13437,7 +13457,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002218"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative thymocyte that has a T cell receptor consisting of a gamma chain that has as part a Vgamma3 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-positive. This cell-type is found in the fetal thymus with highest numbers occurring at E17-E18.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative thymocyte that has a T cell receptor consisting of a gamma chain that has as part a Vgamma3 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-positive. This cell-type is found in the fetal thymus with highest numbers occurring at E17-E18.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -13729,7 +13749,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002338">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000823"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A natural killer cell that is developmentally immature, has the phenotype CD34-negative, CD56-negative, CD117-positive, CD122-positive,and CD161-positive.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A natural killer cell that is developmentally immature, has the phenotype CD34-negative, CD56-positive, CD117-positive, CD122-positive,and CD161-positive.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-09-21T10:06:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
@@ -13740,11 +13760,12 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002338"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A natural killer cell that is developmentally immature, has the phenotype CD34-negative, CD56-negative, CD117-positive, CD122-positive,and CD161-positive.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A natural killer cell that is developmentally immature, has the phenotype CD34-negative, CD56-positive, CD117-positive, CD122-positive,and CD161-positive.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:add</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0781735149</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12457618</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002338"/>
@@ -14310,7 +14331,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002378">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002404"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-positive and is found in the fetal thymus.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-positive and is found in the fetal thymus.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-07T02:21:07Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fetal Vgamma2+ thymocyte</oboInOwl:hasBroadSynonym>
@@ -14321,7 +14342,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002378"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-positive and is found in the fetal thymus.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-positive and is found in the fetal thymus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14402,8 +14423,8 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <!-- http://purl.obolibrary.org/obo/CL_0002396 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002396">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000576"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000875"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002397"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A patrolling monocyte that is CD14-low and CD16-positive.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-04T12:25:42Z</oboInOwl:creation_date>
@@ -14520,7 +14541,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002401">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002404"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain that has as part a Vgamma3 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus with highest numbers occurring at E17-E18.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain that has as part a Vgamma3 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus with highest numbers occurring at E17-E18.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-07T02:05:46Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mature DEC precursor</oboInOwl:hasExactSynonym>
@@ -14532,7 +14553,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002401"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain that has as part a Vgamma3 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus with highest numbers occurring at E17-E18.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain that has as part a Vgamma3 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus with highest numbers occurring at E17-E18.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14564,7 +14585,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002403">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002404"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-07T02:24:36Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fetal Vgamma2-positive</oboInOwl:hasExactSynonym>
@@ -14575,7 +14596,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002403"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14628,7 +14649,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002406">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002405"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative post-natal thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-positive.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative post-natal thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-positive.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-07T02:53:44Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vgamma2-positive thymocyte</oboInOwl:hasBroadSynonym>
@@ -14639,7 +14660,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002406"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative post-natal thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-positive.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative post-natal thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-positive.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14650,7 +14671,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002407">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002405"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-negative.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-07T02:53:48Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vgamma2-positive</oboInOwl:hasExactSynonym>
@@ -14661,7 +14682,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002407"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-negative.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14672,7 +14693,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002408">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002405"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative post-natal thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-positive.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative post-natal thymocyte that has a T cell receptor consisting of a gamma chain that does not contain a Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-positive.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-07T02:59:05Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vgamma2-negative thymocyte</oboInOwl:hasBroadSynonym>
@@ -14683,7 +14704,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002408"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative post-natal thymocyte that has a T cell receptor consisting of a gamma chain containing a Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-positive.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double negative post-natal thymocyte that has a T cell receptor consisting of a gamma chain that does not contain a Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-positive.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14694,7 +14715,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002409">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002405"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain that does not contain the Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-negative.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-07T02:59:08Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vgamma2-negative</oboInOwl:hasExactSynonym>
@@ -14705,7 +14726,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002409"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain containing Vgamma2 segment, and a delta chain. This cell type is CD4- negative, CD8-negative and CD24-negative. This cell-type is found in the fetal thymus.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thymocyte that has a T cell receptor consisting of a gamma chain that does not contain the Vgamma2 segment, and a delta chain. This cell type is CD4-negative, CD8-negative and CD24-negative.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -15148,7 +15169,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002431">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000809"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double-positive thymocyte that is undergoing positive selection, has high expression of the alpha-beta T cell receptor, is CD69-positive, and is in the process of down regulating the CD4 co-receptor.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double-positive thymocyte that is undergoing positive selection, has high expression of the alpha-beta T cell receptor, is CD69-positive, and is in the process of down regulating the CD8 co-receptor.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-21T02:29:23Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T.4int8+.th</oboInOwl:hasExactSynonym>
@@ -15158,7 +15179,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002431"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double-positive thymocyte that is undergoing positive selection, has high expression of the alpha-beta T cell receptor, is CD69-positive, and is in the process of down regulating the CD4 co-receptor.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double-positive thymocyte that is undergoing positive selection, has high expression of the alpha-beta T cell receptor, is CD69-positive, and is in the process of down regulating the CD8 co-receptor.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -15237,7 +15258,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002435">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000811"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A CD4-positive, CD8-negative thymocyte that expresses high levels of the alpha-beta T cell receptor and is CD69-positive.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A CD8-positive, CD4-negative thymocyte that expresses high levels of the alpha-beta T cell receptor and is CD69-positive.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-21T02:59:14Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T.8SP69+.Th</oboInOwl:hasExactSynonym>
@@ -15248,9 +15269,10 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002435"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A CD4-positive, CD8-negative thymocyte that expresses high levels of the alpha-beta T cell receptor and is CD69-positive.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A CD8-positive, CD4-negative thymocyte that expresses high levels of the alpha-beta T cell receptor and is CD69-positive.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15688,7 +15710,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002458">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0001006"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002461"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dermal dendritic cell that is langerin-positive, CD103-positive, and CD11b-negative.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dermal dendritic cell that is langerin-positive and CD103-positive.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-11-22T04:06:22Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
@@ -15697,7 +15719,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002458"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dermal dendritic cell that is langerin-positive, CD103-positive, and CD11b-negative.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dermal dendritic cell that is langerin-positive and CD103-positive.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -16043,7 +16065,6 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <!-- http://purl.obolibrary.org/obo/CL_0002475 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002475">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002469"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002471"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A MHC-II-negative classical monocyte located in lymphoid tissue that is F4/80-positive, CD11c-intermediate, and CD11b-high.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
