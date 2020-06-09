@@ -7196,11 +7196,11 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:82649003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0004106</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormal curving of the cornea or lens of the eye</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym>Astigmatism</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000483</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The irregular curvature associated with astigmatism means that the optical system is not symmetric about the optical axis. Most commonly the cornea is affected such that the refractive power in one meridian is less than that of the perpendicular axis. Astigmatism of significant degree causes blurry vision.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Astigmatism</rdfs:label>
+        <rdfs:label>Astigmatism</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000483"/>
@@ -7215,6 +7215,12 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Abnormal curving of the cornea or lens of the eye</owl:annotatedTarget>
         <oboInOwl:hasDbXref>orcid.org/0000-0002-6548-5200</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000483"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Astigmatism</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -11989,16 +11995,16 @@ applied inaccurately.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001100"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heterochromia iridis is a difference in the color of the iris in the two eyes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Different colored eyes</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ORCID:0000-0001-6908-9849</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001100"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heterochromia iridis is a difference in the color of the iris in the two eyes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -19766,17 +19772,30 @@ applied inaccurately.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002091">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002086"/>
-        <obo:IAO_0000115>A functional defect characterized by reduced total lung capacity (TLC) not associated with abnormalities of expiratory airflow or airway resistance. Restrictive lung disease may be caused by alterations in lung parenchyma or because of a disease of the pleura, chest wall, or neuromuscular apparatus.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0030878"/>
+        <obo:IAO_0000115>A functional defect characterized by reduced total lung capacity (TLC) not associated with abnormalities of expiratory airflow or airway resistance. Spirometrically, a restrictive defect is defined as FEV1 (forced expiratory volume in 1 second) and FVC (forced vital capacity) less than 80 per cent. Restrictive lung disease may be caused by alterations in lung parenchyma or because of a disease of the pleura, chest wall, or neuromuscular apparatus.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0002111</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:36485005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0085581</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C3277226</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Restrictive deficit on pulmonary function testing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Restrictive deficit on pulmonary function tests</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Restrictive respiratory disease</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Restrictive respiratory insufficiency</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Restrictive respiratory syndrome</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spirometric restriction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Stiff lung or chest wall causing decreased lung volume</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>Restrictive lung disease</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002091</oboInOwl:id>
         <rdfs:comment>The most commonly used term for this feature is restrictive lung disease, but we choose the term Restrictive ventilatory defect to emphasize that this term refers to a phenotypic feature rather than a disease entity.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restrictive ventilatory defect</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002091"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A functional defect characterized by reduced total lung capacity (TLC) not associated with abnormalities of expiratory airflow or airway resistance. Spirometrically, a restrictive defect is defined as FEV1 (forced expiratory volume in 1 second) and FVC (forced vital capacity) less than 80 per cent. Restrictive lung disease may be caused by alterations in lung parenchyma or because of a disease of the pleura, chest wall, or neuromuscular apparatus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIHR:ldaugherty</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002091"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -19838,6 +19857,7 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym>Abnormal breathing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Breathing difficulty</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Difficult to breathe</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dyspnoea</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Trouble breathing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002094</oboInOwl:id>
@@ -19848,6 +19868,12 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Difficult or labored breathing.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002094"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dyspnoea</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002094"/>
@@ -20109,6 +20135,7 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym>Absence seizure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Absence seizures</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Brief seizures with staring spells</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generalised non-motor (absence) seizure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Generalised non-motor seizure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Petit mal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Petit mal seizure</oboInOwl:hasExactSynonym>
@@ -20139,6 +20166,12 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedTarget>Brief seizures with staring spells</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6548-5200</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002121"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generalised non-motor (absence) seizure</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002121"/>
@@ -20317,10 +20350,17 @@ applied inaccurately.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100659"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:422504002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0948008</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ischaemic stroke</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002140</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ischemic stroke</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002140"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ischaemic stroke</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
     
 
 
@@ -25918,7 +25958,7 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High immunoglobulin E</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003212</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increased circulating total IgE level</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increased circulating IgE level</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003212"/>
@@ -26215,7 +26255,7 @@ applied inaccurately.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003282">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormally reduced serum levels of alkaline phosphatase activity.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormally reduced serum levels of alkaline phosphatase.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1860130</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decreased serum alkaline phosphatase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Low ALP</oboInOwl:hasExactSynonym>
@@ -26226,7 +26266,7 @@ applied inaccurately.</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003282"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormally reduced serum levels of alkaline phosphatase activity.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormally reduced serum levels of alkaline phosphatase.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -30980,10 +31020,9 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006512</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D008173</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0600260</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obstructive lung disease</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym>Obstructive lung disease</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006536</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obstructive lung disease</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulmonary obstruction</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006536"/>
@@ -30994,7 +31033,7 @@ applied inaccurately.</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006536"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obstructive lung disease</owl:annotatedTarget>
+        <owl:annotatedTarget>Obstructive lung disease</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -32865,6 +32904,7 @@ applied inaccurately.</rdfs:comment>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reduction in immunoglobulin levels of the IgG2 subclass in the blood circulation.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008310</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4021545</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Decreased IgG2 level in blood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Immunoglobulin IgG2 deficiency</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reduced IgG2 levels</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
@@ -34511,7 +34551,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maternal diabetes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gestational diabetes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maternal hyperglycemia</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0009800</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maternal diabetes</rdfs:label>
     </owl:Class>
@@ -34519,7 +34558,7 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009800"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maternal diabetes can either be a gestational, mostly type 2 diabetes, or a type 1 diabetes. Essential is the resulting maternal hyperglycemia as a non-specific teratogen, imposing the same risk of congenital malformations to pregnant women with both type 1 and type2 diabetes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>HPO:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009800"/>
@@ -42684,7 +42723,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0030839 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030839">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025142"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012514"/>
         <obo:IAO_0000115>An unpleasant sensation characterized by physical discomfort (such as pricking, throbbing, or aching) localized to the knee.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Pain under knee cap</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:30989003</oboInOwl:hasDbXref>
@@ -43542,6 +43581,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0040175">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
+        <obo:IAO_0000115>Reduced level of platelet-activating factor acetylhydrolase.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:C566640</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C3280315</oboInOwl:hasDbXref>
         <rdfs:label>Platelet-activating factor acetylhydrolase deficiency</rdfs:label>
@@ -43628,12 +43668,18 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001892"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002088"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011028"/>
-        <obo:IAO_0000115>A hemorrhage occurring within the lung.</obo:IAO_0000115>
+        <obo:IAO_0000115>Pulmonary hemorrhage is a bleeding within the lungs. Older children and adults may spit blood or bloody sputum. Neonates, infants and young children usually do not spit up blood. Anemia, pulmonary infiltrates, increasingling bloody return on BAL and the presence of hemosiderin-laden macrophages in broncho-alveolar lavage (BAL) fluid or lung biopsy can diagnose lung bleeding. Alveolar macrophages contain phagocytosed red blood cells and stain positive for hemosiderin, a product of hemoglobin degradation, after about 48-72 hours following pulmonary hemorraghe. Previous or recurrent bleeding can thus be distinguished from fresh events. A differentiation into local or diffuse is of importance. Also differentiate if pulmonary hemorrhage is due to a primary lung disorder or a manifestation of a systemic disease.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4280720</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Intrapulmonary hemorrhage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulmonary haemorrhage</oboInOwl:hasExactSynonym>
         <rdfs:label>Pulmonary hemorrhage</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040223"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Pulmonary hemorrhage is a bleeding within the lungs. Older children and adults may spit blood or bloody sputum. Neonates, infants and young children usually do not spit up blood. Anemia, pulmonary infiltrates, increasingling bloody return on BAL and the presence of hemosiderin-laden macrophages in broncho-alveolar lavage (BAL) fluid or lung biopsy can diagnose lung bleeding. Alveolar macrophages contain phagocytosed red blood cells and stain positive for hemosiderin, a product of hemoglobin degradation, after about 48-72 hours following pulmonary hemorraghe. Previous or recurrent bleeding can thus be distinguished from fresh events. A differentiation into local or diffuse is of importance. Also differentiate if pulmonary hemorrhage is due to a primary lung disorder or a manifestation of a systemic disease.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:16473816</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040223"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
