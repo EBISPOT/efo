@@ -14,8 +14,16 @@ curl -L http://purl.obolibrary.org/obo/uberon.owl > mirror/uberon.owl
 echo "Fetching HPO..."
 curl -L http://purl.obolibrary.org/obo/hp.owl > mirror/hp.owl
 
+echo "Fetching MONDO (OWL Version)..."
+curl -L http://purl.obolibrary.org/obo/mondo.owl > mirror/mondo-owl.owl
+
+
 echo "Fetching CL..."
 curl -L http://purl.obolibrary.org/obo/cl.owl > mirror/cl.owl
+
+echo "Fetching HPOA from Monarch..."
+curl -L https://data.monarchinitiative.org/ttl/hpoa.ttl > mirror/hpoa.owl
+
 
 #efo-edit.owl from efo2 branch is no longer needed, edit master efo-edit.owl instead.
 #curl -L https://raw.githubusercontent.com/EBISPOT/efo/efo2/src/ontology/efo-edit.owl > efo-edit.owl
