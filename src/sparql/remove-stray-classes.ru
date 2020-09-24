@@ -9,7 +9,9 @@ DELETE {
 WHERE {
   ?stray a owl:Class .
   FILTER NOT EXISTS {
-    ?stray ?p ?x .
+    { ?stray ?p ?x . }
+    UNION 
+    { ?y ?r ?stray . }
     FILTER(?p!=rdf:type)
   }
 }

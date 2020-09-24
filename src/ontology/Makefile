@@ -160,12 +160,12 @@ components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
 components/disease_to_phenotype_merged.owl: components/efo-rename.csv $(D2P_RAW)
 	$(ROBOT) merge $(addprefix -i , $(D2P_RAW)) \
 		rename --mappings components/efo-rename.csv \
-		query --update $(SPARQLDIR)/remove-stray-classes.ru \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
 components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl components/legal_diseases.txt
 	$(ROBOT) merge -i $< \
 		remove -T components/legal_diseases.txt --select complement --trim true \
+		query --update $(SPARQLDIR)/remove-stray-classes.ru \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
 components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl
