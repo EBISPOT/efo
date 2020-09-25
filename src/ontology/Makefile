@@ -131,6 +131,9 @@ edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
 # Components
 # ----------------------------------------
 
+D2P_SOURCES=hpoa mondo-owl
+D2P_RAW=$(foreach V,$(D2P_SOURCES), components/d2p_$V.ttl)
+
 COMPONENTS=subclasses mondo_efo_import anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
 COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 FOREIGN_AXIOMS=hancestro uberon
@@ -139,6 +142,34 @@ FOREIGN_AXIOM_FILES_DIFF=$(patsubst %, qc/diff_efo-%.txt, $(FOREIGN_AXIOMS))
 
 components/subclasses.owl: ../templates/subclasses.csv
 	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
+
+components/d2p_%.ttl: mirror/%.owl
+	$(ROBOT) query -f ttl -i $< --query $(SPARQLDIR)/d2p-$*.ru $@
+
+components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
+	python ../scripts/rename_tsv_subset.py $^ $@
+
+# If you change the relation in the sparql query, make sure you add the new relation here as well.
+components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
+	$(ROBOT) query -i $< -q $(SPARQLDIR)/efo-diseases.sparql $@.efo.txt
+	$(ROBOT) query -i components/disease_to_phenotype_merged.owl -q $(SPARQLDIR)/hp_terms.sparql $@.hp.txt
+	cat $@.efo.txt $@.hp.txt > $@ && rm $@.hp.txt $@.efo.txt
+	echo "http://purl.org/dc/elements/1.1/source" >> $@
+	echo "http://www.w3.org/2004/02/skos/core#related" >> $@
+
+components/disease_to_phenotype_merged_signature.tsv: components/disease_to_phenotype_merged.owl
+	$(ROBOT) query -i $< -q $(SPARQLDIR)/terms.sparql $@
+
+components/disease_to_phenotype_merged.owl: $(D2P_RAW)
+	$(ROBOT) merge $(addprefix -i , $(D2P_RAW)) \
+		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
+
+components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl  components/efo-rename.tsv components/legal_diseases.txt
+	$(ROBOT) merge -i $< \
+		rename --mappings components/efo-rename.tsv \
+		remove -T components/legal_diseases.txt --select complement --trim true \
+		query --update $(SPARQLDIR)/remove-stray-classes.ru \
+		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
 components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl
 	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
