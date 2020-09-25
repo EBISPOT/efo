@@ -14,7 +14,7 @@ CONSTRUCT {
      owl:annotatedSource ?disease ;
      owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#related> ;
      owl:annotatedTarget ?phenotype ;
-     dc:source <http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa>  ] .
+     dc:source <http://purl.obolibrary.org/obo/mondo.owl>  ] .
  }
 
 WHERE {
