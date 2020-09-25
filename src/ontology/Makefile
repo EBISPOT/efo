@@ -146,10 +146,10 @@ components/subclasses.owl: ../templates/subclasses.csv
 components/d2p_%.ttl: mirror/%.owl
 	$(ROBOT) query -f ttl -i $< --query $(SPARQLDIR)/d2p-$*.ru $@
 
-components/efo-rename.csv:
-	echo "Old IRI,New IRI" > $@
-	echo "http://omim.org/entry/203800,http://purl.obolibrary.org/obo/MONDO_0008763" >> $@
+components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
+	python ../scripts/rename_tsv_subset.py $^ $@
 
+# If you change the relation in the sparql query, make sure you add the new relation here as well.
 components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
 	$(ROBOT) query -i $< -q $(SPARQLDIR)/efo-diseases.sparql $@.efo.txt
 	$(ROBOT) query -i components/disease_to_phenotype_merged.owl -q $(SPARQLDIR)/hp_terms.sparql $@.hp.txt
@@ -157,13 +157,16 @@ components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
 	echo "http://purl.org/dc/elements/1.1/source" >> $@
 	echo "http://www.w3.org/2004/02/skos/core#related" >> $@
 
-components/disease_to_phenotype_merged.owl: components/efo-rename.csv $(D2P_RAW)
+components/disease_to_phenotype_merged_signature.tsv: components/disease_to_phenotype_merged.owl
+	$(ROBOT) query -i $< -q $(SPARQLDIR)/terms.sparql $@
+
+components/disease_to_phenotype_merged.owl: $(D2P_RAW)
 	$(ROBOT) merge $(addprefix -i , $(D2P_RAW)) \
-		rename --mappings components/efo-rename.csv \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
-components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl components/legal_diseases.txt
+components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl  components/efo-rename.tsv components/legal_diseases.txt
 	$(ROBOT) merge -i $< \
+		rename --mappings components/efo-rename.tsv \
 		remove -T components/legal_diseases.txt --select complement --trim true \
 		query --update $(SPARQLDIR)/remove-stray-classes.ru \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
