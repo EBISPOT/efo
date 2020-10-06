@@ -147,7 +147,7 @@ components/d2p_%.ttl: mirror/%.owl
 	$(ROBOT) query -f ttl -i $< --query $(SPARQLDIR)/d2p-$*.ru $@
 
 components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
-	python ../scripts/rename_tsv_subset.py $^ $@
+	python3 ../scripts/rename_tsv_subset.py $^ $@
 
 # If you change the relation in the sparql query, make sure you add the new relation here as well.
 components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
