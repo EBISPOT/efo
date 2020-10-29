@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?cls WHERE {
 	?cls a owl:Class .
   ?cls owl:deprecated ?dep .
-	FILTER (!regex(?dep, "true", "i")) .
+	FILTER (!regex(?dep, "true"^^xsd:boolean, "i")) .
         FILTER (!isBlank(?cls))
 }
 ORDER BY ?cls
