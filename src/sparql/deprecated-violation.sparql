@@ -1,13 +1,16 @@
+# find owl:deprecated literals that are not true booleans.
+# see https://github.com/EBISPOT/efo/issues/869
+
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX replaced_by: <http://purl.obolibrary.org/obo/IAO_0100001>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?cls WHERE {
-	?cls a owl:Class .
+SELECT ?cls ?dep
+WHERE {
+  ?cls a owl:Class .
   ?cls owl:deprecated ?dep .
-	FILTER (!regex(?dep, "true"^^xsd:boolean, "i")) .
-        FILTER (!isBlank(?cls))
+  FILTER (DATATYPE(?dep) != xsd:boolean || ?dep != "true"^^xsd:boolean ) .
 }
 ORDER BY ?cls
