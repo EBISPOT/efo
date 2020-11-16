@@ -11,18 +11,18 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.23.0
-Date Released: 15th Octobber 2020
-Class Count: 27948
+Experimental Factor Ontology version 3.24.0
+Date Released: 16th November 2020
+Class Count: 28092
 
 Summary: 
 
-EFO 3.23.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects and the GWAS Catalog.
+EFO 3.24.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects and the GWAS Catalog. This release also includes more than 50 new lymphoblastoid cell line terms, UniProtKB mappings to OMIM imported from Mondo and sequencing, protocol and cell type terms for the Human Cell Atlas and Single Cell Atlas. Fixes to the EFO pipeline also include additional checks to ensure obsoletion information is consistent for all obsoleted EFO terms.
 
 General Stats:
-Number of classes changed: 113
-Number of classes added: 59
-Number of classes deleted: 3
+Number of classes changed: 106
+Number of classes added: 144
+Number of classes deleted: 0
 
 ----------------------------------
 1.	Changes to URIs
@@ -38,839 +38,1392 @@ Number of classes deleted: 3
 
 @Classes new to this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032610
-Label(s): mitochondrial complex 1 deficiency, nuclear type 5 
-+ 'mitochondrial complex 1 deficiency, nuclear type 5' SubClassOf 'Isolated NADH-CoQ reductase deficiency'
+Class: http://purl.obolibrary.org/obo/MONDO_0033533
+Label(s): combined oxidative phosphorylation deficiency 45 
++ 'combined oxidative phosphorylation deficiency 45' SubClassOf 'combined oxidative phosphorylation deficiency'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032591
-Label(s): hyperparathyroidism, transient neonatal 
-+ 'hyperparathyroidism, transient neonatal' SubClassOf 'Genetic hyperparathyroidism'
+Class: http://purl.obolibrary.org/obo/MONDO_0033537
+Label(s): combined oxidative phosphorylation deficiency 47 
++ 'combined oxidative phosphorylation deficiency 47' SubClassOf 'combined oxidative phosphorylation deficiency'
 
-Class: http://purl.obolibrary.org/obo/CHEBI_33853
-Label(s): phenols 
-+ 'phenols' SubClassOf 'chemical entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0008057
+Label(s): Carney complex, type 1 
++ 'Carney complex, type 1' SubClassOf 'Carney complex'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0014714
-Label(s): progressive microcephaly-seizures-cortical blindness-developmental delay syndrome 
-+ 'progressive microcephaly-seizures-cortical blindness-developmental delay syndrome' SubClassOf 'Nervous system anomaly with eye involvement'
-+ 'progressive microcephaly-seizures-cortical blindness-developmental delay syndrome' SubClassOf 'Syndrome with microcephaly as major feature'
+Class: http://purl.obolibrary.org/obo/MONDO_0100218
+Label(s): arthrogryposis multiplex congenita 5 
++ 'arthrogryposis multiplex congenita 5' SubClassOf 'Arthrogryposis multiplex congenita'
 
-Class: http://purl.obolibrary.org/obo/HP_0008994
-Label(s): Proximal muscle weakness in lower limbs 
-+ 'Proximal muscle weakness in lower limbs' SubClassOf 'Limb muscle weakness'
+Class: http://purl.obolibrary.org/obo/MONDO_0060555
+Label(s): vertebral, cardiac, renal, and limb defects syndrome 2 
++ 'vertebral, cardiac, renal, and limb defects syndrome 2' SubClassOf 'congenital vertebral-cardiac-renal anomalies syndrome'
 
-Class: http://purl.obolibrary.org/obo/HP_0000580
-Label(s): Pigmentary retinopathy 
-+ 'Pigmentary retinopathy' SubClassOf 'Abnormal retinal morphology'
+Class: http://purl.obolibrary.org/obo/MONDO_0060554
+Label(s): vertebral, cardiac, renal, and limb defects syndrome 1 
++ 'vertebral, cardiac, renal, and limb defects syndrome 1' SubClassOf 'congenital vertebral-cardiac-renal anomalies syndrome'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018865
-Label(s): striate palmoplantar keratoderma 
-+ 'striate palmoplantar keratoderma' SubClassOf 'Isolated focal palmoplantar keratoderma'
+Class: http://purl.obolibrary.org/obo/MONDO_0014916
+Label(s): developmental and epileptic encephalopathy, 41 
++ 'developmental and epileptic encephalopathy, 41' SubClassOf 'developmental and epileptic encephalopathy'
++ 'developmental and epileptic encephalopathy, 41' SubClassOf 'undetermined early-onset epileptic encephalopathy'
++ 'developmental and epileptic encephalopathy, 41' SubClassOf 'Early myoclonic encephalopathy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032760
-Label(s): developmental delay with or without dysmorphic facies and autism 
-+ 'developmental delay with or without dysmorphic facies and autism' SubClassOf 'genetic disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_0014836
+Label(s): Charcot-Marie-Tooth disease axonal type 2CC 
++ 'Charcot-Marie-Tooth disease axonal type 2CC' SubClassOf 'Charcot-Marie-Tooth disease type 2'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0009064
-Label(s): ocular cystinosis 
-+ 'ocular cystinosis' SubClassOf 'Metabolic disease with pigmentary retinitis'
-+ 'ocular cystinosis' SubClassOf 'Metabolic disease with corneal opacity'
-+ 'ocular cystinosis' SubClassOf 'Cystinosis'
+Class: http://purl.obolibrary.org/obo/MONDO_0012320
+Label(s): migraine, familial hemiplegic, 3 
++ 'migraine, familial hemiplegic, 3' SubClassOf 'familial hemiplegic migraine'
++ 'migraine, familial hemiplegic, 3' SubClassOf 'Familial or sporadic hemiplegic migraine'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100196
-Label(s): TPM2-related myopathy 
-+ 'TPM2-related myopathy' SubClassOf 'Qualitative or quantitative defects of tropomyosin'
-+ 'TPM2-related myopathy' SubClassOf 'Congenital myopathy'
+Class: http://purl.obolibrary.org/obo/MONDO_0014536
+Label(s): thrombocytopenia 5 
++ 'thrombocytopenia 5' SubClassOf 'blood platelet disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100194
-Label(s): pregnancy associated osteoporosis 
-+ 'pregnancy associated osteoporosis' SubClassOf 'osteoporosis'
-+ 'pregnancy associated osteoporosis' SubClassOf 'pregnancy disorder'
-+ 'pregnancy associated osteoporosis' EquivalentTo 'osteoporosis' and 'pregnancy disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_0014418
+Label(s): myopathy, centronuclear, 5 
++ 'myopathy, centronuclear, 5' SubClassOf 'Autosomal recessive centronuclear myopathy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0010283
-Label(s): syndromic X-linked intellectual disability Lubs type 
-+ 'syndromic X-linked intellectual disability Lubs type' SubClassOf 'congenital nervous system disorder'
-+ 'syndromic X-linked intellectual disability Lubs type' SubClassOf 'X-linked syndromic intellectual disability'
-+ 'syndromic X-linked intellectual disability Lubs type' SubClassOf 'Multiple congenital anomalies/dysmorphic syndrome-intellectual disability'
-+ 'syndromic X-linked intellectual disability Lubs type' SubClassOf 'Partial duplication of the long arm of chromosome X'
+Class: http://purl.obolibrary.org/obo/MONDO_0014326
+Label(s): nemaline myopathy 9 
++ 'nemaline myopathy 9' SubClassOf 'Intermediate nemaline myopathy'
++ 'nemaline myopathy 9' SubClassOf 'Childhood-onset nemaline myopathy'
++ 'nemaline myopathy 9' SubClassOf 'Severe congenital nemaline myopathy'
++ 'nemaline myopathy 9' SubClassOf 'Typical nemaline myopathy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0024546
-Label(s): hypertrophic osteoarthropathy, primary, autosomal recessive, 1 
-+ 'hypertrophic osteoarthropathy, primary, autosomal recessive, 1' SubClassOf 'Pachydermoperiostosis'
+Class: http://purl.obolibrary.org/obo/MONDO_0060650
+Label(s): Leber congenital amaurosis with early-onset deafness 
++ 'Leber congenital amaurosis with early-onset deafness' SubClassOf 'Leber congenital amaurosis'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020852
-Label(s): spermatogenic failure 31 
-+ 'spermatogenic failure 31' SubClassOf 'azoospermia'
+Class: http://purl.obolibrary.org/obo/MONDO_0013196
+Label(s): colorectal cancer, hereditary nonpolyposis, type 8 
++ 'colorectal cancer, hereditary nonpolyposis, type 8' SubClassOf 'Lynch syndrome'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020850
-Label(s): intellectual disability, autosomal recessive 65 
-+ 'intellectual disability, autosomal recessive 65' SubClassOf 'Autosomal recessive non-syndromic intellectual disability'
+Class: http://purl.obolibrary.org/obo/MONDO_0033551
+Label(s): immunodeficiency 72 with autoinflammation 
++ 'immunodeficiency 72 with autoinflammation' SubClassOf 'immunodeficiency disease'
++ 'immunodeficiency 72 with autoinflammation' SubClassOf 'genetic disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010820
-Label(s): spontaneous coronary artery dissection 
-+ 'spontaneous coronary artery dissection' SubClassOf 'coronary artery disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0033549
+Label(s): optic atrophy 12 
++ 'optic atrophy 12' SubClassOf 'hereditary optic atrophy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020723
-Label(s): vitamin D-dependent rickets, type 1A 
-+ 'vitamin D-dependent rickets, type 1A' SubClassOf 'Hypocalcemic vitamin D-dependent rickets'
+Class: http://purl.obolibrary.org/obo/MONDO_0033548
+Label(s): myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies 
++ 'myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies' SubClassOf 'genetic disorder'
 
-Class: http://purl.obolibrary.org/obo/HP_0001710
-Label(s): Conotruncal defect 
-+ 'Conotruncal defect' SubClassOf 'Abnormal heart morphology'
-+ 'Conotruncal defect' SubClassOf 'Abnormality of the vasculature'
+Class: http://purl.obolibrary.org/obo/MONDO_0033547
+Label(s): Li-Ghorbani-Weisz-Hubshman syndrome 
++ 'Li-Ghorbani-Weisz-Hubshman syndrome' SubClassOf 'genetic disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010828
-Label(s): myofibrillar myopathy 9 with early respiratory failure 
-+ 'myofibrillar myopathy 9 with early respiratory failure' SubClassOf 'Myofibrillar myopathy'
+Class: http://purl.obolibrary.org/obo/MONDO_0033546
+Label(s): neurodegeneration, infantile-onset, biotin-responsive 
++ 'neurodegeneration, infantile-onset, biotin-responsive' SubClassOf 'genetic disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010826
-Label(s): cystine urolithiasis 
-+ 'cystine urolithiasis' SubClassOf 'urolithiasis'
+Class: http://purl.obolibrary.org/obo/MONDO_0033545
+Label(s): mitochondrial DNA depletion syndrome 19 
++ 'mitochondrial DNA depletion syndrome 19' SubClassOf 'Mitochondrial DNA depletion syndrome'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010825
-Label(s): response to fluoropyrimidines 
-+ 'response to fluoropyrimidines' SubClassOf 'response to antimetabolite'
+Class: http://purl.obolibrary.org/obo/MONDO_0033544
+Label(s): Tolchin-Le Caignec syndrome 
++ 'Tolchin-Le Caignec syndrome' SubClassOf 'genetic disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010824
-Label(s): response to rhododendrol 
-+ 'response to rhododendrol' SubClassOf 'is_about' some '4-(4-Hydroxyphenyl)-2-butanol'
-+ 'response to rhododendrol' SubClassOf 'response to drug'
+Class: http://purl.obolibrary.org/obo/MONDO_0033543
+Label(s): cone-rod synaptic disorder syndrome, congenital nonprogressive 
++ 'cone-rod synaptic disorder syndrome, congenital nonprogressive' SubClassOf 'genetic disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010822
-Label(s): stenosing tenosynovitis 
-+ 'stenosing tenosynovitis' SubClassOf 'tenosynovitis'
+Class: http://purl.obolibrary.org/obo/MONDO_0033542
+Label(s): immunodeficiency 70 
++ 'immunodeficiency 70' SubClassOf 'genetic disorder'
++ 'immunodeficiency 70' SubClassOf 'immunodeficiency disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010821
-Label(s): liver fat measurement 
-+ 'liver fat measurement' SubClassOf 'liver disease biomarker'
+Class: http://purl.obolibrary.org/obo/MONDO_0033541
+Label(s): immunodeficiency 69 
++ 'immunodeficiency 69' SubClassOf 'genetic disorder'
++ 'immunodeficiency 69' SubClassOf 'immunodeficiency disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010819
-Label(s): clonal hematopoiesis 
-+ 'clonal hematopoiesis' SubClassOf 'precancerous condition'
-+ 'clonal hematopoiesis' SubClassOf 'hematologic disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0014138
+Label(s): nemaline myopathy 8 
++ 'nemaline myopathy 8' SubClassOf 'Severe congenital nemaline myopathy'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010818
-Label(s): sensory perception of dietary content 
-+ 'sensory perception of dietary content' SubClassOf 'diet measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0033534
+Label(s): combined oxidative phosphorylation deficiency 46 
++ 'combined oxidative phosphorylation deficiency 46' SubClassOf 'combined oxidative phosphorylation deficiency'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010817
-Label(s): self-injurious ideation 
-+ 'self-injurious ideation' SubClassOf 'Self-injurious behavior'
+Class: http://purl.obolibrary.org/obo/MONDO_0010427
+Label(s): syndromic X-linked intellectual disability Raymond type 
++ 'syndromic X-linked intellectual disability Raymond type' SubClassOf 'X-linked syndromic intellectual disability'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010816
-Label(s): dietary fat liking measurement 
-+ 'dietary fat liking measurement' SubClassOf 'taste liking measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0100219
+Label(s): growth hormone insensitivity syndrome with immune dysregulation 2, autosomal dominant 
++ 'growth hormone insensitivity syndrome with immune dysregulation 2, autosomal dominant' SubClassOf 'growth hormone insensitivity syndrome with immune dysregulation'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0019263
-Label(s): autosomal erythropoietic protoporphyria 
-+ 'autosomal erythropoietic protoporphyria' SubClassOf 'Erythropoietic protoporphyria'
+Class: http://purl.obolibrary.org/obo/MONDO_0100213
+Label(s): IFAP syndrome with or without BRESHECK syndrome 
++ 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Developmental anomaly of metabolic origin'
++ 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Alopecia'
++ 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Recessive X-linked ichthyosis'
++ 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'syndromic recessive X-linked ichthyosis'
++ 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'IFAP syndrome'
++ 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'genetic alopecia'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010725
-Label(s): aseptic loosening 
-+ 'aseptic loosening' SubClassOf 'complication'
+Class: http://purl.obolibrary.org/obo/MONDO_0100212
+Label(s): IFAP syndrome 
++ 'IFAP syndrome' SubClassOf 'Malformation syndrome with skin/mucosae involvement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100186
-Label(s): GTP cyclohydrolase I deficiency with hyperphenylalaninemia 
-+ 'GTP cyclohydrolase I deficiency with hyperphenylalaninemia' SubClassOf 'Hyperphenylalaninemia'
-+ 'GTP cyclohydrolase I deficiency with hyperphenylalaninemia' SubClassOf 'GTP cyclohydrolase I deficiency'
+Class: http://purl.obolibrary.org/obo/MONDO_0100210
+Label(s): growth hormone insensitivity syndrome with immune dysregulation 
++ 'growth hormone insensitivity syndrome with immune dysregulation' SubClassOf 'Growth hormone insensitivity syndrome'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0030910
-Label(s): intellectual disability, autosomal dominant 45 
-+ 'intellectual disability, autosomal dominant 45' SubClassOf 'Autosomal dominant non-syndromic intellectual disability'
+Class: http://purl.obolibrary.org/obo/MONDO_0012538
+Label(s): nemaline myopathy 7 
++ 'nemaline myopathy 7' SubClassOf 'Typical nemaline myopathy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032687
-Label(s): intellectual developmental disorder with abnormal behavior, microcephaly, and short stature 
-+ 'intellectual developmental disorder with abnormal behavior, microcephaly, and short stature' SubClassOf 'genetic disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_0100189
+Label(s): apolipoprotein A-I deficiency 
++ 'apolipoprotein A-I deficiency' SubClassOf 'Hypoalphalipoproteinemia'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032737
-Label(s): spastic paraplegia 80, autosomal dominant 
-+ 'spastic paraplegia 80, autosomal dominant' SubClassOf 'Hereditary spastic paraplegia'
+Class: http://purl.obolibrary.org/obo/MONDO_0100172
+Label(s): intellectual disability, autosomal dominant 
++ 'intellectual disability, autosomal dominant' SubClassOf 'autosomal dominant disease'
++ 'intellectual disability, autosomal dominant' SubClassOf 'developmental disorder of mental health'
++ 'intellectual disability, autosomal dominant' SubClassOf 'Rare genetic neurological disorder'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0044714
-Label(s): mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome 
-+ 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'hereditary ataxia'
-+ 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'Mitochondrial myopathy'
-+ 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'Rare genetic movement disorder'
-+ 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'congenital nervous system disorder'
-+ 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'Genetic neurodegenerative disease'
-+ 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'Unspecified mitochondrial disorder'
-+ 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'Rare genetic tremor disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_0020831
+Label(s): congenital vertebral-cardiac-renal anomalies syndrome 
++ 'congenital vertebral-cardiac-renal anomalies syndrome' SubClassOf 'Rare syndrome with cardiac malformations'
++ 'congenital vertebral-cardiac-renal anomalies syndrome' SubClassOf 'autosomal recessive disease'
++ 'congenital vertebral-cardiac-renal anomalies syndrome' SubClassOf 'Syndromic genetic deafness'
++ 'congenital vertebral-cardiac-renal anomalies syndrome' SubClassOf 'Syndromic renal or urinary tract malformation'
++ 'congenital vertebral-cardiac-renal anomalies syndrome' SubClassOf 'Genetic multiple congenital anomalies/dysmorphic syndrome without intellectual disability'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012806
-Label(s): ectodermal dysplasia and immunodeficiency 2 
-+ 'ectodermal dysplasia and immunodeficiency 2' SubClassOf 'Hypohidrotic ectodermal dysplasia with immunodeficiency'
+Class: http://www.ebi.ac.uk/efo/EFO_0010868
+Label(s): HG03103 
++ 'HG03103' SubClassOf 'lymphoblastoid cell line'
++ 'HG03103' SubClassOf 'part of' some 'blood'
++ 'HG03103' SubClassOf 'blood component'
++ 'HG03103' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03103' SubClassOf 'has_quality' some 'male'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0030919
-Label(s): intellectual disability, autosomal dominant 53 
-+ 'intellectual disability, autosomal dominant 53' SubClassOf 'Autosomal dominant non-syndromic intellectual disability'
+Class: http://purl.obolibrary.org/obo/UBERON_0003454
+Label(s): small intestine Peyer's patch 
++ 'small intestine Peyer's patch' EquivalentTo 'Peyer's patch' and ('part of' some 'small intestine')
++ 'small intestine Peyer's patch' SubClassOf 'Peyer's patch'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012868
-Label(s): thrombophilia due to protein S deficiency, autosomal dominant 
-+ 'thrombophilia due to protein S deficiency, autosomal dominant' SubClassOf 'Hereditary thrombophilia due to congenital protein S deficiency'
-+ 'thrombophilia due to protein S deficiency, autosomal dominant' SubClassOf 'autosomal dominant disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0020794
+Label(s): colorectal medullary carcinoma 
++ 'colorectal medullary carcinoma' SubClassOf 'colorectal adenocarcinoma'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0007859
-Label(s): palmoplantar keratoderma i, striate, focal, or diffuse 
-+ 'palmoplantar keratoderma i, striate, focal, or diffuse' SubClassOf 'striate palmoplantar keratoderma'
+Class: http://www.ebi.ac.uk/efo/EFO_0010898
+Label(s): mesothelial cell of large intestine 
++ 'mesothelial cell of large intestine' SubClassOf 'mesothelial cell'
++ 'mesothelial cell of large intestine' EquivalentTo 'mesothelial cell' and ('part of' some 'large intestine')
++ 'mesothelial cell of large intestine' SubClassOf 'epithelial cell of large intestine'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012988
-Label(s): hypogonadotropic hypogonadism 6 with or without anosmia 
-+ 'hypogonadotropic hypogonadism 6 with or without anosmia' SubClassOf 'Kallmann syndrome'
+Class: http://www.ebi.ac.uk/efo/EFO_0010897
+Label(s): mesothelial cell of small intestine 
++ 'mesothelial cell of small intestine' SubClassOf 'mesothelial cell'
++ 'mesothelial cell of small intestine' SubClassOf 'intestinal epithelial cell'
++ 'mesothelial cell of small intestine' EquivalentTo 'mesothelial cell' and ('part of' some 'small intestine')
 
-Class: http://purl.obolibrary.org/obo/CHEBI_81278
-Label(s): 4-(4-Hydroxyphenyl)-2-butanol 
-+ '4-(4-Hydroxyphenyl)-2-butanol' SubClassOf 'phenols'
+Class: http://www.ebi.ac.uk/efo/EFO_0010895
+Label(s): stromal cell of lamina propria of small intestine 
++ 'stromal cell of lamina propria of small intestine' SubClassOf 'stromal cell'
++ 'stromal cell of lamina propria of small intestine' EquivalentTo 'stromal cell' and ('part of' some 'lamina propria of small intestine')
 
-Class: http://purl.obolibrary.org/obo/MONDO_0044206
-Label(s): otospondylomegaepiphyseal dysplasia, autosomal recessive 
-+ 'otospondylomegaepiphyseal dysplasia, autosomal recessive' SubClassOf 'Otospondylomegaepiphyseal dysplasia'
+Class: http://www.ebi.ac.uk/efo/EFO_0010894
+Label(s): stromal cell of lamina propria of large intestine 
++ 'stromal cell of lamina propria of large intestine' SubClassOf 'stromal cell'
++ 'stromal cell of lamina propria of large intestine' EquivalentTo 'stromal cell' and ('part of' some 'lamina propria of large intestine')
 
-Class: http://purl.obolibrary.org/obo/HP_0006530
-Label(s): Interstitial pulmonary abnormality 
-+ 'Interstitial pulmonary abnormality' SubClassOf 'Abnormal lung morphology'
+Class: http://www.ebi.ac.uk/efo/EFO_0010892
+Label(s): hydrolisis collection protocol 
++ 'hydrolisis collection protocol' SubClassOf 'protocol'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0026730
-Label(s): Basilicata-Akhtar syndrome 
-+ 'Basilicata-Akhtar syndrome' SubClassOf 'X-linked syndromic intellectual disability'
+Class: http://www.ebi.ac.uk/efo/EFO_0010891
+Label(s): scATAC-seq 
++ 'scATAC-seq' SubClassOf 'single cell library construction'
++ 'scATAC-seq' SubClassOf 'ATAC-seq'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0026722
-Label(s): Mullegama-Klein-Martinez syndrome 
-+ 'Mullegama-Klein-Martinez syndrome' SubClassOf 'disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0010890
+Label(s): HG03575 
++ 'HG03575' SubClassOf 'part of' some 'blood'
++ 'HG03575' SubClassOf 'lymphoblastoid cell line'
++ 'HG03575' SubClassOf 'has_quality' some 'female'
++ 'HG03575' SubClassOf 'blood component'
++ 'HG03575' SubClassOf 'part of' some 'Homo sapiens'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010726
-Label(s): total joint arthroplasty 
-+ 'total joint arthroplasty' SubClassOf 'medical procedure'
+Class: http://www.ebi.ac.uk/efo/EFO_0010889
+Label(s): HG03571 
++ 'HG03571' SubClassOf 'part of' some 'blood'
++ 'HG03571' SubClassOf 'blood component'
++ 'HG03571' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03571' SubClassOf 'lymphoblastoid cell line'
++ 'HG03571' SubClassOf 'has_quality' some 'male'
 
-Class: http://purl.obolibrary.org/obo/HP_0012758
-Label(s): Neurodevelopmental delay 
-+ 'Neurodevelopmental delay' SubClassOf 'Neurodevelopmental abnormality'
+Class: http://www.ebi.ac.uk/efo/EFO_0010888
+Label(s): HG03565 
++ 'HG03565' SubClassOf 'lymphoblastoid cell line'
++ 'HG03565' SubClassOf 'has_quality' some 'male'
++ 'HG03565' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03565' SubClassOf 'part of' some 'blood'
++ 'HG03565' SubClassOf 'blood component'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0007290
-Label(s): cataract 5 multiple types 
-+ 'cataract 5 multiple types' SubClassOf 'Early-onset non-syndromic cataract'
+Class: http://www.ebi.ac.uk/efo/EFO_0010887
+Label(s): HG03558 
++ 'HG03558' SubClassOf 'blood component'
++ 'HG03558' SubClassOf 'lymphoblastoid cell line'
++ 'HG03558' SubClassOf 'has_quality' some 'female'
++ 'HG03558' SubClassOf 'part of' some 'blood'
++ 'HG03558' SubClassOf 'part of' some 'Homo sapiens'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0030907
-Label(s): intellectual disability, X-linked 106 
-+ 'intellectual disability, X-linked 106' SubClassOf 'X-linked non-syndromic intellectual disability'
+Class: http://www.ebi.ac.uk/efo/EFO_0010886
+Label(s): HG03521 
++ 'HG03521' SubClassOf 'part of' some 'blood'
++ 'HG03521' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03521' SubClassOf 'has_quality' some 'male'
++ 'HG03521' SubClassOf 'blood component'
++ 'HG03521' SubClassOf 'lymphoblastoid cell line'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032681
-Label(s): encephalopathy, progressive, early-onset, with episodic rhabdomyolysis 
-+ 'encephalopathy, progressive, early-onset, with episodic rhabdomyolysis' SubClassOf 'genetic disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0010885
+Label(s): HG03520 
++ 'HG03520' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03520' SubClassOf 'has_quality' some 'female'
++ 'HG03520' SubClassOf 'part of' some 'blood'
++ 'HG03520' SubClassOf 'lymphoblastoid cell line'
++ 'HG03520' SubClassOf 'blood component'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0010075
-Label(s): spondyloepimetaphyseal dysplasia with joint laxity, type 1, with or without fractures 
-+ 'spondyloepimetaphyseal dysplasia with joint laxity, type 1, with or without fractures' SubClassOf 'Spondyloepimetaphyseal dysplasia with joint laxity'
+Class: http://www.ebi.ac.uk/efo/EFO_0010884
+Label(s): HG03469 
++ 'HG03469' SubClassOf 'lymphoblastoid cell line'
++ 'HG03469' SubClassOf 'part of' some 'blood'
++ 'HG03469' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03469' SubClassOf 'has_quality' some 'male'
++ 'HG03469' SubClassOf 'blood component'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0008570
-Label(s): thyrotoxic periodic paralysis, susceptibility to, 1 
-+ 'thyrotoxic periodic paralysis, susceptibility to, 1' SubClassOf 'Thyrotoxic periodic paralysis'
+Class: http://www.ebi.ac.uk/efo/EFO_0010883
+Label(s): HG03460 
++ 'HG03460' SubClassOf 'lymphoblastoid cell line'
++ 'HG03460' SubClassOf 'blood component'
++ 'HG03460' SubClassOf 'part of' some 'blood'
++ 'HG03460' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03460' SubClassOf 'has_quality' some 'male'
 
-Class: http://purl.obolibrary.org/obo/HP_0002059
-Label(s): Cerebral atrophy 
-+ 'Cerebral atrophy' SubClassOf 'Brain atrophy'
+Class: http://www.ebi.ac.uk/efo/EFO_0010882
+Label(s): HG03457 
++ 'HG03457' SubClassOf 'blood component'
++ 'HG03457' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03457' SubClassOf 'part of' some 'blood'
++ 'HG03457' SubClassOf 'lymphoblastoid cell line'
++ 'HG03457' SubClassOf 'has_quality' some 'male'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032751
-Label(s): arthrogryposis, distal, type 2b3 
-+ 'arthrogryposis, distal, type 2b3' SubClassOf 'genetic disorder'
-+ 'arthrogryposis, distal, type 2b3' SubClassOf 'Distal arthrogryposis'
+Class: http://www.ebi.ac.uk/efo/EFO_0010881
+Label(s): HG03442 
++ 'HG03442' SubClassOf 'lymphoblastoid cell line'
++ 'HG03442' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03442' SubClassOf 'has_quality' some 'male'
++ 'HG03442' SubClassOf 'blood component'
++ 'HG03442' SubClassOf 'part of' some 'blood'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0013421
-Label(s): type II complement component 8 deficiency 
-+ 'type II complement component 8 deficiency' SubClassOf 'classic complement early component deficiency'
-+ 'type II complement component 8 deficiency' SubClassOf 'Immunodeficiency due to a late component of complements deficiency'
+Class: http://www.ebi.ac.uk/efo/EFO_0010880
+Label(s): HG03439 
++ 'HG03439' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03439' SubClassOf 'has_quality' some 'male'
++ 'HG03439' SubClassOf 'lymphoblastoid cell line'
++ 'HG03439' SubClassOf 'part of' some 'blood'
++ 'HG03439' SubClassOf 'blood component'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032755
-Label(s): neurodevelopmental disorder with or without variable brain abnormalities; NEDBA 
-+ 'neurodevelopmental disorder with or without variable brain abnormalities; NEDBA' SubClassOf 'genetic disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0010879
+Label(s): HG03432 
++ 'HG03432' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03432' SubClassOf 'has_quality' some 'male'
++ 'HG03432' SubClassOf 'part of' some 'blood'
++ 'HG03432' SubClassOf 'lymphoblastoid cell line'
++ 'HG03432' SubClassOf 'blood component'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0008210
-Label(s): patterned macular dystrophy 1 
-+ 'patterned macular dystrophy 1' SubClassOf 'Butterfly-shaped pigment dystrophy'
+Class: http://www.ebi.ac.uk/efo/EFO_0010878
+Label(s): HG03378 
++ 'HG03378' SubClassOf 'blood component'
++ 'HG03378' SubClassOf 'lymphoblastoid cell line'
++ 'HG03378' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03378' SubClassOf 'has_quality' some 'female'
++ 'HG03378' SubClassOf 'part of' some 'blood'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032688
-Label(s): polymicrogyria with or without vascular-type ehlers-danlos syndrome 
-+ 'polymicrogyria with or without vascular-type ehlers-danlos syndrome' SubClassOf 'genetic disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0010877
+Label(s): HG03354 
++ 'HG03354' SubClassOf 'blood component'
++ 'HG03354' SubClassOf 'has_quality' some 'female'
++ 'HG03354' SubClassOf 'part of' some 'blood'
++ 'HG03354' SubClassOf 'lymphoblastoid cell line'
++ 'HG03354' SubClassOf 'part of' some 'Homo sapiens'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032677
-Label(s): lissencephaly 9 with complex brainstem malformation 
-+ 'lissencephaly 9 with complex brainstem malformation' SubClassOf 'Lissencephaly'
+Class: http://www.ebi.ac.uk/efo/EFO_0010876
+Label(s): HG03342 
++ 'HG03342' SubClassOf 'lymphoblastoid cell line'
++ 'HG03342' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03342' SubClassOf 'part of' some 'blood'
++ 'HG03342' SubClassOf 'blood component'
++ 'HG03342' SubClassOf 'has_quality' some 'female'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010875
+Label(s): HG03280 
++ 'HG03280' SubClassOf 'blood component'
++ 'HG03280' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03280' SubClassOf 'part of' some 'blood'
++ 'HG03280' SubClassOf 'has_quality' some 'male'
++ 'HG03280' SubClassOf 'lymphoblastoid cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010874
+Label(s): HG03196 
++ 'HG03196' SubClassOf 'part of' some 'blood'
++ 'HG03196' SubClassOf 'lymphoblastoid cell line'
++ 'HG03196' SubClassOf 'has_quality' some 'male'
++ 'HG03196' SubClassOf 'blood component'
++ 'HG03196' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010873
+Label(s): HG03175 
++ 'HG03175' SubClassOf 'blood component'
++ 'HG03175' SubClassOf 'part of' some 'blood'
++ 'HG03175' SubClassOf 'lymphoblastoid cell line'
++ 'HG03175' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03175' SubClassOf 'has_quality' some 'male'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010872
+Label(s): HG03159 
++ 'HG03159' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03159' SubClassOf 'blood component'
++ 'HG03159' SubClassOf 'has_quality' some 'female'
++ 'HG03159' SubClassOf 'lymphoblastoid cell line'
++ 'HG03159' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010871
+Label(s): HG03139 
++ 'HG03139' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03139' SubClassOf 'has_quality' some 'male'
++ 'HG03139' SubClassOf 'blood component'
++ 'HG03139' SubClassOf 'lymphoblastoid cell line'
++ 'HG03139' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010870
+Label(s): HG03135 
++ 'HG03135' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03135' SubClassOf 'lymphoblastoid cell line'
++ 'HG03135' SubClassOf 'has_quality' some 'female'
++ 'HG03135' SubClassOf 'part of' some 'blood'
++ 'HG03135' SubClassOf 'blood component'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010869
+Label(s): HG03108 
++ 'HG03108' SubClassOf 'blood component'
++ 'HG03108' SubClassOf 'lymphoblastoid cell line'
++ 'HG03108' SubClassOf 'has_quality' some 'female'
++ 'HG03108' SubClassOf 'part of' some 'blood'
++ 'HG03108' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010867
+Label(s): HG03097 
++ 'HG03097' SubClassOf 'lymphoblastoid cell line'
++ 'HG03097' SubClassOf 'has_quality' some 'female'
++ 'HG03097' SubClassOf 'blood component'
++ 'HG03097' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03097' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010866
+Label(s): HG03095 
++ 'HG03095' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03095' SubClassOf 'part of' some 'blood'
++ 'HG03095' SubClassOf 'lymphoblastoid cell line'
++ 'HG03095' SubClassOf 'blood component'
++ 'HG03095' SubClassOf 'has_quality' some 'female'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010865
+Label(s): HG03066 
++ 'HG03066' SubClassOf 'blood component'
++ 'HG03066' SubClassOf 'has_quality' some 'male'
++ 'HG03066' SubClassOf 'part of' some 'blood'
++ 'HG03066' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03066' SubClassOf 'lymphoblastoid cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010864
+Label(s): HG03064 
++ 'HG03064' SubClassOf 'has_quality' some 'female'
++ 'HG03064' SubClassOf 'blood component'
++ 'HG03064' SubClassOf 'lymphoblastoid cell line'
++ 'HG03064' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03064' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010863
+Label(s): HG03060 
++ 'HG03060' SubClassOf 'blood component'
++ 'HG03060' SubClassOf 'has_quality' some 'male'
++ 'HG03060' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03060' SubClassOf 'part of' some 'blood'
++ 'HG03060' SubClassOf 'lymphoblastoid cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010862
+Label(s): HG03045 
++ 'HG03045' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03045' SubClassOf 'has_quality' some 'male'
++ 'HG03045' SubClassOf 'part of' some 'blood'
++ 'HG03045' SubClassOf 'blood component'
++ 'HG03045' SubClassOf 'lymphoblastoid cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010861
+Label(s): HG03039 
++ 'HG03039' SubClassOf 'lymphoblastoid cell line'
++ 'HG03039' SubClassOf 'has_quality' some 'male'
++ 'HG03039' SubClassOf 'part of' some 'blood'
++ 'HG03039' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG03039' SubClassOf 'blood component'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010860
+Label(s): HG03025 
++ 'HG03025' SubClassOf 'blood component'
++ 'HG03025' SubClassOf 'part of' some 'blood'
++ 'HG03025' SubClassOf 'lymphoblastoid cell line'
++ 'HG03025' SubClassOf 'has_quality' some 'female'
++ 'HG03025' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010859
+Label(s): HG02981 
++ 'HG02981' SubClassOf 'has_quality' some 'male'
++ 'HG02981' SubClassOf 'lymphoblastoid cell line'
++ 'HG02981' SubClassOf 'blood component'
++ 'HG02981' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02981' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010858
+Label(s): HG02973 
++ 'HG02973' SubClassOf 'part of' some 'blood'
++ 'HG02973' SubClassOf 'has_quality' some 'male'
++ 'HG02973' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02973' SubClassOf 'lymphoblastoid cell line'
++ 'HG02973' SubClassOf 'blood component'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010857
+Label(s): HG02970 
++ 'HG02970' SubClassOf 'lymphoblastoid cell line'
++ 'HG02970' SubClassOf 'has_quality' some 'female'
++ 'HG02970' SubClassOf 'blood component'
++ 'HG02970' SubClassOf 'part of' some 'blood'
++ 'HG02970' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010856
+Label(s): HG02943 
++ 'HG02943' SubClassOf 'lymphoblastoid cell line'
++ 'HG02943' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02943' SubClassOf 'part of' some 'blood'
++ 'HG02943' SubClassOf 'has_quality' some 'female'
++ 'HG02943' SubClassOf 'blood component'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010855
+Label(s): HG02938 
++ 'HG02938' SubClassOf 'has_quality' some 'male'
++ 'HG02938' SubClassOf 'lymphoblastoid cell line'
++ 'HG02938' SubClassOf 'part of' some 'blood'
++ 'HG02938' SubClassOf 'blood component'
++ 'HG02938' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010854
+Label(s): HG02885 
++ 'HG02885' SubClassOf 'blood component'
++ 'HG02885' SubClassOf 'has_quality' some 'female'
++ 'HG02885' SubClassOf 'lymphoblastoid cell line'
++ 'HG02885' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02885' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010853
+Label(s): HG02884 
++ 'HG02884' SubClassOf 'has_quality' some 'male'
++ 'HG02884' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02884' SubClassOf 'lymphoblastoid cell line'
++ 'HG02884' SubClassOf 'part of' some 'blood'
++ 'HG02884' SubClassOf 'blood component'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010852
+Label(s): HG02870 
++ 'HG02870' SubClassOf 'has_quality' some 'female'
++ 'HG02870' SubClassOf 'part of' some 'blood'
++ 'HG02870' SubClassOf 'blood component'
++ 'HG02870' SubClassOf 'lymphoblastoid cell line'
++ 'HG02870' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010851
+Label(s): HG02852 
++ 'HG02852' SubClassOf 'has_quality' some 'female'
++ 'HG02852' SubClassOf 'lymphoblastoid cell line'
++ 'HG02852' SubClassOf 'blood component'
++ 'HG02852' SubClassOf 'part of' some 'blood'
++ 'HG02852' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010850
+Label(s): HG02840 
++ 'HG02840' SubClassOf 'blood component'
++ 'HG02840' SubClassOf 'part of' some 'blood'
++ 'HG02840' SubClassOf 'lymphoblastoid cell line'
++ 'HG02840' SubClassOf 'has_quality' some 'female'
++ 'HG02840' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010849
+Label(s): HG02798 
++ 'HG02798' SubClassOf 'has_quality' some 'male'
++ 'HG02798' SubClassOf 'blood component'
++ 'HG02798' SubClassOf 'part of' some 'blood'
++ 'HG02798' SubClassOf 'lymphoblastoid cell line'
++ 'HG02798' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010848
+Label(s): HG02763 
++ 'HG02763' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02763' SubClassOf 'lymphoblastoid cell line'
++ 'HG02763' SubClassOf 'part of' some 'blood'
++ 'HG02763' SubClassOf 'has_quality' some 'female'
++ 'HG02763' SubClassOf 'blood component'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010847
+Label(s): HG02759 
++ 'HG02759' SubClassOf 'blood component'
++ 'HG02759' SubClassOf 'part of' some 'blood'
++ 'HG02759' SubClassOf 'lymphoblastoid cell line'
++ 'HG02759' SubClassOf 'has_quality' some 'male'
++ 'HG02759' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010846
+Label(s): HG02678 
++ 'HG02678' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02678' SubClassOf 'has_quality' some 'male'
++ 'HG02678' SubClassOf 'blood component'
++ 'HG02678' SubClassOf 'part of' some 'blood'
++ 'HG02678' SubClassOf 'lymphoblastoid cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010845
+Label(s): HG02642 
++ 'HG02642' SubClassOf 'part of' some 'blood'
++ 'HG02642' SubClassOf 'blood component'
++ 'HG02642' SubClassOf 'has_quality' some 'male'
++ 'HG02642' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02642' SubClassOf 'lymphoblastoid cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010844
+Label(s): HG02623 
++ 'HG02623' SubClassOf 'lymphoblastoid cell line'
++ 'HG02623' SubClassOf 'blood component'
++ 'HG02623' SubClassOf 'has_quality' some 'male'
++ 'HG02623' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02623' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010843
+Label(s): HG02610 
++ 'HG02610' SubClassOf 'lymphoblastoid cell line'
++ 'HG02610' SubClassOf 'blood component'
++ 'HG02610' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02610' SubClassOf 'has_quality' some 'male'
++ 'HG02610' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010842
+Label(s): HG02588 
++ 'HG02588' SubClassOf 'has_quality' some 'male'
++ 'HG02588' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02588' SubClassOf 'blood component'
++ 'HG02588' SubClassOf 'part of' some 'blood'
++ 'HG02588' SubClassOf 'lymphoblastoid cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010841
+Label(s): HG02571 
++ 'HG02571' SubClassOf 'has_quality' some 'female'
++ 'HG02571' SubClassOf 'blood component'
++ 'HG02571' SubClassOf 'lymphoblastoid cell line'
++ 'HG02571' SubClassOf 'part of' some 'Homo sapiens'
++ 'HG02571' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010840
+Label(s): GM21786 
++ 'GM21786' SubClassOf 'has_quality' some 'female'
++ 'GM21786' SubClassOf 'lymphoblastoid cell line'
++ 'GM21786' SubClassOf 'part of' some 'Homo sapiens'
++ 'GM21786' SubClassOf 'blood component'
++ 'GM21786' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010839
+Label(s): GM21737 
++ 'GM21737' SubClassOf 'lymphoblastoid cell line'
++ 'GM21737' SubClassOf 'part of' some 'Homo sapiens'
++ 'GM21737' SubClassOf 'has_quality' some 'male'
++ 'GM21737' SubClassOf 'blood component'
++ 'GM21737' SubClassOf 'part of' some 'blood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010838
+Label(s): GM21515 
++ 'GM21515' SubClassOf 'blood component'
++ 'GM21515' SubClassOf 'has_quality' some 'male'
++ 'GM21515' SubClassOf 'lymphoblastoid cell line'
++ 'GM21515' SubClassOf 'part of' some 'blood'
++ 'GM21515' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010837
+Label(s): GM19043 
++ 'GM19043' SubClassOf 'lymphoblastoid cell line'
++ 'GM19043' SubClassOf 'part of' some 'blood'
++ 'GM19043' SubClassOf 'part of' some 'Homo sapiens'
++ 'GM19043' SubClassOf 'has_quality' some 'male'
++ 'GM19043' SubClassOf 'blood component'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010836
+Label(s): GM19025 
++ 'GM19025' SubClassOf 'part of' some 'blood'
++ 'GM19025' SubClassOf 'lymphoblastoid cell line'
++ 'GM19025' SubClassOf 'blood component'
++ 'GM19025' SubClassOf 'has_quality' some 'male'
++ 'GM19025' SubClassOf 'part of' some 'Homo sapiens'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010835
+Label(s): GM19023 
++ 'GM19023' SubClassOf 'lymphoblastoid cell line'
++ 'GM19023' SubClassOf 'part of' some 'blood'
++ 'GM19023' SubClassOf 'has_quality' some 'female'
++ 'GM19023' SubClassOf 'part of' some 'Homo sapiens'
++ 'GM19023' SubClassOf 'blood component'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010834
+Label(s): tumor necrosis factor measurement 
++ 'tumor necrosis factor measurement' SubClassOf 'blood protein measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010833
+Label(s): uterine corpus undifferentiated sarcoma 
++ 'uterine corpus undifferentiated sarcoma' SubClassOf 'uterine sarcoma'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010832
+Label(s): primary central chondrosarcoma 
++ 'primary central chondrosarcoma' SubClassOf 'bone chondrosarcoma'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010831
+Label(s): testicular mixed germ cell tumor 
++ 'testicular mixed germ cell tumor' SubClassOf 'mixed germ cell tumor'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010830
+Label(s): lobular capilliary hemangioma 
++ 'lobular capilliary hemangioma' SubClassOf 'capillary hemangioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0033014
+Label(s): erythrokeratodermia variabilis et progressiva 4 
++ 'erythrokeratodermia variabilis et progressiva 4' SubClassOf 'Erythrokeratodermia variabilis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013972
+Label(s): Perrault syndrome 2 
++ 'Perrault syndrome 2' SubClassOf 'Perrault syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013566
+Label(s): Fanconi anemia complementation group L 
++ 'Fanconi anemia complementation group L' SubClassOf 'Fanconi anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011484
+Label(s): catecholaminergic polymorphic ventricular tachycardia 1 
++ 'catecholaminergic polymorphic ventricular tachycardia 1' SubClassOf 'Catecholaminergic polymorphic ventricular tachycardia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011459
+Label(s): arrhythmogenic right ventricular dysplasia 5 
++ 'arrhythmogenic right ventricular dysplasia 5' SubClassOf 'Familial isolated arrhythmogenic right ventricular dysplasia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025193
+Label(s): oculopharyngodistal myopathy 
++ 'oculopharyngodistal myopathy' SubClassOf 'Progressive muscular dystrophy'
++ 'oculopharyngodistal myopathy' SubClassOf 'Myopathy with eye involvement'
++ 'oculopharyngodistal myopathy' SubClassOf 'rare disorder with ptosis'
++ 'oculopharyngodistal myopathy' SubClassOf 'Distal myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011173
+Label(s): thrombocythemia 2 
++ 'thrombocythemia 2' SubClassOf 'thrombocytosis disease'
++ 'thrombocythemia 2' SubClassOf 'Familial thrombocytosis'
++ 'thrombocythemia 2' SubClassOf 'essential thrombocythemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030064
+Label(s): episodic ataxia, type 9 
++ 'episodic ataxia, type 9' SubClassOf 'Hereditary episodic ataxia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030066
+Label(s): granulomatous disease, chronic, autosomal recessive, 5 
++ 'granulomatous disease, chronic, autosomal recessive, 5' SubClassOf 'Chronic granulomatous disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030072
+Label(s): developmental and epileptic encephalopathy, 88 
++ 'developmental and epileptic encephalopathy, 88' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030073
+Label(s): Mitchell syndrome 
++ 'Mitchell syndrome' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007903
+Label(s): Li-Fraumeni syndrome 1 
++ 'Li-Fraumeni syndrome 1' SubClassOf 'Li-Fraumeni syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007883
+Label(s): lazy leukocyte syndrome 
++ 'lazy leukocyte syndrome' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007743
+Label(s): attention deficit-hyperactivity disorder 
++ 'attention deficit-hyperactivity disorder' SubClassOf 'specific developmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0033532
+Label(s): Suleiman-El-Hattab syndrome 
++ 'Suleiman-El-Hattab syndrome' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030134
+Label(s): oculopharyngodistal myopathy 2 
++ 'oculopharyngodistal myopathy 2' SubClassOf 'oculopharyngodistal myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030074
+Label(s): spondylometaphyseal dysplasia with corneal dystrophy 
++ 'spondylometaphyseal dysplasia with corneal dystrophy' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030071
+Label(s): retinitis pigmentosa 89 
++ 'retinitis pigmentosa 89' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030070
+Label(s): heterotaxy, visceral, 9, autosomal, with male infertility 
++ 'heterotaxy, visceral, 9, autosomal, with male infertility' SubClassOf 'visceral heterotaxy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030069
+Label(s): hyper-IgE recurrent infection syndrome 5, autosomal recessive 
++ 'hyper-IgE recurrent infection syndrome 5, autosomal recessive' SubClassOf 'Hyper-IgE syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030067
+Label(s): treacher collins syndrome 4 
++ 'treacher collins syndrome 4' SubClassOf 'Treacher-Collins syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030063
+Label(s): neurodevelopmental disorder with seizures, hypotonia, and brain imaging abnormalities 
++ 'neurodevelopmental disorder with seizures, hypotonia, and brain imaging abnormalities' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0044316
+Label(s): thrombocytopenia, anemia, and myelofibrosis 
++ 'thrombocytopenia, anemia, and myelofibrosis' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0026768
+Label(s): warfarin sensitivity, x-linked 
++ 'warfarin sensitivity, x-linked' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0026767
+Label(s): immunodeficiency 74, covid19-related, x-linked 
++ 'immunodeficiency 74, covid19-related, x-linked' SubClassOf 'genetic disorder'
++ 'immunodeficiency 74, covid19-related, x-linked' SubClassOf 'immunodeficiency disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012363
+Label(s): retinitis pigmentosa 32 
++ 'retinitis pigmentosa 32' SubClassOf 'Retinitis pigmentosa'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008553
+Label(s): platelet-type bleeding disorder 17 
++ 'platelet-type bleeding disorder 17' SubClassOf 'inherited bleeding disorder, platelet-type'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0023691
+Label(s): maple syrup urine disease type 1A 
++ 'maple syrup urine disease type 1A' SubClassOf 'Maple syrup urine disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012237
+Label(s): nemaline myopathy 6 
++ 'nemaline myopathy 6' SubClassOf 'Childhood-onset nemaline myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012187
+Label(s): Fanconi anemia complementation group j 
++ 'Fanconi anemia complementation group j' SubClassOf 'Fanconi anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012132
+Label(s): colorectal cancer, susceptibility to, 1 
++ 'colorectal cancer, susceptibility to, 1' SubClassOf 'inherited disease susceptibility'
++ 'colorectal cancer, susceptibility to, 1' SubClassOf 'predisposes towards' some 'colorectal cancer'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010896
+Label(s): small intestine Peyer's patch T cell 
++ 'small intestine Peyer's patch T cell' SubClassOf 'mature T cell'
++ 'small intestine Peyer's patch T cell' EquivalentTo 'mature T cell' and ('part of' some 'small intestine Peyer's patch')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0023692
+Label(s): maple syrup urine disease type 1B 
++ 'maple syrup urine disease type 1B' SubClassOf 'Maple syrup urine disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012565
+Label(s): Fanconi anemia complementation group N 
++ 'Fanconi anemia complementation group N' SubClassOf 'Fanconi anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008560
+Label(s): thrombophilia due to activated protein C resistance 
++ 'thrombophilia due to activated protein C resistance' SubClassOf 'coagulation protein disease'
++ 'thrombophilia due to activated protein C resistance' SubClassOf 'thrombophilia'
++ 'thrombophilia due to activated protein C resistance' SubClassOf 'Rare genetic coagulation disorder'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001238
+Label(s): lamina propria of small intestine 
++ 'lamina propria of small intestine' SubClassOf 'anatomical structure'
++ 'lamina propria of small intestine' SubClassOf 'part of' some 'mucosa'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013555
+Label(s): Hermansky-Pudlak syndrome 3 
++ 'Hermansky-Pudlak syndrome 3' SubClassOf 'Hermansky-Pudlak syndrome without pulmonary fibrosis'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011189
+Label(s): lamina propria of large intestine 
++ 'lamina propria of large intestine' SubClassOf 'part of' some 'mucosa'
++ 'lamina propria of large intestine' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013081
+Label(s): lymphoproliferative syndrome 1 
++ 'lymphoproliferative syndrome 1' SubClassOf 'Autosomal recessive lymphoproliferative disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013389
+Label(s): developmental and epileptic encephalopathy, 12 
++ 'developmental and epileptic encephalopathy, 12' SubClassOf 'developmental and epileptic encephalopathy'
++ 'developmental and epileptic encephalopathy, 12' SubClassOf 'West syndrome'
++ 'developmental and epileptic encephalopathy, 12' SubClassOf 'Malignant migrating partial seizures of infancy'
 
 ----------------------------------
 2. Changes to EFO3
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018827
-Label(s): familial chilblain lupus 
-- 'familial chilblain lupus' SubClassOf 'Moyamoya syndrome'
-- 'familial chilblain lupus' SubClassOf 'autoimmune disease of the nervous system'
+Class: http://www.orpha.net/ORDO/Orphanet_163985
+Label(s): Hyperekplexia - epilepsy 
+- 'Hyperekplexia - epilepsy' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'Hyperekplexia - epilepsy' SubClassOf 'developmental and epileptic encephalopathy'
++ 'Hyperekplexia - epilepsy' SubClassOf 'X-linked complex neurodevelopmental disorder'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0060729
-Label(s): protoporphyria, erythropoietic, 2 
-- 'protoporphyria, erythropoietic, 2' SubClassOf 'Erythropoietic protoporphyria'
-+ 'protoporphyria, erythropoietic, 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0019263
+Class: http://www.ebi.ac.uk/efo/EFO_0008931
+Label(s): Smart-seq2 
+- 'Smart-seq2' SubClassOf 'library preparation'
++ 'Smart-seq2' SubClassOf 'Smart-like'
 
-Class: http://www.orpha.net/ORDO/Orphanet_98538
-Label(s): Ataxia with dementia 
-- 'Ataxia with dementia' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Ataxia with dementia' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Ataxia with dementia' SubClassOf 'disease has major feature' some 'dementia (disease)'
-+ 'Ataxia with dementia' SubClassOf 'Genetic neurodegenerative disease'
-+ 'Ataxia with dementia' SubClassOf 'Genetic dementia'
+Class: http://www.ebi.ac.uk/efo/EFO_0008930
+Label(s): Smart-seq 
+- 'Smart-seq' SubClassOf 'library preparation'
++ 'Smart-seq' SubClassOf 'Smart-like'
 
-Class: http://www.orpha.net/ORDO/Orphanet_275872
-Label(s): Frontotemporal dementia with motor neuron disease 
-- 'Frontotemporal dementia with motor neuron disease' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Frontotemporal dementia with motor neuron disease' SubClassOf 'Genetic neurodegenerative disease'
-+ 'Frontotemporal dementia with motor neuron disease' SubClassOf 'Genetic dementia'
+Class: http://www.ebi.ac.uk/efo/EFO_0008925
+Label(s): Single cell ATAC-seq (cell index) 
+- 'Single cell ATAC-seq (cell index)' SubClassOf 'DNA assay'
++ 'Single cell ATAC-seq (cell index)' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010891
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018792
-Label(s): Moyamoya syndrome 
-- 'Moyamoya syndrome' SubClassOf 'Genetic central nervous system and retinal vascular disease'
-- 'Moyamoya syndrome' SubClassOf 'Moyomoya angiopathy'
+Class: http://www.ebi.ac.uk/efo/EFO_0008919
+Label(s): Seq-Well 
+- 'Seq-Well' SubClassOf 'library preparation'
++ 'Seq-Well' SubClassOf 'single cell library construction'
 
-Class: http://purl.obolibrary.org/obo/CL_0000084
-Label(s): T cell 
-- 'T cell' DisjointWith 'lymphocyte of B lineage'
-- 'T cell' DisjointWith 'natural killer cell'
+Class: http://www.ebi.ac.uk/efo/EFO_0008906
+Label(s): scChIP-seq 
++ 'scChIP-seq' SubClassOf 'single cell library construction'
 
-Class: http://purl.obolibrary.org/obo/CL_0000051
-Label(s): common lymphoid progenitor 
-- 'common myeloid progenitor' DisjointWith 'common lymphoid progenitor'
+Class: http://www.ebi.ac.uk/efo/EFO_0008904
+Label(s): scATAC-seq (Microfluidics) 
+- 'scATAC-seq (Microfluidics)' SubClassOf 'DNA assay'
++ 'scATAC-seq (Microfluidics)' SubClassOf http://www.ebi.ac.uk/efo/EFO_0010891
 
-Class: http://purl.obolibrary.org/obo/CL_0000050
-Label(s): megakaryocyte-erythroid progenitor cell 
-- 'megakaryocyte-erythroid progenitor cell' DisjointWith 'granulocyte monocyte progenitor cell'
-- 'common myeloid progenitor' DisjointWith 'megakaryocyte-erythroid progenitor cell'
-- 'megakaryocyte-erythroid progenitor cell' DisjointWith 'macrophage dendritic cell progenitor'
+Class: http://purl.obolibrary.org/obo/MONDO_0018652
+Label(s): biological anomaly without phenotypic characterization 
+- 'biological anomaly without phenotypic characterization' SubClassOf 'disease'
++ 'biological anomaly without phenotypic characterization' SubClassOf 'genetic disorder'
 
-Class: http://purl.obolibrary.org/obo/CL_0000049
-Label(s): common myeloid progenitor 
-- 'common myeloid progenitor' DisjointWith 'megakaryocyte-erythroid progenitor cell'
-- 'common myeloid progenitor' DisjointWith 'common lymphoid progenitor'
-- 'common myeloid progenitor' DisjointWith 'granulocyte monocyte progenitor cell'
+Class: http://www.ebi.ac.uk/efo/EFO_0008796
+Label(s): MARS-seq 
+- 'MARS-seq' SubClassOf 'library preparation'
++ 'MARS-seq' SubClassOf 'single cell library construction'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018630
-Label(s): hereditary nonpolyposis colon cancer 
-- 'hereditary nonpolyposis colon cancer' SubClassOf 'Genetic digestive tract tumor'
-+ 'hereditary nonpolyposis colon cancer' SubClassOf 'familial colorectal cancer'
+Class: http://www.ebi.ac.uk/efo/EFO_0008780
+Label(s): inDrop 
+- 'inDrop' SubClassOf 'library preparation'
++ 'inDrop' SubClassOf 'single cell library construction'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0006792
-Label(s): Lewy body dementia 
-- 'Lewy body dementia' SubClassOf 'Dementia'
-- 'Lewy body dementia' SubClassOf 'inheres_in' some 'brain'
-+ 'Lewy body dementia' SubClassOf 'disease has feature' some 'Dementia'
+Class: http://www.ebi.ac.uk/efo/EFO_1000985
+Label(s): intermediate coronary syndrome 
+- 'intermediate coronary syndrome' SubClassOf 'coronary artery disease'
++ 'intermediate coronary syndrome' SubClassOf 'coronary heart disease'
 
-Class: http://www.orpha.net/ORDO/Orphanet_280679
-Label(s): Moyamoya disease - short stature - facial dysmorphism - hypergonadotropic hypogonadism 
-- 'Moyamoya disease - short stature - facial dysmorphism - hypergonadotropic hypogonadism' SubClassOf 'Moyamoya syndrome'
+Class: http://www.ebi.ac.uk/efo/EFO_1000882
+Label(s): coronary stenosis 
+- 'coronary stenosis' SubClassOf 'coronary artery disease'
++ 'coronary stenosis' SubClassOf 'coronary heart disease'
 
-Class: http://purl.obolibrary.org/obo/CL_0000542
-Label(s): lymphocyte 
-- 'lymphocyte' DisjointWith 'myeloid leukocyte'
-- 'dendritic cell' DisjointWith 'lymphocyte'
+Class: http://www.ebi.ac.uk/efo/EFO_1000881
+Label(s): coronary aneurysm 
+- 'coronary aneurysm' SubClassOf 'coronary artery disease'
++ 'coronary aneurysm' SubClassOf 'coronary heart disease'
 
-Class: http://purl.obolibrary.org/obo/HP_0000750
-Label(s): Delayed speech and language development 
-- 'Delayed speech and language development' SubClassOf 'Neurodevelopmental abnormality'
-+ 'Delayed speech and language development' SubClassOf http://purl.obolibrary.org/obo/HP_0012758
+Class: http://www.orpha.net/ORDO/Orphanet_34149
+Label(s): Autosomal dominant medullary cystic kidney disease with or without hyperuricemia 
++ 'Autosomal dominant medullary cystic kidney disease with or without hyperuricemia' SubClassOf 'autosomal dominant disease'
 
-Class: http://purl.obolibrary.org/obo/CL_0000624
-Label(s): CD4-positive, alpha-beta T cell 
-- 'CD4-positive, alpha-beta T cell' DisjointWith 'CD8-positive, alpha-beta T cell'
+Class: http://www.orpha.net/ORDO/Orphanet_1305
+Label(s): Feingold syndrome 
+- 'Feingold syndrome' SubClassOf 'autosomal dominant disease'
++ 'Feingold syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
 
-Class: http://purl.obolibrary.org/obo/CL_0000738
-Label(s): leukocyte 
-- 'epithelial cell' DisjointWith 'leukocyte'
+Class: http://www.ebi.ac.uk/efo/EFO_1000820
+Label(s): arteriosclerosis obliterans 
+- 'arteriosclerosis obliterans' SubClassOf 'coronary artery disease'
 
-Class: http://purl.obolibrary.org/obo/CL_0000798
-Label(s): gamma-delta T cell 
-- 'alpha-beta T cell' DisjointWith 'gamma-delta T cell'
+Class: http://www.ebi.ac.uk/efo/EFO_1000819
+Label(s): arteriolosclerosis 
+- 'arteriolosclerosis' SubClassOf 'coronary artery disease'
 
-Class: http://www.orpha.net/ORDO/Orphanet_90280
-Label(s): Chilblain lupus 
-- 'Chilblain lupus' SubClassOf 'Moyamoya syndrome'
-- 'Chilblain lupus' SubClassOf 'autoimmune disease of the nervous system'
+Class: http://www.orpha.net/ORDO/Orphanet_353217
+Label(s): Epileptic encephalopathy with global cerebral demyelination 
+- 'Epileptic encephalopathy with global cerebral demyelination' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'Epileptic encephalopathy with global cerebral demyelination' SubClassOf 'developmental and epileptic encephalopathy'
 
-Class: http://purl.obolibrary.org/obo/CL_0000816
-Label(s): immature B cell 
-- 'mature B cell' DisjointWith 'immature B cell'
+Class: http://purl.obolibrary.org/obo/MONDO_0014606
+Label(s): intellectual disability-microcephaly-strabismus-behavioral abnormalities syndrome 
+- 'intellectual disability-microcephaly-strabismus-behavioral abnormalities syndrome' SubClassOf 'autosomal dominant disease'
+- 'intellectual disability-microcephaly-strabismus-behavioral abnormalities syndrome' SubClassOf 'Rare genetic neurological disorder'
++ 'intellectual disability-microcephaly-strabismus-behavioral abnormalities syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
 
-Class: http://www.orpha.net/ORDO/Orphanet_401945
-Label(s): Moyamoya disease with early-onset achalasia 
-- 'Moyamoya disease with early-onset achalasia' SubClassOf 'Moyamoya syndrome'
+Class: http://purl.obolibrary.org/obo/MONDO_0014512
+Label(s): PURA-related severe neonatal hypotonia-seizures-encephalopathy syndrome due to a point mutation 
+- 'PURA-related severe neonatal hypotonia-seizures-encephalopathy syndrome due to a point mutation' SubClassOf 'autosomal dominant disease'
++ 'PURA-related severe neonatal hypotonia-seizures-encephalopathy syndrome due to a point mutation' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
 
-Class: http://purl.obolibrary.org/obo/CL_0000839
-Label(s): myeloid lineage restricted progenitor cell 
-- 'lymphoid lineage restricted progenitor cell' DisjointWith 'myeloid lineage restricted progenitor cell'
+Class: http://www.orpha.net/ORDO/Orphanet_401979
+Label(s): Autosomal recessive spondylometaphyseal dysplasia, Mégarbané type 
++ 'Autosomal recessive spondylometaphyseal dysplasia, Mégarbané type' SubClassOf 'Spondylometaphyseal dysplasia'
 
-Class: http://www.orpha.net/ORDO/Orphanet_401901
-Label(s): Huntington disease-like syndrome due to C9ORF72 expansions 
-- 'Huntington disease-like syndrome due to C9ORF72 expansions' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Huntington disease-like syndrome due to C9ORF72 expansions' SubClassOf 'disease has major feature' some 'dementia (disease)'
-+ 'Huntington disease-like syndrome due to C9ORF72 expansions' SubClassOf 'Genetic neurodegenerative disease with dementia'
+Class: http://www.orpha.net/ORDO/Orphanet_85172
+Label(s): Microcephalic osteodysplastic dysplasia, Saul-Wilson type 
+- 'Microcephalic osteodysplastic dysplasia, Saul-Wilson type' SubClassOf 'autosomal dominant disease'
++ 'Microcephalic osteodysplastic dysplasia, Saul-Wilson type' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
 
-Class: http://purl.obolibrary.org/obo/CL_0000898
-Label(s): naive T cell 
-- 'memory T cell' DisjointWith 'naive T cell'
+Class: http://www.orpha.net/ORDO/Orphanet_324422
+Label(s): ALG13-CDG 
++ 'ALG13-CDG' SubClassOf 'developmental and epileptic encephalopathy'
 
-Class: http://purl.obolibrary.org/obo/CL_0001021
-Label(s): CD34-positive, CD38-positive common lymphoid progenitor 
-- 'CD34-positive, CD38-positive common lymphoid progenitor' DisjointWith 'Kit-positive, Sca1-positive common lymphoid progenitor'
+Class: http://www.ebi.ac.uk/efo/EFO_1001483
+Label(s): non-obstructive coronary artery disease 
+- 'non-obstructive coronary artery disease' SubClassOf 'coronary artery disease'
++ 'non-obstructive coronary artery disease' SubClassOf 'coronary heart disease'
 
-Class: http://www.orpha.net/ORDO/Orphanet_183666
-Label(s): Hyper-IgM syndrome without susceptibility to opportunistic infections 
-- 'Hyper-IgM syndrome without susceptibility to opportunistic infections' SubClassOf 'Immunodeficiency with severe reduction in serum IgG and IgA with normal/elevated IgM and normal number of B-cells'
-+ 'Hyper-IgM syndrome without susceptibility to opportunistic infections' SubClassOf 'Immunodeficiency with severe reduction in serum IgG and IgA with normal/elevated IgM and normal number of B-cells'
+Class: http://purl.obolibrary.org/obo/MONDO_0042485
+Label(s): infective arthritis 
+- 'infective arthritis' EquivalentTo 'arthritis' and ('realized in response to stimulus' some 'infectious disease')
+- 'infective arthritis' SubClassOf 'realized in response to stimulus' some 'infectious disease'
++ 'infective arthritis' SubClassOf 'infectious disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_352490
+Label(s): Autism spectrum disorder due to AUTS2 deficiency 
+- 'Autism spectrum disorder due to AUTS2 deficiency' SubClassOf 'autosomal dominant disease'
++ 'Autism spectrum disorder due to AUTS2 deficiency' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
 
 Class: http://www.orpha.net/ORDO/Orphanet_3071
 Label(s): Costello syndrome 
-- 'Costello syndrome' SubClassOf 'Moyamoya syndrome'
-
-Class: http://purl.obolibrary.org/obo/HP_0100749
-Label(s): Chest pain 
-- 'Chest pain' SubClassOf 'Abnormality of the thorax'
-
-Class: http://purl.obolibrary.org/obo/CL_0001023
-Label(s): Kit-positive, CD34-positive common myeloid progenitor 
-- 'Kit-positive, CD34-positive common myeloid progenitor' DisjointWith 'CD34-positive, CD38-positive common myeloid progenitor'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004228
-Label(s): drug-induced liver injury 
-- 'drug-induced liver injury' SubClassOf 'chemically-induced disorder'
-
-Class: http://purl.obolibrary.org/obo/CL_0000557
-Label(s): granulocyte monocyte progenitor cell 
-- 'megakaryocyte-erythroid progenitor cell' DisjointWith 'granulocyte monocyte progenitor cell'
-- 'common myeloid progenitor' DisjointWith 'granulocyte monocyte progenitor cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017234
-Label(s): inherited prion disease 
-- 'inherited prion disease' SubClassOf 'Genetic neurodegenerative disease with dementia'
-- 'inherited prion disease' SubClassOf 'infectious disease with dementia'
-+ 'inherited prion disease' SubClassOf 'Genetic dementia'
-+ 'inherited prion disease' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://purl.obolibrary.org/obo/HP_0001636
-Label(s): Tetralogy of Fallot 
-- 'Tetralogy of Fallot' SubClassOf 'Abnormal heart morphology'
-- 'Tetralogy of Fallot' SubClassOf 'Abnormality of the vasculature'
-+ 'Tetralogy of Fallot' SubClassOf http://purl.obolibrary.org/obo/HP_0001710
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009482
-Label(s): drug allergy 
-- 'drug allergy' SubClassOf 'chemically-induced disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_276058
-Label(s): Genetic neurodegenerative disease with dementia 
-- 'Genetic neurodegenerative disease with dementia' SubClassOf 'Genetic dementia'
-- 'Genetic neurodegenerative disease with dementia' SubClassOf 'Genetic neurodegenerative disease'
-+ 'Genetic neurodegenerative disease with dementia' SubClassOf 'Genetic dementia'
-+ 'Genetic neurodegenerative disease with dementia' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://purl.obolibrary.org/obo/CL_0001030
-Label(s): CD117-positive common myeloid progenitor OR CD217-positive common lymphoid progenitor 
-- 'CD117-positive common myeloid progenitor OR CD217-positive common lymphoid progenitor' EquivalentTo 'Kit-positive, CD34-positive common myeloid progenitor' or 'Kit-positive, Sca1-positive common lymphoid progenitor'
-
-Class: http://purl.obolibrary.org/obo/HP_0001270
-Label(s): Motor delay 
-- 'Motor delay' SubClassOf 'Neurodevelopmental abnormality'
-+ 'Motor delay' SubClassOf http://purl.obolibrary.org/obo/HP_0012758
-
-Class: http://purl.obolibrary.org/obo/HP_0001263
-Label(s): Global developmental delay 
-- 'Global developmental delay' SubClassOf 'Neurodevelopmental abnormality'
-+ 'Global developmental delay' SubClassOf http://purl.obolibrary.org/obo/HP_0012758
-
-Class: http://purl.obolibrary.org/obo/CL_0002036
-Label(s): Slamf1-positive multipotent progenitor cell 
-- 'Slamf1-positive multipotent progenitor cell' DisjointWith 'CD34-positive, CD38-negative multipotent progenitor cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020141
-Label(s): infectious disease with dementia 
-- 'infectious disease with dementia' SubClassOf 'has modifier' some 'rare'
-- 'infectious disease with dementia' SubClassOf 'infectious disease'
-- 'infectious disease with dementia' SubClassOf 'dementia (disease)'
-
-Class: http://purl.obolibrary.org/obo/CL_0002031
-Label(s): hematopoietic lineage restricted progenitor cell 
-- 'hematopoietic lineage restricted progenitor cell' DisjointWith 'hematopoietic oligopotent progenitor cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0002043
-Label(s): CD34-positive, CD38-negative multipotent progenitor cell 
-- 'Slamf1-positive multipotent progenitor cell' DisjointWith 'CD34-positive, CD38-negative multipotent progenitor cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0002009
-Label(s): macrophage dendritic cell progenitor 
-- 'megakaryocyte-erythroid progenitor cell' DisjointWith 'macrophage dendritic cell progenitor'
-
-Class: http://purl.obolibrary.org/obo/CL_0002032
-Label(s): hematopoietic oligopotent progenitor cell 
-- 'hematopoietic multipotent progenitor cell' DisjointWith 'hematopoietic oligopotent progenitor cell'
-- 'hematopoietic lineage restricted progenitor cell' DisjointWith 'hematopoietic oligopotent progenitor cell'
-
-Class: http://www.orpha.net/ORDO/Orphanet_282
-Label(s): Frontotemporal dementia 
-- 'Frontotemporal dementia' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Frontotemporal dementia' SubClassOf 'Genetic dementia'
-+ 'Frontotemporal dementia' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://purl.obolibrary.org/obo/HP_0002910
-Label(s): Elevated hepatic transaminase 
-- 'Elevated hepatic transaminase' SubClassOf 'Abnormality of the liver'
-+ 'Elevated hepatic transaminase' SubClassOf 'Abnormality of metabolism/homeostasis'
-
-Class: http://www.orpha.net/ORDO/Orphanet_881
-Label(s): Turner syndrome 
-- 'Turner syndrome' SubClassOf 'Moyamoya syndrome'
-- 'Turner syndrome' SubClassOf 'congenital nervous system disorder'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_31991
-Label(s): phenol red 
-- 'phenol red' SubClassOf 'chemical entity'
-+ 'phenol red' SubClassOf http://purl.obolibrary.org/obo/CHEBI_33853
-
-Class: http://purl.obolibrary.org/obo/HP_0006515
-Label(s): Interstitial pneumonitis 
-- 'Interstitial pneumonitis' SubClassOf 'Abnormal lung morphology'
-+ 'Interstitial pneumonitis' SubClassOf http://purl.obolibrary.org/obo/HP_0006530
-
-Class: http://purl.obolibrary.org/obo/HP_0006467
-Label(s): Limited shoulder movement 
-- 'Limited shoulder movement' SubClassOf 'Abnormality of the thorax'
-+ 'Limited shoulder movement' SubClassOf 'Abnormality of the skeletal system'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1020
-Label(s): Early-onset autosomal dominant Alzheimer disease 
-- 'Early-onset autosomal dominant Alzheimer disease' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Early-onset autosomal dominant Alzheimer disease' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Early-onset autosomal dominant Alzheimer disease' SubClassOf 'Genetic dementia'
-+ 'Early-onset autosomal dominant Alzheimer disease' SubClassOf 'disease has major feature' some 'dementia (disease)'
-+ 'Early-onset autosomal dominant Alzheimer disease' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://purl.obolibrary.org/obo/CL_0002344
-Label(s): CD56-negative, CD161-positive immature natural killer cell 
-- 'pre-natural killer cell' DisjointWith 'CD56-negative, CD161-positive immature natural killer cell'
-- 'mature natural killer cell' DisjointWith 'CD56-negative, CD161-positive immature natural killer cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0002348
-Label(s): CD27-low, CD11b-high natural killer cell 
-- 'CD27-low, CD11b-high natural killer cell' SubClassOf 'CD11b-positive, CD27-positive natural killer cell'
-+ 'CD27-low, CD11b-high natural killer cell' SubClassOf 'mature natural killer cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0002349
-Label(s): CD27-high, CD11b-low natural killer cell 
-- 'CD27-high, CD11b-low natural killer cell' SubClassOf 'CD11b-positive, CD27-positive natural killer cell'
-+ 'CD27-high, CD11b-low natural killer cell' SubClassOf 'mature natural killer cell'
-
-Class: http://www.orpha.net/ORDO/Orphanet_648
-Label(s): Noonan syndrome 
-- 'Noonan syndrome' SubClassOf 'Moyamoya syndrome'
-+ 'Noonan syndrome' SubClassOf 'neurovascular disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_597
-Label(s): Central core disease 
-+ 'Central core disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100196
-
-Class: http://purl.obolibrary.org/obo/CL_0002442
-Label(s): CD94-negative, Ly49CI-negative natural killer cell 
-- 'CD94-negative, Ly49CI-negative natural killer cell' SubClassOf 'CD94-negative natural killer cell'
-- 'CD94-negative, Ly49CI-negative natural killer cell' SubClassOf 'Ly49CI-negative natural killer cell'
-+ 'CD94-negative, Ly49CI-negative natural killer cell' SubClassOf 'natural killer cell'
-
-Class: http://www.orpha.net/ORDO/Orphanet_587
-Label(s): Muir-Torre syndrome 
-- 'Muir-Torre syndrome' SubClassOf 'benign tumor of palpebral epidermis'
-- 'Muir-Torre syndrome' SubClassOf 'Palpebral sebaceous gland tumor'
-- 'Muir-Torre syndrome' SubClassOf 'Rare genetic neurological disorder'
-- 'Muir-Torre syndrome' SubClassOf 'Genetic skin tumor'
-- 'Muir-Torre syndrome' SubClassOf 'Lynch syndrome'
-- 'Muir-Torre syndrome' SubClassOf 'benign neoplasm of sebaceous gland'
-+ 'Muir-Torre syndrome' SubClassOf 'hereditary nonpolyposis colon cancer'
-+ 'Muir-Torre syndrome' SubClassOf 'Palpebral sebaceous gland tumor'
-+ 'Muir-Torre syndrome' SubClassOf 'skin carcinoma'
-+ 'Muir-Torre syndrome' SubClassOf 'Genetic skin tumor'
-+ 'Muir-Torre syndrome' SubClassOf 'Lynch syndrome'
-
-Class: http://www.orpha.net/ORDO/Orphanet_683
-Label(s): Progressive supranuclear palsy 
-- 'Progressive supranuclear palsy' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Progressive supranuclear palsy' SubClassOf 'Genetic dementia'
-+ 'Progressive supranuclear palsy' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_26791
-Label(s): Multiple acyl-CoA dehydrogenase deficiency 
-+ 'Multiple acyl-CoA dehydrogenase deficiency' SubClassOf 'Mitochondrial disease with hypertrophic cardiomyopathy'
-+ 'Multiple acyl-CoA dehydrogenase deficiency' SubClassOf 'Mitochondrial myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016474
-Label(s): drug-induced lupus erythematosus 
-- 'drug-induced lupus erythematosus' SubClassOf 'chemically-induced disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_263440
-Label(s): Neuroacanthocytosis 
-- 'Neuroacanthocytosis' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Neuroacanthocytosis' SubClassOf 'disease has major feature' some 'dementia (disease)'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021490
-Label(s): benign neoplasm of sebaceous gland 
-- 'benign neoplasm of sebaceous gland' SubClassOf 'benign neoplasm of skin'
-- 'benign neoplasm of sebaceous gland' SubClassOf 'sebaceous gland neoplasm'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_15882
-Label(s): phenol 
-- 'phenol' SubClassOf 'chemical entity'
-+ 'phenol' SubClassOf http://purl.obolibrary.org/obo/CHEBI_33853
-
-Class: http://www.orpha.net/ORDO/Orphanet_399
-Label(s): Huntington disease 
-- 'Huntington disease' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Huntington disease' SubClassOf 'Genetic neurodegenerative disease with dementia'
-
-Class: http://purl.obolibrary.org/obo/CL_0002338
-Label(s): CD56-positive, CD161-positive immature natural killer cell 
-- 'mature natural killer cell' DisjointWith 'CD56-positive, CD161-positive immature natural killer cell'
-- 'pre-natural killer cell' DisjointWith 'CD56-positive, CD161-positive immature natural killer cell'
-
-Class: http://www.orpha.net/ORDO/Orphanet_385
-Label(s): Neurodegeneration with brain iron accumulation 
-- 'Neurodegeneration with brain iron accumulation' SubClassOf 'Genetic neurodegenerative disease with dementia'
-+ 'Neurodegeneration with brain iron accumulation' SubClassOf 'disease has major feature' some 'dementia (disease)'
-+ 'Neurodegeneration with brain iron accumulation' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://purl.obolibrary.org/obo/CL_0000556
-Label(s): megakaryocyte 
-- 'megakaryocyte' DisjointWith 'erythroid lineage cell'
-
-Class: http://www.orpha.net/ORDO/Orphanet_232
-Label(s): Sickle cell anemia 
-- 'Sickle cell anemia' SubClassOf 'Moyamoya syndrome'
-
-Class: http://purl.obolibrary.org/obo/HP_0002280
-Label(s): Enlarged cisterna magna 
-- 'Enlarged cisterna magna' SubClassOf 'Ventriculomegaly'
-+ 'Enlarged cisterna magna' SubClassOf 'Abnormality of the posterior cranial fossa'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2020
-Label(s): Congenital fiber-type disproportion myopathy 
-+ 'Congenital fiber-type disproportion myopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100196
-
-Class: http://purl.obolibrary.org/obo/HP_0002120
-Label(s): Cerebral cortical atrophy 
-- 'Cerebral cortical atrophy' SubClassOf 'Brain atrophy'
-+ 'Cerebral cortical atrophy' SubClassOf http://purl.obolibrary.org/obo/HP_0002059
-
-Class: http://purl.obolibrary.org/obo/CL_0001008
-Label(s): Kit and Sca1-positive hematopoietic stem cell 
-- 'Kit and Sca1-positive hematopoietic stem cell' DisjointWith 'CD34-positive, CD38-negative hematopoietic stem cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000623
-Label(s): natural killer cell 
-- 'T cell' DisjointWith 'natural killer cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000625
-Label(s): CD8-positive, alpha-beta T cell 
-- 'CD4-positive, alpha-beta T cell' DisjointWith 'CD8-positive, alpha-beta T cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0001012
-Label(s): CD7-negative lymphoid progenitor OR granulocyte monocyte progenitor 
-- 'CD7-negative lymphoid progenitor OR granulocyte monocyte progenitor' EquivalentTo 'granulocyte monocyte progenitor cell' or 'CD7-negative lymphoid progenitor cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0001019
-Label(s): CD115-positive monocyte OR common dendritic progenitor 
-- 'CD115-positive monocyte OR common dendritic progenitor' EquivalentTo 'CD115-positive monocyte' or 'common dendritic progenitor'
-- 'CD115-positive monocyte OR common dendritic progenitor' SubClassOf 'myeloid cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0001024
-Label(s): CD34-positive, CD38-negative hematopoietic stem cell 
-- 'Kit and Sca1-positive hematopoietic stem cell' DisjointWith 'CD34-positive, CD38-negative hematopoietic stem cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0001025
-Label(s): Kit-positive, Sca1-positive common lymphoid progenitor 
-- 'CD34-positive, CD38-positive common lymphoid progenitor' DisjointWith 'Kit-positive, Sca1-positive common lymphoid progenitor'
-
-Class: http://purl.obolibrary.org/obo/CL_0001026
-Label(s): CD34-positive, CD38-positive common myeloid progenitor 
-- 'Kit-positive, CD34-positive common myeloid progenitor' DisjointWith 'CD34-positive, CD38-positive common myeloid progenitor'
-
-Class: http://purl.obolibrary.org/obo/CL_0001029
-Label(s): common dendritic progenitor 
-+ 'common dendritic progenitor' SubClassOf 'myeloid cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0002347
-Label(s): CD27-high, CD11b-high natural killer cell 
-- 'CD27-high, CD11b-high natural killer cell' SubClassOf 'CD11b-positive, CD27-positive natural killer cell'
-+ 'CD27-high, CD11b-high natural killer cell' SubClassOf 'mature natural killer cell'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001402
-Label(s): postencephalitic Parkinson disease 
-- 'postencephalitic Parkinson disease' SubClassOf 'infectious disease with dementia'
-- 'postencephalitic Parkinson disease' SubClassOf 'central nervous system infection'
-+ 'postencephalitic Parkinson disease' SubClassOf 'disease has major feature' some 'dementia (disease)'
-
-Class: http://purl.obolibrary.org/obo/CL_0000451
-Label(s): dendritic cell 
-- 'dendritic cell' DisjointWith 'lymphocyte'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2924
-Label(s): Isolated polycystic liver disease 
-- 'Isolated polycystic liver disease' EquivalentTo 'autosomal dominant polycystic liver disease' and ('has modifier' some 'has an isolated presentation')
-
-Class: http://purl.obolibrary.org/obo/CL_0000785
-Label(s): mature B cell 
-- 'mature B cell' DisjointWith 'immature B cell'
-- 'mature B cell' DisjointWith 'transitional stage B cell'
-- 'mature B cell' DisjointWith 'precursor B cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000789
-Label(s): alpha-beta T cell 
-- 'alpha-beta T cell' DisjointWith 'gamma-delta T cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000995
-Label(s): CD34-positive, CD38-positive common myeloid progenitor OR CD34-positive, CD38-positive common lymphoid progenitor 
-- 'CD34-positive, CD38-positive common myeloid progenitor OR CD34-positive, CD38-positive common lymphoid progenitor' EquivalentTo 'CD34-positive, CD38-positive common lymphoid progenitor' or 'CD34-positive, CD38-positive common myeloid progenitor'
-
-Class: http://purl.obolibrary.org/obo/CL_0000956
-Label(s): pre-B-I cell 
-- 'pre-B-II cell' DisjointWith 'pre-B-I cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000955
-Label(s): pre-B-II cell 
-- 'pre-B-II cell' DisjointWith 'pre-B-I cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000945
-Label(s): lymphocyte of B lineage 
-- 'T cell' DisjointWith 'lymphocyte of B lineage'
-
-Class: http://purl.obolibrary.org/obo/CL_0000938
-Label(s): CD16-negative, CD56-bright natural killer cell 
-- 'CD16-negative, CD56-bright natural killer cell' DisjointWith 'CD16-positive, CD56-dim natural killer cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000838
-Label(s): lymphoid lineage restricted progenitor cell 
-- 'lymphoid lineage restricted progenitor cell' DisjointWith 'myeloid lineage restricted progenitor cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000837
-Label(s): hematopoietic multipotent progenitor cell 
-- 'hematopoietic multipotent progenitor cell' DisjointWith 'hematopoietic oligopotent progenitor cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000818
-Label(s): transitional stage B cell 
-- 'mature B cell' DisjointWith 'transitional stage B cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000817
-Label(s): precursor B cell 
-- 'precursor B cell' DisjointWith 'pro-B cell'
-- 'mature B cell' DisjointWith 'precursor B cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000813
-Label(s): memory T cell 
-- 'memory T cell' DisjointWith 'naive T cell'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2102
-Label(s): GTP cyclohydrolase I deficiency 
-- 'GTP cyclohydrolase I deficiency' SubClassOf 'Hyperphenylalaninemia'
-- 'GTP cyclohydrolase I deficiency' SubClassOf 'tetrahydrobiopterin metabolic process disease'
-+ 'GTP cyclohydrolase I deficiency' SubClassOf 'tetrahydrobiopterin metabolic process disease'
-+ 'GTP cyclohydrolase I deficiency' SubClassOf 'Hyperphenylalaninemia'
-
-Class: http://purl.obolibrary.org/obo/CL_0000823
-Label(s): immature natural killer cell 
-- 'immature natural killer cell' DisjointWith 'pre-natural killer cell'
-- 'immature natural killer cell' DisjointWith 'mature natural killer cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000824
-Label(s): mature natural killer cell 
-- 'mature natural killer cell' DisjointWith 'CD56-positive, CD161-positive immature natural killer cell'
-- 'mature natural killer cell' DisjointWith 'CD56-negative, CD161-positive immature natural killer cell'
-- 'immature natural killer cell' DisjointWith 'mature natural killer cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000826
-Label(s): pro-B cell 
-- 'precursor B cell' DisjointWith 'pro-B cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013850
-Label(s): periodic fever, menstrual cycle-dependent 
-- 'periodic fever, menstrual cycle-dependent' SubClassOf 'genetic disorder'
-+ 'periodic fever, menstrual cycle-dependent' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/CL_0000766
-Label(s): myeloid leukocyte 
-- 'lymphocyte' DisjointWith 'myeloid leukocyte'
-
-Class: http://purl.obolibrary.org/obo/CL_0000764
-Label(s): erythroid lineage cell 
-- 'megakaryocyte' DisjointWith 'erythroid lineage cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000066
-Label(s): epithelial cell 
-- 'epithelial cell' DisjointWith 'leukocyte'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001992
-Label(s): Scapuloperoneal spinal muscular atrophy 
-- 'Scapuloperoneal spinal muscular atrophy' SubClassOf 'motor neuron disease'
-+ 'Scapuloperoneal spinal muscular atrophy' SubClassOf 'spinal muscular atrophy'
-+ 'Scapuloperoneal spinal muscular atrophy' SubClassOf 'autosomal dominant disease'
-
-Class: http://purl.obolibrary.org/obo/CL_0000937
-Label(s): pre-natural killer cell 
-- 'pre-natural killer cell' DisjointWith 'CD56-negative, CD161-positive immature natural killer cell'
-- 'pre-natural killer cell' DisjointWith 'CD56-positive, CD161-positive immature natural killer cell'
-- 'immature natural killer cell' DisjointWith 'pre-natural killer cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0000939
-Label(s): CD16-positive, CD56-dim natural killer cell 
-- 'CD16-negative, CD56-bright natural killer cell' DisjointWith 'CD16-positive, CD56-dim natural killer cell'
-
-Class: http://www.orpha.net/ORDO/Orphanet_331240
-Label(s): Immunodeficiency with severe reduction in serum IgG and IgA with normal/elevated IgM and normal number of B-cells 
-- 'Immunodeficiency with severe reduction in serum IgG and IgA with normal/elevated IgM and normal number of B-cells' SubClassOf 'Immunodeficiency predominantly affecting antibody production'
-+ 'Immunodeficiency with severe reduction in serum IgG and IgA with normal/elevated IgM and normal number of B-cells' SubClassOf 'Immunodeficiency predominantly affecting antibody production'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001423
-Label(s): drug-induced mental disorder 
-- 'drug-induced mental disorder' SubClassOf 'chemically-induced disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2637
-Label(s): Microcephalic osteodysplastic primordial dwarfism type II 
-- 'Microcephalic osteodysplastic primordial dwarfism type II' SubClassOf 'Moyamoya syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002608
-Label(s): AIDS dementia 
-- 'AIDS dementia' SubClassOf 'Dementia'
-- 'AIDS dementia' SubClassOf 'HIV-associated neurocognitive disorder'
-+ 'AIDS dementia' SubClassOf 'disease has feature' some 'HIV-associated neurocognitive disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000890
-Label(s): Zika virus congenital syndrome 
-+ 'Zika virus congenital syndrome' SubClassOf 'vector-borne disease'
-+ 'Zika virus congenital syndrome' SubClassOf 'viral disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_30925
-Label(s): Hereditary central diabetes insipidus 
-+ 'Hereditary central diabetes insipidus' SubClassOf 'autosomal dominant disease'
+- 'Costello syndrome' SubClassOf 'autosomal dominant disease'
++ 'Costello syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000275
+Label(s): Gastric Neuroendocrine Tumor G1 
+- 'Gastric Neuroendocrine Tumor G1' SubClassOf 'small intestinal neuroendocrine tumor G1'
++ 'Gastric Neuroendocrine Tumor G1' SubClassOf 'carcinoid tumor'
++ 'Gastric Neuroendocrine Tumor G1' SubClassOf 'has modifier' some 'tumor grade 1, general grading system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009979
+Label(s): single cell Hi-C 
++ 'single cell Hi-C' SubClassOf 'single cell library construction'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009919
+Label(s): SPLiT-seq 
++ 'SPLiT-seq' SubClassOf 'single cell library construction'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000558
+Label(s): Kaposi's sarcoma 
++ 'Kaposi's sarcoma' SubClassOf 'human herpesvirus 8 infection'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004227
+Label(s): Dengue Hemorrhagic Fever 
++ 'Dengue Hemorrhagic Fever' SubClassOf 'viral hemorrhagic fever'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004225
+Label(s): Coronary Vasospasm 
+- 'Coronary Vasospasm' SubClassOf 'coronary artery disease'
++ 'Coronary Vasospasm' SubClassOf 'coronary heart disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100108
+Label(s): TPM3-related myopathy 
+- 'TPM3-related myopathy' SubClassOf 'Congenital myopathy'
+- 'TPM3-related myopathy' SubClassOf 'Qualitative or quantitative defects of tropomyosin'
++ 'TPM3-related myopathy' SubClassOf 'Congenital myopathy'
++ 'TPM3-related myopathy' SubClassOf 'Qualitative or quantitative defects of tropomyosin'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010820
+Label(s): spontaneous coronary artery dissection 
+- 'spontaneous coronary artery dissection' SubClassOf 'coronary artery disease'
++ 'spontaneous coronary artery dissection' SubClassOf 'coronary heart disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0032918
+Label(s): epileptic encephalopathy, early infantile, 84 
+- 'epileptic encephalopathy, early infantile, 84' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'epileptic encephalopathy, early infantile, 84' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019471
+Label(s): adult T-cell leukemia/lymphoma 
++ 'adult T-cell leukemia/lymphoma' SubClassOf 'skin disease caused by infection'
++ 'adult T-cell leukemia/lymphoma' SubClassOf 'Human T-lymphotropic virus 1 infectious disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_329224
+Label(s): Intellectual disability - craniofacial dysmorphism - cryptorchidism 
+- 'Intellectual disability - craniofacial dysmorphism - cryptorchidism' SubClassOf 'autosomal dominant disease'
++ 'Intellectual disability - craniofacial dysmorphism - cryptorchidism' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005672
+Label(s): acute coronary syndrome 
+- 'acute coronary syndrome' SubClassOf 'disease arises from feature' some 'coronary artery disease'
++ 'acute coronary syndrome' SubClassOf 'disease arises from feature' some 'coronary heart disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2273
+Label(s): Ichthyosis follicularis - alopecia - photophobia 
+- 'Ichthyosis follicularis - alopecia - photophobia' SubClassOf 'X-linked ichthyosis syndrome'
+- 'Ichthyosis follicularis - alopecia - photophobia' SubClassOf 'genetic alopecia'
+- 'Ichthyosis follicularis - alopecia - photophobia' SubClassOf 'Malformation syndrome with skin/mucosae involvement'
++ 'Ichthyosis follicularis - alopecia - photophobia' SubClassOf 'X-linked ichthyosis syndrome'
++ 'Ichthyosis follicularis - alopecia - photophobia' SubClassOf 'genetic alopecia'
++ 'Ichthyosis follicularis - alopecia - photophobia' SubClassOf 'Malformation syndrome with skin/mucosae involvement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010550
+Label(s): sci-RNA-seq 
+- 'sci-RNA-seq' SubClassOf 'library preparation'
++ 'sci-RNA-seq' SubClassOf 'single cell library construction'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001351
+Label(s): infectious arthritis 
+- 'infectious arthritis' SubClassOf 'realized in response to stimulus' some 'bacterial disease'
+- 'infectious arthritis' EquivalentTo 'arthritis' and ('realized in response to stimulus' some 'bacterial disease')
++ 'infectious arthritis' SubClassOf 'bacterial disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_168615
+Label(s): Hereditary persistence of alpha-fetoprotein 
+- 'Hereditary persistence of alpha-fetoprotein' SubClassOf 'genetic disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_168612
+Label(s): Congenital deficiency in alpha-fetoprotein 
+- 'Congenital deficiency in alpha-fetoprotein' SubClassOf 'genetic disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_254704
+Label(s): Genetic hyperferritinemia without iron overload 
+- 'Genetic hyperferritinemia without iron overload' SubClassOf 'genetic disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001645
+Label(s): coronary heart disease 
+- 'coronary heart disease' SubClassOf 'heart disease'
++ 'coronary heart disease' SubClassOf 'arterial disorder'
++ 'coronary heart disease' SubClassOf 'heart disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012586
+Label(s): coronary artery disease, autosomal dominant 2 
+- 'coronary artery disease, autosomal dominant 2' SubClassOf 'coronary artery disease'
++ 'coronary artery disease, autosomal dominant 2' SubClassOf 'coronary heart disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001243
+Label(s): wheat allergic reaction 
++ 'wheat allergic reaction' SubClassOf 'infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013656
+Label(s): intellectual disability, autosomal dominant 9 
+- 'intellectual disability, autosomal dominant 9' SubClassOf 'Autosomal dominant non-syndromic intellectual disability'
++ 'intellectual disability, autosomal dominant 9' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_1934
+Label(s): Early infantile epileptic encephalopathy 
+- 'Early infantile epileptic encephalopathy' SubClassOf 'generalised epilepsy'
+- 'Early infantile epileptic encephalopathy' SubClassOf 'Channelopathy with epilepsy'
+- 'Early infantile epileptic encephalopathy' SubClassOf 'neonatal/infantile epilepsy syndrome'
++ 'Early infantile epileptic encephalopathy' SubClassOf 'Channelopathy with epilepsy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_783
+Label(s): Rubinstein-Taybi syndrome 
+- 'Rubinstein-Taybi syndrome' SubClassOf 'autosomal dominant disease'
++ 'Rubinstein-Taybi syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030062
+Label(s): arrhythmogenic right ventricular dysplasia, familial, 14 
+- 'arrhythmogenic right ventricular dysplasia, familial, 14' SubClassOf 'Arrhythmogenic right ventricular dysplasia'
++ 'arrhythmogenic right ventricular dysplasia, familial, 14' SubClassOf 'Familial isolated arrhythmogenic right ventricular dysplasia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021661
+Label(s): coronary atherosclerosis 
+- 'coronary atherosclerosis' SubClassOf 'coronary artery disease'
++ 'coronary atherosclerosis' SubClassOf 'coronary heart disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_220465
+Label(s): Laron syndrome with immunodeficiency 
+- 'Laron syndrome with immunodeficiency' SubClassOf 'Growth hormone insensitivity syndrome'
+- 'Laron syndrome with immunodeficiency' SubClassOf 'syndrome with combined immunodeficiency'
++ 'Laron syndrome with immunodeficiency' SubClassOf 'Growth hormone insensitivity syndrome'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3107
+Label(s): Autosomal dominant Robinow syndrome 
+- 'Autosomal dominant Robinow syndrome' SubClassOf 'autosomal dominant disease'
++ 'Autosomal dominant Robinow syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_363686
+Label(s): Severe intellectual disability-poor language-strabismus-grimacing face-long fingers syndrome 
+- 'Severe intellectual disability-poor language-strabismus-grimacing face-long fingers syndrome' SubClassOf 'autosomal dominant disease'
++ 'Severe intellectual disability-poor language-strabismus-grimacing face-long fingers syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_502
+Label(s): Langer-Giedion syndrome 
+- 'Langer-Giedion syndrome' SubClassOf 'autosomal dominant disease'
+- 'Langer-Giedion syndrome' SubClassOf 'Rare genetic neurological disorder'
++ 'Langer-Giedion syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007845
+Label(s): Kaposi sarcoma, susceptibility to 
+- 'Kaposi sarcoma, susceptibility to' SubClassOf 'inherited disease susceptibility'
++ 'Kaposi sarcoma, susceptibility to' SubClassOf 'Genetic susceptibility to infections due to particular pathogens'
+
+Class: http://www.orpha.net/ORDO/Orphanet_485
+Label(s): Kniest dysplasia 
++ 'Kniest dysplasia' SubClassOf 'Spondylometaphyseal dysplasia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_425
+Label(s): Apolipoprotein A-I deficiency 
+- 'Apolipoprotein A-I deficiency' SubClassOf 'Hypoalphalipoproteinemia'
++ 'Apolipoprotein A-I deficiency' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100189
+
+Class: http://www.orpha.net/ORDO/Orphanet_415
+Label(s): Hyperornithinemia-hyperammonemia-homocitrullinuria 
++ 'Hyperornithinemia-hyperammonemia-homocitrullinuria' SubClassOf 'infectious disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008905
+Label(s): scBS-seq 
++ 'scBS-seq' SubClassOf 'single cell library construction'
+
+Class: http://www.orpha.net/ORDO/Orphanet_319547
+Label(s): Mendelian susceptibility to mycobacterial diseases due to complete IFNgammaR2 deficiency 
++ 'Mendelian susceptibility to mycobacterial diseases due to complete IFNgammaR2 deficiency' SubClassOf 'mycobacterial infectious disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_124
+Label(s): Blackfan-Diamond anemia 
+- 'Blackfan-Diamond anemia' SubClassOf 'Orofacial clefting syndrome'
+- 'Blackfan-Diamond anemia' SubClassOf 'Polymalformative genetic syndrome with increased risk of developing cancer'
+- 'Blackfan-Diamond anemia' SubClassOf 'Disorder of purine metabolism'
+- 'Blackfan-Diamond anemia' SubClassOf 'Developmental anomaly of metabolic origin'
++ 'Blackfan-Diamond anemia' SubClassOf 'Orofacial clefting syndrome'
++ 'Blackfan-Diamond anemia' SubClassOf 'Polymalformative genetic syndrome with increased risk of developing cancer'
++ 'Blackfan-Diamond anemia' SubClassOf 'Disorder of purine metabolism'
+
+Class: http://www.orpha.net/ORDO/Orphanet_88949
+Label(s): Autosomal dominant medullary cystic kidney disease without hyperuricemia 
+- 'Autosomal dominant medullary cystic kidney disease without hyperuricemia' SubClassOf 'Autosomal dominant medullary cystic kidney disease with or without hyperuricemia'
++ 'Autosomal dominant medullary cystic kidney disease without hyperuricemia' SubClassOf 'Autosomal dominant medullary cystic kidney disease with or without hyperuricemia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_178506
+Label(s): Brain calcification, Rajab type 
+- 'Brain calcification, Rajab type' SubClassOf 'Rare genetic neurological disorder'
++ 'Brain calcification, Rajab type' SubClassOf 'Rare genetic neurological disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009294
+Label(s): CITE-seq 
++ 'CITE-seq' SubClassOf 'single cell library construction'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030059
+Label(s): epileptic encephalopathy, early infantile, 87 
+- 'epileptic encephalopathy, early infantile, 87' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'epileptic encephalopathy, early infantile, 87' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030054
+Label(s): epileptic encephalopathy, early infantile, 86 
+- 'epileptic encephalopathy, early infantile, 86' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'epileptic encephalopathy, early infantile, 86' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_178469
+Label(s): Autosomal dominant non-syndromic intellectual disability 
+- 'Autosomal dominant non-syndromic intellectual disability' SubClassOf 'autosomal dominant disease'
++ 'Autosomal dominant non-syndromic intellectual disability' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_1300
+Label(s): Autosomal dominant popliteal pterygium syndrome 
+- 'Autosomal dominant popliteal pterygium syndrome' SubClassOf 'autosomal dominant disease'
++ 'Autosomal dominant popliteal pterygium syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_404448
+Label(s): ADNP-related multiple congenital anomalies-intellectual disability-autism spectrum disorder 
+- 'ADNP-related multiple congenital anomalies-intellectual disability-autism spectrum disorder' SubClassOf 'autosomal dominant disease'
++ 'ADNP-related multiple congenital anomalies-intellectual disability-autism spectrum disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100062
+Label(s): developmental and epileptic encephalopathy 
++ 'developmental and epileptic encephalopathy' SubClassOf 'Channelopathy with epilepsy'
++ 'developmental and epileptic encephalopathy' SubClassOf 'generalised epilepsy'
++ 'developmental and epileptic encephalopathy' SubClassOf 'neonatal/infantile epilepsy syndrome'
+
+Class: http://www.orpha.net/ORDO/Orphanet_109
+Label(s): Bannayan-Riley-Ruvalcaba syndrome 
+- 'Bannayan-Riley-Ruvalcaba syndrome' SubClassOf 'autosomal dominant disease'
++ 'Bannayan-Riley-Ruvalcaba syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://purl.obolibrary.org/obo/MONDO_0015062
+Label(s): gastric neuroendocrine tumor, well differentiated, low or intermediate grade 
+- 'gastric neuroendocrine tumor, well differentiated, low or intermediate grade' SubClassOf 'small intestine neuroendocrine tumor, well differentiated, low or intermediate grade'
++ 'gastric neuroendocrine tumor, well differentiated, low or intermediate grade' SubClassOf 'digestive system neuroendocrine tumor, grade 1/2'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007315
+Label(s): hordeolum 
+- 'hordeolum' SubClassOf 'skin disease'
++ 'hordeolum' SubClassOf 'skin disease caused by bacterial infection'
++ 'hordeolum' SubClassOf 'eye infectious disease'
++ 'hordeolum' SubClassOf 'Staphylococcus aureus infection'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0054845
+Label(s): epileptic encephalopathy, early infantile, 66 
+- 'epileptic encephalopathy, early infantile, 66' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'epileptic encephalopathy, early infantile, 66' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_85284
+Label(s): BRESEK syndrome 
+- 'BRESEK syndrome' SubClassOf 'Ichthyosis follicularis - alopecia - photophobia'
++ 'BRESEK syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100213
+
+Class: http://www.orpha.net/ORDO/Orphanet_98362
+Label(s): Constitutional sideroblastic anemia 
++ 'Constitutional sideroblastic anemia' EquivalentTo 'sideroblastic anemia' and ('has modifier' some 'inherited')
+
+Class: http://www.orpha.net/ORDO/Orphanet_2820
+Label(s): Spastic paraplegia - nephritis - deafness 
++ 'Spastic paraplegia - nephritis - deafness' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_2816
+Label(s): Spastic paraplegia - epilepsy - intellectual disability 
++ 'Spastic paraplegia - epilepsy - intellectual disability' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_2802
+Label(s): X-linked sideroblastic anemia with ataxia 
+- 'X-linked sideroblastic anemia with ataxia' SubClassOf 'X-linked sideroblastic anemia'
++ 'X-linked sideroblastic anemia with ataxia' SubClassOf 'Constitutional sideroblastic anemia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_93346
+Label(s): Spondyloepimetaphyseal dysplasia congenita, Strudwick type 
++ 'Spondyloepimetaphyseal dysplasia congenita, Strudwick type' SubClassOf 'Spondylometaphyseal dysplasia'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007787
+Label(s): plasma betaine measurement 
+- 'plasma betaine measurement' SubClassOf 'is_about' some 'coronary artery disease'
++ 'plasma betaine measurement' SubClassOf 'is_about' some 'coronary heart disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_300496
+Label(s): Multiple congenital anomalies-hypotonia-seizures syndrome type 2 
+- 'Multiple congenital anomalies-hypotonia-seizures syndrome type 2' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'Multiple congenital anomalies-hypotonia-seizures syndrome type 2' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_79499
+Label(s): Autosomal dominant deafness-onychodystrophy syndrome 
+- 'Autosomal dominant deafness-onychodystrophy syndrome' SubClassOf 'autosomal dominant disease'
++ 'Autosomal dominant deafness-onychodystrophy syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000378
+Label(s): coronary artery disease 
+- 'coronary artery disease' SubClassOf 'coronary heart disease'
+- 'coronary artery disease' SubClassOf 'arterial disorder'
+- 'coronary artery disease' SubClassOf 'heart disease'
++ 'coronary artery disease' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003888
+Label(s): attention deficit hyperactivity disorder 
+- 'attention deficit hyperactivity disorder' SubClassOf 'specific developmental disorder'
++ 'attention deficit hyperactivity disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_0007743
+
+Class: http://www.orpha.net/ORDO/Orphanet_404440
+Label(s): Intellectual disability-facial dysmorphism syndrome due to SETD5 haploinsufficiency 
+- 'Intellectual disability-facial dysmorphism syndrome due to SETD5 haploinsufficiency' SubClassOf 'autosomal dominant disease'
++ 'Intellectual disability-facial dysmorphism syndrome due to SETD5 haploinsufficiency' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_75563
+Label(s): X-linked sideroblastic anemia 
+- 'X-linked sideroblastic anemia' SubClassOf 'X-linked disease'
+- 'X-linked sideroblastic anemia' SubClassOf 'Constitutional sideroblastic anemia'
+- 'X-linked sideroblastic anemia' SubClassOf 'Disorder of porphyrin and haem metabolism'
++ 'X-linked sideroblastic anemia' SubClassOf 'Constitutional sideroblastic anemia'
++ 'X-linked sideroblastic anemia' SubClassOf 'Disorder of porphyrin and haem metabolism'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003812
+Label(s): refractory anemia with ringed sideroblasts 
++ 'refractory anemia with ringed sideroblasts' SubClassOf 'Constitutional sideroblastic anemia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_319574
+Label(s): Autosomal recessive mendelian susceptibility to mycobacterial diseases due to partial IFNgammaR2 deficiency 
++ 'Autosomal recessive mendelian susceptibility to mycobacterial diseases due to partial IFNgammaR2 deficiency' SubClassOf 'mycobacterial infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013578
+Label(s): DYRK1A-related intellectual disability syndrome 
+- 'DYRK1A-related intellectual disability syndrome' SubClassOf 'autosomal dominant disease'
+- 'DYRK1A-related intellectual disability syndrome' SubClassOf 'Rare genetic neurological disorder'
++ 'DYRK1A-related intellectual disability syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://purl.obolibrary.org/obo/MONDO_0032903
+Label(s): arthrogryposis multiplex congenita, neurogenic, with agenesis of the corpus callosum 
++ 'arthrogryposis multiplex congenita, neurogenic, with agenesis of the corpus callosum' SubClassOf 'Arthrogryposis multiplex congenita'
+
+Class: http://www.orpha.net/ORDO/Orphanet_79113
+Label(s): Mandibulofacial dysostosis-microcephaly syndrome 
+- 'Mandibulofacial dysostosis-microcephaly syndrome' SubClassOf 'autosomal dominant disease'
++ 'Mandibulofacial dysostosis-microcephaly syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_369894
+Label(s): Early infantile epileptic encephalopathy without suppression burst 
+- 'Early infantile epileptic encephalopathy without suppression burst' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'Early infantile epileptic encephalopathy without suppression burst' SubClassOf 'Neonatal epilepsy syndrome'
++ 'Early infantile epileptic encephalopathy without suppression burst' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2514
+Label(s): Autosomal dominant microcephaly 
+- 'Autosomal dominant microcephaly' SubClassOf 'autosomal dominant disease'
++ 'Autosomal dominant microcephaly' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://www.orpha.net/ORDO/Orphanet_363611
+Label(s): Intellectual disability-feeding difficulties-developmental delay-microcephaly syndrome 
+- 'Intellectual disability-feeding difficulties-developmental delay-microcephaly syndrome' SubClassOf 'autosomal dominant disease'
++ 'Intellectual disability-feeding difficulties-developmental delay-microcephaly syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://purl.obolibrary.org/obo/MONDO_0032895
+Label(s): epileptic encephalopathy, early infantile, 83 
+- 'epileptic encephalopathy, early infantile, 83' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'epileptic encephalopathy, early infantile, 83' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000883
+Label(s): coronary thrombosis 
+- 'coronary thrombosis' SubClassOf 'coronary artery disease'
++ 'coronary thrombosis' SubClassOf 'coronary heart disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010058
+Label(s): Fluidigm C1-based library preparation 
+- 'Fluidigm C1-based library preparation' SubClassOf 'library preparation'
++ 'Fluidigm C1-based library preparation' SubClassOf 'single cell library construction'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0033374
+Label(s): epileptic encephalopathy, early infantile, 65 
+- 'epileptic encephalopathy, early infantile, 65' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'epileptic encephalopathy, early infantile, 65' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_404473
+Label(s): Severe intellectual disability-progressive spastic diplegia syndrome 
+- 'Severe intellectual disability-progressive spastic diplegia syndrome' SubClassOf 'autosomal dominant disease'
++ 'Severe intellectual disability-progressive spastic diplegia syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100172
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000892
+Label(s): colon medullary carcinoma 
++ 'colon medullary carcinoma' SubClassOf http://purl.obolibrary.org/obo/MONDO_0020794
+
+Class: http://www.orpha.net/ORDO/Orphanet_228418
+Label(s): Microcephaly - seizures - developmental delay 
+- 'Microcephaly - seizures - developmental delay' SubClassOf 'Early infantile epileptic encephalopathy'
++ 'Microcephaly - seizures - developmental delay' SubClassOf 'developmental and epileptic encephalopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004889
+Label(s): postoperative ventricular dysfunction 
+- 'postoperative ventricular dysfunction' SubClassOf 'coronary artery disease'
++ 'postoperative ventricular dysfunction' SubClassOf 'coronary heart disease'
 
 ----------------------------------
 
 3. Obsolete Classes in EFO
 
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018792
-Label(s): Moyamoya syndrome 
-+ 'Moyamoya syndrome' SubClassOf 'Genetic central nervous system and retinal vascular disease'
-+ 'Moyamoya syndrome' SubClassOf 'Moyomoya angiopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020141
-Label(s): infectious disease with dementia 
-+ 'infectious disease with dementia' SubClassOf 'has modifier' some 'rare'
-+ 'infectious disease with dementia' SubClassOf 'infectious disease'
-+ 'infectious disease with dementia' SubClassOf 'dementia (disease)'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021490
-Label(s): benign neoplasm of sebaceous gland 
-+ 'benign neoplasm of sebaceous gland' SubClassOf 'benign neoplasm of skin'
-+ 'benign neoplasm of sebaceous gland' SubClassOf 'sebaceous gland neoplasm'
 
 ----------------------------------
 4. Scope of the Ontology
