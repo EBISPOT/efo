@@ -279,7 +279,7 @@
     <!-- http://purl.obolibrary.org/obo/HANCESTRO_0004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HANCESTRO_0004">
-        <obo:IAO_0000115>population category defined using ancestry informative markers (AIMs) based on genetic/genomic data</obo:IAO_0000115>
+        <obo:IAO_0000115>Population category defined using ancestry informative markers (AIMs) based on genetic/genomic data</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>ancestral group</oboInOwl:hasExactSynonym>
         <rdfs:label>ancestry category</rdfs:label>
     </owl:Class>
@@ -485,7 +485,7 @@ Oceanian or one of the sub-populations from this region (e.g. Native Hawaiian). 
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0004"/>
-        <obo:IAO_0000115>a population with increased genetic homogeneity and reduced genetic variation due to cultural or geographic isolation</obo:IAO_0000115>
+        <obo:IAO_0000115>A population with increased genetic homogeneity and reduced genetic variation due to cultural or geographic isolation</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>founder population</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>population isolate</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">genetically isolated population</rdfs:label>
@@ -504,7 +504,7 @@ Oceanian or one of the sub-populations from this region (e.g. Native Hawaiian). 
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115>general characterisation of the ancestry of a population or individual</obo:IAO_0000115>
+        <obo:IAO_0000115>General characterisation of the ancestry of a population or individual</obo:IAO_0000115>
         <rdfs:label xml:lang="en">ancestry status</rdfs:label>
     </owl:Class>
     
@@ -617,20 +617,19 @@ Oceanian or one of the sub-populations from this region (e.g. Native Hawaiian). 
     <!-- http://purl.obolibrary.org/obo/HANCESTRO_0463 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HANCESTRO_0463">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0566"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0330"/>
                 <owl:someValuesFrom rdf:resource="http://dbpedia.org/resource/United_States"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasExactSynonym>European American</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">American</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0463"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0005"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0566"/>
         <patterns:createdBy>http://e-lico.eu/populous#OPPL_pattern</patterns:createdBy>
     </owl:Axiom>
     <owl:Axiom>
@@ -710,6 +709,16 @@ Oceanian or one of the sub-populations from this region (e.g. Native Hawaiian). 
         </owl:annotatedTarget>
         <patterns:createdBy>http://e-lico.eu/populous#OPPL_pattern</patterns:createdBy>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HANCESTRO_0566 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HANCESTRO_0566">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0004"/>
+        <obo:IAO_0000115>Population for which insufficient information is available to allocate it to a specific ancestral group or which contain individuals from a range of known ancestry categories, eg American</obo:IAO_0000115>
+        <rdfs:label>undefined ancestry population</rdfs:label>
+    </owl:Class>
     
 
 
