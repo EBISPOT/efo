@@ -148,6 +148,9 @@ components/d2p_%.ttl: mirror/%.owl
 
 components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
 	python3 ../scripts/rename_tsv_subset.py $^ $@
+	
+components/mondo-rename.tsv: mirror/mondo.owl
+	$(ROBOT) query -i $< -q $(SPARQLDIR)/mondo_rename.sparql $@
 
 # If you change the relation in the sparql query, make sure you add the new relation here as well.
 components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
@@ -164,8 +167,9 @@ components/disease_to_phenotype_merged.owl: $(D2P_RAW)
 	$(ROBOT) merge $(addprefix -i , $(D2P_RAW)) \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
-components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl  components/efo-rename.tsv components/legal_diseases.txt
+components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl components/mondo-rename.tsv components/efo-rename.tsv components/legal_diseases.txt
 	$(ROBOT) merge -i $< \
+		rename --mappings components/mondo-rename.tsv \
 		rename --mappings components/efo-rename.tsv \
 		remove -T components/legal_diseases.txt --select complement --trim true \
 		query --update $(SPARQLDIR)/remove-stray-classes.ru \
