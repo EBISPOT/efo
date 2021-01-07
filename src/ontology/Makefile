@@ -151,6 +151,7 @@ components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_
 	
 components/mondo-rename.tsv: mirror/mondo.owl
 	$(ROBOT) query -i $< -q $(SPARQLDIR)/mondo_rename.sparql $@
+	cat $@ | tr -d '<>,' > $@.tmp && mv $@.tmp $@
 
 # If you change the relation in the sparql query, make sure you add the new relation here as well.
 components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
