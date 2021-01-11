@@ -1,7 +1,8 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?cls (COUNT (DISTINCT ?label) as ?label_count) WHERE
+SELECT ?cls (COUNT (DISTINCT ?label) as ?label_count)
+WHERE
 {
   ?cls rdfs:label ?label .
   ?cls a owl:Class .
