@@ -1,0 +1,10 @@
+# home: hp/sparql/trailing-whitespace-violation.sparql
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT *
+WHERE {
+  ?efo_uri obo:IAO_0100001 ?replaced_by.
+  FILTER REGEX(?replaced_by, " ")
+}
