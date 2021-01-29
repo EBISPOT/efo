@@ -48,7 +48,7 @@ qc: sparql_test all_reports
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon hp cl fbbt
+IMPORTS = mondo hancestro uberon hp cl fbbt obi
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
