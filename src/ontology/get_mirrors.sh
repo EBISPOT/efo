@@ -37,5 +37,8 @@ curl -L https://raw.githubusercontent.com/EBISPOT/ancestro/master/src/ontology/h
 echo "Fetching FBbt..."
 curl -L http://purl.obolibrary.org/obo/fbbt.owl > mirror/fbbt.owl
 
+echo "Fetching OBI..."
+curl -L http://purl.obolibrary.org/obo/obi.owl > mirror/obi.owl
+
 #echo "Fetching GO..."
 #curl -L https://www.ebi.ac.uk/ols/ontologies/go/download > mirror/go.owl
