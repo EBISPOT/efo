@@ -351,4 +351,11 @@ build/fbbt-self-xref.txt: $(SRC)
 
 remove-fbbt-self-xref: $(SRC)
 	$(ROBOT) query --input $< --update $(SPARQLDIR)/remove-fbbt-xrefs.ru --output $(SRC)
+	
+remove-defs-no-genus: $(SRC)
+	$(ROBOT) query --input $< --update $(SPARQLDIR)/defs-without-genus-no-isabout-to-subclass.ru --output $(SRC).ofn && mv $(SRC).ofn $(SRC)
 
+reports/report-%.tsv: $(SRC)
+	$(ROBOT) query --input $< --select $(SPARQLDIR)/$*.sparql $@
+	
+trait_reports: reports/report-defs-without-genus.tsv reports/report-measurement-is-about.tsv reports/report-defs-without-genus-no-isabout.tsv
