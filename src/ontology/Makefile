@@ -36,7 +36,7 @@ HANCESTROGENERATED= ./build/efo-hancestro
 
 all: all_imports all_components release qc
 qc: sparql_test all_reports
-gh_actions: qc efo.owl $(BUILDDIR)/$(ONT).owl
+gh_actions: qc $(BUILDDIR)/$(ONT).owl
 
 # ----------------------------------------
 # Mirror
