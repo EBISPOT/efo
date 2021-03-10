@@ -29,5 +29,5 @@ jobs:
       - name: Run ontology QC checks
         env:
           DEFAULT_BRANCH: master
-        run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' gh_actions
+        run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' ROBOT_JAVA_ARGS=-Xmx6g gh_actions
 
