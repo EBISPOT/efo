@@ -29,5 +29,5 @@ jobs:
       - name: Run ontology QC checks
         env:
           DEFAULT_BRANCH: master
-        run: cd src/ontology && ./get_mirrors.sh && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' all IMP=false PAT=false
+        run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' gh_actions
 
