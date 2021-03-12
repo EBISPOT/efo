@@ -343,10 +343,15 @@ qc/uberon_diff.txt: qc/uberon_consider_terms.txt qc/uberon_current_terms.txt
 
 all_diffs: $(ENTITY_DIFF_FILES) $(DIFF_REPORTS_FILES)
 
-tmp/$(ONT)-quick.owl:
+tmp/$(ONT)-quick-reasoned.owl:
 	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
 
-REV=1fe0d2e92b0283978668a4391c57326d4f25dc80
+tmp/$(ONT)-quick-reasoned.owl:
+	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
+
+
+#REV=1fe0d2e92b0283978668a4391c57326d4f25dc80
+REV=master
 tmp/$(ONT)-main.owl:
 	git show $(REV):src/ontology/$(SRC) > $@
 	robot --catalog catalog-v001.xml merge -i $@ -o $@.owl && mv $@.owl $@
@@ -355,9 +360,16 @@ reports/robot_diff.md: tmp/$(ONT)-main.owl tmp/$(ONT)-quick.owl
 	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-main.owl --right tmp/$(ONT)-quick.owl -f markdown -o $@
 reports/robot_diff.txt: tmp/$(ONT)-main.owl tmp/$(ONT)-quick.owl
 	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-main.owl --right tmp/$(ONT)-quick.owl -o $@
+reports/robot_reasoned_diff.md: tmp/$(ONT)-main-reasoned.owl tmp/$(ONT)-quick-reasoned.owl
+	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-main-reasoned.owl --right tmp/$(ONT)-quick-reasoned.owl -f markdown -o $@
+reports/robot_reasoned_diff.txt: tmp/$(ONT)-main-reasoned.owl tmp/$(ONT)-quick-reasoned.owl
+	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-main-reasoned.owl --right tmp/$(ONT)-quick.owl-reasoned -o $@
+
+
 .PHONY: feature_diff
 feature_diff:
 	make IMP=false PAT=false reports/robot_diff.txt
+	make IMP=false PAT=false reports/robot_reasoned_diff.txt
 
 # ----------------------------------------
 # Adhoc queries
