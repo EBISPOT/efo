@@ -361,13 +361,13 @@ tmp/$(ONT)-branch-reasoned.owl:
 
 
 reports/robot_diff.md: tmp/$(ONT)-master.owl tmp/$(ONT)-branch.owl
-	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch.owl -f markdown -o $@
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch.owl --labels true -f markdown -o $@
 reports/robot_diff.txt: tmp/$(ONT)-master.owl tmp/$(ONT)-branch.owl
-	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch.owl -o $@
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch.owl --labels true -o $@
 reports/robot_reasoned_diff.md: tmp/$(ONT)-master-reasoned.owl tmp/$(ONT)-branch-reasoned.owl
-	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch-reasoned.owl -f markdown -o $@
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch-reasoned.owl --labels true -f markdown -o $@
 reports/robot_reasoned_diff.txt: tmp/$(ONT)-master-reasoned.owl tmp/$(ONT)-branch-reasoned.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master-reasoned.owl --right tmp/$(ONT)-branch-reasoned.owl -o $@
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch-reasoned.owl --labels true -o $@
 
 
 .PHONY: feature_diff
