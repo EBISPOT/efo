@@ -343,36 +343,42 @@ qc/uberon_diff.txt: qc/uberon_consider_terms.txt qc/uberon_current_terms.txt
 
 all_diffs: $(ENTITY_DIFF_FILES) $(DIFF_REPORTS_FILES)
 
-tmp/$(ONT)-branch-reasoned.owl:
-	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
-
-tmp/$(ONT)-branch-reasoned.owl:
-	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
-
-
 #REV=1fe0d2e92b0283978668a4391c57326d4f25dc80
 REV=master
 tmp/$(ONT)-master.owl:
 	git show $(REV):src/ontology/$(SRC) > $@
 	robot --catalog catalog-v001.xml merge -i $@ -o $@.owl && mv $@.owl $@
 
+tmp/$(ONT)-master-reasoned.owl:
+	git show $(REV):src/ontology/$(SRC) > $@
+	robot --catalog catalog-v001.xml merge -i $@ reason -o $@.owl && mv $@.owl $@
+
 tmp/$(ONT)-branch.owl:
 	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
 
+tmp/$(ONT)-branch-reasoned.owl:
+	robot --catalog catalog-v001.xml merge -i $(SRC) reason -o $@.owl && mv $@.owl $@
+
+
 reports/robot_diff.md: tmp/$(ONT)-master.owl tmp/$(ONT)-branch.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master.owl --right tmp/$(ONT)-branch.owl -f markdown -o $@
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch.owl -f markdown -o $@
 reports/robot_diff.txt: tmp/$(ONT)-master.owl tmp/$(ONT)-branch.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master.owl --right tmp/$(ONT)-branch.owl -o $@
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch.owl -o $@
 reports/robot_reasoned_diff.md: tmp/$(ONT)-master-reasoned.owl tmp/$(ONT)-branch-reasoned.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master-reasoned.owl --right tmp/$(ONT)-branch-reasoned.owl -f markdown -o $@
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch-reasoned.owl -f markdown -o $@
 reports/robot_reasoned_diff.txt: tmp/$(ONT)-master-reasoned.owl tmp/$(ONT)-branch-reasoned.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master-reasoned.owl --right tmp/$(ONT)-branch.owl-reasoned -o $@
+	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master-reasoned.owl --right tmp/$(ONT)-branch-reasoned.owl -o $@
 
 
 .PHONY: feature_diff
 feature_diff:
-	make IMP=false PAT=false reports/robot_diff.txt
-	make IMP=false PAT=false reports/robot_reasoned_diff.txt
+	make IMP=false PAT=false reports/robot_diff.txt -B
+	make IMP=false PAT=false reports/robot_reasoned_diff.txt -B
+
+.PHONY: feature_diff_md
+feature_diff_md:
+	make IMP=false PAT=false reports/robot_diff.md -B
+	make IMP=false PAT=false reports/robot_reasoned_diff.md -B
 
 # ----------------------------------------
 # Adhoc queries
