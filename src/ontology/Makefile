@@ -343,27 +343,30 @@ qc/uberon_diff.txt: qc/uberon_consider_terms.txt qc/uberon_current_terms.txt
 
 all_diffs: $(ENTITY_DIFF_FILES) $(DIFF_REPORTS_FILES)
 
-tmp/$(ONT)-quick-reasoned.owl:
+tmp/$(ONT)-branch-reasoned.owl:
 	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
 
-tmp/$(ONT)-quick-reasoned.owl:
+tmp/$(ONT)-branch-reasoned.owl:
 	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
 
 
 #REV=1fe0d2e92b0283978668a4391c57326d4f25dc80
 REV=master
-tmp/$(ONT)-main.owl:
+tmp/$(ONT)-master.owl:
 	git show $(REV):src/ontology/$(SRC) > $@
 	robot --catalog catalog-v001.xml merge -i $@ -o $@.owl && mv $@.owl $@
 
-reports/robot_diff.md: tmp/$(ONT)-main.owl tmp/$(ONT)-quick.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-main.owl --right tmp/$(ONT)-quick.owl -f markdown -o $@
-reports/robot_diff.txt: tmp/$(ONT)-main.owl tmp/$(ONT)-quick.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-main.owl --right tmp/$(ONT)-quick.owl -o $@
-reports/robot_reasoned_diff.md: tmp/$(ONT)-main-reasoned.owl tmp/$(ONT)-quick-reasoned.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-main-reasoned.owl --right tmp/$(ONT)-quick-reasoned.owl -f markdown -o $@
-reports/robot_reasoned_diff.txt: tmp/$(ONT)-main-reasoned.owl tmp/$(ONT)-quick-reasoned.owl
-	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-main-reasoned.owl --right tmp/$(ONT)-quick.owl-reasoned -o $@
+tmp/$(ONT)-branch.owl:
+	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
+
+reports/robot_diff.md: tmp/$(ONT)-master.owl tmp/$(ONT)-branch.owl
+	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master.owl --right tmp/$(ONT)-branch.owl -f markdown -o $@
+reports/robot_diff.txt: tmp/$(ONT)-master.owl tmp/$(ONT)-branch.owl
+	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master.owl --right tmp/$(ONT)-branch.owl -o $@
+reports/robot_reasoned_diff.md: tmp/$(ONT)-master-reasoned.owl tmp/$(ONT)-branch-reasoned.owl
+	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master-reasoned.owl --right tmp/$(ONT)-branch-reasoned.owl -f markdown -o $@
+reports/robot_reasoned_diff.txt: tmp/$(ONT)-master-reasoned.owl tmp/$(ONT)-branch-reasoned.owl
+	robot --catalog catalog-v001.xml diff --left tmp/$(ONT)-master-reasoned.owl --right tmp/$(ONT)-branch.owl-reasoned -o $@
 
 
 .PHONY: feature_diff
