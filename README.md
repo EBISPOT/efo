@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/EBISPOT/efo.svg?branch=master)](https://travis-ci.org/EBISPOT/efo)
+[![Build Status](https://github.com/EBISPOT/efo/actions/workflows/qc.yml/badge.svg)](https://github.com/EBISPOT/efo/actions/workflows/qc.yml)
 
 # EFO
 
