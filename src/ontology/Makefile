@@ -36,6 +36,7 @@ HANCESTROGENERATED= ./build/efo-hancestro
 
 all: all_imports all_components release qc
 qc: sparql_test all_reports
+gh_actions: qc $(BUILDDIR)/$(ONT).owl
 
 # ----------------------------------------
 # Mirror
@@ -107,7 +108,7 @@ build/preserve-axioms-%.owl: build/preserve-axioms-%.ttl
 dump_%: $(SRC) build/preserve-axioms-%.owl
 	$(ROBOT) remove -i $< -T iri_dependencies/$*_terms.txt --axioms "annotation" --trim true  --preserve-structure false \
 		remove -T iri_dependencies/$*_terms.txt --trim false --preserve-structure false \
-		merge -i build/preserve-axioms-$*.owl --collapse-import-closure false -o $(SRC)
+		merge -i build/preserve-axioms-$*.owl --collapse-import-closure false convert -f ofn -o $(SRC)
 		
 build/efo-edit-functional.owl: $(SRC)
 	$(ROBOT) convert -i $(SRC) -f ofn -o $@
@@ -211,7 +212,7 @@ foreign_axiom_diff: $(FOREIGN_AXIOM_FILES_DIFF)
 	
 nuclear_strike: $(SRC) foreign_axiom_diff
 	cp $(SRC) cp-$(SRC)
-	$(ROBOT) merge -i $< $(addprefix unmerge -i , $(FOREIGN_AXIOM_FILES)) -o $(SRC)
+	$(ROBOT) merge -i $< $(addprefix unmerge -i , $(FOREIGN_AXIOM_FILES)) convert -f ofn -o $(SRC)
 	
 # ----------------------------------------
 # AE anatomagrams components
@@ -341,7 +342,44 @@ qc/uberon_diff.txt: qc/uberon_consider_terms.txt qc/uberon_current_terms.txt
 	diff -u $^ | grep '^-[^-]' | sed 's/^-//'
 
 all_diffs: $(ENTITY_DIFF_FILES) $(DIFF_REPORTS_FILES)
-	
+
+#REV=1fe0d2e92b0283978668a4391c57326d4f25dc80
+REV=master
+tmp/$(ONT)-master.owl:
+	git show $(REV):src/ontology/$(SRC) > $@
+	robot --catalog catalog-v001.xml merge -i $@ -o $@.owl && mv $@.owl $@
+
+tmp/$(ONT)-master-reasoned.owl:
+	git show $(REV):src/ontology/$(SRC) > $@
+	robot --catalog catalog-v001.xml merge -i $@ reason -o $@.owl && mv $@.owl $@
+
+tmp/$(ONT)-branch.owl:
+	robot --catalog catalog-v001.xml merge -i $(SRC) -o $@.owl && mv $@.owl $@
+
+tmp/$(ONT)-branch-reasoned.owl:
+	robot --catalog catalog-v001.xml merge -i $(SRC) reason -o $@.owl && mv $@.owl $@
+
+
+reports/robot_diff.md: tmp/$(ONT)-master.owl tmp/$(ONT)-branch.owl
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch.owl --labels true -f markdown -o $@
+reports/robot_diff.txt: tmp/$(ONT)-master.owl tmp/$(ONT)-branch.owl
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch.owl --labels true -o $@
+reports/robot_reasoned_diff.md: tmp/$(ONT)-master-reasoned.owl tmp/$(ONT)-branch-reasoned.owl
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch-reasoned.owl --labels true -f markdown -o $@
+reports/robot_reasoned_diff.txt: tmp/$(ONT)-master-reasoned.owl tmp/$(ONT)-branch-reasoned.owl
+	robot --catalog catalog-v001.xml diff --left $< --right tmp/$(ONT)-branch-reasoned.owl --labels true -o $@
+
+
+.PHONY: feature_diff
+feature_diff:
+	make IMP=false PAT=false reports/robot_diff.txt -B
+	make IMP=false PAT=false reports/robot_reasoned_diff.txt -B
+
+.PHONY: feature_diff_md
+feature_diff_md:
+	make IMP=false PAT=false reports/robot_diff.md -B
+	make IMP=false PAT=false reports/robot_reasoned_diff.md -B
+
 # ----------------------------------------
 # Adhoc queries
 # ----------------------------------------
@@ -350,7 +388,7 @@ build/fbbt-self-xref.txt: $(SRC)
 	$(ROBOT) query --input $< --query $(SPARQLDIR)/remove-self-xrefs.sparql $@
 
 remove-fbbt-self-xref: $(SRC)
-	$(ROBOT) query --input $< --update $(SPARQLDIR)/remove-fbbt-xrefs.ru --output $(SRC)
+	$(ROBOT) query --input $< --update $(SPARQLDIR)/remove-fbbt-xrefs.ru convert -f ofn --output $(SRC)
 	
 remove-defs-no-genus: $(SRC)
 	$(ROBOT) query --input $< --update $(SPARQLDIR)/defs-without-genus-no-isabout-to-subclass.ru --output $(SRC).ofn && mv $(SRC).ofn $(SRC)
@@ -359,3 +397,5 @@ reports/report-%.tsv: $(SRC)
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/$*.sparql $@
 	
 trait_reports: reports/report-defs-without-genus.tsv reports/report-measurement-is-about.tsv reports/report-defs-without-genus-no-isabout.tsv
+
+
