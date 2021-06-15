@@ -11,17 +11,17 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.30.0
-Date Released: 17th May 2021
-Class Count: 28431
+Experimental Factor Ontology version 3.31.0
+Date Released: 15th June 2021
+Class Count: 28473
 
 Summary: 
 
-EFO 3.30.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog. Work is also continuing on improving our measurements branch.
+EFO 3.31.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog. Work is also continuing on improving our measurements branch.
 
-Number of classes changed: 89
-Number of classes added: 28
-Number of classes deleted: 3
+Number of classes changed: 60
+Number of classes added: 44
+Number of classes deleted: 2
 
 ----------------------------------
 1.	Changes to URIs
@@ -37,638 +37,528 @@ Number of classes deleted: 3
 
 @Classes new to this version
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011034
-Label(s): T wave duration 
-+ 'T wave duration' SubClassOf 'electrocardiography'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100318
-Label(s): COVID-19 or sequela 
-+ 'COVID-19 or sequela' EquivalentTo 'COVID-19' or 'sequela of COVID-19'
-+ 'COVID-19 or sequela' SubClassOf 'viral disease or post-viral disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_0100350
+Label(s): neuronopathy, distal hereditary motor, type 5 
++ 'neuronopathy, distal hereditary motor, type 5' SubClassOf 'neuronopathy, distal hereditary motor'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100345
-Label(s): lactose intolerance (disease) 
-+ 'lactose intolerance (disease)' SubClassOf 'nutritional disorder'
-+ 'lactose intolerance (disease)' SubClassOf 'Metabolic disease with intestinal involvement'
-+ 'lactose intolerance (disease)' SubClassOf 'malabsorption syndrome'
-+ 'lactose intolerance (disease)' SubClassOf 'Disorder of carbohydrate metabolism'
+Class: http://www.ebi.ac.uk/efo/EFO_0600012
+Label(s): S100 calcium-binding protein B measurement 
++ 'S100 calcium-binding protein B measurement' SubClassOf 'blood protein measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100342
-Label(s): malignant glioma 
-+ 'malignant glioma' SubClassOf 'high grade malignant neoplasm'
-+ 'malignant glioma' SubClassOf 'has modifier' some 'rare'
-+ 'malignant glioma' SubClassOf 'glioma'
-+ 'malignant glioma' SubClassOf 'central nervous system cancer'
+Class: http://www.ebi.ac.uk/efo/EFO_0600011
+Label(s): Parkinson's disease symptom measurement 
++ 'Parkinson's disease symptom measurement' SubClassOf 'measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100321
-Label(s): viral disease or post-viral disorder 
-+ 'viral disease or post-viral disorder' SubClassOf 'disease'
-+ 'viral disease or post-viral disorder' EquivalentTo 'post-viral disorder' or 'viral disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0600010
+Label(s): emodin glucuronidation measurement 
++ 'emodin glucuronidation measurement' SubClassOf 'is_about' some 'hepatotoxicity'
++ 'emodin glucuronidation measurement' SubClassOf 'measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100320
-Label(s): sequela of COVID-19 
-+ 'sequela of COVID-19' SubClassOf 'post-viral disorder'
-+ 'sequela of COVID-19' EquivalentTo 'disease' and ('disease arises from feature' some 'COVID-19')
-+ 'sequela of COVID-19' SubClassOf 'COVID-19 or sequela'
-+ 'sequela of COVID-19' SubClassOf 'disease arises from feature' some 'COVID-19'
+Class: http://www.ebi.ac.uk/efo/EFO_0600009
+Label(s): cardiac ablation 
++ 'cardiac ablation' SubClassOf 'is_about' some 'heart'
++ 'cardiac ablation' SubClassOf 'is_about' some 'cardiac arrhythmia'
++ 'cardiac ablation' SubClassOf 'medical procedure'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100310
-Label(s): hereditary cerebellar ataxia 
-+ 'hereditary cerebellar ataxia' SubClassOf 'Rare genetic movement disorder'
-+ 'hereditary cerebellar ataxia' SubClassOf 'cerebellar ataxia'
-+ 'hereditary cerebellar ataxia' EquivalentTo 'cerebellar ataxia' and ('has modifier' some 'inherited')
-+ 'hereditary cerebellar ataxia' SubClassOf 'hereditary ataxia'
-+ 'hereditary cerebellar ataxia' SubClassOf 'Rare genetic tremor disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0600008
+Label(s): mitochondrial heteroplasmy measurement 
++ 'mitochondrial heteroplasmy measurement' SubClassOf 'is_about' some 'Mitochondrial disease'
++ 'mitochondrial heteroplasmy measurement' SubClassOf 'is_about' some 'mitochondrion'
++ 'mitochondrial heteroplasmy measurement' SubClassOf 'is_about' some 'mitochondrial DNA'
++ 'mitochondrial heteroplasmy measurement' SubClassOf 'mitochondrial DNA measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100308
-Label(s): atactic disorder 
-+ 'atactic disorder' SubClassOf 'central nervous system disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0600007
+Label(s): fish oil supplement exposure measurement 
++ 'fish oil supplement exposure measurement' SubClassOf 'environmental exposure measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011043
-Label(s): neck circumference 
-+ 'neck circumference' SubClassOf 'is_about' some 'neck'
-+ 'neck circumference' SubClassOf 'body weights and measures'
+Class: http://www.ebi.ac.uk/efo/EFO_0600006
+Label(s): human herpesvirus 7 seropositivity 
++ 'human herpesvirus 7 seropositivity' SubClassOf 'seropositivity measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020754
-Label(s): visceral myopathy 
-+ 'visceral myopathy' SubClassOf 'intestinal disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0600005
+Label(s): ganglion cell inner plexiform layer thickness measurement 
++ 'ganglion cell inner plexiform layer thickness measurement' SubClassOf 'retinal layer thickness measurement'
++ 'ganglion cell inner plexiform layer thickness measurement' SubClassOf 'is_about' some 'glaucoma'
++ 'ganglion cell inner plexiform layer thickness measurement' SubClassOf 'is_about' some 'retina'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030001
-Label(s): sci-CAR 
-+ 'sci-CAR' SubClassOf 'has part' some 'scATAC-seq (cell index)'
-+ 'sci-CAR' SubClassOf 'has part' some 'sci-RNA-seq'
-+ 'sci-CAR' SubClassOf 'single cell library construction'
+Class: http://www.ebi.ac.uk/efo/EFO_0600004
+Label(s): retinal nerve fibre layer thickness measurement 
++ 'retinal nerve fibre layer thickness measurement' SubClassOf 'is_about' some 'retina'
++ 'retinal nerve fibre layer thickness measurement' SubClassOf 'is_about' some 'glaucoma'
++ 'retinal nerve fibre layer thickness measurement' SubClassOf 'retinal layer thickness measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030002
-Label(s): microwell-seq 
-+ 'microwell-seq' SubClassOf 'single cell library construction'
+Class: http://www.ebi.ac.uk/efo/EFO_0600003
+Label(s): vitamin C measurement 
++ 'vitamin C measurement' SubClassOf 'vitamin measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011039
-Label(s): myeloperoxidase (MPO)-DNA complex measurement 
-+ 'myeloperoxidase (MPO)-DNA complex measurement' SubClassOf 'hematological measurement'
-+ 'myeloperoxidase (MPO)-DNA complex measurement' SubClassOf 'is_about' some 'neutrophil'
-+ 'myeloperoxidase (MPO)-DNA complex measurement' SubClassOf 'is_about' some 'enzyme'
-+ 'myeloperoxidase (MPO)-DNA complex measurement' SubClassOf 'protein measurement'
-+ 'myeloperoxidase (MPO)-DNA complex measurement' SubClassOf 'is_about' some 'protein'
-+ 'myeloperoxidase (MPO)-DNA complex measurement' SubClassOf 'is_about' some 'DNA'
+Class: http://www.ebi.ac.uk/efo/EFO_0600002
+Label(s): retinal layer thickness measurement 
++ 'retinal layer thickness measurement' SubClassOf 'is_about' some 'glaucoma'
++ 'retinal layer thickness measurement' SubClassOf 'is_about' some 'retina'
++ 'retinal layer thickness measurement' SubClassOf 'eye measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011037
-Label(s): anti-human herpes virus 6 antibody measurement 
-+ 'anti-human herpes virus 6 antibody measurement' SubClassOf 'antibody measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0600001
+Label(s): ghrelin measurement 
++ 'ghrelin measurement' SubClassOf 'hormone measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030003
-Label(s): 10x 3' transcription profiling 
-+ '10x 3' transcription profiling' SubClassOf '10x technology'
+Class: http://www.ebi.ac.uk/efo/EFO_0600000
+Label(s): sortilin measurement 
++ 'sortilin measurement' SubClassOf 'glycoprotein measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011024
-Label(s): response to liver transplant 
-+ 'response to liver transplant' SubClassOf 'response to transplant'
+Class: http://purl.obolibrary.org/obo/MONDO_0100349
+Label(s): COACH syndrome 
++ 'COACH syndrome' SubClassOf 'genetic disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011036
-Label(s): matrix metalloproteinase–degraded type I collagen measurement 
-+ 'matrix metalloproteinase–degraded type I collagen measurement' SubClassOf 'blood protein measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0100283
+Label(s): overgrowth syndrome and/or cerebral malformations due to abnormalities in MTOR pathway genes 
++ 'overgrowth syndrome and/or cerebral malformations due to abnormalities in MTOR pathway genes' SubClassOf 'Rare genetic neurological disorder'
++ 'overgrowth syndrome and/or cerebral malformations due to abnormalities in MTOR pathway genes' SubClassOf 'central nervous system malformation'
++ 'overgrowth syndrome and/or cerebral malformations due to abnormalities in MTOR pathway genes' SubClassOf 'Genetic overgrowth/obesity syndrome'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011038
-Label(s): anti-human herpes virus 7 antibody measurement 
-+ 'anti-human herpes virus 7 antibody measurement' SubClassOf 'antibody measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0017361
+Label(s): congenital rubella syndrome 
++ 'congenital rubella syndrome' SubClassOf 'congenital nervous system disorder'
++ 'congenital rubella syndrome' EquivalentTo 'rubella' and ('has modifier' some 'congenital')
++ 'congenital rubella syndrome' SubClassOf 'rubella'
++ 'congenital rubella syndrome' SubClassOf 'infectious disease with epilepsy'
++ 'congenital rubella syndrome' SubClassOf 'infectious embryofetopathy'
++ 'congenital rubella syndrome' SubClassOf 'viral infection of central nervous system'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011041
-Label(s): response to BCG intravesical immunotherapy 
-+ 'response to BCG intravesical immunotherapy' SubClassOf 'is_about' some 'bladder transitional cell carcinoma'
-+ 'response to BCG intravesical immunotherapy' SubClassOf 'response to antineoplastic agent'
+Class: http://purl.obolibrary.org/obo/MONDO_0022736
+Label(s): occupational lung disease 
++ 'occupational lung disease' SubClassOf 'lung disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011044
-Label(s): BMI-adjusted neck circumference 
-+ 'BMI-adjusted neck circumference' SubClassOf 'neck circumference'
-+ 'BMI-adjusted neck circumference' SubClassOf 'is_about' some 'neck'
+Class: http://www.ebi.ac.uk/efo/EFO_0030012
+Label(s): 10x feature barcode (sample multiplexing) 
++ '10x feature barcode (sample multiplexing)' SubClassOf '10x feature profiling'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011045
-Label(s): fetal weight 
-+ 'fetal weight' SubClassOf 'body weight'
+Class: http://www.ebi.ac.uk/efo/EFO_0030008
+Label(s): CITE-seq (cell surface protein profiling) 
++ 'CITE-seq (cell surface protein profiling)' SubClassOf 'CITE-seq'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030005
-Label(s): spatial transcriptomics by high-throughput sequencing 
-+ 'spatial transcriptomics by high-throughput sequencing' SubClassOf 'assay by high throughput sequencer'
-+ 'spatial transcriptomics by high-throughput sequencing' SubClassOf 'spatial transcriptomics'
+Class: http://www.ebi.ac.uk/efo/EFO_0030009
+Label(s): CITE-seq (sample multiplexing) 
++ 'CITE-seq (sample multiplexing)' SubClassOf 'CITE-seq'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030004
-Label(s): 10x 5' transcription profiling 
-+ '10x 5' transcription profiling' SubClassOf '10x technology'
+Class: http://www.ebi.ac.uk/efo/EFO_0011058
+Label(s): peripheral neurotoxicity 
++ 'peripheral neurotoxicity' SubClassOf 'neurotoxicity'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030000
-Label(s): STARmap 
-+ 'STARmap' SubClassOf 'RNA assay'
-+ 'STARmap' SubClassOf 'microscopy assay'
-+ 'STARmap' SubClassOf 'in-situ hybridization assay'
+Class: http://www.ebi.ac.uk/efo/EFO_0011055
+Label(s): musculoskeletal toxicity 
++ 'musculoskeletal toxicity' SubClassOf 'musculoskeletal system disease'
++ 'musculoskeletal toxicity' SubClassOf 'toxicity'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011031
-Label(s): intestinal permeability measurement 
-+ 'intestinal permeability measurement' SubClassOf 'is_about' some 'intestinal disease'
-+ 'intestinal permeability measurement' SubClassOf 'measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0011050
+Label(s): gastrointestinal toxicity 
++ 'gastrointestinal toxicity' SubClassOf 'gastrointestinal disease'
++ 'gastrointestinal toxicity' SubClassOf 'toxicity'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011032
-Label(s): fractional excretion of lactulose to mannitol ratio 
-+ 'fractional excretion of lactulose to mannitol ratio' SubClassOf 'intestinal permeability measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0011048
+Label(s): dermatological toxicity 
++ 'dermatological toxicity' SubClassOf 'skin disease'
++ 'dermatological toxicity' SubClassOf 'toxicity'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011033
-Label(s): ST segment duration 
-+ 'ST segment duration' SubClassOf 'electrocardiography'
+Class: http://www.ebi.ac.uk/efo/EFO_0011046
+Label(s): carcinogenicity 
++ 'carcinogenicity' SubClassOf 'neoplastic disease or syndrome'
++ 'carcinogenicity' SubClassOf 'toxicity'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011035
-Label(s): TP segment duration 
-+ 'TP segment duration' SubClassOf 'electrocardiography'
+Class: http://www.ebi.ac.uk/efo/EFO_0011047
+Label(s): central nervous system toxicity 
++ 'central nervous system toxicity' SubClassOf 'neurotoxicity'
 
+Class: http://www.ebi.ac.uk/efo/EFO_0011049
+Label(s): drug misuse 
++ 'drug misuse' SubClassOf 'substance-related disorder'
++ 'drug misuse' SubClassOf 'toxicity'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011051
+Label(s): hematological toxicity 
++ 'hematological toxicity' SubClassOf 'toxicity'
++ 'hematological toxicity' SubClassOf 'hematologic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011053
+Label(s): immune system toxicity 
++ 'immune system toxicity' SubClassOf 'toxicity'
++ 'immune system toxicity' SubClassOf 'immune system disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011054
+Label(s): metabolic toxicity 
++ 'metabolic toxicity' SubClassOf 'nutritional or metabolic disease'
++ 'metabolic toxicity' SubClassOf 'toxicity'
++ 'metabolic toxicity' SubClassOf 'metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011056
+Label(s): nephrotoxicity 
++ 'nephrotoxicity' SubClassOf 'urinary system disease'
++ 'nephrotoxicity' SubClassOf 'toxicity'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011057
+Label(s): neurotoxicity 
++ 'neurotoxicity' SubClassOf 'nervous system disease'
++ 'neurotoxicity' SubClassOf 'toxicity'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011059
+Label(s): psychiatric toxicity 
++ 'psychiatric toxicity' SubClassOf 'toxicity'
++ 'psychiatric toxicity' SubClassOf 'psychiatric disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011060
+Label(s): respiratory toxicity 
++ 'respiratory toxicity' SubClassOf 'toxicity'
++ 'respiratory toxicity' SubClassOf 'respiratory system disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011061
+Label(s): toxicity 
++ 'toxicity' SubClassOf 'injury'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011062
+Label(s): vascular toxicity 
++ 'vascular toxicity' SubClassOf 'vascular disease'
++ 'vascular toxicity' SubClassOf 'toxicity'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030013
+Label(s): 10x feature barcode (CRISPR screening) 
++ '10x feature barcode (CRISPR screening)' SubClassOf '10x feature profiling'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030011
+Label(s): 10x feature barcode (cell surface protein profiling) 
++ '10x feature barcode (cell surface protein profiling)' SubClassOf '10x feature profiling'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030010
+Label(s): 10x feature profiling 
++ '10x feature profiling' SubClassOf '10x technology'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030007
+Label(s): 10x scATAC-seq 
++ '10x scATAC-seq' SubClassOf 'RNA assay'
++ '10x scATAC-seq' SubClassOf '10x technology'
++ '10x scATAC-seq' SubClassOf 'scATAC-seq'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011052
+Label(s): hepatotoxicity 
++ 'hepatotoxicity' SubClassOf 'toxicity'
++ 'hepatotoxicity' SubClassOf 'hepatobiliary disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0600003
+Label(s): bacterial hemorrhagic fever 
++ 'bacterial hemorrhagic fever' SubClassOf 'bacterial disease'
++ 'bacterial hemorrhagic fever' SubClassOf 'hemorrhagic fever'
++ 'bacterial hemorrhagic fever' SubClassOf 'has modifier' some 'rare'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0600002
+Label(s): hemorrhagic fever 
++ 'hemorrhagic fever' SubClassOf 'infectious disease'
 
 ----------------------------------
 2. Changes to EFO3
 
 @Classes modified from previous
 
-Class: http://www.orpha.net/ORDO/Orphanet_2589
-Label(s): Myoclonus - cerebellar ataxia - deafness 
-- 'Myoclonus - cerebellar ataxia - deafness' SubClassOf 'Genetic neurodegenerative disease'
-- 'Myoclonus - cerebellar ataxia - deafness' SubClassOf 'Rare genetic movement disorder'
-- 'Myoclonus - cerebellar ataxia - deafness' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_247765
-Label(s): X-linked cerebellar ataxia 
-- 'X-linked cerebellar ataxia' SubClassOf 'hereditary ataxia'
-- 'X-linked cerebellar ataxia' SubClassOf 'Rare genetic tremor disorder'
-- 'X-linked cerebellar ataxia' SubClassOf 'Genetic neurodegenerative disease'
-- 'X-linked cerebellar ataxia' SubClassOf 'Rare genetic movement disorder'
-+ 'X-linked cerebellar ataxia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100310
-
-Class: http://www.orpha.net/ORDO/Orphanet_98097
-Label(s): Autosomal recessive cerebellar ataxia due to a DNA repair defect 
-- 'Autosomal recessive cerebellar ataxia due to a DNA repair defect' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1180
-Label(s): Ataxia - hypogonadism - choroidal dystrophy 
-- 'Ataxia - hypogonadism - choroidal dystrophy' SubClassOf 'Rare genetic movement disorder'
-- 'Ataxia - hypogonadism - choroidal dystrophy' SubClassOf 'Genetic neurodegenerative disease'
-- 'Ataxia - hypogonadism - choroidal dystrophy' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1185
-Label(s): Spinocerebellar ataxia - dysmorphism 
-- 'Spinocerebellar ataxia - dysmorphism' SubClassOf 'Genetic neurodegenerative disease'
-- 'Spinocerebellar ataxia - dysmorphism' SubClassOf 'Rare genetic tremor disorder'
-- 'Spinocerebellar ataxia - dysmorphism' SubClassOf 'Rare genetic movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1186
-Label(s): Infantile onset spinocerebellar ataxia 
-- 'Infantile onset spinocerebellar ataxia' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000437
-Label(s): cerebellar ataxia 
-- 'cerebellar ataxia' SubClassOf 'syndromic disease'
-+ 'cerebellar ataxia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100308
-
-Class: http://www.orpha.net/ORDO/Orphanet_94125
-Label(s): Recessive mitochondrial ataxia syndrome 
-- 'Recessive mitochondrial ataxia syndrome' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_166272
-Label(s): Goldblatt syndrome 
-- 'Goldblatt syndrome' SubClassOf 'Malformative syndrome with dentinogenesis imperfecta'
-- 'Goldblatt syndrome' SubClassOf 'Spondylometaphyseal dysplasia'
-+ 'Goldblatt syndrome' SubClassOf 'Malformative syndrome with dentinogenesis imperfecta'
-+ 'Goldblatt syndrome' SubClassOf 'Spondylometaphyseal dysplasia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1399
-Label(s): Richards-Rundle syndrome 
-- 'Richards-Rundle syndrome' SubClassOf 'Genetic neurodegenerative disease'
-- 'Richards-Rundle syndrome' SubClassOf 'Rare genetic movement disorder'
-- 'Richards-Rundle syndrome' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_238475
-Label(s): Familial hypercholanemia 
-- 'Familial hypercholanemia' SubClassOf 'Bile acid synthesis defect with cholestasis and malabsorption'
-+ 'Familial hypercholanemia' SubClassOf 'Bile acid synthesis defect with cholestasis and malabsorption'
-
-Class: http://www.orpha.net/ORDO/Orphanet_352641
-Label(s): Autosomal recessive cerebellar ataxia with late-onset spasticity 
-- 'Autosomal recessive cerebellar ataxia with late-onset spasticity' SubClassOf 'Rare syndromic dyslipidemia'
-- 'Autosomal recessive cerebellar ataxia with late-onset spasticity' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_401866
-Label(s): Spasticity-ataxia-gait anomalies syndrome 
-- 'Spasticity-ataxia-gait anomalies syndrome' SubClassOf 'Rare syndromic dyslipidemia'
-- 'Spasticity-ataxia-gait anomalies syndrome' SubClassOf 'Cerebral organic aciduria'
-
-Class: http://www.orpha.net/ORDO/Orphanet_363429
-Label(s): Autosomal recessive cerebellar ataxia-pyramidal signs-nystagmus-oculomotor apraxia syndrome 
-- 'Autosomal recessive cerebellar ataxia-pyramidal signs-nystagmus-oculomotor apraxia syndrome' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000941
-Label(s): eyelid degenerative disease 
-- 'eyelid degenerative disease' SubClassOf 'eye degenerative disease'
-- 'eyelid degenerative disease' SubClassOf 'eyelid disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000763
-Label(s): viral disease 
-+ 'viral disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100321
-
-Class: http://www.orpha.net/ORDO/Orphanet_1178
-Label(s): Ataxia - tapetoretinal degeneration 
-- 'Ataxia - tapetoretinal degeneration' SubClassOf 'Rare genetic movement disorder'
-- 'Ataxia - tapetoretinal degeneration' SubClassOf 'Genetic neurodegenerative disease'
-- 'Ataxia - tapetoretinal degeneration' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005499
-Label(s): brain glioma 
-- 'brain glioma' SubClassOf 'malignant glioma'
-+ 'brain glioma' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100342
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009922
-Label(s): 10x 3' v3 sequencing 
-- '10x 3' v3 sequencing' SubClassOf '10x v3 sequencing'
-+ '10x 3' v3 sequencing' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030003
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009901
-Label(s): 10x 3' v1 sequencing 
-- '10x 3' v1 sequencing' SubClassOf '10x v1 sequencing'
-+ '10x 3' v1 sequencing' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030003
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009900
-Label(s): 10x 5' v2 sequencing 
-- '10x 5' v2 sequencing' SubClassOf '10x v2 sequencing'
-+ '10x 5' v2 sequencing' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030004
-
-Class: http://purl.obolibrary.org/obo/MONDO_0033482
-Label(s): spinocerebellar ataxia 47 
-- 'spinocerebellar ataxia 47' SubClassOf 'cerebellar ataxia'
-+ 'spinocerebellar ataxia 47' SubClassOf 'Autosomal dominant cerebellar ataxia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_316226
-Label(s): Spastic ataxia 
-- 'Spastic ataxia' SubClassOf 'Rare genetic tremor disorder'
-- 'Spastic ataxia' SubClassOf 'Genetic neurodegenerative disease'
-- 'Spastic ataxia' SubClassOf 'Rare genetic movement disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009899
-Label(s): 10x 3' v2 sequencing 
-- '10x 3' v2 sequencing' SubClassOf '10x v2 sequencing'
-+ '10x 3' v2 sequencing' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030003
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015917
-Label(s): malignant glioma 
-- 'malignant glioma' SubClassOf 'high grade malignant neoplasm'
-- 'malignant glioma' SubClassOf 'glioma'
-- 'malignant glioma' SubClassOf 'has modifier' some 'rare'
-- 'malignant glioma' SubClassOf 'central nervous system cancer'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100143
-Label(s): critical COVID-19 infection 
-- 'critical COVID-19 infection' SubClassOf 'COVID-19'
-+ 'critical COVID-19 infection' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100142
-Label(s): severe COVID-19 infection 
-- 'severe COVID-19 infection' SubClassOf 'COVID-19'
-+ 'severe COVID-19 infection' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100141
-Label(s): moderate COVID-19 infection 
-- 'moderate COVID-19 infection' SubClassOf 'COVID-19'
-+ 'moderate COVID-19 infection' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.orpha.net/ORDO/Orphanet_99013
-Label(s): Autosomal recessive spastic paraplegia type 7 
-- 'Autosomal recessive spastic paraplegia type 7' SubClassOf 'Rare genetic movement disorder'
-- 'Autosomal recessive spastic paraplegia type 7' SubClassOf 'Rare genetic tremor disorder'
-- 'Autosomal recessive spastic paraplegia type 7' SubClassOf 'cerebellar degeneration'
-
-Class: http://www.orpha.net/ORDO/Orphanet_306558
-Label(s): Primary microcephaly-epilepsy-permanent neonatal diabetes syndrome 
-- 'Primary microcephaly-epilepsy-permanent neonatal diabetes syndrome' SubClassOf 'diabetes mellitus'
-- 'Primary microcephaly-epilepsy-permanent neonatal diabetes syndrome' SubClassOf 'Cerebral malformation with epilepsy'
-- 'Primary microcephaly-epilepsy-permanent neonatal diabetes syndrome' SubClassOf 'Syndrome with microcephaly as major feature'
-- 'Primary microcephaly-epilepsy-permanent neonatal diabetes syndrome' SubClassOf 'Developmental anomaly of metabolic origin'
-+ 'Primary microcephaly-epilepsy-permanent neonatal diabetes syndrome' SubClassOf 'Cerebral malformation with epilepsy'
-+ 'Primary microcephaly-epilepsy-permanent neonatal diabetes syndrome' SubClassOf 'Syndrome with microcephaly as major feature'
-
-Class: http://www.orpha.net/ORDO/Orphanet_211062
-Label(s): Hereditary episodic ataxia 
-- 'Hereditary episodic ataxia' SubClassOf 'Rare genetic movement disorder'
-- 'Hereditary episodic ataxia' SubClassOf 'Genetic neurodegenerative disease'
-- 'Hereditary episodic ataxia' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100096
-Label(s): COVID-19 
-- 'COVID-19' SubClassOf 'Orthocoronavirinae infectious disease'
-+ 'COVID-19' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100318
-+ 'COVID-19' SubClassOf 'Orthocoronavirinae infectious disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000062
-Label(s): lactose intolerance 
-- 'lactose intolerance' SubClassOf 'Disorder of carbohydrate metabolism'
-- 'lactose intolerance' SubClassOf 'nutritional disorder'
-- 'lactose intolerance' SubClassOf 'Metabolic disease with intestinal involvement'
-+ 'lactose intolerance' SubClassOf 'nutritional disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1368
-Label(s): Cataract - ataxia - deafness 
-- 'Cataract - ataxia - deafness' SubClassOf 'Rare genetic tremor disorder'
-- 'Cataract - ataxia - deafness' SubClassOf 'Rare genetic movement disorder'
-- 'Cataract - ataxia - deafness' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009671
-Label(s): hereditary ataxia 
-- 'hereditary ataxia' SubClassOf 'cerebellar ataxia'
-- 'hereditary ataxia' SubClassOf 'neurodegenerative disease'
-+ 'hereditary ataxia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100308
-+ 'hereditary ataxia' EquivalentTo http://purl.obolibrary.org/obo/MONDO_0100308 and ('has modifier' some 'inherited')
-+ 'hereditary ataxia' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010961
-Label(s): Visium Spatial Gene Expression 
-- 'Visium Spatial Gene Expression' SubClassOf 'spatial transcriptomics'
-+ 'Visium Spatial Gene Expression' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030005
-
-Class: http://www.orpha.net/ORDO/Orphanet_2274
-Label(s): Ichthyosis - hepatosplenomegaly - cerebellar degeneration 
-- 'Ichthyosis - hepatosplenomegaly - cerebellar degeneration' SubClassOf 'Rare genetic tremor disorder'
-- 'Ichthyosis - hepatosplenomegaly - cerebellar degeneration' SubClassOf 'Genetic neurodegenerative disease'
-- 'Ichthyosis - hepatosplenomegaly - cerebellar degeneration' SubClassOf 'Rare genetic movement disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010902
-Label(s): anti-herpes simplex virus 7 antibody measurement 
-- 'anti-herpes simplex virus 7 antibody measurement' SubClassOf 'antibody measurement'
-+ 'anti-herpes simplex virus 7 antibody measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010901
-Label(s): anti-herpes simplex virus 6 antibody measurement 
-- 'anti-herpes simplex virus 6 antibody measurement' SubClassOf 'antibody measurement'
-+ 'anti-herpes simplex virus 6 antibody measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009764
-Label(s): eye colour measurement 
-+ 'eye colour measurement' SubClassOf 'is_about' some 'eye'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100139
-Label(s): asymptomatic COVID-19 infection 
-- 'asymptomatic COVID-19 infection' SubClassOf 'COVID-19'
-+ 'asymptomatic COVID-19 infection' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100140
-Label(s): mild COVID-19 infection 
-- 'mild COVID-19 infection' SubClassOf 'COVID-19'
-+ 'mild COVID-19 infection' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010713
-Label(s): 10x immune profiling 
-- '10x immune profiling' SubClassOf '10x 5' v2 sequencing'
-+ '10x immune profiling' SubClassOf '10x sequencing'
-
-Class: http://www.orpha.net/ORDO/Orphanet_139485
-Label(s): Autosomal recessive ataxia due to ubiquinone deficiency 
-- 'Autosomal recessive ataxia due to ubiquinone deficiency' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_391408
-Label(s): Primary microcephaly-mild intellectual disability-young-onset diabetes syndrome 
-- 'Primary microcephaly-mild intellectual disability-young-onset diabetes syndrome' SubClassOf 'Primary microcephaly-epilepsy-permanent neonatal diabetes syndrome'
-+ 'Primary microcephaly-mild intellectual disability-young-onset diabetes syndrome' SubClassOf 'Rare genetic diabetes mellitus'
-+ 'Primary microcephaly-mild intellectual disability-young-onset diabetes syndrome' SubClassOf 'has modifier' some 'rare'
-+ 'Primary microcephaly-mild intellectual disability-young-onset diabetes syndrome' SubClassOf 'diabetes mellitus'
-+ 'Primary microcephaly-mild intellectual disability-young-onset diabetes syndrome' SubClassOf 'Syndrome with microcephaly as major feature'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100242
-Label(s): glioma susceptibility 
-- 'glioma susceptibility' SubClassOf 'predisposes towards' some 'malignant glioma'
-- 'glioma susceptibility' EquivalentTo 'inherited disease susceptibility' and ('predisposes towards' some 'malignant glioma')
-+ 'glioma susceptibility' EquivalentTo 'inherited disease susceptibility' and ('predisposes towards' some http://purl.obolibrary.org/obo/MONDO_0100342)
-+ 'glioma susceptibility' SubClassOf 'predisposes towards' some http://purl.obolibrary.org/obo/MONDO_0100342
-
-Class: http://www.orpha.net/ORDO/Orphanet_199343
-Label(s): EAST syndrome 
-- 'EAST syndrome' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_64734
-Label(s): Iridocorneal endothelial syndrome 
-- 'Iridocorneal endothelial syndrome' SubClassOf 'syndromic disease'
-+ 'Iridocorneal endothelial syndrome' SubClassOf 'Syndromic corneal dystrophy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_95
-Label(s): Friedreich ataxia 
-- 'Friedreich ataxia' SubClassOf 'Syndrome associated with hypertrophic cardiomyopathy'
-- 'Friedreich ataxia' SubClassOf 'Cerebellar ataxia with peripheral neuropathy'
-- 'Friedreich ataxia' SubClassOf 'Neurometabolic disease'
-- 'Friedreich ataxia' SubClassOf 'Autosomal recessive degenerative and progressive cerebellar ataxia'
-+ 'Friedreich ataxia' SubClassOf 'Cerebellar ataxia with peripheral neuropathy'
-+ 'Friedreich ataxia' SubClassOf 'Neurometabolic disease'
-+ 'Friedreich ataxia' SubClassOf 'Autosomal recessive degenerative and progressive cerebellar ataxia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96
-Label(s): Ataxia with vitamin E deficiency 
-- 'Ataxia with vitamin E deficiency' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99
-Label(s): Autosomal dominant cerebellar ataxia 
-- 'Autosomal dominant cerebellar ataxia' SubClassOf 'Rare genetic movement disorder'
-- 'Autosomal dominant cerebellar ataxia' SubClassOf 'Rare genetic tremor disorder'
-- 'Autosomal dominant cerebellar ataxia' SubClassOf 'hereditary ataxia'
-+ 'Autosomal dominant cerebellar ataxia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100310
-
-Class: http://www.orpha.net/ORDO/Orphanet_73271
-Label(s): Bleeding diathesis due to a collagen receptor defect 
-- 'Bleeding diathesis due to a collagen receptor defect' SubClassOf 'disease of signal transduction'
-- 'Bleeding diathesis due to a collagen receptor defect' SubClassOf 'disease of receptor activity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002542
-Label(s): spinal cord glioma 
-- 'spinal cord glioma' SubClassOf 'malignant glioma'
-+ 'spinal cord glioma' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100342
-
-Class: http://www.orpha.net/ORDO/Orphanet_316235
-Label(s): Autosomal dominant spastic ataxia 
-- 'Autosomal dominant spastic ataxia' SubClassOf 'Autosomal dominant cerebellar ataxia'
-+ 'Autosomal dominant spastic ataxia' SubClassOf 'autosomal dominant disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_254343
-Label(s): Autosomal recessive spastic ataxia - optic atrophy - dysarthria 
-- 'Autosomal recessive spastic ataxia - optic atrophy - dysarthria' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1766
-Label(s): Dysequilibrium syndrome 
-+ 'Dysequilibrium syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021674
-Label(s): post-viral disorder 
-+ 'post-viral disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100321
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044714
-Label(s): mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome 
-- 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'Rare genetic movement disorder'
-- 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'Genetic neurodegenerative disease'
-- 'mitochondrial myopathy-cerebellar ataxia-pigmentary retinopathy syndrome' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3177
-Label(s): Corneal-cerebellar syndrome 
-- 'Corneal-cerebellar syndrome' SubClassOf 'cerebellar degeneration'
-- 'Corneal-cerebellar syndrome' SubClassOf 'hereditary ataxia'
-- 'Corneal-cerebellar syndrome' SubClassOf 'Rare genetic tremor disorder'
-- 'Corneal-cerebellar syndrome' SubClassOf 'Rare genetic movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_559
-Label(s): Marinesco-Sjögren syndrome 
-- 'Marinesco-Sjögren syndrome' SubClassOf 'eyelid degenerative disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016593
-Label(s): acquired ataxia 
-- 'acquired ataxia' SubClassOf 'cerebellar ataxia'
-- 'acquired ataxia' EquivalentTo 'cerebellar ataxia' and ('has modifier' some 'acquired')
-+ 'acquired ataxia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100308
-+ 'acquired ataxia' EquivalentTo http://purl.obolibrary.org/obo/MONDO_0100308 and ('has modifier' some 'acquired')
-
-Class: http://www.orpha.net/ORDO/Orphanet_475
-Label(s): Joubert syndrome 
-+ 'Joubert syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021640
-Label(s): grade III glioma 
-- 'grade III glioma' SubClassOf 'malignant glioma'
-+ 'grade III glioma' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100342
-
-Class: http://www.orpha.net/ORDO/Orphanet_772
-Label(s): Infantile Refsum disease 
-- 'Infantile Refsum disease' SubClassOf 'Metabolic disease with dementia'
-+ 'Infantile Refsum disease' SubClassOf 'cerebellar degeneration'
-+ 'Infantile Refsum disease' SubClassOf 'eye degenerative disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016680
-Label(s): high grade astrocytic tumor 
-- 'high grade astrocytic tumor' SubClassOf 'malignant glioma'
-+ 'high grade astrocytic tumor' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100342
-
-Class: http://www.orpha.net/ORDO/Orphanet_849
-Label(s): Glanzmann thrombasthenia 
-- 'Glanzmann thrombasthenia' SubClassOf 'Rare genetic coagulation disorder'
-- 'Glanzmann thrombasthenia' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-- 'Glanzmann thrombasthenia' SubClassOf 'inherited bleeding disorder, platelet-type'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016701
-Label(s): oligoastrocytic tumor 
-- 'oligoastrocytic tumor' SubClassOf 'malignant glioma'
-+ 'oligoastrocytic tumor' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100342
-
-Class: http://www.orpha.net/ORDO/Orphanet_909
-Label(s): Cerebrotendinous xanthomatosis 
-+ 'Cerebrotendinous xanthomatosis' SubClassOf 'eye degenerative disease'
-+ 'Cerebrotendinous xanthomatosis' SubClassOf 'cerebellar degeneration'
-
-Class: http://www.orpha.net/ORDO/Orphanet_313772
-Label(s): Early-onset spastic ataxia-neuropathy syndrome 
-- 'Early-onset spastic ataxia-neuropathy syndrome' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021191
-Label(s): malignant ependymoma 
-- 'malignant ependymoma' SubClassOf 'malignant glioma'
-+ 'malignant ependymoma' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100342
-
-Class: http://www.orpha.net/ORDO/Orphanet_773
-Label(s): Refsum disease 
-- 'Refsum disease' SubClassOf 'Metabolic disease with dementia'
-+ 'Refsum disease' SubClassOf 'cerebellar degeneration'
-+ 'Refsum disease' SubClassOf 'eye degenerative disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1173
-Label(s): Cerebellar ataxia - hypogonadism 
-- 'Cerebellar ataxia - hypogonadism' SubClassOf 'hereditary ataxia'
-- 'Cerebellar ataxia - hypogonadism' SubClassOf 'Rare genetic movement disorder'
-- 'Cerebellar ataxia - hypogonadism' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000063
-Label(s): lactose intolerance adult type 
-- 'lactose intolerance adult type' SubClassOf 'lactose intolerance'
-+ 'lactose intolerance adult type' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100345
-+ 'lactose intolerance adult type' SubClassOf 'lactose intolerance'
-
-Class: http://www.orpha.net/ORDO/Orphanet_93604
-Label(s): Antenatal Bartter syndrome 
-- 'Antenatal Bartter syndrome' SubClassOf 'Bartter syndrome'
-+ 'Antenatal Bartter syndrome' SubClassOf 'Bartter syndrome'
-
-Class: http://www.orpha.net/ORDO/Orphanet_48431
-Label(s): Congenital cataracts - facial dysmorphism - neuropathy 
-- 'Congenital cataracts - facial dysmorphism - neuropathy' SubClassOf 'eyelid degenerative disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018744
-Label(s): oligodendroglial tumor 
-- 'oligodendroglial tumor' SubClassOf 'malignant glioma'
-+ 'oligodendroglial tumor' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100342
-
-Class: http://www.orpha.net/ORDO/Orphanet_98979
-Label(s): Chandler syndrome 
-- 'Chandler syndrome' SubClassOf 'Syndromic corneal dystrophy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0011025
-Label(s): 10x 5' v1 sequencing 
-- '10x 5' v1 sequencing' SubClassOf '10x v1 sequencing'
-+ '10x 5' v1 sequencing' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030004
-
-Class: http://www.orpha.net/ORDO/Orphanet_2604
-Label(s): Familial visceral myopathy 
-+ 'Familial visceral myopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0020754
-
-Class: http://www.orpha.net/ORDO/Orphanet_93256
-Label(s): Fragile X-associated tremor/ataxia syndrome 
-+ 'Fragile X-associated tremor/ataxia syndrome' SubClassOf 'syndromic disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_221061
-Label(s): Hereditary cerebral cavernous malformation 
-- 'Hereditary cerebral cavernous malformation' SubClassOf 'Genetic neurovascular malformation'
-- 'Hereditary cerebral cavernous malformation' SubClassOf 'simple vascular malformation'
-- 'Hereditary cerebral cavernous malformation' SubClassOf 'cerebral cavernous malformation'
-- 'Hereditary cerebral cavernous malformation' SubClassOf 'Genetic vascular anomaly'
-- 'Hereditary cerebral cavernous malformation' EquivalentTo 'cerebral cavernous malformation' and ('has modifier' some 'inherited')
-- 'Hereditary cerebral cavernous malformation' SubClassOf 'Genetic central nervous system and retinal vascular disease'
-+ 'Hereditary cerebral cavernous malformation' SubClassOf 'Genetic neurovascular malformation'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2579
-Label(s): Muscular atrophy - ataxia - retinitis pigmentosa - diabetes mellitus 
-- 'Muscular atrophy - ataxia - retinitis pigmentosa - diabetes mellitus' SubClassOf 'Rare genetic tremor disorder'
-- 'Muscular atrophy - ataxia - retinitis pigmentosa - diabetes mellitus' SubClassOf 'cerebellar degeneration'
-- 'Muscular atrophy - ataxia - retinitis pigmentosa - diabetes mellitus' SubClassOf 'Rare genetic movement disorder'
-- 'Muscular atrophy - ataxia - retinitis pigmentosa - diabetes mellitus' SubClassOf 'Genetic neurodegenerative disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007858
-Label(s): eye morphology measurement 
-+ 'eye morphology measurement' SubClassOf 'eye measurement'
-+ 'eye morphology measurement' SubClassOf 'is_about' some 'eye'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1172
-Label(s): Autosomal recessive cerebellar ataxia 
-- 'Autosomal recessive cerebellar ataxia' SubClassOf 'Rare genetic movement disorder'
-- 'Autosomal recessive cerebellar ataxia' SubClassOf 'Ataxia with dementia'
-- 'Autosomal recessive cerebellar ataxia' SubClassOf 'cerebellar degeneration'
-- 'Autosomal recessive cerebellar ataxia' SubClassOf 'eye degenerative disease'
-- 'Autosomal recessive cerebellar ataxia' SubClassOf 'Rare genetic tremor disorder'
-- 'Autosomal recessive cerebellar ataxia' SubClassOf 'hereditary ataxia'
-- 'Autosomal recessive cerebellar ataxia' SubClassOf 'Genetic neuro-ophthalmological disease'
-+ 'Autosomal recessive cerebellar ataxia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100310
-
-Class: http://www.orpha.net/ORDO/Orphanet_316240
-Label(s): Autosomal recessive spastic ataxia 
-- 'Autosomal recessive spastic ataxia' SubClassOf 'Autosomal recessive cerebellar ataxia'
-+ 'Autosomal recessive spastic ataxia' SubClassOf 'autosomal recessive disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_98
-Label(s): Autosomal recessive spastic ataxia of Charlevoix-Saguenay 
-+ 'Autosomal recessive spastic ataxia of Charlevoix-Saguenay' SubClassOf 'Autosomal recessive cerebellar ataxia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_14
-Label(s): Abetalipoproteinemia 
-- 'Abetalipoproteinemia' SubClassOf 'Metabolic disease with dementia'
-- 'Abetalipoproteinemia' SubClassOf 'Rare syndromic dyslipidemia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_314603
-Label(s): Autosomal recessive spastic ataxia with leukoencephalopathy 
-- 'Autosomal recessive spastic ataxia with leukoencephalopathy' SubClassOf 'Metabolic disease with dementia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000820
-Label(s): cerebral cavernous malformation 
-- 'cerebral cavernous malformation' SubClassOf 'congenital nervous system disorder'
-
+Class: http://purl.obolibrary.org/obo/HP_0031047
+Label(s): Paraproteinemia 
++ 'Paraproteinemia' SubClassOf 'Abnormality of blood and blood-forming tissues'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008940
+Label(s): snRNA-seq 
+- 'snRNA-seq' SubClassOf 'RNA assay'
+- 'snRNA-seq' SubClassOf 'realizes' some 
+('analyte role' and ('role_of' some 'RNA'))
++ 'snRNA-seq' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.orpha.net/ORDO/Orphanet_247667
+Label(s): Childhood-onset hypophosphatasia 
+- 'Childhood-onset hypophosphatasia' SubClassOf 'Hypophosphatasia'
++ 'Childhood-onset hypophosphatasia' SubClassOf 'Hypophosphatasia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_247651
+Label(s): Infantile hypophosphatasia 
+- 'Infantile hypophosphatasia' SubClassOf 'Hypophosphatasia'
++ 'Infantile hypophosphatasia' SubClassOf 'Hypophosphatasia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_247638
+Label(s): Prenatal benign hypophosphatasia 
+- 'Prenatal benign hypophosphatasia' SubClassOf 'Hypophosphatasia'
++ 'Prenatal benign hypophosphatasia' SubClassOf 'Hypophosphatasia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_247623
+Label(s): Perinatal lethal hypophosphatasia 
+- 'Perinatal lethal hypophosphatasia' SubClassOf 'Infantile hypophosphatasia'
++ 'Perinatal lethal hypophosphatasia' SubClassOf 'Hypophosphatasia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_99802
+Label(s): Hemimegalencephaly 
++ 'Hemimegalencephaly' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100283
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014763
+Label(s): Bombay phenotype 
+- 'Bombay phenotype' SubClassOf 'genetic disorder'
++ 'Bombay phenotype' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0000763
+Label(s): Sensory neuropathy 
+- 'Sensory neuropathy' SubClassOf 'Abnormality of the nervous system'
++ 'Sensory neuropathy' SubClassOf 'Abnormal nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0000712
+Label(s): Emotional lability 
+- 'Emotional lability' SubClassOf 'Behavioral abnormality'
++ 'Emotional lability' SubClassOf 'Abnormal emotion/affect behavior'
+
+Class: http://www.orpha.net/ORDO/Orphanet_94063
+Label(s): 12q14 microdeletion syndrome 
+- '12q14 microdeletion syndrome' SubClassOf 'congenital nervous system disorder'
+- '12q14 microdeletion syndrome' SubClassOf 'Primary bone dysplasia with increased bone density'
+- '12q14 microdeletion syndrome' SubClassOf 'syndromic intellectual disability'
++ '12q14 microdeletion syndrome' SubClassOf 'Primary bone dysplasia with increased bone density'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004698
+Label(s): insomnia 
+- 'insomnia' SubClassOf 'mental or behavioural disorder'
+
+Class: http://purl.obolibrary.org/obo/HP_0000407
+Label(s): Sensorineural hearing impairment 
+- 'Sensorineural hearing impairment' SubClassOf 'Abnormality of the inner ear'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018087
+Label(s): viral hemorrhagic fever 
+- 'viral hemorrhagic fever' SubClassOf 'viral disease'
++ 'viral hemorrhagic fever' SubClassOf 'viral disease'
++ 'viral hemorrhagic fever' SubClassOf http://purl.obolibrary.org/obo/MONDO_0600002
+
+Class: http://purl.obolibrary.org/obo/HP_0008348
+Label(s): Decreased circulating IgG2 level 
++ 'Decreased circulating IgG2 level' SubClassOf 'Abnormality of blood and blood-forming tissues'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100308
+Label(s): atactic disorder 
+- 'atactic disorder' SubClassOf 'central nervous system disease'
++ 'atactic disorder' SubClassOf 'nervous system disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100213
+Label(s): IFAP syndrome with or without BRESHECK syndrome 
+- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Developmental anomaly of metabolic origin'
+- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Alopecia'
+- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Recessive X-linked ichthyosis'
+- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'syndromic recessive X-linked ichthyosis'
+- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'genetic alopecia'
++ 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'X-linked recessive disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009921
+Label(s): 10x 5' v3 
+- '10x 5' v3' SubClassOf '10x v3'
++ '10x 5' v3' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009310
+Label(s): 10x v2 
+- '10x v2' SubClassOf '10x technology'
++ '10x v2' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009898
+Label(s): 10x v3 
+- '10x v3' SubClassOf '10x technology'
++ '10x v3' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009809
+Label(s): single nucleus sequencing 
++ 'single nucleus sequencing' SubClassOf 'realizes' some 
+('analyte role' and ('role_of' some 'RNA'))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005741
+Label(s): infectious disease 
+- 'infectious disease' SubClassOf 'disease'
++ 'infectious disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0011061
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020537
+Label(s): occupational allergic alveolitis 
++ 'occupational allergic alveolitis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0022736
+
+Class: http://purl.obolibrary.org/obo/HP_0001575
+Label(s): Mood changes 
+- 'Mood changes' SubClassOf 'Abnormal emotion/affect behavior'
++ 'Mood changes' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.orpha.net/ORDO/Orphanet_139536
+Label(s): Distal hereditary motor neuropathy type 5 
+- 'Distal hereditary motor neuropathy type 5' SubClassOf 'neuronopathy, distal hereditary motor'
++ 'Distal hereditary motor neuropathy type 5' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100350
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001482
+Label(s): cardiotoxicity 
++ 'cardiotoxicity' SubClassOf http://www.ebi.ac.uk/efo/EFO_0011061
+
+Class: http://www.orpha.net/ORDO/Orphanet_54260
+Label(s): Left ventricular noncompaction 
+- 'Left ventricular noncompaction' SubClassOf 'unclassified cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/HP_0001320
+Label(s): Cerebellar vermis hypoplasia 
+- 'Cerebellar vermis hypoplasia' SubClassOf 'Cerebellar malformation'
+
+Class: http://purl.obolibrary.org/obo/HP_0006855
+Label(s): Cerebellar vermis atrophy 
+- 'Cerebellar vermis atrophy' SubClassOf 'Cerebellar malformation'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010010
+Label(s): CEL-seq2 
+- 'CEL-seq2' SubClassOf 'assay'
++ 'CEL-seq2' SubClassOf 'RNA assay'
++ 'CEL-seq2' SubClassOf 'realizes' some 
+('analyte role' and ('role_of' some 'RNA'))
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016343
+Label(s): unclassified cardiomyopathy 
+- 'unclassified cardiomyopathy' SubClassOf 'cardiomyopathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1454
+Label(s): Joubert syndrome with hepatic defect 
+- 'Joubert syndrome with hepatic defect' SubClassOf 'genetic multiple congenital anomalies/dysmorphic syndrome-variable intellectual disability syndrome'
+- 'Joubert syndrome with hepatic defect' SubClassOf 'Genetic syndrome with a cerebellar malformation as major feature'
++ 'Joubert syndrome with hepatic defect' SubClassOf 'genetic multiple congenital anomalies/dysmorphic syndrome-variable intellectual disability syndrome'
++ 'Joubert syndrome with hepatic defect' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100349
++ 'Joubert syndrome with hepatic defect' SubClassOf 'Genetic syndrome with a cerebellar malformation as major feature'
++ 'Joubert syndrome with hepatic defect' SubClassOf 'disorder of development or morphogenesis'
+
+Class: http://www.orpha.net/ORDO/Orphanet_3220
+Label(s): Deafness - enamel hypoplasia - nail defects 
+- 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Ectodermal dysplasia syndrome'
+- 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Syndromic genetic deafness'
+- 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Genetic malformation syndrome with odontal and/or periodontal component'
++ 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Ectodermal dysplasia syndrome'
++ 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Syndromic genetic deafness'
++ 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Genetic malformation syndrome with odontal and/or periodontal component'
+
+Class: http://www.orpha.net/ORDO/Orphanet_83473
+Label(s): Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus 
+- 'Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus' SubClassOf 'Genetic syndrome with a central nervous system malformation as major feature'
++ 'Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100283
++ 'Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus' SubClassOf 'Genetic syndrome with a central nervous system malformation as major feature'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007383
+Label(s): Mumps virus infectious disease 
+- 'Mumps virus infectious disease' SubClassOf 'viral disease'
++ 'Mumps virus infectious disease' SubClassOf 'Paramyxoviridae infectious disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007395
+Label(s): Newcastle disease 
+- 'Newcastle disease' SubClassOf 'viral disease'
++ 'Newcastle disease' SubClassOf 'Paramyxoviridae infectious disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0002321
+Label(s): Vertigo 
+- 'Vertigo' SubClassOf 'Abnormality of the inner ear'
++ 'Vertigo' SubClassOf 'Abnormality of the ear'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007494
+Label(s): episodic kinesigenic dyskinesia 1 
+- 'episodic kinesigenic dyskinesia 1' SubClassOf 'episodic kinesigenic dyskinesia'
++ 'episodic kinesigenic dyskinesia 1' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.orpha.net/ORDO/Orphanet_60040
+Label(s): Megalencephaly-capillary malformation-polymicrogyria syndrome 
++ 'Megalencephaly-capillary malformation-polymicrogyria syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100283
+
+Class: http://www.orpha.net/ORDO/Orphanet_247685
+Label(s): Odontohypophosphatasia 
+- 'Odontohypophosphatasia' SubClassOf 'Adult hypophosphatasia'
++ 'Odontohypophosphatasia' SubClassOf 'Hypophosphatasia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_65683
+Label(s): Isolated focal cortical dysplasia 
++ 'Isolated focal cortical dysplasia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100283
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007218
+Label(s): congenital rubella 
+- 'congenital rubella' EquivalentTo 'rubella' and ('has modifier' some 'congenital')
+- 'congenital rubella' SubClassOf 'rubella'
+- 'congenital rubella' SubClassOf 'has modifier' some 'congenital'
++ 'congenital rubella' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0044202
+Label(s): episodic kinesigenic dyskinesia 
+- 'episodic kinesigenic dyskinesia' SubClassOf 'Paroxysmal dyskinesia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_353298
+Label(s): Roifman syndrome 
+- 'Roifman syndrome' SubClassOf 'X-linked spondyloepimetaphyseal dysplasia'
+- 'Roifman syndrome' SubClassOf 'X-linked syndromic intellectual disability'
++ 'Roifman syndrome' SubClassOf 'Spondyloepiphyseal dysplasia and spondyloepimetaphyseal dysplasia'
++ 'Roifman syndrome' SubClassOf 'X-linked syndromic intellectual disability'
+
+Class: http://purl.obolibrary.org/obo/HP_0002063
+Label(s): Rigidity 
+- 'Rigidity' SubClassOf 'Abnormal central motor function'
++ 'Rigidity' SubClassOf 'Hypertonia'
+
+Class: http://purl.obolibrary.org/obo/HP_0003212
+Label(s): Increased circulating IgE level 
++ 'Increased circulating IgE level' SubClassOf 'Abnormality of blood and blood-forming tissues'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007480
+Label(s): scrub typhus 
++ 'scrub typhus' SubClassOf http://purl.obolibrary.org/obo/MONDO_0600003
+
+Class: http://www.ebi.ac.uk/efo/EFO_1002000
+Label(s): Takotsubo cardiomyopathy 
+- 'Takotsubo cardiomyopathy' SubClassOf 'unclassified cardiomyopathy'
++ 'Takotsubo cardiomyopathy' SubClassOf 'cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/HP_0011840
+Label(s): Abnormality of T cell physiology 
++ 'Abnormality of T cell physiology' SubClassOf 'Abnormality of blood and blood-forming tissues'
+
+Class: http://purl.obolibrary.org/obo/HP_0001257
+Label(s): Spasticity 
++ 'Spasticity' SubClassOf 'Abnormal central motor function'
+
+Class: http://purl.obolibrary.org/obo/HP_0001276
+Label(s): Hypertonia 
+- 'Hypertonia' SubClassOf 'Abnormal central motor function'
+
+Class: http://www.orpha.net/ORDO/Orphanet_93349
+Label(s): X-linked spondyloepimetaphyseal dysplasia 
+- 'X-linked spondyloepimetaphyseal dysplasia' SubClassOf 'X-linked disease'
+
+Class: http://purl.obolibrary.org/obo/HP_0003489
+Label(s): Acute episodes of neuropathic symptoms 
+- 'Acute episodes of neuropathic symptoms' SubClassOf 'Abnormality of the nervous system'
++ 'Acute episodes of neuropathic symptoms' SubClassOf 'Abnormal nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0007141
+Label(s): Sensorimotor neuropathy 
+- 'Sensorimotor neuropathy' SubClassOf 'Abnormality of the nervous system'
++ 'Sensorimotor neuropathy' SubClassOf 'Abnormal nervous system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0003401
+Label(s): Paresthesia 
+- 'Paresthesia' SubClassOf 'Sensory neuropathy'
++ 'Paresthesia' SubClassOf 'Sensory impairment'
+
+Class: http://www.orpha.net/ORDO/Orphanet_247676
+Label(s): Adult hypophosphatasia 
+- 'Adult hypophosphatasia' SubClassOf 'Hypophosphatasia'
++ 'Adult hypophosphatasia' SubClassOf 'Hypophosphatasia'
+
+Class: http://purl.obolibrary.org/obo/HP_0003474
+Label(s): Sensory impairment 
+- 'Sensory impairment' SubClassOf 'Abnormality of the nervous system'
++ 'Sensory impairment' SubClassOf 'Abnormal nervous system physiology'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1892
+Label(s): Ectrodactyly - polydactyly 
++ 'Ectrodactyly - polydactyly' SubClassOf 'syndromic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009897
+Label(s): 10x v1 
+- '10x v1' SubClassOf '10x technology'
++ '10x v1' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.orpha.net/ORDO/Orphanet_397606
+Label(s): Chronic diarrhea with hereditary sensory and autonomic neuropathy 
+- 'Chronic diarrhea with hereditary sensory and autonomic neuropathy' SubClassOf 'digestive system infectious disease'
+- 'Chronic diarrhea with hereditary sensory and autonomic neuropathy' SubClassOf 'intestinal disease'
 
 ----------------------------------
 
@@ -676,22 +566,14 @@ Label(s): cerebral cavernous malformation
 
 @Classes deleted from this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0000941
-Label(s): eyelid degenerative disease 
-+ 'eyelid degenerative disease' SubClassOf 'eye degenerative disease'
-+ 'eyelid degenerative disease' SubClassOf 'eyelid disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0015917
-Label(s): malignant glioma 
-+ 'malignant glioma' SubClassOf 'high grade malignant neoplasm'
-+ 'malignant glioma' SubClassOf 'glioma'
-+ 'malignant glioma' SubClassOf 'has modifier' some 'rare'
-+ 'malignant glioma' SubClassOf 'central nervous system cancer'
+Class: http://purl.obolibrary.org/obo/MONDO_0016343
+Label(s): unclassified cardiomyopathy 
++ 'unclassified cardiomyopathy' SubClassOf 'cardiomyopathy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0000820
-Label(s): cerebral cavernous malformation 
-+ 'cerebral cavernous malformation' SubClassOf 'congenital nervous system disorder'
-
+Class: http://purl.obolibrary.org/obo/MONDO_0044202
+Label(s): episodic kinesigenic dyskinesia 
++ 'episodic kinesigenic dyskinesia' SubClassOf 'Paroxysmal dyskinesia'
 
 ----------------------------------
 4. Scope of the Ontology
