@@ -11,17 +11,17 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.31.0
-Date Released: 15th June 2021
-Class Count: 28473
+Experimental Factor Ontology version 3.32.0
+Date Released: 15th July 2021
+Class Count: 28519
 
 Summary: 
 
 EFO 3.31.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog. Work is also continuing on improving our measurements branch.
 
-Number of classes changed: 60
-Number of classes added: 44
-Number of classes deleted: 2
+Number of classes changed: 354
+Number of classes added: 50
+Number of classes deleted: 4 
 
 ----------------------------------
 1.	Changes to URIs
@@ -37,528 +37,1891 @@ Number of classes deleted: 2
 
 @Classes new to this version
 
+Class: http://purl.obolibrary.org/obo/MONDO_0013237
+Label(s): susceptibility to mononeuropathy of the median nerve, mild 
++ 'susceptibility to mononeuropathy of the median nerve, mild' SubClassOf 'inherited disease susceptibility'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100350
-Label(s): neuronopathy, distal hereditary motor, type 5 
-+ 'neuronopathy, distal hereditary motor, type 5' SubClassOf 'neuronopathy, distal hereditary motor'
+Class: http://purl.obolibrary.org/obo/MONDO_0018848
+Label(s): IgG4-related retroperitoneal fibrosis 
++ 'IgG4-related retroperitoneal fibrosis' SubClassOf 'has modifier' some 'rare'
++ 'IgG4-related retroperitoneal fibrosis' SubClassOf 'IgG4-related disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600012
-Label(s): S100 calcium-binding protein B measurement 
-+ 'S100 calcium-binding protein B measurement' SubClassOf 'blood protein measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0021334
+Label(s): immunoproliferative disorder 
++ 'immunoproliferative disorder' SubClassOf 'immune system disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600011
-Label(s): Parkinson's disease symptom measurement 
-+ 'Parkinson's disease symptom measurement' SubClassOf 'measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0008559
+Label(s): thrombophilia due to thrombin defect 
++ 'thrombophilia due to thrombin defect' SubClassOf 'inherited thrombophilia'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600010
-Label(s): emodin glucuronidation measurement 
-+ 'emodin glucuronidation measurement' SubClassOf 'is_about' some 'hepatotoxicity'
-+ 'emodin glucuronidation measurement' SubClassOf 'measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0041182
+Label(s): polymorphic light eruption 
++ 'polymorphic light eruption' SubClassOf 'photosensitivity disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600009
-Label(s): cardiac ablation 
-+ 'cardiac ablation' SubClassOf 'is_about' some 'heart'
-+ 'cardiac ablation' SubClassOf 'is_about' some 'cardiac arrhythmia'
-+ 'cardiac ablation' SubClassOf 'medical procedure'
+Class: http://purl.obolibrary.org/obo/MONDO_0004259
+Label(s): endocervical carcinoma 
++ 'endocervical carcinoma' SubClassOf 'malignant neoplasm of endocervix'
++ 'endocervical carcinoma' SubClassOf 'cervical carcinoma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600008
-Label(s): mitochondrial heteroplasmy measurement 
-+ 'mitochondrial heteroplasmy measurement' SubClassOf 'is_about' some 'Mitochondrial disease'
-+ 'mitochondrial heteroplasmy measurement' SubClassOf 'is_about' some 'mitochondrion'
-+ 'mitochondrial heteroplasmy measurement' SubClassOf 'is_about' some 'mitochondrial DNA'
-+ 'mitochondrial heteroplasmy measurement' SubClassOf 'mitochondrial DNA measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0022208
+Label(s): crystal arthropathy 
++ 'crystal arthropathy' SubClassOf 'joint disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600007
-Label(s): fish oil supplement exposure measurement 
-+ 'fish oil supplement exposure measurement' SubClassOf 'environmental exposure measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0041052
+Label(s): postherpetic neuralgia 
++ 'postherpetic neuralgia' SubClassOf 'post-infectious neuralgia'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600006
-Label(s): human herpesvirus 7 seropositivity 
-+ 'human herpesvirus 7 seropositivity' SubClassOf 'seropositivity measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0100330
+Label(s): disease arising from reactivation of latent infection with virus 
++ 'disease arising from reactivation of latent infection with virus' SubClassOf 'viral disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600005
-Label(s): ganglion cell inner plexiform layer thickness measurement 
-+ 'ganglion cell inner plexiform layer thickness measurement' SubClassOf 'retinal layer thickness measurement'
-+ 'ganglion cell inner plexiform layer thickness measurement' SubClassOf 'is_about' some 'glaucoma'
-+ 'ganglion cell inner plexiform layer thickness measurement' SubClassOf 'is_about' some 'retina'
+Class: http://purl.obolibrary.org/obo/MONDO_0000432
+Label(s): lymphoplasmacytic lymphoma 
++ 'lymphoplasmacytic lymphoma' SubClassOf 'B-cell neoplasm'
++ 'lymphoplasmacytic lymphoma' SubClassOf 'disease has feature' some 'lymphoplasmacytic lymphoma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600004
-Label(s): retinal nerve fibre layer thickness measurement 
-+ 'retinal nerve fibre layer thickness measurement' SubClassOf 'is_about' some 'retina'
-+ 'retinal nerve fibre layer thickness measurement' SubClassOf 'is_about' some 'glaucoma'
-+ 'retinal nerve fibre layer thickness measurement' SubClassOf 'retinal layer thickness measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0008248
+Label(s): pigmented purpuric eruption 
++ 'pigmented purpuric eruption' SubClassOf 'genetic disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600003
-Label(s): vitamin C measurement 
-+ 'vitamin C measurement' SubClassOf 'vitamin measurement'
+Class: http://purl.obolibrary.org/obo/MONDO_0005784
+Label(s): hantavirus hemorrhagic fever with renal syndrome 
++ 'hantavirus hemorrhagic fever with renal syndrome' SubClassOf 'Hantavirus infectious disease'
++ 'hantavirus hemorrhagic fever with renal syndrome' SubClassOf 'kidney disease'
++ 'hantavirus hemorrhagic fever with renal syndrome' SubClassOf 'urinary tract infection (disease)'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600002
-Label(s): retinal layer thickness measurement 
-+ 'retinal layer thickness measurement' SubClassOf 'is_about' some 'glaucoma'
-+ 'retinal layer thickness measurement' SubClassOf 'is_about' some 'retina'
-+ 'retinal layer thickness measurement' SubClassOf 'eye measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0600018
+Label(s): trabecular bone score 
++ 'trabecular bone score' SubClassOf 'is_about' some 'bone element'
++ 'trabecular bone score' SubClassOf 'bone fracture related measurement'
++ 'trabecular bone score' SubClassOf 'is_about' some 'bone fracture'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600001
-Label(s): ghrelin measurement 
-+ 'ghrelin measurement' SubClassOf 'hormone measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0600017
+Label(s): response to dolutegravir 
++ 'response to dolutegravir' SubClassOf 'response to reverse transcriptase inhibitor'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600000
-Label(s): sortilin measurement 
-+ 'sortilin measurement' SubClassOf 'glycoprotein measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0600016
+Label(s): plasma beta-amyloid 1-40:1-42 ratio measurement 
++ 'plasma beta-amyloid 1-40:1-42 ratio measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100349
-Label(s): COACH syndrome 
-+ 'COACH syndrome' SubClassOf 'genetic disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0600015
+Label(s): noise exposure measurement 
++ 'noise exposure measurement' SubClassOf 'environmental exposure measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100283
-Label(s): overgrowth syndrome and/or cerebral malformations due to abnormalities in MTOR pathway genes 
-+ 'overgrowth syndrome and/or cerebral malformations due to abnormalities in MTOR pathway genes' SubClassOf 'Rare genetic neurological disorder'
-+ 'overgrowth syndrome and/or cerebral malformations due to abnormalities in MTOR pathway genes' SubClassOf 'central nervous system malformation'
-+ 'overgrowth syndrome and/or cerebral malformations due to abnormalities in MTOR pathway genes' SubClassOf 'Genetic overgrowth/obesity syndrome'
+Class: http://www.ebi.ac.uk/efo/EFO_0600014
+Label(s): ropeginterferon alfa-2b 
++ 'ropeginterferon alfa-2b' SubClassOf 'has_role' some 'antineoplastic agent'
++ 'ropeginterferon alfa-2b' SubClassOf 'drug'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0017361
-Label(s): congenital rubella syndrome 
-+ 'congenital rubella syndrome' SubClassOf 'congenital nervous system disorder'
-+ 'congenital rubella syndrome' EquivalentTo 'rubella' and ('has modifier' some 'congenital')
-+ 'congenital rubella syndrome' SubClassOf 'rubella'
-+ 'congenital rubella syndrome' SubClassOf 'infectious disease with epilepsy'
-+ 'congenital rubella syndrome' SubClassOf 'infectious embryofetopathy'
-+ 'congenital rubella syndrome' SubClassOf 'viral infection of central nervous system'
+Class: http://www.ebi.ac.uk/efo/EFO_0600013
+Label(s): response to ropeginterferon alfa-2b 
++ 'response to ropeginterferon alfa-2b' SubClassOf 'is_about' some 'ropeginterferon alfa-2b'
++ 'response to ropeginterferon alfa-2b' SubClassOf 'response to interferon'
++ 'response to ropeginterferon alfa-2b' SubClassOf 'is_about' some 'polycythemia vera'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0022736
-Label(s): occupational lung disease 
-+ 'occupational lung disease' SubClassOf 'lung disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0001896
+Label(s): obstructive hydrocephalus 
++ 'obstructive hydrocephalus' SubClassOf 'brain disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030012
-Label(s): 10x feature barcode (sample multiplexing) 
-+ '10x feature barcode (sample multiplexing)' SubClassOf '10x feature profiling'
+Class: http://purl.obolibrary.org/obo/MONDO_0009230
+Label(s): fibrosclerosis, multifocal 
++ 'fibrosclerosis, multifocal' SubClassOf 'Rare genetic systemic or rheumatologic disease'
++ 'fibrosclerosis, multifocal' SubClassOf 'IgG4-related retroperitoneal fibrosis'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030008
-Label(s): CITE-seq (cell surface protein profiling) 
-+ 'CITE-seq (cell surface protein profiling)' SubClassOf 'CITE-seq'
+Class: http://purl.obolibrary.org/obo/MONDO_0001458
+Label(s): ulnar nerve lesion 
++ 'ulnar nerve lesion' SubClassOf 'ulnar neuropathy'
++ 'ulnar nerve lesion' SubClassOf 'peripheral nerve lesion'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030009
-Label(s): CITE-seq (sample multiplexing) 
-+ 'CITE-seq (sample multiplexing)' SubClassOf 'CITE-seq'
+Class: http://purl.obolibrary.org/obo/MONDO_0100338
+Label(s): urinary tract infection (disease) 
++ 'urinary tract infection (disease)' SubClassOf 'infectious disease'
++ 'urinary tract infection (disease)' SubClassOf 'urinary system disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011058
-Label(s): peripheral neurotoxicity 
-+ 'peripheral neurotoxicity' SubClassOf 'neurotoxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0100336
+Label(s): infectious disease or post-infectious disorder 
++ 'infectious disease or post-infectious disorder' EquivalentTo 'post-infectious disorder' or 'infectious disease'
++ 'infectious disease or post-infectious disorder' SubClassOf 'disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011055
-Label(s): musculoskeletal toxicity 
-+ 'musculoskeletal toxicity' SubClassOf 'musculoskeletal system disease'
-+ 'musculoskeletal toxicity' SubClassOf 'toxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0100329
+Label(s): primary viral infectious disease 
++ 'primary viral infectious disease' SubClassOf 'viral disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011050
-Label(s): gastrointestinal toxicity 
-+ 'gastrointestinal toxicity' SubClassOf 'gastrointestinal disease'
-+ 'gastrointestinal toxicity' SubClassOf 'toxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0001747
+Label(s): tibial collateral ligament bursitis 
++ 'tibial collateral ligament bursitis' SubClassOf 'enthesopathy'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011048
-Label(s): dermatological toxicity 
-+ 'dermatological toxicity' SubClassOf 'skin disease'
-+ 'dermatological toxicity' SubClassOf 'toxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0001592
+Label(s): prolapse of female genital organ 
++ 'prolapse of female genital organ' SubClassOf 'female reproductive system disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011046
-Label(s): carcinogenicity 
-+ 'carcinogenicity' SubClassOf 'neoplastic disease or syndrome'
-+ 'carcinogenicity' SubClassOf 'toxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0020782
+Label(s): chronic gingivitis 
++ 'chronic gingivitis' SubClassOf 'gingivitis'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011047
-Label(s): central nervous system toxicity 
-+ 'central nervous system toxicity' SubClassOf 'neurotoxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0001332
+Label(s): palindromic rheumatism 
++ 'palindromic rheumatism' SubClassOf 'syndromic disease'
++ 'palindromic rheumatism' SubClassOf 'hydrarthrosis'
++ 'palindromic rheumatism' SubClassOf 'rheumatic disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011049
-Label(s): drug misuse 
-+ 'drug misuse' SubClassOf 'substance-related disorder'
-+ 'drug misuse' SubClassOf 'toxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0001282
+Label(s): fallopian tube endometriosis 
++ 'fallopian tube endometriosis' SubClassOf 'fallopian tube disease'
++ 'fallopian tube endometriosis' SubClassOf 'endometriosis'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011051
-Label(s): hematological toxicity 
-+ 'hematological toxicity' SubClassOf 'toxicity'
-+ 'hematological toxicity' SubClassOf 'hematologic disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0001174
+Label(s): conjunctival vascular disease 
++ 'conjunctival vascular disease' SubClassOf 'ocular vascular disease'
++ 'conjunctival vascular disease' SubClassOf 'Conjunctival Disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011053
-Label(s): immune system toxicity 
-+ 'immune system toxicity' SubClassOf 'toxicity'
-+ 'immune system toxicity' SubClassOf 'immune system disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0001157
+Label(s): dependent personality disorder 
++ 'dependent personality disorder' SubClassOf 'personality disorder (disease)'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011054
-Label(s): metabolic toxicity 
-+ 'metabolic toxicity' SubClassOf 'nutritional or metabolic disease'
-+ 'metabolic toxicity' SubClassOf 'toxicity'
-+ 'metabolic toxicity' SubClassOf 'metabolic disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0030006
+Label(s): immune sequencing 
++ 'immune sequencing' SubClassOf 'assay by sequencer'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011056
-Label(s): nephrotoxicity 
-+ 'nephrotoxicity' SubClassOf 'urinary system disease'
-+ 'nephrotoxicity' SubClassOf 'toxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0002404
+Label(s): liver hemangioma 
++ 'liver hemangioma' SubClassOf 'intra-abdominal hemangioma'
++ 'liver hemangioma' SubClassOf 'benign endocrine neoplasm'
++ 'liver hemangioma' SubClassOf 'benign digestive system neoplasm'
++ 'liver hemangioma' SubClassOf 'liver neoplasm'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011057
-Label(s): neurotoxicity 
-+ 'neurotoxicity' SubClassOf 'nervous system disease'
-+ 'neurotoxicity' SubClassOf 'toxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0024287
+Label(s): congenital vascular malformation 
++ 'congenital vascular malformation' SubClassOf 'vascular malformation'
++ 'congenital vascular malformation' EquivalentTo 'vascular malformation' and ('has modifier' some 'congenital')
++ 'congenital vascular malformation' SubClassOf 'has modifier' some 'congenital'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011059
-Label(s): psychiatric toxicity 
-+ 'psychiatric toxicity' SubClassOf 'toxicity'
-+ 'psychiatric toxicity' SubClassOf 'psychiatric disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_0002337
+Label(s): intra-abdominal hemangioma 
++ 'intra-abdominal hemangioma' SubClassOf 'abdominal and pelvic region disorder'
++ 'intra-abdominal hemangioma' SubClassOf 'hemangioma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011060
-Label(s): respiratory toxicity 
-+ 'respiratory toxicity' SubClassOf 'toxicity'
-+ 'respiratory toxicity' SubClassOf 'respiratory system disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0007806
+Label(s): hypotrichosis 4 
++ 'hypotrichosis 4' SubClassOf 'hypotrichosis'
++ 'hypotrichosis 4' SubClassOf 'Marie Unna hereditary hypotrichosis'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011061
-Label(s): toxicity 
-+ 'toxicity' SubClassOf 'injury'
+Class: http://purl.obolibrary.org/obo/HP_0002411
+Label(s): Myokymia 
++ 'Myokymia' SubClassOf 'Abnormality of movement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011062
-Label(s): vascular toxicity 
-+ 'vascular toxicity' SubClassOf 'vascular disease'
-+ 'vascular toxicity' SubClassOf 'toxicity'
+Class: http://purl.obolibrary.org/obo/MONDO_0021309
+Label(s): malignant neoplasm of endocervix 
++ 'malignant neoplasm of endocervix' SubClassOf 'cervical cancer'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030013
-Label(s): 10x feature barcode (CRISPR screening) 
-+ '10x feature barcode (CRISPR screening)' SubClassOf '10x feature profiling'
+Class: http://purl.obolibrary.org/obo/MONDO_0007349
+Label(s): familial cold autoinflammatory syndrome 1 
++ 'familial cold autoinflammatory syndrome 1' SubClassOf 'Familial cold urticaria'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030011
-Label(s): 10x feature barcode (cell surface protein profiling) 
-+ '10x feature barcode (cell surface protein profiling)' SubClassOf '10x feature profiling'
+Class: http://purl.obolibrary.org/obo/HP_0007676
+Label(s): Hypoplasia of the iris 
++ 'Hypoplasia of the iris' SubClassOf 'Ocular anterior segment dysgenesis'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030010
-Label(s): 10x feature profiling 
-+ '10x feature profiling' SubClassOf '10x technology'
+Class: http://purl.obolibrary.org/obo/MONDO_0011014
+Label(s): pleuropulmonary blastoma 
++ 'pleuropulmonary blastoma' SubClassOf 'pulmonary blastoma'
++ 'pleuropulmonary blastoma' SubClassOf 'childhood cancer'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030007
-Label(s): 10x scATAC-seq 
-+ '10x scATAC-seq' SubClassOf 'RNA assay'
-+ '10x scATAC-seq' SubClassOf '10x technology'
-+ '10x scATAC-seq' SubClassOf 'scATAC-seq'
+Class: http://purl.obolibrary.org/obo/MONDO_0001169
+Label(s): spastic monoplegia 
++ 'spastic monoplegia' SubClassOf 'spastic cerebral palsy'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0011052
-Label(s): hepatotoxicity 
-+ 'hepatotoxicity' SubClassOf 'toxicity'
-+ 'hepatotoxicity' SubClassOf 'hepatobiliary disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0022529
+Label(s): BK-virus nephropathy 
++ 'BK-virus nephropathy' SubClassOf 'hantavirus hemorrhagic fever with renal syndrome'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0600003
-Label(s): bacterial hemorrhagic fever 
-+ 'bacterial hemorrhagic fever' SubClassOf 'bacterial disease'
-+ 'bacterial hemorrhagic fever' SubClassOf 'hemorrhagic fever'
-+ 'bacterial hemorrhagic fever' SubClassOf 'has modifier' some 'rare'
+Class: http://www.ebi.ac.uk/efo/EFO_0011063
+Label(s): recessive lissencephaly 
++ 'recessive lissencephaly' SubClassOf 'Lissencephaly'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0600002
-Label(s): hemorrhagic fever 
-+ 'hemorrhagic fever' SubClassOf 'infectious disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0011064
+Label(s): recessive spherocytosis 
++ 'recessive spherocytosis' SubClassOf 'Hereditary spherocytosis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030015
+Label(s): single cell immune repertoire sequencing 
++ 'single cell immune repertoire sequencing' SubClassOf 'immune sequencing'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030014
+Label(s): bulk immune repertoire sequencing 
++ 'bulk immune repertoire sequencing' SubClassOf 'immune sequencing'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0001294
+Label(s): Horner syndrome 
++ 'Horner syndrome' SubClassOf 'autonomic neuropathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013462
+Label(s): fucosyltransferase 6 deficiency 
++ 'fucosyltransferase 6 deficiency' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0001604
+Label(s): lagophthalmos 
++ 'lagophthalmos' SubClassOf 'eyelid disease'
 
 ----------------------------------
 2. Changes to EFO3
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/HP_0031047
-Label(s): Paraproteinemia 
-+ 'Paraproteinemia' SubClassOf 'Abnormality of blood and blood-forming tissues'
+Class: http://purl.obolibrary.org/obo/UBERON_2001059
+Label(s): cranial division of the internal carotid artery 
++ 'cranial division of the internal carotid artery' SubClassOf 'blood vessel'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0008940
-Label(s): snRNA-seq 
-- 'snRNA-seq' SubClassOf 'RNA assay'
-- 'snRNA-seq' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
-+ 'snRNA-seq' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/UBERON_2001051
+Label(s): caudal division of the internal carotid artery 
++ 'caudal division of the internal carotid artery' SubClassOf 'blood vessel'
 
-Class: http://www.orpha.net/ORDO/Orphanet_247667
-Label(s): Childhood-onset hypophosphatasia 
-- 'Childhood-onset hypophosphatasia' SubClassOf 'Hypophosphatasia'
-+ 'Childhood-onset hypophosphatasia' SubClassOf 'Hypophosphatasia'
+Class: http://www.ebi.ac.uk/efo/EFO_0007189
+Label(s): Caliciviridae infectious disease 
+- 'Caliciviridae infectious disease' SubClassOf 'viral disease'
++ 'Caliciviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
 
-Class: http://www.orpha.net/ORDO/Orphanet_247651
-Label(s): Infantile hypophosphatasia 
-- 'Infantile hypophosphatasia' SubClassOf 'Hypophosphatasia'
-+ 'Infantile hypophosphatasia' SubClassOf 'Hypophosphatasia'
+Class: http://www.ebi.ac.uk/efo/EFO_0007188
+Label(s): Bunyaviridae infectious disease 
+- 'Bunyaviridae infectious disease' SubClassOf 'viral disease'
++ 'Bunyaviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
 
-Class: http://www.orpha.net/ORDO/Orphanet_247638
-Label(s): Prenatal benign hypophosphatasia 
-- 'Prenatal benign hypophosphatasia' SubClassOf 'Hypophosphatasia'
-+ 'Prenatal benign hypophosphatasia' SubClassOf 'Hypophosphatasia'
+Class: http://www.ebi.ac.uk/efo/EFO_0007158
+Label(s): Astroviridae infectious disease 
+- 'Astroviridae infectious disease' SubClassOf 'viral disease'
++ 'Astroviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
 
-Class: http://www.orpha.net/ORDO/Orphanet_247623
-Label(s): Perinatal lethal hypophosphatasia 
-- 'Perinatal lethal hypophosphatasia' SubClassOf 'Infantile hypophosphatasia'
-+ 'Perinatal lethal hypophosphatasia' SubClassOf 'Hypophosphatasia'
+Class: http://www.ebi.ac.uk/efo/EFO_0007139
+Label(s): aleutian mink disease 
++ 'aleutian mink disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
 
-Class: http://www.orpha.net/ORDO/Orphanet_99802
-Label(s): Hemimegalencephaly 
-+ 'Hemimegalencephaly' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100283
+Class: http://www.ebi.ac.uk/efo/EFO_0007131
+Label(s): acute hemorrhagic conjunctivitis 
+- 'acute hemorrhagic conjunctivitis' SubClassOf 'poliovirus infection'
++ 'acute hemorrhagic conjunctivitis' SubClassOf 'viral eye infection'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0014763
-Label(s): Bombay phenotype 
-- 'Bombay phenotype' SubClassOf 'genetic disorder'
-+ 'Bombay phenotype' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/MONDO_0045022
+Label(s): disorder of organic acid metabolism 
+- 'disorder of organic acid metabolism' SubClassOf 'nutritional or metabolic disease'
 
-Class: http://purl.obolibrary.org/obo/HP_0000763
-Label(s): Sensory neuropathy 
-- 'Sensory neuropathy' SubClassOf 'Abnormality of the nervous system'
-+ 'Sensory neuropathy' SubClassOf 'Abnormal nervous system physiology'
+Class: http://purl.obolibrary.org/obo/MONDO_0045012
+Label(s): steroid metabolism disease 
+- 'steroid metabolism disease' SubClassOf 'nutritional or metabolic disease'
 
-Class: http://purl.obolibrary.org/obo/HP_0000712
-Label(s): Emotional lability 
-- 'Emotional lability' SubClassOf 'Behavioral abnormality'
-+ 'Emotional lability' SubClassOf 'Abnormal emotion/affect behavior'
+Class: http://purl.obolibrary.org/obo/UBERON_0006595
+Label(s): presumptive endoderm 
+- 'presumptive endoderm' SubClassOf 'embryonic structure'
++ 'presumptive endoderm' SubClassOf 'part of' some 'embryo'
++ 'presumptive endoderm' SubClassOf 'anatomical structure'
 
-Class: http://www.orpha.net/ORDO/Orphanet_94063
-Label(s): 12q14 microdeletion syndrome 
-- '12q14 microdeletion syndrome' SubClassOf 'congenital nervous system disorder'
-- '12q14 microdeletion syndrome' SubClassOf 'Primary bone dysplasia with increased bone density'
-- '12q14 microdeletion syndrome' SubClassOf 'syndromic intellectual disability'
-+ '12q14 microdeletion syndrome' SubClassOf 'Primary bone dysplasia with increased bone density'
+Class: http://purl.obolibrary.org/obo/MONDO_0000721
+Label(s): xanthinuria 
+- 'xanthinuria' SubClassOf 'nutritional or metabolic disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0004698
-Label(s): insomnia 
-- 'insomnia' SubClassOf 'mental or behavioural disorder'
+Class: http://purl.obolibrary.org/obo/UBERON_0006483
+Label(s): Brodmann (1909) area 46 
+- 'Brodmann (1909) area 46' SubClassOf 'part of' some 'nervous system'
 
-Class: http://purl.obolibrary.org/obo/HP_0000407
-Label(s): Sensorineural hearing impairment 
-- 'Sensorineural hearing impairment' SubClassOf 'Abnormality of the inner ear'
+Class: http://purl.obolibrary.org/obo/MONDO_0041261
+Label(s): disorder of acid-base balance 
+- 'disorder of acid-base balance' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008966
+Label(s): TCR Chain Paring 
++ 'TCR Chain Paring' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030015
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002691
+Label(s): ventral tegmental area 
+- 'ventral tegmental area' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008930
+Label(s): somatosensory cortex 
+- 'somatosensory cortex' SubClassOf 'part of' some 'nervous system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008887
+Label(s): Rep-Seq 
++ 'Rep-Seq' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030014
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001277
+Label(s): intestinal epithelium 
+- 'intestinal epithelium' SubClassOf 'part of' some 'alimentary part of gastrointestinal system'
+- 'intestinal epithelium' SubClassOf 'part of' some 'mucosa'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008842
+Label(s): Paired VH:VL Antibody Repertoire Analysis 
++ 'Paired VH:VL Antibody Repertoire Analysis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030014
+
+Class: http://purl.obolibrary.org/obo/CL_2000018
+Label(s): endothelial cell of coronary artery 
+- 'endothelial cell of coronary artery' SubClassOf 'heart component'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006241
+Label(s): future spinal cord 
+- 'future spinal cord' SubClassOf 'embryonic structure'
++ 'future spinal cord' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006240
+Label(s): future forebrain 
+- 'future forebrain' SubClassOf 'embryonic structure'
++ 'future forebrain' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002531
+Label(s): paired fin bud 
+- 'paired fin bud' SubClassOf 'embryonic structure'
++ 'paired fin bud' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002524
+Label(s): mediastinal lymph node 
+- 'mediastinal lymph node' SubClassOf 'part of' some 'anatomical system'
+- 'mediastinal lymph node' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002509
+Label(s): mesenteric lymph node 
+- 'mesenteric lymph node' SubClassOf 'part of' some 'anatomical system'
+- 'mesenteric lymph node' SubClassOf 'part of' some 'trunk'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003103
+Label(s): urinary tract infection 
+- 'urinary tract infection' SubClassOf 'urinary system disease'
++ 'parasitic infection' DisjointWith 'urinary tract infection'
++ 'urinary tract infection' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100338
++ 'viral disease' DisjointWith 'urinary tract infection'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008777
+Label(s): Ig-Seq 
++ 'Ig-Seq' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030014
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024297
+Label(s): nutritional or metabolic disease 
+- 'nutritional or metabolic disease' SubClassOf 'disease by cellular process disrupted'
+- 'nutritional or metabolic disease' EquivalentTo 'metabolic disease' or 'nutritional disorder'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002421
+Label(s): hippocampal formation 
+- 'hippocampal formation' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002420
+Label(s): basal ganglion 
+- 'basal ganglion' SubClassOf 'anatomical entity'
++ 'basal ganglion' SubClassOf 'anatomical structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003075
+Label(s): xanthoma 
+- 'xanthoma' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006083
+Label(s): perirhinal cortex 
+- 'perirhinal cortex' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007282
+Label(s): presumptive segmental plate 
+- 'presumptive segmental plate' SubClassOf 'embryonic structure'
++ 'presumptive segmental plate' SubClassOf 'part of' some 'embryo'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010017
+Label(s): HTGTS-Rep-seq 
+- 'HTGTS-Rep-seq' SubClassOf 'assay'
++ 'HTGTS-Rep-seq' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030014
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002314
+Label(s): midbrain tectum 
+- 'midbrain tectum' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0037792
+Label(s): carbohydrate metabolism disease 
+- 'carbohydrate metabolism disease' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0037748
+Label(s): hyperlipoproteinemia 
+- 'hyperlipoproteinemia' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008571
+Label(s): viral conjunctivitis 
+- 'viral conjunctivitis' SubClassOf 'viral eye infection'
++ 'viral conjunctivitis' SubClassOf 'eye infectious disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002298
+Label(s): brainstem 
+- 'brainstem' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002245
+Label(s): cerebellar hemisphere 
+- 'cerebellar hemisphere' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0037821
+Label(s): porphyrin metabolism disease 
+- 'porphyrin metabolism disease' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001357
+Label(s): Lentivirus Infections 
+- 'Lentivirus Infections' SubClassOf 'viral disease'
++ 'Lentivirus Infections' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007808
+Label(s): adipose tissue of abdominal region 
+- 'adipose tissue of abdominal region' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016552
+Label(s): phlegm 
+- 'phlegm' SubClassOf 'bodily fluid'
++ 'phlegm' SubClassOf 'anatomical entity'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016540
+Label(s): occipital cortex 
+- 'occipital cortex' SubClassOf 'anatomical entity'
+- 'occipital cortex' SubClassOf 'part of' some 'brain'
+- 'occipital cortex' SubClassOf 'part of' some 'forebrain'
+- 'occipital cortex' SubClassOf 'part of' some 'telencephalon'
+- 'occipital cortex' SubClassOf 'part of' some 'central nervous system'
++ 'occipital cortex' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000129
+Label(s): glutaric aciduria (disease) 
+- 'glutaric aciduria (disease)' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000642
+Label(s): hemochromatosis 
+- 'hemochromatosis' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000639
+Label(s): acquired metabolic disease 
+- 'acquired metabolic disease' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002113
+Label(s): kidney 
+- 'kidney' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005068
+Label(s): neural rod 
+- 'neural rod' SubClassOf 'embryonic structure'
++ 'neural rod' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007795
+Label(s): ascitic fluid 
+- 'ascitic fluid' SubClassOf 'part of' some 'multicellular organism'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002107
+Label(s): liver 
+- 'liver' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0037937
+Label(s): pyrimidine metabolism disease 
+- 'pyrimidine metabolism disease' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002067
+Label(s): dermis 
+- 'dermis' SubClassOf 'part of' some 'integumental system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002048
+Label(s): lung 
+- 'lung' SubClassOf 'part of' some 'trunk'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006510
+Label(s): Herpes Zoster 
++ 'Herpes Zoster' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100330
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002028
+Label(s): hindbrain 
+- 'hindbrain' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002012
+Label(s): pulmonary artery 
++ 'pulmonary artery' SubClassOf 'blood vessel'
 
 Class: http://purl.obolibrary.org/obo/MONDO_0018087
 Label(s): viral hemorrhagic fever 
 - 'viral hemorrhagic fever' SubClassOf 'viral disease'
-+ 'viral hemorrhagic fever' SubClassOf 'viral disease'
-+ 'viral hemorrhagic fever' SubClassOf http://purl.obolibrary.org/obo/MONDO_0600002
 
-Class: http://purl.obolibrary.org/obo/HP_0008348
-Label(s): Decreased circulating IgG2 level 
-+ 'Decreased circulating IgG2 level' SubClassOf 'Abnormality of blood and blood-forming tissues'
+Class: http://purl.obolibrary.org/obo/UBERON_0003932
+Label(s): cartilage element of chondrocranium 
+- 'cartilage element of chondrocranium' SubClassOf 'skeleton structure'
+- 'cartilage element of chondrocranium' SubClassOf 'part of' some 'skeletal system'
+- 'cartilage element of chondrocranium' SubClassOf 'part of' some 'anatomical system'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100308
-Label(s): atactic disorder 
-- 'atactic disorder' SubClassOf 'central nervous system disease'
-+ 'atactic disorder' SubClassOf 'nervous system disease'
+Class: http://purl.obolibrary.org/obo/UBERON_0007610
+Label(s): tibial artery 
+- 'tibial artery' SubClassOf 'part of' some 'limb'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100213
-Label(s): IFAP syndrome with or without BRESHECK syndrome 
-- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Developmental anomaly of metabolic origin'
-- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Alopecia'
-- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'Recessive X-linked ichthyosis'
-- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'syndromic recessive X-linked ichthyosis'
-- 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'genetic alopecia'
-+ 'IFAP syndrome with or without BRESHECK syndrome' SubClassOf 'X-linked recessive disease'
+Class: http://purl.obolibrary.org/obo/UBERON_0003921
+Label(s): pancreas primordium 
+- 'pancreas primordium' SubClassOf 'embryonic structure'
++ 'pancreas primordium' SubClassOf 'part of' some 'embryo'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009921
-Label(s): 10x 5' v3 
-- '10x 5' v3' SubClassOf '10x v3'
-+ '10x 5' v3' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/UBERON_2000291
+Label(s): medial octavolateralis nucleus 
+- 'medial octavolateralis nucleus' SubClassOf 'part of' some 'brainstem'
+- 'medial octavolateralis nucleus' SubClassOf 'part of' some 'hindbrain'
+- 'medial octavolateralis nucleus' SubClassOf 'part of' some 'central nervous system'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009310
-Label(s): 10x v2 
-- '10x v2' SubClassOf '10x technology'
-+ '10x v2' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/UBERON_2000633
+Label(s): caudal tuberculum 
+- 'caudal tuberculum' SubClassOf 'part of' some 'nervous system'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009898
-Label(s): 10x v3 
-- '10x v3' SubClassOf '10x technology'
-+ '10x v3' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/UBERON_0002037
+Label(s): cerebellum 
+- 'cerebellum' SubClassOf 'part of' some 'nervous system'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009809
-Label(s): single nucleus sequencing 
-+ 'single nucleus sequencing' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
+Class: http://purl.obolibrary.org/obo/UBERON_0004880
+Label(s): chordamesoderm 
+- 'chordamesoderm' SubClassOf 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003894
+Label(s): liver primordium 
+- 'liver primordium' SubClassOf 'embryonic structure'
++ 'liver primordium' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003884
+Label(s): CA4 field of hippocampus 
+- 'CA4 field of hippocampus' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003883
+Label(s): CA3 field of hippocampus 
+- 'CA3 field of hippocampus' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003882
+Label(s): CA2 field of hippocampus 
+- 'CA2 field of hippocampus' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003881
+Label(s): CA1 field of hippocampus 
+- 'CA1 field of hippocampus' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003851
+Label(s): diencephalon neural crest 
+- 'diencephalon neural crest' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003849
+Label(s): mesencephalic neural crest 
+- 'mesencephalic neural crest' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0019189
+Label(s): carotid artery endothelium 
+- 'carotid artery endothelium' SubClassOf 'part of' some 'cardiovascular system'
+- 'carotid artery endothelium' SubClassOf 'part of' some 'blood vessel'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0016405
+Label(s): pulmonary capillary 
++ 'pulmonary capillary' SubClassOf 'part of' some 'respiratory system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000779
+Label(s): Drosophila C virus infection 
+- 'Drosophila C virus infection' SubClassOf 'viral disease'
++ 'Drosophila C virus infection' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000763
+Label(s): viral disease 
++ 'viral disease' DisjointWith 'urinary tract infection'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100321
+Label(s): viral disease or post-viral disorder 
+- 'viral disease or post-viral disorder' SubClassOf 'disease'
++ 'viral disease or post-viral disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100336
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000616
+Label(s): neoplasm 
++ 'neoplasm' DisjointWith 'vascular malformation'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007383
+Label(s): enveloping layer of ectoderm 
+- 'enveloping layer of ectoderm' SubClassOf 'part of' some 'multicellular organism'
+- 'enveloping layer of ectoderm' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003690
+Label(s): fused sacrum 
+- 'fused sacrum' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003059
+Label(s): presomitic mesoderm 
+- 'presomitic mesoderm' SubClassOf 'embryonic structure'
++ 'presomitic mesoderm' SubClassOf 'anatomical structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1002023
+Label(s): plantar wart 
+- 'plantar wart' SubClassOf 'viral disease'
++ 'plantar wart' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006841
+Label(s): central vein of liver 
+- 'central vein of liver' SubClassOf 'part of' some 'trunk'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004274
+Label(s): gout 
+- 'gout' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000558
+Label(s): Kaposi's sarcoma 
+- 'Kaposi's sarcoma' SubClassOf 'human herpesvirus 8 infection'
++ 'Kaposi's sarcoma' SubClassOf 'viral disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004211
+Label(s): Hypertriglyceridemia 
+- 'Hypertriglyceridemia' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007295
+Label(s): presumptive rhombomere 8 
+- 'presumptive rhombomere 8' SubClassOf 'embryonic structure'
++ 'presumptive rhombomere 8' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007293
+Label(s): presumptive rhombomere 6 
+- 'presumptive rhombomere 6' SubClassOf 'embryonic structure'
++ 'presumptive rhombomere 6' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007291
+Label(s): presumptive rhombomere 4 
+- 'presumptive rhombomere 4' SubClassOf 'embryonic structure'
++ 'presumptive rhombomere 4' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007290
+Label(s): presumptive rhombomere 3 
+- 'presumptive rhombomere 3' SubClassOf 'embryonic structure'
++ 'presumptive rhombomere 3' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007288
+Label(s): presumptive forebrain midbrain boundary 
+- 'presumptive forebrain midbrain boundary' SubClassOf 'embryonic structure'
++ 'presumptive forebrain midbrain boundary' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007285
+Label(s): presumptive paraxial mesoderm 
+- 'presumptive paraxial mesoderm' SubClassOf 'embryonic structure'
++ 'presumptive paraxial mesoderm' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007284
+Label(s): presumptive neural plate 
+- 'presumptive neural plate' SubClassOf 'embryonic structure'
++ 'presumptive neural plate' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007283
+Label(s): presumptive shield 
+- 'presumptive shield' SubClassOf 'embryonic structure'
++ 'presumptive shield' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007277
+Label(s): presumptive hindbrain 
+- 'presumptive hindbrain' SubClassOf 'embryonic structure'
++ 'presumptive hindbrain' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005440
+Label(s): ductus arteriosus 
+- 'ductus arteriosus' SubClassOf 'part of' some 'trunk'
+- 'ductus arteriosus' SubClassOf 'heart component'
+- 'ductus arteriosus' SubClassOf 'part of' some 'heart'
+- 'ductus arteriosus' SubClassOf 'part of' some 'thoracic segment of trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007213
+Label(s): mesenchyme derived from head neural crest 
+- 'mesenchyme derived from head neural crest' SubClassOf 'part of' some 'multicellular organism'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003512
+Label(s): lung blood vessel 
+- 'lung blood vessel' SubClassOf 'part of' some 'trunk'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004196
+Label(s): viral human hepatitis infection 
+- 'viral human hepatitis infection' SubClassOf 'viral disease'
++ 'viral human hepatitis infection' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000401
+Label(s): diabetic nephropathy 
+- 'diabetic nephropathy' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000036
+Label(s): lactic acidosis 
+- 'lactic acidosis' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002428
+Label(s): limb bone 
+- 'limb bone' SubClassOf 'part of' some 'skeletal system'
+- 'limb bone' SubClassOf 'part of' some 'anatomical system'
+- 'limb bone' SubClassOf 'part of' some 'appendicular skeleton'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002451
+Label(s): endometrial gland 
+- 'endometrial gland' SubClassOf 'part of' some 'trunk'
+- 'endometrial gland' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007348
+Label(s): louping ill 
+- 'louping ill' SubClassOf 'Flaviviridae infectious disease'
++ 'louping ill' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003469
+Label(s): respiratory system artery 
+- 'respiratory system artery' SubClassOf 'respiratory system blood vessel'
++ 'respiratory system artery' SubClassOf 'part of' some 'respiratory system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003464
+Label(s): hindlimb bone 
+- 'hindlimb bone' SubClassOf 'part of' some 'anatomical system'
+- 'hindlimb bone' SubClassOf 'part of' some 'appendicular skeleton'
+- 'hindlimb bone' SubClassOf 'part of' some 'skeletal system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007135
+Label(s): neural keel 
+- 'neural keel' SubClassOf 'embryonic structure'
++ 'neural keel' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019471
+Label(s): adult T-cell leukemia/lymphoma 
++ 'adult T-cell leukemia/lymphoma' SubClassOf 'deltaretrovirus infections'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0012171
+Label(s): shell of nucleus accumbens 
+- 'shell of nucleus accumbens' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0001328
+Label(s): thyroid hormone resistance syndrome 
++ 'thyroid hormone resistance syndrome' SubClassOf 'disease of receptor activity'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0001314
+Label(s): chondrocalcinosis 
+- 'chondrocalcinosis' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007281
+Label(s): presumptive midbrain hindbrain boundary 
+- 'presumptive midbrain hindbrain boundary' SubClassOf 'embryonic structure'
++ 'presumptive midbrain hindbrain boundary' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001384
+Label(s): primary motor cortex 
+- 'primary motor cortex' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007297
+Label(s): presumptive pronephric mesoderm 
+- 'presumptive pronephric mesoderm' SubClassOf 'embryonic structure'
++ 'presumptive pronephric mesoderm' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0008998
+Label(s): vasculature of brain 
+- 'vasculature of brain' SubClassOf 'part of' some 'central nervous system'
+- 'vasculature of brain' SubClassOf 'vasculature'
++ 'vasculature of brain' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003307
+Label(s): floor plate of midbrain 
+- 'floor plate of midbrain' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0015656
+Label(s): metabolic disease with epilepsy 
+- 'metabolic disease with epilepsy' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009556
+Label(s): mineral metabolism disease 
+- 'mineral metabolism disease' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009526
+Label(s): foreign body in gastrointestinal tract 
++ 'foreign body in gastrointestinal tract' EquivalentTo 'foreign body' and ('has_disease_location' some 
+('alimentary part of gastrointestinal system' or ('part of' some 'alimentary part of gastrointestinal system')))
++ 'foreign body in gastrointestinal tract' SubClassOf 'gastrointestinal disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009525
+Label(s): foreign body 
+- 'foreign body' SubClassOf 'test result'
++ 'foreign body' SubClassOf 'injury'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005403
+Label(s): ventral striatum 
+- 'ventral striatum' SubClassOf 'part of' some 'forebrain'
+- 'ventral striatum' SubClassOf 'part of' some 'brain'
+- 'ventral striatum' SubClassOf 'part of' some 'central nervous system'
+- 'ventral striatum' SubClassOf 'anatomical entity'
++ 'ventral striatum' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024322
+Label(s): disorder of glycosylation 
+- 'disorder of glycosylation' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001760
+Label(s): aneurysmal bone cyst 
++ 'aneurysmal bone cyst' SubClassOf 'hereditary connective tissue disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024318
+Label(s): viral infection of central nervous system 
+- 'viral infection of central nervous system' SubClassOf 'viral disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000195
+Label(s): metabolic syndrome 
+- 'metabolic syndrome' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0009122
+Label(s): adenohypophyseal placode 
+- 'adenohypophyseal placode' SubClassOf 'embryonic structure'
+
+Class: http://www.orpha.net/ORDO/Orphanet_68367
+Label(s): Inborn errors of metabolism 
+- 'Inborn errors of metabolism' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007150
+Label(s): Arenaviridae infectious disease 
+- 'Arenaviridae infectious disease' SubClassOf 'viral disease'
++ 'Arenaviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
 
 Class: http://www.ebi.ac.uk/efo/EFO_0005741
 Label(s): infectious disease 
-- 'infectious disease' SubClassOf 'disease'
-+ 'infectious disease' SubClassOf http://www.ebi.ac.uk/efo/EFO_0011061
++ 'infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100336
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020537
-Label(s): occupational allergic alveolitis 
-+ 'occupational allergic alveolitis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0022736
+Class: http://www.ebi.ac.uk/efo/EFO_0009406
+Label(s): glucose metabolism disease 
+- 'glucose metabolism disease' SubClassOf 'nutritional or metabolic disease'
 
-Class: http://purl.obolibrary.org/obo/HP_0001575
-Label(s): Mood changes 
-- 'Mood changes' SubClassOf 'Abnormal emotion/affect behavior'
-+ 'Mood changes' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://www.ebi.ac.uk/efo/EFO_0010713
+Label(s): 10x immune profiling 
++ '10x immune profiling' SubClassOf http://www.ebi.ac.uk/efo/EFO_0030015
++ '10x immune profiling' SubClassOf 'RNA assay'
 
-Class: http://www.orpha.net/ORDO/Orphanet_139536
-Label(s): Distal hereditary motor neuropathy type 5 
-- 'Distal hereditary motor neuropathy type 5' SubClassOf 'neuronopathy, distal hereditary motor'
-+ 'Distal hereditary motor neuropathy type 5' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100350
+Class: http://www.ebi.ac.uk/efo/EFO_0009384
+Label(s): tumoral calcinosis, hyperphosphatemic, familial, 3 
+- 'tumoral calcinosis, hyperphosphatemic, familial, 3' SubClassOf 'familial hyperphosphatemic tumoral calcinosis/hyperphosphatemic hyperostosis syndrome'
++ 'tumoral calcinosis, hyperphosphatemic, familial, 3' SubClassOf 'familial hyperphosphatemic tumoral calcinosis/hyperphosphatemic hyperostosis syndrome'
 
-Class: http://www.ebi.ac.uk/efo/EFO_1001482
-Label(s): cardiotoxicity 
-+ 'cardiotoxicity' SubClassOf http://www.ebi.ac.uk/efo/EFO_0011061
+Class: http://www.ebi.ac.uk/efo/EFO_0009383
+Label(s): tumoral calcinosis, hyperphosphatemic, familial, 2 
+- 'tumoral calcinosis, hyperphosphatemic, familial, 2' SubClassOf 'familial hyperphosphatemic tumoral calcinosis/hyperphosphatemic hyperostosis syndrome'
++ 'tumoral calcinosis, hyperphosphatemic, familial, 2' SubClassOf 'familial hyperphosphatemic tumoral calcinosis/hyperphosphatemic hyperostosis syndrome'
 
-Class: http://www.orpha.net/ORDO/Orphanet_54260
-Label(s): Left ventricular noncompaction 
-- 'Left ventricular noncompaction' SubClassOf 'unclassified cardiomyopathy'
+Class: http://www.ebi.ac.uk/efo/EFO_0000589
+Label(s): metabolic disease 
+- 'metabolic disease' SubClassOf 'nutritional or metabolic disease'
 
-Class: http://purl.obolibrary.org/obo/HP_0001320
-Label(s): Cerebellar vermis hypoplasia 
-- 'Cerebellar vermis hypoplasia' SubClassOf 'Cerebellar malformation'
+Class: http://www.ebi.ac.uk/efo/EFO_0007304
+Label(s): hepatitis D virus infection 
+- 'hepatitis D virus infection' SubClassOf 'hepatitis B virus infection'
++ 'hepatitis D virus infection' SubClassOf 'viral human hepatitis infection'
 
-Class: http://purl.obolibrary.org/obo/HP_0006855
-Label(s): Cerebellar vermis atrophy 
-- 'Cerebellar vermis atrophy' SubClassOf 'Cerebellar malformation'
+Class: http://purl.obolibrary.org/obo/UBERON_0003099
+Label(s): cranial neural crest 
+- 'cranial neural crest' SubClassOf 'part of' some 'multicellular organism'
+- 'cranial neural crest' SubClassOf 'part of' some 'embryonic structure'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0010010
-Label(s): CEL-seq2 
-- 'CEL-seq2' SubClassOf 'assay'
-+ 'CEL-seq2' SubClassOf 'RNA assay'
-+ 'CEL-seq2' SubClassOf 'realizes' some 
-('analyte role' and ('role_of' some 'RNA'))
+Class: http://purl.obolibrary.org/obo/UBERON_0003086
+Label(s): caudal artery 
++ 'caudal artery' SubClassOf 'blood vessel'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0016343
-Label(s): unclassified cardiomyopathy 
-- 'unclassified cardiomyopathy' SubClassOf 'cardiomyopathy'
+Class: http://purl.obolibrary.org/obo/UBERON_0003077
+Label(s): paraxial mesoderm 
+- 'paraxial mesoderm' SubClassOf 'part of' some 'embryonic structure'
++ 'paraxial mesoderm' SubClassOf 'part of' some 'embryo'
 
-Class: http://www.orpha.net/ORDO/Orphanet_1454
-Label(s): Joubert syndrome with hepatic defect 
-- 'Joubert syndrome with hepatic defect' SubClassOf 'genetic multiple congenital anomalies/dysmorphic syndrome-variable intellectual disability syndrome'
-- 'Joubert syndrome with hepatic defect' SubClassOf 'Genetic syndrome with a cerebellar malformation as major feature'
-+ 'Joubert syndrome with hepatic defect' SubClassOf 'genetic multiple congenital anomalies/dysmorphic syndrome-variable intellectual disability syndrome'
-+ 'Joubert syndrome with hepatic defect' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100349
-+ 'Joubert syndrome with hepatic defect' SubClassOf 'Genetic syndrome with a cerebellar malformation as major feature'
-+ 'Joubert syndrome with hepatic defect' SubClassOf 'disorder of development or morphogenesis'
+Class: http://purl.obolibrary.org/obo/UBERON_0003073
+Label(s): lens placode 
+- 'lens placode' SubClassOf 'embryonic structure'
 
-Class: http://www.orpha.net/ORDO/Orphanet_3220
-Label(s): Deafness - enamel hypoplasia - nail defects 
-- 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Ectodermal dysplasia syndrome'
-- 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Syndromic genetic deafness'
-- 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Genetic malformation syndrome with odontal and/or periodontal component'
-+ 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Ectodermal dysplasia syndrome'
-+ 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Syndromic genetic deafness'
-+ 'Deafness - enamel hypoplasia - nail defects' SubClassOf 'Genetic malformation syndrome with odontal and/or periodontal component'
+Class: http://purl.obolibrary.org/obo/UBERON_0003061
+Label(s): blood island 
+- 'blood island' SubClassOf 'embryonic structure'
++ 'blood island' SubClassOf 'part of' some 'embryo'
 
-Class: http://www.orpha.net/ORDO/Orphanet_83473
-Label(s): Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus 
-- 'Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus' SubClassOf 'Genetic syndrome with a central nervous system malformation as major feature'
-+ 'Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100283
-+ 'Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus' SubClassOf 'Genetic syndrome with a central nervous system malformation as major feature'
+Class: http://purl.obolibrary.org/obo/UBERON_0003040
+Label(s): central gray substance of midbrain 
+- 'central gray substance of midbrain' SubClassOf 'part of' some 'brain'
+- 'central gray substance of midbrain' SubClassOf 'anatomical entity'
++ 'central gray substance of midbrain' SubClassOf 'anatomical structure'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0007383
-Label(s): Mumps virus infectious disease 
-- 'Mumps virus infectious disease' SubClassOf 'viral disease'
-+ 'Mumps virus infectious disease' SubClassOf 'Paramyxoviridae infectious disease'
+Class: http://purl.obolibrary.org/obo/UBERON_0003027
+Label(s): cingulate cortex 
+- 'cingulate cortex' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011634
+Label(s): ectopterygoid bone 
+- 'ectopterygoid bone' SubClassOf 'part of' some 'digestive system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0043479
+Label(s): adenoviridae infectious disease 
+- 'adenoviridae infectious disease' SubClassOf 'viral disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001479
+Label(s): Tumor Lysis Syndrome 
+- 'Tumor Lysis Syndrome' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0022353
+Label(s): posterior cingulate cortex 
+- 'posterior cingulate cortex' SubClassOf 'part of' some 'nervous system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009118
+Label(s): female reproductive endometrioid cancer 
+- 'female reproductive endometrioid cancer' SubClassOf 'female reproductive system disease'
+- 'female reproductive endometrioid cancer' SubClassOf 'urogenital neoplasm'
++ 'female reproductive endometrioid cancer' SubClassOf 'female reproductive system neoplasm'
++ 'female reproductive endometrioid cancer' SubClassOf 'epithelial neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001322
+Label(s): Eye Foreign Bodies 
+- 'Eye Foreign Bodies' SubClassOf 'has_disease_location' some 
+('eye' or ('part of' some 'eye'))
++ 'Eye Foreign Bodies' SubClassOf 'foreign body'
++ 'Eye Foreign Bodies' EquivalentTo 'foreign body' and ('has_disease_location' some 
+('eye' or ('part of' some 'eye')))
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001320
+Label(s): Exanthema Subitum 
+- 'Exanthema Subitum' SubClassOf 'Roseolovirus infectious disease'
++ 'Exanthema Subitum' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004746
+Label(s): prootic bone 
+- 'prootic bone' SubClassOf 'part of' some 'head'
+- 'prootic bone' SubClassOf 'part of' some 'cranium'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004744
+Label(s): articular/anguloarticular 
+- 'articular/anguloarticular' SubClassOf 'part of' some 'digestive system'
+- 'articular/anguloarticular' SubClassOf 'part of' some 'head'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004742
+Label(s): dentary 
+- 'dentary' SubClassOf 'part of' some 'head'
+- 'dentary' SubClassOf 'part of' some 'digestive system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009073
+Label(s): methylmalonic aciduria (cobalamin deficiency) cblA type 
+- 'methylmalonic aciduria (cobalamin deficiency) cblA type' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001668
+Label(s): human papilloma virus infection 
+- 'human papilloma virus infection' SubClassOf 'viral disease'
++ 'human papilloma virus infection' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006849
+Label(s): scapula 
+- 'scapula' SubClassOf 'part of' some 'appendicular skeleton'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2005093
+Label(s): nasal vein 
+- 'nasal vein' SubClassOf 'vein'
++ 'nasal vein' SubClassOf 'blood vessel'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000981
+Label(s): femur 
+- 'femur' SubClassOf 'part of' some 'skeletal system'
+- 'femur' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000979
+Label(s): tibia 
+- 'tibia' SubClassOf 'part of' some 'anatomical system'
+- 'tibia' SubClassOf 'part of' some 'skeletal system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000956
+Label(s): cerebral cortex 
+- 'cerebral cortex' SubClassOf 'part of' some 'central nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004639
+Label(s): renal afferent arteriole 
+- 'renal afferent arteriole' SubClassOf 'part of' some 'trunk'
+- 'renal afferent arteriole' SubClassOf 'part of' some 'abdomen'
++ 'renal afferent arteriole' SubClassOf 'blood vessel'
++ 'renal afferent arteriole' SubClassOf 'part of' some 'kidney'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000926
+Label(s): mesoderm 
+- 'mesoderm' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000924
+Label(s): ectoderm 
+- 'ectoderm' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005226
+Label(s): swine influenza 
++ 'swine influenza' SubClassOf 'Orthomyxoviridae infectious disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005222
+Label(s): avian influenza 
++ 'avian influenza' SubClassOf 'Orthomyxoviridae infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021133
+Label(s): acquired factor XIII deficiency 
+- 'acquired factor XIII deficiency' SubClassOf 'acquired metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006763
+Label(s): epithelium of conjunctiva 
+- 'epithelium of conjunctiva' SubClassOf 'part of' some 'eye'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001817
+Label(s): lacrimal gland 
+- 'lacrimal gland' SubClassOf 'part of' some 'eye'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007292
+Label(s): presumptive rhombomere 5 
+- 'presumptive rhombomere 5' SubClassOf 'embryonic structure'
++ 'presumptive rhombomere 5' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007294
+Label(s): presumptive rhombomere 7 
+- 'presumptive rhombomere 7' SubClassOf 'embryonic structure'
++ 'presumptive rhombomere 7' SubClassOf 'part of' some 'embryo'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009068
+Label(s): dicer1 syndrome 
++ 'dicer1 syndrome' SubClassOf 'disease has feature' some http://purl.obolibrary.org/obo/MONDO_0011014
++ 'dicer1 syndrome' SubClassOf 'syndromic disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_754
+Label(s): Androgen insensitivity syndrome 
++ 'Androgen insensitivity syndrome' SubClassOf 'disease of receptor activity'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000815
+Label(s): nucleus of medial longitudinal fasciculus of medulla 
+- 'nucleus of medial longitudinal fasciculus of medulla' SubClassOf 'part of' some 'central nervous system'
+- 'nucleus of medial longitudinal fasciculus of medulla' SubClassOf 'part of' some 'hindbrain'
+- 'nucleus of medial longitudinal fasciculus of medulla' SubClassOf 'part of' some 'brainstem'
+
+Class: http://www.orpha.net/ORDO/Orphanet_289573
+Label(s): Fatal multiple mitochondrial dysfunction syndrome 
+- 'Fatal multiple mitochondrial dysfunction syndrome' SubClassOf 'phosphorus metabolism disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002319
+Label(s): phosphorus metabolism disease 
+- 'phosphorus metabolism disease' SubClassOf 'mineral metabolism disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0004651
+Label(s): smallpox 
+- 'smallpox' SubClassOf 'viral disease'
++ 'smallpox' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004363
+Label(s): pharyngeal arch artery 
+- 'pharyngeal arch artery' SubClassOf 'embryonic structure'
++ 'pharyngeal arch artery' SubClassOf 'part of' some 'embryo'
++ 'pharyngeal arch artery' SubClassOf 'respiratory system blood vessel'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001309
+Label(s): Encephalitis, Tick-Borne 
+- 'Encephalitis, Tick-Borne' SubClassOf 'Flaviviridae infectious disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0009955
+Label(s): neurogenic placode 
+- 'neurogenic placode' SubClassOf 'embryonic structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006888
+Label(s): vascular malformation 
++ 'neoplasm' DisjointWith 'vascular malformation'
++ 'vascular malformation' SubClassOf 'vascular anomaly'
++ 'vascular malformation' SubClassOf 'congenital anomaly of cardiovascular system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021682
+Label(s): viral sexually transmitted disease 
+- 'viral sexually transmitted disease' SubClassOf 'viral disease'
++ 'viral sexually transmitted disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001673
+Label(s): central retinal vein 
+- 'central retinal vein' SubClassOf 'vein'
++ 'central retinal vein' SubClassOf 'blood vessel'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004212
+Label(s): glomerular capillary 
+- 'glomerular capillary' SubClassOf 'part of' some 'abdomen'
+- 'glomerular capillary' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0009881
+Label(s): anterior lateral plate mesoderm 
+- 'anterior lateral plate mesoderm' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000693
+Label(s): tangential nucleus 
+- 'tangential nucleus' SubClassOf 'part of' some 'brainstem'
+- 'tangential nucleus' SubClassOf 'part of' some 'hindbrain'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000677
+Label(s): segmental intercostal artery 
+- 'segmental intercostal artery' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000657
+Label(s): entopterygoid 
+- 'entopterygoid' SubClassOf 'part of' some 'head'
+- 'entopterygoid' SubClassOf 'part of' some 'digestive system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000645
+Label(s): descending octaval nucleus 
+- 'descending octaval nucleus' SubClassOf 'part of' some 'hindbrain'
+- 'descending octaval nucleus' SubClassOf 'part of' some 'brainstem'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0009115
+Label(s): thoracic thymus 
+- 'thoracic thymus' SubClassOf 'part of' some 'trunk'
+- 'thoracic thymus' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0037829
+Label(s): purine metabolism disease 
+- 'purine metabolism disease' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004141
+Label(s): heart tube 
+- 'heart tube' SubClassOf 'part of' some 'embryonic structure'
+- 'heart tube' SubClassOf 'part of' some 'multicellular organism'
++ 'heart tube' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000451
+Label(s): prefrontal cortex 
+- 'prefrontal cortex' SubClassOf 'part of' some 'nervous system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007305
+Label(s): hepatitis A virus infection 
+- 'hepatitis A virus infection' SubClassOf 'Picornaviridae infectious disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007306
+Label(s): herpangina 
+- 'herpangina' SubClassOf 'coxsackievirus infectious disease'
++ 'herpangina' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000411
+Label(s): visual cortex 
+- 'visual cortex' SubClassOf 'part of' some 'nervous system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007332
+Label(s): Japanese encephalitis 
+- 'Japanese encephalitis' SubClassOf 'Flaviviridae infectious disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001067
+Label(s): parasitic infection 
++ 'parasitic infection' DisjointWith 'urinary tract infection'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001927
+Label(s): medial geniculate body 
+- 'medial geniculate body' SubClassOf 'part of' some 'brain'
+- 'medial geniculate body' SubClassOf 'anatomical entity'
+- 'medial geniculate body' SubClassOf 'part of' some 'forebrain'
++ 'medial geniculate body' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001929
+Label(s): supraoptic nucleus 
+- 'supraoptic nucleus' SubClassOf 'anatomical entity'
+- 'supraoptic nucleus' SubClassOf 'part of' some 'diencephalon'
+- 'supraoptic nucleus' SubClassOf 'part of' some 'central nervous system'
++ 'supraoptic nucleus' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000599
+Label(s): torus semicircularis 
+- 'torus semicircularis' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000549
+Label(s): posttemporal 
+- 'posttemporal' SubClassOf 'part of' some 'appendicular skeleton'
+- 'posttemporal' SubClassOf 'part of' some 'cranium'
+- 'posttemporal' SubClassOf 'part of' some 'head'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006600
+Label(s): presumptive enteric nervous system 
+- 'presumptive enteric nervous system' SubClassOf 'embryonic structure'
++ 'presumptive enteric nervous system' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000516
+Label(s): periventricular grey zone 
+- 'periventricular grey zone' SubClassOf 'part of' some 'nervous system'
 
 Class: http://www.ebi.ac.uk/efo/EFO_0007395
 Label(s): Newcastle disease 
-- 'Newcastle disease' SubClassOf 'viral disease'
-+ 'Newcastle disease' SubClassOf 'Paramyxoviridae infectious disease'
+- 'Newcastle disease' SubClassOf 'Paramyxoviridae infectious disease'
++ 'Newcastle disease' SubClassOf 'viral disease'
 
-Class: http://purl.obolibrary.org/obo/HP_0002321
-Label(s): Vertigo 
-- 'Vertigo' SubClassOf 'Abnormality of the inner ear'
-+ 'Vertigo' SubClassOf 'Abnormality of the ear'
+Class: http://purl.obolibrary.org/obo/MONDO_0025371
+Label(s): Parvoviridae infectious disease 
+- 'Parvoviridae infectious disease' SubClassOf 'viral disease'
++ 'Parvoviridae infectious disease' SubClassOf 'infectious disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0007494
-Label(s): episodic kinesigenic dyskinesia 1 
-- 'episodic kinesigenic dyskinesia 1' SubClassOf 'episodic kinesigenic dyskinesia'
-+ 'episodic kinesigenic dyskinesia 1' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/UBERON_0004086
+Label(s): brain ventricle 
+- 'brain ventricle' SubClassOf 'part of' some 'brain'
 
-Class: http://www.orpha.net/ORDO/Orphanet_60040
-Label(s): Megalencephaly-capillary malformation-polymicrogyria syndrome 
-+ 'Megalencephaly-capillary malformation-polymicrogyria syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100283
+Class: http://purl.obolibrary.org/obo/UBERON_0004068
+Label(s): medial nasal prominence 
+- 'medial nasal prominence' SubClassOf 'embryonic structure'
++ 'medial nasal prominence' SubClassOf 'part of' some 'embryo'
++ 'medial nasal prominence' SubClassOf 'anatomical structure'
 
-Class: http://www.orpha.net/ORDO/Orphanet_247685
-Label(s): Odontohypophosphatasia 
-- 'Odontohypophosphatasia' SubClassOf 'Adult hypophosphatasia'
-+ 'Odontohypophosphatasia' SubClassOf 'Hypophosphatasia'
+Class: http://purl.obolibrary.org/obo/UBERON_0004067
+Label(s): lateral nasal prominence 
+- 'lateral nasal prominence' SubClassOf 'embryonic structure'
++ 'lateral nasal prominence' SubClassOf 'anatomical structure'
++ 'lateral nasal prominence' SubClassOf 'part of' some 'embryo'
 
-Class: http://www.orpha.net/ORDO/Orphanet_65683
-Label(s): Isolated focal cortical dysplasia 
-+ 'Isolated focal cortical dysplasia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100283
+Class: http://purl.obolibrary.org/obo/UBERON_0003850
+Label(s): telencephalon neural crest 
+- 'telencephalon neural crest' SubClassOf 'part of' some 'embryonic structure'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0007218
-Label(s): congenital rubella 
-- 'congenital rubella' EquivalentTo 'rubella' and ('has modifier' some 'congenital')
-- 'congenital rubella' SubClassOf 'rubella'
-- 'congenital rubella' SubClassOf 'has modifier' some 'congenital'
-+ 'congenital rubella' SubClassOf 'viral disease'
+Class: http://purl.obolibrary.org/obo/UBERON_2000419
+Label(s): pterosphenoid 
+- 'pterosphenoid' SubClassOf 'part of' some 'cranium'
+- 'pterosphenoid' SubClassOf 'part of' some 'head'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0044202
-Label(s): episodic kinesigenic dyskinesia 
-- 'episodic kinesigenic dyskinesia' SubClassOf 'Paroxysmal dyskinesia'
+Class: http://purl.obolibrary.org/obo/UBERON_0001985
+Label(s): corneal endothelium 
+- 'corneal endothelium' SubClassOf 'part of' some 'eye'
 
-Class: http://www.orpha.net/ORDO/Orphanet_353298
-Label(s): Roifman syndrome 
-- 'Roifman syndrome' SubClassOf 'X-linked spondyloepimetaphyseal dysplasia'
-- 'Roifman syndrome' SubClassOf 'X-linked syndromic intellectual disability'
-+ 'Roifman syndrome' SubClassOf 'Spondyloepiphyseal dysplasia and spondyloepimetaphyseal dysplasia'
-+ 'Roifman syndrome' SubClassOf 'X-linked syndromic intellectual disability'
+Class: http://purl.obolibrary.org/obo/UBERON_0000204
+Label(s): ventral part of telencephalon 
+- 'ventral part of telencephalon' SubClassOf 'part of' some 'nervous system'
 
-Class: http://purl.obolibrary.org/obo/HP_0002063
-Label(s): Rigidity 
-- 'Rigidity' SubClassOf 'Abnormal central motor function'
-+ 'Rigidity' SubClassOf 'Hypertonia'
+Class: http://purl.obolibrary.org/obo/UBERON_0000203
+Label(s): pallium 
+- 'pallium' SubClassOf 'part of' some 'nervous system'
 
-Class: http://purl.obolibrary.org/obo/HP_0003212
-Label(s): Increased circulating IgE level 
-+ 'Increased circulating IgE level' SubClassOf 'Abnormality of blood and blood-forming tissues'
+Class: http://purl.obolibrary.org/obo/MONDO_0003812
+Label(s): ovarian endometrial cancer 
+- 'ovarian endometrial cancer' SubClassOf 'endometrioid tumor'
++ 'ovarian endometrial cancer' SubClassOf 'female reproductive endometrioid cancer'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0007480
-Label(s): scrub typhus 
-+ 'scrub typhus' SubClassOf http://purl.obolibrary.org/obo/MONDO_0600003
+Class: http://purl.obolibrary.org/obo/UBERON_0005870
+Label(s): olfactory pit 
+- 'olfactory pit' SubClassOf 'part of' some 'anatomical structure'
 
-Class: http://www.ebi.ac.uk/efo/EFO_1002000
-Label(s): Takotsubo cardiomyopathy 
-- 'Takotsubo cardiomyopathy' SubClassOf 'unclassified cardiomyopathy'
-+ 'Takotsubo cardiomyopathy' SubClassOf 'cardiomyopathy'
+Class: http://purl.obolibrary.org/obo/UBERON_0005725
+Label(s): olfactory system 
+- 'olfactory system' SubClassOf 'sensory system'
++ 'olfactory system' SubClassOf 'anatomical structure'
 
-Class: http://purl.obolibrary.org/obo/HP_0011840
-Label(s): Abnormality of T cell physiology 
-+ 'Abnormality of T cell physiology' SubClassOf 'Abnormality of blood and blood-forming tissues'
+Class: http://www.ebi.ac.uk/efo/EFO_0007163
+Label(s): balantidiasis 
+- 'balantidiasis' SubClassOf 'bacterial disease'
 
-Class: http://purl.obolibrary.org/obo/HP_0001257
-Label(s): Spasticity 
-+ 'Spasticity' SubClassOf 'Abnormal central motor function'
+Class: http://purl.obolibrary.org/obo/UBERON_0000948
+Label(s): heart 
+- 'heart' SubClassOf 'part of' some 'thoracic segment of trunk'
+- 'heart' SubClassOf 'part of' some 'trunk'
 
-Class: http://purl.obolibrary.org/obo/HP_0001276
-Label(s): Hypertonia 
-- 'Hypertonia' SubClassOf 'Abnormal central motor function'
+Class: http://www.ebi.ac.uk/efo/EFO_0001379
+Label(s): endocrine system disease 
+- 'endocrine system disease' SubClassOf 'disease by anatomical system'
++ 'endocrine system disease' SubClassOf 'disease'
 
-Class: http://www.orpha.net/ORDO/Orphanet_93349
-Label(s): X-linked spondyloepimetaphyseal dysplasia 
-- 'X-linked spondyloepimetaphyseal dysplasia' SubClassOf 'X-linked disease'
+Class: http://purl.obolibrary.org/obo/UBERON_2000212
+Label(s): granular eminence 
+- 'granular eminence' SubClassOf 'part of' some 'nervous system'
 
-Class: http://purl.obolibrary.org/obo/HP_0003489
-Label(s): Acute episodes of neuropathic symptoms 
-- 'Acute episodes of neuropathic symptoms' SubClassOf 'Abnormality of the nervous system'
-+ 'Acute episodes of neuropathic symptoms' SubClassOf 'Abnormal nervous system physiology'
+Class: http://purl.obolibrary.org/obo/UBERON_2000240
+Label(s): metapterygoid 
+- 'metapterygoid' SubClassOf 'part of' some 'head'
+- 'metapterygoid' SubClassOf 'part of' some 'digestive system'
 
-Class: http://purl.obolibrary.org/obo/HP_0007141
-Label(s): Sensorimotor neuropathy 
-- 'Sensorimotor neuropathy' SubClassOf 'Abnormality of the nervous system'
-+ 'Sensorimotor neuropathy' SubClassOf 'Abnormal nervous system physiology'
+Class: http://purl.obolibrary.org/obo/UBERON_0001255
+Label(s): urinary bladder 
+- 'urinary bladder' SubClassOf 'part of' some 'trunk'
 
-Class: http://purl.obolibrary.org/obo/HP_0003401
-Label(s): Paresthesia 
-- 'Paresthesia' SubClassOf 'Sensory neuropathy'
-+ 'Paresthesia' SubClassOf 'Sensory impairment'
+Class: http://purl.obolibrary.org/obo/UBERON_0002533
+Label(s): post-anal tail bud 
+- 'post-anal tail bud' SubClassOf 'embryonic structure'
++ 'post-anal tail bud' SubClassOf 'anatomical structure'
++ 'post-anal tail bud' SubClassOf 'part of' some 'embryo'
 
-Class: http://www.orpha.net/ORDO/Orphanet_247676
-Label(s): Adult hypophosphatasia 
-- 'Adult hypophosphatasia' SubClassOf 'Hypophosphatasia'
-+ 'Adult hypophosphatasia' SubClassOf 'Hypophosphatasia'
+Class: http://purl.obolibrary.org/obo/UBERON_0006479
+Label(s): Brodmann (1909) area 38 
+- 'Brodmann (1909) area 38' SubClassOf 'part of' some 'nervous system'
 
-Class: http://purl.obolibrary.org/obo/HP_0003474
-Label(s): Sensory impairment 
-- 'Sensory impairment' SubClassOf 'Abnormality of the nervous system'
-+ 'Sensory impairment' SubClassOf 'Abnormal nervous system physiology'
+Class: http://purl.obolibrary.org/obo/UBERON_0007286
+Label(s): presumptive floor plate 
+- 'presumptive floor plate' SubClassOf 'embryonic structure'
++ 'presumptive floor plate' SubClassOf 'part of' some 'embryo'
 
-Class: http://www.orpha.net/ORDO/Orphanet_1892
-Label(s): Ectrodactyly - polydactyly 
-+ 'Ectrodactyly - polydactyly' SubClassOf 'syndromic disease'
+Class: http://purl.obolibrary.org/obo/UBERON_0009616
+Label(s): presumptive midbrain 
+- 'presumptive midbrain' SubClassOf 'embryonic structure'
++ 'presumptive midbrain' SubClassOf 'part of' some 'embryo'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009897
-Label(s): 10x v1 
-- '10x v1' SubClassOf '10x technology'
-+ '10x v1' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/UBERON_0012170
+Label(s): core of nucleus accumbens 
+- 'core of nucleus accumbens' SubClassOf 'part of' some 'nervous system'
 
-Class: http://www.orpha.net/ORDO/Orphanet_397606
-Label(s): Chronic diarrhea with hereditary sensory and autonomic neuropathy 
-- 'Chronic diarrhea with hereditary sensory and autonomic neuropathy' SubClassOf 'digestive system infectious disease'
-- 'Chronic diarrhea with hereditary sensory and autonomic neuropathy' SubClassOf 'intestinal disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0002241
+Label(s): factor XIII deficiency 
+- 'factor XIII deficiency' SubClassOf 'metabolic disease'
+- 'factor XIII deficiency' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021187
+Label(s): hyperlipidemia (disease) 
+- 'hyperlipidemia (disease)' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021184
+Label(s): deltaretrovirus infections 
+- 'deltaretrovirus infections' SubClassOf 'viral disease'
++ 'deltaretrovirus infections' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007294
+Label(s): hand, foot and mouth disease 
+- 'hand, foot and mouth disease' SubClassOf 'Enterovirus infectious disease'
++ 'hand, foot and mouth disease' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021179
+Label(s): proteostasis deficiencies 
+- 'proteostasis deficiencies' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021669
+Label(s): post-infectious disorder 
+- 'post-infectious disorder' SubClassOf 'disease'
++ 'post-infectious disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100336
+
+Class: http://purl.obolibrary.org/obo/UBERON_2001200
+Label(s): corpuscles of Stannius 
+- 'corpuscles of Stannius' SubClassOf 'part of' some 'anatomical system'
+- 'corpuscles of Stannius' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000059
+Label(s): large intestine 
+- 'large intestine' SubClassOf 'part of' some 'digestive system'
+- 'large intestine' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000056
+Label(s): ureter 
+- 'ureter' SubClassOf 'part of' some 'anatomical system'
+- 'ureter' SubClassOf 'part of' some 'trunk'
+- 'ureter' SubClassOf 'part of' some 'renal system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000022
+Label(s): feather 
+- 'feather' SubClassOf 'part of' some 'multicellular organism'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007521
+Label(s): Trichomonas vaginitis 
+- 'Trichomonas vaginitis' SubClassOf 'urinary system disease'
++ 'Trichomonas vaginitis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100338
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001970
+Label(s): bile 
+- 'bile' SubClassOf 'bodily fluid'
++ 'bile' SubClassOf 'anatomical entity'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001969
+Label(s): blood plasma 
+- 'blood plasma' SubClassOf 'bodily fluid'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001954
+Label(s): Ammon's horn 
+- 'Ammon's horn' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001950
+Label(s): neocortex 
+- 'neocortex' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001946
+Label(s): inferior colliculus 
+- 'inferior colliculus' SubClassOf 'part of' some 'nervous system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007301
+Label(s): Hepadnaviridae infectious disease 
+- 'Hepadnaviridae infectious disease' SubClassOf 'viral disease'
++ 'Hepadnaviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001930
+Label(s): paraventricular nucleus of hypothalamus 
+- 'paraventricular nucleus of hypothalamus' SubClassOf 'part of' some 'diencephalon'
+- 'paraventricular nucleus of hypothalamus' SubClassOf 'anatomical entity'
+- 'paraventricular nucleus of hypothalamus' SubClassOf 'part of' some 'central nervous system'
++ 'paraventricular nucleus of hypothalamus' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001928
+Label(s): preoptic area 
+- 'preoptic area' SubClassOf 'part of' some 'nervous system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007328
+Label(s): influenza 
+- 'influenza' SubClassOf 'Orthomyxoviridae infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024431
+Label(s): bilirubin metabolism disease 
+- 'bilirubin metabolism disease' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0014371
+Label(s): future telencephalon 
+- 'future telencephalon' SubClassOf 'embryonic structure'
++ 'future telencephalon' SubClassOf 'part of' some 'embryo'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000084
+Label(s): Angioleiomyoma 
+- 'Angioleiomyoma' SubClassOf 'integumentary system disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000422
+Label(s): retroarticular 
+- 'retroarticular' SubClassOf 'part of' some 'head'
+- 'retroarticular' SubClassOf 'part of' some 'digestive system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000317
+Label(s): colonic mucosa 
+- 'colonic mucosa' SubClassOf 'part of' some 'alimentary part of gastrointestinal system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0035814
+Label(s): pericardial fat 
+- 'pericardial fat' SubClassOf 'adipose tissue'
++ 'pericardial fat' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000369
+Label(s): corpus striatum 
+- 'corpus striatum' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001899
+Label(s): epithalamus 
+- 'epithalamus' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001898
+Label(s): hypothalamus 
+- 'hypothalamus' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001897
+Label(s): dorsal plus ventral thalamus 
+- 'dorsal plus ventral thalamus' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001894
+Label(s): diencephalon 
+- 'diencephalon' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001893
+Label(s): telencephalon 
+- 'telencephalon' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001891
+Label(s): midbrain 
+- 'midbrain' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001890
+Label(s): forebrain 
+- 'forebrain' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001886
+Label(s): choroid plexus 
+- 'choroid plexus' SubClassOf 'part of' some 'central nervous system'
+- 'choroid plexus' SubClassOf 'part of' some 'brain'
+- 'choroid plexus' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001885
+Label(s): dentate gyrus of hippocampal formation 
+- 'dentate gyrus of hippocampal formation' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005562
+Label(s): thymus primordium 
+- 'thymus primordium' SubClassOf 'epithelium'
+- 'thymus primordium' SubClassOf 'part of' some 'respiratory system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001876
+Label(s): amygdala 
+- 'amygdala' SubClassOf 'part of' some 'forebrain'
+- 'amygdala' SubClassOf 'part of' some 'central nervous system'
+- 'amygdala' SubClassOf 'part of' some 'telencephalon'
+- 'amygdala' SubClassOf 'part of' some 'brain'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001870
+Label(s): frontal cortex 
+- 'frontal cortex' SubClassOf 'part of' some 'telencephalon'
+- 'frontal cortex' SubClassOf 'anatomical entity'
+- 'frontal cortex' SubClassOf 'part of' some 'brain'
+- 'frontal cortex' SubClassOf 'part of' some 'central nervous system'
+- 'frontal cortex' SubClassOf 'part of' some 'forebrain'
++ 'frontal cortex' SubClassOf 'anatomical structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009441
+Label(s): Waldenstrom macroglobulinemia 
+- 'Waldenstrom macroglobulinemia' SubClassOf 'B-cell non-Hodgkins lymphoma'
++ 'Waldenstrom macroglobulinemia' SubClassOf 'Inborn errors of metabolism'
++ 'Waldenstrom macroglobulinemia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0000432
++ 'Waldenstrom macroglobulinemia' SubClassOf 'hematological disease associated with an acquired peripheral neuropathy'
++ 'Waldenstrom macroglobulinemia' SubClassOf 'indolent B-cell non-Hodgkin lymphoma'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007411
+Label(s): Orthomyxoviridae infectious disease 
+- 'Orthomyxoviridae infectious disease' SubClassOf 'viral disease'
++ 'Orthomyxoviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001820
+Label(s): sweat gland 
+- 'sweat gland' SubClassOf 'part of' some 'skin of body'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007434
+Label(s): pharyngoconjunctival fever 
+- 'pharyngoconjunctival fever' SubClassOf 'adenoviridae infectious disease'
++ 'pharyngoconjunctival fever' SubClassOf 'viral disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007438
+Label(s): Picornaviridae infectious disease 
+- 'Picornaviridae infectious disease' SubClassOf 'viral disease'
++ 'Picornaviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007464
+Label(s): Reoviridae infectious disease 
+- 'Reoviridae infectious disease' SubClassOf 'viral disease'
++ 'Reoviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000446
+Label(s): septum of telencephalon 
+- 'septum of telencephalon' SubClassOf 'part of' some 'telencephalon'
+- 'septum of telencephalon' SubClassOf 'part of' some 'central nervous system'
+- 'septum of telencephalon' SubClassOf 'part of' some 'forebrain'
+- 'septum of telencephalon' SubClassOf 'anatomical entity'
+- 'septum of telencephalon' SubClassOf 'part of' some 'brain'
++ 'septum of telencephalon' SubClassOf 'anatomical structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1002026
+Label(s): rubella 
+- 'rubella' SubClassOf 'viral disease'
++ 'rubella' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001772
+Label(s): corneal epithelium 
+- 'corneal epithelium' SubClassOf 'part of' some 'cornea'
+- 'corneal epithelium' SubClassOf 'part of' some 'eye'
+- 'corneal epithelium' SubClassOf 'epithelium'
++ 'corneal epithelium' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001715
+Label(s): oculomotor nuclear complex 
+- 'oculomotor nuclear complex' SubClassOf 'part of' some 'brain'
+- 'oculomotor nuclear complex' SubClassOf 'anatomical entity'
++ 'oculomotor nuclear complex' SubClassOf 'anatomical structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007530
+Label(s): urinary schistosomiasis 
+- 'urinary schistosomiasis' SubClassOf 'urinary tract infection'
++ 'urinary schistosomiasis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100338
+
+Class: http://purl.obolibrary.org/obo/UBERON_2000603
+Label(s): valvula cerebelli 
+- 'valvula cerebelli' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004264
+Label(s): lower leg skin 
+- 'lower leg skin' SubClassOf 'zone of skin'
+- 'lower leg skin' SubClassOf 'part of' some 'limb'
++ 'lower leg skin' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002480
+Label(s): endometrioid tumor 
+- 'endometrioid tumor' SubClassOf 'female reproductive system neoplasm'
+- 'endometrioid tumor' SubClassOf 'epithelial neoplasm'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001637
+Label(s): artery 
+- 'artery' SubClassOf 'blood vessel'
++ 'artery' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001621
+Label(s): coronary artery 
+- 'coronary artery' SubClassOf 'part of' some 'thoracic segment of trunk'
+- 'coronary artery' SubClassOf 'heart component'
+- 'coronary artery' SubClassOf 'part of' some 'trunk'
+- 'coronary artery' SubClassOf 'part of' some 'heart'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007890
+Label(s): pericardial adipose tissue measurement 
+- 'pericardial adipose tissue measurement' SubClassOf 'adipose tissue measurement'
++ 'pericardial adipose tissue measurement' SubClassOf 'anthropometric measurement'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0010302
+Label(s): amnioserosa 
+- 'amnioserosa' SubClassOf 'extraembryonic tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005256
+Label(s): trunk mesenchyme 
+- 'trunk mesenchyme' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005253
+Label(s): head mesenchyme 
+- 'head mesenchyme' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001540
+Label(s): peroneal artery 
+- 'peroneal artery' SubClassOf 'part of' some 'limb'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001532
+Label(s): internal carotid artery 
++ 'internal carotid artery' SubClassOf 'blood vessel'
+
+Class: http://www.orpha.net/ORDO/Orphanet_90673
+Label(s): Hypothyroidism due to TSH receptor mutations 
++ 'Hypothyroidism due to TSH receptor mutations' SubClassOf 'disease of receptor activity'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001495
+Label(s): pectoral muscle 
+- 'pectoral muscle' SubClassOf 'part of' some 'anatomical system'
+- 'pectoral muscle' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0005170
+Label(s): granulosa cell layer 
+- 'granulosa cell layer' SubClassOf 'part of' some 'reproductive system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001446
+Label(s): fibula 
+- 'fibula' SubClassOf 'part of' some 'skeletal system'
+- 'fibula' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001423
+Label(s): radius bone 
+- 'radius bone' SubClassOf 'part of' some 'skeletal system'
+- 'radius bone' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001416
+Label(s): skin of abdomen 
+- 'skin of abdomen' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001415
+Label(s): skin of pelvis 
+- 'skin of pelvis' SubClassOf 'part of' some 'trunk'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003900
+Label(s): ciliopathy 
+- 'ciliopathy' SubClassOf 'disease by cellular component affected'
++ 'ciliopathy' SubClassOf 'disease of membrane bound organelle'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001359
+Label(s): cerebrospinal fluid 
+- 'cerebrospinal fluid' SubClassOf 'bodily fluid'
++ 'cerebrospinal fluid' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001310
+Label(s): umbilical artery 
++ 'umbilical artery' SubClassOf 'blood vessel'
+
+Class: http://www.orpha.net/ORDO/Orphanet_251347
+Label(s): Ataxia-telangiectasia-like disorder 
++ 'Ataxia-telangiectasia-like disorder' SubClassOf 'cerebellar degeneration'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0011054
+Label(s): metabolic toxicity 
+- 'metabolic toxicity' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001069
+Label(s): nutritional disorder 
+- 'nutritional disorder' SubClassOf 'nutritional or metabolic disease'
++ 'nutritional disorder' SubClassOf 'disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000693
+Label(s): erythema infectiosum 
++ 'erythema infectiosum' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2005103
+Label(s): presumptive ventral fin fold 
+- 'presumptive ventral fin fold' SubClassOf 'embryonic structure'
++ 'presumptive ventral fin fold' SubClassOf 'part of' some 'embryo'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007541
+Label(s): viral pneumonia 
++ 'viral pneumonia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007538
+Label(s): viral encephalitis 
++ 'viral encephalitis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000925
+Label(s): endoderm 
+- 'endoderm' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000927
+Label(s): mesectoderm 
+- 'mesectoderm' SubClassOf 'part of' some 'embryonic structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007513
+Label(s): Togaviridae infectious disease 
+- 'Togaviridae infectious disease' SubClassOf 'viral disease'
++ 'Togaviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007502
+Label(s): subacute sclerosing panencephalitis 
+- 'subacute sclerosing panencephalitis' SubClassOf 'measles'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004640
+Label(s): renal efferent arteriole 
+- 'renal efferent arteriole' SubClassOf 'part of' some 'abdomen'
+- 'renal efferent arteriole' SubClassOf 'part of' some 'trunk'
++ 'renal efferent arteriole' SubClassOf 'part of' some 'kidney'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000976
+Label(s): humerus 
+- 'humerus' SubClassOf 'part of' some 'skeletal system'
+- 'humerus' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000988
+Label(s): pons 
+- 'pons' SubClassOf 'part of' some 'nervous system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001281
+Label(s): hepatic sinusoid 
+- 'hepatic sinusoid' SubClassOf 'endothelium'
+- 'hepatic sinusoid' SubClassOf 'part of' some 'cardiovascular system'
+- 'hepatic sinusoid' SubClassOf 'part of' some 'trunk'
++ 'hepatic sinusoid' SubClassOf 'epithelium'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001273
+Label(s): ilium 
+- 'ilium' SubClassOf 'part of' some 'trunk'
+- 'ilium' SubClassOf 'part of' some 'appendicular skeleton'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001264
+Label(s): pancreas 
+- 'pancreas' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001263
+Label(s): pancreatic acinus 
+- 'pancreatic acinus' SubClassOf 'part of' some 'gland'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000727
+Label(s): lipodystrophy 
+- 'lipodystrophy' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011189
+Label(s): lamina propria of large intestine 
+- 'lamina propria of large intestine' SubClassOf 'part of' some 'mucosa'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2005017
+Label(s): primordial midbrain channel 
+- 'primordial midbrain channel' SubClassOf 'vein'
++ 'primordial midbrain channel' SubClassOf 'blood vessel'
+
+Class: http://purl.obolibrary.org/obo/UBERON_2005010
+Label(s): mid cerebral vein 
+- 'mid cerebral vein' SubClassOf 'vein'
++ 'mid cerebral vein' SubClassOf 'blood vessel'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003770
+Label(s): diabetic retinopathy 
+- 'diabetic retinopathy' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007451
+Label(s): Polyomavirus infectious disease 
+- 'Polyomavirus infectious disease' SubClassOf 'viral disease'
++ 'Polyomavirus infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007437
+Label(s): Phlebotomus fever 
+- 'Phlebotomus fever' SubClassOf 'viral disease'
++ 'Phlebotomus fever' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009069
+Label(s): hepatic methionine adenosyltransferase deficiency 
+- 'hepatic methionine adenosyltransferase deficiency' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001003
+Label(s): skin epidermis 
+- 'skin epidermis' SubClassOf 'epithelium'
++ 'skin epidermis' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004741
+Label(s): cleithrum 
+- 'cleithrum' SubClassOf 'part of' some 'appendicular skeleton'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001154
+Label(s): vermiform appendix 
+- 'vermiform appendix' SubClassOf 'part of' some 'caecum'
++ 'vermiform appendix' SubClassOf 'part of' some 'large intestine'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001037
+Label(s): strand of hair 
+- 'strand of hair' SubClassOf 'part of' some 'multicellular organism'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001143
+Label(s): hepatic vein 
+- 'hepatic vein' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001043
+Label(s): esophagus 
+- 'esophagus' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001111
+Label(s): intercostal muscle 
+- 'intercostal muscle' SubClassOf 'part of' some 'trunk'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001103
+Label(s): diaphragm 
+- 'diaphragm' SubClassOf 'part of' some 'trunk'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007396
+Label(s): Nidovirales infectious disease 
+- 'Nidovirales infectious disease' SubClassOf 'viral disease'
++ 'Nidovirales infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007376
+Label(s): Mononegavirales infectious disease 
+- 'Mononegavirales infectious disease' SubClassOf 'viral disease'
++ 'Mononegavirales infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007319
+Label(s): hyperprolactinemia 
+- 'hyperprolactinemia' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007316
+Label(s): Human T-lymphotropic virus 1 infectious disease 
+- 'Human T-lymphotropic virus 1 infectious disease' SubClassOf 'deltaretrovirus infections'
++ 'Human T-lymphotropic virus 1 infectious disease' SubClassOf 'viral disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007309
+Label(s): Herpesviridae infectious disease 
+- 'Herpesviridae infectious disease' SubClassOf 'viral disease'
++ 'Herpesviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0004851
+Label(s): aorta endothelium 
+- 'aorta endothelium' SubClassOf 'part of' some 'cardiovascular system'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001044
+Label(s): saliva-secreting gland 
+- 'saliva-secreting gland' SubClassOf 'part of' some 'digestive system'
+- 'saliva-secreting gland' SubClassOf 'part of' some 'anatomical system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000969
+Label(s): hyperamylasemia 
+- 'hyperamylasemia' SubClassOf 'nutritional or metabolic disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006603
+Label(s): presumptive mesoderm 
+- 'presumptive mesoderm' SubClassOf 'embryonic structure'
++ 'presumptive mesoderm' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006601
+Label(s): presumptive ectoderm 
+- 'presumptive ectoderm' SubClassOf 'embryonic structure'
++ 'presumptive ectoderm' SubClassOf 'part of' some 'embryo'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007299
+Label(s): hemorrhagic fever with renal syndrome 
++ 'hemorrhagic fever with renal syndrome' SubClassOf 'viral disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007274
+Label(s): Flaviviridae infectious disease 
+- 'Flaviviridae infectious disease' SubClassOf 'viral disease'
++ 'Flaviviridae infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007259
+Label(s): epidemic pleurodynia 
+- 'epidemic pleurodynia' SubClassOf 'Enterovirus infectious disease'
++ 'epidemic pleurodynia' SubClassOf 'viral disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007225
+Label(s): cowpox 
+- 'cowpox' SubClassOf 'viral disease'
++ 'cowpox' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100329
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006222
+Label(s): future diencephalon 
+- 'future diencephalon' SubClassOf 'embryonic structure'
++ 'future diencephalon' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006238
+Label(s): future brain 
+- 'future brain' SubClassOf 'embryonic structure'
+
+Class: http://www.orpha.net/ORDO/Orphanet_331
+Label(s): Congenital factor XIII deficiency 
+- 'Congenital factor XIII deficiency' SubClassOf 'Inborn errors of metabolism'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006599
+Label(s): presumptive hypochord 
+- 'presumptive hypochord' SubClassOf 'embryonic structure'
++ 'presumptive hypochord' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006597
+Label(s): quadrate bone 
+- 'quadrate bone' SubClassOf 'part of' some 'digestive system'
+- 'quadrate bone' SubClassOf 'part of' some 'head'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006596
+Label(s): presumptive blood 
+- 'presumptive blood' SubClassOf 'embryonic structure'
++ 'presumptive blood' SubClassOf 'part of' some 'embryo'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003068
+Label(s): axial mesoderm 
+- 'axial mesoderm' SubClassOf 'embryonic structure'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003071
+Label(s): eye primordium 
+- 'eye primordium' SubClassOf 'part of' some 'multicellular organism'
+- 'eye primordium' SubClassOf 'part of' some 'embryonic structure'
+- 'eye primordium' SubClassOf 'embryonic structure'
 
 ----------------------------------
 
@@ -566,14 +1929,24 @@ Label(s): Chronic diarrhea with hereditary sensory and autonomic neuropathy
 
 @Classes deleted from this version
 
+Class: http://purl.obolibrary.org/obo/MONDO_0024297
+Label(s): nutritional or metabolic disease 
++ 'nutritional or metabolic disease' SubClassOf 'disease by cellular process disrupted'
++ 'nutritional or metabolic disease' EquivalentTo 'metabolic disease' or 'nutritional disorder'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0016343
-Label(s): unclassified cardiomyopathy 
-+ 'unclassified cardiomyopathy' SubClassOf 'cardiomyopathy'
+Class: http://purl.obolibrary.org/obo/MONDO_0043479
+Label(s): adenoviridae infectious disease 
++ 'adenoviridae infectious disease' SubClassOf 'viral disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0044202
-Label(s): episodic kinesigenic dyskinesia 
-+ 'episodic kinesigenic dyskinesia' SubClassOf 'Paroxysmal dyskinesia'
+Class: http://purl.obolibrary.org/obo/MONDO_0002319
+Label(s): phosphorus metabolism disease 
++ 'phosphorus metabolism disease' SubClassOf 'mineral metabolism disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002480
+Label(s): endometrioid tumor 
++ 'endometrioid tumor' SubClassOf 'female reproductive system neoplasm'
++ 'endometrioid tumor' SubClassOf 'epithelial neoplasm'
+
 
 ----------------------------------
 4. Scope of the Ontology
