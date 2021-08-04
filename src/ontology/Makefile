@@ -393,9 +393,24 @@ remove-fbbt-self-xref: $(SRC)
 remove-defs-no-genus: $(SRC)
 	$(ROBOT) query --input $< --update $(SPARQLDIR)/defs-without-genus-no-isabout-to-subclass.ru --output $(SRC).ofn && mv $(SRC).ofn $(SRC)
 
+remove-self-xref: $(SRC)
+	$(ROBOT) query --input $< --update $(SPARQLDIR)/remove-self-xrefs.ru --output $(SRC)
+
 reports/report-%.tsv: $(SRC)
-	$(ROBOT) query --input $< --select $(SPARQLDIR)/$*.sparql $@
+	$(ROBOT) query --input $< --use-graphs true --select $(SPARQLDIR)/$*.sparql $@
 	
 trait_reports: reports/report-defs-without-genus.tsv reports/report-measurement-is-about.tsv reports/report-defs-without-genus-no-isabout.tsv
 
+# If you want to used this, edit the
+bulk_remove_classes: $(SPARQLDIR)/remove-xrefs-by-id.ru $(SRC)
+	$(ROBOT) query --input $(SRC) --update $(SPARQLDIR)/remove-xrefs-by-id.ru convert -f ofn --output $(SRC)
 
+robot_remove_xrefs:
+	$(ROBOT) remove -i $(SRC) -T ../scripts/remove_entities.txt --term "http://www.geneontology.org/formats/oboInOwl#hasDbXref" --signature true --trim false convert -f ofn --output $(SRC)
+
+report-xrefs-by-id.owl: 
+	$(ROBOT) template -i $(SRC) --template reports/report-xrefs-by-id.tsv --output $@
+
+unmerge_src: report-xrefs-by-id.owl
+	$(ROBOT) unmerge -i $(SRC) -i $< convert -f ofn -o $(SRC)
+	

@@ -1,0 +1,862 @@
+diff --git a/src/ontology/efo-edit.owl b/src/ontology/efo-edit.owl
+index 850c743..ff76e1d 100644
+--- a/src/ontology/efo-edit.owl
++++ b/src/ontology/efo-edit.owl
+@@ -97465,7 +97465,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000318 "Secondary Cardiomy
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000318 "[X]Cardiomyopathy in other diseases classified elsewhere"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000318 "[X]Cardiomyopathy in other diseases classified elsewhere (disorder)"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000318 "cardiomyopathy"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000318 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0002349))
++SubClassOf(efo:EFO_0000318 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0002349))
+ 
+ # Class: efo:EFO_0000319 (cardiovascular disease)
+ 
+@@ -100829,7 +100829,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000512 "Disorder of reprod
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000512 "Non-neoplastic Reproductive system disease"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000512 "genital system disease"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000512 "reproductive system disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000512 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000990 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000990))))
++SubClassOf(efo:EFO_0000512 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000990 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000990))))
+ SubClassOf(efo:EFO_0000512 efo:EFO_0000408)
+ DisjointClasses(efo:EFO_0000512 efo:EFO_0001460)
+ 
+@@ -101055,8 +101055,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000524 "disorder of head (
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000524 "head disease"^^xsd:string)
+ AnnotationAssertion(rdfs:comment efo:EFO_0000524 "This term had been labelled 'head disease' up until EFO 2.90 where it was then amended to 'head and neck disorder' to better reflect meaningful classification. The old definition is \"The name of the pathology diagnosed in the organism from which the biomaterial was derived. The disease state is normal if no disease has been diagnosed.  E.g Acute Lymphocytic Leukemia\"."^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000524 "head and neck disorder"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000524 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000033))
+-EquivalentClasses(efo:EFO_0000524 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000974))
++SubClassOf(efo:EFO_0000524 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000033))
++SubClassOf(efo:EFO_0000524 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000974))
+ SubClassOf(efo:EFO_0000524 efo:EFO_0000408)
+ DisjointClasses(efo:EFO_0000524 efo:EFO_0001460)
+ 
+@@ -105168,7 +105168,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0000763 "ICD10:B34"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0000763 "SNOMEDCT:34014006"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000763 "viral infectious disease"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000763 "viral disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000763 ObjectSomeValuesFrom(obo:RO_0000057 obo:NCBITaxon_10239))
++SubClassOf(efo:EFO_0000763 ObjectSomeValuesFrom(obo:RO_0000057 obo:NCBITaxon_10239))
+ SubClassOf(efo:EFO_0000763 efo:EFO_0005741)
+ 
+ # Class: efo:EFO_0000764 (HIV infection)
+@@ -105390,7 +105390,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0000771 "A bacterial disease is a di
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0000771 "James Malone"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0000771 "ICD10:A04"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000771 "bacterial disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000771 ObjectSomeValuesFrom(obo:RO_0000057 obo:NCBITaxon_2))
++SubClassOf(efo:EFO_0000771 ObjectSomeValuesFrom(obo:RO_0000057 obo:NCBITaxon_2))
+ SubClassOf(efo:EFO_0000771 efo:EFO_0005741)
+ 
+ # Class: efo:EFO_0000772 (pneumococcal infection)
+@@ -105837,7 +105837,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0000792 "ZFA:0001114"^^xsd:string
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000792 "epicranial plate"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000792 "head tissue"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000792 "craniofacial tissue"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000792 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000792))
++SubClassOf(efo:EFO_0000792 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000792))
+ SubClassOf(efo:EFO_0000792 obo:UBERON_0000061)
+ 
+ # Class: efo:EFO_0000793 (obsolete_digestive system component)
+@@ -109865,7 +109865,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0000989 "ZEA:0015034"^^xsd:string
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000989 "GRO:0005338"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000989 "root"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000989 "root structure"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000989 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000989))
++SubClassOf(efo:EFO_0000989 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000989))
+ SubClassOf(efo:EFO_0000989 obo:PO_0025131)
+ 
+ # Class: efo:EFO_0000990 (obsolete_meristem)
+@@ -109892,7 +109892,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0000991 "ZEA:0015178"^^xsd:string
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000991 "GRO:0005339"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000991 "seed"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000991 "seed structure"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000991 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000991))
++SubClassOf(efo:EFO_0000991 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000991))
+ SubClassOf(efo:EFO_0000991 obo:PO_0025131)
+ 
+ # Class: efo:EFO_0000992 (shoot)
+@@ -109963,7 +109963,7 @@ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0000998 "James Malone"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0000998 "MAT:0000514"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0000998 "reproductive system - plant"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0000998 "plant reproductive system structure"^^xsd:string)
+-EquivalentClasses(efo:EFO_0000998 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000998))
++SubClassOf(efo:EFO_0000998 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000998))
+ SubClassOf(efo:EFO_0000998 obo:PO_0025131)
+ 
+ # Class: efo:EFO_0000999 (plant developmental tissue)
+@@ -114251,7 +114251,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001369 "axial skeleton"^^x
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001369 "postcranial axial skeleton"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001369 "vertebral column"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001369 "vertebral column structure"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001369 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0001369))
++SubClassOf(efo:EFO_0001369 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0001369))
+ SubClassOf(efo:EFO_0001369 obo:UBERON_0000061)
+ SubClassOf(efo:EFO_0001369 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002090))
+ 
+@@ -114449,7 +114449,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001379 "System Disease, En
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001379 "System Diseases, Endocrine"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001379 "Unspecified endocrine disorder"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001379 "endocrine system disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001379 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000949 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000949))))
++SubClassOf(efo:EFO_0001379 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000949 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000949))))
+ SubClassOf(efo:EFO_0001379 efo:EFO_0000408)
+ 
+ # Class: efo:EFO_0001380 (hypopituitarism)
+@@ -115202,7 +115202,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001421 "hepatic disorder"^
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001421 "liver disorder antepartum"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001421 "liver disorder in pregnancy - delivered"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001421 "liver disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001421 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002107 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002107))))
++SubClassOf(efo:EFO_0001421 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002107 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002107))))
+ SubClassOf(efo:EFO_0001421 efo:EFO_0000405)
+ SubClassOf(efo:EFO_0001421 efo:EFO_0000408)
+ 
+@@ -115485,7 +115485,7 @@ SubClassOf(efo:EFO_0001639 ObjectSomeValuesFrom(obo:RO_0001000 efo:EFO_0000311))
+ # Class: efo:EFO_0001640 (B cell derived cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0001640 "B cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001640 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000236 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0001640 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000236 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0001640 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0001641 (epithelial cell derived cell line)
+@@ -115494,7 +115494,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0001641 "An epithelial cell derived
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0001641 "James Malone"^^xsd:string)
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0001641 "Natural Language Generator 8th April 2010"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001641 "epithelial cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001641 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000066 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0001641 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000066 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0001641 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0001642 (lymphoid neoplasm)
+@@ -115556,7 +115556,7 @@ SubClassOf(efo:EFO_0001642 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(ob
+ # Class: efo:EFO_0001643 (kidney derived cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0001643 "kidney derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001643 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002113 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0001643 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002113 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0001643 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0001644 (obsolete_stria vascularis)
+@@ -117181,7 +117181,7 @@ AnnotationAssertion(owl:deprecated efo:EFO_0001940 "true"^^xsd:boolean)
+ 
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0001941 "SNOMEDCT:261226001"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001941 "blood component"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001941 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000178))
++SubClassOf(efo:EFO_0001941 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000178))
+ SubClassOf(efo:EFO_0001941 obo:UBERON_0002390)
+ 
+ # Class: efo:EFO_0001942 (obsolete_umbilical cord blood)
+@@ -117268,7 +117268,7 @@ AnnotationAssertion(owl:deprecated efo:EFO_0001947 "true"^^xsd:boolean)
+ 
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0001948 "A shoot component is a plant component which is specifically part of a plant shoot."^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001948 "shoot component"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001948 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000992))
++SubClassOf(efo:EFO_0001948 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000992))
+ SubClassOf(efo:EFO_0001948 obo:PO_0025131)
+ 
+ # Class: efo:EFO_0001949 (obsolete_muscle)
+@@ -117342,7 +117342,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0001954 "FMA:70504"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001954 "Common carotid arterial subdivision"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0001954 "Subdivision of common carotid artery"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001954 "division of carotid artery"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001954 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0005396))
++SubClassOf(efo:EFO_0001954 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0005396))
+ SubClassOf(efo:EFO_0001954 obo:UBERON_0001637)
+ 
+ # Class: efo:EFO_0001955 (heart component)
+@@ -117350,7 +117350,7 @@ SubClassOf(efo:EFO_0001954 obo:UBERON_0001637)
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0001955 "A heart component is an animal component that is part of some heart."^^xsd:string)
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0001955 "James Malone"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001955 "heart component"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001955 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000948))
++SubClassOf(efo:EFO_0001955 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000948))
+ SubClassOf(efo:EFO_0001955 obo:UBERON_0004535)
+ 
+ # Class: efo:EFO_0001956 (obsolete_interventricular septum)
+@@ -117389,7 +117389,7 @@ AnnotationAssertion(owl:deprecated efo:EFO_0001957 "true"^^xsd:boolean)
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0001958 "James Malone"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0001958 "SNOMEDCT:260782005"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001958 "joint component"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001958 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000982))
++SubClassOf(efo:EFO_0001958 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000982))
+ SubClassOf(efo:EFO_0001958 obo:UBERON_0000061)
+ SubClassOf(efo:EFO_0001958 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001434))
+ 
+@@ -117743,7 +117743,7 @@ AnnotationAssertion(owl:deprecated efo:EFO_0001982 "true"^^xsd:boolean)
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0001983 "A leaf component is a plant component which is part of a leaf."^^xsd:string)
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0001983 "James Malone"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001983 "leaf component"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001983 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PO_0025034))
++SubClassOf(efo:EFO_0001983 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PO_0025034))
+ SubClassOf(efo:EFO_0001983 obo:PO_0025131)
+ 
+ # Class: efo:EFO_0001984 (obsolete_rosette leaf)
+@@ -117773,7 +117773,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0001986 "A lung structuret is a resp
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0001986 "James Malone"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0001986 "SNOMEDCT:39607008"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0001986 "lung structure"^^xsd:string)
+-EquivalentClasses(efo:EFO_0001986 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002048))
++SubClassOf(efo:EFO_0001986 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002048))
+ SubClassOf(efo:EFO_0001986 obo:UBERON_0001004)
+ 
+ # Class: efo:EFO_0001987 (obsolete_cerebral peduncle)
+@@ -117849,7 +117849,7 @@ AnnotationAssertion(owl:deprecated efo:EFO_0001992 "true"^^xsd:boolean)
+ # Class: efo:EFO_0002009 (fibroblast derived cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0002009 "fibroblast derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002009 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000057 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0002009 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000057 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0002009 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002012 (organization role)
+@@ -117858,7 +117858,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002012 "An organization role is a r
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0002012 "James Malone"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0002012 "NCIt:C114551"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002012 "organization role"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002012 ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0000245))
++SubClassOf(efo:EFO_0002012 ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0000245))
+ SubClassOf(efo:EFO_0002012 obo:BFO_0000023)
+ 
+ # Class: efo:EFO_0002028 (microarray wash station)
+@@ -121295,7 +121295,7 @@ AnnotationAssertion(owl:deprecated efo:EFO_0002393 "true"^^xsd:boolean)
+ 
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002394 "Cell lines derived from ovarian cancer tissue."^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002394 "ovarian cancer cell lines"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002394 ObjectSomeValuesFrom(obo:RO_0000053 ObjectUnionOf(efo:EFO_0001075 efo:EFO_0002917)))
++SubClassOf(efo:EFO_0002394 ObjectSomeValuesFrom(obo:RO_0000053 ObjectUnionOf(efo:EFO_0001075 efo:EFO_0002917)))
+ SubClassOf(efo:EFO_0002394 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002422 (benign neoplasm)
+@@ -123756,7 +123756,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002696 "An assay which uses array b
+ AnnotationAssertion(efo:ArrayExpress_label efo:EFO_0002696 "Array assay"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0002696 "array assay"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002696 "assay by array"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002696 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0002698))
++SubClassOf(efo:EFO_0002696 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0002698))
+ SubClassOf(efo:EFO_0002696 efo:EFO_0002773)
+ 
+ # Class: efo:EFO_0002697 (assay by high throughput sequencer)
+@@ -123766,7 +123766,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002697 "An assay which uses high th
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0002697 "Helen Parkinson"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0002697 "high throughput sequencing assay"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002697 "assay by high throughput sequencer"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002697 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0002699))
++SubClassOf(efo:EFO_0002697 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0002699))
+ SubClassOf(efo:EFO_0002697 efo:EFO_0002773)
+ 
+ # Class: efo:EFO_0002698 (array)
+@@ -124318,7 +124318,7 @@ SubClassOf(efo:EFO_0002773 obo:OBI_0000070)
+ AnnotationAssertion(efo:ArrayExpress_label efo:EFO_0002774 "Mass spectrometry assay"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0002774 "mass spectrometry assay"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002774 "assay by mass spectrometry"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002774 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0000049))
++SubClassOf(efo:EFO_0002774 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0000049))
+ SubClassOf(efo:EFO_0002774 efo:EFO_0002773)
+ 
+ # Class: efo:EFO_0002775 (aorta smooth muscle)
+@@ -124387,7 +124387,7 @@ AnnotationAssertion(owl:deprecated efo:EFO_0002780 "true"^^xsd:boolean)
+ 
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002781 "A chorion cell line is a cell line that is derived from the chorion."^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002781 "chorion cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002781 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0003124 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0002781 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0003124 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0002781 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002782 (glioblastoma H54)
+@@ -125459,13 +125459,13 @@ SubClassOf(efo:EFO_0002882 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectio
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002883 "Cell lines that are part of the haemopoietic system."^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0002883 "hemopoietic system cell line"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002883 "haemopoietic system cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002883 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002390 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0002883 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002390 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0002883 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002884 (mammary gland cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0002884 "mammary gland cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002884 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0001911 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0002884 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0001911 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0002884 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002885 (breast cancer cell line)
+@@ -125478,7 +125478,7 @@ SubClassOf(efo:EFO_0002885 obo:CL_0000010)
+ 
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002886 "Cell lines derived from stem cells."^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002886 "stem cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002886 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000034 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0002886 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000034 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0002886 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002887 (mouse cell line)
+@@ -125486,13 +125486,13 @@ SubClassOf(efo:EFO_0002886 obo:CL_0000010)
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002887 "Cell lines derived from mice."^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0002887 "NCIt:C20220"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002887 "mouse cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002887 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_10088))))))
++SubClassOf(efo:EFO_0002887 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_10088))))))
+ SubClassOf(efo:EFO_0002887 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002888 (Homo sapiens cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0002888 "Homo sapiens cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002888 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_9606))))))
++SubClassOf(efo:EFO_0002888 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_9606))))))
+ SubClassOf(efo:EFO_0002888 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002890 (renal carcinoma)
+@@ -125528,7 +125528,7 @@ SubClassOf(efo:EFO_0002890 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_00021
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002891 "Any cell line that is derived from the prostate."^^xsd:string)
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0002891 "James Malone"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002891 "prostate derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002891 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002367 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0002891 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002367 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0002891 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002892 (thyroid carcinoma)
+@@ -125934,14 +125934,14 @@ SubClassOf(efo:EFO_0002933 obo:CL_0000010)
+ # Class: efo:EFO_0002934 (lung cancer cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0002934 "lung cancer cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002934 ObjectSomeValuesFrom(obo:RO_0000053 efo:EFO_0001071))
++SubClassOf(efo:EFO_0002934 ObjectSomeValuesFrom(obo:RO_0000053 efo:EFO_0001071))
+ SubClassOf(efo:EFO_0002934 obo:CL_0000010)
+ SubClassOf(efo:EFO_0002934 ObjectSomeValuesFrom(obo:RO_0002202 obo:BTO_0000551))
+ 
+ # Class: efo:EFO_0002935 (Drosophila melanogaster cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0002935 "Drosophila melanogaster cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002935 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_7227))))))
++SubClassOf(efo:EFO_0002935 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_7227))))))
+ SubClassOf(efo:EFO_0002935 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002936 (rat cell line)
+@@ -125949,13 +125949,13 @@ SubClassOf(efo:EFO_0002935 obo:CL_0000010)
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0002936 "Cell lines derived from rats."^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0002936 "NCIt:C20222"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0002936 "rat cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002936 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_10114))))))
++SubClassOf(efo:EFO_0002936 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_10114))))))
+ SubClassOf(efo:EFO_0002936 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002937 (lymphoma or leukaemia cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0002937 "lymphoma or leukaemia cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002937 ObjectSomeValuesFrom(obo:RO_0000053 ObjectUnionOf(efo:EFO_0000565 efo:EFO_0000574)))
++SubClassOf(efo:EFO_0002937 ObjectSomeValuesFrom(obo:RO_0000053 ObjectUnionOf(efo:EFO_0000565 efo:EFO_0000574)))
+ SubClassOf(efo:EFO_0002937 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002938 (hypopharyngeal carcinoma)
+@@ -126008,7 +126008,7 @@ SubClassOf(efo:EFO_0002939 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_00009
+ # Class: efo:EFO_0002940 (zebrafish cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0002940 "zebrafish cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0002940 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_7955))))))
++SubClassOf(efo:EFO_0002940 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:NCBITaxon_7955))))))
+ SubClassOf(efo:EFO_0002940 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0002941 (transcription profiling by SAGE)
+@@ -126908,7 +126908,7 @@ SubClassOf(efo:EFO_0003039 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectio
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0003040 "Tomasz Adamusiak"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0003040 "BTO:0000669"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003040 "embryonic cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003040 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(obo:UBERON_0000922 obo:UBERON_0002050) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0003040 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(obo:UBERON_0000922 obo:UBERON_0002050) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0003040 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0003041 (obsolete_esophageal epithelium)
+@@ -127461,7 +127461,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003086 "nephropathy"^^xsd:
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003086 "renal disease"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003086 "renal system disease"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003086 "kidney disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003086 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002113 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002113))))
++SubClassOf(efo:EFO_0003086 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002113 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002113))))
+ SubClassOf(efo:EFO_0003086 efo:EFO_0000408)
+ 
+ # Class: efo:EFO_0003087 (obsolete_atrial myocardium)
+@@ -133660,7 +133660,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003763 "Vascular Disorder,
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003763 "Vascular Disorders, Brain"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003763 "Vascular Disorders, Intracranial"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003763 "cerebrovascular disorder"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003763 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0003499))
++SubClassOf(efo:EFO_0003763 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0003499))
+ SubClassOf(efo:EFO_0003763 efo:EFO_0000408)
+ 
+ # Class: efo:EFO_0003764 (transient ischemic attack)
+@@ -134041,7 +134041,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003777 "Diseases, Heart"^^
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003777 "HEART DIS"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003777 "Heart Diseases"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003777 "heart disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003777 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000948 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000948))))
++SubClassOf(efo:EFO_0003777 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000948 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000948))))
+ SubClassOf(efo:EFO_0003777 efo:EFO_0000319)
+ 
+ # Class: efo:EFO_0003778 (psoriatic arthritis)
+@@ -134159,7 +134159,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003781 "INTERNAL CAROTID A
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003781 "Internal Carotid Artery Diseases"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003781 "disorder of carotid artery (disorder)"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003781 "carotid artery disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003781 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0005396))
++SubClassOf(efo:EFO_0003781 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0005396))
+ 
+ # Class: efo:EFO_0003782 (motor neuron disease)
+ 
+@@ -134200,7 +134200,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003782 "Secondary Motor Ne
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003782 "UPPER MOTOR NEURON DIS"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003782 "Upper Motor Neuron Disease"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003782 "motor neuron disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003782 ObjectSomeValuesFrom(efo:EFO_0000784 obo:CL_0000100))
++SubClassOf(efo:EFO_0003782 ObjectSomeValuesFrom(efo:EFO_0000784 obo:CL_0000100))
+ SubClassOf(efo:EFO_0003782 efo:EFO_0000618)
+ SubClassOf(efo:EFO_0003782 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:HP_0002180))))
+ 
+@@ -134282,7 +134282,7 @@ SubClassOf(efo:EFO_0003785 ObjectSomeValuesFrom(obo:RO_0000056 obo:GO_0002524))
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0003786 "NCIt:C20464"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0003786 "SNOMEDCT:75777003"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003786 "cytokine"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003786 ObjectSomeValuesFrom(obo2:has_role efo:EFO_0003787))
++SubClassOf(efo:EFO_0003786 ObjectSomeValuesFrom(obo2:has_role efo:EFO_0003787))
+ SubClassOf(efo:EFO_0003786 obo:CHEBI_36080)
+ 
+ # Class: efo:EFO_0003787 (cytokine role)
+@@ -134317,7 +134317,7 @@ SubClassOf(efo:EFO_0003790 obo:OBI_0000272)
+ # Class: efo:EFO_0003791 (interleukin (Homo sapiens))
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0003791 "interleukin (Homo sapiens)"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003791 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCBITaxon_9606))
++SubClassOf(efo:EFO_0003791 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCBITaxon_9606))
+ SubClassOf(efo:EFO_0003791 efo:EFO_0004100)
+ SubClassOf(efo:EFO_0003791 ObjectSomeValuesFrom(obo2:has_role efo:EFO_0003787))
+ 
+@@ -134325,7 +134325,7 @@ SubClassOf(efo:EFO_0003791 ObjectSomeValuesFrom(obo2:has_role efo:EFO_0003787))
+ 
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0003792 "Helen Parkinson"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003792 "interleukin (Mus musculus)"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003792 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCBITaxon_10090))
++SubClassOf(efo:EFO_0003792 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCBITaxon_10090))
+ SubClassOf(efo:EFO_0003792 efo:EFO_0004100)
+ SubClassOf(efo:EFO_0003792 ObjectSomeValuesFrom(obo2:has_role efo:EFO_0003787))
+ 
+@@ -134333,7 +134333,7 @@ SubClassOf(efo:EFO_0003792 ObjectSomeValuesFrom(obo2:has_role efo:EFO_0003787))
+ 
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0003793 "Helen Parkinson"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003793 "interleukin (Rattus norvegicus)"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003793 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCBITaxon_10116))
++SubClassOf(efo:EFO_0003793 ObjectSomeValuesFrom(obo:RO_0001000 obo:NCBITaxon_10116))
+ SubClassOf(efo:EFO_0003793 efo:EFO_0004100)
+ SubClassOf(efo:EFO_0003793 ObjectSomeValuesFrom(obo2:has_role efo:EFO_0003787))
+ 
+@@ -134586,7 +134586,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003818 "PULM DIS"^^xsd:str
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003818 "Pulmonary Disease"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003818 "Pulmonary Diseases"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003818 "lung disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003818 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002048 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002048) ObjectSomeValuesFrom(obo:RO_0001025 obo:UBERON_0002048))))
++SubClassOf(efo:EFO_0003818 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002048 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002048) ObjectSomeValuesFrom(obo:RO_0001025 obo:UBERON_0002048))))
+ SubClassOf(efo:EFO_0003818 efo:EFO_0000684)
+ 
+ # Class: efo:EFO_0003819 (dental caries)
+@@ -134993,7 +134993,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003832 "Gallbladder Diseas
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003832 "Gallbladder Diseases"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003832 "gall bladder disease"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003832 "gallbladder disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003832 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002110 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002110))))
++SubClassOf(efo:EFO_0003832 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002110 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002110))))
+ SubClassOf(efo:EFO_0003832 efo:EFO_0000405)
+ 
+ # Class: efo:EFO_0003833 (brain neoplasm)
+@@ -135132,7 +135132,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0003839 "OMIM:162080"^^xsd:string
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0003839 "SNOMEDCT:399625000"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003839 "retinal disease"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003839 "retinopathy"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003839 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000966))
++SubClassOf(efo:EFO_0003839 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000966))
+ SubClassOf(efo:EFO_0003839 efo:EFO_0003966)
+ 
+ # Class: efo:EFO_0003840 (chronic progressive multiple sclerosis)
+@@ -135569,7 +135569,7 @@ SubClassOf(efo:EFO_0003857 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_00009
+ # Class: efo:EFO_0003858 (skeleton structure)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0003858 "skeleton structure"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003858 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001434))
++SubClassOf(efo:EFO_0003858 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001434))
+ SubClassOf(efo:EFO_0003858 obo:UBERON_0000061)
+ 
+ # Class: efo:EFO_0003859 (uterine neoplasm)
+@@ -135621,7 +135621,7 @@ EquivalentClasses(efo:EFO_0003860 ObjectIntersectionOf(efo:EFO_0000616 ObjectSom
+ # Class: efo:EFO_0003861 (pancreactic component)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0003861 "pancreactic component"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003861 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001264))
++SubClassOf(efo:EFO_0003861 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001264))
+ SubClassOf(efo:EFO_0003861 obo:UBERON_0000061)
+ 
+ # Class: efo:EFO_0003862 (obsolete_dementia)
+@@ -136581,7 +136581,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003900 "Immotile Cilia Syn
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003900 "Syndrome, Immotile Cilia"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003900 "Syndromes, Immotile Cilia"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003900 "ciliopathy"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003900 ObjectSomeValuesFrom(efo:EFO_0000784 obo:GO_0005929))
++SubClassOf(efo:EFO_0003900 ObjectSomeValuesFrom(efo:EFO_0000784 obo:GO_0005929))
+ SubClassOf(efo:EFO_0003900 efo:EFO_0000508)
+ 
+ # Class: efo:EFO_0003901 (dysuria)
+@@ -137820,7 +137820,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0003966 "UMLS:C0015397"^^xsd:stri
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0003966 "Wikipedia:Eye_disease"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0003966 "eye disorder"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0003966 "eye disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0003966 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000970 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000970))))
++SubClassOf(efo:EFO_0003966 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000970 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000970))))
+ SubClassOf(efo:EFO_0003966 efo:EFO_0000408)
+ SubClassOf(efo:EFO_0003966 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000970 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000970))))
+ 
+@@ -137928,7 +137928,7 @@ SubClassOf(efo:EFO_0004004 ObjectSomeValuesFrom(obo:RO_0000086 efo:EFO_0004429))
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0004005 "An inbred strain carrying one or more phenotypic mutations. For example, the mutant strain C3H/H3eSn-bc3J/J carries the bouncy 3 Jackson phenotypic mutation."^^xsd:string)
+ AnnotationAssertion(efo:definition_citation efo:EFO_0004005 "http://www.findmice.org/glossary.jsp"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0004005 "inbred Mus musculus strain"^^xsd:string)
+-EquivalentClasses(efo:EFO_0004005 ObjectSomeValuesFrom(obo:RO_0000086 efo:EFO_0004429))
++SubClassOf(efo:EFO_0004005 ObjectSomeValuesFrom(obo:RO_0000086 efo:EFO_0004429))
+ SubClassOf(efo:EFO_0004005 efo:EFO_0004000)
+ 
+ # Class: efo:EFO_0004006 (mutant strain)
+@@ -140687,7 +140687,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0004260 "ICD10:M84"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0004260 "ICD10:M89"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0004260 "ICD10:M90"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0004260 "bone disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0004260 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001474))
++SubClassOf(efo:EFO_0004260 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001474))
+ SubClassOf(efo:EFO_0004260 efo:EFO_0002461)
+ SubClassOf(efo:EFO_0004260 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001474))
+ 
+@@ -145105,7 +145105,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0004727 "Any intermediate or product
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0004727 "Helen Parkinson"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0004727 "NCIt:C61154"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0004727 "metabolite"^^xsd:string)
+-EquivalentClasses(efo:EFO_0004727 ObjectSomeValuesFrom(obo2:has_role obo:CHEBI_25212))
++SubClassOf(efo:EFO_0004727 ObjectSomeValuesFrom(obo2:has_role obo:CHEBI_25212))
+ SubClassOf(efo:EFO_0004727 obo:CHEBI_24431)
+ 
+ # Class: efo:EFO_0004728 (serum amyloid A protein measurement)
+@@ -149282,7 +149282,7 @@ EquivalentClasses(efo:EFO_0005215 ObjectIntersectionOf(obo:CL_0000010 ObjectSome
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005216 "A cell line used as model for hepatocellular carcinoma."^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005216 "hepatoma cell line"^^xsd:string)
+ EquivalentClasses(efo:EFO_0005216 ObjectIntersectionOf(obo:CL_0000010 ObjectSomeValuesFrom(obo:RO_0000053 efo:EFO_0000182)))
+-EquivalentClasses(efo:EFO_0005216 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000182 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002107 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005216 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000182 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002107 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005216 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005217 (cervical adenocarcinoma cell line)
+@@ -152539,7 +152539,7 @@ SubClassOf(efo:EFO_0005595 efo:EFO_0000618)
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005596 "An inherited metabolic disorder resulting from a deficiency in vitamin or vitamin cofactor transport or metabolism."^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005596 "DOID:0050718"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005596 "vitamin metabolic disorder"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005596 ObjectSomeValuesFrom(obo:RO_0000056 ObjectIntersectionOf(obo:GO_0006766 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460))))
++SubClassOf(efo:EFO_0005596 ObjectSomeValuesFrom(<http://www.obofoundry.org/ro/ro.owl#participates_in> ObjectIntersectionOf(obo:GO_0006766 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460))))
+ SubClassOf(efo:EFO_0005596 efo:EFO_0000589)
+ SubClassOf(efo:EFO_0005596 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0008152))))
+ 
+@@ -154310,8 +154310,8 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005728 "BTO:0002022"^^xsd:string
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005728 "Wikipedia:Bronchiole"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005728 "small airway epithelial cell derived cell line"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005728 "bronchial epithelial cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005728 ObjectSomeValuesFrom(obo:RO_0001000 obo:UBERON_0002031))
+-EquivalentClasses(efo:EFO_0005728 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0002368 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005728 ObjectSomeValuesFrom(obo:RO_0001000 obo:UBERON_0002031))
++SubClassOf(efo:EFO_0005728 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0002368 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005728 efo:EFO_0001641)
+ 
+ # Class: efo:EFO_0005730 (endothelial cell derived cell line)
+@@ -154322,7 +154322,7 @@ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0005730 "Sirarat Sarntivijai"^^xsd:s
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005730 "BTO:0001519"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005730 "CLO:0000091"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005730 "endothelial cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005730 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000115 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005730 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000115 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005730 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005731 (cardiac myocyte cell derived cell line)
+@@ -154334,8 +154334,8 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005731 "BTO:0003265"^^xsd:string
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005731 "cardiac muscle cell line"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005731 "heart muscle cell line"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005731 "cardiac myocyte cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005731 ObjectSomeValuesFrom(obo:RO_0001000 efo:EFO_0001955))
+-EquivalentClasses(efo:EFO_0005731 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000746 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005731 ObjectSomeValuesFrom(obo:RO_0001000 efo:EFO_0001955))
++SubClassOf(efo:EFO_0005731 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000746 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005731 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005734 (muscle cell derived cell line)
+@@ -154344,7 +154344,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005734 "This cell line refers to a
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0005734 "Sirarat Sarntivijai"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005734 "CLO:0000076"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005734 "muscle cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005734 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000187 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005734 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000187 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005734 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005735 (smooth muscle cell derived cell line)
+@@ -154354,7 +154354,7 @@ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0005735 "Sirarat Sarntivijai"^^xsd:s
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005735 "BTO:0004576"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005735 "CLO:0000078"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005735 "smooth muscle cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005735 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000192 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005735 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000192 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005735 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005736 (bronchial smooth muscle cell derived cell line)
+@@ -154363,7 +154363,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005736 "A cell line that derives fr
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0005736 "Sirarat Sarntivijai"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005736 "BTO:0004402"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005736 "bronchial smooth muscle cell derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005736 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0002598 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005736 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0002598 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005736 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005738 (ESC derived cell line)
+@@ -154382,7 +154382,7 @@ Hum. Reprod. Update (March/April 2007) 13 (2): 103-120. doi: 10.1093/humupd/dml0
+ 
+ http://humupd.oxfordjournals.org/content/13/2/103.full"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005738 "ESC derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005738 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0002322 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005738 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0002322 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005738 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005739 (obsolete_induced pluripotent stem cell)
+@@ -154405,7 +154405,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005740 "iPSC derived cell line is a
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0005740 "Sirarat Sarntivijai"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005740 "induced pluripotent stem cell derived cell line"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005740 "iPSC derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005740 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0004905 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005740 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0004905 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005740 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005741 (infectious disease)
+@@ -154428,7 +154428,7 @@ SubClassOf(efo:EFO_0005741 efo:EFO_0000408)
+ # Class: efo:EFO_0005742 (lung fibroblast derived cell line)
+ 
+ AnnotationAssertion(rdfs:label efo:EFO_0005742 "lung fibroblast derived cell line"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005742 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0002553 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(obo:UBERON_0002048 efo:EFO_0000399) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
++SubClassOf(efo:EFO_0005742 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0002553 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(obo:UBERON_0002048 efo:EFO_0000399) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
+ SubClassOf(efo:EFO_0005742 obo:CL_0000010)
+ 
+ # Class: efo:EFO_0005743 (CME-W1-Cl.8+)
+@@ -154512,7 +154512,7 @@ SubClassOf(efo:EFO_0005751 efo:EFO_0003966)
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005752 "an inflammation in the eye(s)"^^xsd:string)
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0005752 "Sirarat Sarntivijai"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005752 "eye inflammation"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005752 ObjectSomeValuesFrom(obo:BFO_0000066 obo:UBERON_0000970))
++SubClassOf(efo:EFO_0005752 ObjectSomeValuesFrom(obo:BFO_0000066 obo:UBERON_0000970))
+ SubClassOf(efo:EFO_0005752 obo:MP_0001845)
+ 
+ # Class: efo:EFO_0005753 (ocular vascular disease)
+@@ -154523,7 +154523,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005753 "NCIt:C35664"^^xsd:string
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005753 "disorder of the ocular vasculature"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005753 "ocular vascular disorder"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005753 "ocular vascular disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005753 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0002203))
++SubClassOf(efo:EFO_0005753 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0002203))
+ SubClassOf(efo:EFO_0005753 efo:EFO_0000408)
+ SubClassOf(efo:EFO_0005753 efo:EFO_0003966)
+ 
+@@ -154533,7 +154533,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005754 "a disease that occurs in th
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0005754 "Sirarat Sarntivijai"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005754 "parathyroid disorder"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005754 "parathyroid disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005754 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001132))
++SubClassOf(efo:EFO_0005754 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001132))
+ SubClassOf(efo:EFO_0005754 efo:EFO_0000408)
+ SubClassOf(efo:EFO_0005754 ObjectSomeValuesFrom(obo:RO_0000056 obo:GO_0055074))
+ 
+@@ -154548,7 +154548,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005755 "Wikipedia:Rheumatism"^^x
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005755 "rheumatic disorder"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005755 "rheumatism"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005755 "rheumatic disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005755 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000982 obo:UBERON_0002384)))
++SubClassOf(efo:EFO_0005755 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000982 obo:UBERON_0002384)))
+ SubClassOf(efo:EFO_0005755 efo:EFO_0002461)
+ 
+ # Class: efo:EFO_0005756 (skin wound)
+@@ -154575,7 +154575,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005757 "NCIt:C26911"^^xsd:string
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005757 "SNOMEDCT:30800001"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005757 "vaginitis"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005757 "vaginal inflammation"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005757 ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000996))
++SubClassOf(efo:EFO_0005757 ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000996))
+ SubClassOf(efo:EFO_0005757 obo:MP_0001845)
+ 
+ # Class: efo:EFO_0005758 (cycloplegia)
+@@ -154708,8 +154708,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005769 "calcium metabolism
+ AnnotationAssertion(rdfs:comment efo:EFO_0005769 "Consider relocating this as a sibling of metabolic disease. "^^xsd:string)
+ AnnotationAssertion(rdfs:comment efo:EFO_0005769 "Defined in terms of GO calcium ion homeostatis. Also consistent with HPO. Note advice from GO as calcium ions are neither created or destroyed is not metabolic process in terms of go, but name retained for purposes of consistency with e.g. Snomed and Mesh"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005769 "calcium metabolic disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005769 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0055074))))
+-EquivalentClasses(efo:EFO_0005769 ObjectSomeValuesFrom(obo:RO_0000056 obo:GO_0055074))
++SubClassOf(efo:EFO_0005769 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0055074))))
++SubClassOf(efo:EFO_0005769 ObjectSomeValuesFrom(<http://www.obofoundry.org/ro/ro.owl#participates_in> obo:GO_0055074))
+ SubClassOf(efo:EFO_0005769 efo:EFO_0009556)
+ SubClassOf(efo:EFO_0005769 ObjectSomeValuesFrom(obo:RO_0000056 obo:GO_0008152))
+ 
+@@ -154724,7 +154724,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005771 "Ovarian Disorder"^
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005771 "disease ovarian"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005771 "ovarian disease"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005771 "ovarian disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005771 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000992 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000992))))
++SubClassOf(efo:EFO_0005771 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000992 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000992))))
+ SubClassOf(efo:EFO_0005771 efo:EFO_0009549)
+ 
+ # Class: efo:EFO_0005772 (neurodegenerative disease)
+@@ -154742,7 +154742,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005772 "Neurodegenerative
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005772 "central nervous system degenerative disorder"^^xsd:string)
+ AnnotationAssertion(rdfs:comment efo:EFO_0005772 "Note this is a more general definition than the DO, which defines in terms of neuronal death."^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005772 "neurodegenerative disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005772 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:HP_0002180))))
++SubClassOf(efo:EFO_0005772 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:HP_0002180))))
+ SubClassOf(efo:EFO_0005772 efo:EFO_0009386)
+ 
+ # Class: efo:EFO_0005773 (retinal detachment)
+@@ -154779,7 +154779,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005775 "An artery disease that is c
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0005775 "Catherine Leroy"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005775 "DOID:520"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005775 "aortic disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005775 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000947))
++SubClassOf(efo:EFO_0005775 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000947))
+ 
+ # Class: efo:EFO_0005782 (age-related hearing impairment)
+ 
+@@ -154889,7 +154889,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005802 "Cartilage Diseases
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005802 "Cartilage disorder"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005802 "Chondropathy (disorder)"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005802 "cartilage disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005802 ObjectSomeValuesFrom(efo:EFO_0000784 efo:EFO_0000949))
++SubClassOf(efo:EFO_0005802 ObjectSomeValuesFrom(efo:EFO_0000784 efo:EFO_0000949))
+ SubClassOf(efo:EFO_0005802 efo:EFO_0002461)
+ 
+ # Class: efo:EFO_0005803 (hematologic disease)
+@@ -154920,7 +154920,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005804 "MeSH:D011086"^^xsd:strin
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005804 "NCIt:C26863"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0005804 "Erythrocythemia"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005804 "polycythemia"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005804 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:PATO_0002002 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460) ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0001869) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000232))))
++SubClassOf(efo:EFO_0005804 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:PATO_0002002 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460) ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0001869) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000232))))
+ SubClassOf(efo:EFO_0005804 efo:EFO_0005803)
+ SubClassOf(efo:EFO_0005804 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002390 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002390))))
+ 
+@@ -154938,7 +154938,7 @@ SubClassOf(efo:EFO_0005805 efo:EFO_0005804)
+ 
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0005809 "Type II hypersenstivity disease is an immune system disease in which an abnormal inflammatory response results in disease."^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005809 "type II hypersensitivity reaction disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005809 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0002445))))
++SubClassOf(efo:EFO_0005809 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0002445))))
+ SubClassOf(efo:EFO_0005809 efo:EFO_0000540)
+ SubClassOf(efo:EFO_0005809 efo:EFO_1002003)
+ 
+@@ -154950,7 +154950,7 @@ AnnotationAssertion(efo:definition_citation efo:EFO_0005815 "DOID_680"^^xsd:stri
+ AnnotationAssertion(efo:definition_citation efo:EFO_0005815 "http://europepmc.org/abstract/MED/25495175"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005815 "DOID:680"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005815 "tauopathy"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005815 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 efo:EFO_0005816))))
++SubClassOf(efo:EFO_0005815 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 efo:EFO_0005816))))
+ SubClassOf(efo:EFO_0005815 efo:EFO_0005772)
+ 
+ # Class: efo:EFO_0005816 (microtubule-associated protein tau)
+@@ -155775,7 +155775,7 @@ AnnotationAssertion(owl:deprecated efo:EFO_0005896 "true"^^xsd:boolean)
+ 
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0005900 "SNOMEDCT:28539009"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0005900 "auxin"^^xsd:string)
+-EquivalentClasses(efo:EFO_0005900 ObjectSomeValuesFrom(obo2:has_role obo:CHEBI_22676))
++SubClassOf(efo:EFO_0005900 ObjectSomeValuesFrom(obo2:has_role obo:CHEBI_22676))
+ SubClassOf(efo:EFO_0005900 obo:CHEBI_24431)
+ 
+ # Class: efo:EFO_0005901 (ELF-1)
+@@ -167680,7 +167680,7 @@ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0007352 "Sirarat Sarntivijai"^^xsd:s
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0007352 "ICD10:I89"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0007352 "ICD10:J35"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0007352 "lymphatic system disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0007352 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0006558 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0006558))))
++SubClassOf(efo:EFO_0007352 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0006558 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0006558))))
+ SubClassOf(efo:EFO_0007352 efo:EFO_0000408)
+ 
+ # Class: efo:EFO_0007353 (lymphogranuloma venereum)
+@@ -168870,7 +168870,7 @@ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0007441 "a disease located in the pl
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0007441 "Sirarat Sarntivijai"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0007441 "MeSH:NoID"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0007441 "placenta disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0007441 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0001987 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001987))))
++SubClassOf(efo:EFO_0007441 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0001987 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001987))))
+ SubClassOf(efo:EFO_0007441 efo:EFO_0000408)
+ 
+ # Class: efo:EFO_0007442 (placenta praevia)
+@@ -183660,7 +183660,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0009002 "diseases of spleen
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0009002 "spleen disease"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0009002 "spleen diseases"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0009002 "splenic disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0009002 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002106 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002106))))
++SubClassOf(efo:EFO_0009002 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002106 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002106))))
+ SubClassOf(efo:EFO_0009002 efo:EFO_0007352)
+ 
+ # Class: efo:EFO_0009003 (ovarian dysfunction)
+@@ -187688,7 +187688,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0009386 "MONDO:0002602"^^xsd:stri
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0009386 "NCIt:C2934"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0009386 "central nervous system disorder"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0009386 "central nervous system disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0009386 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0001017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001017))))
++SubClassOf(efo:EFO_0009386 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0001017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001017))))
+ SubClassOf(efo:EFO_0009386 efo:EFO_0000618)
+ 
+ # Class: efo:EFO_0009387 (peripheral nervous system disease)
+@@ -187699,7 +187699,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_0009387 "MONDO:0003620"^^xsd:stri
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0009387 "peripheral nerve disorder"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_0009387 "peripheral nervous system disorder"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0009387 "peripheral nervous system disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_0009387 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000010 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000010))))
++SubClassOf(efo:EFO_0009387 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000010 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000010))))
+ SubClassOf(efo:EFO_0009387 efo:EFO_0000618)
+ 
+ # Class: efo:EFO_0009388 (sum of basophil and neutrophil counts)
+@@ -193357,7 +193357,7 @@ SubClassOf(efo:EFO_0009965 efo:EFO_0005411)
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0009966 "An assay which uses long read sequencing technology to determine the sequence of nucleic acids"^^xsd:string)
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0009966 "Dani Welter"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0009966 "assay by long read sequencer"^^xsd:string)
+-EquivalentClasses(efo:EFO_0009966 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0009989))
++SubClassOf(efo:EFO_0009966 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0009989))
+ SubClassOf(efo:EFO_0009966 efo:EFO_0002773)
+ 
+ # Class: efo:EFO_0009967 (ligation-mediated chromosome conformation capture assay)
+@@ -194088,7 +194088,7 @@ SubClassOf(efo:EFO_0010046 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersecti
+ AnnotationAssertion(obo:IAO_0000115 efo:EFO_0010047 "An assay which uses the Fluidigm C1 for single-cell RNA-Seq and DNA-Seq library preparation"^^xsd:string)
+ AnnotationAssertion(obo:IAO_0000117 efo:EFO_0010047 "Dani Welter"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_0010047 "assay by Fluidigm C1 microfluidics platform"^^xsd:string)
+-EquivalentClasses(efo:EFO_0010047 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0009990))
++SubClassOf(efo:EFO_0010047 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0009990))
+ SubClassOf(efo:EFO_0010047 efo:EFO_0002773)
+ 
+ # Class: efo:EFO_0010048 (Fluidigm C1-based dissociation)
+@@ -203093,7 +203093,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_1000018 "UMLS:C0005686"^^xsd:stri
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_1000018 "bladder disorder"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_1000018 "urinary bladder disorder"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_1000018 "bladder disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_1000018 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001255))
++SubClassOf(efo:EFO_1000018 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001255))
+ SubClassOf(efo:EFO_1000018 efo:EFO_0000408)
+ 
+ # Class: efo:EFO_1000019 (breast synovial sarcoma)
+@@ -208402,8 +208402,8 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_1000627 "ICD10:E07"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_1000627 "Wikipedia:Thyroid_disease"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_1000627 "Thyroiditis"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_1000627 "thyroid disease"^^xsd:string)
+-EquivalentClasses(efo:EFO_1000627 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0002046))
+-EquivalentClasses(efo:EFO_1000627 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002046)))
++SubClassOf(efo:EFO_1000627 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0002046))
++SubClassOf(efo:EFO_1000627 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002046)))
+ SubClassOf(efo:EFO_1000627 efo:EFO_0000408)
+ 
+ # Class: efo:EFO_1000630 (marginal zone B-cell lymphoma)
+@@ -220202,7 +220202,7 @@ AnnotationAssertion(oboInOwl:hasDbXref efo:EFO_1001766 "SNOMEDCT:389088001"^^xsd
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_1001766 "Hypoxia, Brain"^^xsd:string)
+ AnnotationAssertion(oboInOwl:hasExactSynonym efo:EFO_1001766 "hypoxia of brain"^^xsd:string)
+ AnnotationAssertion(rdfs:label efo:EFO_1001766 "brain hypoxia"^^xsd:string)
+-EquivalentClasses(efo:EFO_1001766 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460) ObjectSomeValuesFrom(obo:RO_0002314 obo:UBERON_0000955))))
++SubClassOf(efo:EFO_1001766 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460) ObjectSomeValuesFrom(obo:RO_0002314 obo:UBERON_0000955))))
+ SubClassOf(efo:EFO_1001766 efo:EFO_0009444)
+ 
+ # Class: efo:EFO_1001767 (brain stem neoplasm)
