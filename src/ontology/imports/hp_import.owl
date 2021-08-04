@@ -171,16 +171,28 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000111>is part of</obo:IAO_0000111>
         <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
+        <obo:IAO_0000112>my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
+        <obo:IAO_0000112>my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
+        <obo:IAO_0000112>this day is part of this year (occurrent parthood)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
+        <obo:IAO_0000115>a core relation that holds between a part and its whole</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
+        <obo:IAO_0000116>Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
+        <obo:IAO_0000116>Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
+        <obo:IAO_0000116>Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
+        <obo:IAO_0000116>Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
+
+A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
 
 A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118>part_of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
@@ -196,15 +208,15 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasOBONamespace>protein</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:id>
+        <oboInOwl:id>part_of</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:shorthand>
+        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
         <rdfs:label xml:lang="en">part of</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part of</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</rdfs:label>
+        <rdfs:label>part_of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
         <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
@@ -2899,7 +2911,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Large head circumference</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Macrocrania</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Megacephaly</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000256</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Macrocephaly can be due to hydrocephalus (increased CFSF), megalencephaly (increased brain volume) or thickening of the skull. Head circumference is measured from just above the glabella (the most prominent point on the frontal bone above the root of the nose) to the most posterior prominent point of the occipital bone using a tape measure. Some standard charts are organized by centiles [Hall et al. [2007]], others by standard deviations [Farkas, [1981]]. It is important to add an indication of how far above the normal standard the head circumference is if an accurate assessment of this can be made. Macrocephaly is an absolute term. The term relative macrocephaly can be used when the head size centile exceeds the centile for height, for example, head size at the 75th centile with height at the 5th centile for age and sex.</rdfs:comment>
@@ -7016,7 +7027,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym>Loxia</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spasmodic torticollis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Wry neck</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000473</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The word torticollis comes from Latin words meaning twisted neck. Spasmodic torticollis is a focal dystonia that affects the neck and sometimes the shoulders, leading to involuntary contractions of the neck muscles, abnormal movements and postures of the head and neck. The abnormal movements can have both tonic and clonic components and can results in pain and discomfort. Spasmodic torticollis is the most common focal dystonia.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torticollis</rdfs:label>
@@ -9577,6 +9587,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0000733 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000733">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011442"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A stereotypy is a repetitive, simple movement that can be voluntarily suppressed. Stereotypies are typically simple back-and-forth movements such as waving of flapping the hands or arms, and they do not involve complex sequences or movement fragments. Movement is often but not always rhythmic and may involve fingers, wrists, or more proximal portions of the upper extremity. The lower extremity is not typically involved. Stereotypies are more commonly bilateral than unilateral.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008758</oboInOwl:hasAlternativeId>
@@ -12222,7 +12233,7 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001103</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
-        <rdfs:comment>The term macula derives from the presence of the xanthophyll pigments, lutein and zeaxanthin, in a region five to six millimetres in diameter at the posterior pole of  the  eye,  appearing  as  a  yellow  spot (macula  lutea),  when  viewed  in  red-free light.</rdfs:comment>
+        <rdfs:comment>The term macula derives from the presence of the xanthophyll pigments, lutein and zeaxanthin, in a region five to six millimetres in diameter at the posterior pole of the eye, appearing as a yellow spot (macula lutea), when viewed in red-free light.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal macular morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14049,6 +14060,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0001336 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001336">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011442"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Very brief, involuntary random muscular contractions occurring at rest, in response to sensory stimuli, or accompanying voluntary movements.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002535</oboInOwl:hasAlternativeId>
@@ -14084,6 +14096,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0001337 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001337">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011442"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An unintentional, oscillating to-and-fro muscle movement about a joint axis.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001295</oboInOwl:hasAlternativeId>
@@ -15756,7 +15769,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0027339</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0853087</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the nail</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nail disease</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001597</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the fingernails and/or toenails.</rdfs:comment>
@@ -16301,7 +16313,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0011813</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Heart tip and four chambers point towards right side of body</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thoracic situs inversus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001651</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dextrocardia</rdfs:label>
     </owl:Class>
@@ -20302,7 +20313,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0002094 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002094">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002086"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002793"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Difficult or labored breathing. Dyspnea is a subjective feeling only the patient can rate, e.g., on a Borg scale.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D004417</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:230145002</oboInOwl:hasDbXref>
@@ -21026,7 +21037,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym>Atypical nail growth</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dysplastic nails</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onychodysplasia</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002164</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nail dysplasia</rdfs:label>
     </owl:Class>
@@ -21055,7 +21065,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:110987009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0406438</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Nail pterygium</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002165</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pterygium of nails</rdfs:label>
     </owl:Class>
@@ -21169,6 +21178,7 @@ applied inaccurately.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002169">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011442"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A series of rhythmic and involuntary muscle contractions (at a frequency of about 5 to 7 Hz) that occur in response to an abruptly applied and sustained stretch.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:36649002</oboInOwl:hasDbXref>
@@ -26488,8 +26498,8 @@ applied inaccurately.</rdfs:comment>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intrapelvic bulging of the medial acetabular wall.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:59606006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0409495</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormally indented hip sockets</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protrusio acetabulae</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003179</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protrusion of the acetabulum, which is the socket that together with the head of the femur forms the hip joint. The protrusion is the result of increased depth of the socket and results in medial displacement of the femoral head.</rdfs:comment>
@@ -26500,6 +26510,12 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intrapelvic bulging of the medial acetabular wall.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003179"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormally indented hip sockets</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -27411,7 +27427,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0522224</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Inability to move</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paralysis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003470</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paralysis</rdfs:label>
     </owl:Class>
@@ -28195,7 +28210,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0595939</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stillbirth</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stillborn</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fetal death</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foetal death</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003826</oboInOwl:id>
@@ -33164,7 +33178,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasAlternativeId>HP:0007698</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0008017</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1840457</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007722</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retinal pigment epithelial atrophy</rdfs:label>
     </owl:Class>
@@ -33833,9 +33846,8 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-04-04T11:43:00Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4024688</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormal large bone of ankle</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008365</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the talus</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal talus morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0008365"/>
@@ -33864,7 +33876,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym>Absent/small nails</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Absent/underdeveloped nails</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nail aplasia/hypoplasia</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008386</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aplasia/Hypoplasia of the nails</rdfs:label>
     </owl:Class>
@@ -33900,7 +33911,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C3839753</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the toenail</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the toenails</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008388</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal toenail morphology</rdfs:label>
     </owl:Class>
@@ -33939,7 +33949,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dystrophic nails</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onychodystrophy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Poor nail formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008404</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onychodystrophy is a widely used, yet rarely defined term. Onychodystrophy can be caused by congenital nail diseases, systemic disorders, fungal and nonfungal infections, various noninfectious inflammatory dermatologic diseases of the nail unit and tumors. Onychodystrophy can also occur secondarily to systemic drug use.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nail dystrophy</rdfs:label>
@@ -34737,7 +34746,8 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foot drop</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foot extensor weakness</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Footdrop</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym>Inability to heel walk</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Inability to walk on heels</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0009027</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorsiflexion of the foot extends the foot superiorly, as if taking the foot off the gas pedal.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foot dorsiflexor weakness</rdfs:label>
@@ -34752,6 +34762,18 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009027"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foot drop</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009027"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Inability to heel walk</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0009027"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Inability to walk on heels</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -43052,7 +43074,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0025095 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025095">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002086"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025142"/>
         <obo:IAO_0000115>A sudden violent, spasmodic, audible expiration of breath through the nose and mouth.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-24T01:36:17Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:created_by>
@@ -43088,7 +43110,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <obo:IAO_0000115>A symptom or manifestation indicating a systemic or general effect of a disease and that may affect the general well-being or status of an individual.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-29T11:02:54Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:created_by>
-        <rdfs:comment>Note that we use the preferred term label constitutional symptom because this reflects common usage, but we do not restrict the term or its descendents to the narrow meaning of symptom, i.e., a complaint related by a patient to a physician. There is no generally accepted classification of what defines a constitutional symptom, but examples  include weight loss, fatigue, general weakness, night sweats, shaking, chills, fever, and vomiting.</rdfs:comment>
+        <rdfs:comment>Note that we use the preferred term label constitutional symptom because this reflects common usage, but we do not restrict the term or its descendents to the narrow meaning of symptom, i.e., a complaint related by a patient to a physician. There is no generally accepted classification of what defines a constitutional symptom, but examples include weight loss, fatigue, general weakness, night sweats, shaking, chills, fever, and vomiting.</rdfs:comment>
         <rdfs:label xml:lang="en">Constitutional symptom</rdfs:label>
     </owl:Class>
     
@@ -43143,7 +43165,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025267">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002086"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002793"/>
         <obo:IAO_0000115>Deep, noisy breathing during sleep accompanied by hoarse or harsh sounds caused by the vibration of respiratory structures (especially the soft palate) resulting in sound due to obstructed air movement during breathing while sleeping.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-18T13:24:58Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:created_by>
@@ -45150,6 +45172,7 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0100033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011442"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repeated, individually recognizable, intermittent movements or movement fragments that are almost always briefly suppresable and are usually associated with awareness of an urge to perform the movement.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doelkens</oboInOwl:created_by>
