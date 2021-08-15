@@ -68,7 +68,7 @@ $(TERMLIST): $(O1) $(SPARQL)
 	$(ROBOT) query -i $(O1) --query $(SPARQL) $@
 	sed -i 's/[<>]//g' $@
 
-reclassified.owl: $(O2) $(MAP) $(TERMLIST)
+tmp/reclassified.owl: $(O2) $(MAP) $(TERMLIST)
 	$(ROBOT) merge -i $(O2) \
 		rename --mappings $(MAP) --allow-missing-entities true \
 		filter -T $(TERMLIST) --select "self annotations" -o $@
@@ -76,16 +76,15 @@ reclassified.owl: $(O2) $(MAP) $(TERMLIST)
 $(UNMAPPED_TERMS_FILTERED): $(O1) $(UNMAPPED)
 	$(ROBOT) filter -i $< -T $(UNMAPPED) --trim false -o $@
 
-reclassify.owl: $(O1) reclassified.owl $(UNMAPPED_TERMS_FILTERED) $(TERMLIST)
+tmp/reclassify.owl: $(O1) tmp/reclassified.owl $(UNMAPPED_TERMS_FILTERED) $(TERMLIST)
 	$(ROBOT) remove -i $(O1) -T $(TERMLIST) \
-		merge -i reclassified.owl -i $(UNMAPPED_TERMS_FILTERED) --collapse-import-closure false -o $@
+		merge -i tmp/reclassified.owl -i $(UNMAPPED_TERMS_FILTERED) --collapse-import-closure false -o $@
 
-diff.txt: $(O1) reclassify.owl
-	$(ROBOT) diff --left $(O1) --right reclassify.owl -o $@
+tmp/diff.txt: $(O1) tmp/reclassify.owl
+	$(ROBOT) diff --left $(O1) --right tmp/reclassify.owl -o $@
 
 mv_efo:
-	$(ROBOT) convert -i reclassify.owl -f ofn -o efo-edit.owl
-
+	$(ROBOT) convert -i tmp/reclassify.owl -f ofn -o efo-edit.owl
 
 sed:
 	sed -i 's/obo1:/obo2:/g' efo-edit.owl
