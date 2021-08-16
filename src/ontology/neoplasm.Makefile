@@ -61,15 +61,13 @@ $(TERMLIST): $(O1) $(SPARQL_TERMLIST)
 tmp/original_labels.ttl: $(O1) $(SPARQL_LABELS)
 	$(ROBOT) query -i $(O1) --query $(SPARQL_LABELS) $@
 
+# filter trim true will omit axioms in the neoplasm branch that mention entities
+# outside the neoplasm branch, in particular A sub R some C (where R, or C, are not in the neoplasm branch)
 tmp/reclassified.owl: $(O2) $(MAP) $(TERMLIST)
 	$(ROBOT) merge -i $(O2) \
 		query --update sparql/mondo-labels-to-synonym.ru \
 		rename --mappings $(MAP) --allow-missing-entities true \
 		filter -T $(TERMLIST) --select "self annotations" -o $@
-
-rewrite:
-	$(ROBOT) merge -i $(O2) \
-		query --update sparql/mondo-labels-to-synonym.ru -o tmp/rewrite.owl
 
 $(UNMAPPED_TERMS_FILTERED): $(O1) $(UNMAPPED)
 	$(ROBOT) filter -i $< -T $(UNMAPPED) --trim false -o $@
