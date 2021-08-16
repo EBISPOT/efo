@@ -23,7 +23,7 @@ tmp/ metadata/:
 	mkdir -p $@
 
 tmp/efo_mondo.tsv: | tmp/
-	if [ $(MIR) = true ]; then wget "$(MAPPING_AUGMENTED_EFO_MONDO)" -O $@.tmp \
+	if [ $(MIR) = true ]; then wget "$(MAPPING_AUGMENTED_EFO_MONDO)" -O $@.tmp &&\
 	cut -f 1,2 $@.tmp > $@ && rm $@.tmp; fi
 
 #	sed -i '1s/^/o1\to2\n/' $@.tmp
@@ -37,8 +37,9 @@ tmp/unmapped.tsv: | tmp/
 $(O1):
 	cp efo-edit.owl $@
 
+MON=false
 tmp/mondo.owl:
-	if [ $(MIR) = true ]; then wget $(MONDO) -O $@; fi
+	if [ $(MON) = true ]; then wget $(MONDO) -O $@; fi
 
 download_all: tmp/mondo_efo.tsv tmp/efo_mondo.tsv $(O1) tmp/mondo.owl tmp/ncit.owl
 
