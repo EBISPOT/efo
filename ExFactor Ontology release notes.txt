@@ -11,17 +11,17 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.34.0
+Experimental Factor Ontology version 3.35.0
 Date Released: 15th September 2021
-Class Count: 28641
+Class Count: 28705
 
 Summary: 
 
-EFO 3.34.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog. Work is also continuing on improving our measurements branch.
+EFO 3.35.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog. Work is also continuing on improving our measurements branch.
 
-Number of classes changed: 206
-Number of classes added: 36
-Number of classes deleted: 7
+Number of classes changed: 77
+Number of classes added: 65
+Number of classes deleted: 1
 
 ----------------------------------
 1.	Changes to URIs
@@ -37,1140 +37,676 @@ Number of classes deleted: 7
 
 @Classes new to this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100255
-Label(s): adenosine kinase deficiency 
-+ 'adenosine kinase deficiency' SubClassOf 'Cerebral organic aciduria'
-+ 'adenosine kinase deficiency' SubClassOf 'Neurometabolic disease'
-+ 'adenosine kinase deficiency' SubClassOf 'disorder of methionine catabolism'
-+ 'adenosine kinase deficiency' SubClassOf 'Autosomal recessive non-syndromic intellectual disability'
+Class: http://purl.obolibrary.org/obo/MONDO_0045003
+Label(s): scrotal disease 
++ 'scrotal disease' SubClassOf 'disorder by anatomical region'
++ 'scrotal disease' SubClassOf 'male reproductive system disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700086
-Label(s): uniparental disomy 
-+ 'uniparental disomy' SubClassOf 'Chromosomal anomaly'
+Class: http://purl.obolibrary.org/obo/MONDO_0000661
+Label(s): alexithymia 
++ 'alexithymia' SubClassOf 'agnosia'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700085
-Label(s): pentasomy 
-+ 'pentasomy' SubClassOf 'aneuploidy'
+Class: http://purl.obolibrary.org/obo/MONDO_0043544
+Label(s): nosocomial infection 
++ 'nosocomial infection' SubClassOf 'iatrogenic disease'
++ 'nosocomial infection' EquivalentTo 'iatrogenic disease' and 'infectious disease'
++ 'nosocomial infection' SubClassOf 'infectious disease'
 
-Class: http://purl.obolibrary.org/obo/HP_0004602
-Label(s): Cervical C2/C3 vertebral fusion 
-+ 'Cervical C2/C3 vertebral fusion' SubClassOf 'Abnormality of the vertebral column'
+Class: http://purl.obolibrary.org/obo/MONDO_0000572
+Label(s): recombinase activating gene 1 deficiency 
++ 'recombinase activating gene 1 deficiency' SubClassOf 'Severe combined immunodeficiency'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018582
-Label(s): GCGR-related hyperglucagonemia 
-+ 'GCGR-related hyperglucagonemia' SubClassOf 'has modifier' some 'rare'
-+ 'GCGR-related hyperglucagonemia' SubClassOf 'pancreatic neoplasm'
+Class: http://purl.obolibrary.org/obo/MONDO_0700091
+Label(s): ring chromosome anomaly 
++ 'ring chromosome anomaly' SubClassOf 'Chromosomal anomaly'
 
-Class: http://purl.obolibrary.org/obo/OBI_0000540
-Label(s): isolation of adherent cells 
-+ 'isolation of adherent cells' SubClassOf 'single cell isolation'
+Class: http://purl.obolibrary.org/obo/MONDO_0009855
+Label(s): d-bifunctional protein deficiency 
++ 'd-bifunctional protein deficiency' SubClassOf 'Peroxisomal beta-oxidation disorder'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100352
-Label(s): episodic kinesigenic dyskinesia 1 
-+ 'episodic kinesigenic dyskinesia 1' SubClassOf 'episodic kinesigenic dyskinesia'
+Class: http://purl.obolibrary.org/obo/MONDO_0700000
+Label(s): ALG9-associated autosomal dominant polycystic kidney disease 
++ 'ALG9-associated autosomal dominant polycystic kidney disease' SubClassOf 'Autosomal dominant polycystic kidney disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100348
-Label(s): neurodevelopmental disorder with microcephaly, impaired language, and gait abnormalities 
-+ 'neurodevelopmental disorder with microcephaly, impaired language, and gait abnormalities' SubClassOf 'genetic disorder'
+Class: http://ebi.ac.uk/efo/EFO_0600033
+Label(s): response to mitochondrial complex I inhibitor 
++ 'response to mitochondrial complex I inhibitor' SubClassOf 'response to drug'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0022759
-Label(s): trisomy 22 
-+ 'trisomy 22' SubClassOf 'trisomy'
+Class: http://purl.obolibrary.org/obo/MONDO_0012186
+Label(s): Fanconi anemia complementation group I 
++ 'Fanconi anemia complementation group I' SubClassOf 'Fanconi anemia'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0020003
-Label(s): drug toxicity 
-+ 'drug toxicity' SubClassOf 'biological process'
+Class: http://purl.obolibrary.org/obo/MONDO_0008710
+Label(s): RAB23-related Carpenter syndrome 
++ 'RAB23-related Carpenter syndrome' SubClassOf 'Carpenter syndrome'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030023
-Label(s): processed matrix generation 
-+ 'processed matrix generation' SubClassOf 'data transformation'
+Class: http://purl.obolibrary.org/obo/HP_0000689
+Label(s): Dental malocclusion 
++ 'Dental malocclusion' SubClassOf 'Abnormality of the dentition'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0022180
-Label(s): chromosome 16 trisomy 
-+ 'chromosome 16 trisomy' SubClassOf 'trisomy'
+Class: http://purl.obolibrary.org/obo/HP_0000746
+Label(s): Delusions 
++ 'Delusions' SubClassOf 'Behavioral abnormality'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020526
-Label(s): acute megakaryoblastic leukemia in down syndrome 
-+ 'acute megakaryoblastic leukemia in down syndrome' SubClassOf 'acute megakaryoblastic leukaemia'
+Class: http://purl.obolibrary.org/obo/HP_0040270
+Label(s): Impaired glucose tolerance 
++ 'Impaired glucose tolerance' SubClassOf 'Glucose intolerance'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0022757
-Label(s): chromosome 20 trisomy 
-+ 'chromosome 20 trisomy' SubClassOf 'trisomy'
+Class: http://purl.obolibrary.org/obo/MONDO_0014564
+Label(s): congenital bile acid synthesis defect 5 
++ 'congenital bile acid synthesis defect 5' SubClassOf 'disorder of peroxisomal transporter'
++ 'congenital bile acid synthesis defect 5' SubClassOf 'Congenital bile acid synthesis defect'
++ 'congenital bile acid synthesis defect 5' SubClassOf 'Cerebral organic aciduria'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100294
-Label(s): mitochondrial complex II deficiency, nuclear type 1 
-+ 'mitochondrial complex II deficiency, nuclear type 1' SubClassOf 'mitochondrial complex II deficiency, nuclear type'
-+ 'mitochondrial complex II deficiency, nuclear type 1' SubClassOf 'Isolated oxidative phosphorylation complex disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_0014510
+Label(s): fatty acyl-CoA reductase 1 deficiency 
++ 'fatty acyl-CoA reductase 1 deficiency' SubClassOf 'Neurometabolic disease'
++ 'fatty acyl-CoA reductase 1 deficiency' SubClassOf 'fatty acyl-CoA reductase defects'
++ 'fatty acyl-CoA reductase 1 deficiency' SubClassOf 'Metabolic disease with cataract'
++ 'fatty acyl-CoA reductase 1 deficiency' SubClassOf 'syndromic intellectual disability'
++ 'fatty acyl-CoA reductase 1 deficiency' SubClassOf 'Rare syndromic dyslipidemia'
++ 'fatty acyl-CoA reductase 1 deficiency' SubClassOf 'peroxisomal disease with epilepsy'
 
-Class: http://purl.obolibrary.org/obo/HP_0011147
-Label(s): Typical absence seizure 
-+ 'Typical absence seizure' SubClassOf 'Generalized non-motor (absence) seizure'
+Class: http://www.ebi.ac.uk/efo/EFO_0020006
+Label(s): enterocele 
++ 'enterocele' SubClassOf 'prolapse of female genital organ'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0044202
-Label(s): episodic kinesigenic dyskinesia 
-+ 'episodic kinesigenic dyskinesia' SubClassOf 'Paroxysmal dyskinesia'
+Class: http://ebi.ac.uk/efo/EFO_0600034
+Label(s): response to neuromuscular blocker 
++ 'response to neuromuscular blocker' SubClassOf 'response to drug'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0020005
-Label(s): pheochromocytoma-paraganglioma 
-+ 'pheochromocytoma-paraganglioma' SubClassOf 'adrenal/paraganglial tumor'
+Class: http://purl.obolibrary.org/obo/MONDO_0032795
+Label(s): intellectual developmental disorder 59 
++ 'intellectual developmental disorder 59' SubClassOf 'Autosomal dominant non-syndromic intellectual disability'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0020004
-Label(s): CH12F3 
-+ 'CH12F3' SubClassOf 'bearer_of' some 'lymphoma'
-+ 'CH12F3' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('lymph node' and ('part_of' some 'Mus musculus'))))
-+ 'CH12F3' SubClassOf 'CH12.LX'
+Class: http://purl.obolibrary.org/obo/MONDO_0009214
+Label(s): Fanconi anemia complementation group D2 
++ 'Fanconi anemia complementation group D2' SubClassOf 'Fanconi anemia'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0020000
-Label(s): developmental and epileptic encephalopathy 94 
-+ 'developmental and epileptic encephalopathy 94' SubClassOf 'developmental and epileptic encephalopathy'
+Class: http://purl.obolibrary.org/obo/MONDO_0100337
+Label(s): SEC61A1 deficiency 
++ 'SEC61A1 deficiency' SubClassOf 'genetic disorder'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030022
-Label(s): raw matrix generation 
-+ 'raw matrix generation' SubClassOf 'data transformation'
+Class: http://purl.obolibrary.org/obo/MONDO_0010459
+Label(s): amyotrophic lateral sclerosis type 15 
++ 'amyotrophic lateral sclerosis type 15' SubClassOf 'familial amyotrophic lateral sclerosis'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030027
-Label(s): snmC-Seq2 
-+ 'snmC-Seq2' SubClassOf 'methylation profiling by high throughput sequencing'
-+ 'snmC-Seq2' SubClassOf 'single cell library construction'
+Class: http://purl.obolibrary.org/obo/MONDO_0014128
+Label(s): TCF12-related craniosynostosis 
++ 'TCF12-related craniosynostosis' SubClassOf 'Isolated brachycephaly'
++ 'TCF12-related craniosynostosis' SubClassOf 'Isolated plagiocephaly'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030029
-Label(s): nanoString digital spatial profiling 
-+ 'nanoString digital spatial profiling' SubClassOf 'spatial transcriptomics by high-throughput sequencing'
+Class: http://purl.obolibrary.org/obo/MONDO_0100275
+Label(s): fatty acyl-CoA reductase defects 
++ 'fatty acyl-CoA reductase defects' SubClassOf 'disorder of plasmalogens biosynthesis'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0043452
-Label(s): chromosome 8, trisomy 
-+ 'chromosome 8, trisomy' SubClassOf 'trisomy'
-+ 'chromosome 8, trisomy' SubClassOf 'Autosomal trisomy'
+Class: http://purl.obolibrary.org/obo/MONDO_0100121
+Label(s): SCN4A-related myopathy, autosomal recessive 
++ 'SCN4A-related myopathy, autosomal recessive' SubClassOf 'disease has major feature' some 'Craniosynostosis'
++ 'SCN4A-related myopathy, autosomal recessive' SubClassOf 'autosomal recessive disease'
++ 'SCN4A-related myopathy, autosomal recessive' SubClassOf 'Congenital myopathy'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0020002
-Label(s): lack of efficacy 
-+ 'lack of efficacy' SubClassOf 'biological process'
+Class: http://purl.obolibrary.org/obo/MONDO_0007399
+Label(s): TWIST1-related craniosynostosis 
++ 'TWIST1-related craniosynostosis' SubClassOf 'Isolated brachycephaly'
++ 'TWIST1-related craniosynostosis' SubClassOf 'Isolated oxycephaly'
++ 'TWIST1-related craniosynostosis' SubClassOf 'Isolated plagiocephaly'
++ 'TWIST1-related craniosynostosis' SubClassOf 'Isolated scaphocephaly'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0031230
-Label(s): mitochondrial complex II deficiency, nuclear type 
-+ 'mitochondrial complex II deficiency, nuclear type' SubClassOf 'Mitochondrial myopathy'
+Class: http://purl.obolibrary.org/obo/MONDO_0100054
+Label(s): idiopathic anaphylaxis 
++ 'idiopathic anaphylaxis' EquivalentTo 'anaphylaxis' and ('has modifier' some 'idiopathic')
++ 'idiopathic anaphylaxis' SubClassOf 'idiopathic disease'
++ 'idiopathic anaphylaxis' SubClassOf 'anaphylaxis'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0008689
-Label(s): dehydrated hereditary stomatocytosis with or without pseudohyperkalemia and/or perinatal edema 
-+ 'dehydrated hereditary stomatocytosis with or without pseudohyperkalemia and/or perinatal edema' SubClassOf 'Dehydrated hereditary stomatocytosis'
+Class: http://purl.obolibrary.org/obo/MONDO_0100053
+Label(s): anaphylaxis 
++ 'anaphylaxis' SubClassOf 'hypersensitivity reaction disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030031
-Label(s): SCOPE-chip 
-+ 'SCOPE-chip' SubClassOf 'single cell library construction'
+Class: http://purl.obolibrary.org/obo/MONDO_0100112
+Label(s): acyl-CoA binding domain containing protein 5 deficiency 
++ 'acyl-CoA binding domain containing protein 5 deficiency' SubClassOf 'Peroxisomal beta-oxidation disorder'
++ 'acyl-CoA binding domain containing protein 5 deficiency' SubClassOf 'disorder of peroxisomal transporter'
++ 'acyl-CoA binding domain containing protein 5 deficiency' SubClassOf 'disorder of plasmalogens biosynthesis'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030030
-Label(s): Quant-seq 
-+ 'Quant-seq' SubClassOf 'transcription profiling by high throughput sequencing'
+Class: http://purl.obolibrary.org/obo/HP_0005206
+Label(s): Pancreatic pseudocyst 
++ 'Pancreatic pseudocyst' SubClassOf 'Abnormality of the abdominal organs'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030028
-Label(s): sci-RNA-seq3 
-+ 'sci-RNA-seq3' SubClassOf 'sci-RNA-seq'
+Class: http://purl.obolibrary.org/obo/MONDO_0043543
+Label(s): iatrogenic disease 
++ 'iatrogenic disease' SubClassOf 'disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030026
-Label(s): sci-Plex 
-+ 'sci-Plex' SubClassOf 'sci-RNA-seq'
+Class: http://purl.obolibrary.org/obo/MONDO_0018528
+Label(s): congenital myopathy with myasthenic-like onset 
++ 'congenital myopathy with myasthenic-like onset' SubClassOf 'RYR1-related myopathy'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030025
-Label(s): spatial analysis 
-+ 'spatial analysis' SubClassOf 'data transformation'
+Class: http://purl.obolibrary.org/obo/MONDO_0044988
+Label(s): hip region disease 
++ 'hip region disease' SubClassOf 'disorder by anatomical region'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0030024
-Label(s): analysis of matrices 
-+ 'analysis of matrices' SubClassOf 'data transformation'
+Class: http://purl.obolibrary.org/obo/MONDO_0011190
+Label(s): nephronophthisis 2 
++ 'nephronophthisis 2' SubClassOf 'Nephronophthisis'
 
-Class: http://purl.obolibrary.org/obo/HP_0001667
-Label(s): Right ventricular hypertrophy 
-+ 'Right ventricular hypertrophy' SubClassOf 'Abnormal heart morphology'
+Class: http://purl.obolibrary.org/obo/MONDO_0002319
+Label(s): phosphorus metabolism disease 
++ 'phosphorus metabolism disease' SubClassOf 'mineral metabolism disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0020001
-Label(s): drug resistance 
-+ 'drug resistance' SubClassOf 'biological process'
+Class: http://purl.obolibrary.org/obo/MONDO_0007918
+Label(s): microcephaly with or without chorioretinopathy, lymphedema, or intellectual disability 
++ 'microcephaly with or without chorioretinopathy, lymphedema, or intellectual disability' SubClassOf 'disease has feature' some 'Retinal dystrophy'
++ 'microcephaly with or without chorioretinopathy, lymphedema, or intellectual disability' SubClassOf 'Retinal dystrophy'
++ 'microcephaly with or without chorioretinopathy, lymphedema, or intellectual disability' SubClassOf 'Syndromic lymphedema'
++ 'microcephaly with or without chorioretinopathy, lymphedema, or intellectual disability' SubClassOf 'Milroy disease'
++ 'microcephaly with or without chorioretinopathy, lymphedema, or intellectual disability' SubClassOf 'Syndrome with microcephaly as major feature'
++ 'microcephaly with or without chorioretinopathy, lymphedema, or intellectual disability' SubClassOf 'neurovascular disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032698
-Label(s): neurodevelopmental disorder with central and peripheral motor dysfunction 
-+ 'neurodevelopmental disorder with central and peripheral motor dysfunction' SubClassOf 'genetic disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0030044
+Label(s): alive with stable disease 
++ 'alive with stable disease' SubClassOf 'alive with disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0054701
+Label(s): Kleefstra syndrome 2 
++ 'Kleefstra syndrome 2' SubClassOf 'Kleefstra syndrome'
+
+Class: http://purl.obolibrary.org/obo/HP_0025004
+Label(s): Hallux rigidus 
++ 'Hallux rigidus' SubClassOf 'Abnormality of toe'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030032
+Label(s): B6.SJL-Slc6a3tm1.1(cre)Bkmn/J 
++ 'B6.SJL-Slc6a3tm1.1(cre)Bkmn/J' SubClassOf 'Mus musculus'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030038
+Label(s): follow-up status 
++ 'follow-up status' SubClassOf 'quality'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030042
+Label(s): alive with disease 
++ 'alive with disease' SubClassOf 'alive (follow-up status)'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030048
+Label(s): alive in complete remission 
++ 'alive in complete remission' SubClassOf 'alive (follow-up status)'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030049
+Label(s): dead (follow-up status) 
++ 'dead (follow-up status)' SubClassOf 'recorded follow-up status'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011629
+Label(s): MOGS-CDG 
++ 'MOGS-CDG' SubClassOf 'metabolic disease with epilepsy'
++ 'MOGS-CDG' SubClassOf 'Congenital disorder of glycosylation with hepatic involvement'
++ 'MOGS-CDG' SubClassOf 'congenital disorder of glycosylation type II'
++ 'MOGS-CDG' SubClassOf 'Disorder of protein N-glycosylation'
++ 'MOGS-CDG' SubClassOf 'Congenital disorder of glycosylation with neurological involvement'
+
+Class: http://ebi.ac.uk/efo/EFO_0600035
+Label(s): left atrial volume measurement 
++ 'left atrial volume measurement' SubClassOf 'cardiovascular measurement'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013891
+Label(s): amyotrophic lateral sclerosis type 18 
++ 'amyotrophic lateral sclerosis type 18' SubClassOf 'familial amyotrophic lateral sclerosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013862
+Label(s): immunodeficiency, common variable, 7 
++ 'immunodeficiency, common variable, 7' SubClassOf 'Common variable immunodeficiency'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013284
+Label(s): immunodeficiency, common variable, 4 
++ 'immunodeficiency, common variable, 4' SubClassOf 'Common variable immunodeficiency'
+
+Class: http://purl.obolibrary.org/obo/HP_0005268
+Label(s): Spontaneous abortion 
++ 'Spontaneous abortion' SubClassOf 'Abnormal delivery'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030051
+Label(s): death from other causes 
++ 'death from other causes' SubClassOf 'dead (follow-up status)'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030050
+Label(s): death from disease 
++ 'death from disease' SubClassOf 'dead (follow-up status)'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030047
+Label(s): alive with metastatic disease 
++ 'alive with metastatic disease' SubClassOf 'alive with disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030046
+Label(s): alive with progressive disease 
++ 'alive with progressive disease' SubClassOf 'alive with disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030045
+Label(s): alive with recurrent disease 
++ 'alive with recurrent disease' SubClassOf 'alive with disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030043
+Label(s): alive in partial remission 
++ 'alive in partial remission' SubClassOf 'alive with disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030041
+Label(s): alive (follow-up status) 
++ 'alive (follow-up status)' SubClassOf 'recorded follow-up status'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030040
+Label(s): recorded follow-up status 
++ 'recorded follow-up status' SubClassOf 'follow-up status'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030039
+Label(s): no follow-up status 
++ 'no follow-up status' SubClassOf 'follow-up status'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030035
+Label(s): cancer cell line sample 
++ 'cancer cell line sample' SubClassOf 'neoplastic sample'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030034
+Label(s): shRNA-seq 
++ 'shRNA-seq' SubClassOf 'amplicon sequencing'
++ 'shRNA-seq' SubClassOf 'RNA assay'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0030033
+Label(s): gRNA-seq 
++ 'gRNA-seq' SubClassOf 'amplicon sequencing'
++ 'gRNA-seq' SubClassOf 'RNA assay'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0001498
+Label(s): varicocele 
++ 'varicocele' SubClassOf 'scrotal disease'
++ 'varicocele' SubClassOf 'pelvic varices'
+
+Class: http://purl.obolibrary.org/obo/HP_0031364
+Label(s): Ecchymosis 
++ 'Ecchymosis' SubClassOf 'Purpura'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0600001
+Label(s): glutaminase deficiency 
++ 'glutaminase deficiency' SubClassOf 'Neurometabolic disease'
++ 'glutaminase deficiency' SubClassOf 'Disorder of glutamine metabolism'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013286
+Label(s): immunodeficiency, common variable, 6 
++ 'immunodeficiency, common variable, 6' SubClassOf 'Common variable immunodeficiency'
 
 ----------------------------------
 2. Changes to EFO3
 
 @Classes modified from previous
 
-Class: http://www.orpha.net/ORDO/Orphanet_71493
-Label(s): Familial thrombocytosis 
-- 'Familial thrombocytosis' SubClassOf 'thrombotic disorder due to a platelet anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_261524
-Label(s): Paternal uniparental disomy of chromosome X 
-+ 'Paternal uniparental disomy of chromosome X' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_98130
-Label(s): Autosomal trisomy 
-- 'Autosomal trisomy' SubClassOf 'trisomy'
-- 'Autosomal trisomy' EquivalentTo 'trisomy' and 'Autosomal anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009930
-Label(s): pulmonary arteriovenous malformation 
-- 'pulmonary arteriovenous malformation' SubClassOf 'genetic vascular tumor'
-+ 'pulmonary arteriovenous malformation' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1063
-Label(s): Tufted angioma 
-- 'Tufted angioma' SubClassOf 'genetic vascular tumor'
-- 'Tufted angioma' SubClassOf 'Genetic skin tumor'
-+ 'Tufted angioma' SubClassOf 'Genetic vascular anomaly'
-+ 'Tufted angioma' SubClassOf 'has modifier' some 'rare'
-+ 'Tufted angioma' SubClassOf 'genetic skin disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014386
-Label(s): platelet-type bleeding disorder 18 
-- 'platelet-type bleeding disorder 18' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_83628
-Label(s): PELVIS syndrome 
-- 'PELVIS syndrome' SubClassOf 'neurovascular disease'
-- 'PELVIS syndrome' SubClassOf 'genetic vascular tumor'
-
-Class: http://www.orpha.net/ORDO/Orphanet_83639
-Label(s): Hypercoagulability syndrome due to glycosylphosphatidylinositol deficiency 
-- 'Hypercoagulability syndrome due to glycosylphosphatidylinositol deficiency' SubClassOf 'thrombotic disorder due to a coagulation factors defect'
-- 'Hypercoagulability syndrome due to glycosylphosphatidylinositol deficiency' SubClassOf 'neurovascular disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_71289
-Label(s): Radio-ulnar synostosis - amegakaryocytic thrombocytopenia 
-+ 'Radio-ulnar synostosis - amegakaryocytic thrombocytopenia' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3204
-Label(s): Stormorken-Sjaastad-Langslet syndrome 
-+ 'Stormorken-Sjaastad-Langslet syndrome' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_268322
-Label(s): Hereditary thrombocytopenia with normal platelets 
-+ 'Hereditary thrombocytopenia with normal platelets' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004997
-Label(s): type 2 diabetes nephropathy 
-- 'type 2 diabetes nephropathy' SubClassOf 'disease arises from feature' some 'type II diabetes mellitus'
-- 'type 2 diabetes nephropathy' SubClassOf 'diabetic nephropathy'
-- 'type 2 diabetes nephropathy' EquivalentTo 'diabetic nephropathy' and ('disease arises from feature' some 'type II diabetes mellitus')
-+ 'type 2 diabetes nephropathy' SubClassOf 'diabetic nephropathy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99792
-Label(s): Dentin dysplasia - sclerotic bones 
-- 'Dentin dysplasia - sclerotic bones' SubClassOf 'Rare genetic odontologic disease'
-+ 'Dentin dysplasia - sclerotic bones' SubClassOf 'Rare genetic odontologic disease'
-+ 'Dentin dysplasia - sclerotic bones' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99791
-Label(s): Dentin dysplasia type II 
-+ 'Dentin dysplasia type II' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96183
-Label(s): Maternal uniparental disomy of chromosome 9 
-+ 'Maternal uniparental disomy of chromosome 9' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004895
-Label(s): Tourette syndrome 
-- 'Tourette syndrome' SubClassOf 'Rare genetic tremor disorder'
-- 'Tourette syndrome' SubClassOf 'Rare genetic movement disorder'
-+ 'Tourette syndrome' SubClassOf 'Rare genetic neurological disorder'
-+ 'Tourette syndrome' SubClassOf 'movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_220443
-Label(s): Bleeding diathesis due to thromboxane synthesis deficiency 
-+ 'Bleeding diathesis due to thromboxane synthesis deficiency' SubClassOf 'inherited bleeding disorder, platelet-type'
-+ 'Bleeding diathesis due to thromboxane synthesis deficiency' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_220436
-Label(s): Quebec platelet disorder 
-+ 'Quebec platelet disorder' SubClassOf 'inherited bleeding disorder, platelet-type'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99789
-Label(s): Dentin dysplasia type I 
-+ 'Dentin dysplasia type I' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017292
-Label(s): well-differentiated fetal adenocarcinoma of the lung 
-- 'well-differentiated fetal adenocarcinoma of the lung' SubClassOf 'bronchopulmonary tumor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014518
-Label(s): platelet-type bleeding disorder 19 
-+ 'platelet-type bleeding disorder 19' SubClassOf 'inherited bleeding disorder, platelet-type'
-
-Class: http://www.orpha.net/ORDO/Orphanet_307052
-Label(s): Rare genetic parkinsonian disorder 
-- 'Rare genetic parkinsonian disorder' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_307058
-Label(s): Miscellaneous movement disorder due to genetic neurodegenerative disease 
-- 'Miscellaneous movement disorder due to genetic neurodegenerative disease' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3307
-Label(s): Tetrasomy 18p 
-- 'Tetrasomy 18p' SubClassOf 'tetrasomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_307061
-Label(s): Rare genetic tremor disorder 
-- 'Rare genetic tremor disorder' SubClassOf 'Rare genetic neurological disorder'
-- 'Rare genetic tremor disorder' EquivalentTo 'movement disorder' and ('has modifier' some 'inherited')
-- 'Rare genetic tremor disorder' SubClassOf 'movement disorder'
-+ 'Rare genetic tremor disorder' SubClassOf 'Rare genetic movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_73224
-Label(s): Tubular renal disease - cardiomyopathy 
-- 'Tubular renal disease - cardiomyopathy' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Tubular renal disease - cardiomyopathy' SubClassOf 'syndromic disease'
-+ 'Tubular renal disease - cardiomyopathy' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96068
-Label(s): Mosaic trisomy 22 
-+ 'Mosaic trisomy 22' SubClassOf http://purl.obolibrary.org/obo/MONDO_0022759
-
-Class: http://www.orpha.net/ORDO/Orphanet_3289
-Label(s): Taurodontism 
-- 'Taurodontism' SubClassOf 'Rare genetic odontologic disease'
-+ 'Taurodontism' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_217622
-Label(s): Sensorineural deafness with dilated cardiomyopathy 
-- 'Sensorineural deafness with dilated cardiomyopathy' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Sensorineural deafness with dilated cardiomyopathy' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Sensorineural deafness with dilated cardiomyopathy' SubClassOf 'Familial dilated cardiomyopathy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1692
-Label(s): Mosaic trisomy 1 
-+ 'Mosaic trisomy 1' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1698
-Label(s): Mosaic trisomy 12 
-+ 'Mosaic trisomy 12' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_230839
-Label(s): Ehlers-Danlos syndrome due to tenascin-X deficiency 
-- 'Ehlers-Danlos syndrome due to tenascin-X deficiency' SubClassOf 'Rare genetic odontologic disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99329
-Label(s): 48,XYYY syndrome 
-+ '48,XYYY syndrome' SubClassOf 'tetrasomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99324
-Label(s): Paternal uniparental disomy of chromosome 13 
-+ 'Paternal uniparental disomy of chromosome 13' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_1724
-Label(s): Mosaic trisomy 20 
-+ 'Mosaic trisomy 20' SubClassOf http://purl.obolibrary.org/obo/MONDO_0022757
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018729
-Label(s): genetic vascular tumor 
-- 'genetic vascular tumor' EquivalentTo 'vascular neoplasm' and ('has modifier' some 'inherited')
-- 'genetic vascular tumor' SubClassOf 'vascular neoplasm'
-- 'genetic vascular tumor' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1747
-Label(s): Mosaic trisomy 7 
-+ 'Mosaic trisomy 7' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_140944
-Label(s): CLOVE syndrome 
-- 'CLOVE syndrome' SubClassOf 'genetic vascular tumor'
-+ 'CLOVE syndrome' SubClassOf 'vascular neoplasm'
-+ 'CLOVE syndrome' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018794
-Label(s): cytosolic phospholipase-A2 alpha deficiency associated bleeding disorder 
-- 'cytosolic phospholipase-A2 alpha deficiency associated bleeding disorder' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018795
-Label(s): syndromic constitutional thrombocytopenia 
-- 'syndromic constitutional thrombocytopenia' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018796
-Label(s): isolated constitutional thrombocytopenia 
-- 'isolated constitutional thrombocytopenia' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96187
-Label(s): Maternal uniparental disomy of chromosome 21 
-+ 'Maternal uniparental disomy of chromosome 21' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000702
-Label(s): small cell lung carcinoma 
-- 'small cell lung carcinoma' SubClassOf 'bronchopulmonary tumor'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99228
-Label(s): Mosaic monosomy X 
-- 'Mosaic monosomy X' SubClassOf 'Turner syndrome'
-- 'Mosaic monosomy X' SubClassOf 'monosomy'
-+ 'Mosaic monosomy X' SubClassOf 'Monosomy X'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100310
-Label(s): hereditary cerebellar ataxia 
-- 'hereditary cerebellar ataxia' SubClassOf 'Rare genetic movement disorder'
-- 'hereditary cerebellar ataxia' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_306768
-Label(s): Rare paroxysmal movement disorder 
-- 'Rare paroxysmal movement disorder' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_306765
-Label(s): Motor stereotypies 
-- 'Motor stereotypies' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_306750
-Label(s): Primary myoclonus 
-- 'Primary myoclonus' SubClassOf 'Rare genetic tremor disorder'
-+ 'Primary myoclonus' SubClassOf 'has modifier' some 'rare'
-+ 'Primary myoclonus' SubClassOf 'movement disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018896
-Label(s): thrombotic thrombocytopenic purpura 
-- 'thrombotic thrombocytopenic purpura' SubClassOf 'thrombotic disorder due to a platelet anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_329813
-Label(s): Mosaic genome-wide paternal uniparental disomy 
-+ 'Mosaic genome-wide paternal uniparental disomy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_306719
-Label(s): Neurodegenerative disease with chorea 
-- 'Neurodegenerative disease with chorea' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_216820
-Label(s): Osteogenesis imperfecta type 4 
-- 'Osteogenesis imperfecta type 4' SubClassOf 'Rare genetic odontologic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014078
-Label(s): platelet-type bleeding disorder 15 
-+ 'platelet-type bleeding disorder 15' SubClassOf 'inherited bleeding disorder, platelet-type'
-
-Class: http://www.orpha.net/ORDO/Orphanet_308
-Label(s): Unverricht-Lundborg disease 
-- 'Unverricht-Lundborg disease' SubClassOf 'Rare genetic tremor disorder'
-+ 'Unverricht-Lundborg disease' SubClassOf 'movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_90793
-Label(s): Congenital adrenal hyperplasia due to 17-alpha-hydroxylase deficiency 
-- 'Congenital adrenal hyperplasia due to 17-alpha-hydroxylase deficiency' SubClassOf 'Non-acquired premature ovarian failure'
-- 'Congenital adrenal hyperplasia due to 17-alpha-hydroxylase deficiency' SubClassOf 'male infertility'
-- 'Congenital adrenal hyperplasia due to 17-alpha-hydroxylase deficiency' SubClassOf 'female infertility'
-+ 'Congenital adrenal hyperplasia due to 17-alpha-hydroxylase deficiency' SubClassOf 'Non-acquired premature ovarian failure'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000479
-Label(s): essential thrombocythemia 
-- 'essential thrombocythemia' SubClassOf 'vascular bone neoplasm'
-- 'essential thrombocythemia' SubClassOf 'Rare genetic coagulation disorder'
-- 'essential thrombocythemia' SubClassOf 'vascular cancer'
-- 'essential thrombocythemia' SubClassOf 'thrombotic disorder due to a platelet anomaly'
-- 'essential thrombocythemia' SubClassOf 'genetic vascular tumor'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96061
-Label(s): Mosaic trisomy 8 
-+ 'Mosaic trisomy 8' SubClassOf http://purl.obolibrary.org/obo/MONDO_0043452
-
-Class: http://www.orpha.net/ORDO/Orphanet_163634
-Label(s): Maffucci syndrome 
-- 'Maffucci syndrome' SubClassOf 'genetic vascular tumor'
-+ 'Maffucci syndrome' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1345
-Label(s): Cardiomyopathy - cataract - hip spine disease 
-- 'Cardiomyopathy - cataract - hip spine disease' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Cardiomyopathy - cataract - hip spine disease' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Cardiomyopathy - cataract - hip spine disease' SubClassOf 'syndromic disease'
-+ 'Cardiomyopathy - cataract - hip spine disease' SubClassOf 'disease has major feature' some 'articular cartilage disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010122
-Label(s): congenital thrombotic thrombocytopenic purpura 
-- 'congenital thrombotic thrombocytopenic purpura' SubClassOf 'thrombotic disorder due to a platelet anomaly'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004996
-Label(s): type 1 diabetes nephropathy 
-- 'type 1 diabetes nephropathy' SubClassOf 'diabetic nephropathy'
-- 'type 1 diabetes nephropathy' SubClassOf 'disease arises from feature' some 'type I diabetes mellitus'
-- 'type 1 diabetes nephropathy' SubClassOf 'type II hypersensitivity reaction disease'
-- 'type 1 diabetes nephropathy' EquivalentTo 'diabetic nephropathy' and ('disease arises from feature' some 'type I diabetes mellitus')
-+ 'type 1 diabetes nephropathy' SubClassOf 'diabetic nephropathy'
-+ 'type 1 diabetes nephropathy' SubClassOf 'hypersensitivity reaction disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019487
-Label(s): epilepsy with myoclonic absences 
-- 'epilepsy with myoclonic absences' SubClassOf 'Rare genetic tremor disorder'
-- 'epilepsy with myoclonic absences' SubClassOf 'Rare genetic movement disorder'
-+ 'epilepsy with myoclonic absences' SubClassOf 'movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96179
-Label(s): Maternal uniparental disomy of chromosome 2 
-+ 'Maternal uniparental disomy of chromosome 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96186
-Label(s): Maternal uniparental disomy of chromosome 20 
-+ 'Maternal uniparental disomy of chromosome 20' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96193
-Label(s): Beckwith-Wiedemann syndrome due to paternal uniparental disomy of chromosome 11 
-+ 'Beckwith-Wiedemann syndrome due to paternal uniparental disomy of chromosome 11' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_274
-Label(s): Bernard-Soulier syndrome 
-+ 'Bernard-Soulier syndrome' SubClassOf 'inherited bleeding disorder, platelet-type'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96263
-Label(s): 48,XXXY syndrome 
-+ '48,XXXY syndrome' SubClassOf 'tetrasomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96264
-Label(s): 49,XXXXY syndrome 
-+ '49,XXXXY syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700085
-
-Class: http://www.orpha.net/ORDO/Orphanet_329319
-Label(s): Hereditary thrombocytosis with transverse limb defect 
-- 'Hereditary thrombocytosis with transverse limb defect' SubClassOf 'thrombotic disorder due to a platelet anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96334
-Label(s): Paternal uniparental disomy of chromosome 14 
-+ 'Paternal uniparental disomy of chromosome 14' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_9
-Label(s): Tetrasomy X 
-- 'Tetrasomy X' SubClassOf 'tetrasomy'
-+ 'Tetrasomy X' SubClassOf 'tetrasomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3378
-Label(s): Trisomy 13 
-+ 'Trisomy 13' SubClassOf 'trisomy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015405
-Label(s): cerebrofacial arteriovenous metameric syndrome 
-- 'cerebrofacial arteriovenous metameric syndrome' SubClassOf 'genetic vascular tumor'
-
-Class: http://www.orpha.net/ORDO/Orphanet_307064
-Label(s): Rare genetic myoclonus 
-- 'Rare genetic myoclonus' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_263714
-Label(s): X chromosome number anomaly 
-- 'X chromosome number anomaly' SubClassOf 'aneuploidy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_29072
-Label(s): Hereditary pheochromocytoma-paraganglioma 
-+ 'Hereditary pheochromocytoma-paraganglioma' SubClassOf http://www.ebi.ac.uk/efo/EFO_0020005
-
-Class: http://www.orpha.net/ORDO/Orphanet_168796
-Label(s): Heart-hand syndrome, Slovenian type 
-- 'Heart-hand syndrome, Slovenian type' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Heart-hand syndrome, Slovenian type' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_329324
-Label(s): Inverse Klippel-Trénaunay syndrome 
-- 'Inverse Klippel-Trénaunay syndrome' SubClassOf 'genetic vascular tumor'
-
-Class: http://www.orpha.net/ORDO/Orphanet_97678
-Label(s): Maternal uniparental disomy of chromosome 13 
-+ 'Maternal uniparental disomy of chromosome 13' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
+Class: http://www.orpha.net/ORDO/Orphanet_98249
+Label(s): Ehlers-Danlos syndrome 
++ 'Ehlers-Danlos syndrome' SubClassOf 'hereditary connective tissue disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_261529
+Label(s): Ring chromosome Y 
++ 'Ring chromosome Y' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003095
+Label(s): non-alcoholic fatty liver disease 
+- 'non-alcoholic fatty liver disease' SubClassOf 'fatty liver disease'
++ 'non-alcoholic fatty liver disease' SubClassOf 'fatty liver disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_96173
+Label(s): Ring chromosome 9 
++ 'Ring chromosome 9' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_238583
+Label(s): Hyperphenylalaninemia 
+- 'Hyperphenylalaninemia' SubClassOf 'disease shares features of' some 'Phenylketonuria'
++ 'Hyperphenylalaninemia' SubClassOf 'disease shares features of' some 'Phenylketonuria'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1437
+Label(s): Ring chromosome 1 
++ 'Ring chromosome 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1445
+Label(s): Ring chromosome 21 
++ 'Ring chromosome 21' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1446
+Label(s): Ring chromosome 22 
++ 'Ring chromosome 22' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1448
+Label(s): Ring chromosome 6 
++ 'Ring chromosome 6' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000173
+Label(s): muscular dystrophy-dystroglycanopathy, type C 
+- 'muscular dystrophy-dystroglycanopathy, type C' SubClassOf 'Congenital muscular dystrophy due to dystroglycanopathy'
++ 'muscular dystrophy-dystroglycanopathy, type C' SubClassOf 'Congenital muscular dystrophy due to dystroglycanopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000172
+Label(s): muscular dystrophy-dystroglycanopathy, type B 
+- 'muscular dystrophy-dystroglycanopathy, type B' SubClassOf 'Congenital muscular dystrophy due to dystroglycanopathy'
++ 'muscular dystrophy-dystroglycanopathy, type B' SubClassOf 'Congenital muscular dystrophy due to dystroglycanopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000166
+Label(s): encephalopathy, acute, infection-induced 
+- 'encephalopathy, acute, infection-induced' SubClassOf 'brain disease'
++ 'encephalopathy, acute, infection-induced' SubClassOf 'brain disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000160
+Label(s): epilepsy, familial adult myoclonic 
+- 'epilepsy, familial adult myoclonic' SubClassOf 'Early myoclonic encephalopathy'
++ 'epilepsy, familial adult myoclonic' SubClassOf 'Early myoclonic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000159
+Label(s): bone marrow failure syndrome 
+- 'bone marrow failure syndrome' SubClassOf 'bone marrow disease'
++ 'bone marrow failure syndrome' SubClassOf 'bone marrow disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000148
+Label(s): pulmonary fibrosis and/or bone marrow failure, telomere-related 
+- 'pulmonary fibrosis and/or bone marrow failure, telomere-related' SubClassOf 'bone marrow disease'
+- 'pulmonary fibrosis and/or bone marrow failure, telomere-related' SubClassOf 'pulmonary fibrosis'
++ 'pulmonary fibrosis and/or bone marrow failure, telomere-related' SubClassOf 'bone marrow disease'
++ 'pulmonary fibrosis and/or bone marrow failure, telomere-related' SubClassOf 'pulmonary fibrosis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004707
+Label(s): infantile hypertrophic pyloric stenosis 
+- 'infantile hypertrophic pyloric stenosis' SubClassOf 'pyloric stenosis'
++ 'infantile hypertrophic pyloric stenosis' SubClassOf 'pyloric stenosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000137
+Label(s): leukoencephalopathy, megalencephalic 
+- 'leukoencephalopathy, megalencephalic' SubClassOf 'brain disease'
++ 'leukoencephalopathy, megalencephalic' SubClassOf 'brain disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000119
+Label(s): congenital heart defects, multiple types 
+- 'congenital heart defects, multiple types' SubClassOf 'congenital heart disease'
++ 'congenital heart defects, multiple types' SubClassOf 'congenital heart disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000105
+Label(s): anemia, nonspherocytic hemolytic 
+- 'anemia, nonspherocytic hemolytic' SubClassOf 'congenital nonspherocytic hemolytic anemia'
++ 'anemia, nonspherocytic hemolytic' SubClassOf 'congenital nonspherocytic hemolytic anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000104
+Label(s): anemia, hypochromic microcytic with iron overload 
+- 'anemia, hypochromic microcytic with iron overload' SubClassOf 'hypochromic microcytic anemia'
++ 'anemia, hypochromic microcytic with iron overload' SubClassOf 'hypochromic microcytic anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000090
+Label(s): progressive external ophthalmoplegia with mitochondrial DNA deletions 
+- 'progressive external ophthalmoplegia with mitochondrial DNA deletions' SubClassOf 'progressive external ophthalmoplegia'
++ 'progressive external ophthalmoplegia with mitochondrial DNA deletions' SubClassOf 'progressive external ophthalmoplegia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000075
+Label(s): neuronopathy, distal hereditary motor 
+- 'neuronopathy, distal hereditary motor' SubClassOf 'motor neuron disease'
++ 'neuronopathy, distal hereditary motor' SubClassOf 'motor neuron disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000045
+Label(s): hypothyroidism, congenital, nongoitrous 
+- 'hypothyroidism, congenital, nongoitrous' SubClassOf 'Congenital hypothyroidism'
++ 'hypothyroidism, congenital, nongoitrous' SubClassOf 'Congenital hypothyroidism'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000030
+Label(s): epilepsy, nocturnal frontal lobe 
+- 'epilepsy, nocturnal frontal lobe' SubClassOf 'frontal lobe epilepsy'
++ 'epilepsy, nocturnal frontal lobe' SubClassOf 'frontal lobe epilepsy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000015
+Label(s): classic complement early component deficiency 
+- 'classic complement early component deficiency' SubClassOf 'complement deficiency'
++ 'classic complement early component deficiency' SubClassOf 'complement deficiency'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000014
+Label(s): colorblindness, partial 
+- 'colorblindness, partial' SubClassOf 'Color-vision disease'
++ 'colorblindness, partial' SubClassOf 'Color-vision disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000009
+Label(s): inherited bleeding disorder, platelet-type 
+- 'inherited bleeding disorder, platelet-type' SubClassOf 'blood platelet disease'
++ 'inherited bleeding disorder, platelet-type' SubClassOf 'blood platelet disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100411
+Label(s): acute myeloid leukemia, NPM1 gene mutation 
+- 'acute myeloid leukemia, NPM1 gene mutation' SubClassOf 'Inherited acute myeloid leukemia'
+- 'acute myeloid leukemia, NPM1 gene mutation' SubClassOf 'acute myeloid leukemia'
+- 'acute myeloid leukemia, NPM1 gene mutation' SubClassOf 'bilineal acute myeloid leukemia'
+- 'acute myeloid leukemia, NPM1 gene mutation' SubClassOf 'acute leukemia of ambiguous lineage'
++ 'acute myeloid leukemia, NPM1 gene mutation' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.orpha.net/ORDO/Orphanet_140908
+Label(s): Brachydactyly type B2 
+- 'Brachydactyly type B2' SubClassOf 'Syndrome with brachydactyly'
++ 'Brachydactyly type B2' SubClassOf 'Brachydactyly type B'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018865
+Label(s): striate palmoplantar keratoderma 
+- 'striate palmoplantar keratoderma' SubClassOf 'Isolated focal palmoplantar keratoderma'
+
+Class: http://www.orpha.net/ORDO/Orphanet_306661
+Label(s): familial hyperphosphatemic tumoral calcinosis/hyperphosphatemic hyperostosis syndrome 
+- 'familial hyperphosphatemic tumoral calcinosis/hyperphosphatemic hyperostosis syndrome' SubClassOf 'calcinosis'
++ 'familial hyperphosphatemic tumoral calcinosis/hyperphosphatemic hyperostosis syndrome' SubClassOf 'calcinosis'
+
+Class: http://www.orpha.net/ORDO/Orphanet_284979
+Label(s): Neonatal Marfan syndrome 
+- 'Neonatal Marfan syndrome' SubClassOf 'Marfan and Marfan-related disorder'
++ 'Neonatal Marfan syndrome' SubClassOf 'Marfan syndrome'
+
+Class: http://www.orpha.net/ORDO/Orphanet_96176
+Label(s): Ring chromosome 13 
++ 'Ring chromosome 13' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_96177
+Label(s): Ring chromosome 15 
++ 'Ring chromosome 15' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_96178
+Label(s): Ring chromosome 16 
++ 'Ring chromosome 16' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://purl.obolibrary.org/obo/HP_0001649
+Label(s): Tachycardia 
+- 'Tachycardia' SubClassOf 'Abnormality of cardiovascular system electrophysiology'
++ 'Tachycardia' SubClassOf 'Ventricular arrhythmia'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1438
+Label(s): Ring chromosome 10 
++ 'Ring chromosome 10' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1439
+Label(s): Ring chromosome 12 
++ 'Ring chromosome 12' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1443
+Label(s): Ring chromosome 19 
++ 'Ring chromosome 19' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1447
+Label(s): Ring chromosome 4 
++ 'Ring chromosome 4' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_294023
+Label(s): Neonatal inflammatory skin and bowel disease 
+- 'Neonatal inflammatory skin and bowel disease' SubClassOf 'inflammatory bowel disease'
++ 'Neonatal inflammatory skin and bowel disease' SubClassOf 'inflammatory bowel disease'
 
 Class: http://www.orpha.net/ORDO/Orphanet_238722
 Label(s): Familial congenital mirror movements 
-- 'Familial congenital mirror movements' SubClassOf 'Rare genetic tremor disorder'
+- 'Familial congenital mirror movements' SubClassOf 'movement disorder'
 + 'Familial congenital mirror movements' SubClassOf 'movement disorder'
 
-Class: http://www.orpha.net/ORDO/Orphanet_1062
-Label(s): Hereditary neurocutaneous angioma 
-- 'Hereditary neurocutaneous angioma' SubClassOf 'genetic vascular tumor'
-+ 'Hereditary neurocutaneous angioma' SubClassOf 'vascular neoplasm'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005410
-Label(s): tooth agenesis 
-- 'tooth agenesis' SubClassOf 'Rare genetic odontologic disease'
-+ 'tooth agenesis' SubClassOf 'tooth disease'
-+ 'tooth agenesis' SubClassOf 'genetic disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007297
-Label(s): HELLP syndrome 
-- 'HELLP syndrome' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009028
-Label(s): Camptodactyly-arthropathy-coxa-vara-pericarditis syndrome 
-- 'Camptodactyly-arthropathy-coxa-vara-pericarditis syndrome' SubClassOf 'Rare genetic systemic or rheumatologic disease'
-+ 'Camptodactyly-arthropathy-coxa-vara-pericarditis syndrome' SubClassOf 'Rare genetic systemic or rheumatologic disease'
-+ 'Camptodactyly-arthropathy-coxa-vara-pericarditis syndrome' SubClassOf 'has modifier' some 'rare'
-+ 'Camptodactyly-arthropathy-coxa-vara-pericarditis syndrome' SubClassOf 'autosomal recessive disease'
-+ 'Camptodactyly-arthropathy-coxa-vara-pericarditis syndrome' SubClassOf 'hereditary connective tissue disorder'
-+ 'Camptodactyly-arthropathy-coxa-vara-pericarditis syndrome' SubClassOf 'rheumatic disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_73271
-Label(s): Bleeding diathesis due to a collagen receptor defect 
-- 'Bleeding diathesis due to a collagen receptor defect' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_905
-Label(s): Wilson disease 
-+ 'Wilson disease' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_36355
-Label(s): P2Y12 defect 
-- 'P2Y12 defect' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_287
-Label(s): Ehlers-Danlos syndrome, classic type 
-- 'Ehlers-Danlos syndrome, classic type' SubClassOf 'Rare genetic odontologic disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_275729
-Label(s): Rare hemorrhagic disorder due to a constitutional thrombocytopenia 
-- 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-- 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia' SubClassOf 'Rare genetic coagulation disorder'
-- 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia' SubClassOf 'inherited bleeding disorder, platelet-type'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001006
-Label(s): Klinefelter's syndrome 
-+ 'Klinefelter's syndrome' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96194
-Label(s): Paternal uniparental disomy of chromosome 20 
-+ 'Paternal uniparental disomy of chromosome 20' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96192
-Label(s): Paternal uniparental disomy of chromosome 7 
-+ 'Paternal uniparental disomy of chromosome 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96191
-Label(s): Paternal uniparental disomy of chromosome 6 
-+ 'Paternal uniparental disomy of chromosome 6' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96190
-Label(s): Paternal uniparental disomy of chromosome 5 
-+ 'Paternal uniparental disomy of chromosome 5' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96188
-Label(s): Maternal uniparental disomy of chromosome 22 
-+ 'Maternal uniparental disomy of chromosome 22' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96185
-Label(s): Maternal uniparental disomy of chromosome 16 
-+ 'Maternal uniparental disomy of chromosome 16' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96184
-Label(s): Maternal uniparental disomy of chromosome 14 
-+ 'Maternal uniparental disomy of chromosome 14' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96182
-Label(s): Silver-Russell syndrome due to maternal uniparental disomy of chromosome 7 
-+ 'Silver-Russell syndrome due to maternal uniparental disomy of chromosome 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96181
-Label(s): Maternal uniparental disomy of chromosome 6 
-+ 'Maternal uniparental disomy of chromosome 6' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_96180
-Label(s): Maternal uniparental disomy of chromosome 4 
-+ 'Maternal uniparental disomy of chromosome 4' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_166260
-Label(s): Dentinogenesis imperfecta type 2 
-+ 'Dentinogenesis imperfecta type 2' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_166265
-Label(s): Dentinogenesis imperfecta type 3 
-+ 'Dentinogenesis imperfecta type 3' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96123
-Label(s): Monosomy 22 
-+ 'Monosomy 22' SubClassOf 'monosomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1864
-Label(s): Congenital valvular dysplasia 
-- 'Congenital valvular dysplasia' SubClassOf 'Genetic cardiac anomaly'
-- 'Congenital valvular dysplasia' SubClassOf 'congenital tricuspid malformation'
-+ 'Congenital valvular dysplasia' SubClassOf 'Genetic cardiac anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_102020
-Label(s): Autosomal monosomy 
-- 'Autosomal monosomy' EquivalentTo 'monosomy' and 'Autosomal anomaly'
-- 'Autosomal monosomy' SubClassOf 'monosomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_217467
-Label(s): Hereditary thrombophilia due to congenital histidine-rich (poly-L) glycoprotein deficiency 
-- 'Hereditary thrombophilia due to congenital histidine-rich (poly-L) glycoprotein deficiency' SubClassOf 'thrombotic disorder due to a coagulation factors defect'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96063
-Label(s): Mosaic trisomy 10 
-+ 'Mosaic trisomy 10' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96060
-Label(s): Mosaic trisomy 5 
-+ 'Mosaic trisomy 5' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96059
-Label(s): Mosaic trisomy 4 
-+ 'Mosaic trisomy 4' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_46724
-Label(s): Cerebral arteriovenous malformation 
-- 'Cerebral arteriovenous malformation' SubClassOf 'genetic vascular tumor'
-+ 'Cerebral arteriovenous malformation' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1772
-Label(s): 45,X/46,XY mixed gonadal dysgenesis 
-+ '45,X/46,XY mixed gonadal dysgenesis' SubClassOf 'monosomy'
-+ '45,X/46,XY mixed gonadal dysgenesis' SubClassOf 'has modifier' some 'mosaic'
-
-Class: http://www.orpha.net/ORDO/Orphanet_505
-Label(s): Graham Little-Piccardi-Lassueur syndrome 
-- 'Graham Little-Piccardi-Lassueur syndrome' SubClassOf 'cutaneous lichen planus'
-- 'Graham Little-Piccardi-Lassueur syndrome' SubClassOf 'lichen planus, familial'
-
-Class: http://www.orpha.net/ORDO/Orphanet_98754
-Label(s): Prader-Willi syndrome due to maternal uniparental disomy of chromosome 15 
-+ 'Prader-Willi syndrome due to maternal uniparental disomy of chromosome 15' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_1723
-Label(s): Mosaic trisomy 2 
-+ 'Mosaic trisomy 2' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1711
-Label(s): Mosaic trisomy 17 
-+ 'Mosaic trisomy 17' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1708
-Label(s): Mosaic trisomy 16 
-+ 'Mosaic trisomy 16' SubClassOf http://purl.obolibrary.org/obo/MONDO_0022180
-
-Class: http://www.orpha.net/ORDO/Orphanet_1706
-Label(s): Mosaic trisomy 15 
-+ 'Mosaic trisomy 15' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1703
-Label(s): Mosaic trisomy 14 
-+ 'Mosaic trisomy 14' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_220452
-Label(s): Inherited giant platelet disorder 
-+ 'Inherited giant platelet disorder' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_98795
-Label(s): Angelman syndrome due to paternal uniparental disomy of chromosome 15 
-+ 'Angelman syndrome due to paternal uniparental disomy of chromosome 15' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_77830
-Label(s): Rare genetic odontologic disease 
-- 'Rare genetic odontologic disease' SubClassOf 'has modifier' some 'rare'
-- 'Rare genetic odontologic disease' SubClassOf 'tooth disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_261519
-Label(s): Maternal uniparental disomy of chromosome X 
-+ 'Maternal uniparental disomy of chromosome X' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_231147
-Label(s): Silver-Russell syndrome due to maternal uniparental disomy of chromosome 11 
-+ 'Silver-Russell syndrome due to maternal uniparental disomy of chromosome 11' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_3197
-Label(s): Hereditary hyperekplexia 
-- 'Hereditary hyperekplexia' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003108
-Label(s): essential tremor 
-- 'essential tremor' SubClassOf 'Rare genetic tremor disorder'
-- 'essential tremor' SubClassOf 'Rare genetic movement disorder'
-+ 'essential tremor' SubClassOf 'movement disorder'
-+ 'essential tremor' SubClassOf 'Rare genetic neurological disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_558
-Label(s): Marfan syndrome 
-- 'Marfan syndrome' SubClassOf 'Rare disease with thoracic aortic aneurysm and aortic dissection'
-- 'Marfan syndrome' SubClassOf 'Lens position anomaly'
-- 'Marfan syndrome' SubClassOf 'developmental defect during embryogenesis'
-- 'Marfan syndrome' SubClassOf 'Syndromic myopia'
-- 'Marfan syndrome' SubClassOf 'Syndromic keratoconus'
-- 'Marfan syndrome' SubClassOf 'Connective tissue disease with eye involvement'
-+ 'Marfan syndrome' SubClassOf 'Rare disease with thoracic aortic aneurysm and aortic dissection'
-+ 'Marfan syndrome' SubClassOf 'syndromic disease'
-+ 'Marfan syndrome' SubClassOf 'Lens position anomaly'
-+ 'Marfan syndrome' SubClassOf 'Syndromic myopia'
-+ 'Marfan syndrome' SubClassOf 'Syndromic keratoconus'
-+ 'Marfan syndrome' SubClassOf 'Connective tissue disease with eye involvement'
-
-Class: http://www.orpha.net/ORDO/Orphanet_501
-Label(s): Lafora disease 
-- 'Lafora disease' SubClassOf 'Rare genetic tremor disorder'
-+ 'Lafora disease' SubClassOf 'movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1606
-Label(s): 1p36 deletion syndrome 
-- '1p36 deletion syndrome' SubClassOf 'epilepsy'
-- '1p36 deletion syndrome' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-- '1p36 deletion syndrome' SubClassOf 'Rare genetic neurological disorder'
-- '1p36 deletion syndrome' SubClassOf 'congenital nervous system disorder'
-+ '1p36 deletion syndrome' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_678
-Label(s): Papillon-Lefèvre syndrome 
-- 'Papillon-Lefèvre syndrome' SubClassOf 'Rare genetic odontologic disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_391799
-Label(s): Rare genetic dystonia 
-- 'Rare genetic dystonia' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3226
-Label(s): Deafness - lymphedema - leukemia 
-- 'Deafness - lymphedema - leukemia' SubClassOf 'genetic vascular tumor'
-+ 'Deafness - lymphedema - leukemia' SubClassOf 'vascular neoplasm'
-
-Class: http://www.orpha.net/ORDO/Orphanet_95429
-Label(s): Angioma serpiginosum 
-- 'Angioma serpiginosum' SubClassOf 'genetic vascular tumor'
-+ 'Angioma serpiginosum' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_721
-Label(s): Gray platelet syndrome 
-+ 'Gray platelet syndrome' SubClassOf 'inherited bleeding disorder, platelet-type'
-
-Class: http://www.orpha.net/ORDO/Orphanet_743
-Label(s): Hereditary thrombophilia due to congenital protein S deficiency 
-- 'Hereditary thrombophilia due to congenital protein S deficiency' SubClassOf 'thrombotic disorder due to a coagulation factors defect'
-
-Class: http://www.orpha.net/ORDO/Orphanet_745
-Label(s): Hereditary thrombophilia due to congenital protein C deficiency 
-- 'Hereditary thrombophilia due to congenital protein C deficiency' SubClassOf 'thrombotic disorder due to a coagulation factors defect'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3310
-Label(s): Tetrasomy 9p 
-- 'Tetrasomy 9p' SubClassOf 'tetrasomy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016629
-Label(s): hemorrhagic disorder due to a platelet anomaly 
-- 'hemorrhagic disorder due to a platelet anomaly' SubClassOf 'hemorrhagic disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3319
-Label(s): Congenital amegakaryocytic thrombocytopenia 
-+ 'Congenital amegakaryocytic thrombocytopenia' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3320
-Label(s): Thrombocytopenia - absent radius 
-+ 'Thrombocytopenia - absent radius' SubClassOf 'Rare hemorrhagic disorder due to a constitutional thrombocytopenia'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3324
-Label(s): Familial thrombomodulin anomalies 
-- 'Familial thrombomodulin anomalies' SubClassOf 'thrombotic disorder due to a coagulation factors defect'
-
-Class: http://www.orpha.net/ORDO/Orphanet_324588
-Label(s): Familial dyskinesia and facial myokymia 
-+ 'Familial dyskinesia and facial myokymia' SubClassOf 'movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_180766
-Label(s): Malformative syndrome with dentinogenesis imperfecta 
-- 'Malformative syndrome with dentinogenesis imperfecta' SubClassOf 'Rare genetic odontologic disease'
-+ 'Malformative syndrome with dentinogenesis imperfecta' SubClassOf 'Rare genetic odontologic disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000464
-Label(s): PEComa 
-- 'PEComa' SubClassOf 'Soft Tissue Neoplasm'
-+ 'PEComa' SubClassOf 'Soft Tissue Neoplasm'
-
-Class: http://www.orpha.net/ORDO/Orphanet_182050
-Label(s): MYH9-related disease 
-+ 'MYH9-related disease' SubClassOf 'inherited bleeding disorder, platelet-type'
-
-Class: http://www.orpha.net/ORDO/Orphanet_806
-Label(s): Scott syndrome 
-- 'Scott syndrome' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_884
-Label(s): Tetrasomy 12p 
-- 'Tetrasomy 12p' SubClassOf 'tetrasomy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016767
-Label(s): cutaneous lichen planus 
-- 'cutaneous lichen planus' SubClassOf 'lichen planus'
-- 'cutaneous lichen planus' SubClassOf 'has modifier' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016632
-Label(s): thrombotic disorder due to a coagulation factors defect 
-- 'thrombotic disorder due to a coagulation factors defect' SubClassOf 'blood coagulation disease'
-- 'thrombotic disorder due to a coagulation factors defect' SubClassOf 'thrombotic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011182
-Label(s): trimethylaminuria 
-- 'trimethylaminuria' SubClassOf 'genetic disorder'
-+ 'trimethylaminuria' SubClassOf 'Dimethylglycine dehydrogenase deficiency'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99330
-Label(s): 49,XYYYY syndrome 
-+ '49,XYYYY syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700085
-
-Class: http://www.orpha.net/ORDO/Orphanet_906
-Label(s): Wiskott-Aldrich syndrome 
-+ 'Wiskott-Aldrich syndrome' SubClassOf 'Rare genetic coagulation disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006342
-Label(s): aggressive periodontitis 
-- 'aggressive periodontitis' SubClassOf 'Rare genetic odontologic disease'
-+ 'aggressive periodontitis' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_53372
-Label(s): Hereditary geniospasm 
-- 'Hereditary geniospasm' SubClassOf 'Rare genetic movement disorder'
-- 'Hereditary geniospasm' SubClassOf 'Rare genetic tremor disorder'
-+ 'Hereditary geniospasm' SubClassOf 'movement disorder'
-+ 'Hereditary geniospasm' SubClassOf 'Rare genetic tremor disorder'
-+ 'Hereditary geniospasm' SubClassOf 'has modifier' some 'rare'
-
-Class: http://www.orpha.net/ORDO/Orphanet_88661
-Label(s): Amelogenesis imperfecta 
-- 'Amelogenesis imperfecta' SubClassOf 'Rare genetic odontologic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011071
-Label(s): hereditary thrombocytopenia and hematologic cancer predisposition syndrome 
-+ 'hereditary thrombocytopenia and hematologic cancer predisposition syndrome' SubClassOf 'Rare genetic coagulation disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021064
-Label(s): jugulotympanic paraganglioma 
-- 'jugulotympanic paraganglioma' SubClassOf 'genetic vascular tumor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021053
-Label(s): carotid body paraganglioma 
-- 'carotid body paraganglioma' SubClassOf 'genetic vascular tumor'
-
-Class: http://www.orpha.net/ORDO/Orphanet_137608
-Label(s): Segmental outgrowth - lipomatosis - arteriovenous malformation - epidermal nevus 
-- 'Segmental outgrowth - lipomatosis - arteriovenous malformation - epidermal nevus' SubClassOf 'genetic vascular tumor'
-+ 'Segmental outgrowth - lipomatosis - arteriovenous malformation - epidermal nevus' SubClassOf 'vascular neoplasm'
-+ 'Segmental outgrowth - lipomatosis - arteriovenous malformation - epidermal nevus' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008828
-Label(s): camptodactyly-arthropathy-coxa vara-pericarditis syndrome 
-- 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'hereditary connective tissue disorder'
-- 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'has modifier' some 'rare'
-- 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'autosomal recessive disease'
-- 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'Rare genetic systemic or rheumatologic disease'
-- 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'rheumatic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015119
-Label(s): bronchopulmonary tumor 
-- 'bronchopulmonary tumor' SubClassOf 'respiratory system neoplasm'
-- 'bronchopulmonary tumor' SubClassOf 'has modifier' some 'rare'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1077
-Label(s): Dental ankylosis 
-- 'Dental ankylosis' SubClassOf 'Rare genetic odontologic disease'
-+ 'Dental ankylosis' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_100071
-Label(s): Mosaic trisomy 3 
-+ 'Mosaic trisomy 3' SubClassOf 'trisomy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016635
-Label(s): thrombotic disorder due to a platelet anomaly 
-- 'thrombotic disorder due to a platelet anomaly' SubClassOf 'thrombotic disease'
-- 'thrombotic disorder due to a platelet anomaly' SubClassOf 'blood coagulation disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_263746
-Label(s): Y chromosome number anomaly 
-- 'Y chromosome number anomaly' SubClassOf 'aneuploidy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011581
-Label(s): arrhythmogenic cardiomyopathy with woolly hair and keratoderma 
-- 'arrhythmogenic cardiomyopathy with woolly hair and keratoderma' SubClassOf 'Focal palmoplantar keratoderma'
-- 'arrhythmogenic cardiomyopathy with woolly hair and keratoderma' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-- 'arrhythmogenic cardiomyopathy with woolly hair and keratoderma' SubClassOf 'syndrome with woolly hair'
-+ 'arrhythmogenic cardiomyopathy with woolly hair and keratoderma' SubClassOf 'syndrome with woolly hair'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99776
-Label(s): Mosaic trisomy 9 
-+ 'Mosaic trisomy 9' SubClassOf 'trisomy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0054591
-Label(s): Stankiewicz-Isidor syndrome 
-+ 'Stankiewicz-Isidor syndrome' SubClassOf 'nervous system disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2024
-Label(s): Hereditary gingival fibromatosis 
-- 'Hereditary gingival fibromatosis' SubClassOf 'Rare genetic odontologic disease'
-+ 'Hereditary gingival fibromatosis' SubClassOf 'has modifier' some 'rare'
-
-Class: http://www.orpha.net/ORDO/Orphanet_140436
-Label(s): Primary intraosseous vascular malformation 
-- 'Primary intraosseous vascular malformation' SubClassOf 'genetic vascular tumor'
-+ 'Primary intraosseous vascular malformation' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019098
-Label(s): autoimmune thrombocytopenia 
-- 'autoimmune thrombocytopenia' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000355
-Label(s): Malignant Mesothelioma 
-- 'Malignant Mesothelioma' SubClassOf 'bronchopulmonary tumor'
-- 'Malignant Mesothelioma' SubClassOf 'respiratory system cancer'
-+ 'Malignant Mesothelioma' SubClassOf 'cancer'
-+ 'Malignant Mesothelioma' SubClassOf 'respiratory system disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_99797
-Label(s): Anodontia 
-- 'Anodontia' SubClassOf 'Rare genetic odontologic disease'
-+ 'Anodontia' SubClassOf 'tooth disease'
-+ 'Anodontia' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_167759
-Label(s): Hereditary dentin defect 
-- 'Hereditary dentin defect' SubClassOf 'Rare genetic odontologic disease'
-+ 'Hereditary dentin defect' SubClassOf 'tooth disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_79430
-Label(s): Hermansky-Pudlak syndrome 
-+ 'Hermansky-Pudlak syndrome' SubClassOf 'Rare genetic coagulation disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_98810
-Label(s): Paroxysmal non-kinesigenic dyskinesia 
-- 'Paroxysmal non-kinesigenic dyskinesia' SubClassOf 'Paroxysmal dyskinesia'
-+ 'Paroxysmal non-kinesigenic dyskinesia' SubClassOf 'Paroxysmal dyskinesia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015523
-Label(s): epithelioid hemangioendothelioma 
-- 'epithelioid hemangioendothelioma' SubClassOf 'genetic vascular tumor'
-+ 'epithelioid hemangioendothelioma' SubClassOf 'has modifier' some 'rare'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2229
-Label(s): Dilated cardiomyopathy - hypergonadotropic hypogonadism 
-- 'Dilated cardiomyopathy - hypergonadotropic hypogonadism' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Dilated cardiomyopathy - hypergonadotropic hypogonadism' SubClassOf 'endocrine system disease'
-+ 'Dilated cardiomyopathy - hypergonadotropic hypogonadism' SubClassOf 'male reproductive system disease'
-+ 'Dilated cardiomyopathy - hypergonadotropic hypogonadism' SubClassOf 'heart disease'
-+ 'Dilated cardiomyopathy - hypergonadotropic hypogonadism' SubClassOf 'has modifier' some 'rare'
-+ 'Dilated cardiomyopathy - hypergonadotropic hypogonadism' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008734
-Label(s): adrenocortical carcinoma, hereditary 
-- 'adrenocortical carcinoma, hereditary' SubClassOf 'genetic vascular tumor'
-
-Class: http://www.orpha.net/ORDO/Orphanet_1493
-Label(s): Vici syndrome 
-- 'Vici syndrome' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Vici syndrome' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_216812
-Label(s): Osteogenesis imperfecta type 3 
-- 'Osteogenesis imperfecta type 3' SubClassOf 'Rare genetic odontologic disease'
-
-Class: http://www.orpha.net/ORDO/Orphanet_93256
-Label(s): Fragile X-associated tremor/ataxia syndrome 
-+ 'Fragile X-associated tremor/ataxia syndrome' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2590
-Label(s): Hereditary myoclonus - progressive distal muscular atrophy 
-- 'Hereditary myoclonus - progressive distal muscular atrophy' SubClassOf 'Rare genetic tremor disorder'
-+ 'Hereditary myoclonus - progressive distal muscular atrophy' SubClassOf 'movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_8
-Label(s): 47,XYY syndrome 
-- '47,XYY syndrome' SubClassOf 'syndromic disease'
-+ '47,XYY syndrome' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3309
-Label(s): Tetrasomy 5p 
-- 'Tetrasomy 5p' SubClassOf 'tetrasomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_96195
-Label(s): Paternal uniparental disomy of chromosome 21 
-+ 'Paternal uniparental disomy of chromosome 21' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003857
-Label(s): arthrogryposis 
-- 'arthrogryposis' SubClassOf 'Rare genetic movement disorder'
-- 'arthrogryposis' SubClassOf 'Rare genetic tremor disorder'
-+ 'arthrogryposis' SubClassOf 'movement disorder'
-+ 'arthrogryposis' SubClassOf 'Rare genetic neurological disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_75501
-Label(s): Ehlers-Danlos syndrome, fibronectinemic type 
-- 'Ehlers-Danlos syndrome, fibronectinemic type' SubClassOf 'hemorrhagic disorder due to a platelet anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_3380
-Label(s): Trisomy 18 
-+ 'Trisomy 18' SubClassOf 'trisomy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_369847
-Label(s): Intellectual disability-hyperkinetic movement-truncal ataxia syndrome 
-- 'Intellectual disability-hyperkinetic movement-truncal ataxia syndrome' SubClassOf 'Rare genetic tremor disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_59306
-Label(s): McLeod neuroacanthocytosis syndrome 
-- 'McLeod neuroacanthocytosis syndrome' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'McLeod neuroacanthocytosis syndrome' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007458
-Label(s): pulmonary blastoma 
-- 'pulmonary blastoma' SubClassOf 'bronchopulmonary tumor'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003759
-Label(s): pervasive developmental disorder - not otherwise specified 
-- 'pervasive developmental disorder - not otherwise specified' SubClassOf 'autism spectrum disorder'
-+ 'pervasive developmental disorder - not otherwise specified' SubClassOf 'autism spectrum disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_251004
-Label(s): Paternal uniparental disomy of chromosome 1 
-+ 'Paternal uniparental disomy of chromosome 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://www.orpha.net/ORDO/Orphanet_79159
-Label(s): Isobutyryl-CoA dehydrogenase deficiency 
-- 'Isobutyryl-CoA dehydrogenase deficiency' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Isobutyryl-CoA dehydrogenase deficiency' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_412206
-Label(s): Primary failure of tooth eruption 
-- 'Primary failure of tooth eruption' SubClassOf 'Rare genetic odontologic disease'
-+ 'Primary failure of tooth eruption' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2287
-Label(s): Fused mandibular incisors 
-- 'Fused mandibular incisors' SubClassOf 'Rare genetic odontologic disease'
-+ 'Fused mandibular incisors' SubClassOf 'genetic disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_66633
-Label(s): Sensorineural hearing loss - early graying - essential tremor 
-- 'Sensorineural hearing loss - early graying - essential tremor' SubClassOf 'Rare genetic tremor disorder'
-- 'Sensorineural hearing loss - early graying - essential tremor' SubClassOf 'Rare genetic movement disorder'
-+ 'Sensorineural hearing loss - early graying - essential tremor' SubClassOf 'Rare genetic tremor disorder'
-+ 'Sensorineural hearing loss - early graying - essential tremor' SubClassOf 'movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_73
-Label(s): Gorham-Stout disease 
-- 'Gorham-Stout disease' SubClassOf 'genetic vascular tumor'
-+ 'Gorham-Stout disease' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2515
-Label(s): Microcephaly - cardiomyopathy 
-- 'Microcephaly - cardiomyopathy' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-+ 'Microcephaly - cardiomyopathy' SubClassOf 'Syndrome associated with dilated cardiomyopathy'
-
-Class: http://www.orpha.net/ORDO/Orphanet_11
-Label(s): Pentasomy X 
-+ 'Pentasomy X' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700085
-
-Class: http://www.orpha.net/ORDO/Orphanet_251009
-Label(s): Maternal uniparental disomy of chromosome 1 
-+ 'Maternal uniparental disomy of chromosome 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700086
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003122
-Label(s): striatonigral degeneration 
-- 'striatonigral degeneration' SubClassOf 'Rare genetic tremor disorder'
-- 'striatonigral degeneration' SubClassOf 'Rare genetic movement disorder'
-
-Class: http://www.orpha.net/ORDO/Orphanet_171836
-Label(s): Amelogenesis imperfecta and gingival hyperplasia syndrome 
-- 'Amelogenesis imperfecta and gingival hyperplasia syndrome' SubClassOf 'Rare genetic odontologic disease'
-- 'Amelogenesis imperfecta and gingival hyperplasia syndrome' SubClassOf 'Rare odontal or periodontal disorder'
-+ 'Amelogenesis imperfecta and gingival hyperplasia syndrome' SubClassOf 'Amelogenesis imperfecta'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013324
-Label(s): lymphedema-posterior choanal atresia syndrome 
-- 'lymphedema-posterior choanal atresia syndrome' SubClassOf 'genetic vascular tumor'
-+ 'lymphedema-posterior choanal atresia syndrome' SubClassOf 'Genetic vascular anomaly'
-
-Class: http://www.orpha.net/ORDO/Orphanet_330
-Label(s): Congenital factor XII deficiency 
-- 'Congenital factor XII deficiency' SubClassOf 'thrombotic disorder due to a coagulation factors defect'
-
-Class: http://www.orpha.net/ORDO/Orphanet_2771
-Label(s): Bruck syndrome 
-- 'Bruck syndrome' SubClassOf 'Rare genetic odontologic disease'
+Class: http://www.orpha.net/ORDO/Orphanet_300284
+Label(s): Connective tissue disorder due to lysyl hydroxylase-3 deficiency 
++ 'Connective tissue disorder due to lysyl hydroxylase-3 deficiency' SubClassOf 'hereditary connective tissue disorder'
+
+Class: http://purl.obolibrary.org/obo/HP_0011999
+Label(s): Paranoia 
+- 'Paranoia' SubClassOf 'Behavioral abnormality'
++ 'Paranoia' SubClassOf http://purl.obolibrary.org/obo/HP_0000746
+
+Class: http://www.orpha.net/ORDO/Orphanet_79102
+Label(s): Thyrotoxic periodic paralysis 
+- 'Thyrotoxic periodic paralysis' SubClassOf 'familial periodic paralysis'
++ 'Thyrotoxic periodic paralysis' SubClassOf 'familial periodic paralysis'
+
+Class: http://www.orpha.net/ORDO/Orphanet_96201
+Label(s): X small rings 
++ 'X small rings' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1441
+Label(s): Ring chromosome 17 
++ 'Ring chromosome 17' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_96172
+Label(s): Ring chromosome 3 
++ 'Ring chromosome 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_96171
+Label(s): Ring chromosome 2 
++ 'Ring chromosome 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_26
+Label(s): Methylmalonic acidemia with homocystinuria 
+- 'Methylmalonic acidemia with homocystinuria' SubClassOf 'methylmalonic acidemia'
+- 'Methylmalonic acidemia with homocystinuria' SubClassOf 'homocystinuria'
++ 'Methylmalonic acidemia with homocystinuria' SubClassOf 'methylmalonic acidemia'
++ 'Methylmalonic acidemia with homocystinuria' SubClassOf 'homocystinuria'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1442
+Label(s): Ring chromosome 18 
++ 'Ring chromosome 18' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1444
+Label(s): Ring chromosome 20 
++ 'Ring chromosome 20' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_643
+Label(s): Giant axonal neuropathy 
+- 'Giant axonal neuropathy' SubClassOf 'axonal neuropathy'
++ 'Giant axonal neuropathy' SubClassOf 'axonal neuropathy'
+
+Class: http://www.orpha.net/ORDO/Orphanet_402003
+Label(s): Autosomal dominant focal non-epidermolytic palmoplantar keratoderma with plantar blistering 
+- 'Autosomal dominant focal non-epidermolytic palmoplantar keratoderma with plantar blistering' SubClassOf 'Non-epidermolytic palmoplantar keratoderma'
+- 'Autosomal dominant focal non-epidermolytic palmoplantar keratoderma with plantar blistering' SubClassOf 'Isolated focal palmoplantar keratoderma'
++ 'Autosomal dominant focal non-epidermolytic palmoplantar keratoderma with plantar blistering' SubClassOf 'Hereditary palmoplantar keratoderma'
++ 'Autosomal dominant focal non-epidermolytic palmoplantar keratoderma with plantar blistering' SubClassOf 'Isolated focal palmoplantar keratoderma'
+
+Class: http://www.orpha.net/ORDO/Orphanet_83473
+Label(s): Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus 
+- 'Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus' SubClassOf 'Polydactyly'
++ 'Megalencephaly - polymicrogyria - postaxial polydactyly - hydrocephalus' SubClassOf 'Polydactyly'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001502
+Label(s): rasopathy 
+- 'rasopathy' SubClassOf 'genetic disorder'
++ 'rasopathy' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007859
+Label(s): palmoplantar keratoderma i, striate, focal, or diffuse 
+- 'palmoplantar keratoderma i, striate, focal, or diffuse' SubClassOf 'striate palmoplantar keratoderma'
++ 'palmoplantar keratoderma i, striate, focal, or diffuse' SubClassOf 'Hereditary palmoplantar keratoderma'
+
+Class: http://purl.obolibrary.org/obo/HP_0002571
+Label(s): Achalasia Oesophageal achalasia 
++ 'Oesophageal achalasia' SubClassOf 'Abnormality of esophagus physiology'
+
+Class: http://www.orpha.net/ORDO/Orphanet_294939
+Label(s): Preaxial polydactyly of fingers 
+- 'Preaxial polydactyly of fingers' SubClassOf 'Polydactyly'
++ 'Preaxial polydactyly of fingers' SubClassOf 'Polydactyly'
+
+Class: http://www.orpha.net/ORDO/Orphanet_284993
+Label(s): Marfan and Marfan-related disorder 
++ 'Marfan and Marfan-related disorder' SubClassOf 'hereditary connective tissue disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007467
+Label(s): Reye syndrome 
++ 'Reye syndrome' SubClassOf 'rheumatic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000060
+Label(s): microcephalic osteodysplastic primordial dwarfism 
+- 'microcephalic osteodysplastic primordial dwarfism' SubClassOf 'microcephaly'
++ 'microcephalic osteodysplastic primordial dwarfism' SubClassOf 'microcephaly'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2340
+Label(s): Keratosis follicularis spinulosa decalvans 
+- 'Keratosis follicularis spinulosa decalvans' SubClassOf 'folliculitis'
+- 'Keratosis follicularis spinulosa decalvans' SubClassOf 'keratosis'
++ 'Keratosis follicularis spinulosa decalvans' SubClassOf 'keratosis'
++ 'Keratosis follicularis spinulosa decalvans' SubClassOf 'folliculitis'
+
+Class: http://www.orpha.net/ORDO/Orphanet_300382
+Label(s): Progeroid and marfanoid aspect-lipodystrophy syndrome 
++ 'Progeroid and marfanoid aspect-lipodystrophy syndrome' SubClassOf 'hereditary connective tissue disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_1440
+Label(s): Ring chromosome 14 
++ 'Ring chromosome 14' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_1449
+Label(s): Ring chromosome 7 
++ 'Ring chromosome 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://purl.obolibrary.org/obo/HP_0031685
+Label(s): Abnormal stool composition 
++ 'Abnormal stool composition' SubClassOf 'Abnormality of metabolism/homeostasis'
+
+Class: http://www.orpha.net/ORDO/Orphanet_2380
+Label(s): Legg-Calvé-Perthes disease 
+- 'Legg-Calvé-Perthes disease' SubClassOf 'collagenopathy type 2 alpha 1'
+- 'Legg-Calvé-Perthes disease' SubClassOf 'Type 2 collagen-related bone disorder'
+- 'Legg-Calvé-Perthes disease' SubClassOf 'Osteochondrosis of genetic origin'
++ 'Legg-Calvé-Perthes disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0044988
++ 'Legg-Calvé-Perthes disease' SubClassOf 'disease has feature' some 'osteonecrosis'
++ 'Legg-Calvé-Perthes disease' SubClassOf 'Osteonecrosis of genetic origin'
++ 'Legg-Calvé-Perthes disease' SubClassOf 'Type 2 collagen-related bone disorder'
+
+Class: http://www.orpha.net/ORDO/Orphanet_96175
+Label(s): Ring chromosome 11 
++ 'Ring chromosome 11' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://www.orpha.net/ORDO/Orphanet_52430
+Label(s): Inclusion body myopathy with Paget disease of bone and frontotemporal dementia 
+- 'Inclusion body myopathy with Paget disease of bone and frontotemporal dementia' SubClassOf 'Frontotemporal dementia'
++ 'Inclusion body myopathy with Paget disease of bone and frontotemporal dementia' SubClassOf 'Frontotemporal dementia'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000722
+Label(s): Kimura disease 
+- 'Kimura disease' SubClassOf 'skin disease'
+- 'Kimura disease' SubClassOf 'systemic disease'
++ 'Kimura disease' SubClassOf 'type II hypersensitivity reaction disease'
++ 'Kimura disease' SubClassOf 'skin disease'
++ 'Kimura disease' SubClassOf 'lymphadenitis'
+
+Class: http://www.orpha.net/ORDO/Orphanet_397750
+Label(s): Periodic paralysis with later-onset distal motor neuropathy 
++ 'Periodic paralysis with later-onset distal motor neuropathy' SubClassOf 'congenital nervous system disorder'
++ 'Periodic paralysis with later-onset distal motor neuropathy' SubClassOf 'neuromuscular disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_75377
+Label(s): Central areolar choroidal dystrophy 
+- 'Central areolar choroidal dystrophy' SubClassOf 'optic choroid disease'
++ 'Central areolar choroidal dystrophy' SubClassOf 'optic choroid disease'
+
+Class: http://www.orpha.net/ORDO/Orphanet_251043
+Label(s): Ring chromosome 5 
++ 'Ring chromosome 5' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700091
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008278
+Label(s): juvenile polyposis/hereditary hemorrhagic telangiectasia syndrome 
+- 'juvenile polyposis/hereditary hemorrhagic telangiectasia syndrome' SubClassOf 'Juvenile polyposis syndrome'
++ 'juvenile polyposis/hereditary hemorrhagic telangiectasia syndrome' SubClassOf 'Genetic intestinal polyposis'
++ 'juvenile polyposis/hereditary hemorrhagic telangiectasia syndrome' SubClassOf 'intestinal polyposis syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000824
+Label(s): congenital diarrhea 
+- 'congenital diarrhea' SubClassOf 'diarrheal disease'
++ 'congenital diarrhea' SubClassOf 'diarrheal disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000819
+Label(s): anencephaly 
++ 'anencephaly' SubClassOf 'Rare genetic neurological disorder'
 
 ----------------------------------
 
@@ -1178,45 +714,11 @@ Label(s): Bruck syndrome
 
 @Classes deleted from this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018729
-Label(s): genetic vascular tumor 
-+ 'genetic vascular tumor' EquivalentTo 'vascular neoplasm' and ('has modifier' some 'inherited')
-+ 'genetic vascular tumor' SubClassOf 'vascular neoplasm'
-+ 'genetic vascular tumor' SubClassOf 'Genetic vascular anomaly'
+@Classes deleted from this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0016629
-Label(s): hemorrhagic disorder due to a platelet anomaly 
-+ 'hemorrhagic disorder due to a platelet anomaly' SubClassOf 'hemorrhagic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016767
-Label(s): cutaneous lichen planus 
-+ 'cutaneous lichen planus' SubClassOf 'lichen planus'
-+ 'cutaneous lichen planus' SubClassOf 'has modifier' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016632
-Label(s): thrombotic disorder due to a coagulation factors defect 
-+ 'thrombotic disorder due to a coagulation factors defect' SubClassOf 'blood coagulation disease'
-+ 'thrombotic disorder due to a coagulation factors defect' SubClassOf 'thrombotic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008828
-Label(s): camptodactyly-arthropathy-coxa vara-pericarditis syndrome 
-+ 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'hereditary connective tissue disorder'
-+ 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'has modifier' some 'rare'
-+ 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'autosomal recessive disease'
-+ 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'Rare genetic systemic or rheumatologic disease'
-+ 'camptodactyly-arthropathy-coxa vara-pericarditis syndrome' SubClassOf 'rheumatic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015119
-Label(s): bronchopulmonary tumor 
-+ 'bronchopulmonary tumor' SubClassOf 'respiratory system neoplasm'
-+ 'bronchopulmonary tumor' SubClassOf 'has modifier' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016635
-Label(s): thrombotic disorder due to a platelet anomaly 
-+ 'thrombotic disorder due to a platelet anomaly' SubClassOf 'thrombotic disease'
-+ 'thrombotic disorder due to a platelet anomaly' SubClassOf 'blood coagulation disease'
-
-
+Class: http://purl.obolibrary.org/obo/MONDO_0018865
+Label(s): striate palmoplantar keratoderma 
++ 'striate palmoplantar keratoderma' SubClassOf 'Isolated focal palmoplantar keratoderma'
 
 ----------------------------------
 4. Scope of the Ontology
