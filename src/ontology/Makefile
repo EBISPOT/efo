@@ -34,7 +34,7 @@ HANCESTROGENERATED= ./build/efo-hancestro
 # Top-level targets
 # ----------------------------------------
 
-all: all_imports all_components release qc
+all: all_imports all_gwas all_components release qc
 qc: sparql_test all_reports
 gh_actions: qc $(BUILDDIR)/$(ONT).owl
 
@@ -398,4 +398,15 @@ reports/report-%.tsv: $(SRC)
 	
 trait_reports: reports/report-defs-without-genus.tsv reports/report-measurement-is-about.tsv reports/report-defs-without-genus-no-isabout.tsv
 
+	# ----------------------------------------
+	# GWAS trait tagging
+	# ----------------------------------------
+	
+all_gwas: components/gwas_import.owl
+	
+components/gwas_template.owl: $(SRC) iri_dependencies/gwas_terms.tsv
+	$(ROBOT) template --input $< -t iri_dependencies/gwas_terms.tsv query -c $(SPARQLDIR)/gwas_trait.ru $@
 
+components/gwas_import.owl: components/gwas_template.owl
+	$(ROBOT) annotate -i $< -O "http://www.ebi.ac.uk/efo/components/gwas_import.owl" -o $@
+	rm components/gwas_template.owl
