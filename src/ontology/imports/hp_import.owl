@@ -548,20 +548,36 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000046">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000078"/>
+        <obo:IAO_0000115>Apparently small scrotum for age.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0030276</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:204912007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0431659</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoplastic scrotum</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Scrotal hypoplasia</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Smaller than typical growth of scrotum</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym>Underdeveloped scrotum</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000046</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scrotal hypoplasia</rdfs:label>
+        <rdfs:comment>A small scrotum is often accompanied by Cryptorchidism which should be coded separately. The size of the scrotum is dependent on the ambient temperature: a low temperature may cause the testes to retract, leading to the false impression of a small scrotum.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small scrotum</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000046"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Apparently small scrotum for age.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:23650202</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000046"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Smaller than typical growth of scrotum</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6548-5200</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000046"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Underdeveloped scrotum</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -1555,6 +1571,13 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000155"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Mouth ulcer</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000155"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erosion of the mucous mebrane of the mouth with local excavation of the surface, resulting from the sloughing of inflammatory necrotic tissue.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
@@ -1563,13 +1586,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000155"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>Mouth sore</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000155"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Mouth ulcer</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ORCID:0000-0001-5889-4463</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
@@ -1592,6 +1608,12 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the tongue</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality of the tongue.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -1622,12 +1644,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tongue abnormality</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000157"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality of the tongue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3557,16 +3573,15 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000209</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4025870</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormality of the lower jaw bone</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the mandible</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormality of the mandible</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Anomaly of the mandible</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Deformity of the lower jaw bone</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Deformity of the mandible</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Malformation of the lower jaw bone</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Malformation of the mandible</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000277</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the mandible</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal mandible morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000277"/>
@@ -3584,7 +3599,7 @@ applied inaccurately.</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000277"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the mandible</owl:annotatedTarget>
+        <owl:annotatedTarget>Abnormality of the mandible</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -5219,10 +5234,9 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of ear lobe</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of earlobe</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormality of lobulus auriculae</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000363</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of earlobe</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal earlobe morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000363"/>
@@ -6844,7 +6858,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym>Anomaly of the neck</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Deformity of the neck</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Malformation of the neck</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000464</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the neck</rdfs:label>
@@ -7056,25 +7069,28 @@ applied inaccurately.</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000474">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000464"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001197"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thickening of the skin thickness in the posterior aspect of the fetal neck. A nuchal fold measurement is obtained in a transverse section of the fetal head at the level of the cavum septum pellucidum and thalami, angled posteriorly to include the cerebellum. The measurement is taken from the outer edge of the occiput bone to the outer skin limit directly in the midline. A measurement 6 mm or more is considered significant between 18 and 24 weeks and a measurement of 5 mm or more is considered significant at 16 to 18 weeks (PMID:16100637).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thickening of the skin thickness in the posterior aspect of the fetal neck. A nuchal fold (NF) measurement is obtained in a transverse section of the fetal head at the level of the cavum septum pellucidum and thalami, angled posteriorly to include the cerebellum. The measurement is taken from the outer edge of the occiput bone to the outer skin limit directly in the midline. An NF measurement greater than 5 mm at 14 to 17+6 weeks of gestation, or 6 mm at 18 to 28 weeks has been associated with a markedly increased risk for Down syndrome.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000477</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1836940</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Excess nuchal skin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased nuchal fold</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Increased nuchal fold thickness</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Thick nuchal fold</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Thickened nuchal skin</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Thickened skin folds of neck</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Thickened skin over the neck</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000474</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thickened nuchal fold should be distinguished from cystic hygroma, in which the skin in this area has fluid-filled loculations. A thickened nuchal fold should not be confused with nuchal translucency, which is a specific measurement of fluid in the posterior aspect of the neck at 11 to 14 weeks gestation (see practice guidelines at http://www.sogc.org).</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The measurement of nuchal fold (NF) thickness during the second trimester is considered to be one of the most sensitive and specific isolated ultrasound marker for the identification of suspected cases of trisomy 21. Thick NF may also be seen in other aneuploidies as well as Turner&apos;s syndrome, Noonan&apos;s syndrome, Roberts syndrome, Zellweger syndrome and with congenital heart disease and with pathogenic CNVs. A thickened nuchal fold should be distinguished from cystic hygroma, in which the skin in this area has fluid-filled loculations. A thickened nuchal fold should not be confused with nuchal translucency, which is a specific measurement of fluid in the posterior aspect of the neck at 11 to 14 weeks gestation (see practice guidelines at http://www.sogc.org).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thickened nuchal skin fold</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000474"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thickening of the skin thickness in the posterior aspect of the fetal neck. A nuchal fold measurement is obtained in a transverse section of the fetal head at the level of the cavum septum pellucidum and thalami, angled posteriorly to include the cerebellum. The measurement is taken from the outer edge of the occiput bone to the outer skin limit directly in the midline. A measurement 6 mm or more is considered significant between 18 and 24 weeks and a measurement of 5 mm or more is considered significant at 16 to 18 weeks (PMID:16100637).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thickening of the skin thickness in the posterior aspect of the fetal neck. A nuchal fold (NF) measurement is obtained in a transverse section of the fetal head at the level of the cavum septum pellucidum and thalami, angled posteriorly to include the cerebellum. The measurement is taken from the outer edge of the occiput bone to the outer skin limit directly in the midline. An NF measurement greater than 5 mm at 14 to 17+6 weeks of gestation, or 6 mm at 18 to 28 weeks has been associated with a markedly increased risk for Down syndrome.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:16100637</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:30431620</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000474"/>
@@ -8791,7 +8807,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:563001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0028738</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Involuntary, rapid, rhythmic eye movements</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000639</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nystagmus</rdfs:label>
@@ -10766,14 +10781,13 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0000817 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000817">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000735"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000758"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Difficulty in looking at another person in the eye.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:412786000</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1445953</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poor eye contact</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000817</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eye contact, define as the meeting of the gaze between two people during a conversation, is an important form of nonverbal communication.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eye contact, defined as the meeting of the gaze between two people during a conversation, is an important form of nonverbal communication.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poor eye contact</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11022,7 +11036,6 @@ applied inaccurately.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001952"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011014"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C3278636</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000857</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neonatal insulin-dependent diabetes mellitus</rdfs:label>
     </owl:Class>
@@ -11443,9 +11456,8 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0037268</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0037274</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the skin</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermatopathy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermopathy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dermatopathy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dermopathy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skin abnormality</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000951</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
@@ -11466,13 +11478,13 @@ applied inaccurately.</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000951"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermatopathy</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dermatopathy</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:skoehler</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000951"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermopathy</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dermopathy</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:skoehler</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11807,6 +11819,12 @@ applied inaccurately.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Sweating, increased</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal excessive perspiration (sweating) despite the lack of appropriate stimuli like hot and humid weather.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
@@ -11848,12 +11866,6 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedTarget>Sweating profusely</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Sweating, increased</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
     
 
 
@@ -11884,6 +11896,12 @@ applied inaccurately.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000978"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ecchymosis (bruise) refers to the skin discoloration caused by the escape of blood into the tissues from ruptured blood vessels. This term refers to an abnormally increased susceptibility to bruising. The corresponding phenotypic abnormality is generally elicited on medical history as a report of frequent ecchymoses or bruising without adequate trauma.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000978"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Bruise easily</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ORCID:0000-0001-6908-9849</oboInOwl:hasDbXref>
@@ -11906,12 +11924,6 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Easy bruising</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000978"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ecchymosis (bruise) refers to the skin discoloration caused by the escape of blood into the tissues from ruptured blood vessels. This term refers to an abnormally increased susceptibility to bruising. The corresponding phenotypic abnormality is generally elicited on medical history as a report of frequent ecchymoses or bruising without adequate trauma.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12011,8 +12023,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym>Itching</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Itchy skin</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Skin itching</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>pruritis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000989</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pruritus</rdfs:label>
@@ -12241,7 +12251,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Striae</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Striae atrophicae</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Striae cutis distensae</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001065</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Striae distensae</rdfs:label>
@@ -14627,8 +14636,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0012691</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint dislocation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Joint dislocations</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recurrent joint dislocations</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001373</oboInOwl:id>
         <rdfs:comment>Dislocation is defined as a complete disruption of the joint and subluxation is defined as a partial dislocation followed by relocation.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint dislocation</rdfs:label>
@@ -14650,12 +14657,6 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Joint dislocations</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:skoehler</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001373"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recurrent joint dislocations</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -15691,7 +15692,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:389026000</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0003962</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Accumulation of fluid in the abdomen</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001541</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ascites is commonly associated with liver disease that has resulted in portal hypertension and low serum albumin levels.</rdfs:comment>
@@ -15760,7 +15760,6 @@ applied inaccurately.</rdfs:comment>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lack of symmetry between the left and right halves of the thorax.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1858033</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asymmetric chest</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001555</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asymmetry of the thorax</rdfs:label>
@@ -15985,7 +15984,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bell-shaped chest</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constricted, bell-shaped thorax</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narrow, bell-shaped thorax</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001591</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A bell-shaped thorax is a non-specific finding. In newborns, bell-spahed thorax can indicate a history of intrauterine neuromuscular abnormalities.</rdfs:comment>
@@ -16045,7 +16043,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4021777</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laryngeal abnormalities</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laryngeal anomalies</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001600</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the larynx</rdfs:label>
     </owl:Class>
@@ -16067,7 +16064,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:38086007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0264303</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Softening of voice box tissue</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001601</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laryngomalacia may affect the epiglottis, the arytenoid cartilages, or both. It is the most common cause of congenital stridor.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laryngomalacia</rdfs:label>
@@ -16784,7 +16780,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4025756</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormal aorta morphology</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormality of the aorta</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001679</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal aortic morphology</rdfs:label>
     </owl:Class>
@@ -17313,7 +17308,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syndactyly of feet</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syndactyly of toes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Webbed toes</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001770</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toe syndactyly</rdfs:label>
     </owl:Class>
@@ -18103,7 +18097,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the hematopoietic system</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haematological abnormality</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hematological abnormality</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hematologic disease</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001871</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The hematopoietic system comprises the organs that are involved in the production of blood, primarily the bone marrow, spleen, tonsils, and lymph nodes.</rdfs:comment>
@@ -20230,7 +20223,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym>Ataxia of gait</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ataxic gait</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Inability to coordinate movements when walking</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002066</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gait ataxia</rdfs:label>
     </owl:Class>
@@ -20890,7 +20882,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerebral cortex atrophy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cortical atrophy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Decrease in size of the outer layer of the brain due to loss of brain cells</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002120</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cortical atrophy is a finding that can be demonstrated by computer tomography or magnetic resonance imaging.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerebral cortical atrophy</rdfs:label>
@@ -21895,7 +21886,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:80515008</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0019209</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enlarged liver</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002240</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hepatomegaly</rdfs:label>
     </owl:Class>
@@ -23460,7 +23450,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:192965001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0426970</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spastic quadriplegia</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002510</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spastic tetraplegia</rdfs:label>
     </owl:Class>
@@ -23553,6 +23542,7 @@ applied inaccurately.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012443"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormality of the gyri (i.e., the ridges) of the cerebral cortex of the brain.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006900</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>Gyral disorganization</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1856019</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal gyration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerebral gyral anomalies</oboInOwl:hasExactSynonym>
@@ -23577,7 +23567,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0560046</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inability to walk</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-ambulatory</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002540</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inability to walk</rdfs:label>
     </owl:Class>
@@ -26287,7 +26276,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0020456</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>High blood glucose</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>High blood sugar</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003074</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperglycemia</rdfs:label>
     </owl:Class>
@@ -30032,7 +30020,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toe syndactyly, 2-3</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Webbed 2nd and 3rd toes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partial or complete syndactyly 2nd-3rd toes</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004691</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-3 toe syndactyly</rdfs:label>
     </owl:Class>
@@ -30914,7 +30901,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:17369002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0000786</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Miscarriage</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0005268</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spontaneous abortion</rdfs:label>
     </owl:Class>
@@ -32754,7 +32740,6 @@ applied inaccurately.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002540"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1859200</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inability to walk by childhood/adolescence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006915</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inability to walk by childhood/adolescence</rdfs:label>
     </owl:Class>
@@ -32839,7 +32824,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:394680009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1273957</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Uncontrollable movement in upper arms</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0006986</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upper limb spasticity</rdfs:label>
     </owl:Class>
@@ -33126,7 +33110,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frontal lobe hypoplasia</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoplastic frontal lobes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Underdeveloped frontal lobe</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0007333</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoplasia of the frontal lobes</rdfs:label>
     </owl:Class>
@@ -35753,7 +35736,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-01-31T12:03:16Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1968959</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0009717</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cortical tubers</rdfs:label>
     </owl:Class>
@@ -35913,7 +35895,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Large earlobe</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prominent ear lobes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prominent ear lobules</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0009748</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All gradations in size of the earlobe may be seen from absent to clearly enlarged compared to average. This finding is highly variable. Lobe size increases throughout adulthood.</rdfs:comment>
@@ -36099,7 +36080,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1834062</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Webbed 3rd-4th toes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">syndactyly of 3rd - 4th toes</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0009779</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-4 toe syndactyly</rdfs:label>
     </owl:Class>
@@ -36498,7 +36478,6 @@ to develop</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4021375</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adherent earlobe</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attached earlobe</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0009907</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The earlobe does not have a dependent portion.</rdfs:comment>
@@ -36530,7 +36509,6 @@ to develop</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1851897</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earlobe crease</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transverse earlobe creases</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0009908</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shallow grooves or indentations are quite common, especially in large lobes. Ear lobe creases may arise postnatally. Posterior helical pits can be a related finding but should be assessed and coded separately.</rdfs:comment>
@@ -36800,6 +36778,7 @@ to develop</owl:annotatedTarget>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000924"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002817"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003026"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040064"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040070"/>
@@ -36822,7 +36801,6 @@ to develop</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>Shortened long bones of hand</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shortened metacarpals</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shortening of metacarpals</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Short metacarpal bones</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0010049</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
@@ -36867,7 +36845,6 @@ to develop</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym>Broad bone of big toe</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broad phalanges of the hallux</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Wide bone of big toe</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0010059</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broad hallux phalanx</rdfs:label>
     </owl:Class>
@@ -37325,7 +37302,6 @@ to develop</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cutaneous syndactyly of hands</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Webbed fingers</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Webbed skin of fingers</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0010554</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We have set an arguably arbitrary threshold to distinguish the object form the subjective finding. While severe degrees of cutaneous syndactyly are clearly objective, more subtle degrees are subjective. We set this threshold to distinguish these two situations. The digits (or parts of) are joined together by tissue that is not normally present between the digits at that point in the P/D axis. A modifier of &quot;complete&quot; may be used if the cutaneous syndactyly extends to the distal end of the nail bed of the digits. The affected digits should be specified. Note that the unqualified term &quot;syndactyly&quot; is no longer allowed as it is unclear whether this refers to bony or cutaneous syndactyly.</rdfs:comment>
@@ -39113,7 +39089,7 @@ to develop</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0349391</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apraxia of speech</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbal dyspraxia</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speech dyspraxia</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0011098</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speech apraxia may co-occur with oral apraxia and limb apraxia.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speech apraxia</rdfs:label>
@@ -40945,10 +40921,10 @@ to develop</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-05-07T08:08:37Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4023165</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormality of skeletal morphology</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormally shaped skeletal</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0011842</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of skeletal morphology</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal skeletal morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
@@ -43490,13 +43466,28 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012758">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012759"/>
+        <obo:IAO_0000115>Neurodevelopmental delay (NDD) refers to delays in the maturation of the brain and central nervous system; infants and young children with NDD may experience delays in the development of one or more skills including gross motor abilities, fine-motor coordination, language abilities and ability to solve increasingly complex problems.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-04-03T12:16:19Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4022738</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym>NDD</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0012758</oboInOwl:id>
+        <rdfs:comment>Though the definitions of NDD vary broadly in the literature, all are used to signify a delay in one or more developmental domains compared to typical development.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurodevelopmental delay</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012758"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Neurodevelopmental delay (NDD) refers to delays in the maturation of the brain and central nervous system; infants and young children with NDD may experience delays in the development of one or more skills including gross motor abilities, fine-motor coordination, language abilities and ability to solve increasingly complex problems.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-6670-9157</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:31783983</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012758"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>NDD</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#abbreviation"/>
+    </owl:Axiom>
     
 
 
@@ -43530,7 +43521,6 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hecht</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-04-06T10:55:36Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4022735</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0012762</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerebral white matter atrophy</rdfs:label>
     </owl:Class>
@@ -44435,33 +44425,10 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0030276 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030276">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000078"/>
-        <obo:IAO_0000115>Apparently small scrotum for age.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:204912007</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0431659</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small scrotum</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Underdeveloped scrotum</oboInOwl:hasExactSynonym>
-        <rdfs:comment>A small scrotum is often accompanied by Cryptorchidism which should be coded separately. The size of the scrotum is dependent on the ambient temperature: a low temperature may cause the testes to retract, leading to the false impression of a small scrotum.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small scrotum</rdfs:label>
+        <obo:IAO_0100001>HP:0000046</obo:IAO_0100001>
+        <rdfs:label>obsolete Small scrotum</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030276"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Apparently small scrotum for age.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:23650202</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030276"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small scrotum</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030276"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Underdeveloped scrotum</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
     
 
 
@@ -45600,25 +45567,16 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/HP_0040083 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0040083">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:skoehler</oboInOwl:created_by>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:250018006</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0427144</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toe walking</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Toe-walking</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toe walking</rdfs:label>
+        <obo:IAO_0000115>Toe walking is a pattern of walking in which a person walks on balls of his or her feet, with no contact between the heels and ground. Toe-walking is common in children who are learning to walk, but most children outgrow it around the age of two years. This term refers to the persistance of toe-walking beyond the usual age.</obo:IAO_0000115>
+        <obo:IAO_0100001>HP:0030051</obo:IAO_0100001>
+        <rdfs:label>obsolete Toe walking</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040083"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toe walking</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040083"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Toe-walking</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Toe walking is a pattern of walking in which a person walks on balls of his or her feet, with no contact between the heels and ground. Toe-walking is common in children who are learning to walk, but most children outgrow it around the age of two years. This term refers to the persistance of toe-walking beyond the usual age.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:26709689</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46068,7 +46026,6 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0265554</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Cleft hand</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Lobster claw hand</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0100257</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hands and feet in one individual might be similarly affected or very diverse and the phenotype is very variable even within families. Penetrance is reduced and some idnividuals have been observed presenting only with unilateral smaller 2nd toe which may be overlooked till a much more severly affected family member is seen.</rdfs:comment>
@@ -47658,12 +47615,19 @@ Additionally, the headaches cannot attributed to another disorder.</rdfs:comment
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002817"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011805"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040064"/>
+        <obo:IAO_0000115>Increased muscle tone observed in the arms of the affected person.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">koehlers</oboInOwl:created_by>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4021898</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0200049</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upper limb hypertonia</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0200049"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Increased muscle tone observed in the arms of the affected person.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-6670-9157</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:21642056</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
