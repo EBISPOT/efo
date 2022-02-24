@@ -8,6 +8,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://www.ebi.ac.uk/efo/imports/cl_import.owl"/>
     
@@ -24,6 +25,18 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -36,9 +49,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
     
 
 
@@ -51,6 +82,12 @@
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
@@ -117,6 +154,66 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
+
+A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>part_of</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
+        <rdfs:label>part of</rdfs:label>
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+        <rdfs:label>part_of</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
+        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
+        <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
+    </owl:ObjectProperty>
     
 
 
@@ -1303,6 +1400,16 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Endothelial_cell</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://sourceforge.net/tracker/?func=detail&amp;atid=440764&amp;aid=3364936&amp;group_id=36855</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000123">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuron associated cell (sensu Vertebrata)</rdfs:label>
+    </owl:Class>
     
 
 
@@ -4031,7 +4138,6 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000632">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000057"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000499"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cell that is found in the perisinusoidal space of the liver that is capable of multiple roles including storage of retinol, presentation of antigen to T cells (including CD1d-restricted NKT cells), and upon activation, production of extracellular matrix components that can contribute to liver fibrosis. This activated state has a myofibroblast-like phenotype, though it&apos;s not clear in the literature if this is terminally differentiated. This cell type comprises approximately 8-15% of total cells in the liver.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTO:0002741</oboInOwl:hasDbXref>
@@ -13359,18 +13465,33 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002371"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_1000497"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A renal intercalated cell that secretes base and reabsorbs acid in the coritcal collecting duct to mantain acid/base balance.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A renal intercalated cell that secretes base and reabsorbs acid in the distal segments of the kidney tubule to maintain acid/base balance.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-09-02T01:43:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>type B intercalated cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>type B-IC</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renal beta-intercalated cell</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002201"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A renal intercalated cell that secretes base and reabsorbs acid in the coritcal collecting duct to mantain acid/base balance.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A renal intercalated cell that secretes base and reabsorbs acid in the distal segments of the kidney tubule to maintain acid/base balance.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11781354</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25632105</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002201"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>type B intercalated cell</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25632105</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002201"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>type B-IC</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25632105</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15135,6 +15256,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-21T02:29:19Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T.4int8+.Th</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_4int8+_Th</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD4-intermediate, CD8-positive double-positive thymocyte</rdfs:label>
     </owl:Class>
@@ -15155,7 +15277,8 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A double-positive thymocyte that is undergoing positive selection, has high expression of the alpha-beta T cell receptor, is CD69-positive, and is in the process of down regulating the CD8 co-receptor.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-21T02:29:23Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T.4int8+.th</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T.4+8int.Th</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_4+8int_Th</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD4-positive, CD8-intermediate double-positive thymocyte</rdfs:label>
     </owl:Class>
@@ -15585,19 +15708,62 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <!-- http://purl.obolibrary.org/obo/CL_0002453 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002453">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The cell type from which oligodendrocytes develop. This cell originates from multiple structures within the developing brain including the medial ganglion eminence and the lateral ganglionic eminence. These cells migrate throughout the central nervous system and persist into adulthood where they play an important role in remyelination of injured neurons.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A progenitor cell of the central nervous system that can differentiate into oligodendrocytes or type-2 astrocytes. This cell originates from multiple structures within the developing brain including the medial ganglion eminence and the lateral ganglionic eminence. These cells migrate throughout the central nervous system and persist into adulthood where they play an important role in remyelination of injured neurons.</obo:IAO_0000115>
+        <terms:contributor>http://orcid.org/0000-0002-1773-2692</terms:contributor>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tmeehan</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-11-10T02:51:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O-2A/OPC</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O2A/OPC</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oligodendrocyte-type 2 astrocyte (O-2A) progenitor cell</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oligodendrocyte/type-2 astrocyte progenitor cell</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This cell type can be purified from optic nerves and other regions of the embryonic, postnatal and adult rat CNS and can be differentiated in vitro to oligodendrocytes and type-2 astrocytes. Some references use the terms &apos;oligodendrocyte precursor cell&apos; and &apos;oligodendrocyte type-2 astrocyte (O-2A) progenitor&apos; to refer to the same entity (e.g., PMID:10704434), while others describe an oligodendrocyte type-2 astrocyte (O-2A) progenitor cell as the precurosr to oligodendrocyte- and type-2 astrocyte- progenitor cells (e.g, ISBN:9780702028991).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oligodendrocyte precursor cell</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002453"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The cell type from which oligodendrocytes develop. This cell originates from multiple structures within the developing brain including the medial ganglion eminence and the lateral ganglionic eminence. These cells migrate throughout the central nervous system and persist into adulthood where they play an important role in remyelination of injured neurons.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A progenitor cell of the central nervous system that can differentiate into oligodendrocytes or type-2 astrocytes. This cell originates from multiple structures within the developing brain including the medial ganglion eminence and the lateral ganglionic eminence. These cells migrate throughout the central nervous system and persist into adulthood where they play an important role in remyelination of injured neurons.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:10704434</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11756508</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:20142420</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:2182078</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:24133281</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:9826671</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002453"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O-2A/OPC</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:24133281</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002453"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O2A/OPC</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11756508</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002453"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oligodendrocyte-type 2 astrocyte (O-2A) progenitor cell</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:2253328</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002453"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oligodendrocyte/type-2 astrocyte progenitor cell</owl:annotatedTarget>
+        <terms:contributor>http://orcid.org/0000-0002-0819-0473</terms:contributor>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:24133281</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002453"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This cell type can be purified from optic nerves and other regions of the embryonic, postnatal and adult rat CNS and can be differentiated in vitro to oligodendrocytes and type-2 astrocytes. Some references use the terms &apos;oligodendrocyte precursor cell&apos; and &apos;oligodendrocyte type-2 astrocyte (O-2A) progenitor&apos; to refer to the same entity (e.g., PMID:10704434), while others describe an oligodendrocyte type-2 astrocyte (O-2A) progenitor cell as the precurosr to oligodendrocyte- and type-2 astrocyte- progenitor cells (e.g, ISBN:9780702028991).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:9780702028991</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:10704434</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:2182078</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16804,7 +16970,10 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002371"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_1000497"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cuboidal epithelial cell of the kidney which secretes acid and reabsorbs base to regulate acid/base balance.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>type A intercalated cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>type A-IC</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</oboInOwl:hasOBONamespace>
+        <rdfs:comment>Type A intercalated cells are the more abundant type of intercalated cell in the outer stripe of the outer medulla in most mammalian species.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renal alpha-intercalated cell</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16812,6 +16981,24 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cuboidal epithelial cell of the kidney which secretes acid and reabsorbs base to regulate acid/base balance.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:CVS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0005011"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>type A intercalated cell</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25632105</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0005011"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>type A-IC</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25632105</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0005011"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Type A intercalated cells are the more abundant type of intercalated cell in the outer stripe of the outer medulla in most mammalian species.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25632105</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
