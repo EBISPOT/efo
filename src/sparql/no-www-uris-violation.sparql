@@ -1,0 +1,7 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?cls1 WHERE
+{
+  ?cls1 a owl:Class .
+  FILTER regex(str(?cls1), 'http://ebi.ac.uk', "i") .  
+}
