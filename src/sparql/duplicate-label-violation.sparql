@@ -1,5 +1,6 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?cls1 ?cls2 ?label WHERE
 {
@@ -10,5 +11,6 @@ SELECT ?cls1 ?cls2 ?label WHERE
   FILTER (?cls1 != ?cls2) .
   FILTER (!isBlank(?cls1)) .
   FILTER (!isBlank(?cls2)) .
+  FILTER NOT EXISTS {?cls1 owl:deprecated "true"^^xsd:boolean} .
   
 }
