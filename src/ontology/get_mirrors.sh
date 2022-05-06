@@ -17,6 +17,8 @@ curl -L http://purl.obolibrary.org/obo/hp.owl > mirror/hp.owl
 echo "Fetching MONDO (OWL Version)..."
 curl -L http://purl.obolibrary.org/obo/mondo.owl > mirror/mondo-owl.owl
 
+echo "Fetching OBA..."
+curl -L http://purl.obolibrary.org/obo/oba.owl > mirror/oba.owl
 
 echo "Fetching CL..."
 curl -L http://purl.obolibrary.org/obo/cl.owl > mirror/cl.owl
