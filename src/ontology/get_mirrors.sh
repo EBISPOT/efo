@@ -40,6 +40,9 @@ curl -L http://purl.obolibrary.org/obo/fbbt.owl > mirror/fbbt.owl
 echo "Fetching OBI..."
 curl -L http://purl.obolibrary.org/obo/obi.owl > mirror/obi.owl
 
+echo "Fetching OBA..."
+curl -L http://purl.obolibrary.org/obo/oba.owl > mirror/oba.owl
+
 #echo "Fetching GO..."
 #curl -L https://www.ebi.ac.uk/ols/ontologies/go/download > mirror/go.owl
 
