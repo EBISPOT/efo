@@ -53,6 +53,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
@@ -62,6 +68,12 @@
     <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     
 
 
@@ -80,6 +92,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
     
 
 
@@ -124,6 +142,7 @@
         <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
         <obo:IAO_0000112>this day is part of this year (occurrent parthood)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
+        <obo:IAO_0000115>For continuants: C part_of C&apos; if and only if: given any c that instantiates C at a time t, there is some c&apos; such that c&apos; instantiates C&apos; at time t, and c *part_of* c&apos; at t. For processes: P part_of P&apos; if and only if: given any p that instantiates P at a time t, there is some p&apos; such that p&apos; instantiates P&apos; at time t, and p *part_of* p&apos; at t. (Here *part_of* is the instance-level part-relation.)</obo:IAO_0000115>
         <obo:IAO_0000115>a core relation that holds between a part and its whole</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
         <obo:IAO_0000116>Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
@@ -140,6 +159,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
         <obo:IAO_0000118>part_of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
@@ -148,9 +169,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BFO:0000050</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oba</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>plant_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>protein</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
@@ -171,6 +191,28 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this fragility inheres in this vase</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this red color inheres in this apple</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A dependent inheres in its bearer at all times for which the dependent exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">characteristic of</rdfs:label>
+        <rdfs:label>inheres in</rdfs:label>
+        <rdfs:label xml:lang="en">inheres in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -182,25 +224,369 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBA_0003870 -->
+    <!-- http://purl.obolibrary.org/obo/HP_0003674 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_0003870">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The onset quality of a aging.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onset quality of aging</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging onset quality</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003674">
+        <obo:IAO_0000115>The age group in which disease manifestations appear.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0003588</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003590</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003597</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003602</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003603</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003618</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003626</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003628</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003630</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003663</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003664</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0003668</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0011007</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>MSH:D017668</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0206132</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Age of onset</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Age symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>human_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>HP:0003674</oboInOwl:id>
+        <rdfs:comment>Adolescent is defined by WHO as a person between 10-19 years of age.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onset</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OBA_0003870"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The onset quality of a aging.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AUTO:patterns/patterns/entity_attribute</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>The age group in which disease manifestations appear.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OBA_0003870"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onset quality of aging</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AUTO:patterns/patterns/entity_attribute</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>Age symptoms begin</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-6548-5200</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp.obo#layperson"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which Alzheimer disease manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age Alzheimer disease symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of Alzheimer disease</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of Alzheimer disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which asthma manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age asthma symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of asthma</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of asthma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which urinary bladder carcinoma manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of urinary bladder carcinoma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age urinary bladder carcinoma symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of urinary bladder carcinoma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which cataract manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of cataract</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age cataract symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of cataract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which hyperlipidemia manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of hyperlipidemia</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age hyperlipidemia symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of hyperlipidemia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which osteoarthritis manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of osteoarthritis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age osteoarthritis symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of osteoarthritis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which Parkinson disease manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age Parkinson disease symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of Parkinson disease</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of Parkinson disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which essential hypertension manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of essential hypertension</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age essential hypertension symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of essential hypertension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which schizophrenia manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of schizophrenia</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age schizophrenia symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of schizophrenia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which type 1 diabetes mellitus manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of type 1 diabetes mellitus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age type 1 diabetes mellitus symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of type 1 diabetes mellitus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which type 2 diabetes mellitus manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of type 2 diabetes mellitus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age type 2 diabetes mellitus symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of type 2 diabetes mellitus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBA_2001001"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which childhood onset asthma manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of childhood onset asthma</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age childhood onset asthma symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of childhood onset asthma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which alcohol dependence manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age alcohol dependence symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of alcohol dependence</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of alcohol dependence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which allergic disease manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age allergic disease symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of allergic disease</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of allergic disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which amyotrophic lateral sclerosis manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age amyotrophic lateral sclerosis symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of amyotrophic lateral sclerosis</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of amyotrophic lateral sclerosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which bipolar disorder manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of bipolar disorder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age bipolar disorder symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of bipolar disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which Buruli ulcer disease manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age Buruli ulcer disease symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of Buruli ulcer disease</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of Buruli ulcer disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which frontotemporal dementia manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of frontotemporal dementia</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age frontotemporal dementia symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of frontotemporal dementia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which Huntington disease manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age Huntington disease symptoms begin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of Huntington disease</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of Huntington disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which migraine disorder manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of migraine disorder</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age migraine disorder symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of migraine disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBA_2001026"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which migraine with aura manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of migraine with aura</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age migraine with aura symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of migraine with aura</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which migraine without aura, susceptibility to, 4 manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of migraine without aura, susceptibility to, 4</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age migraine without aura, susceptibility to, 4 symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of migraine without aura, susceptibility to, 4</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which multiple sclerosis manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of multiple sclerosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age multiple sclerosis symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of multiple sclerosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBA_2001031"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which myopia manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of myopia</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age myopia symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of myopia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which refractive error manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of refractive error</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age refractive error symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of refractive error</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which narcolepsy-cataplexy syndrome manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of narcolepsy-cataplexy syndrome</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age narcolepsy-cataplexy syndrome symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of narcolepsy-cataplexy syndrome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2001033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2001033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which coronary atherosclerosis manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of coronary atherosclerosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age coronary atherosclerosis symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of coronary atherosclerosis</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
