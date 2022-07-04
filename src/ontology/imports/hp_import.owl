@@ -185,6 +185,7 @@
         <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
         <obo:IAO_0000116>Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
         <obo:IAO_0000116>Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
 
 A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
@@ -228,9 +229,13 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this fragility inheres in this vase</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this red color inheres in this apple</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A dependent inheres in its bearer at all times for which the dependent exists.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RO:0000052</oboInOwl:hasDbXref>
@@ -5084,7 +5089,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0000358 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000358">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000356"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000377"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of abnormal location of the ears in which the position of the ears is characterized by posterior rotation (the superior part of the ears is rotated towards the back of the head, and the inferior part of the ears towards the front).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008535</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:253251006</oboInOwl:hasDbXref>
@@ -5373,7 +5378,7 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0000369 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000369">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000356"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000377"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upper insertion of the ear to the scalp below an imaginary horizontal line drawn between the inner canthi of the eye and extending posteriorly to the ear.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:95515009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0239234</oboInOwl:hasDbXref>
@@ -5449,6 +5454,7 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008580</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008582</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0008602</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0040111</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:253255002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0431483</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0857379</oboInOwl:hasDbXref>
@@ -5466,7 +5472,7 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poorly defined conchae</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000377</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The term &apos;dysplastic&apos; is no longer accepted as a descriptor for an ear with unusual morphology. Each specific anatomical component of the ear should be described when the ear is thought to be abnormal in appearance.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the pinna</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal pinna morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000377"/>
@@ -7900,39 +7906,11 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0000535 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000535">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000271"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001574"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decreased density/number and/or decreased diameter of eyebrow hairs.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002222</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0002554</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004520</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004551</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1832446</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sparse and thin eyebrow</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thin, sparse eyebrows</oboInOwl:hasExactSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0000535</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sparseness can be regional (medial, central, lateral) or total. These modifiers should be incorporated into the term, when appropriate.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sparse and thin eyebrow</rdfs:label>
+        <obo:IAO_0100001>HP:0000535</obo:IAO_0100001>
+        <oboInOwl:id>HP:0000535</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete Sparse and thin eyebrow</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000535"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decreased density/number and/or decreased diameter of eyebrow hairs.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:19125427</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000535"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sparse and thin eyebrow</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000535"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thin, sparse eyebrows</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
     
 
 
@@ -11677,24 +11655,6 @@ applied inaccurately.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweating</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Sweating profusely</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Sweating, increased</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal excessive perspiration (sweating) despite the lack of appropriate stimuli like hot and humid weather.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
@@ -11722,6 +11682,24 @@ applied inaccurately.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Profuse sweating</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweating</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Sweating profusely</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Sweating, increased</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -13126,7 +13104,6 @@ applied inaccurately.</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001257">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001276"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011442"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A motor disorder characterized by a velocity-dependent increase in tonic stretch reflexes with increased muscle tone, exaggerated (hyperexcitable) tendon reflexes.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D009128</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:221360009</oboInOwl:hasDbXref>
@@ -16355,6 +16332,7 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0013274</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ductus arteriosus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>PDA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Patent ductus Botalli</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persistent arterial duct</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persistent ductus arteriosus</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0001643</oboInOwl:id>
@@ -21025,6 +21003,7 @@ applied inaccurately.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002140">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002637"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012443"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100659"/>
         <obo:IAO_0000115>Acute ischemic stroke (AIS) is defined by the sudden loss of blood flow to an area of the brain with the resulting loss of neurologic function. It is caused by thrombosis or embolism that occludes a cerebral vessel supplying a specific area of the brain. During a vessel occlusion, there is a core area where damage to the brain is irreversible and an area of penumbra where the brain has lost function owing to decreased blood flow but is not irreversibly injured.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:422504002</oboInOwl:hasDbXref>
@@ -27594,7 +27573,6 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:111007000</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0544820</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4025616</oboInOwl:hasDbXref>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypomyelination</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0003429</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNS hypomyelination</rdfs:label>
     </owl:Class>
@@ -28628,6 +28606,7 @@ applied inaccurately.</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004277">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002817"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <oboInOwl:hasAlternativeId>HP:0041232</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:20511007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0435632</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Broken hand bones</oboInOwl:hasExactSynonym>
@@ -29302,8 +29281,8 @@ applied inaccurately.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/HP_0004398 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004398">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012719"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ulcer of the gastrointestinal tract.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012718"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The term peptic ulcer refers to acid peptic injury of the digestive tract, resulting in mucosal break reaching the submucosa. Peptic ulcers are usually located in the stomach or proximal duodenum, but they can also be found in the oesophagus or Meckel&apos;s diverticulum. Infection with Helicobacter pylori and the use of non steroidal antiinflammatory drugs (NSAIDs) or aspirin are the main risk factors of both gastric and duodenal peptic ulcers.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peter</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-03-18T09:14:00Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D010437</oboInOwl:hasDbXref>
@@ -29311,14 +29290,15 @@ applied inaccurately.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0030920</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Sore in the lining of gastrointestinal tract</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0004398</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A peptic ulcer is defined as an erosion of the mucosa of the gastrointestinal tract, and can occur as esophageal ulcer, gastric ulcer, duodenal ulcer, and Meckel&apos;s Diverticulum ulcer.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Symptoms of peptic ulcer disease have limited predictive value because they are non-specific. Patients with duodenal ulcers typically feel hungry or have nocturnal abdominal pain. By contrast, patients with gastric ulcers have postprandial abdominal pain, nausea, vomiting, and weight loss. Patients with untreated peptic ulcer disease typically have relapsing symptoms because of spontaneous healing and relapse while the causal factor (eg, H pylori infection or NSAID use) persists.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peptic ulcer</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004398"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ulcer of the gastrointestinal tract.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The term peptic ulcer refers to acid peptic injury of the digestive tract, resulting in mucosal break reaching the submucosa. Peptic ulcers are usually located in the stomach or proximal duodenum, but they can also be found in the oesophagus or Meckel&apos;s diverticulum. Infection with Helicobacter pylori and the use of non steroidal antiinflammatory drugs (NSAIDs) or aspirin are the main risk factors of both gastric and duodenal peptic ulcers.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:28242110</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004398"/>
@@ -37414,12 +37394,13 @@ to develop</owl:annotatedTarget>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-02-26T08:13:11Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C4023749</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormality of the cheekbone</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormality of the zygomatic bone</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Anomaly of the zygomatic bone</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Deformity of the cheekbone</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Deformity of the zygomatic bone</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Malformation of the zygomatic bone</oboInOwl:hasNarrowSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0010668</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of the zygomatic bone</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal zygomatic bone morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0010668"/>
@@ -37584,6 +37565,7 @@ to develop</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sdoelken</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-04-23T09:29:58Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C1844562</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Medially flared eyebrows</oboInOwl:hasExactSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0010747</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medial flaring of the eyebrow</rdfs:label>
@@ -37792,13 +37774,13 @@ to develop</owl:annotatedTarget>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Redness of the skin, caused by hyperemia of the capillaries in the lower layers of the skin.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-6548-5200</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0010783"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Redness of skin or mucous membrane</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-        <oboInOwl:hasSynonymType>orcid.org/0000-0002-6548-5200</oboInOwl:hasSynonymType>
     </owl:Axiom>
     
 
@@ -40575,7 +40557,7 @@ to develop</owl:annotatedTarget>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-04-29T04:37:30Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US:433096001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C2315229</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of facial skeleton</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormality of facial skeleton</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Anomaly of facial skeleton</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Abnormality of facial bones</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Anomaly of facial bones</oboInOwl:hasNarrowSynonym>
@@ -40585,7 +40567,7 @@ to develop</owl:annotatedTarget>
         <oboInOwl:hasNarrowSynonym>Malformation of facial skeleton</oboInOwl:hasNarrowSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP:0011821</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The facial skeleton comprises the mandible, maxilla, frontal bone, nasal bones, and zygoma, as well as the inferior nasal concha, the lacrimal bones, the palatine bone, and the vomer.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of facial skeleton</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormal facial skeleton morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011821"/>
@@ -40596,7 +40578,7 @@ to develop</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011821"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abnormality of facial skeleton</owl:annotatedTarget>
+        <owl:annotatedTarget>Abnormality of facial skeleton</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     <owl:Axiom>
