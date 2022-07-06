@@ -410,3 +410,11 @@ components/gwas_template.owl: $(SRC) iri_dependencies/gwas_terms.tsv
 components/gwas_import.owl: components/gwas_template.owl
 	$(ROBOT) annotate -i $< -O "http://www.ebi.ac.uk/efo/components/gwas_import.owl" -o $@
 	rm components/gwas_template.owl
+
+# ----------------------------------------
+# OBA alignment Measurment Branch
+# -----------------------------------------
+
+align_oba:
+	make -f measurement.Makefile download_all
+	make -f measurement.Makefile reclassify.owl tmp/lost.owl
