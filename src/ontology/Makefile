@@ -172,9 +172,16 @@ components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl 
 		query --update $(SPARQLDIR)/remove-stray-classes.ru \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
-components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl
+components/mondo_efo_mappings.template.tsv: components/mondo_efo_mappings.tsv
+	sed '1s/^/A oboInOwl:hasDbXref\tID\t\t\n/' $< | sed '1s/^/Mondo ID\tEFO id\tMondo Label\tEFO label\n/' | sed 's/http:\/\/purl.obolibrary.org\/obo\/MONDO_/MONDO:/g' > $@
+
+components/mondo_efo_mappings.owl: mirror/mondo.owl components/mondo_efo_mappings.template.tsv
+	$(ROBOT) --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" template --input $< --template components/mondo_efo_mappings.template.tsv -o $@
+
+components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
 	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
-	$(ROBOT) -v annotate -i $@ --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
+	$(ROBOT) -v merge -i $@ -i components/mondo_efo_mappings.owl \
+		annotate --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
 
 components/efo_terms.txt: $(SRC) $(SPARQLDIR)/efo_terms.sparql
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/efo_terms.sparql $@.tmp &&\
