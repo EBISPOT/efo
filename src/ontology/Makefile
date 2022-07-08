@@ -257,13 +257,14 @@ release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json $
 	
 $(BUILDDIR)/$(ONT).owl: $(SRC)
 	$(ROBOT) merge -i $< \
-	query --update ../sparql/inject-subset-declaration.sparql --update ../sparql/remove-internal-xrefs.sparql\
+	query \
+		--update ../sparql/inject-subset-declaration.sparql \
+		--update ../sparql/remove-internal-xrefs.sparql \
 	reason -s true -m false -r hermit \
 	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT).owl -o $@
 
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo.owl \
-	query --update ../sparql/inject-subset-declaration.sparql \
 	convert --check false -f obo -o $@
 	
 $(BUILDDIR)/$(ONT).json: $(BUILDDIR)/$(ONT).owl
