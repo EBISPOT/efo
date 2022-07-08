@@ -10,7 +10,7 @@ DELETE {
          ?x ?y .
    ?cls oio:hasDbXref ?obj_curie .
 }
-#SELECT DISTINCT ?sub ?obj_curie ?obj_iri
+#SELECT DISTINCT ?cls ?obj_curie ?obj_iri
 WHERE {
   ?cls a owl:Class ;
     oio:hasDbXref ?obj_curie .
@@ -33,6 +33,18 @@ WHERE {
            owl:annotatedProperty oio:hasDbXref ;
            owl:annotatedTarget ?obj_curie ;
            ?x ?y .
+      OPTIONAL {
+        ?axiom ?x1 ?y1 .
+        FILTER(?y!=?y1)
+        OPTIONAL {
+          ?axiom ?x2 ?y2 .
+          FILTER(?y2!=?y1)
+          OPTIONAL {
+            ?axiom ?x3 ?y3 .
+            FILTER(?y2!=?y3)
+          }
+        } 
+      }    
   }
   
   ?obj_iri a owl:Class . ##<---TODO
