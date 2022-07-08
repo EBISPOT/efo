@@ -257,6 +257,7 @@ release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json $
 	
 $(BUILDDIR)/$(ONT).owl: $(SRC)
 	$(ROBOT) merge -i $< \
+	query --update ../sparql/inject-subset-declaration.sparql \
 	reason -s true -m false -r hermit \
 	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT).owl -o $@
 
