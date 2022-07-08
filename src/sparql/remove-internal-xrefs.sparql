@@ -15,18 +15,18 @@ WHERE {
   ?cls a owl:Class ;
     oio:hasDbXref ?obj_curie .
     
-  FILTER(REGEX(STR(?obj_curie),"^(GO|DOID|Orphanet|HP|MONDO|EFO):[0-9A-Za-z]+"))
+  FILTER(REGEX(STR(?obj_curie),"^(GO|DOID|Orphanet|HP|MONDO|EFO):[0-9A-Za-z]+") || isURI(?obj_curie))
   
   BIND(
     URI(
-      REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(?obj_curie,
+      IF(isURI(?obj_curie), ?obj_curie, REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(?obj_curie,
         "GO:","http://purl.obolibrary.org/obo/GO_"),
         "DOID:","http://purl.obolibrary.org/obo/DOID_"),
         "Orphanet:","http://www.orpha.net/ORDO/Orphanet_"),
         "HP:","http://purl.obolibrary.org/obo/HP_"),
         "MONDO:","http://purl.obolibrary.org/obo/MONDO_"),
         "EFO:","http://www.ebi.ac.uk/efo/EFO_")
-    ) as ?obj_iri)
+      )) as ?obj_iri)
     
   OPTIONAL {
     ?axiom owl:annotatedSource ?cls ;
