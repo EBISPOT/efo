@@ -1,0 +1,51 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+
+DELETE {
+  ?axiom owl:annotatedSource ?cls ;
+         owl:annotatedProperty oio:hasDbXref ;
+         owl:annotatedTarget ?obj_curie ;
+         ?x ?y .
+   ?cls oio:hasDbXref ?obj_curie .
+}
+#SELECT DISTINCT ?cls ?obj_curie ?obj_iri
+WHERE {
+  ?cls a owl:Class ;
+    oio:hasDbXref ?obj_curie .
+    
+  FILTER(REGEX(STR(?obj_curie),"^(GO|DOID|Orphanet|HP|MONDO|EFO):[0-9A-Za-z]+") || isURI(?obj_curie))
+  
+  BIND(
+    URI(
+      IF(isURI(?obj_curie), ?obj_curie, REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(?obj_curie,
+        "GO:","http://purl.obolibrary.org/obo/GO_"),
+        "DOID:","http://purl.obolibrary.org/obo/DOID_"),
+        "Orphanet:","http://www.orpha.net/ORDO/Orphanet_"),
+        "HP:","http://purl.obolibrary.org/obo/HP_"),
+        "MONDO:","http://purl.obolibrary.org/obo/MONDO_"),
+        "EFO:","http://www.ebi.ac.uk/efo/EFO_")
+      )) as ?obj_iri)
+    
+  OPTIONAL {
+    ?axiom owl:annotatedSource ?cls ;
+           owl:annotatedProperty oio:hasDbXref ;
+           owl:annotatedTarget ?obj_curie ;
+           ?x ?y .
+      OPTIONAL {
+        ?axiom ?x1 ?y1 .
+        FILTER(?y!=?y1)
+        OPTIONAL {
+          ?axiom ?x2 ?y2 .
+          FILTER(?y2!=?y1)
+          OPTIONAL {
+            ?axiom ?x3 ?y3 .
+            FILTER(?y2!=?y3)
+          }
+        } 
+      }    
+  }
+  
+  ?obj_iri a owl:Class . ##<---TODO
+}
