@@ -20,11 +20,13 @@ UPPER = ./imports/upper_class.owl
 PARENTSGENERATED = ./results/efoparents.owl
 GENERATED = ./results/efo-mondo-generated.owl
 EFOPREFIX = "EFO: http://www.ebi.ac.uk/efo/EFO_"
+EFO2PREFIX = "EFO2: http://www.ebi.ac.uk/efo/"
 ORDOPREFIX = "Orphanet: http://www.orpha.net/ORDO/Orphanet_"
 MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
 UBERONPREFIX = "UBERON: http://purl.obolibrary.org/obo/UBERON_"
 HPPREFIX = "HP: http://purl.obolibrary.org/obo/HP_"
 CLPREFIX = "CL: http://purl.obolibrary.org/obo/CL_"
+CLPREFIX = "Orphanet: http://www.orpha.net/ORDO/Orphanet_"
 BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
 EFOPREPRO = $(BUILDDIR)/efo-edit-release.owl
 EFOFIXER = ../../bin/efo-fixer.jar
@@ -220,7 +222,20 @@ foreign_axiom_diff: $(FOREIGN_AXIOM_FILES_DIFF)
 nuclear_strike: $(SRC) foreign_axiom_diff
 	cp $(SRC) cp-$(SRC)
 	$(ROBOT) merge -i $< $(addprefix unmerge -i , $(FOREIGN_AXIOM_FILES)) convert -f ofn -o $(SRC)
-	
+
+# ----------------------------------------
+# ORPHANET REPLACEMENT
+# ----------------------------------------
+
+#remove_orphanet:
+#	$(ROBOT) remove -i $(SRC) -T ../templates/orphanet_obsolete_terms.txt convert -f ofn -o efo-edit.owl 
+
+#components/orphanet_mondo_replacement.owl: ../templates/orphanet_mondo_replacement.tsv remove_orphanet
+#	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(EFO2PREFIX) --prefix $(ORDOPREFIX) -o $@
+
+#components/orphanet_mondo_replacement_import.owl: ../templates/orphanet_obsolete_labels.tsv components/orphanet_mondo_replacement.owl
+#	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(EFO2PREFIX) --prefix $(ORDOPREFIX) merge -i components/orphanet_mondo_replacement.owl annotate --ontology-iri "http://www.ebi.ac.uk/efo/components/orphanet_mondo_replacement_import.owl" -o $@
+
 # ----------------------------------------
 # AE anatomagrams components
 # ----------------------------------------
@@ -254,6 +269,7 @@ components/anatomagram_%.owl: ../templates/anatomagram_%.tsv $(SRC)
 
 #$(BUILDDIR)/OTAR_tagged.owl: $(BUILDDIR)/OTAR_terms.owl
 #	$(ROBOT) query --input $(BUILDDIR)/OTAR_terms.owl --query $(SPARQLDIR)/OTAR_therapeutic_areas.sparql $@
+
 
 # ----------------------------------------
 # Release
