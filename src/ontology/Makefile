@@ -180,8 +180,8 @@ components/mondo_efo_mappings.template.tsv: components/mondo_efo_mappings.tsv
 components/mondo_efo_mappings.owl: mirror/mondo.owl components/mondo_efo_mappings.template.tsv
 	$(ROBOT) --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" template --input $< --template components/mondo_efo_mappings.template.tsv -o $@
 
-components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
-	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
+#components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
+#	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
 	$(ROBOT) -v merge -i $@ -i components/mondo_efo_mappings.owl \
 		annotate --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
 
@@ -280,7 +280,7 @@ release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json $
 	
 $(BUILDDIR)/$(ONT).owl: $(SRC)
 	$(ROBOT) merge -i $< \
-	reason -s true -m false -r hermit \
+	reason -s true -m false -r hermit --equivalent-classes-allowed asserted-only \
 	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT).owl -o $@
 
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
