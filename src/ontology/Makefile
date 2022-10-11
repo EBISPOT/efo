@@ -184,8 +184,8 @@ components/mondo_efo_mappings.template.tsv: components/mondo_efo_mappings.tsv
 components/mondo_efo_mappings.owl: mirror/mondo.owl components/mondo_efo_mappings.template.tsv
 	$(ROBOT) --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" template --input $< --template components/mondo_efo_mappings.template.tsv -o $@
 
-#components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
-#	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
+components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
+	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
 	$(ROBOT) -v merge -i $@ -i components/mondo_efo_mappings.owl \
 		annotate --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
 
