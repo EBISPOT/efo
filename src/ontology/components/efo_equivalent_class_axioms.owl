@@ -121,8 +121,11 @@ Declaration(Class(efo:EFO_0001983))
 Declaration(Class(efo:EFO_0001986))
 Declaration(Class(efo:EFO_0002009))
 Declaration(Class(efo:EFO_0002394))
+Declaration(Class(efo:EFO_0002696))
+Declaration(Class(efo:EFO_0002697))
 Declaration(Class(efo:EFO_0002698))
 Declaration(Class(efo:EFO_0002699))
+Declaration(Class(efo:EFO_0002774))
 Declaration(Class(efo:EFO_0002781))
 Declaration(Class(efo:EFO_0002883))
 Declaration(Class(efo:EFO_0002884))
@@ -153,7 +156,6 @@ Declaration(Class(efo:EFO_0003900))
 Declaration(Class(efo:EFO_0003966))
 Declaration(Class(efo:EFO_0004260))
 Declaration(Class(efo:EFO_0004429))
-Declaration(Class(efo:EFO_0004727))
 Declaration(Class(efo:EFO_0004905))
 Declaration(Class(efo:EFO_0005216))
 Declaration(Class(efo:EFO_0005596))
@@ -177,7 +179,6 @@ Declaration(Class(efo:EFO_0005804))
 Declaration(Class(efo:EFO_0005809))
 Declaration(Class(efo:EFO_0005815))
 Declaration(Class(efo:EFO_0005816))
-Declaration(Class(efo:EFO_0005900))
 Declaration(Class(efo:EFO_0007352))
 Declaration(Class(efo:EFO_0007441))
 Declaration(Class(efo:EFO_0009002))
@@ -294,24 +295,21 @@ EquivalentClasses(efo:EFO_0001986 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERO
 
 EquivalentClasses(efo:EFO_0002009 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000057 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(efo:EFO_0000399 efo:EFO_0000635) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
 
-# Class: efo:EFO_0002394
-EquivalentClasses(efo:EFO_0002394 ObjectSomeValuesFrom(obo:RO_0000053 ObjectUnionOf(efo:EFO_0001075 efo:EFO_0002917)))
-
-# Class: EFO:EFO_0002696
-EquivalentClasses(efo:EFO_0002696 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0002698))
-
-# Class: efo:EFO_0002697
-EquivalentClasses(efo:EFO_0002697 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0002699))
-
-# Class: efo:EFO_0002774
-EquivalentClasses(efo:EFO_0002774 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0000049))
-
-# Class: efo:EFO_0002781
-EquivalentClasses(efo:EFO_0002781 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0003124 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
-
 # Class: efo:EFO_0002394 (ovarian cancer cell lines)
 
 EquivalentClasses(efo:EFO_0002394 ObjectSomeValuesFrom(obo:RO_0000053 ObjectUnionOf(efo:EFO_0001075 efo:EFO_0002917)))
+
+# Class: efo:EFO_0002696 (assay by array)
+
+EquivalentClasses(efo:EFO_0002696 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0002698))
+
+# Class: efo:EFO_0002697 (assay by high throughput sequencer)
+
+EquivalentClasses(efo:EFO_0002697 ObjectSomeValuesFrom(obo:RO_0000057 efo:EFO_0002699))
+
+# Class: efo:EFO_0002774 (assay by mass spectrometry)
+
+EquivalentClasses(efo:EFO_0002774 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0000049))
 
 # Class: efo:EFO_0002781 (chorion cell line)
 
@@ -421,10 +419,6 @@ EquivalentClasses(efo:EFO_0003966 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUni
 
 EquivalentClasses(efo:EFO_0004260 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001474))
 
-# Class: efo:EFO_0004727 (metabolite)
-
-EquivalentClasses(efo:EFO_0004727 ObjectSomeValuesFrom(obo2:has_role obo:CHEBI_25212))
-
 # Class: efo:EFO_0005216 (hepatoma cell line)
 
 EquivalentClasses(efo:EFO_0005216 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000182 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002107 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026))))))
@@ -504,10 +498,6 @@ EquivalentClasses(efo:EFO_0005809 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectInt
 # Class: efo:EFO_0005815 (tauopathy)
 
 EquivalentClasses(efo:EFO_0005815 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 efo:EFO_0005816))))
-
-# Class: efo:EFO_0005900 (auxin)
-
-EquivalentClasses(efo:EFO_0005900 ObjectSomeValuesFrom(obo2:has_role obo:CHEBI_22676))
 
 # Class: efo:EFO_0007352 (lymphatic system disease)
 
