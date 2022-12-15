@@ -56,6 +56,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412"/>
@@ -194,18 +200,6 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -341,7 +335,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The age group in which disease manifestations appear.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>HPO:probinson</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPO:probinson</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
@@ -473,6 +467,90 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MONDO_0000481 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0000481">
+        <obo:IAO_0000115>Cervical dystonia is a neurological condition characterized by excessive pulling of the muscles of the neck and shoulder resulting in abnormal movements of the head (dystonia).Most commonly, the head turns to one side or the other.Tilting sideways, or to the back or front may also occur.The turning or tilting movements may be accompanied by shaking movement (tremor) and/or soreness of the muscles of the neck and shoulders.Cervical dystonia can occur at any age, but most cases occur in middle age. It often begins slowly and usually reaches a plateau over a few months or years. The cause of cervical dystonia is often unknown. In some cases there is a family history. Several genes have been associated with cervical dystonia, including GNAL, THAP1, CIZ1, and ANO3. Other cases may be linked to an underlying disease (e.g. Parkinson disease), neck trauma, or certain medications. Treatment may include local injections of botulinum toxin, pain medications, benzodiazepines (anti-anxiety medications), anticholinergics,physical therapy, or surgery.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>DOID:0050840</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GARD:0010668</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ICD9:333.83</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C85072</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Orphanet:93962</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SCTID:74333002</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>spasmodic torticollis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>MONDO:0000481</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#gard_rare"/>
+        <rdfs:label>cervical dystonia</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/10668/cervical-dystonia</rdfs:seeAlso>
+        <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/74333002"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_0050840"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C85072"/>
+        <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_93962"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Cervical dystonia is a neurological condition characterized by excessive pulling of the muscles of the neck and shoulder resulting in abnormal movements of the head (dystonia).Most commonly, the head turns to one side or the other.Tilting sideways, or to the back or front may also occur.The turning or tilting movements may be accompanied by shaking movement (tremor) and/or soreness of the muscles of the neck and shoulders.Cervical dystonia can occur at any age, but most cases occur in middle age. It often begins slowly and usually reaches a plateau over a few months or years. The cause of cervical dystonia is often unknown. In some cases there is a family history. Several genes have been associated with cervical dystonia, including GNAL, THAP1, CIZ1, and ANO3. Other cases may be linked to an underlying disease (e.g. Parkinson disease), neck trauma, or certain medications. Treatment may include local injections of botulinum toxin, pain medications, benzodiazepines (anti-anxiety medications), anticholinergics,physical therapy, or surgery.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://rarediseases.info.nih.gov/diseases/10668/cervical-dystonia</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>DOID:0050840</owl:annotatedTarget>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>GARD:0010668</owl:annotatedTarget>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>ICD9:333.83</owl:annotatedTarget>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:i2s</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NCIT:C85072</owl:annotatedTarget>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Orphanet:93962</owl:annotatedTarget>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>SCTID:74333002</owl:annotatedTarget>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>spasmodic torticollis</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOID:0050840</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/mondo#gard_rare"/>
+        <oboInOwl:source>GARD:0010668</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/10668/cervical-dystonia</owl:annotatedTarget>
+        <oboInOwl:source>GARD:0010668</oboInOwl:source>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MONDO_0001134 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0001134">
@@ -483,7 +561,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>ICD9:401</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:401.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D000075222</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCIT:C3478</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Orphanet:243761</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SCTID:59621000</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0085580</oboInOwl:hasDbXref>
@@ -496,7 +573,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0085580"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_10825"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_243761"/>
-        <skos:relatedMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C3478"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0001134"/>
@@ -535,13 +611,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>MESH:D000075222</owl:annotatedTarget>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0001134"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>NCIT:C3478</owl:annotatedTarget>
-        <oboInOwl:source>DOID:10825</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:otherHierarchy</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-1967-3726</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0001134"/>
@@ -595,7 +665,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>ICD10CM:H52.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:367.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D009216</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCIT:C102533</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIMPS:160700</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SCTID:57190000</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0027092</oboInOwl:hasDbXref>
@@ -609,10 +678,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D009216"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/57190000"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0027092"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/H52.1"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_11830"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/H52.1"/>
         <skos:exactMatch rdf:resource="https://omim.org/phenotypicSeries/PS160700"/>
-        <skos:relatedMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C102533"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0001384"/>
@@ -664,13 +732,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0001384"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>NCIT:C102533</owl:annotatedTarget>
-        <oboInOwl:source>DOID:11830</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:otherHierarchy</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0001384"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>OMIMPS:160700</owl:annotatedTarget>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:cjm</oboInOwl:source>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
@@ -699,7 +760,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0001384"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>myopia (disease)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0001384"/>
@@ -727,6 +788,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0002009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002050"/>
         <obo:IAO_0000115>An episode of depression lasting two or more weeks without an intervening episode of mania.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/4521</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>major depressive disorder 1</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>major depressive disorder 2</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>DOID:1470</oboInOwl:hasDbXref>
@@ -738,7 +800,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>ICD9:296.30</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D003865</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MFOMD:0000143</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCIT:C34796</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C35094</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:608516</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SCTID:300706003</oboInOwl:hasDbXref>
@@ -754,13 +815,11 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>unipolar depression, susceptibility to</oboInOwl:hasExactSynonym>
         <oboInOwl:id>MONDO:0002009</oboInOwl:id>
         <rdfs:label>major depressive disorder</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/monarch-initiative/mondo/issues/4521"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D003865"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/370143000"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_1470"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C35094"/>
         <skos:exactMatch rdf:resource="https://omim.org/entry/608516"/>
-        <skos:relatedMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C34796"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002009"/>
@@ -833,13 +892,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:source>DOID:1470</oboInOwl:source>
         <oboInOwl:source>EFO:0003761</oboInOwl:source>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002009"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>NCIT:C34796</owl:annotatedTarget>
-        <oboInOwl:source>DOID:1470</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:otherHierarchy</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002009"/>
@@ -953,9 +1005,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D003866"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/35489007"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/CN236658"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/F32"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_1596"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C2982"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/F32"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0002050"/>
@@ -1052,14 +1104,12 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:IAO_0000115>A defect in the focusing of light on the retina as in astigmatism, myopia, or hyperopia.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>DOID:9835</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D012030</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCIT:C87145</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SCTID:39021009</oboInOwl:hasDbXref>
         <oboInOwl:id>MONDO:0004892</oboInOwl:id>
         <rdfs:label>refractive error</rdfs:label>
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D012030"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/39021009"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_9835"/>
-        <skos:relatedMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C87145"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004892"/>
@@ -1083,13 +1133,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004892"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>NCIT:C87145</owl:annotatedTarget>
-        <oboInOwl:source>DOID:9835</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:otherHierarchy</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004892"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>SCTID:39021009</owl:annotatedTarget>
         <oboInOwl:source>DOID:9835</oboInOwl:source>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
@@ -1101,6 +1144,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0004975">
         <obo:IAO_0000115>A progressive, neurodegenerative disease characterized by loss of function and death of nerve cells in several areas of the brain leading to loss of cognitive function such as memory and language.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/4013</obo:IAO_0000233>
         <mondo:excluded_from_qc_check rdf:resource="http://purl.obolibrary.org/obo/mondo/sparql/qc/general/qc-single-child.sparql"/>
         <oboInOwl:hasDbXref>DOID:10652</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>EFO:0000249</oboInOwl:hasDbXref>
@@ -1112,7 +1156,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>KEGG:05010</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D000544</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C2866</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCIT:C38778</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIFSTD:birnlex_2092</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:104300</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Orphanet:238616</oboInOwl:hasDbXref>
@@ -1129,17 +1172,51 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasNarrowSynonym>Alzheimer disease, familial</oboInOwl:hasNarrowSynonym>
         <oboInOwl:id>MONDO:0004975</oboInOwl:id>
         <rdfs:label>Alzheimer disease</rdfs:label>
-        <rdfs:seeAlso>https://github.com/monarch-initiative/mondo/issues/4013</rdfs:seeAlso>
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D000544"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/142811000119104"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0002395"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/G30"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_10652"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C2866"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_238616"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/G30"/>
         <skos:exactMatch rdf:resource="https://omim.org/entry/104300"/>
-        <skos:relatedMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C38778"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>ICD9:290.1</owl:annotatedTarget>
+        <oboInOwl:source>EFO:0000249</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>ICD9:331.0</owl:annotatedTarget>
+        <oboInOwl:source>DOID:10652</oboInOwl:source>
+        <oboInOwl:source>EFO:0000249</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>KEGG:05010</owl:annotatedTarget>
+        <oboInOwl:source>DOID:10652</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MESH:D000544</owl:annotatedTarget>
+        <oboInOwl:source>DOID:10652</oboInOwl:source>
+        <oboInOwl:source>EFO:0000249</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NCIT:C2866</owl:annotatedTarget>
+        <oboInOwl:source>DOID:10652</oboInOwl:source>
+        <oboInOwl:source>EFO:0000249</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
@@ -1268,49 +1345,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:source>DOID:10652</oboInOwl:source>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ICD9:290.1</owl:annotatedTarget>
-        <oboInOwl:source>EFO:0000249</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ICD9:331.0</owl:annotatedTarget>
-        <oboInOwl:source>DOID:10652</oboInOwl:source>
-        <oboInOwl:source>EFO:0000249</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>KEGG:05010</owl:annotatedTarget>
-        <oboInOwl:source>DOID:10652</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>MESH:D000544</owl:annotatedTarget>
-        <oboInOwl:source>DOID:10652</oboInOwl:source>
-        <oboInOwl:source>EFO:0000249</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>NCIT:C2866</owl:annotatedTarget>
-        <oboInOwl:source>DOID:10652</oboInOwl:source>
-        <oboInOwl:source>EFO:0000249</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004975"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>NCIT:C38778</owl:annotatedTarget>
-        <oboInOwl:source>EFO:0000249</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:otherHierarchy</oboInOwl:source>
-    </owl:Axiom>
     
 
 
@@ -1321,7 +1355,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>DOID:332</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>EFO:0000253</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:0005786</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ICD10CM:G12.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10CM:G12.21</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:335.20</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG:05014</oboInOwl:hasDbXref>
@@ -1345,10 +1378,10 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D000690"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/86044005"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0002736"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/G12.21"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_332"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C34373"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_803"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/G12.21"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004976"/>
@@ -1375,13 +1408,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>GARD:0005786</owl:annotatedTarget>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004976"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ICD10CM:G12.2</owl:annotatedTarget>
-        <oboInOwl:source>Orphanet:803</oboInOwl:source>
-        <oboInOwl:source>Orphanet:803/ntbt</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004976"/>
@@ -1533,9 +1559,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D001249"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/31387002"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0004096"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/J45"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_2841"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C28397"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/J45"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004979"/>
@@ -1707,7 +1733,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004986"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A carcinoma that arises from epithelial cells of the urinary bladder</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0004986"/>
@@ -1870,10 +1896,10 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D006973"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/38341003"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0020538"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/I10-I16"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/I15"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_10763"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C3117"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/I10-I16"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/I15"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005044"/>
@@ -1997,7 +2023,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>hypertensive disease</owl:annotatedTarget>
         <oboInOwl:hasDbXref>DOID:10763</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MTH:NOCODE</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTH:NOCODE</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005044"/>
@@ -2031,6 +2057,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0005090">
         <obo:IAO_0000115>A major psychotic disorder characterized by abnormalities in the perception or expression of reality. It affects the cognitive and psychomotor functions. Common clinical signs and symptoms include delusions, hallucinations, disorganized thinking, and retreat from reality.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/4521</obo:IAO_0000233>
         <obo:IAO_0000589>schizophrenia (disease)</obo:IAO_0000589>
         <oboInOwl:hasBroadSynonym>schizophrenia 12</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>DOID:5419</oboInOwl:hasDbXref>
@@ -2056,7 +2083,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasRelatedSynonym>schizophrenia, susceptibility to</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>MONDO:0005090</oboInOwl:id>
         <rdfs:label>schizophrenia</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/monarch-initiative/mondo/issues/4521"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/58214004"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_5419"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C3362"/>
@@ -2183,7 +2209,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005090"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>schizophrenia (disease)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005090"/>
@@ -2472,7 +2498,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005129"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>cataract (disease)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005129"/>
@@ -2493,6 +2519,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>MESH:D003922</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C2986</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:222100</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OMIM:611895</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Orphanet:243377</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SCTID:46635009</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>IDDM</oboInOwl:hasExactSynonym>
@@ -2568,6 +2595,13 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005147"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>OMIM:611895</owl:annotatedTarget>
+        <oboInOwl:source>EFO:0001359</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005147"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Orphanet:243377</owl:annotatedTarget>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
     </owl:Axiom>
@@ -2639,6 +2673,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0005148">
         <obo:IAO_0000115>A type of diabetes mellitus that is characterized by insulin resistance or desensitization and increased blood glucose levels. This is a chronic disease that can develop gradually over the life of a patient and can be linked to both environmental factors and heredity.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/4521</obo:IAO_0000233>
         <oboInOwl:hasDbXref>DOID:9352</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>EFO:0001360</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG:04930</oboInOwl:hasDbXref>
@@ -2682,7 +2717,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasRelatedSynonym>maturity-onset diabetes</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>MONDO:0005148</oboInOwl:id>
         <rdfs:label>type 2 diabetes mellitus</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/monarch-initiative/mondo/issues/4521"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D003924"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/44054006"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/CN244395"/>
@@ -2971,6 +3005,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0005178">
         <obo:IAO_0000115>A noninflammatory degenerative joint disease occurring chiefly in older persons, characterised by degeneration of the articular cartilage, hypertrophy of bone at the margins and changes in the synovial membrane. It is accompanied by pain and stiffness, particularly after prolonged activity.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/1395</obo:IAO_0000233>
         <oboInOwl:hasDbXref>DOID:8398</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>EFO:0002506</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:0011929</oboInOwl:hasDbXref>
@@ -2989,14 +3024,13 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>osteoarthrosis and allied disorder</oboInOwl:hasExactSynonym>
         <oboInOwl:id>MONDO:0005178</oboInOwl:id>
         <rdfs:label>osteoarthritis</rdfs:label>
-        <rdfs:seeAlso>https://github.com/monarch-initiative/mondo/issues/1395</rdfs:seeAlso>
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D010003"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/396275006"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0029408"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/M15-M19"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/M19"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_8398"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C3293"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/M15-M19"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/M19"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005178"/>
@@ -3383,7 +3417,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>disorder of type I hypersensitivity</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:design_pattern</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MONDO:patterns/basis_in_disruption_of_process</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:patterns/basis_in_disruption_of_process</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005271"/>
@@ -3421,7 +3455,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>ICD9:346</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:346.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D008881</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NCIT:C113482</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C89715</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>migraine</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>migraine disorder</oboInOwl:hasExactSynonym>
@@ -3433,7 +3466,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D008881"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_6364"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C89715"/>
-        <skos:relatedMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C113482"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005277"/>
@@ -3475,13 +3507,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:source>DOID:6364</oboInOwl:source>
         <oboInOwl:source>EFO:0003821</oboInOwl:source>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005277"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>NCIT:C113482</owl:annotatedTarget>
-        <oboInOwl:source>EFO:0003821</oboInOwl:source>
-        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:otherHierarchy</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005277"/>
@@ -3544,10 +3569,10 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D009103"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/24700007"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0026769"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/G35"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_2377"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C3243"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_802"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/G35"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005301"/>
@@ -3681,7 +3706,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>asthma of childhood</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:design_pattern</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MONDO:patterns/childhood</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:patterns/childhood</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005405"/>
@@ -3694,7 +3719,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>pediatric asthma</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:design_pattern</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MONDO:patterns/childhood</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:patterns/childhood</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3807,11 +3832,17 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0007079">
         <obo:IAO_0000115>Physical and psychological dependence on alcohol.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/4521</obo:IAO_0000233>
+        <terms:conformsTo rdf:resource="http://purl.obolibrary.org/obo/mondo/patterns/realized_in_response_to_environmental_exposure.yaml"/>
         <oboInOwl:hasDbXref>DOID:0050741</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>EFO:0003829</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:303.90</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:305.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG:05034</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D000437</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D010610</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D019973</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C3325</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C93040</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:103780</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SCTID:66590003</oboInOwl:hasDbXref>
@@ -3822,7 +3853,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasRelatedSynonym>alcohol dependence, protection against</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>MONDO:0007079</oboInOwl:id>
         <rdfs:label>alcohol dependence</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/monarch-initiative/mondo/issues/4521"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/66590003"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_0050741"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C93040"/>
@@ -3865,6 +3895,34 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007079"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>KEGG:05034</owl:annotatedTarget>
+        <oboInOwl:source>DOID:0050741</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007079"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MESH:D000437</owl:annotatedTarget>
+        <oboInOwl:source>EFO:0003829</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007079"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MESH:D010610</owl:annotatedTarget>
+        <oboInOwl:source>DOID:0050741</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007079"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MESH:D019973</owl:annotatedTarget>
+        <oboInOwl:source>EFO:0003829</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007079"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>NCIT:C3325</owl:annotatedTarget>
         <oboInOwl:source>DOID:0050741</oboInOwl:source>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
     </owl:Axiom>
@@ -3930,7 +3988,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:IAO_0000115>Spinocerebellar ataxia type 3 (SCA3), also known as Machado-Joseph disease, is the most common subtype of type 1 autosomal dominant cerebellar ataxia (ADCA type 1), a neurodegenerative disorder, and is characterized by ataxia, external progressive ophthalmoplegia, and other neurological manifestations.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>DOID:1440</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:0006801</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ICD10CM:G11.8</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:336.8</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D017827</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C84830</oboInOwl:hasDbXref>
@@ -3963,7 +4020,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C84830"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_98757"/>
         <skos:exactMatch rdf:resource="https://omim.org/entry/109150"/>
-        <skos:narrowMatch rdf:resource="https://icd.codes/icd10cm/G11.8"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007182"/>
@@ -3982,14 +4038,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>GARD:0006801</owl:annotatedTarget>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007182"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ICD10CM:G11.8</owl:annotatedTarget>
-        <oboInOwl:source>Orphanet:98757</oboInOwl:source>
-        <oboInOwl:source>Orphanet:98757/attributed</oboInOwl:source>
-        <oboInOwl:source>Orphanet:98757/ntbt</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007182"/>
@@ -4161,6 +4209,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>GARD:0006677</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:333.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG:05016</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D006816</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MedDRA:10070668</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C82342</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>OMIM:143100</oboInOwl:hasDbXref>
@@ -4176,6 +4225,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/mondo#ordo_disease"/>
         <rdfs:label>Huntington disease</rdfs:label>
         <skos:closeMatch rdf:resource="http://identifiers.org/meddra/10070668"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D006816"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/58756001"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0020179"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_12858"/>
@@ -4215,6 +4265,16 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget>KEGG:05016</owl:annotatedTarget>
         <oboInOwl:source>DOID:12858</oboInOwl:source>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:relatedTo</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007739"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>MESH:D006816</owl:annotatedTarget>
+        <oboInOwl:source>DOID:12858</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+        <oboInOwl:source>Orphanet:399</oboInOwl:source>
+        <oboInOwl:source>Orphanet:399/e</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-1967-3726</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007739"/>
@@ -4300,8 +4360,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007739"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Huntington&apos;s disease</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MONDO:LexicalVariant</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1093/jama/9780195176339.003.0016</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:LexicalVariant</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1093/jama/9780195176339.003.0016</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0007739"/>
@@ -4322,13 +4382,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>ICD10CM:G47.419</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD9:347.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MedDRA:10028713</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:161400</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:605841</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:609039</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:612417</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:612851</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:614223</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:614250</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Orphanet:2073</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>GC)lineau disease</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Gélineau disease</oboInOwl:hasExactSynonym>
@@ -4344,8 +4397,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <rdfs:label>narcolepsy-cataplexy syndrome</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rarediseases.info.nih.gov/diseases/7162/narcolepsy</rdfs:seeAlso>
         <skos:closeMatch rdf:resource="http://identifiers.org/meddra/10028713"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/G47.4"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_2073"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/G47.4"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
@@ -4393,65 +4446,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget>MedDRA:10028713</owl:annotatedTarget>
         <oboInOwl:source>Orphanet:2073</oboInOwl:source>
         <oboInOwl:source>Orphanet:2073/e</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:161400</owl:annotatedTarget>
-        <oboInOwl:source>DOID:8986</oboInOwl:source>
-        <oboInOwl:source>EFO:0000614</oboInOwl:source>
-        <oboInOwl:source>GARD:0007162</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073/btnt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:605841</owl:annotatedTarget>
-        <oboInOwl:source>DOID:8986</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073/btnt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:609039</owl:annotatedTarget>
-        <oboInOwl:source>DOID:8986</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073/btnt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:612417</owl:annotatedTarget>
-        <oboInOwl:source>DOID:8986</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073/btnt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:612851</owl:annotatedTarget>
-        <oboInOwl:source>DOID:8986</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073/btnt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:614223</owl:annotatedTarget>
-        <oboInOwl:source>DOID:8986</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073/btnt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:614250</owl:annotatedTarget>
-        <oboInOwl:source>DOID:8986</oboInOwl:source>
-        <oboInOwl:source>EFO:0000614</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073</oboInOwl:source>
-        <oboInOwl:source>Orphanet:2073/btnt</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016158"/>
@@ -4537,13 +4531,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <mondo:excluded_subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0003996"/>
         <oboInOwl:hasDbXref>DOID:9255</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GARD:0008436</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ICD10CM:G31.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MESH:D057180</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MedDRA:10068968</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C84719</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:172700</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:600795</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>OMIM:607485</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Orphanet:282</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0338451</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0520716</oboInOwl:hasDbXref>
@@ -4565,7 +4555,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_9255"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C84719"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_282"/>
-        <skos:narrowMatch rdf:resource="https://icd.codes/icd10cm/G31.0"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0017276"/>
@@ -4594,14 +4583,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0017276"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ICD10CM:G31.0</owl:annotatedTarget>
-        <oboInOwl:source>Orphanet:282</oboInOwl:source>
-        <oboInOwl:source>Orphanet:282/attributed</oboInOwl:source>
-        <oboInOwl:source>Orphanet:282/ntbt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0017276"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>MESH:D057180</owl:annotatedTarget>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
         <oboInOwl:source>Orphanet:282</oboInOwl:source>
@@ -4619,28 +4600,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>NCIT:C84719</owl:annotatedTarget>
         <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0017276"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:172700</owl:annotatedTarget>
-        <oboInOwl:source>Orphanet:282</oboInOwl:source>
-        <oboInOwl:source>Orphanet:282/btnt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0017276"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:600795</owl:annotatedTarget>
-        <oboInOwl:source>DOID:9255</oboInOwl:source>
-        <oboInOwl:source>Orphanet:282</oboInOwl:source>
-        <oboInOwl:source>Orphanet:282/btnt</oboInOwl:source>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0017276"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>OMIM:607485</owl:annotatedTarget>
-        <oboInOwl:source>Orphanet:282</oboInOwl:source>
-        <oboInOwl:source>Orphanet:282/btnt</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0017276"/>
@@ -4727,8 +4686,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>GARD:0002491</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>HP:0012174</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>HP:0100843</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ICD10CM:C71.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICDO:9440/3</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D005909</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MedDRA:10018336</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MedDRA:10018337</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NCIT:C3058</oboInOwl:hasDbXref>
@@ -4761,6 +4720,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <rdfs:label>glioblastoma</rdfs:label>
         <skos:closeMatch rdf:resource="http://identifiers.org/meddra/10018336"/>
         <skos:closeMatch rdf:resource="http://identifiers.org/meddra/10018337"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D005909"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/393563007"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0017636"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C1621958"/>
@@ -4768,7 +4728,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/DOID_3068"/>
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C3058"/>
         <skos:exactMatch rdf:resource="http://www.orpha.net/ORDO/Orphanet_360"/>
-        <skos:narrowMatch rdf:resource="https://icd.codes/icd10cm/C71.9"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018177"/>
@@ -4803,15 +4762,18 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018177"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ICD10CM:C71.9</owl:annotatedTarget>
-        <oboInOwl:source>Orphanet:360</oboInOwl:source>
-        <oboInOwl:source>Orphanet:360/ntbt</oboInOwl:source>
+        <owl:annotatedTarget>ICDO:9440/3</owl:annotatedTarget>
+        <oboInOwl:source>NCIT:C3058</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018177"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ICDO:9440/3</owl:annotatedTarget>
-        <oboInOwl:source>NCIT:C3058</oboInOwl:source>
+        <owl:annotatedTarget>MESH:D005909</owl:annotatedTarget>
+        <oboInOwl:source>DOID:3068</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MONDO:equivalentTo</oboInOwl:source>
+        <oboInOwl:source>Orphanet:360</oboInOwl:source>
+        <oboInOwl:source>Orphanet:360/e</oboInOwl:source>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-1967-3726</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018177"/>
@@ -4931,7 +4893,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018177"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>glioblastoma (disease)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0018177"/>
@@ -5031,7 +4993,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/55822004"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0020473"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/CN236649"/>
-        <skos:exactMatch rdf:resource="https://icd.codes/icd10cm/E78.5"/>
+        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/E78.5"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0021187"/>
@@ -5085,7 +5047,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0021187"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>hyperlipidemia (disease)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/MONDO_0021187"/>
@@ -5201,6 +5163,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MONDO_0100431">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005277"/>
         <obo:IAO_0000115>A migraine disorder characterized by episodes that occur in the absence of preceding focal neurological symptoms.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/monarch-initiative/mondo/issues/3984</obo:IAO_0000233>
         <oboInOwl:created_by>https://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasDbXref>DOID:12783</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>EFO:0005296</oboInOwl:hasDbXref>
@@ -5211,7 +5174,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>common migraine</oboInOwl:hasExactSynonym>
         <oboInOwl:id>MONDO:0100431</oboInOwl:id>
         <rdfs:label>migraine without aura</rdfs:label>
-        <rdfs:seeAlso>https://github.com/monarch-initiative/mondo/issues/3984</rdfs:seeAlso>
         <skos:exactMatch rdf:resource="http://identifiers.org/mesh/D020326"/>
         <skos:exactMatch rdf:resource="http://identifiers.org/snomedct/56097005"/>
         <skos:exactMatch rdf:resource="http://linkedlifedata.com/resource/umls/id/C0338480"/>
@@ -6265,6 +6227,35 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of depressive disorder</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age depressive disorder symptoms begin</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of depressive disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBA_2040167 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_2040167">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/HP_0003674"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003674"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MONDO_0000481"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The age at which cervical dystonia manifestations first appear.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age at onset of cervical dystonia</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age cervical dystonia symptoms begin</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age of onset of cervical dystonia</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
