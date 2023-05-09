@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/definition_citation -->
+
+    <AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/definition_citation"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0004503 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0004503"/>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0803374 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0803374">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0004503"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement of the flow characteristics of blood and its elements. Hemorheology indicators include whole blood viscosity, plasma viscosity, erythrocyte aggregation, erythrocyte rigidity, erythrocyte deformation, fibrinogen, and hematocrit.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santhi Ramachandran</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood rheology measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hemorheological measurement</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0803374"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement of the flow characteristics of blood and its elements. Hemorheology indicators include whole blood viscosity, plasma viscosity, erythrocyte aggregation, erythrocyte rigidity, erythrocyte deformation, fibrinogen, and hematocrit.</annotatedTarget>
+        <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:36654975</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0803375 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0803375">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0803374"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement of the reversible formation of clumps of red blood cells under low-shear conditions or stasis.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santhi Ramachandran</obo:IAO_0000117>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erythrocyte aggregation</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0803375"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement of the reversible formation of clumps of red blood cells under low-shear conditions or stasis.</annotatedTarget>
+        <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:36654975</efo:definition_citation>
+        <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Erythrocyte_aggregation</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0803376 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0803376">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0803374"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement of the ability of erythrocytes to change shape without rupturing, as they pass through narrow spaces, such as the microvasculature.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santhi Ramachandran</obo:IAO_0000117>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erythrocyte deformability</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0803376"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement of the ability of erythrocytes to change shape without rupturing, as they pass through narrow spaces, such as the microvasculature.</annotatedTarget>
+        <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:36654975</efo:definition_citation>
+        <efo:definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Erythrocyte_deformability</efo:definition_citation>
+    </Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+
