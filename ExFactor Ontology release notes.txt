@@ -11,17 +11,17 @@ ___           ___           ___
 \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.53.0
-Date Released: 17th April 2023
-Class Count: 40577
+Experimental Factor Ontology version 3.54.0
+Date Released: 15th May 2023
+Class Count: 40590
 
 Summary: 
 
-EFO 3.53.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog.
+EFO 3.54.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog.
 
-Number of classes changed: 651
-Number of classes added: 96
-Number of classes deleted: 9
+Number of classes changed: 79
+Number of classes added: 19
+Number of classes deleted: 6
 
 ----------------------------------
 1.	Changes to URIs
@@ -37,3337 +37,499 @@ Number of classes deleted: 9
 
 @Classes new to this version
 
-Class: http://www.ebi.ac.uk/efo/EFO_0020100
-Label(s): thigh muscle measurement 
-+ 'thigh muscle measurement' SubClassOf 'muscle measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0850093
-Label(s): absence epilepsy 
-+ 'absence epilepsy' SubClassOf 'electroclinical syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0033363
-Label(s): developmental and epileptic encephalopathy, 54 
-+ 'developmental and epileptic encephalopathy, 54' SubClassOf 'developmental and epileptic encephalopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0859390
-Label(s): epilepsy, X-linked, with or without impaired intellectual development and dysmorphic features 
-+ 'epilepsy, X-linked, with or without impaired intellectual development and dysmorphic features' SubClassOf 'monogenic epilepsy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0859383
-Label(s): ichthyosis hystrix 
-+ 'ichthyosis hystrix' SubClassOf 'inherited ichthyosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012919
-Label(s): type 1 diabetes mellitus 20 
-+ 'type 1 diabetes mellitus 20' SubClassOf 'diabetes mellitus, insulin-dependent, X-linked, susceptibility to'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0031213
-Label(s): restrictive dermopathy 
-+ 'restrictive dermopathy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014407
-Label(s): megalencephaly-polymicrogyria-polydactyly-hydrocephalus syndrome 2 
-+ 'megalencephaly-polymicrogyria-polydactyly-hydrocephalus syndrome 2' SubClassOf 'megalencephaly-polymicrogyria-postaxial polydactyly-hydrocephalus syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0700015
-Label(s): PacBio Sequel II system 
-+ 'PacBio Sequel II system' SubClassOf 'high throughput sequencer'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0042490
-Label(s): neutropenia, severe congenital, 1, autosomal dominant 
-+ 'neutropenia, severe congenital, 1, autosomal dominant' SubClassOf 'autosomal dominant severe congenital neutropenia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0025708
-Label(s): megacystis-microcolon-intestinal hypoperistalsis syndrome 2 
-+ 'megacystis-microcolon-intestinal hypoperistalsis syndrome 2' SubClassOf 'megacystis-microcolon-intestinal hypoperistalsis syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008954
-Label(s): peroxisome biogenesis disorder 2A (Zellweger) 
-+ 'peroxisome biogenesis disorder 2A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-+ 'peroxisome biogenesis disorder 2A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX5 defect'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008953
-Label(s): peroxisome biogenesis disorder 1A (Zellweger) 
-+ 'peroxisome biogenesis disorder 1A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-+ 'peroxisome biogenesis disorder 1A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX1 defect'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020097
-Label(s): QRS-T angle 
-+ 'QRS-T angle' SubClassOf 'electrocardiography'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010393
-Label(s): intellectual disability, X-linked 93 
-+ 'intellectual disability, X-linked 93' SubClassOf 'non-syndromic X-linked intellectual disability'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700220
-Label(s): disease related to transplantation 
-+ 'disease related to transplantation' SubClassOf 'disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014343
-Label(s): Desbuquois dysplasia 2 
-+ 'Desbuquois dysplasia 2' SubClassOf 'Desbuquois dysplasia'
-+ 'Desbuquois dysplasia 2' SubClassOf 'primary bone dysplasia with multiple joint dislocations'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0800167
-Label(s): Knobloch syndrome 1 
-+ 'Knobloch syndrome 1' SubClassOf 'Knobloch syndrome'
-
-Class: http://purl.obolibrary.org/obo/HP_0025200
-Label(s): Muscle fiber actin filament accumulation 
-+ 'Muscle fiber actin filament accumulation' SubClassOf 'Abnormal skeletal muscle morphology'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0030472
-Label(s): developmental and epileptic encephalopathy 98 
-+ 'developmental and epileptic encephalopathy 98' SubClassOf 'developmental and epileptic encephalopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0032728
-Label(s): Charcot-Marie-Tooth disease, axonal, type 2EE 
-+ 'Charcot-Marie-Tooth disease, axonal, type 2EE' SubClassOf 'Charcot-Marie-Tooth disease type 2'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700222
-Label(s): disease related to hematopoietic stem cell transplant 
-+ 'disease related to hematopoietic stem cell transplant' SubClassOf 'disease related to transplantation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700223
-Label(s): hereditary skeletal muscle disorder 
-+ 'hereditary skeletal muscle disorder' SubClassOf 'genetic disorder'
-+ 'hereditary skeletal muscle disorder' EquivalentTo 'skeletal muscle disorder' and ('bearer_of' some 'inherited')
-+ 'hereditary skeletal muscle disorder' SubClassOf 'skeletal muscle disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700225
-Label(s): hereditary gallbladder disorder 
-+ 'hereditary gallbladder disorder' EquivalentTo 'gallbladder disease' and ('bearer_of' some 'inherited')
-+ 'hereditary gallbladder disorder' SubClassOf 'gallbladder disease'
-+ 'hereditary gallbladder disorder' SubClassOf 'genetic biliary tract disease'
-
-Class: http://purl.obolibrary.org/obo/HP_0002505
-Label(s): Loss of ambulation 
-+ 'Loss of ambulation' SubClassOf 'Inability to walk'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100270
-Label(s): peroxisome biogenesis disorder due to PEX19 defect 
-+ 'peroxisome biogenesis disorder due to PEX19 defect' SubClassOf 'Zellweger spectrum disorders'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0030867
-Label(s): thrombocytopenia 7 
-+ 'thrombocytopenia 7' SubClassOf 'inherited thrombocytopenia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0030756
-Label(s): Stuve-Wiedemann syndrome 2 
-+ 'Stuve-Wiedemann syndrome 2' SubClassOf 'Stuve-Wiedemann syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014367
-Label(s): Aicardi-Goutieres syndrome 7 
-+ 'Aicardi-Goutieres syndrome 7' SubClassOf 'Aicardi-Goutieres syndrome'
-
-Class: http://purl.obolibrary.org/obo/HP_0010705
-Label(s): 4-5 finger syndactyly 
-+ '4-5 finger syndactyly' SubClassOf 'Finger syndactyly'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020080
-Label(s): dietary sodium intake measurement 
-+ 'dietary sodium intake measurement' SubClassOf 'diet measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013952
-Label(s): peroxisome biogenesis disorder 13A (Zellweger) 
-+ 'peroxisome biogenesis disorder 13A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX14 defect'
-+ 'peroxisome biogenesis disorder 13A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013951
-Label(s): peroxisome biogenesis disorder 12A (Zellweger) 
-+ 'peroxisome biogenesis disorder 12A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX19 defect'
-+ 'peroxisome biogenesis disorder 12A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013949
-Label(s): peroxisome biogenesis disorder 11A (Zellweger) 
-+ 'peroxisome biogenesis disorder 11A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX13 defect'
-+ 'peroxisome biogenesis disorder 11A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013948
-Label(s): peroxisome biogenesis disorder 10A (Zellweger) 
-+ 'peroxisome biogenesis disorder 10A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX3 defect'
-+ 'peroxisome biogenesis disorder 10A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013942
-Label(s): peroxisome biogenesis disorder 8A (Zellweger) 
-+ 'peroxisome biogenesis disorder 8A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX16 defect'
-+ 'peroxisome biogenesis disorder 8A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013938
-Label(s): peroxisome biogenesis disorder 7A (Zellweger) 
-+ 'peroxisome biogenesis disorder 7A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX26 defect'
-+ 'peroxisome biogenesis disorder 7A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013936
-Label(s): peroxisome biogenesis disorder 6A (Zellweger) 
-+ 'peroxisome biogenesis disorder 6A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-+ 'peroxisome biogenesis disorder 6A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX10 defect'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013932
-Label(s): peroxisome biogenesis disorder 5A (Zellweger) 
-+ 'peroxisome biogenesis disorder 5A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-+ 'peroxisome biogenesis disorder 5A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX2 defect'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013930
-Label(s): peroxisome biogenesis disorder 4A (Zellweger) 
-+ 'peroxisome biogenesis disorder 4A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-+ 'peroxisome biogenesis disorder 4A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX6 defect'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013927
-Label(s): peroxisome biogenesis disorder 3A (Zellweger) 
-+ 'peroxisome biogenesis disorder 3A (Zellweger)' SubClassOf 'bearer_of' some 'classic presentation'
-+ 'peroxisome biogenesis disorder 3A (Zellweger)' SubClassOf 'peroxisome biogenesis disorder due to PEX12 defect'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013805
-Label(s): intellectual disability, autosomal dominant 13 
-+ 'intellectual disability, autosomal dominant 13' SubClassOf 'intellectual disability, autosomal dominant'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0030362
-Label(s): Aicardi-Goutieres syndrome 9 
-+ 'Aicardi-Goutieres syndrome 9' SubClassOf 'Aicardi-Goutieres syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0030361
-Label(s): Aicardi-Goutieres syndrome 8 
-+ 'Aicardi-Goutieres syndrome 8' SubClassOf 'Aicardi-Goutieres syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013633
-Label(s): encephalopathy, acute, infection-induced, susceptibility to, 4 
-+ 'encephalopathy, acute, infection-induced, susceptibility to, 4' SubClassOf 'encephalitis, acute, infection-induced, susceptibility to'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020936
-Label(s): anterior thigh muscle fat infiltration measurement 
-+ 'anterior thigh muscle fat infiltration measurement' SubClassOf 'thigh muscle fat infiltration measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020935
-Label(s): anterior thigh muscle volume 
-+ 'anterior thigh muscle volume' SubClassOf 'thigh muscle volume'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020934
-Label(s): posterior thigh muscle fat infiltration measurement 
-+ 'posterior thigh muscle fat infiltration measurement' SubClassOf 'thigh muscle fat infiltration measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020900
-Label(s): thigh muscle fat infiltration measurement 
-+ 'thigh muscle fat infiltration measurement' SubClassOf 'thigh muscle measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011661
-Label(s): inflammatory bowel disease 5 
-+ 'inflammatory bowel disease 5' SubClassOf 'inflammatory bowel disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100300
-Label(s): hereditary capillary infantile hemangioma 
-+ 'hereditary capillary infantile hemangioma' SubClassOf 'capillary infantile hemangioma'
-+ 'hereditary capillary infantile hemangioma' SubClassOf 'genetic vascular anomaly'
-+ 'hereditary capillary infantile hemangioma' EquivalentTo 'capillary infantile hemangioma' and ('bearer_of' some 'inherited')
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100298
-Label(s): abdominal wall malformation 
-+ 'abdominal wall malformation' SubClassOf 'developmental defect during embryogenesis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100269
-Label(s): peroxisome biogenesis disorder due to PEX16 defect 
-+ 'peroxisome biogenesis disorder due to PEX16 defect' SubClassOf 'Zellweger spectrum disorders'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100262
-Label(s): peroxisome biogenesis disorder due to PEX5 defect 
-+ 'peroxisome biogenesis disorder due to PEX5 defect' SubClassOf 'Zellweger spectrum disorders'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100261
-Label(s): peroxisome biogenesis disorder due to PEX3 defect 
-+ 'peroxisome biogenesis disorder due to PEX3 defect' SubClassOf 'Zellweger spectrum disorders'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100260
-Label(s): peroxisome biogenesis disorder due to PEX2 defect 
-+ 'peroxisome biogenesis disorder due to PEX2 defect' SubClassOf 'Zellweger spectrum disorders'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100200
-Label(s): microcephaly with intellectual disability 
-+ 'microcephaly with intellectual disability' SubClassOf 'microcephaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013195
-Label(s): hypertrophic cardiomyopathy 13 
-+ 'hypertrophic cardiomyopathy 13' SubClassOf 'familial hypertrophic cardiomyopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013034
-Label(s): keratosis palmoplantaris striata 2 
-+ 'keratosis palmoplantaris striata 2' SubClassOf 'striate palmoplantar keratoderma'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020086
-Label(s): dietary carotene intake measurement 
-+ 'dietary carotene intake measurement' SubClassOf 'diet measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0030781
-Label(s): restrictive dermopathy 2 
-+ 'restrictive dermopathy 2' SubClassOf 'restrictive dermopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024528
-Label(s): progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1 
-+ 'progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1' SubClassOf 'autosomal dominant progressive external ophthalmoplegia'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020107
-Label(s): thigh muscle volume 
-+ 'thigh muscle volume' SubClassOf 'thigh muscle measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020090
-Label(s): dietary cholesterol intake measurement 
-+ 'dietary cholesterol intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020089
-Label(s): dietary vitamin E intake measurement 
-+ 'dietary vitamin E intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020088
-Label(s): dietary fiber intake measurement 
-+ 'dietary fiber intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020083
-Label(s): dietary zinc intake measurement 
-+ 'dietary zinc intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020081
-Label(s): dietary niacin intake measurement 
-+ 'dietary niacin intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020079
-Label(s): dietary vitamin B2 intake measurement 
-+ 'dietary vitamin B2 intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020075
-Label(s): urine glucose measurement 
-+ 'urine glucose measurement' SubClassOf 'glucose measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020073
-Label(s): high-level copy number loss 
-+ 'high-level copy number loss' SubClassOf 'copy number loss'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020931
-Label(s): posterior thigh muscle volume 
-+ 'posterior thigh muscle volume' SubClassOf 'thigh muscle volume'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0033643
-Label(s): inflammatory bowel disease 30 
-+ 'inflammatory bowel disease 30' SubClassOf 'inflammatory bowel disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100167
-Label(s): pulmonary disease, chronic obstructive, susceptibility to 
-+ 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'predisposes towards' some 'chronic obstructive pulmonary disease'
-+ 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100271
-Label(s): peroxisome biogenesis disorder due to PEX26 defect 
-+ 'peroxisome biogenesis disorder due to PEX26 defect' SubClassOf 'Zellweger spectrum disorders'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013476
-Label(s): hypertrophic cardiomyopathy 19 
-+ 'hypertrophic cardiomyopathy 19' SubClassOf 'familial hypertrophic cardiomyopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100356
-Label(s): classic presentation 
-+ 'classic presentation' SubClassOf 'classic or non-classic genetic disease presentation'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020082
-Label(s): dietary vitamin C intake measurement 
-+ 'dietary vitamin C intake measurement' SubClassOf 'diet measurement'
-
-Class: http://purl.obolibrary.org/obo/HP_0001233
-Label(s): 2-3 finger syndactyly 
-+ '2-3 finger syndactyly' SubClassOf 'Finger syndactyly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100517
-Label(s): PSAP-related sphingolipidosis 
-+ 'PSAP-related sphingolipidosis' SubClassOf 'sphingolipidosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0030434
-Label(s): epilepsy, idiopathic generalized, susceptibility to, 18 
-+ 'epilepsy, idiopathic generalized, susceptibility to, 18' SubClassOf 'inherited disease susceptibility'
-+ 'epilepsy, idiopathic generalized, susceptibility to, 18' SubClassOf 'predisposes towards' some 'generalised epilepsy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020074
-Label(s): urine protein measurement 
-+ 'urine protein measurement' SubClassOf 'protein measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020076
-Label(s): urine blood measurement 
-+ 'urine blood measurement' SubClassOf 'measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020077
-Label(s): dietary vitamin A intake measurement 
-+ 'dietary vitamin A intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020078
-Label(s): dietary vitamin B1 intake measurement 
-+ 'dietary vitamin B1 intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020084
-Label(s): dietary vitamin B6 intake measurement 
-+ 'dietary vitamin B6 intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020085
-Label(s): dietary retinol intake measurement 
-+ 'dietary retinol intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020087
-Label(s): dietary ash intake measurement 
-+ 'dietary ash intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020091
-Label(s): dietary phosphorus intake measurement 
-+ 'dietary phosphorus intake measurement' SubClassOf 'diet measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020092
-Label(s): neuroinflammatory disorder 
-+ 'neuroinflammatory disorder' SubClassOf 'autoimmune disorder of the nervous system'
-+ 'neuroinflammatory disorder' SubClassOf 'central nervous system disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020093
-Label(s): C57BL/6NTac 
-+ 'C57BL/6NTac' SubClassOf 'C57BL'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020094
-Label(s): Lambert-Eaton myasthenic syndrome 
-+ 'Lambert-Eaton myasthenic syndrome' SubClassOf 'immune-mediated acquired neuromuscular junction disease'
-+ 'Lambert-Eaton myasthenic syndrome' SubClassOf 'paraneoplastic neurologic syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020095
-Label(s): trochanter bone mineral density 
-+ 'trochanter bone mineral density' SubClassOf 'hip bone mineral density'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020096
-Label(s): mitral valve annular diameter 
-+ 'mitral valve annular diameter' SubClassOf 'cardiovascular measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020098
-Label(s): abdominal fat ratio 
-+ 'abdominal fat ratio' SubClassOf 'body ratio measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020099
-Label(s): weight-to-muscle ratio 
-+ 'weight-to-muscle ratio' SubClassOf 'body ratio measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0700016
+Label(s): Smart-seq v4 
++ 'Smart-seq v4' SubClassOf 'Smart-like'
++ 'Smart-seq v4' SubClassOf 'assay'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803381
+Label(s): fornix volume measurement 
++ 'fornix volume measurement' SubClassOf 'hippocampal volume'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803380
+Label(s): cardiovascular age measurement 
++ 'cardiovascular age measurement' SubClassOf 'cardiovascular measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803379
+Label(s): anti-GAD65 autoimmune neurological syndromes 
++ 'anti-GAD65 autoimmune neurological syndromes' SubClassOf 'autoimmune disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803378
+Label(s): visual masking mesurement 
++ 'visual masking mesurement' SubClassOf 'visual perception measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803377
+Label(s): metachronous colorectal adenoma 
++ 'metachronous colorectal adenoma' SubClassOf 'colorectal adenoma'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803376
+Label(s): erythrocyte deformability 
++ 'erythrocyte deformability' SubClassOf 'hemorheological measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803375
+Label(s): erythrocyte aggregation 
++ 'erythrocyte aggregation' SubClassOf 'hemorheological measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803374
+Label(s): hemorheological measurement 
++ 'hemorheological measurement' SubClassOf 'hematological measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803373
+Label(s): outer segment thickness measurement 
++ 'outer segment thickness measurement' SubClassOf 'photoreceptor cell layer thickness measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803372
+Label(s): inner segment thickness measurement 
++ 'inner segment thickness measurement' SubClassOf 'photoreceptor cell layer thickness measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803371
+Label(s): outer nuclear layer thickness measurement 
++ 'outer nuclear layer thickness measurement' SubClassOf 'photoreceptor cell layer thickness measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803370
+Label(s): photoreceptor cell layer thickness measurement 
++ 'photoreceptor cell layer thickness measurement' SubClassOf 'retinal layer thickness measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803369
+Label(s): vascular endothelial function measurement 
++ 'vascular endothelial function measurement' SubClassOf 'cardiovascular measurement'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100323
+Label(s): inherited pseudohypoaldosteronism 
++ 'inherited pseudohypoaldosteronism' SubClassOf 'pseudohypoaldosteronism'
++ 'inherited pseudohypoaldosteronism' SubClassOf 'inherited kidney disorder'
++ 'inherited pseudohypoaldosteronism' EquivalentTo 'pseudohypoaldosteronism' and ('bearer_of' some 'inherited')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100314
+Label(s): GYG1-related disorder of glycogen metabolism 
++ 'GYG1-related disorder of glycogen metabolism' SubClassOf 'disorder of glycogen metabolism'
+
+Class: http://purl.obolibrary.org/obo/HP_0030158
+Label(s): Cervical ectropion 
++ 'Cervical ectropion' SubClassOf 'Abnormality of the uterus'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100317
+Label(s): deficiency of adenosine deaminase 2 
++ 'deficiency of adenosine deaminase 2' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0005363
+Label(s): inherited focal segmental glomerulosclerosis 
++ 'inherited focal segmental glomerulosclerosis' SubClassOf 'inherited kidney disorder'
++ 'inherited focal segmental glomerulosclerosis' SubClassOf 'focal segmental glomerulosclerosis'
++ 'inherited focal segmental glomerulosclerosis' EquivalentTo 'focal segmental glomerulosclerosis' and ('bearer_of' some 'inherited')
 
 ----------------------------------
 2. Changes to EFO3
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018661
-Label(s): Zika virus infectious disease 
-- 'Zika virus infectious disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016996
-Label(s): NK-cell enteropathy 
-- 'NK-cell enteropathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018642
-Label(s): NIK deficiency 
-- 'NIK deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'NIK deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001935
-Label(s): adult B acute lymphoblastic leukemia 
-- 'adult B acute lymphoblastic leukemia' SubClassOf 'adult lymphoma'
-+ 'adult B acute lymphoblastic leukemia' SubClassOf 'precursor B-cell acute lymphoblastic leukemia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018612
-Label(s): congenital hypothyroidism 
-- 'congenital hypothyroidism' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017318
-Label(s): phakomatosis pigmentovascularis 
-- 'phakomatosis pigmentovascularis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017337
-Label(s): inherited isolated adrenal insufficiency due to partial CYP11A1 deficiency 
-- 'inherited isolated adrenal insufficiency due to partial CYP11A1 deficiency' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017341
-Label(s): virus associated tumor 
-- 'virus associated tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019022
-Label(s): sensorineural hearing loss-early graying-essential tremor syndrome 
-- 'sensorineural hearing loss-early graying-essential tremor syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017366
-Label(s): hereditary pheochromocytoma-paraganglioma 
-- 'hereditary pheochromocytoma-paraganglioma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019040
-Label(s): chromosomal disorder 
-- 'chromosomal disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019072
-Label(s): intrahepatic cholestasis 
-- 'intrahepatic cholestasis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001890
-Label(s): food allergy 
-- 'food allergy' SubClassOf 'allergic disease'
-+ 'food allergy' SubClassOf 'allergic disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0033548
+Label(s): myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies 
+- 'myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies' SubClassOf 'bearer_of' some 'congenital'
+- 'myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies' SubClassOf 'genetic disorder'
++ 'myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies' SubClassOf 'congenital myopathy'
 
 Class: http://purl.obolibrary.org/obo/MONDO_0018582
 Label(s): GCGR-related hyperglucagonemia 
-- 'GCGR-related hyperglucagonemia' SubClassOf 'material entity'
+- 'GCGR-related hyperglucagonemia' SubClassOf 'pancreatic neoplasm'
++ 'GCGR-related hyperglucagonemia' SubClassOf 'pancreatic neoplasm'
 
-Class: http://www.ebi.ac.uk/efo/EFO_1001838
-Label(s): renal nutcracker syndrome 
-- 'renal nutcracker syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018521
-Label(s): squamous cell carcinoma of pancreas 
-- 'squamous cell carcinoma of pancreas' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016850
-Label(s): atypical Norrie disease due to monosomy Xp11.3 
-- 'atypical Norrie disease due to monosomy Xp11.3' SubClassOf 'partial monosomy of the short arm of chromosome X'
-+ 'atypical Norrie disease due to monosomy Xp11.3' SubClassOf 'partial monosomy of the short arm of chromosome X'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018515
-Label(s): squamous cell carcinoma of rectum 
-- 'squamous cell carcinoma of rectum' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018513
-Label(s): squamous cell carcinoma of colon 
-- 'squamous cell carcinoma of colon' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001809
-Label(s): Marchiafava-Bignami Disease 
-- 'Marchiafava-Bignami Disease' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001807
-Label(s): malacoplakia 
-- 'malacoplakia' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001806
-Label(s): macrophage activation syndrome 
-- 'macrophage activation syndrome' SubClassOf 'secondary hemophagocytic lymphohistiocytosis'
-+ 'macrophage activation syndrome' SubClassOf 'secondary hemophagocytic lymphohistiocytosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016824
-Label(s): infantile myofibromatosis 
-- 'infantile myofibromatosis' SubClassOf 'muscular tumor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016808
-Label(s): mitochondrial DNA depletion syndrome, hepatocerebral form 
-- 'mitochondrial DNA depletion syndrome, hepatocerebral form' SubClassOf 'mitochondrial DNA depletion syndrome'
-- 'mitochondrial DNA depletion syndrome, hepatocerebral form' SubClassOf 'bearer_of' some 'rare'
-+ 'mitochondrial DNA depletion syndrome, hepatocerebral form' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003206
-Label(s): acquired hemangioma 
-- 'acquired hemangioma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019102
-Label(s): dentinogenesis imperfecta-short stature-hearing loss-intellectual disability syndrome 
-- 'dentinogenesis imperfecta-short stature-hearing loss-intellectual disability syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019128
-Label(s): mullerian aplasia 
-- 'mullerian aplasia' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0019162
+Label(s): pseudohypoaldosteronism type 2 
+- 'pseudohypoaldosteronism type 2' SubClassOf 'pseudohypoaldosteronism'
+- 'pseudohypoaldosteronism type 2' SubClassOf 'genetic hypertension'
++ 'pseudohypoaldosteronism type 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100323
 
 Class: http://purl.obolibrary.org/obo/MONDO_0019952
 Label(s): congenital myopathy 
-- 'congenital myopathy' SubClassOf 'material entity'
-+ 'congenital myopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-+ 'congenital myopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100167
+- 'congenital myopathy' SubClassOf 'pulmonary disease, chronic obstructive, susceptibility to'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018438
-Label(s): eosinophilic gastrointestinal disease 
-- 'eosinophilic gastrointestinal disease' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0019391
+Label(s): Fanconi anemia 
+- 'Fanconi anemia' SubClassOf 'inherited kidney disorder'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0016756
-Label(s): inherited nervous system cancer-predisposing syndrome 
-- 'inherited nervous system cancer-predisposing syndrome' SubClassOf 'material entity'
+Class: http://www.ebi.ac.uk/efo/EFO_1001361
+Label(s): localised scleroderma 
+- 'localised scleroderma' SubClassOf 'inherited kidney disorder'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0016749
-Label(s): tumor of cranial and spinal nerves 
-- 'tumor of cranial and spinal nerves' SubClassOf 'material entity'
+Class: http://www.ebi.ac.uk/efo/EFO_1001211
+Label(s): thromboangiitis obliterans 
+- 'thromboangiitis obliterans' SubClassOf 'secondary glomerular disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0016748
-Label(s): hemangioblastoma 
-- 'hemangioblastoma' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0014526
+Label(s): polyglucosan body myopathy type 2 
+- 'polyglucosan body myopathy type 2' SubClassOf 'disorder of glycogen metabolism'
++ 'polyglucosan body myopathy type 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100314
 
-Class: http://purl.obolibrary.org/obo/MONDO_0016729
-Label(s): mixed neuronal-glial tumor 
-- 'mixed neuronal-glial tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016726
-Label(s): neuronal tumor 
-- 'neuronal tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016721
-Label(s): pineal tumor of neuroepithelial tissue 
-- 'pineal tumor of neuroepithelial tissue' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016708
-Label(s): embryonal tumor of neuroepithelial tissue 
-- 'embryonal tumor of neuroepithelial tissue' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001444
-Label(s): Chagas disease 
-- 'Chagas disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008094
-Label(s): familial multiple nevi flammei 
-- 'familial multiple nevi flammei' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019294
-Label(s): mixed dermis disorder 
-- 'mixed dermis disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/OBA_2040167
-Label(s): age of onset of cervical dystonia 
-- 'age of onset of cervical dystonia' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2040160
-Label(s): age of onset of Machado-Joseph disease 
-- 'age of onset of Machado-Joseph disease' SubClassOf 'material property'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007216
-Label(s): congenital diaphragmatic hernia 
-- 'congenital diaphragmatic hernia' SubClassOf 'genetic disorder'
-- 'congenital diaphragmatic hernia' SubClassOf 'non-syndromic diaphragmatic or abdominal wall malformation'
-+ 'congenital diaphragmatic hernia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/OBA_2040157
-Label(s): age of onset of glioblastoma 
-- 'age of onset of glioblastoma' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018343
-Label(s): periodic paralysis with later-onset distal motor neuropathy 
-- 'periodic paralysis with later-onset distal motor neuropathy' SubClassOf 'congenital nervous system disorder'
-- 'periodic paralysis with later-onset distal motor neuropathy' SubClassOf 'inborn mitochondrial myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018303
-Label(s): generalized isolated dystonia 
-- 'generalized isolated dystonia' SubClassOf 'isolated dystonia'
-- 'generalized isolated dystonia' SubClassOf 'generalized dystonia'
-- 'generalized isolated dystonia' EquivalentTo 'generalized dystonia' and 'isolated dystonia'
-+ 'generalized isolated dystonia' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016605
-Label(s): perinatal lethal hypophosphatasia 
-- 'perinatal lethal hypophosphatasia' SubClassOf 'hypophosphatasia'
-+ 'perinatal lethal hypophosphatasia' SubClassOf 'hypophosphatasia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001325
-Label(s): penile cancer 
-- 'penile cancer' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019321
-Label(s): atypical Werner syndrome 
-- 'atypical Werner syndrome' SubClassOf 'progeroid syndrome'
-+ 'atypical Werner syndrome' SubClassOf 'bearer_of' some 'rare'
-+ 'atypical Werner syndrome' SubClassOf 'disorder of development or morphogenesis'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001001
-Label(s): age of onset of asthma 
-- 'age of onset of asthma' SubClassOf 'material property'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007238
-Label(s): diphyllobothriasis 
-- 'diphyllobothriasis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007285
-Label(s): Gerstmann syndrome 
-- 'Gerstmann syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016593
-Label(s): acquired ataxia 
-- 'acquired ataxia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016589
-Label(s): progressive cerebello-cerebral atrophy 
-- 'progressive cerebello-cerebral atrophy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016584
-Label(s): mandibuloacral dysplasia 
-- 'mandibuloacral dysplasia' SubClassOf 'progeroid syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018247
-Label(s): CADDS 
-+ 'CADDS' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016537
-Label(s): lymphoproliferative syndrome 
-- 'lymphoproliferative syndrome' SubClassOf 'hereditary neoplastic syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016536
-Label(s): autosomal recessive lymphoproliferative disease 
-- 'autosomal recessive lymphoproliferative disease' SubClassOf 'non-SCID combined immunodeficiency'
-- 'autosomal recessive lymphoproliferative disease' SubClassOf 'lymphoproliferative syndrome'
-+ 'autosomal recessive lymphoproliferative disease' SubClassOf 'lymphoproliferative syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016511
-Label(s): infectious embryofetopathy 
-- 'infectious embryofetopathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016510
-Label(s): epibulbar lipodermoid-preauricular appendage-polythelia syndrome 
-- 'epibulbar lipodermoid-preauricular appendage-polythelia syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014834
-Label(s): dyskinesia, limb and orofacial, infantile-onset 
-- 'dyskinesia, limb and orofacial, infantile-onset' SubClassOf 'genetic disorder'
-+ 'dyskinesia, limb and orofacial, infantile-onset' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007309
-Label(s): Charcot-Marie-Tooth disease type 1A 
-- 'Charcot-Marie-Tooth disease type 1A' SubClassOf 'partial duplication of the short arm of chromosome 17'
-+ 'Charcot-Marie-Tooth disease type 1A' SubClassOf 'partial duplication of the short arm of chromosome 17'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005676
-Label(s): Autoimmune Hepatitis 
-- 'Autoimmune Hepatitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018197
-Label(s): mitochondrial DNA depletion syndrome, hepatocerebrorenal form 
-- 'mitochondrial DNA depletion syndrome, hepatocerebrorenal form' SubClassOf 'mitochondrial DNA depletion syndrome, hepatocerebral form'
-+ 'mitochondrial DNA depletion syndrome, hepatocerebrorenal form' SubClassOf 'mitochondrial DNA depletion syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001475
-Label(s): schistosomiasis 
-- 'schistosomiasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018168
-Label(s): primary non-essential cutis verticis gyrata 
-- 'primary non-essential cutis verticis gyrata' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001445
-Label(s): Tungiasis 
-- 'Tungiasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018130
-Label(s): brain dopamine-serotonin vesicular transport disease 
-- 'brain dopamine-serotonin vesicular transport disease' SubClassOf 'inborn disorder of neurotransmitter metabolism and transport'
-+ 'brain dopamine-serotonin vesicular transport disease' SubClassOf 'inborn disorder of neurotransmitter metabolism and transport'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018109
-Label(s): fulminant viral hepatitis 
-- 'fulminant viral hepatitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016434
-Label(s): acquired dermis elastic tissue disorder 
-- 'acquired dermis elastic tissue disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016431
-Label(s): autosomal dominant Charcot-Marie-Tooth disease type 2M 
-- 'autosomal dominant Charcot-Marie-Tooth disease type 2M' SubClassOf 'Charcot-Marie-Tooth disease type 2'
-+ 'autosomal dominant Charcot-Marie-Tooth disease type 2M' SubClassOf 'Charcot-Marie-Tooth disease type 2'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008211
-Label(s): pseudoleprechaunism syndrome, Patterson type 
-- 'pseudoleprechaunism syndrome, Patterson type' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018092
-Label(s): Vogt-Koyanagi-Harada disease 
-- 'Vogt-Koyanagi-Harada disease' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018071
-Label(s): trisomy 18 
-- 'trisomy 18' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018068
-Label(s): trisomy 13 
-- 'trisomy 13' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016385
-Label(s): hypogonadism-mitral valve prolapse-intellectual disability syndrome 
-- 'hypogonadism-mitral valve prolapse-intellectual disability syndrome' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001349
-Label(s): Human T-lymphotropic virus 2 infectious disease 
-- 'Human T-lymphotropic virus 2 infectious disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016369
-Label(s): Rothmund-Thomson syndrome type 2 
-+ 'Rothmund-Thomson syndrome type 2' SubClassOf 'eye disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018027
-Label(s): duplication/inversion 15q11 
-- 'duplication/inversion 15q11' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018015
-Label(s): intermittent hydrarthrosis 
-- 'intermittent hydrarthrosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014645
-Label(s): BENTA disease 
-- 'BENTA disease' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'BENTA disease' SubClassOf 'inborn error of immunity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014629
-Label(s): autoimmune interstitial lung disease-arthritis syndrome 
-- 'autoimmune interstitial lung disease-arthritis syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012907
-Label(s): blindness - scoliosis - arachnodactyly syndrome 
-- 'blindness - scoliosis - arachnodactyly syndrome' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001286
-Label(s): Caroli Disease 
-- 'Caroli Disease' SubClassOf 'genetic biliary tract disease'
-+ 'Caroli Disease' SubClassOf 'genetic biliary tract disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001250
-Label(s): rotator cuff tear 
-- 'rotator cuff tear' SubClassOf 'muscle tissue disorder'
-+ 'rotator cuff tear' SubClassOf 'skeletal muscle disorder'
-
-Class: http://purl.obolibrary.org/obo/HP_0001620
-Label(s): High pitched voice 
-- 'High pitched voice' SubClassOf 'Phenotypic abnormality'
-+ 'High pitched voice' SubClassOf 'Neurological speech impairment'
-
-Class: http://purl.obolibrary.org/obo/HP_0009088
-Label(s): Speech articulation difficulties 
-- 'Speech articulation difficulties' SubClassOf 'Phenotypic abnormality'
-+ 'Speech articulation difficulties' SubClassOf 'Behavioral abnormality'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014527
-Label(s): progeroid features-hepatocellular carcinoma predisposition syndrome 
-- 'progeroid features-hepatocellular carcinoma predisposition syndrome' SubClassOf 'progeroid syndrome'
-+ 'progeroid features-hepatocellular carcinoma predisposition syndrome' SubClassOf 'disorder of development or morphogenesis'
+Class: http://purl.obolibrary.org/obo/MONDO_0012833
+Label(s): Crouzon syndrome-acanthosis nigricans syndrome 
+- 'Crouzon syndrome-acanthosis nigricans syndrome' SubClassOf 'focal segmental glomerulosclerosis'
 
 Class: http://www.ebi.ac.uk/efo/EFO_1001186
 Label(s): Sneddon syndrome 
-- 'Sneddon syndrome' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001162
-Label(s): rickettsiosis 
-- 'rickettsiosis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001158
-Label(s): retinopathy of prematurity 
-- 'retinopathy of prematurity' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001144
-Label(s): rat-bite fever 
-- 'rat-bite fever' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001101
-Label(s): periventricular leukomalacia 
-- 'periventricular leukomalacia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016123
-Label(s): muscular tumor 
-- 'muscular tumor' SubClassOf 'skeletal muscle neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016122
-Label(s): periodic paralysis 
-- 'periodic paralysis' SubClassOf 'skeletal muscle disorder'
-+ 'periodic paralysis' SubClassOf 'nervous system disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016112
-Label(s): inclusion myopathy 
-- 'inclusion myopathy' SubClassOf 'myopathy'
-+ 'inclusion myopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-+ 'inclusion myopathy' SubClassOf 'myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016107
-Label(s): myotonic dystrophy 
-- 'myotonic dystrophy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016105
-Label(s): acquired skeletal muscle disease 
-- 'acquired skeletal muscle disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012719
-Label(s): encephalopathy due to prosaposin deficiency 
-- 'encephalopathy due to prosaposin deficiency' SubClassOf 'sphingolipidosis'
-+ 'encephalopathy due to prosaposin deficiency' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100517
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001063
-Label(s): noma 
-- 'noma' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001060
-Label(s): neovascular glaucoma 
-- 'neovascular glaucoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016088
-Label(s): hypoxanthine-guanine phosphoribosyltransferase deficiency 
-- 'hypoxanthine-guanine phosphoribosyltransferase deficiency' SubClassOf 'inherited kidney disorder'
-- 'hypoxanthine-guanine phosphoribosyltransferase deficiency' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'hypoxanthine-guanine phosphoribosyltransferase deficiency' SubClassOf 'vitamin B12- and folate-independent constitutional megaloblastic anemia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016075
-Label(s): filariasis 
-- 'filariasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016063
-Label(s): Cowden disease 
-- 'Cowden disease' SubClassOf 'intestinal polyposis syndrome'
-- 'Cowden disease' SubClassOf 'PTEN hamartoma tumor syndrome'
-+ 'Cowden disease' SubClassOf 'genetic skin disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016040
-Label(s): harlequin syndrome 
-- 'harlequin syndrome' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008518
-Label(s): polymyalgia rheumatica 
-- 'polymyalgia rheumatica' SubClassOf 'myopathy'
-+ 'polymyalgia rheumatica' SubClassOf 'myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015216
-Label(s): syndromic diaphragmatic or abdominal wall malformation 
-- 'syndromic diaphragmatic or abdominal wall malformation' EquivalentTo 'diaphragmatic or abdominal wall malformation' and ('bearer_of' some 'has a syndromic presentation')
-- 'syndromic diaphragmatic or abdominal wall malformation' SubClassOf 'diaphragmatic or abdominal wall malformation'
-- 'syndromic diaphragmatic or abdominal wall malformation' SubClassOf 'syndromic disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008507
-Label(s): interstitial cystitis 
-- 'interstitial cystitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016006
-Label(s): Cockayne syndrome 
-- 'Cockayne syndrome' SubClassOf 'DNA repair deficiency'
-- 'Cockayne syndrome' SubClassOf 'inherited neurodegenerative disorder'
-- 'Cockayne syndrome' SubClassOf 'autosomal recessive disease'
-- 'Cockayne syndrome' SubClassOf 'syndromic disease'
-- 'Cockayne syndrome' SubClassOf 'bearer_of' some 'rare'
-+ 'Cockayne syndrome' SubClassOf 'DNA repair deficiency'
-+ 'Cockayne syndrome' SubClassOf 'progeroid syndrome'
-+ 'Cockayne syndrome' SubClassOf 'autosomal recessive disease'
-+ 'Cockayne syndrome' SubClassOf 'developmental anomaly of metabolic origin'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006803
-Label(s): vasculitis 
-- 'vasculitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009467
-Label(s): natal teeth-intestinal pseudoobstruction-patent ductus syndrome 
-- 'natal teeth-intestinal pseudoobstruction-patent ductus syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014300
-Label(s): proximal myopathy with extrapyramidal signs 
-- 'proximal myopathy with extrapyramidal signs' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012634
-Label(s): craniofacial dysplasia - osteopenia syndrome 
-- 'craniofacial dysplasia - osteopenia syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010952
-Label(s): hereditary hyperferritinemia with congenital cataracts 
-- 'hereditary hyperferritinemia with congenital cataracts' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010939
-Label(s): low phospholipid associated cholelithiasis 
-- 'low phospholipid associated cholelithiasis' SubClassOf 'gallbladder disease'
-+ 'low phospholipid associated cholelithiasis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700225
-+ 'low phospholipid associated cholelithiasis' SubClassOf 'genetic biliary tract disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008029
-Label(s): Bethlem myopathy 
-- 'Bethlem myopathy' SubClassOf 'genetic disorder'
-+ 'Bethlem myopathy' SubClassOf 'congenital myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013595
-Label(s): hyperbiliverdinemia 
-- 'hyperbiliverdinemia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014268
-Label(s): combined immunodeficiency due to OX40 deficiency 
-- 'combined immunodeficiency due to OX40 deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-- 'combined immunodeficiency due to OX40 deficiency' SubClassOf 'hereditary neoplastic syndrome'
-+ 'combined immunodeficiency due to OX40 deficiency' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014226
-Label(s): idiopathic CD4 lymphocytopenia 
-- 'idiopathic CD4 lymphocytopenia' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'idiopathic CD4 lymphocytopenia' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014218
-Label(s): severe dermatitis-multiple allergies-metabolic wasting syndrome 
-- 'severe dermatitis-multiple allergies-metabolic wasting syndrome' SubClassOf 'allergic disease'
-- 'severe dermatitis-multiple allergies-metabolic wasting syndrome' SubClassOf 'hyper-IgE syndrome'
-+ 'severe dermatitis-multiple allergies-metabolic wasting syndrome' SubClassOf 'syndromic disease'
-+ 'severe dermatitis-multiple allergies-metabolic wasting syndrome' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010856
-Label(s): autosomal dominant polycystic kidney disease type 1 with tuberous sclerosis 
-- 'autosomal dominant polycystic kidney disease type 1 with tuberous sclerosis' SubClassOf 'partial deletion of the short arm of chromosome 16'
-+ 'autosomal dominant polycystic kidney disease type 1 with tuberous sclerosis' SubClassOf 'partial deletion of the short arm of chromosome 16'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010840
-Label(s): pachygyria-intellectual disability-epilepsy syndrome 
-- 'pachygyria-intellectual disability-epilepsy syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010826
-Label(s): childhood absence epilepsy 
-+ 'childhood absence epilepsy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0850093
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010824
-Label(s): disorder of sex development-intellectual disability syndrome 
-- 'disorder of sex development-intellectual disability syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014197
-Label(s): combined immunodeficiency due to MALT1 deficiency 
-- 'combined immunodeficiency due to MALT1 deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'combined immunodeficiency due to MALT1 deficiency' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014160
-Label(s): TCR-alpha-beta-positive T-cell deficiency 
-- 'TCR-alpha-beta-positive T-cell deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'TCR-alpha-beta-positive T-cell deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010742
-Label(s): pentalogy of Cantrell 
-- 'pentalogy of Cantrell' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'pentalogy of Cantrell' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010735
-Label(s): Kennedy disease 
-- 'Kennedy disease' SubClassOf 'hereditary motor neuron disease'
-- 'Kennedy disease' SubClassOf 'male infertility'
-- 'Kennedy disease' SubClassOf 'bulbospinal muscular atrophy of adulthood'
-+ 'Kennedy disease' SubClassOf 'inherited neurodegenerative disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014082
-Label(s): cryptosporidiosis-chronic cholangitis-liver disease syndrome 
-- 'cryptosporidiosis-chronic cholangitis-liver disease syndrome' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'cryptosporidiosis-chronic cholangitis-liver disease syndrome' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020196
-Label(s): anomaly of the secretory and excretory apparatus of the lacrimal system 
-- 'anomaly of the secretory and excretory apparatus of the lacrimal system' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014074
-Label(s): Charcot-Marie-Tooth disease dominant intermediate F 
-- 'Charcot-Marie-Tooth disease dominant intermediate F' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-+ 'Charcot-Marie-Tooth disease dominant intermediate F' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004187
-Label(s): nodular fasciitis 
-- 'nodular fasciitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/CL_0005019
-Label(s): pancreatic epsilon cell 
-- 'pancreatic epsilon cell' SubClassOf 'pancreatic cell'
-+ 'pancreatic epsilon cell' SubClassOf 'epithelial cell of pancreas'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004799
-Label(s): cholelithiasis 
-- 'cholelithiasis' SubClassOf 'gallbladder disease'
-+ 'cholelithiasis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700225
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010545
-Label(s): Nance-Horan syndrome 
-- 'Nance-Horan syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0029134
-Label(s): severe combined immunodeficiency due to CARMIL2 deficiency 
-- 'severe combined immunodeficiency due to CARMIL2 deficiency' SubClassOf 'lymphoproliferative syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012176
-Label(s): Emanuel syndrome 
-- 'Emanuel syndrome' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012161
-Label(s): susceptibility to respiratory infections associated with CD8alpha chain mutation 
-- 'susceptibility to respiratory infections associated with CD8alpha chain mutation' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'susceptibility to respiratory infections associated with CD8alpha chain mutation' SubClassOf 'predisposes towards' some 'respiratory tract infectious disorder'
-+ 'susceptibility to respiratory infections associated with CD8alpha chain mutation' SubClassOf 'hereditary predisposition to infections'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010457
-Label(s): Ogden syndrome 
-- 'Ogden syndrome' SubClassOf 'progeroid syndrome'
-+ 'Ogden syndrome' SubClassOf 'progeroid syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012104
-Label(s): acquired partial lipodystrophy 
-- 'acquired partial lipodystrophy' SubClassOf 'progeroid syndrome'
-- 'acquired partial lipodystrophy' SubClassOf 'developmental anomaly of metabolic origin'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002918
-Label(s): rhabdomyosarcoma 
-- 'rhabdomyosarcoma' SubClassOf 'skeletal muscle cancer'
-- 'rhabdomyosarcoma' SubClassOf 'muscular tumor'
-+ 'rhabdomyosarcoma' SubClassOf 'muscle cancer'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009517
-Label(s): Donohue syndrome 
-- 'Donohue syndrome' SubClassOf 'hypertrichosis'
-- 'Donohue syndrome' SubClassOf 'progeroid syndrome'
-+ 'Donohue syndrome' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002893
-Label(s): choriocarcinoma 
-- 'choriocarcinoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010392
-Label(s): glycogen storage disease due to phosphoglycerate kinase 1 deficiency 
-- 'glycogen storage disease due to phosphoglycerate kinase 1 deficiency' SubClassOf 'familial hemolytic anemia'
-- 'glycogen storage disease due to phosphoglycerate kinase 1 deficiency' SubClassOf 'muscular glycogenosis'
-- 'glycogen storage disease due to phosphoglycerate kinase 1 deficiency' SubClassOf 'anemia due to erythrocyte enzyme disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0600003
-Label(s): bacterial hemorrhagic fever 
-- 'bacterial hemorrhagic fever' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010389
-Label(s): X-linked mendelian susceptibility to mycobacterial diseases due to CYBB deficiency 
-- 'X-linked mendelian susceptibility to mycobacterial diseases due to CYBB deficiency' SubClassOf 'X-linked Mendelian susceptibility to mycobacterial diseases'
-+ 'X-linked mendelian susceptibility to mycobacterial diseases due to CYBB deficiency' SubClassOf 'X-linked Mendelian susceptibility to mycobacterial diseases'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010362
-Label(s): glycogen storage disease IXd 
-+ 'glycogen storage disease IXd' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008993
-Label(s): cleft palate-stapes fixation-oligodontia syndrome 
-- 'cleft palate-stapes fixation-oligodontia syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008941
-Label(s): hepatic fibrosis-renal cysts-intellectual disability syndrome 
-- 'hepatic fibrosis-renal cysts-intellectual disability syndrome' SubClassOf 'material entity'
-- 'hepatic fibrosis-renal cysts-intellectual disability syndrome' SubClassOf 'disease'
-+ 'hepatic fibrosis-renal cysts-intellectual disability syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008919
-Label(s): systemic primary carnitine deficiency disease 
-+ 'systemic primary carnitine deficiency disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008918
-Label(s): carnitine-acylcarnitine translocase deficiency 
-- 'carnitine-acylcarnitine translocase deficiency' SubClassOf 'familial hypertrophic cardiomyopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008915
-Label(s): dilated cardiomyopathy-hypergonadotropic hypogonadism syndrome 
-- 'dilated cardiomyopathy-hypergonadotropic hypogonadism syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/OBA_2040166
-Label(s): age of onset of depressive disorder 
-- 'age of onset of depressive disorder' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2050099
-Label(s): age of onset of anorexia nervosa 
-- 'age of onset of anorexia nervosa' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011976
-Label(s): lipodystrophy-intellectual disability-deafness syndrome 
-- 'lipodystrophy-intellectual disability-deafness syndrome' SubClassOf 'progeroid syndrome'
-- 'lipodystrophy-intellectual disability-deafness syndrome' SubClassOf 'developmental anomaly of metabolic origin'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000327
-Label(s): Low Grade Central Osteosarcoma 
-- 'Low Grade Central Osteosarcoma' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000334
-Label(s): Lung Lymphangioleiomyomatosis 
-- 'Lung Lymphangioleiomyomatosis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000353
-Label(s): Malignant Jugulotympanic Paraganglioma 
-+ 'Malignant Jugulotympanic Paraganglioma' SubClassOf 'vein disorder'
-+ 'Malignant Jugulotympanic Paraganglioma' SubClassOf 'vascular bone neoplasm'
-+ 'Malignant Jugulotympanic Paraganglioma' SubClassOf 'neurovascular disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010288
-Label(s): adrenomyodystrophy 
-- 'adrenomyodystrophy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0023868
-Label(s): melanoma associated retinopathy 
-- 'melanoma associated retinopathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008895
-Label(s): hereditary arterial and articular multiple calcification syndrome 
-- 'hereditary arterial and articular multiple calcification syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015650
-Label(s): epilepsy syndrome 
-- 'epilepsy syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010196
-Label(s): Werner syndrome 
-- 'Werner syndrome' SubClassOf 'bearer_of' some 'rare'
-+ 'Werner syndrome' SubClassOf 'progeroid syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0025445
-Label(s): Wieacker-Wolff syndrome (spectrum) 
-- 'Wieacker-Wolff syndrome (spectrum)' SubClassOf 'skeletal muscle disorder'
-+ 'Wieacker-Wolff syndrome (spectrum)' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010161
-Label(s): tyrosinemia type I 
-- 'tyrosinemia type I' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'tyrosinemia type I' SubClassOf 'genetic peripheral neuropathy'
-- 'tyrosinemia type I' SubClassOf 'inherited kidney disorder'
-+ 'tyrosinemia type I' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010155
-Label(s): Dorfman-Chanarin disease 
-- 'Dorfman-Chanarin disease' SubClassOf 'syndromic dyslipidemia'
-- 'Dorfman-Chanarin disease' SubClassOf 'neutral lipid storage disease'
-- 'Dorfman-Chanarin disease' SubClassOf 'autosomal ichthyosis syndrome'
-+ 'Dorfman-Chanarin disease' SubClassOf 'neutral lipid storage disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010104
-Label(s): non-eruption of teeth-maxillary hypoplasia-genu valgum syndrome 
-- 'non-eruption of teeth-maxillary hypoplasia-genu valgum syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008792
-Label(s): familial angiolipomatosis 
-- 'familial angiolipomatosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008783
-Label(s): Tangier disease 
-- 'Tangier disease' SubClassOf 'genetic peripheral neuropathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008771
-Label(s): amelogenesis imperfecta type 1G 
-- 'amelogenesis imperfecta type 1G' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'amelogenesis imperfecta type 1G' SubClassOf 'inherited kidney disorder'
-+ 'amelogenesis imperfecta type 1G' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008758
-Label(s): mitochondrial DNA depletion syndrome 4a 
-- 'mitochondrial DNA depletion syndrome 4a' SubClassOf 'mitochondrial DNA depletion syndrome, hepatocerebral form'
-+ 'mitochondrial DNA depletion syndrome 4a' SubClassOf 'mitochondrial DNA depletion syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008722
-Label(s): short chain acyl-CoA dehydrogenase deficiency 
-+ 'short chain acyl-CoA dehydrogenase deficiency' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010200
-Label(s): Wilson disease 
-- 'Wilson disease' SubClassOf 'disorder of copper metabolism'
-+ 'Wilson disease' SubClassOf 'disorder of copper metabolism'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004268
-Label(s): sclerosing cholangitis 
-- 'sclerosing cholangitis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004259
-Label(s): osteonecrosis 
-- 'osteonecrosis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004256
-Label(s): neuromyelitis optica 
-- 'neuromyelitis optica' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010060
-Label(s): infantile onset spinocerebellar ataxia 
-- 'infantile onset spinocerebellar ataxia' SubClassOf 'mitochondrial DNA depletion syndrome, hepatocerebral form'
-+ 'infantile onset spinocerebellar ataxia' SubClassOf 'mitochondrial DNA depletion syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010026
-Label(s): SHORT syndrome 
-- 'SHORT syndrome' SubClassOf 'progeroid syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010023
-Label(s): combined immunodeficiency due to ZAP70 deficiency 
-- 'combined immunodeficiency due to ZAP70 deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'combined immunodeficiency due to ZAP70 deficiency' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010002
-Label(s): Rothmund-Thomson syndrome 
-- 'Rothmund-Thomson syndrome' SubClassOf 'eye disease'
-- 'Rothmund-Thomson syndrome' SubClassOf 'progeroid syndrome'
-- 'Rothmund-Thomson syndrome' SubClassOf 'hereditary poikiloderma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008694
-Label(s): pseudoprogeria syndrome 
-- 'pseudoprogeria syndrome' SubClassOf 'progeroid syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010220
-Label(s): Young syndrome 
-- 'Young syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008684
-Label(s): Wolf-Hirschhorn syndrome 
-- 'Wolf-Hirschhorn syndrome' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'Wolf-Hirschhorn syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008667
-Label(s): von Hippel-Lindau disease 
-- 'von Hippel-Lindau disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009710
-Label(s): Thomsen and Becker disease 
-- 'Thomsen and Becker disease' SubClassOf 'congenital myopathy'
-- 'Thomsen and Becker disease' SubClassOf 'congenital myotonia'
-- 'Thomsen and Becker disease' SubClassOf 'congenital nervous system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010339
-Label(s): X-linked epilepsy-learning disabilities-behavior disorders syndrome 
-+ 'X-linked epilepsy-learning disabilities-behavior disorders syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0859390
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012012
-Label(s): Charcot-Marie-Tooth disease dominant intermediate C 
-- 'Charcot-Marie-Tooth disease dominant intermediate C' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-+ 'Charcot-Marie-Tooth disease dominant intermediate C' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000607
-Label(s): Undifferentiated Pancreatic Carcinoma with Osteoclast-Like Giant Cells 
-+ 'Undifferentiated Pancreatic Carcinoma with Osteoclast-Like Giant Cells' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004152
-Label(s): chorea 
-- 'chorea' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004145
-Label(s): myopathy 
-- 'myopathy' SubClassOf 'muscle tissue disorder'
-+ 'myopathy' SubClassOf 'skeletal muscle disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000762
-Label(s): hepatocellular adenoma 
-- 'hepatocellular adenoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020125
-Label(s): acquired neuromuscular junction disease 
-- 'acquired neuromuscular junction disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008588
-Label(s): hereditary geniospasm 
-- 'hereditary geniospasm' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010455
-Label(s): X-linked immunodeficiency with magnesium defect, Epstein-Barr virus infection and neoplasia 
-- 'X-linked immunodeficiency with magnesium defect, Epstein-Barr virus infection and neoplasia' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'X-linked immunodeficiency with magnesium defect, Epstein-Barr virus infection and neoplasia' SubClassOf 'combined immunodeficiency'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012124
-Label(s): sudden infant death-dysgenesis of the testes syndrome 
-- 'sudden infant death-dysgenesis of the testes syndrome' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007126
-Label(s): Acanthamoeba keratitis 
-- 'Acanthamoeba keratitis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000650
-Label(s): whooping cough 
-- 'whooping cough' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008486
-Label(s): steatocystoma multiplex-natal teeth syndrome 
-- 'steatocystoma multiplex-natal teeth syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002601
-Label(s): teratoma 
-- 'teratoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013394
-Label(s): porencephaly-microcephaly-bilateral congenital cataract syndrome 
-- 'porencephaly-microcephaly-bilateral congenital cataract syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008425
-Label(s): omphalocele syndrome, Shprintzen-Goldberg type 
-- 'omphalocele syndrome, Shprintzen-Goldberg type' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010526
-Label(s): Fabry disease 
-- 'Fabry disease' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'Fabry disease' SubClassOf 'inherited kidney disorder'
-- 'Fabry disease' SubClassOf 'familial restrictive cardiomyopathy'
-- 'Fabry disease' SubClassOf 'genetic peripheral neuropathy'
-+ 'Fabry disease' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000808
-Label(s): anterior compartment syndrome 
-- 'anterior compartment syndrome' SubClassOf 'muscle tissue disorder'
-+ 'anterior compartment syndrome' SubClassOf 'skeletal muscle disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700070
-Label(s): myopathy caused by variation in POMT1 
-+ 'myopathy caused by variation in POMT1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700069
-Label(s): myopathy caused by variation in POMGNT2 
-+ 'myopathy caused by variation in POMGNT2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700068
-Label(s): myopathy caused by variation in POMGNT1 
-+ 'myopathy caused by variation in POMGNT1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700067
-Label(s): myopathy caused by variation in FKTN 
-+ 'myopathy caused by variation in FKTN' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700066
-Label(s): myopathy caused by variation in FKRP 
-+ 'myopathy caused by variation in FKRP' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000546
-Label(s): injury 
-- 'injury' SubClassOf 'disease'
-+ 'injury' SubClassOf 'disposition'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021637
-Label(s): low grade glioma 
-- 'low grade glioma' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000508
-Label(s): genetic disorder 
-- 'genetic disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008387
-Label(s): ring dermoid of cornea 
-- 'ring dermoid of cornea' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008311
-Label(s): progeria-short stature-pigmented nevi syndrome 
-- 'progeria-short stature-pigmented nevi syndrome' SubClassOf 'progeroid syndrome'
-+ 'progeria-short stature-pigmented nevi syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004976
-Label(s): amyotrophic lateral sclerosis 
-- 'amyotrophic lateral sclerosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015474
-Label(s): cryptosporidiosis 
-- 'cryptosporidiosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008259
-Label(s): familial spontaneous pneumothorax 
-- 'familial spontaneous pneumothorax' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044326
-Label(s): developmental delay and seizures with or without movement abnormalities 
-- 'developmental delay and seizures with or without movement abnormalities' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014157
-Label(s): mandibular hypoplasia-deafness-progeroid syndrome 
-- 'mandibular hypoplasia-deafness-progeroid syndrome' SubClassOf 'progeroid syndrome'
-+ 'mandibular hypoplasia-deafness-progeroid syndrome' SubClassOf 'premature aging syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007233
-Label(s): diaphragm disease 
-- 'diaphragm disease' SubClassOf 'skeletal muscle disorder'
-+ 'diaphragm disease' SubClassOf 'skeletal muscle disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0023149
-Label(s): infection due to clostridium perfringens 
-- 'infection due to clostridium perfringens' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000318
-Label(s): cardiomyopathy 
-- 'cardiomyopathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008145
-Label(s): Ollier disease 
-- 'Ollier disease' SubClassOf 'overgrowth syndrome'
-- 'Ollier disease' SubClassOf 'hereditary neoplastic syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008120
-Label(s): spinocerebellar ataxia type 7 
-- 'spinocerebellar ataxia type 7' SubClassOf 'autosomal dominant cerebellar ataxia type II'
-+ 'spinocerebellar ataxia type 7' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008118
-Label(s): odontomatosis-aortae esophagus stenosis syndrome 
-- 'odontomatosis-aortae esophagus stenosis syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004746
-Label(s): myopathy of extraocular muscle 
-- 'myopathy of extraocular muscle' SubClassOf 'skeletal muscle disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012517
-Label(s): atypical Gaucher disease due to saposin C deficiency 
-- 'atypical Gaucher disease due to saposin C deficiency' SubClassOf 'Gaucher disease'
-+ 'atypical Gaucher disease due to saposin C deficiency' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100517
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014276
-Label(s): combined immunodeficiency due to CD3gamma deficiency 
-- 'combined immunodeficiency due to CD3gamma deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'combined immunodeficiency due to CD3gamma deficiency' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008051
-Label(s): tubular aggregate myopathy 
-- 'tubular aggregate myopathy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008046
-Label(s): autosomal dominant myoglobinuria 
-- 'autosomal dominant myoglobinuria' SubClassOf 'muscular lipidosis'
-+ 'autosomal dominant myoglobinuria' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019946
-Label(s): ligneous conjunctivitis 
-- 'ligneous conjunctivitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004657
-Label(s): disseminated chorioretinitis 
-- 'disseminated chorioretinitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/CL_0000556
-Label(s): megakaryocyte 
-- 'megakaryocyte' SubClassOf 'bone marrow cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012675
-Label(s): corticosteroid-binding globulin deficiency 
-- 'corticosteroid-binding globulin deficiency' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016033
-Label(s): Cornelia de Lange syndrome 
-- 'Cornelia de Lange syndrome' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'Cornelia de Lange syndrome' SubClassOf 'syndromic disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000181
-Label(s): head and neck squamous cell carcinoma 
-- 'head and neck squamous cell carcinoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016052
-Label(s): atypical autism 
-- 'atypical autism' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019899
-Label(s): distal monosomy 20q 
-- 'distal monosomy 20q' SubClassOf 'partial deletion of the long arm of chromosome 20'
-+ 'distal monosomy 20q' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020117
-Label(s): alpha granule disease 
-- 'alpha granule disease' SubClassOf 'isolated hereditary giant platelet disorder'
-+ 'alpha granule disease' SubClassOf 'isolated hereditary giant platelet disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019851
-Label(s): acquired primary ovarian failure 
-- 'acquired primary ovarian failure' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019846
-Label(s): acquired central diabetes insipidus 
-- 'acquired central diabetes insipidus' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019803
-Label(s): angioma serpiginosum 
-- 'angioma serpiginosum' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002848
-Label(s): skeletal muscle neoplasm 
-- 'skeletal muscle neoplasm' SubClassOf 'neoplasm'
-- 'skeletal muscle neoplasm' SubClassOf 'skeletal muscle disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002847
-Label(s): skeletal muscle cancer 
-- 'skeletal muscle cancer' SubClassOf 'skeletal muscle neoplasm'
-- 'skeletal muscle cancer' SubClassOf 'muscle cancer'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012786
-Label(s): juvenile cataract-microcornea-renal glucosuria syndrome 
-- 'juvenile cataract-microcornea-renal glucosuria syndrome' SubClassOf 'inherited kidney disorder'
-- 'juvenile cataract-microcornea-renal glucosuria syndrome' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-
-Class: http://purl.obolibrary.org/obo/HP_0001397
-Label(s): Hepatic steatosis 
-+ 'Hepatic steatosis' SubClassOf 'Abnormality of metabolism/homeostasis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017396
-Label(s): toxic dermatosis 
-- 'toxic dermatosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016175
-Label(s): cutis laxa 
-- 'cutis laxa' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'cutis laxa' SubClassOf 'developmental defect during embryogenesis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021142
-Label(s): acquired rippling muscle disease 
-- 'acquired rippling muscle disease' SubClassOf 'bearer_of' some 'acquired'
-- 'acquired rippling muscle disease' SubClassOf 'material entity'
-+ 'acquired rippling muscle disease' SubClassOf 'acquired skeletal muscle disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021140
-Label(s): congenital 
-- 'congenital' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007371
-Label(s): Miller Fisher syndrome 
-- 'Miller Fisher syndrome' SubClassOf 'autoimmune disorder of central nervous system'
-+ 'Miller Fisher syndrome' SubClassOf http://www.ebi.ac.uk/efo/EFO_0020092
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019787
-Label(s): autoimmune enteropathy 
-- 'autoimmune enteropathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019743
-Label(s): nephropathy secondary to a storage or other metabolic disease 
-- 'nephropathy secondary to a storage or other metabolic disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019736
-Label(s): dense deposit disease 
-- 'dense deposit disease' SubClassOf 'non-immunoglobulin-mediated membranoproliferative glomerulonephritis'
-+ 'dense deposit disease' SubClassOf 'primary membranoproliferative glomerulonephritis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019716
-Label(s): overgrowth syndrome 
-- 'overgrowth syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012853
-Label(s): Fontaine progeroid syndrome 
-- 'Fontaine progeroid syndrome' SubClassOf 'progeroid syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016205
-Label(s): IRVAN syndrome 
-- 'IRVAN syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016222
-Label(s): spindle cell hemangioma 
-- 'spindle cell hemangioma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016223
-Label(s): infantile hemangioma of rare localization 
-- 'infantile hemangioma of rare localization' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016236
-Label(s): kaposiform hemangioendothelioma 
-- 'kaposiform hemangioendothelioma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016277
-Label(s): malignant mixed epithelial and mesenchymal tumor of cervix uteri 
-- 'malignant mixed epithelial and mesenchymal tumor of cervix uteri' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021064
-Label(s): jugulotympanic paraganglioma 
-- 'jugulotympanic paraganglioma' SubClassOf 'neurovascular disorder'
-- 'jugulotympanic paraganglioma' SubClassOf 'vascular bone neoplasm'
-- 'jugulotympanic paraganglioma' SubClassOf 'glomus jugulare neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700007
-Label(s): idiopathic disease 
-- 'idiopathic disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017975
-Label(s): sex chromosome disorder of sex development 
-- 'sex chromosome disorder of sex development' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700071
-Label(s): myopathy caused by variation in POMT2 
-+ 'myopathy caused by variation in POMT2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017966
-Label(s): 46,XY disorder of gonadal development 
-- '46,XY disorder of gonadal development' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017962
-Label(s): 46,XX disorder of sex development induced by fetoplacental androgens excess 
-- '46,XX disorder of sex development induced by fetoplacental androgens excess' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017961
-Label(s): 46,XX disorder of gonadal development 
-- '46,XX disorder of gonadal development' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019624
-Label(s): acquired angioedema 
-- 'acquired angioedema' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019609
-Label(s): Zellweger spectrum disorders 
-- 'Zellweger spectrum disorders' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'Zellweger spectrum disorders' SubClassOf 'inherited kidney disorder'
-- 'Zellweger spectrum disorders' SubClassOf 'eye degenerative disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019600
-Label(s): xeroderma pigmentosum 
-- 'xeroderma pigmentosum' SubClassOf 'progeroid syndrome'
-- 'xeroderma pigmentosum' SubClassOf 'developmental anomaly of metabolic origin'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017937
-Label(s): autosomal dominant intermediate Charcot-Marie-Tooth disease with neuropathic pain 
-- 'autosomal dominant intermediate Charcot-Marie-Tooth disease with neuropathic pain' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-+ 'autosomal dominant intermediate Charcot-Marie-Tooth disease with neuropathic pain' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000995
-Label(s): familial periodic paralysis 
-- 'familial periodic paralysis' SubClassOf 'metabolic myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017919
-Label(s): exstrophy-epispadias complex 
-- 'exstrophy-epispadias complex' SubClassOf 'diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017904
-Label(s): steroid dehydrogenase deficiency-dental anomalies syndrome 
-- 'steroid dehydrogenase deficiency-dental anomalies syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014637
-Label(s): DOCK2 deficiency 
-- 'DOCK2 deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'DOCK2 deficiency' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016354
-Label(s): xeroderma pigmentosum-Cockayne syndrome complex 
-- 'xeroderma pigmentosum-Cockayne syndrome complex' SubClassOf 'progeroid syndrome'
-- 'xeroderma pigmentosum-Cockayne syndrome complex' SubClassOf 'developmental anomaly of metabolic origin'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018087
-Label(s): viral hemorrhagic fever 
-- 'viral hemorrhagic fever' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019599
-Label(s): primary lipodystrophy 
-- 'primary lipodystrophy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019593
-Label(s): 46,XX disorder of sex development induced by fetal androgens excess 
-- '46,XX disorder of sex development induced by fetal androgens excess' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010395
-Label(s): phosphoribosylpyrophosphate synthetase superactivity 
-- 'phosphoribosylpyrophosphate synthetase superactivity' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'phosphoribosylpyrophosphate synthetase superactivity' SubClassOf 'inherited kidney disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0030069
-Label(s): complete genomic deletion 
-- 'complete genomic deletion' SubClassOf 'copy number loss'
-+ 'complete genomic deletion' SubClassOf http://www.ebi.ac.uk/efo/EFO_0020073
-
-Class: http://purl.obolibrary.org/obo/OBA_2040155
-Label(s): age of onset of stroke disorder 
-- 'age of onset of stroke disorder' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017853
-Label(s): hypersensitivity pneumonitis 
-- 'hypersensitivity pneumonitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019514
-Label(s): hepatic veno-occlusive disease 
-- 'hepatic veno-occlusive disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017849
-Label(s): Siegler-Brewer-Carey syndrome 
-- 'Siegler-Brewer-Carey syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017818
-Label(s): lethal arteriopathy syndrome due to fibulin-4 deficiency 
-- 'lethal arteriopathy syndrome due to fibulin-4 deficiency' SubClassOf 'material entity'
-
-Class: http://www.orpha.net/ORDO/Orphanet_126
-Label(s): Blepharophimosis - epicanthus inversus - ptosis 
-- 'Blepharophimosis - epicanthus inversus - ptosis' SubClassOf 'Rare female infertility due to an anomaly of ovarian function of genetic origin'
-- 'Blepharophimosis - epicanthus inversus - ptosis' SubClassOf 'Kinetic eyelid anomaly'
-- 'Blepharophimosis - epicanthus inversus - ptosis' SubClassOf 'Genetic developmental defect of the eye'
-- 'Blepharophimosis - epicanthus inversus - ptosis' SubClassOf 'Non-acquired premature ovarian failure'
-+ 'Blepharophimosis - epicanthus inversus - ptosis' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018106
-Label(s): hereditary xanthinuria 
-- 'hereditary xanthinuria' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'hereditary xanthinuria' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016441
-Label(s): acquired pseudoxanthoma elasticum 
-- 'acquired pseudoxanthoma elasticum' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018116
-Label(s): galactosemia 
-- 'galactosemia' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'galactosemia' SubClassOf 'inherited kidney disorder'
-+ 'galactosemia' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/HP_0000733
-Label(s): Motor stereotypy 
-- 'Motor stereotypy' SubClassOf 'Abnormality of movement'
-- 'Motor stereotypy' SubClassOf 'Abnormal central motor function'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018178
-Label(s): intestinal lymphangiectasia 
-- 'intestinal lymphangiectasia' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000694
-Label(s): severe acute respiratory syndrome 
-- 'severe acute respiratory syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/HP_0008250
-Label(s): Infantile hypercalcemia 
-- 'Infantile hypercalcemia' SubClassOf 'Hypercalcemia'
-+ 'Infantile hypercalcemia' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017795
-Label(s): ameloblastoma 
-- 'ameloblastoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017773
-Label(s): hypoalphalipoproteinemia 
-- 'hypoalphalipoproteinemia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002474
-Label(s): primary hyperoxaluria 
-- 'primary hyperoxaluria' SubClassOf 'inherited kidney disorder'
-- 'primary hyperoxaluria' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-+ 'primary hyperoxaluria' SubClassOf 'inborn carbohydrate metabolic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017728
-Label(s): Tay-Sachs disease, B1 variant 
-- 'Tay-Sachs disease, B1 variant' SubClassOf 'Tay-Sachs disease'
-+ 'Tay-Sachs disease, B1 variant' SubClassOf 'Tay-Sachs disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017726
-Label(s): Tay-Sachs disease, b variant, adult form 
-- 'Tay-Sachs disease, b variant, adult form' SubClassOf 'Tay-Sachs disease'
-+ 'Tay-Sachs disease, b variant, adult form' SubClassOf 'Tay-Sachs disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017725
-Label(s): Tay-Sachs disease, b variant, juvenile form 
-- 'Tay-Sachs disease, b variant, juvenile form' SubClassOf 'Tay-Sachs disease'
-+ 'Tay-Sachs disease, b variant, juvenile form' SubClassOf 'Tay-Sachs disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017724
-Label(s): Tay-Sachs disease, b variant, infantile form 
-- 'Tay-Sachs disease, b variant, infantile form' SubClassOf 'Tay-Sachs disease'
-+ 'Tay-Sachs disease, b variant, infantile form' SubClassOf 'Tay-Sachs disease'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001018
-Label(s): age of onset of amyotrophic lateral sclerosis 
-- 'age of onset of amyotrophic lateral sclerosis' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002413
-Label(s): glycogen storage disease I 
-- 'glycogen storage disease I' SubClassOf 'inherited kidney disorder'
-- 'glycogen storage disease I' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-+ 'glycogen storage disease I' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016524
-Label(s): congenital vascular bone syndrome 
-- 'congenital vascular bone syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018201
-Label(s): extragonadal germ cell tumor 
-- 'extragonadal germ cell tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018242
-Label(s): autoimmune hypoparathyroidism 
-- 'autoimmune hypoparathyroidism' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019356
-Label(s): urogenital tract malformation 
-- 'urogenital tract malformation' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017658
-Label(s): hyperekplexia 
-- 'hyperekplexia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017656
-Label(s): motor stereotypies 
-- 'motor stereotypies' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000949
-Label(s): gastroschisis 
-- 'gastroschisis' SubClassOf 'non-syndromic diaphragmatic or abdominal wall malformation'
-+ 'gastroschisis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100298
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000941
-Label(s): frozen shoulder 
-- 'frozen shoulder' SubClassOf 'connective tissue disease'
-- 'frozen shoulder' SubClassOf 'muscle tissue disorder'
-+ 'frozen shoulder' SubClassOf 'joint disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015975
-Label(s): hyper-IgM syndrome with susceptibility to opportunistic infections 
-- 'hyper-IgM syndrome with susceptibility to opportunistic infections' SubClassOf 'non-SCID combined immunodeficiency'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019303
-Label(s): premature aging syndrome 
-- 'premature aging syndrome' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000934
-Label(s): eyelid neoplasm 
-- 'eyelid neoplasm' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015961
-Label(s): genetic head and neck malformation 
-- 'genetic head and neck malformation' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017623
-Label(s): PTEN hamartoma tumor syndrome 
-- 'PTEN hamartoma tumor syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001347
-Label(s): facioscapulohumeral muscular dystrophy 
-- 'facioscapulohumeral muscular dystrophy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015923
-Label(s): acquired peripheral neuropathy 
-- 'acquired peripheral neuropathy' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000737
-Label(s): well-differentiated sarcoma 
-- 'well-differentiated sarcoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002320
-Label(s): congenital nervous system disorder 
-- 'congenital nervous system disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015914
-Label(s): primary orthostatic hypotension 
-- 'primary orthostatic hypotension' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002312
-Label(s): opportunistic mycosis 
-- 'opportunistic mycosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015903
-Label(s): hyperalphalipoproteinemia 
-- 'hyperalphalipoproteinemia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015902
-Label(s): major hypertriglyceridemia 
-- 'major hypertriglyceridemia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016611
-Label(s): lipoblastoma 
-- 'lipoblastoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018327
-Label(s): glomus tumor 
-- 'glomus tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009168
-Label(s): Fowler syndrome 
-- 'Fowler syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019277
-Label(s): epidermal appendage anomaly 
-- 'epidermal appendage anomaly' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019268
-Label(s): epidermal disease 
-- 'epidermal disease' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000898
-Label(s): diaphragmatic eventration 
-- 'diaphragmatic eventration' SubClassOf 'genetic disorder'
-+ 'diaphragmatic eventration' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017592
-Label(s): staphylococcal toxemia 
-- 'staphylococcal toxemia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017574
-Label(s): chronic intestinal pseudoobstruction 
-- 'chronic intestinal pseudoobstruction' SubClassOf 'material entity'
-
-Class: http://www.orpha.net/ORDO/Orphanet_261572
-Label(s): Blepharophimosis - epicanthus inversus - ptosis due to a point mutation 
-- 'Blepharophimosis - epicanthus inversus - ptosis due to a point mutation' SubClassOf 'Blepharophimosis - epicanthus inversus - ptosis'
-+ 'Blepharophimosis - epicanthus inversus - ptosis due to a point mutation' SubClassOf 'blepharophimosis, ptosis, and epicanthus inversus syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019202
-Label(s): myxofibrosarcoma 
-- 'myxofibrosarcoma' SubClassOf 'muscular tumor'
-- 'myxofibrosarcoma' SubClassOf 'skeletal muscle cancer'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002254
-Label(s): syndromic disease 
-- 'syndromic disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000568
-Label(s): autoimmune disorder of central nervous system 
-- 'autoimmune disorder of central nervous system' SubClassOf 'central nervous system disease'
-- 'autoimmune disorder of central nervous system' SubClassOf 'autoimmune disorder of the nervous system'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002914
-Label(s): uterine sarcoma 
-- 'uterine sarcoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018469
-Label(s): pulmonary non-tuberculous mycobacterial infection 
-- 'pulmonary non-tuberculous mycobacterial infection' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019191
-Label(s): IgG4-related dacryoadenitis and sialadenitis 
-- 'IgG4-related dacryoadenitis and sialadenitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020145
-Label(s): developmental defect of the eye 
-- 'developmental defect of the eye' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019154
-Label(s): androgen insensitivity syndrome 
-- 'androgen insensitivity syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019153
-Label(s): brain malformation-congenital heart disease-postaxial polydactyly syndrome 
-- 'brain malformation-congenital heart disease-postaxial polydactyly syndrome' SubClassOf 'heart disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019152
-Label(s): Oguchi disease 
-- 'Oguchi disease' SubClassOf 'inherited retinal dystrophy'
-- 'Oguchi disease' SubClassOf 'congenital stationary night blindness'
-+ 'Oguchi disease' SubClassOf 'inherited retinal dystrophy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015798
-Label(s): inflammatory myofibroblastic tumor 
-- 'inflammatory myofibroblastic tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019126
-Label(s): intractable diarrhea of infancy 
-- 'intractable diarrhea of infancy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015794
-Label(s): antenatal multiminicore disease with arthrogryposis multiplex congenita 
-- 'antenatal multiminicore disease with arthrogryposis multiplex congenita' SubClassOf 'multiminicore myopathy'
-+ 'antenatal multiminicore disease with arthrogryposis multiplex congenita' SubClassOf 'multiminicore myopathy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000737
-Label(s): multiple symmetric lipomatosis 
-- 'multiple symmetric lipomatosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015745
-Label(s): microcephaly-polymicrogyria-corpus callosum agenesis syndrome 
-- 'microcephaly-polymicrogyria-corpus callosum agenesis syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000476
-Label(s): generalized dystonia 
-- 'generalized dystonia' SubClassOf 'dystonic disorder'
-+ 'generalized dystonia' SubClassOf 'isolated dystonia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000437
-Label(s): cerebellar ataxia 
-- 'cerebellar ataxia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018511
-Label(s): epithelial tumor of the appendix 
-- 'epithelial tumor of the appendix' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017769
-Label(s): acquired immunodeficiency 
-- 'acquired immunodeficiency' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019088
-Label(s): post-transplant lymphoproliferative disease 
-- 'post-transplant lymphoproliferative disease' SubClassOf 'Epstein-Barr virus-associated malignant lymphoproliferative disorder'
-- 'post-transplant lymphoproliferative disease' SubClassOf 'T-cell non-Hodgkin lymphoma'
-- 'post-transplant lymphoproliferative disease' SubClassOf 'immunodeficiency-associated lymphoproliferative disease'
-+ 'post-transplant lymphoproliferative disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700220
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000691
-Label(s): epidermolysis bullosa acquisita 
-- 'epidermolysis bullosa acquisita' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019054
-Label(s): congenital limb malformation 
-- 'congenital limb malformation' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019042
-Label(s): multiple congenital anomalies/dysmorphic syndrome 
-- 'multiple congenital anomalies/dysmorphic syndrome' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000663
-Label(s): acquired keratosis 
-- 'acquired keratosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015682
-Label(s): primary peritoneal tumor 
-- 'primary peritoneal tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015681
-Label(s): childhood disintegrative disorder 
-- 'childhood disintegrative disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019004
-Label(s): kidney Wilms tumor 
-- 'kidney Wilms tumor' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000639
-Label(s): acquired metabolic disease 
-- 'acquired metabolic disease' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000616
-Label(s): Uveal Melanoma 
-- 'Uveal Melanoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000386
-Label(s): digestive system neuroendocrine tumor, grade 1/2 
-- 'digestive system neuroendocrine tumor, grade 1/2' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017301
-Label(s): pericardial and diaphragmatic defect 
-- 'pericardial and diaphragmatic defect' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'pericardial and diaphragmatic defect' SubClassOf 'bearer_of' some 'rare'
-+ 'pericardial and diaphragmatic defect' SubClassOf 'disorder of development or morphogenesis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015635
-Label(s): porokeratotic eccrine ostial and dermal duct nevus 
-- 'porokeratotic eccrine ostial and dermal duct nevus' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015631
-Label(s): von Willebrand disease type 2N 
-- 'von Willebrand disease type 2N' SubClassOf 'von Willebrand disease 2'
-+ 'von Willebrand disease type 2N' SubClassOf 'von Willebrand disease 2'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015630
-Label(s): von Willebrand disease type 2M 
-- 'von Willebrand disease type 2M' SubClassOf 'von Willebrand disease 2'
-+ 'von Willebrand disease type 2M' SubClassOf 'von Willebrand disease 2'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015629
-Label(s): von Willebrand disease type 2B 
-- 'von Willebrand disease type 2B' SubClassOf 'von Willebrand disease 2'
-+ 'von Willebrand disease type 2B' SubClassOf 'von Willebrand disease 2'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015628
-Label(s): von Willebrand disease type 2A 
-- 'von Willebrand disease type 2A' SubClassOf 'von Willebrand disease 2'
-+ 'von Willebrand disease type 2A' SubClassOf 'von Willebrand disease 2'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015611
-Label(s): neutral lipid storage disease 
-+ 'neutral lipid storage disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000355
-Label(s): Ullrich congenital muscular dystrophy 
-- 'Ullrich congenital muscular dystrophy' SubClassOf 'genetic disorder'
-+ 'Ullrich congenital muscular dystrophy' SubClassOf 'congenital myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013934
-Label(s): combined immunodeficiency due to STK4 deficiency 
-- 'combined immunodeficiency due to STK4 deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'combined immunodeficiency due to STK4 deficiency' SubClassOf 'combined immunodeficiency'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002009
-Label(s): major depressive disorder 
-- 'major depressive disorder' SubClassOf 'depressive disorder'
-+ 'major depressive disorder' SubClassOf 'depressive disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000316
-Label(s): opportunistic bacterial infectious disease 
-- 'opportunistic bacterial infectious disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000314
-Label(s): primary bacterial infectious disease 
-- 'primary bacterial infectious disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018648
-Label(s): Keratocystic odontogenic tumor 
-- 'Keratocystic odontogenic tumor' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000865
-Label(s): choledocholithiasis 
-+ 'choledocholithiasis' SubClassOf 'endocrine system disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018884
-Label(s): Roch-Leri mesosomatous lipomatosis 
-- 'Roch-Leri mesosomatous lipomatosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017214
-Label(s): vitamin B12-responsive methylmalonic acidemia 
-- 'vitamin B12-responsive methylmalonic acidemia' SubClassOf 'inherited kidney disorder'
-- 'vitamin B12-responsive methylmalonic acidemia' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-
-Class: http://purl.obolibrary.org/obo/CL_0000501
-Label(s): granulosa cell 
-- 'granulosa cell' SubClassOf 'endocrine cell'
-+ 'granulosa cell' SubClassOf 'secretory cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013869
-Label(s): adenine phosphoribosyltransferase deficiency 
-- 'adenine phosphoribosyltransferase deficiency' SubClassOf 'inherited kidney disorder'
-- 'adenine phosphoribosyltransferase deficiency' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015523
-Label(s): epithelioid hemangioendothelioma 
-- 'epithelioid hemangioendothelioma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015515
-Label(s): carnitine palmitoyltransferase II deficiency 
-- 'carnitine palmitoyltransferase II deficiency' SubClassOf 'muscular lipidosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015514
-Label(s): genetic endocrine growth disease 
-- 'genetic endocrine growth disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013843
-Label(s): intestinal obstruction in the newborn due to guanylate cyclase 2C deficiency 
-- 'intestinal obstruction in the newborn due to guanylate cyclase 2C deficiency' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002608
-Label(s): AIDS dementia 
-- 'AIDS dementia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011995
-Label(s): cataract - congenital heart disease - neural tube defect syndrome 
-- 'cataract - congenital heart disease - neural tube defect syndrome' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001518
-Label(s): heavy metal poisoning 
-- 'heavy metal poisoning' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013813
-Label(s): dystonia 21 
-- 'dystonia 21' SubClassOf 'generalized isolated dystonia'
-+ 'dystonia 21' SubClassOf 'generalized dystonia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000212
-Label(s): hypercalcemia, infantile 
-- 'hypercalcemia, infantile' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'hypercalcemia, infantile' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018715
-Label(s): congenital hemangioma 
-- 'congenital hemangioma' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000395
-Label(s): Nevus of Ito 
-- 'Nevus of Ito' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000396
-Label(s): Nevus of Ota 
-- 'Nevus of Ota' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017181
-Label(s): hypnic headache 
-- 'hypnic headache' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000456
-Label(s): Parathyroid Gland Carcinoma 
-- 'Parathyroid Gland Carcinoma' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000439
-Label(s): Pancreatic Acinar Cell Carcinoma 
-- 'Pancreatic Acinar Cell Carcinoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017131
-Label(s): genetic cardiac anomaly 
-- 'genetic cardiac anomaly' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000192
-Label(s): polyglucosan body myopathy 
-- 'polyglucosan body myopathy' SubClassOf 'genetic disorder'
-+ 'polyglucosan body myopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000173
-Label(s): muscular dystrophy-dystroglycanopathy, type C 
-- 'muscular dystrophy-dystroglycanopathy, type C' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000172
-Label(s): muscular dystrophy-dystroglycanopathy, type B 
-- 'muscular dystrophy-dystroglycanopathy, type B' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013758
-Label(s): Charcot-Marie-Tooth disease dominant intermediate E 
-- 'Charcot-Marie-Tooth disease dominant intermediate E' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-+ 'Charcot-Marie-Tooth disease dominant intermediate E' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013730
-Label(s): graft versus host disease 
-- 'graft versus host disease' SubClassOf 'material entity'
-+ 'graft versus host disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700222
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024287
-Label(s): congenital vascular malformation 
-- 'congenital vascular malformation' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009567
-Label(s): Spirochaetales Infections 
-- 'Spirochaetales Infections' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1002049
-Label(s): glomerular disease 
-- 'glomerular disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017051
-Label(s): classic maple syrup urine disease 
-- 'classic maple syrup urine disease' SubClassOf 'maple syrup urine disease'
-+ 'classic maple syrup urine disease' SubClassOf 'maple syrup urine disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000330
-Label(s): Low Grade Vulvar Intraepithelial Neoplasia 
-- 'Low Grade Vulvar Intraepithelial Neoplasia' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017031
-Label(s): primary interstitial lung disease in childhood and adulthood 
-- 'primary interstitial lung disease in childhood and adulthood' SubClassOf 'interstitial lung disease in childhood and adulthood'
-+ 'primary interstitial lung disease in childhood and adulthood' SubClassOf 'interstitial lung disease in childhood and adulthood'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017030
-Label(s): interstitial lung disease in childhood and adulthood 
-- 'interstitial lung disease in childhood and adulthood' SubClassOf 'interstitial lung disease'
-+ 'interstitial lung disease in childhood and adulthood' SubClassOf 'interstitial lung disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015368
-Label(s): neuro-ophthalmological disease 
-- 'neuro-ophthalmological disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/HP_0000750
-Label(s): Delayed speech and language development 
-+ 'Delayed speech and language development' SubClassOf 'Behavioral abnormality'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011972
-Label(s): ovarian hyperstimulation syndrome 
-- 'ovarian hyperstimulation syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011969
-Label(s): ALG8-congenital disorder of glycosylation 
-- 'ALG8-congenital disorder of glycosylation' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'ALG8-congenital disorder of glycosylation' SubClassOf 'inherited kidney disorder'
-+ 'ALG8-congenital disorder of glycosylation' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/HP_0000708
-Label(s): Behavioral abnormality 
-- 'Behavioral abnormality' SubClassOf 'Abnormal nervous system physiology'
-+ 'Behavioral abnormality' SubClassOf 'Abnormality of higher mental function'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016226
-Label(s): specific language disorder 
-- 'specific language disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011927
-Label(s): tufted angioma 
-- 'tufted angioma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011909
-Label(s): Charcot-Marie-Tooth disease dominant intermediate D 
-- 'Charcot-Marie-Tooth disease dominant intermediate D' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-+ 'Charcot-Marie-Tooth disease dominant intermediate D' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008525
-Label(s): spinal muscular atrophy 
-- 'spinal muscular atrophy' SubClassOf 'myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0043839
-Label(s): ulcer disease 
-- 'ulcer disease' SubClassOf 'injury'
-+ 'ulcer disease' SubClassOf 'disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000266
-Label(s): Gallbladder Small Cell Neuroendocrine Carcinoma 
-+ 'Gallbladder Small Cell Neuroendocrine Carcinoma' SubClassOf 'inherited neuroendocrine tumor'
-+ 'Gallbladder Small Cell Neuroendocrine Carcinoma' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700225
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000263
-Label(s): Gallbladder Adenoma 
-- 'Gallbladder Adenoma' SubClassOf 'inherited digestive tract tumor'
-+ 'Gallbladder Adenoma' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700225
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000681
-Label(s): renal cell carcinoma 
-- 'renal cell carcinoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015182
-Label(s): congenital enteropathy involving intestinal mucosa development 
-- 'congenital enteropathy involving intestinal mucosa development' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015180
-Label(s): intestinal disease due to fat malabsorption 
-- 'intestinal disease due to fat malabsorption' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015179
-Label(s): intestinal disease due to vitamin absorption anomaly 
-- 'intestinal disease due to vitamin absorption anomaly' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015178
-Label(s): congenital intestinal transport defect 
-- 'congenital intestinal transport defect' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000129
-Label(s): Bladder Small Cell Neuroendocrine Carcinoma 
-- 'Bladder Small Cell Neuroendocrine Carcinoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015141
-Label(s): disorder of medulla oblongata 
-- 'disorder of medulla oblongata' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015130
-Label(s): acquired chronic primary adrenal insufficiency 
-- 'acquired chronic primary adrenal insufficiency' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013452
-Label(s): multisystemic smooth muscle dysfunction syndrome 
-- 'multisystemic smooth muscle dysfunction syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015111
-Label(s): gastroesophageal disease 
-- 'gastroesophageal disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013400
-Label(s): Congenital adrenal insuffiency with 46, XY sex reversal OR 46,XY disorder of sex development-adrenal insufficiency due to CYP11A1 deficiency 
-- 'Congenital adrenal insuffiency with 46, XY sex reversal OR 46,XY disorder of sex development-adrenal insufficiency due to CYP11A1 deficiency' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000071
-Label(s): Adenoid Cystic Breast Carcinoma 
-+ 'Adenoid Cystic Breast Carcinoma' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001994
-Label(s): Scleroderma Polymyositis Overlap Syndrome 
-+ 'Scleroderma Polymyositis Overlap Syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007516
-Label(s): toxocariasis 
-- 'toxocariasis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007501
-Label(s): strongyloidiasis 
-- 'strongyloidiasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011675
-Label(s): Charcot-Marie-Tooth Disease, axonal, type 2GG 
-- 'Charcot-Marie-Tooth Disease, axonal, type 2GG' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-+ 'Charcot-Marie-Tooth Disease, axonal, type 2GG' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011670
-Label(s): Ehlers-Danlos syndrome due to tenascin-X deficiency 
-- 'Ehlers-Danlos syndrome due to tenascin-X deficiency' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009068
-Label(s): cytochrome-c oxidase deficiency disease 
-- 'cytochrome-c oxidase deficiency disease' SubClassOf 'isolated oxidative phosphorylation complex disorder'
-+ 'cytochrome-c oxidase deficiency disease' SubClassOf 'isolated oxidative phosphorylation complex disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005803
-Label(s): hematologic disease 
-- 'hematologic disease' SubClassOf 'material entity'
-
-Class: http://www.orpha.net/ORDO/Orphanet_79293
-Label(s): Familial LCAT deficiency 
-- 'Familial LCAT deficiency' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0043543
-Label(s): iatrogenic disease 
-- 'iatrogenic disease' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007494
-Label(s): sporotrichosis 
-- 'sporotrichosis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007476
-Label(s): sarcocystosis 
-- 'sarcocystosis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007460
-Label(s): reactive arthritis 
-- 'reactive arthritis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007443
-Label(s): placental insufficiency 
-- 'placental insufficiency' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013225
-Label(s): congenital generalized lipodystrophy type 4 
-- 'congenital generalized lipodystrophy type 4' SubClassOf 'myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100249
-Label(s): 46,XX testicular disorder of sex development 
-- '46,XX testicular disorder of sex development' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003820
-Label(s): bone neoplasm 
-- 'bone neoplasm' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/OBA_2040159
-Label(s): age of onset of hypertensive disorder 
-- 'age of onset of hypertensive disorder' SubClassOf 'material property'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007369
-Label(s): milk allergic reaction 
-- 'milk allergic reaction' SubClassOf 'allergic disease'
-- 'milk allergic reaction' SubClassOf 'food allergy'
-+ 'milk allergic reaction' SubClassOf 'food allergy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013171
-Label(s): purine nucleoside phosphorylase deficiency 
-- 'purine nucleoside phosphorylase deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007317
-Label(s): hymenolepiasis 
-- 'hymenolepiasis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007304
-Label(s): hepatitis D virus infection 
-- 'hepatitis D virus infection' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001002
-Label(s): age of onset of urinary bladder carcinoma 
-- 'age of onset of urinary bladder carcinoma' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011476
-Label(s): MHC class I deficiency 
-- 'MHC class I deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-+ 'MHC class I deficiency' SubClassOf 'combined immunodeficiency'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001024
-Label(s): age of onset of Huntington disease 
-- 'age of onset of Huntington disease' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001031
-Label(s): age of onset of refractive error 
-- 'age of onset of refractive error' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100122
-Label(s): UDP-N-acetylglucosamine-1-phosphotransferase subunit alpha/beta deficiency 
-- 'UDP-N-acetylglucosamine-1-phosphotransferase subunit alpha/beta deficiency' SubClassOf 'mucolipidosis'
-+ 'UDP-N-acetylglucosamine-1-phosphotransferase subunit alpha/beta deficiency' SubClassOf 'mucolipidosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009292
-Label(s): glycogen storage disease due to glycogen branching enzyme deficiency 
-- 'glycogen storage disease due to glycogen branching enzyme deficiency' SubClassOf 'familial dilated cardiomyopathy'
-- 'glycogen storage disease due to glycogen branching enzyme deficiency' SubClassOf 'muscular glycogenosis'
-+ 'glycogen storage disease due to glycogen branching enzyme deficiency' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009293
-Label(s): glycogen storage disease V 
-+ 'glycogen storage disease V' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009295
-Label(s): glycogen storage disease VII 
-+ 'glycogen storage disease VII' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007214
-Label(s): common cold 
-- 'common cold' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007232
-Label(s): cystoisosporiasis 
-- 'cystoisosporiasis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007231
-Label(s): cysticercosis 
-- 'cysticercosis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007230
-Label(s): cyclosporiasis 
-- 'cyclosporiasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013081
-Label(s): lymphoproliferative syndrome 1 
-- 'lymphoproliferative syndrome 1' SubClassOf 'autosomal recessive lymphoproliferative disease'
-+ 'lymphoproliferative syndrome 1' SubClassOf 'lymphoproliferative syndrome'
-+ 'lymphoproliferative syndrome 1' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020163
-Label(s): canthal anomaly 
-- 'canthal anomaly' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013060
-Label(s): autosomal recessive Parkinson disease 14 
-- 'autosomal recessive Parkinson disease 14' SubClassOf 'PLA2G6-associated neurodegeneration'
-+ 'autosomal recessive Parkinson disease 14' SubClassOf 'PLA2G6-associated neurodegeneration'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013047
-Label(s): glycogen storage disease due to lactate dehydrogenase M-subunit deficiency 
-- 'glycogen storage disease due to lactate dehydrogenase M-subunit deficiency' SubClassOf 'glycogen storage disease due to lactate dehydrogenase deficiency'
-- 'glycogen storage disease due to lactate dehydrogenase M-subunit deficiency' SubClassOf 'muscular glycogenosis'
-+ 'glycogen storage disease due to lactate dehydrogenase M-subunit deficiency' SubClassOf 'disorder of glycogen metabolism'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003851
-Label(s): meningeal neoplasm 
-- 'meningeal neoplasm' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003832
-Label(s): gallbladder disease 
-- 'gallbladder disease' SubClassOf 'genetic biliary tract disease'
-- 'gallbladder disease' SubClassOf 'genetic disorder'
-+ 'gallbladder disease' SubClassOf 'biliary tract disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018202
-Label(s): gonadal germ cell tumor 
-- 'gonadal germ cell tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100016
-Label(s): early-onset generalized dystonia 
-- 'early-onset generalized dystonia' SubClassOf 'generalized isolated dystonia'
-+ 'early-onset generalized dystonia' SubClassOf 'generalized dystonia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009958
-Label(s): adult Refsum disease 
-- 'adult Refsum disease' SubClassOf 'genetic peripheral neuropathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018243
-Label(s): intellectual disability-hyperkinetic movement-truncal ataxia syndrome 
-- 'intellectual disability-hyperkinetic movement-truncal ataxia syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009928
-Label(s): pulmonary alveolar microlithiasis 
-- 'pulmonary alveolar microlithiasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009916
-Label(s): 46,XY disorder of sex development due to 17-beta-hydroxysteroid dehydrogenase 3 deficiency 
-- '46,XY disorder of sex development due to 17-beta-hydroxysteroid dehydrogenase 3 deficiency' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007163
-Label(s): balantidiasis 
-- 'balantidiasis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007162
-Label(s): babesiosis 
-- 'babesiosis' SubClassOf 'disease has feature' some 'major depressive disorder'
-- 'babesiosis' SubClassOf 'material entity'
-+ 'babesiosis' SubClassOf 'disease has feature' some 'unipolar depression'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007146
-Label(s): anisakiasis 
-- 'anisakiasis' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003761
-Label(s): unipolar depression 
-- 'unipolar depression' SubClassOf 'mood disorder'
-+ 'unipolar depression' SubClassOf 'depressive disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011208
-Label(s): malignant atrophic papulosis 
-- 'malignant atrophic papulosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009895
-Label(s): postaxial polydactyly-dental and vertebral anomalies syndrome 
-- 'postaxial polydactyly-dental and vertebral anomalies syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009868
-Label(s): glycogen storage disease IXb 
-+ 'glycogen storage disease IXb' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009857
-Label(s): persistent Mullerian duct syndrome 
-- 'persistent Mullerian duct syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/HP_0030242
-Label(s): Portal vein thrombosis 
-+ 'Portal vein thrombosis' SubClassOf 'Abnormality of the vasculature'
-+ 'Portal vein thrombosis' SubClassOf 'Abnormality of the liver'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018191
-Label(s): tumor of testis and paratestis 
-- 'tumor of testis and paratestis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011191
-Label(s): capillary infantile hemangioma 
-- 'capillary infantile hemangioma' SubClassOf 'hemangioma'
-+ 'capillary infantile hemangioma' SubClassOf 'capillary hemangioma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011150
-Label(s): acroosteolysis-keloid-like lesions-premature aging syndrome 
-- 'acroosteolysis-keloid-like lesions-premature aging syndrome' SubClassOf 'progeroid syndrome'
-+ 'acroosteolysis-keloid-like lesions-premature aging syndrome' SubClassOf 'premature aging syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007389
-Label(s): myiasis 
-- 'myiasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011142
-Label(s): Ehlers-Danlos syndrome, musculocontractural type 
-- 'Ehlers-Danlos syndrome, musculocontractural type' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'Ehlers-Danlos syndrome, musculocontractural type' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007872
-Label(s): LADD syndrome 
-- 'LADD syndrome' SubClassOf 'EEC syndrome and related syndrome'
-- 'LADD syndrome' SubClassOf 'genetic otorhinolaryngological malformation'
-- 'LADD syndrome' SubClassOf 'nose and cavum anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009774
-Label(s): cloacal exstrophy 
-- 'cloacal exstrophy' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000509
-Label(s): non-syndromic intellectual disability 
-- 'non-syndromic intellectual disability' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009717
-Label(s): Schwartz-Jampel syndrome 
-- 'Schwartz-Jampel syndrome' SubClassOf 'progressive muscular dystrophy'
-+ 'Schwartz-Jampel syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005225
-Label(s): human african trypanosomiasis 
-- 'human african trypanosomiasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011010
-Label(s): Matthew-Wood syndrome 
-- 'Matthew-Wood syndrome' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011007
-Label(s): diaphragmatic defect-limb deficiency-skull defect syndrome 
-- 'diaphragmatic defect-limb deficiency-skull defect syndrome' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'diaphragmatic defect-limb deficiency-skull defect syndrome' SubClassOf 'bearer_of' some 'rare'
-+ 'diaphragmatic defect-limb deficiency-skull defect syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009636
-Label(s): mitochondrial DNA depletion syndrome 3 
-- 'mitochondrial DNA depletion syndrome 3' SubClassOf 'mitochondrial DNA depletion syndrome, hepatocerebral form'
-+ 'mitochondrial DNA depletion syndrome 3' SubClassOf 'mitochondrial DNA depletion syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009617
-Label(s): microcephaly 1, primary, autosomal recessive 
-+ 'microcephaly 1, primary, autosomal recessive' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100200
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007909
-Label(s): familial multiple lipomatosis 
-- 'familial multiple lipomatosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007906
-Label(s): familial partial lipodystrophy, Dunnigan type 
-- 'familial partial lipodystrophy, Dunnigan type' SubClassOf 'developmental anomaly of metabolic origin'
-- 'familial partial lipodystrophy, Dunnigan type' SubClassOf 'progeroid syndrome'
-+ 'familial partial lipodystrophy, Dunnigan type' SubClassOf 'disorder of development or morphogenesis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007425
-Label(s): peanut allergic reaction 
-- 'peanut allergic reaction' SubClassOf 'food allergy'
-- 'peanut allergic reaction' SubClassOf 'allergic disease'
-+ 'peanut allergic reaction' SubClassOf 'food allergy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005783
-Label(s): NUT midline carcinoma 
-- 'NUT midline carcinoma' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001333
-Label(s): Glycogen Storage Disease Type 2b 
-- 'Glycogen Storage Disease Type 2b' SubClassOf 'lysosomal glycogen storage disease'
-- 'Glycogen Storage Disease Type 2b' SubClassOf 'muscular glycogenosis'
-+ 'Glycogen Storage Disease Type 2b' SubClassOf 'lysosomal glycogen storage disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024502
-Label(s): gallbladder neuroendocrine neoplasm 
-- 'gallbladder neuroendocrine neoplasm' SubClassOf 'inherited neuroendocrine tumor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009577
-Label(s): megalocornea-intellectual disability syndrome 
-- 'megalocornea-intellectual disability syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009742
-Label(s): neuroectodermal melanolysosomal disease 
-- 'neuroectodermal melanolysosomal disease' SubClassOf 'eye disease'
-- 'neuroectodermal melanolysosomal disease' SubClassOf 'overgrowth syndrome'
-- 'neuroectodermal melanolysosomal disease' SubClassOf 'hyperpigmentation of the skin'
-+ 'neuroectodermal melanolysosomal disease' SubClassOf 'bearer_of' some 'rare'
-+ 'neuroectodermal melanolysosomal disease' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009747
-Label(s): Navajo neurohepatopathy 
-- 'Navajo neurohepatopathy' SubClassOf 'mitochondrial DNA depletion syndrome, hepatocerebral form'
-+ 'Navajo neurohepatopathy' SubClassOf 'mitochondrial DNA depletion syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009780
-Label(s): lethal omphalocele-cleft palate syndrome 
-- 'lethal omphalocele-cleft palate syndrome' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009528
-Label(s): chylomicron retention disease 
-- 'chylomicron retention disease' SubClassOf 'intestinal disease due to fat malabsorption'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009515
-Label(s): Norum disease 
-- 'Norum disease' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007809
-Label(s): ichthyosis hystrix gravior 
-- 'ichthyosis hystrix gravior' SubClassOf 'keratinopathic ichthyosis'
-+ 'ichthyosis hystrix gravior' SubClassOf http://purl.obolibrary.org/obo/MONDO_0859383
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007808
-Label(s): ichthyosis hystrix of Curth-Macklin 
-- 'ichthyosis hystrix of Curth-Macklin' SubClassOf 'keratinopathic ichthyosis'
-+ 'ichthyosis hystrix of Curth-Macklin' SubClassOf http://purl.obolibrary.org/obo/MONDO_0859383
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011146
-Label(s): tetrasomy 12p 
-- 'tetrasomy 12p' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001033
-Label(s): age of onset of coronary atherosclerosis 
-- 'age of onset of coronary atherosclerosis' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001032
-Label(s): age of onset of narcolepsy-cataplexy syndrome 
-- 'age of onset of narcolepsy-cataplexy syndrome' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001029
-Label(s): age of onset of multiple sclerosis 
-- 'age of onset of multiple sclerosis' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001026
-Label(s): age of onset of migraine disorder 
-- 'age of onset of migraine disorder' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001022
-Label(s): age of onset of frontotemporal dementia 
-- 'age of onset of frontotemporal dementia' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001020
-Label(s): age of onset of Buruli ulcer disease 
-- 'age of onset of Buruli ulcer disease' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001017
-Label(s): age of onset of allergic disease 
-- 'age of onset of allergic disease' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001016
-Label(s): age of onset of alcohol dependence 
-- 'age of onset of alcohol dependence' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001013
-Label(s): age of onset of type 2 diabetes mellitus 
-- 'age of onset of type 2 diabetes mellitus' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001012
-Label(s): age of onset of type 1 diabetes mellitus 
-- 'age of onset of type 1 diabetes mellitus' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001011
-Label(s): age of onset of schizophrenia 
-- 'age of onset of schizophrenia' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001009
-Label(s): age of onset of Parkinson disease 
-- 'age of onset of Parkinson disease' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001008
-Label(s): age of onset of osteoarthritis 
-- 'age of onset of osteoarthritis' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001007
-Label(s): age of onset of hyperlipidemia 
-- 'age of onset of hyperlipidemia' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001004
-Label(s): age of onset of cataract 
-- 'age of onset of cataract' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/OBA_2001000
-Label(s): age of onset of Alzheimer disease 
-- 'age of onset of Alzheimer disease' SubClassOf 'material property'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700084
-Label(s): myopathy caused by variation in GMPPB 
-+ 'myopathy caused by variation in GMPPB' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009478
-Label(s): combined immunodeficiency due to DOCK8 deficiency 
-- 'combined immunodeficiency due to DOCK8 deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-- 'combined immunodeficiency due to DOCK8 deficiency' SubClassOf 'hyper-IgE syndrome'
-+ 'combined immunodeficiency due to DOCK8 deficiency' SubClassOf 'hyper-IgE syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009853
-Label(s): Imerslund-Grasbeck syndrome 
-- 'Imerslund-Grasbeck syndrome' SubClassOf 'inherited kidney disorder'
-- 'Imerslund-Grasbeck syndrome' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017651
-Label(s): primary myoclonus 
-- 'primary myoclonus' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009865
-Label(s): glycogen storage disease due to phosphoglycerate mutase deficiency 
-- 'glycogen storage disease due to phosphoglycerate mutase deficiency' SubClassOf 'muscular glycogenosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007766
-Label(s): Morgagni-Stewart-Morel syndrome 
-- 'Morgagni-Stewart-Morel syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009420
-Label(s): primary hypergonadotropic hypogonadism-partial alopecia syndrome 
-- 'primary hypergonadotropic hypogonadism-partial alopecia syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007740
-Label(s): Wagner disease 
-- 'Wagner disease' SubClassOf 'vitreoretinal degeneration'
-+ 'Wagner disease' SubClassOf 'vitreoretinal degeneration'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019366
-Label(s): free sialic acid storage disease 
-- 'free sialic acid storage disease' SubClassOf 'inborn disorder of lysosomal amino acid transport'
-+ 'free sialic acid storage disease' SubClassOf 'inborn disorder of lysosomal amino acid transport'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011242
-Label(s): Bartter disease type 4a 
-- 'Bartter disease type 4a' SubClassOf 'infantile Bartter syndrome with sensorineural deafness'
-+ 'Bartter disease type 4a' SubClassOf 'infantile Bartter syndrome with sensorineural deafness'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011264
-Label(s): torsion dystonia 6 
-- 'torsion dystonia 6' SubClassOf 'generalized isolated dystonia'
-+ 'torsion dystonia 6' SubClassOf 'generalized dystonia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011273
-Label(s): H syndrome 
-- 'H syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011299
-Label(s): Huntington disease-like 1 
-- 'Huntington disease-like 1' SubClassOf 'Huntington disease and related disorders'
-- 'Huntington disease-like 1' SubClassOf 'movement disorder'
-- 'Huntington disease-like 1' SubClassOf 'inherited prion disease'
-+ 'Huntington disease-like 1' SubClassOf 'inherited prion disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009266
-Label(s): refractory celiac disease 
-- 'refractory celiac disease' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018506
-Label(s): mesenchymal tumor of small intestine 
-- 'mesenchymal tumor of small intestine' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018541
-Label(s): familial hypoaldosteronism 
-- 'familial hypoaldosteronism' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007620
-Label(s): fish eye disease 
-- 'fish eye disease' SubClassOf 'LCAT deficiency'
-+ 'fish eye disease' SubClassOf 'LCAT deficiency'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007614
-Label(s): congenital fibrosis of extraocular muscles 
-- 'congenital fibrosis of extraocular muscles' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007612
-Label(s): gingival fibromatosis-progressive deafness syndrome 
-- 'gingival fibromatosis-progressive deafness syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011342
-Label(s): SLC35A1-congenital disorder of glycosylation 
-- 'SLC35A1-congenital disorder of glycosylation' SubClassOf 'inherited kidney disorder'
-- 'SLC35A1-congenital disorder of glycosylation' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019832
-Label(s): acquired pituitary hormone deficiency 
-- 'acquired pituitary hormone deficiency' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013046
-Label(s): glycogen storage disease due to muscle beta-enolase deficiency 
-- 'glycogen storage disease due to muscle beta-enolase deficiency' SubClassOf 'muscular glycogenosis'
-
-Class: http://purl.obolibrary.org/obo/HP_0100033
-Label(s): Tics 
-- 'Tics' SubClassOf 'Abnormality of movement'
-- 'Tics' SubClassOf 'Abnormal central motor function'
-+ 'Tics' SubClassOf 'Behavioral abnormality'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009297
-Label(s): familial renal glucosuria 
-- 'familial renal glucosuria' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009290
-Label(s): glycogen storage disease II 
-+ 'glycogen storage disease II' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017746
-Label(s): atypical Rett syndrome 
-- 'atypical Rett syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009267
-Label(s): Gaucher disease type III 
-- 'Gaucher disease type III' SubClassOf 'cerebral lipidosis with dementia'
-- 'Gaucher disease type III' SubClassOf 'interstitial lung disease specific to childhood'
-- 'Gaucher disease type III' SubClassOf 'secondary avascular necrosis'
-- 'Gaucher disease type III' SubClassOf 'familial restrictive cardiomyopathy'
-- 'Gaucher disease type III' SubClassOf 'avascular necrosis of genetic origin'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009266
-Label(s): Gaucher disease type II 
-- 'Gaucher disease type II' SubClassOf 'cerebral lipidosis with dementia'
-- 'Gaucher disease type II' SubClassOf 'interstitial lung disease specific to childhood'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009253
-Label(s): Fryns syndrome 
-- 'Fryns syndrome' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'Fryns syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009249
-Label(s): hereditary fructose intolerance 
-- 'hereditary fructose intolerance' SubClassOf 'congenital intestinal transport defect'
-- 'hereditary fructose intolerance' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'hereditary fructose intolerance' SubClassOf 'inherited kidney disorder'
-+ 'hereditary fructose intolerance' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009216
-Label(s): glycogen storage disease due to GLUT2 deficiency 
-- 'glycogen storage disease due to GLUT2 deficiency' SubClassOf 'glucose transport disorder'
-- 'glycogen storage disease due to GLUT2 deficiency' SubClassOf 'inherited kidney disorder'
-- 'glycogen storage disease due to GLUT2 deficiency' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-+ 'glycogen storage disease due to GLUT2 deficiency' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007522
-Label(s): Ehlers-Danlos syndrome, classic type 
-- 'Ehlers-Danlos syndrome, classic type' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011411
-Label(s): Chudley-McCullough syndrome 
-- 'Chudley-McCullough syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0037747
-Label(s): spinal injury 
-- 'spinal injury' SubClassOf 'vertebral column disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001361
-Label(s): pulmonary arterial hypertension 
-- 'pulmonary arterial hypertension' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021257
-Label(s): glomus jugulare neoplasm 
-- 'glomus jugulare neoplasm' SubClassOf 'neoplasm of neck'
-- 'glomus jugulare neoplasm' SubClassOf 'vein disorder'
-- 'glomus jugulare neoplasm' SubClassOf 'blood vessel neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009173
-Label(s): congenital enteropathy due to enteropeptidase deficiency 
-- 'congenital enteropathy due to enteropeptidase deficiency' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020704
-Label(s): inherited rippling muscle disease 
-- 'inherited rippling muscle disease' SubClassOf 'genetic disorder'
-+ 'inherited rippling muscle disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009104
-Label(s): Donnai-Barrow syndrome 
-- 'Donnai-Barrow syndrome' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'Donnai-Barrow syndrome' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013245
-Label(s): syndromic multisystem autoimmune disease due to ITCH deficiency 
-- 'syndromic multisystem autoimmune disease due to ITCH deficiency' SubClassOf 'intractable diarrhea of infancy'
-- 'syndromic multisystem autoimmune disease due to ITCH deficiency' SubClassOf 'respiratory system disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013282
-Label(s): alpha 1-antitrypsin deficiency 
-- 'alpha 1-antitrypsin deficiency' SubClassOf 'inherited kidney disorder'
-- 'alpha 1-antitrypsin deficiency' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-+ 'alpha 1-antitrypsin deficiency' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0022394
-Label(s): cervical intraepithelial neoplasia 
-- 'cervical intraepithelial neoplasia' SubClassOf 'material entity'
++ 'Sneddon syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100317
++ 'Sneddon syndrome' SubClassOf 'genetic skin disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001148
+Label(s): relapsing polychondritis 
+- 'relapsing polychondritis' SubClassOf 'secondary glomerular disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016059
+Label(s): cleft lip/palate-deafness-sacral lipoma syndrome 
++ 'cleft lip/palate-deafness-sacral lipoma syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010977
+Label(s): Brody myopathy 
+- 'Brody myopathy' SubClassOf 'myopathy'
+- 'Brody myopathy' SubClassOf 'qualitative or quantitative defects of protein SERCA1'
++ 'Brody myopathy' SubClassOf 'myopathy'
++ 'Brody myopathy' SubClassOf 'qualitative or quantitative defects of protein SERCA1'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014306
+Label(s): vasculitis due to ADA2 deficiency 
++ 'vasculitis due to ADA2 deficiency' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100317
++ 'vasculitis due to ADA2 deficiency' SubClassOf 'hereditary disorder of connective tissue'
+
+Class: http://purl.obolibrary.org/obo/CHEBI_33568
+Label(s): adrenaline 
+- 'adrenaline' SubClassOf 'phenols'
++ 'adrenaline' SubClassOf 'chemical entity'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007915
+Label(s): systemic lupus erythematosus 
+- 'systemic lupus erythematosus' SubClassOf 'thrombotic microangiopathy'
+- 'systemic lupus erythematosus' SubClassOf 'secondary glomerular disease'
++ 'systemic lupus erythematosus' SubClassOf 'kidney disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008965
+Label(s): CHARGE syndrome 
+- 'CHARGE syndrome' SubClassOf 'lens shape anomaly'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008913
+Label(s): cardiac valvular defect, developmental 
++ 'cardiac valvular defect, developmental' SubClassOf 'genetic cardiac anomaly'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025303
+Label(s): anaplasmosis 
+- 'anaplasmosis' SubClassOf 'zoonotic bacterial infection'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025481
+Label(s): zoonosis 
+- 'zoonosis' SubClassOf 'infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010122
+Label(s): congenital thrombotic thrombocytopenic purpura 
+- 'congenital thrombotic thrombocytopenic purpura' SubClassOf 'inherited kidney disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008678
+Label(s): Williams syndrome 
+- 'Williams syndrome' SubClassOf 'neurovascular disorder'
+- 'Williams syndrome' SubClassOf 'motor stereotypies'
+- 'Williams syndrome' SubClassOf 'multiple congenital anomalies/dysmorphic syndrome-intellectual disability'
+- 'Williams syndrome' SubClassOf 'Mendelian neurodevelopmental disorder'
+- 'Williams syndrome' SubClassOf 'congenital nervous system disorder'
+- 'Williams syndrome' SubClassOf 'syndromic epicanthus'
+- 'Williams syndrome' SubClassOf 'heart disease'
+- 'Williams syndrome' SubClassOf 'partial deletion of the long arm of chromosome 7'
+- 'Williams syndrome' SubClassOf 'genetic hypertension'
++ 'Williams syndrome' SubClassOf 'Neurodevelopmental disorder'
++ 'Williams syndrome' SubClassOf 'partial deletion of the long arm of chromosome 7'
++ 'Williams syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008641
+Label(s): retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations 
+- 'retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations' SubClassOf 'inherited kidney disorder'
+- 'retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations' SubClassOf 'disease of glomerular basement membrane'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008633
+Label(s): Muckle-Wells syndrome 
+- 'Muckle-Wells syndrome' SubClassOf 'secondary glomerular disease'
+- 'Muckle-Wells syndrome' SubClassOf 'inherited kidney disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000668
+Label(s): preeclampsia 
+- 'preeclampsia' SubClassOf 'genetic hypertension'
++ 'preeclampsia' SubClassOf 'bearer_of' some 'rare'
++ 'preeclampsia' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008323
+Label(s): Liddle syndrome 
+- 'Liddle syndrome' SubClassOf 'genetic hypertension'
++ 'Liddle syndrome' SubClassOf 'inherited kidney disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0001549
+Label(s): hemolytic-uremic syndrome 
+- 'hemolytic-uremic syndrome' SubClassOf 'inherited kidney disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008071
+Label(s): autosomal dominant progressive nephropathy with hypertension 
+- 'autosomal dominant progressive nephropathy with hypertension' SubClassOf 'genetic hypertension'
++ 'autosomal dominant progressive nephropathy with hypertension' SubClassOf 'kidney disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012203
+Label(s): familial hyperthyroidism due to mutations in TSH receptor 
+- 'familial hyperthyroidism due to mutations in TSH receptor' SubClassOf 'genetic hypertension'
++ 'familial hyperthyroidism due to mutations in TSH receptor' SubClassOf 'bearer_of' some 'rare'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008048
+Label(s): autosomal dominant centronuclear myopathy 
+- 'autosomal dominant centronuclear myopathy' SubClassOf 'centronuclear myopathy'
++ 'autosomal dominant centronuclear myopathy' SubClassOf 'centronuclear myopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007313
+Label(s): HIV-associated nephropathy 
+- 'HIV-associated nephropathy' SubClassOf 'focal segmental glomerulosclerosis'
++ 'HIV-associated nephropathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0005363
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001209
+Label(s): temporal arteritis 
+- 'temporal arteritis' SubClassOf 'secondary glomerular disease'
++ 'temporal arteritis' SubClassOf 'kidney disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019737
+Label(s): thrombotic microangiopathy 
+- 'thrombotic microangiopathy' SubClassOf 'kidney disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0044746
+Label(s): zoonotic bacterial infection 
+- 'zoonotic bacterial infection' SubClassOf 'bacterial disease'
+- 'zoonotic bacterial infection' SubClassOf 'zoonosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019724
+Label(s): secondary glomerular disease 
+- 'secondary glomerular disease' SubClassOf 'glomerular disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000717
+Label(s): systemic scleroderma 
+- 'systemic scleroderma' SubClassOf 'autoimmune cardiomyopathy'
+- 'systemic scleroderma' SubClassOf 'secondary glomerular disease'
+- 'systemic scleroderma' SubClassOf 'familial restrictive cardiomyopathy'
+- 'systemic scleroderma' SubClassOf 'respiratory system disease'
+- 'systemic scleroderma' SubClassOf 'Non-familial restrictive cardiomyopathy'
++ 'systemic scleroderma' SubClassOf 'respiratory system disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0032936
+Label(s): myopathy, congenital, with respiratory insufficiency and bone fractures 
+- 'myopathy, congenital, with respiratory insufficiency and bone fractures' SubClassOf 'genetic disorder'
++ 'myopathy, congenital, with respiratory insufficiency and bone fractures' SubClassOf 'congenital myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0017984
+Label(s): familial lambdoid synostosis 
+- 'familial lambdoid synostosis' SubClassOf 'isolated craniosynostosis'
++ 'familial lambdoid synostosis' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0004236
+Label(s): focal segmental glomerulosclerosis 
+- 'focal segmental glomerulosclerosis' SubClassOf 'inherited kidney disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018088
+Label(s): familial Mediterranean fever 
+- 'familial Mediterranean fever' SubClassOf 'secondary glomerular disease'
+- 'familial Mediterranean fever' SubClassOf 'inherited kidney disorder'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0011143
+Label(s): upper urinary tract 
+- 'upper urinary tract' SubClassOf 'anatomical entity'
++ 'upper urinary tract' SubClassOf 'part_of' some 'anatomical system'
++ 'upper urinary tract' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019439
+Label(s): AA amyloidosis 
+- 'AA amyloidosis' SubClassOf 'secondary glomerular disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019438
+Label(s): AL amyloidosis 
+- 'AL amyloidosis' SubClassOf 'secondary glomerular disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019161
+Label(s): pseudohypoaldosteronism type 1 
+- 'pseudohypoaldosteronism type 1' SubClassOf 'pseudohypoaldosteronism'
++ 'pseudohypoaldosteronism type 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100323
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030701
+Label(s): autoimmune cardiomyopathy 
+- 'autoimmune cardiomyopathy' SubClassOf 'cardiomyopathy'
+- 'autoimmune cardiomyopathy' SubClassOf 'autoimmune disorder of musculoskeletal system'
+- 'autoimmune cardiomyopathy' SubClassOf 'autoimmune disorder of cardiovascular system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0015512
+Label(s): genetic hypertension 
+- 'genetic hypertension' SubClassOf 'bearer_of' some 'rare'
+- 'genetic hypertension' EquivalentTo 'hypertension' and ('bearer_of' some 'inherited')
+- 'genetic hypertension' SubClassOf 'inherited kidney disorder'
+- 'genetic hypertension' SubClassOf 'hypertension'
++ 'genetic hypertension' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013743
+Label(s): autosomal systemic lupus erythematosus type 16 
+- 'autosomal systemic lupus erythematosus type 16' SubClassOf 'inherited blood coagulation disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013731
+Label(s): MEGF10-Related Myopathy 
+- 'MEGF10-Related Myopathy' SubClassOf 'congenital myopathy'
++ 'MEGF10-Related Myopathy' SubClassOf 'congenital myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0060627
+Label(s): glycosylphosphatidylinositol biosynthesis defect 15 
+- 'glycosylphosphatidylinositol biosynthesis defect 15' SubClassOf 'congenital nervous system disorder'
+- 'glycosylphosphatidylinositol biosynthesis defect 15' SubClassOf 'central nervous system malformation'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011577
+Label(s): myopathy, proximal, and ophthalmoplegia 
++ 'myopathy, proximal, and ophthalmoplegia' SubClassOf 'congenital myopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007374
+Label(s): mixed connective tissue disease 
+- 'mixed connective tissue disease' SubClassOf 'secondary glomerular disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000784
+Label(s): microscopic polyangiitis 
+- 'microscopic polyangiitis' SubClassOf 'secondary glomerular disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0003153
+Label(s): head capsule 
+- 'head capsule' SubClassOf 'anatomical entity'
++ 'head capsule' SubClassOf 'part_of' some 'anatomical system'
++ 'head capsule' SubClassOf 'part_of' some 'integumental system'
++ 'head capsule' SubClassOf 'anatomical structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005297
+Label(s): Granulomatosis with Polyangiitis 
+- 'Granulomatosis with Polyangiitis' SubClassOf 'secondary glomerular disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009609
+Label(s): methylcobalamin deficiency type cblG 
+- 'methylcobalamin deficiency type cblG' SubClassOf 'inherited kidney disorder'
+- 'methylcobalamin deficiency type cblG' SubClassOf 'thrombotic microangiopathy'
+- 'methylcobalamin deficiency type cblG' SubClassOf 'inherited blood coagulation disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009671
+Label(s): intellectual disability-myopathy-short stature-endocrine defect syndrome 
+- 'intellectual disability-myopathy-short stature-endocrine defect syndrome' SubClassOf 'congenital myopathy'
++ 'intellectual disability-myopathy-short stature-endocrine defect syndrome' SubClassOf 'congenital myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009722
+Label(s): Bailey-Bloch congenital myopathy 
+- 'Bailey-Bloch congenital myopathy' SubClassOf 'congenital myopathy'
++ 'Bailey-Bloch congenital myopathy' SubClassOf 'congenital myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007788
+Label(s): hypertriglyceridemia, familial 
+- 'hypertriglyceridemia, familial' SubClassOf 'major hypertriglyceridemia'
+- 'hypertriglyceridemia, familial' SubClassOf 'familial hyperlipidemia'
+- 'hypertriglyceridemia, familial' EquivalentTo 'Hypertriglyceridemia' and ('bearer_of' some 'inherited')
+- 'hypertriglyceridemia, familial' SubClassOf 'Hypertriglyceridemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007781
+Label(s): essential hypertension, genetic 
+- 'essential hypertension, genetic' SubClassOf 'genetic hypertension'
++ 'essential hypertension, genetic' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009925
+Label(s): autosomal recessive inherited pseudoxanthoma elasticum 
+- 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'genetic hypertension'
+- 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'familial restrictive cardiomyopathy'
+- 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'developmental defect during embryogenesis'
+- 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'eye disease'
++ 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'bearer_of' some 'rare'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011303
+Label(s): focal segmental glomerulosclerosis 1 
+- 'focal segmental glomerulosclerosis 1' SubClassOf 'focal segmental glomerulosclerosis'
++ 'focal segmental glomerulosclerosis 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0005363
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011309
+Label(s): familial gestational hyperthyroidism 
+- 'familial gestational hyperthyroidism' SubClassOf 'hypertension, pregnancy-induced'
+- 'familial gestational hyperthyroidism' SubClassOf 'genetic hypertension'
++ 'familial gestational hyperthyroidism' SubClassOf 'bearer_of' some 'rare'
++ 'familial gestational hyperthyroidism' SubClassOf 'pregnancy disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011382
+Label(s): sickle cell anemia 
+- 'sickle cell anemia' SubClassOf 'inherited kidney disorder'
+- 'sickle cell anemia' SubClassOf 'secondary avascular necrosis'
+- 'sickle cell anemia' SubClassOf 'congenital hypogonadotropic hypogonadism'
+- 'sickle cell anemia' SubClassOf 'avascular necrosis of genetic origin'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011399
+Label(s): alpha thalassemia 
+- 'alpha thalassemia' SubClassOf 'inherited kidney disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003063
+Label(s): polymyositis 
+- 'polymyositis' SubClassOf 'secondary glomerular disease'
+- 'polymyositis' SubClassOf 'acquired idiopathic inflammatory myopathy'
++ 'polymyositis' SubClassOf 'kidney disease'
++ 'polymyositis' SubClassOf 'acquired idiopathic inflammatory myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011517
+Label(s): pseudohyperaldosteronism type 2 
+- 'pseudohyperaldosteronism type 2' SubClassOf 'hypertension, pregnancy-induced'
+- 'pseudohyperaldosteronism type 2' SubClassOf 'genetic hypertension'
++ 'pseudohyperaldosteronism type 2' SubClassOf 'bearer_of' some 'rare'
++ 'pseudohyperaldosteronism type 2' SubClassOf 'pregnancy disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013276
+Label(s): Reynolds syndrome 
+- 'Reynolds syndrome' SubClassOf 'secondary glomerular disease'
++ 'Reynolds syndrome' SubClassOf 'type II hypersensitivity reaction disease'
 
 Class: http://purl.obolibrary.org/obo/MONDO_0013291
 Label(s): glycogen storage disease XV 
-+ 'glycogen storage disease XV' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
+- 'glycogen storage disease XV' SubClassOf 'disorder of glycogen metabolism'
++ 'glycogen storage disease XV' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100314
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020020
-Label(s): visceral malformation of the liver, biliary tract, pancreas or spleen 
-- 'visceral malformation of the liver, biliary tract, pancreas or spleen' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0100167
+Label(s): pulmonary disease, chronic obstructive, susceptibility to 
+- 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'predisposes towards' some 'chronic obstructive pulmonary disease'
+- 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'inherited disease susceptibility'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020665
-Label(s): high grade malignant neoplasm 
-- 'high grade malignant neoplasm' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0007211
+Label(s): brachydactyly-arterial hypertension syndrome 
+- 'brachydactyly-arterial hypertension syndrome' SubClassOf 'genetic hypertension'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0009089
-Label(s): deafness-oligodontia syndrome 
-- 'deafness-oligodontia syndrome' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0013458
+Label(s): hyperuricemia-pulmonary hypertension-renal failure-alkalosis syndrome 
+- 'hyperuricemia-pulmonary hypertension-renal failure-alkalosis syndrome' SubClassOf 'genetic hypertension'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0009034
-Label(s): craniofacial dyssynostosis 
-- 'craniofacial dyssynostosis' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0032937
+Label(s): myopathy, congenital proximal, with minicore lesions 
+- 'myopathy, congenital proximal, with minicore lesions' SubClassOf 'genetic disorder'
++ 'myopathy, congenital proximal, with minicore lesions' SubClassOf 'congenital myopathy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0009007
-Label(s): Jalili syndrome 
-- 'Jalili syndrome' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0007099
+Label(s): familial visceral amyloidosis 
+- 'familial visceral amyloidosis' SubClassOf 'secondary glomerular disease'
+- 'familial visceral amyloidosis' SubClassOf 'inherited kidney disorder'
++ 'familial visceral amyloidosis' SubClassOf 'bearer_of' some 'rare'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0011674
-Label(s): Charcot-Marie-Tooth disease dominant intermediate B 
-- 'Charcot-Marie-Tooth disease dominant intermediate B' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
-+ 'Charcot-Marie-Tooth disease dominant intermediate B' SubClassOf 'autosomal dominant intermediate Charcot-Marie-Tooth disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0007080
+Label(s): glucocorticoid-remediable aldosteronism 
+- 'glucocorticoid-remediable aldosteronism' SubClassOf 'genetic hypertension'
 
-Class: http://www.ebi.ac.uk/efo/EFO_1001968
-Label(s): soft tissue sarcoma 
-- 'soft tissue sarcoma' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0018975
+Label(s): neurofibromatosis type 1 
+- 'neurofibromatosis type 1' SubClassOf 'eye disease'
+- 'neurofibromatosis type 1' SubClassOf 'neurovascular disorder'
+- 'neurofibromatosis type 1' SubClassOf 'genetic hypertension'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020573
-Label(s): inherited disease susceptibility 
-- 'inherited disease susceptibility' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0018965
+Label(s): Alport syndrome 
+- 'Alport syndrome' SubClassOf 'lens shape anomaly'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018102
-Label(s): corneal dystrophy 
-- 'corneal dystrophy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015126
-Label(s): polyendocrinopathy 
-- 'polyendocrinopathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015145
-Label(s): neurovascular malformation 
-- 'neurovascular malformation' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001066
-Label(s): experimental autoimmune encephalomyelitis 
-- 'experimental autoimmune encephalomyelitis' SubClassOf 'autoimmune disorder of central nervous system'
-+ 'experimental autoimmune encephalomyelitis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0020092
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015175
-Label(s): autoimmune pancreatitis 
-- 'autoimmune pancreatitis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015183
-Label(s): short bowel syndrome 
-- 'short bowel syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020493
-Label(s): Haddad syndrome 
-- 'Haddad syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020478
-Label(s): Leber plus disease 
-- 'Leber plus disease' SubClassOf 'hereditary optic neuropathy'
-- 'Leber plus disease' SubClassOf 'mitochondrial oxidative phosphorylation disorder'
-- 'Leber plus disease' SubClassOf 'familial dilated cardiomyopathy'
-+ 'Leber plus disease' SubClassOf 'mitochondrial oxidative phosphorylation disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020477
-Label(s): progeria-associated arthropathy 
-- 'progeria-associated arthropathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017979
-Label(s): autoimmune lymphoproliferative syndrome 
-+ 'autoimmune lymphoproliferative syndrome' SubClassOf 'neoplastic syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0043765
-Label(s): presbycusis 
-- 'presbycusis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015215
-Label(s): non-syndromic diaphragmatic or abdominal wall malformation 
-- 'non-syndromic diaphragmatic or abdominal wall malformation' SubClassOf 'diaphragmatic or abdominal wall malformation'
-- 'non-syndromic diaphragmatic or abdominal wall malformation' EquivalentTo 'diaphragmatic or abdominal wall malformation' and ('bearer_of' some 'has an isolated presentation')
-- 'non-syndromic diaphragmatic or abdominal wall malformation' SubClassOf 'bearer_of' some 'has an isolated presentation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015221
-Label(s): non-syndromic respiratory or mediastinal malformation 
-- 'non-syndromic respiratory or mediastinal malformation' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013577
-Label(s): Lipedema 
-- 'Lipedema' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001416
-Label(s): cervical adenocarcinoma 
-- 'cervical adenocarcinoma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015256
-Label(s): blepharoptosis-cleft palate-ectrodactyly-dental anomalies syndrome 
-- 'blepharoptosis-cleft palate-ectrodactyly-dental anomalies syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007077
-Label(s): Tietz syndrome 
-- 'Tietz syndrome' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018994
-Label(s): Charcot-Marie-Tooth disease type X 
-- 'Charcot-Marie-Tooth disease type X' SubClassOf 'Charcot-Marie-Tooth disease'
-+ 'Charcot-Marie-Tooth disease type X' SubClassOf 'Charcot-Marie-Tooth disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018958
-Label(s): nemaline myopathy 
-- 'nemaline myopathy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018949
-Label(s): distal myopathy 
-- 'distal myopathy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018947
-Label(s): centronuclear myopathy 
-- 'centronuclear myopathy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003646
-Label(s): rectum neuroendocrine neoplasm 
-- 'rectum neuroendocrine neoplasm' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005301
-Label(s): multiple sclerosis 
-- 'multiple sclerosis' SubClassOf 'autoimmune disorder of central nervous system'
-+ 'multiple sclerosis' SubClassOf http://www.ebi.ac.uk/efo/EFO_0020092
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015308
-Label(s): laminopathy type Decaudain-Vigouroux 
-- 'laminopathy type Decaudain-Vigouroux' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017015
-Label(s): primary interstitial lung disease specific to childhood 
-- 'primary interstitial lung disease specific to childhood' SubClassOf 'interstitial lung disease specific to childhood'
-+ 'primary interstitial lung disease specific to childhood' SubClassOf 'interstitial lung disease specific to childhood'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008142
-Label(s): Thiemann disease, familial form 
-- 'Thiemann disease, familial form' SubClassOf 'osteochondrosis of genetic origin'
-+ 'Thiemann disease, familial form' SubClassOf 'osteochondrosis of genetic origin'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017026
-Label(s): interstitial lung disease specific to adulthood 
-- 'interstitial lung disease specific to adulthood' SubClassOf 'interstitial lung disease'
-+ 'interstitial lung disease specific to adulthood' SubClassOf 'interstitial lung disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017027
-Label(s): primary interstitial lung disease specific to adulthood 
-- 'primary interstitial lung disease specific to adulthood' SubClassOf 'interstitial lung disease specific to adulthood'
-+ 'primary interstitial lung disease specific to adulthood' SubClassOf 'interstitial lung disease specific to adulthood'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017034
-Label(s): secondary interstitial lung disease in childhood and adulthood 
-- 'secondary interstitial lung disease in childhood and adulthood' SubClassOf 'interstitial lung disease in childhood and adulthood'
-+ 'secondary interstitial lung disease in childhood and adulthood' SubClassOf 'interstitial lung disease in childhood and adulthood'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017043
-Label(s): congenital mesoblastic nephroma 
-- 'congenital mesoblastic nephroma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017050
-Label(s): intraocular medulloepithelioma 
-- 'intraocular medulloepithelioma' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020249
-Label(s): hereditary optic neuropathy 
-- 'hereditary optic neuropathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020245
-Label(s): disease predisposing to age-related macular degeneration 
-- 'disease predisposing to age-related macular degeneration' SubClassOf 'inherited vitreous-retinal disease'
-+ 'disease predisposing to age-related macular degeneration' SubClassOf 'inherited vitreous-retinal disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020204
-Label(s): conjunctival tumor 
-- 'conjunctival tumor' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020203
-Label(s): pigmented conjunctival lesion 
-- 'pigmented conjunctival lesion' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018234
-Label(s): dysostosis 
-- 'dysostosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018848
-Label(s): IgG4-related retroperitoneal fibrosis 
-- 'IgG4-related retroperitoneal fibrosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001878
-Label(s): acquired hypertrophic pyloric stenosis 
-- 'acquired hypertrophic pyloric stenosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001828
-Label(s): acquired color blindness 
-- 'acquired color blindness' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020195
-Label(s): excretory apparatus of the lacrimal system anomaly 
-- 'excretory apparatus of the lacrimal system anomaly' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020193
-Label(s): secretory apparatus of the lacrimal system anomaly 
-- 'secretory apparatus of the lacrimal system anomaly' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017173
-Label(s): non-syndromic male infertility due to sperm motility disorder 
-- 'non-syndromic male infertility due to sperm motility disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020158
-Label(s): eyelids malposition disorder 
-- 'eyelids malposition disorder' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020144
-Label(s): cerebrovascular dementia 
-- 'cerebrovascular dementia' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005044
-Label(s): Leishmaniasis 
-- 'Leishmaniasis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020129
-Label(s): acquired motor neuron disease 
-- 'acquired motor neuron disease' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0017148
+Label(s): heritable pulmonary arterial hypertension 
+- 'heritable pulmonary arterial hypertension' SubClassOf 'genetic hypertension'
++ 'heritable pulmonary arterial hypertension' SubClassOf 'genetic disorder'
 
 Class: http://purl.obolibrary.org/obo/MONDO_0020121
 Label(s): muscular dystrophy 
-- 'muscular dystrophy' SubClassOf 'skeletal muscle disorder'
-+ 'muscular dystrophy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
-+ 'muscular dystrophy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100167
+- 'muscular dystrophy' SubClassOf 'pulmonary disease, chronic obstructive, susceptibility to'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0018943
-Label(s): myofibrillar myopathy 
-- 'myofibrillar myopathy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018791
-Label(s): Moyomoya angiopathy 
-- 'Moyomoya angiopathy' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018778
-Label(s): intermediate Charcot-Marie-Tooth disease 
-- 'intermediate Charcot-Marie-Tooth disease' SubClassOf 'Charcot-Marie-Tooth disease'
-- 'intermediate Charcot-Marie-Tooth disease' SubClassOf 'hereditary motor and sensory neuropathy'
-+ 'intermediate Charcot-Marie-Tooth disease' SubClassOf 'Charcot-Marie-Tooth disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018999
-Label(s): LCAT deficiency 
-- 'LCAT deficiency' SubClassOf 'nephropathy secondary to a storage or other metabolic disease'
-- 'LCAT deficiency' SubClassOf 'eye disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000254
-Label(s): cutaneous mycosis 
-- 'cutaneous mycosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000256
-Label(s): systemic mycosis 
-- 'systemic mycosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001734
-Label(s): tuberous sclerosis 
-- 'tuberous sclerosis' SubClassOf 'inherited renal cancer-predisposing syndrome'
-- 'tuberous sclerosis' SubClassOf 'inherited neurodegenerative disorder'
-- 'tuberous sclerosis' SubClassOf 'inherited nervous system cancer-predisposing syndrome'
-+ 'tuberous sclerosis' SubClassOf 'hereditary neoplastic syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013863
-Label(s): combined immunodeficiency due to LRBA deficiency 
-- 'combined immunodeficiency due to LRBA deficiency' SubClassOf 'autoimmune polyendocrinopathy'
-- 'combined immunodeficiency due to LRBA deficiency' SubClassOf 'intractable diarrhea of infancy'
-- 'combined immunodeficiency due to LRBA deficiency' SubClassOf 'non-SCID combined immunodeficiency'
-- 'combined immunodeficiency due to LRBA deficiency' SubClassOf 'autoimmune enteropathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013881
-Label(s): congenital nephrotic syndrome - interstitial lung disease - epidermolysis bullosa syndrome 
-- 'congenital nephrotic syndrome - interstitial lung disease - epidermolysis bullosa syndrome' SubClassOf 'inherited kidney disorder'
-- 'congenital nephrotic syndrome - interstitial lung disease - epidermolysis bullosa syndrome' SubClassOf 'junctional epidermolysis bullosa'
-- 'congenital nephrotic syndrome - interstitial lung disease - epidermolysis bullosa syndrome' SubClassOf 'primary interstitial lung disease specific to childhood'
-- 'congenital nephrotic syndrome - interstitial lung disease - epidermolysis bullosa syndrome' SubClassOf 'disease of glomerular basement membrane'
-+ 'congenital nephrotic syndrome - interstitial lung disease - epidermolysis bullosa syndrome' SubClassOf 'junctional epidermolysis bullosa'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015564
-Label(s): Castleman disease 
-- 'Castleman disease' SubClassOf 'lymphoid hemopathy'
-- 'Castleman disease' SubClassOf 'post-infectious syndrome'
-- 'Castleman disease' SubClassOf 'human herpesvirus 8-related tumor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017234
-Label(s): inherited prion disease 
-- 'inherited prion disease' SubClassOf 'genetic dementia'
-- 'inherited prion disease' SubClassOf 'inherited neurodegenerative disorder'
-+ 'inherited prion disease' SubClassOf 'inherited neurodegenerative disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017235
-Label(s): familial omphalocele syndrome with facial dysmorphism 
-- 'familial omphalocele syndrome with facial dysmorphism' SubClassOf 'syndromic diaphragmatic or abdominal wall malformation'
-+ 'familial omphalocele syndrome with facial dysmorphism' SubClassOf 'bearer_of' some 'rare'
-+ 'familial omphalocele syndrome with facial dysmorphism' SubClassOf 'disorder of development or morphogenesis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015574
-Label(s): chronic cutaneous lupus erythematosus 
-- 'chronic cutaneous lupus erythematosus' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020083
-Label(s): immunodeficiency-associated lymphoproliferative disease 
-- 'immunodeficiency-associated lymphoproliferative disease' SubClassOf 'lymphoid hemopathy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007128
-Label(s): actinomycosis 
-- 'actinomycosis' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017279
-Label(s): young-onset Parkinson disease 
-- 'young-onset Parkinson disease' SubClassOf 'Parkinson disease'
-- 'young-onset Parkinson disease' SubClassOf 'primary orthostatic hypotension'
-+ 'young-onset Parkinson disease' SubClassOf 'Parkinson disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020022
-Label(s): central nervous system malformation 
-- 'central nervous system malformation' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020021
-Label(s): diaphragmatic or abdominal wall malformation 
-- 'diaphragmatic or abdominal wall malformation' SubClassOf 'material entity'
-- 'diaphragmatic or abdominal wall malformation' SubClassOf 'bearer_of' some 'rare'
-- 'diaphragmatic or abdominal wall malformation' SubClassOf 'developmental defect during embryogenesis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020019
-Label(s): digestive tract malformation 
-- 'digestive tract malformation' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020010
-Label(s): infectious disorder of the nervous system 
-- 'infectious disorder of the nervous system' SubClassOf 'material entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020001
-Label(s): respiratory or thoracic malformation 
-- 'respiratory or thoracic malformation' SubClassOf 'material entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001995
-Label(s): Sclerodermatomyositis 
-+ 'Sclerodermatomyositis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700223
+Class: http://purl.obolibrary.org/obo/MONDO_0000959
+Label(s): malignant hypertensive renal disease 
+- 'malignant hypertensive renal disease' SubClassOf 'genetic hypertension'
 
 ----------------------------------
 
@@ -3375,52 +537,36 @@ Label(s): Sclerodermatomyositis
 
 @Classes deleted from this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0016123
-Label(s): muscular tumor 
-+ 'muscular tumor' SubClassOf 'skeletal muscle neoplasm'
+Class: http://purl.obolibrary.org/obo/MONDO_0025481
+Label(s): zoonosis 
++ 'zoonosis' SubClassOf 'infectious disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0015216
-Label(s): syndromic diaphragmatic or abdominal wall malformation 
-+ 'syndromic diaphragmatic or abdominal wall malformation' EquivalentTo 'diaphragmatic or abdominal wall malformation' and ('bearer_of' some 'has a syndromic presentation')
-+ 'syndromic diaphragmatic or abdominal wall malformation' SubClassOf 'diaphragmatic or abdominal wall malformation'
-+ 'syndromic diaphragmatic or abdominal wall malformation' SubClassOf 'syndromic disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0044746
+Label(s): zoonotic bacterial infection 
++ 'zoonotic bacterial infection' SubClassOf 'bacterial disease'
++ 'zoonotic bacterial infection' SubClassOf 'zoonosis'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0002848
-Label(s): skeletal muscle neoplasm 
-+ 'skeletal muscle neoplasm' SubClassOf 'neoplasm'
-+ 'skeletal muscle neoplasm' SubClassOf 'skeletal muscle disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_0019724
+Label(s): secondary glomerular disease 
++ 'secondary glomerular disease' SubClassOf 'glomerular disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0002847
-Label(s): skeletal muscle cancer 
-+ 'skeletal muscle cancer' SubClassOf 'skeletal muscle neoplasm'
-+ 'skeletal muscle cancer' SubClassOf 'muscle cancer'
+Class: http://purl.obolibrary.org/obo/MONDO_0030701
+Label(s): autoimmune cardiomyopathy 
++ 'autoimmune cardiomyopathy' SubClassOf 'cardiomyopathy'
++ 'autoimmune cardiomyopathy' SubClassOf 'autoimmune disorder of musculoskeletal system'
++ 'autoimmune cardiomyopathy' SubClassOf 'autoimmune disorder of cardiovascular system'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0000568
-Label(s): autoimmune disorder of central nervous system 
-+ 'autoimmune disorder of central nervous system' SubClassOf 'central nervous system disease'
-+ 'autoimmune disorder of central nervous system' SubClassOf 'autoimmune disorder of the nervous system'
+Class: http://purl.obolibrary.org/obo/MONDO_0007788
+Label(s): hypertriglyceridemia, familial 
++ 'hypertriglyceridemia, familial' SubClassOf 'major hypertriglyceridemia'
++ 'hypertriglyceridemia, familial' SubClassOf 'familial hyperlipidemia'
++ 'hypertriglyceridemia, familial' EquivalentTo 'Hypertriglyceridemia' and ('bearer_of' some 'inherited')
++ 'hypertriglyceridemia, familial' SubClassOf 'Hypertriglyceridemia'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0021257
-Label(s): glomus jugulare neoplasm 
-+ 'glomus jugulare neoplasm' SubClassOf 'neoplasm of neck'
-+ 'glomus jugulare neoplasm' SubClassOf 'vein disorder'
-+ 'glomus jugulare neoplasm' SubClassOf 'blood vessel neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015215
-Label(s): non-syndromic diaphragmatic or abdominal wall malformation 
-+ 'non-syndromic diaphragmatic or abdominal wall malformation' SubClassOf 'diaphragmatic or abdominal wall malformation'
-+ 'non-syndromic diaphragmatic or abdominal wall malformation' EquivalentTo 'diaphragmatic or abdominal wall malformation' and ('bearer_of' some 'has an isolated presentation')
-+ 'non-syndromic diaphragmatic or abdominal wall malformation' SubClassOf 'bearer_of' some 'has an isolated presentation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020083
-Label(s): immunodeficiency-associated lymphoproliferative disease 
-+ 'immunodeficiency-associated lymphoproliferative disease' SubClassOf 'lymphoid hemopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020021
-Label(s): diaphragmatic or abdominal wall malformation 
-+ 'diaphragmatic or abdominal wall malformation' SubClassOf 'material entity'
-+ 'diaphragmatic or abdominal wall malformation' SubClassOf 'bearer_of' some 'rare'
-+ 'diaphragmatic or abdominal wall malformation' SubClassOf 'developmental defect during embryogenesis'
+Class: http://purl.obolibrary.org/obo/MONDO_0100167
+Label(s): pulmonary disease, chronic obstructive, susceptibility to 
++ 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'predisposes towards' some 'chronic obstructive pulmonary disease'
++ 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'inherited disease susceptibility'
 
 ----------------------------------
 4. Scope of the Ontology
