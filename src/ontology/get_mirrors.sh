@@ -48,6 +48,6 @@ curl -L http://purl.obolibrary.org/obo/oba.owl > mirror/oba.owl
 echo "Fetching GO..."
 curl -L https://www.ebi.ac.uk/ols/ontologies/go/download > mirror/go.owl
 
-#echo "Fetching GWAS trait list and creating template..."
-#curl -L https://www.ebi.ac.uk/gwas/api/search/downloads/trait_mappings > ./iri_dependencies/gwas.tsv && cut -d$'\t' -f 3 ./iri_dependencies/gwas.tsv > ./iri_dependencies/gwas_traits.tsv && rm ./iri_dependencies/gwas.tsv && sed -i '' 1d ./iri_dependencies/gwas_traits.tsv && cat ./iri_dependencies/gwas_header.tsv ./iri_dependencies/gwas_traits.tsv > ./iri_dependencies/gwas_terms.tsv 
+echo "Fetching GWAS trait list and creating template..."
+curl -L https://www.ebi.ac.uk/gwas/api/search/downloads/trait_mappings > ./iri_dependencies/gwas.tsv && cut -d$'\t' -f 3 ./iri_dependencies/gwas.tsv > ./iri_dependencies/gwas_traits.tsv && rm ./iri_dependencies/gwas.tsv && sed -i '' 1d ./iri_dependencies/gwas_traits.tsv && cat ./iri_dependencies/gwas_header.tsv ./iri_dependencies/gwas_traits.tsv > ./iri_dependencies/gwas_terms.tsv 
 
