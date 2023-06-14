@@ -322,7 +322,7 @@ sparql_test: $(BUILDDIR)/$(ONT).owl
 # Sparql queries: Reports
 # ----------------------------------------
 
-REPORTS = basic-report class-count-by-prefix edges xrefs obsoletes synonyms
+REPORTS = basic-report class-count-by-prefix edges xrefs obsoletes synonyms obsolete_gwas
 REPORT_ARGS = $(foreach V,$(REPORTS),-s $(SPARQLDIR)/$V.sparql reports/$V.tsv)
 all_reports: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) query -f tsv -i $< $(REPORT_ARGS)
