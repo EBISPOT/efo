@@ -11,17 +11,17 @@ ___           ___           ___
 \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.54.0
-Date Released: 15th May 2023
-Class Count: 40590
+Experimental Factor Ontology version 3.55.0
+Date Released: 15th June 2023
+Class Count: 40733
 
 Summary: 
 
-EFO 3.54.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog.
+EFO 3.55.0 release includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog.
 
-Number of classes changed: 79
-Number of classes added: 19
-Number of classes deleted: 6
+Number of classes changed: 107
+Number of classes added: 186
+Number of classes deleted: 43
 
 ----------------------------------
 1.	Changes to URIs
@@ -37,499 +37,1366 @@ Number of classes deleted: 6
 
 @Classes new to this version
 
-Class: http://www.ebi.ac.uk/efo/EFO_0700016
-Label(s): Smart-seq v4 
-+ 'Smart-seq v4' SubClassOf 'Smart-like'
-+ 'Smart-seq v4' SubClassOf 'assay'
+Class: http://www.ebi.ac.uk/efo/EFO_0022209
+Label(s): blood ethylparaben sulfate measurement 
++ 'blood ethylparaben sulfate measurement' SubClassOf 'blood metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803381
-Label(s): fornix volume measurement 
-+ 'fornix volume measurement' SubClassOf 'hippocampal volume'
+Class: http://www.ebi.ac.uk/efo/EFO_0803499
+Label(s): GW 6471 measurement 
++ 'GW 6471 measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803380
-Label(s): cardiovascular age measurement 
-+ 'cardiovascular age measurement' SubClassOf 'cardiovascular measurement'
+Class: http://purl.obolibrary.org/obo/CL_0009024
+Label(s): mesothelial cell of small intestine 
++ 'mesothelial cell of small intestine' SubClassOf 'mesothelial cell'
++ 'mesothelial cell of small intestine' SubClassOf 'intestinal epithelial cell'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803379
-Label(s): anti-GAD65 autoimmune neurological syndromes 
-+ 'anti-GAD65 autoimmune neurological syndromes' SubClassOf 'autoimmune disease'
+Class: http://purl.obolibrary.org/obo/CL_0009022
+Label(s): stromal cell of lamina propria of small intestine 
++ 'stromal cell of lamina propria of small intestine' SubClassOf 'stromal cell'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803378
-Label(s): visual masking mesurement 
-+ 'visual masking mesurement' SubClassOf 'visual perception measurement'
+Class: http://purl.obolibrary.org/obo/CL_0009021
+Label(s): stromal cell of lamina propria of large intestine 
++ 'stromal cell of lamina propria of large intestine' SubClassOf 'stromal cell'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803377
-Label(s): metachronous colorectal adenoma 
-+ 'metachronous colorectal adenoma' SubClassOf 'colorectal adenoma'
+Class: http://www.ebi.ac.uk/efo/EFO_0803476
+Label(s): 3-methylthiopropanamine measurement 
++ '3-methylthiopropanamine measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803376
-Label(s): erythrocyte deformability 
-+ 'erythrocyte deformability' SubClassOf 'hemorheological measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0803510
+Label(s): quinoclamin measurement 
++ 'quinoclamin measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803375
-Label(s): erythrocyte aggregation 
-+ 'erythrocyte aggregation' SubClassOf 'hemorheological measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0803441
+Label(s): nicotinic acid mononucleotide measurement 
++ 'nicotinic acid mononucleotide measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803374
-Label(s): hemorheological measurement 
-+ 'hemorheological measurement' SubClassOf 'hematological measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0803450
+Label(s): polyethylene oxidized measurement 
++ 'polyethylene oxidized measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803373
-Label(s): outer segment thickness measurement 
-+ 'outer segment thickness measurement' SubClassOf 'photoreceptor cell layer thickness measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0803460
+Label(s): thiopurine S-methyl ether measurement 
++ 'thiopurine S-methyl ether measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803372
-Label(s): inner segment thickness measurement 
-+ 'inner segment thickness measurement' SubClassOf 'photoreceptor cell layer thickness measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0803490
+Label(s): correolide measurement 
++ 'correolide measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803371
-Label(s): outer nuclear layer thickness measurement 
-+ 'outer nuclear layer thickness measurement' SubClassOf 'photoreceptor cell layer thickness measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0803494
+Label(s): demethylphosphinothricin measurement 
++ 'demethylphosphinothricin measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803370
-Label(s): photoreceptor cell layer thickness measurement 
-+ 'photoreceptor cell layer thickness measurement' SubClassOf 'retinal layer thickness measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0803521
+Label(s): tromethamine measurement 
++ 'tromethamine measurement' SubClassOf 'metabolite measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0803369
-Label(s): vascular endothelial function measurement 
-+ 'vascular endothelial function measurement' SubClassOf 'cardiovascular measurement'
+Class: http://www.ebi.ac.uk/efo/EFO_0803470
+Label(s): (R)-23-dihydroxypropane-1-sulfonate measurement 
++ '(R)-23-dihydroxypropane-1-sulfonate measurement' SubClassOf 'metabolite measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100323
-Label(s): inherited pseudohypoaldosteronism 
-+ 'inherited pseudohypoaldosteronism' SubClassOf 'pseudohypoaldosteronism'
-+ 'inherited pseudohypoaldosteronism' SubClassOf 'inherited kidney disorder'
-+ 'inherited pseudohypoaldosteronism' EquivalentTo 'pseudohypoaldosteronism' and ('bearer_of' some 'inherited')
+Class: http://www.ebi.ac.uk/efo/EFO_0022198
+Label(s): blood citramalate measurement 
++ 'blood citramalate measurement' SubClassOf 'blood metabolite measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100314
-Label(s): GYG1-related disorder of glycogen metabolism 
-+ 'GYG1-related disorder of glycogen metabolism' SubClassOf 'disorder of glycogen metabolism'
+Class: http://www.ebi.ac.uk/efo/EFO_0022199
+Label(s): blood 2,3-dihydroxypyridine measurement 
++ 'blood 2,3-dihydroxypyridine measurement' SubClassOf 'blood metabolite measurement'
 
-Class: http://purl.obolibrary.org/obo/HP_0030158
-Label(s): Cervical ectropion 
-+ 'Cervical ectropion' SubClassOf 'Abnormality of the uterus'
+Class: http://www.ebi.ac.uk/efo/EFO_0803512
+Label(s): rhodojaponin I measurement 
++ 'rhodojaponin I measurement' SubClassOf 'metabolite measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100317
-Label(s): deficiency of adenosine deaminase 2 
-+ 'deficiency of adenosine deaminase 2' SubClassOf 'genetic disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0022216
+Label(s): blood 4-oxo-retinoic acid measurement 
++ 'blood 4-oxo-retinoic acid measurement' SubClassOf 'blood metabolite measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005363
-Label(s): inherited focal segmental glomerulosclerosis 
-+ 'inherited focal segmental glomerulosclerosis' SubClassOf 'inherited kidney disorder'
-+ 'inherited focal segmental glomerulosclerosis' SubClassOf 'focal segmental glomerulosclerosis'
-+ 'inherited focal segmental glomerulosclerosis' EquivalentTo 'focal segmental glomerulosclerosis' and ('bearer_of' some 'inherited')
+Class: http://www.ebi.ac.uk/efo/EFO_0803388
+Label(s): 24-dimethyl-5-vinylthiazole measurement 
++ '24-dimethyl-5-vinylthiazole measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803399
+Label(s): 6-hydroxypentadecanedioic acid measurement 
++ '6-hydroxypentadecanedioic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803402
+Label(s): anserine measurement 
++ 'anserine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803403
+Label(s): arachidic acid measurement 
++ 'arachidic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803404
+Label(s): bakers yeast extract measurement 
++ 'bakers yeast extract measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803411
+Label(s): deoxyadenosine monophosphate measurement 
++ 'deoxyadenosine monophosphate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803412
+Label(s): di-2-thienyl disulfide measurement 
++ 'di-2-thienyl disulfide measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803413
+Label(s): diaminopimelate measurement 
++ 'diaminopimelate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803414
+Label(s): diethylenetriamine crosslinked with epichlorohydrin measurement 
++ 'diethylenetriamine crosslinked with epichlorohydrin measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803423
+Label(s): indole ethanol (tryptophanol) measurement 
++ 'indole ethanol (tryptophanol) measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803425
+Label(s): inosine diphosphate measurement 
++ 'inosine diphosphate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803426
+Label(s): lauroylcarnitine measurement 
++ 'lauroylcarnitine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803427
+Label(s): licoagrodin measurement 
++ 'licoagrodin measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803431
+Label(s): methyl jasmonate measurement 
++ 'methyl jasmonate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803433
+Label(s): mg(18:1/0:0/0:0) measurement 
++ 'mg(18:1/0:0/0:0) measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803436
+Label(s): N-acetyldehydroanonaine measurement 
++ 'N-acetyldehydroanonaine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803439
+Label(s): NaNa-dimethylhistamine measurement 
++ 'NaNa-dimethylhistamine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803454
+Label(s): santene measurement 
++ 'santene measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803455
+Label(s): somniferine measurement 
++ 'somniferine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803472
+Label(s): 2-anthramine measurement 
++ '2-anthramine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803473
+Label(s): 2-chloro-3-oxoadipate measurement 
++ '2-chloro-3-oxoadipate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803474
+Label(s): 246-triaminotoluene measurement 
++ '246-triaminotoluene measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803503
+Label(s): mercaptoacetyl-phe-leu measurement 
++ 'mercaptoacetyl-phe-leu measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803508
+Label(s): phorbol 12-tiglate 13-decanoate measurement 
++ 'phorbol 12-tiglate 13-decanoate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803513
+Label(s): S-(4-bromophenyl)-mercaptopyruvate measurement 
++ 'S-(4-bromophenyl)-mercaptopyruvate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803515
+Label(s): sodium nitroprusside dihydrate measurement 
++ 'sodium nitroprusside dihydrate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803519
+Label(s): tiadinil measurement 
++ 'tiadinil measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803522
+Label(s): zinc lactate measurement 
++ 'zinc lactate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803523
+Label(s): 2-chloro-45-xylyl N-hydroxy-N-methylcarbamate measurement 
++ '2-chloro-45-xylyl N-hydroxy-N-methylcarbamate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803531
+Label(s): uranyl acetate measurement 
++ 'uranyl acetate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803530
+Label(s): tribromodibenzofuran measurement 
++ 'tribromodibenzofuran measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803529
+Label(s): phenylmercuric borate measurement 
++ 'phenylmercuric borate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803528
+Label(s): methylmercuric dicyanamide measurement 
++ 'methylmercuric dicyanamide measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803527
+Label(s): methylarsonic acid monosodium salt measurement 
++ 'methylarsonic acid monosodium salt measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803526
+Label(s): fenasulam measurement 
++ 'fenasulam measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803525
+Label(s): ethyl thiocyanate measurement 
++ 'ethyl thiocyanate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803524
+Label(s): antimony(III) isopropoxide measurement 
++ 'antimony(III) isopropoxide measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803520
+Label(s): tridihexethyl bromide measurement 
++ 'tridihexethyl bromide measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803518
+Label(s): sulfoacetate measurement 
++ 'sulfoacetate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803517
+Label(s): sulfadimethoxine sodium measurement 
++ 'sulfadimethoxine sodium measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803516
+Label(s): stigmatellin Y measurement 
++ 'stigmatellin Y measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803514
+Label(s): scutianine F measurement 
++ 'scutianine F measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803511
+Label(s): quinoxyfen measurement 
++ 'quinoxyfen measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803509
+Label(s): potassium bicarbonate measurement 
++ 'potassium bicarbonate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803507
+Label(s): phenylmethanesulfonyl fluoride measurement 
++ 'phenylmethanesulfonyl fluoride measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803506
+Label(s): perphenazine maleate measurement 
++ 'perphenazine maleate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803505
+Label(s): N-phosphotaurocyamine measurement 
++ 'N-phosphotaurocyamine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803504
+Label(s): minosaminomycin measurement 
++ 'minosaminomycin measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803502
+Label(s): istamycin C1 measurement 
++ 'istamycin C1 measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803501
+Label(s): indol-3-ylacetyl-myo-inositol L-arabinoside measurement 
++ 'indol-3-ylacetyl-myo-inositol L-arabinoside measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803500
+Label(s): hodgkinsine measurement 
++ 'hodgkinsine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803498
+Label(s): fluocinolone measurement 
++ 'fluocinolone measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803497
+Label(s): fenson measurement 
++ 'fenson measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803496
+Label(s): dimethylphenylenediamine measurement 
++ 'dimethylphenylenediamine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803495
+Label(s): dibromobisphenol a measurement 
++ 'dibromobisphenol a measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803493
+Label(s): delphinine measurement 
++ 'delphinine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803492
+Label(s): dehydroshikimate measurement 
++ 'dehydroshikimate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803491
+Label(s): deacetylcolchicine measurement 
++ 'deacetylcolchicine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803489
+Label(s): chlorophacinone measurement 
++ 'chlorophacinone measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803488
+Label(s): chloromethiuron measurement 
++ 'chloromethiuron measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803487
+Label(s): carpropamid measurement 
++ 'carpropamid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803486
+Label(s): buthionine sulfoximine measurement 
++ 'buthionine sulfoximine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803485
+Label(s): azothoate measurement 
++ 'azothoate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803484
+Label(s): atractyloside I measurement 
++ 'atractyloside I measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803483
+Label(s): arg-vasopressin measurement 
++ 'arg-vasopressin measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803482
+Label(s): alpha-ethyl-alphabeta-diphenyl-2-pyridineethanol measurement 
++ 'alpha-ethyl-alphabeta-diphenyl-2-pyridineethanol measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803481
+Label(s): alpha-D-ribose 1-methylphosphonate 5-triphosphate measurement 
++ 'alpha-D-ribose 1-methylphosphonate 5-triphosphate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803480
+Label(s): A 77003 measurement 
++ 'A 77003 measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803479
+Label(s): 7-methylpyrido34-cpsoralen measurement 
++ '7-methylpyrido34-cpsoralen measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803478
+Label(s): 68-dimethyl-67-didehydroergoline measurement 
++ '68-dimethyl-67-didehydroergoline measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803477
+Label(s): 3-vinylbacteriochlorophyllide a measurement 
++ '3-vinylbacteriochlorophyllide a measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803475
+Label(s): 3-(phosphoacetylamido)-L-alanine measurement 
++ '3-(phosphoacetylamido)-L-alanine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803471
+Label(s): 1-amino-24-dibromoanthraquinone measurement 
++ '1-amino-24-dibromoanthraquinone measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803469
+Label(s): (3S)-3-hydroxy-L-enduracididine measurement 
++ '(3S)-3-hydroxy-L-enduracididine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803468
+Label(s): (1R2R)-3-(12-dihydro-2-hydroxy-1-naphthalenyl)thio-2-oxopropanoic acid measurement 
++ '(1R2R)-3-(12-dihydro-2-hydroxy-1-naphthalenyl)thio-2-oxopropanoic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803467
+Label(s): nicotine measurement 
++ 'nicotine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803466
+Label(s): retinoic acid measurement 
++ 'retinoic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803465
+Label(s): lormetazepam measurement 
++ 'lormetazepam measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803464
+Label(s): oxoglutarate measurement 
++ 'oxoglutarate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803463
+Label(s): xanthurenic acid measurement 
++ 'xanthurenic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803462
+Label(s): tyrosol 4-sulfate measurement 
++ 'tyrosol 4-sulfate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803461
+Label(s): tsangane l 3-glucoside measurement 
++ 'tsangane l 3-glucoside measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803459
+Label(s): tetrasaccharide (glycogen, stachyose) measurement 
++ 'tetrasaccharide (glycogen, stachyose) measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803458
+Label(s): sulforaphane measurement 
++ 'sulforaphane measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803457
+Label(s): sulfinoalanine measurement 
++ 'sulfinoalanine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803456
+Label(s): sorbitan tristearate measurement 
++ 'sorbitan tristearate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803453
+Label(s): S-japonin measurement 
++ 'S-japonin measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803452
+Label(s): quinidine barbiturate measurement 
++ 'quinidine barbiturate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803451
+Label(s): quinic acid measurement 
++ 'quinic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803449
+Label(s): phosphoserine measurement 
++ 'phosphoserine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803448
+Label(s): phosphocholine measurement 
++ 'phosphocholine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803447
+Label(s): phaeophorbide b measurement 
++ 'phaeophorbide b measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803446
+Label(s): permetin A measurement 
++ 'permetin A measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803445
+Label(s): pentasine measurement 
++ 'pentasine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803444
+Label(s): p-coumaroyl vitisin A measurement 
++ 'p-coumaroyl vitisin A measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803443
+Label(s): oxoadipic acid measurement 
++ 'oxoadipic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803442
+Label(s): 12-hydroxydodecanoic acid measurement 
++ '12-hydroxydodecanoic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803440
+Label(s): NeNe dimethyllysine measurement 
++ 'NeNe dimethyllysine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803438
+Label(s): N-hexadecanoylpyrrolidine measurement 
++ 'N-hexadecanoylpyrrolidine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803437
+Label(s): N-desmethyltoremifene measurement 
++ 'N-desmethyltoremifene measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803435
+Label(s): mytilin B measurement 
++ 'mytilin B measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803434
+Label(s): myristoylglycine measurement 
++ 'myristoylglycine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803432
+Label(s): mg(14:0/0:0/0:0) measurement 
++ 'mg(14:0/0:0/0:0) measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803430
+Label(s): metenamine measurement 
++ 'metenamine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803429
+Label(s): melleolide M measurement 
++ 'melleolide M measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803428
+Label(s): lysope(20:1) measurement 
++ 'lysope(20:1) measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803424
+Label(s): indole-3-acetic-acid-O-glucuronide measurement 
++ 'indole-3-acetic-acid-O-glucuronide measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803422
+Label(s): homolinoleic acid measurement 
++ 'homolinoleic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803421
+Label(s): homogentisate measurement 
++ 'homogentisate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803420
+Label(s): heptadecanoic acid measurement 
++ 'heptadecanoic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803419
+Label(s): glycerol triundecanoate measurement 
++ 'glycerol triundecanoate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803418
+Label(s): glucosamine measurement 
++ 'glucosamine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803417
+Label(s): glucosamine 6-phosphate measurement 
++ 'glucosamine 6-phosphate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803416
+Label(s): ferulic acid measurement 
++ 'ferulic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803415
+Label(s): docosatetraenoic acid measurement 
++ 'docosatetraenoic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803409
+Label(s): cucurbitacin I 2-glucoside measurement 
++ 'cucurbitacin I 2-glucoside measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803408
+Label(s): coumarate measurement 
++ 'coumarate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803407
+Label(s): cinnamic acid measurement 
++ 'cinnamic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803406
+Label(s): cadaverine measurement 
++ 'cadaverine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803405
+Label(s): bis(methylsulfonylmethyl) disulfide measurement 
++ 'bis(methylsulfonylmethyl) disulfide measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803401
+Label(s): alverine measurement 
++ 'alverine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803400
+Label(s): acetyllysine measurement 
++ 'acetyllysine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803398
+Label(s): 6-hydroxy-5-(4-sulfophenyl)azo-2-naphthalenesulfonic acid measurement 
++ '6-hydroxy-5-(4-sulfophenyl)azo-2-naphthalenesulfonic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803397
+Label(s): 5(6)-pentyl-14-dioxan-2-one measurement 
++ '5(6)-pentyl-14-dioxan-2-one measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803396
+Label(s): 5-sulfo-13-benzenedicarboxylic acid measurement 
++ '5-sulfo-13-benzenedicarboxylic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803395
+Label(s): 5-hydroxytryptophan measurement 
++ '5-hydroxytryptophan measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803394
+Label(s): 5-hydroxy-2-furoic acid measurement 
++ '5-hydroxy-2-furoic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803393
+Label(s): 5-(hydroxyphenyl)-gamma-valerolactone-O-sulphate measurement 
++ '5-(hydroxyphenyl)-gamma-valerolactone-O-sulphate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803392
+Label(s): 4,8,12,15,19-docosapentaenoic acid measurement 
++ '4,8,12,15,19-docosapentaenoic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803391
+Label(s): 4-hydroxybenzyl isothiocyanate 4-acetylrhamnoside measurement 
++ '4-hydroxybenzyl isothiocyanate 4-acetylrhamnoside measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803390
+Label(s): 4-hydroxyanigorootin measurement 
++ '4-hydroxyanigorootin measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803389
+Label(s): 3-keto fusidic acid measurement 
++ '3-keto fusidic acid measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803387
+Label(s): 2-methylmaleate measurement 
++ '2-methylmaleate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803386
+Label(s): 2-deoxyglucose measurement 
++ '2-deoxyglucose measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803385
+Label(s): 15-acetoxyscirpene-34-diol 4-O-a-D-glucopyranoside measurement 
++ '15-acetoxyscirpene-34-diol 4-O-a-D-glucopyranoside measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803384
+Label(s): (cis/trans)-aconitate measurement 
++ '(cis/trans)-aconitate measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803383
+Label(s): ()-2-methylthiazolidine measurement 
++ '()-2-methylthiazolidine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803382
+Label(s): perivascular space measurement 
++ 'perivascular space measurement' SubClassOf 'brain measurement'
++ 'perivascular space measurement' EquivalentTo 'measurement' and ('is_about' some 
+('perivascular space' or ('part_of' some 'perivascular space')))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0020939
+Label(s): right ventricular function 
++ 'right ventricular function' SubClassOf 'function'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0020938
+Label(s): left ventricle sphericity index 
++ 'left ventricle sphericity index' SubClassOf 'cardiovascular measurement'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100499
+Label(s): multiple congenital anomalies due to 14q32.2 imprinting defect 
++ 'multiple congenital anomalies due to 14q32.2 imprinting defect' SubClassOf 'multiple congenital anomalies/dysmorphic syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100472
+Label(s): lissencephaly spectrum disorder with complex brainstem malformation 
++ 'lissencephaly spectrum disorder with complex brainstem malformation' SubClassOf 'lissencephaly spectrum disorders'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022223
+Label(s): metabolite ratio 
++ 'metabolite ratio' SubClassOf 'metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022222
+Label(s): blood pyridoxal measurement 
++ 'blood pyridoxal measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022221
+Label(s): blood 2,4-di-tert-butylphenol measurement 
++ 'blood 2,4-di-tert-butylphenol measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022220
+Label(s): blood 3-hydroxyoctanoylcarnitine 
++ 'blood 3-hydroxyoctanoylcarnitine' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022219
+Label(s): blood 2,3-dihydroxy-2-methylbutyrate measurement 
++ 'blood 2,3-dihydroxy-2-methylbutyrate measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022218
+Label(s): blood 1H-indole-7-acetic acid measurement 
++ 'blood 1H-indole-7-acetic acid measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022217
+Label(s): blood N-acetylcarnosine measurement 
++ 'blood N-acetylcarnosine measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022215
+Label(s): blood 3,4-dihydroxybutyrate measurement 
++ 'blood 3,4-dihydroxybutyrate measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022214
+Label(s): blood vanillic alcohol sulfate measurement 
++ 'blood vanillic alcohol sulfate measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022212
+Label(s): blood dibutyl sulfosuccinate measurement 
++ 'blood dibutyl sulfosuccinate measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022211
+Label(s): blood succinimide measurement 
++ 'blood succinimide measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022210
+Label(s): blood pantoate measurement 
++ 'blood pantoate measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022208
+Label(s): blood 2,2'-Methylenebis(6-tert-butyl-p-cresol) measurement 
++ 'blood 2,2'-Methylenebis(6-tert-butyl-p-cresol) measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022207
+Label(s): blood N-acetylproline measurement 
++ 'blood N-acetylproline measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022206
+Label(s): blood N-acetylasparagine measurement 
++ 'blood N-acetylasparagine measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022205
+Label(s): blood N(8)-acetylspermidine measurement 
++ 'blood N(8)-acetylspermidine measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022204
+Label(s): blood N(1)-acetylspermidine measurement 
++ 'blood N(1)-acetylspermidine measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022203
+Label(s): blood N-carbamoylalanine measurement 
++ 'blood N-carbamoylalanine measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022202
+Label(s): blood N-acetyl-2-aminoadipate measurement 
++ 'blood N-acetyl-2-aminoadipate measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022200
+Label(s): blood glutaconic acid measurement 
++ 'blood glutaconic acid measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022197
+Label(s): blood 3-hydroxymyristate measurement 
++ 'blood 3-hydroxymyristate measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022213
+Label(s): blood cytosine measurement 
++ 'blood cytosine measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022201
+Label(s): blood Citraconic acid measurement 
++ 'blood Citraconic acid measurement' SubClassOf 'blood metabolite measurement'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0014930
+Label(s): perivascular space 
++ 'perivascular space' SubClassOf 'part_of' some 'meningeal cluster'
++ 'perivascular space' SubClassOf 'anatomical entity'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0803410
+Label(s): cytidine diphosphocholine measurement 
++ 'cytidine diphosphocholine measurement' SubClassOf 'metabolite measurement'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100512
+Label(s): mitochondrial DNA depletion syndrome, hepatocerebral form 
++ 'mitochondrial DNA depletion syndrome, hepatocerebral form' SubClassOf 'mitochondrial DNA depletion syndrome'
++ 'mitochondrial DNA depletion syndrome, hepatocerebral form' SubClassOf 'bearer_of' some 'rare'
 
 ----------------------------------
 2. Changes to EFO3
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/MONDO_0033548
-Label(s): myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies 
-- 'myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies' SubClassOf 'bearer_of' some 'congenital'
-- 'myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies' SubClassOf 'genetic disorder'
-+ 'myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies' SubClassOf 'congenital myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018582
-Label(s): GCGR-related hyperglucagonemia 
-- 'GCGR-related hyperglucagonemia' SubClassOf 'pancreatic neoplasm'
-+ 'GCGR-related hyperglucagonemia' SubClassOf 'pancreatic neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019162
-Label(s): pseudohypoaldosteronism type 2 
-- 'pseudohypoaldosteronism type 2' SubClassOf 'pseudohypoaldosteronism'
-- 'pseudohypoaldosteronism type 2' SubClassOf 'genetic hypertension'
-+ 'pseudohypoaldosteronism type 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100323
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019952
-Label(s): congenital myopathy 
-- 'congenital myopathy' SubClassOf 'pulmonary disease, chronic obstructive, susceptibility to'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019391
-Label(s): Fanconi anemia 
-- 'Fanconi anemia' SubClassOf 'inherited kidney disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001361
-Label(s): localised scleroderma 
-- 'localised scleroderma' SubClassOf 'inherited kidney disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001211
-Label(s): thromboangiitis obliterans 
-- 'thromboangiitis obliterans' SubClassOf 'secondary glomerular disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014526
-Label(s): polyglucosan body myopathy type 2 
-- 'polyglucosan body myopathy type 2' SubClassOf 'disorder of glycogen metabolism'
-+ 'polyglucosan body myopathy type 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100314
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012833
-Label(s): Crouzon syndrome-acanthosis nigricans syndrome 
-- 'Crouzon syndrome-acanthosis nigricans syndrome' SubClassOf 'focal segmental glomerulosclerosis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001186
-Label(s): Sneddon syndrome 
-+ 'Sneddon syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100317
-+ 'Sneddon syndrome' SubClassOf 'genetic skin disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001148
-Label(s): relapsing polychondritis 
-- 'relapsing polychondritis' SubClassOf 'secondary glomerular disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016059
-Label(s): cleft lip/palate-deafness-sacral lipoma syndrome 
-+ 'cleft lip/palate-deafness-sacral lipoma syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010977
-Label(s): Brody myopathy 
-- 'Brody myopathy' SubClassOf 'myopathy'
-- 'Brody myopathy' SubClassOf 'qualitative or quantitative defects of protein SERCA1'
-+ 'Brody myopathy' SubClassOf 'myopathy'
-+ 'Brody myopathy' SubClassOf 'qualitative or quantitative defects of protein SERCA1'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014306
-Label(s): vasculitis due to ADA2 deficiency 
-+ 'vasculitis due to ADA2 deficiency' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100317
-+ 'vasculitis due to ADA2 deficiency' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_33568
-Label(s): adrenaline 
-- 'adrenaline' SubClassOf 'phenols'
-+ 'adrenaline' SubClassOf 'chemical entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007915
-Label(s): systemic lupus erythematosus 
-- 'systemic lupus erythematosus' SubClassOf 'thrombotic microangiopathy'
-- 'systemic lupus erythematosus' SubClassOf 'secondary glomerular disease'
-+ 'systemic lupus erythematosus' SubClassOf 'kidney disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008965
-Label(s): CHARGE syndrome 
-- 'CHARGE syndrome' SubClassOf 'lens shape anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008913
-Label(s): cardiac valvular defect, developmental 
-+ 'cardiac valvular defect, developmental' SubClassOf 'genetic cardiac anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0025303
-Label(s): anaplasmosis 
-- 'anaplasmosis' SubClassOf 'zoonotic bacterial infection'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0025481
-Label(s): zoonosis 
-- 'zoonosis' SubClassOf 'infectious disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010122
-Label(s): congenital thrombotic thrombocytopenic purpura 
-- 'congenital thrombotic thrombocytopenic purpura' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008678
-Label(s): Williams syndrome 
-- 'Williams syndrome' SubClassOf 'neurovascular disorder'
-- 'Williams syndrome' SubClassOf 'motor stereotypies'
-- 'Williams syndrome' SubClassOf 'multiple congenital anomalies/dysmorphic syndrome-intellectual disability'
-- 'Williams syndrome' SubClassOf 'Mendelian neurodevelopmental disorder'
-- 'Williams syndrome' SubClassOf 'congenital nervous system disorder'
-- 'Williams syndrome' SubClassOf 'syndromic epicanthus'
-- 'Williams syndrome' SubClassOf 'heart disease'
-- 'Williams syndrome' SubClassOf 'partial deletion of the long arm of chromosome 7'
-- 'Williams syndrome' SubClassOf 'genetic hypertension'
-+ 'Williams syndrome' SubClassOf 'Neurodevelopmental disorder'
-+ 'Williams syndrome' SubClassOf 'partial deletion of the long arm of chromosome 7'
-+ 'Williams syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008641
-Label(s): retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations 
-- 'retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations' SubClassOf 'inherited kidney disorder'
-- 'retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations' SubClassOf 'disease of glomerular basement membrane'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008633
-Label(s): Muckle-Wells syndrome 
-- 'Muckle-Wells syndrome' SubClassOf 'secondary glomerular disease'
-- 'Muckle-Wells syndrome' SubClassOf 'inherited kidney disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000668
-Label(s): preeclampsia 
-- 'preeclampsia' SubClassOf 'genetic hypertension'
-+ 'preeclampsia' SubClassOf 'bearer_of' some 'rare'
-+ 'preeclampsia' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008323
-Label(s): Liddle syndrome 
-- 'Liddle syndrome' SubClassOf 'genetic hypertension'
-+ 'Liddle syndrome' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001549
-Label(s): hemolytic-uremic syndrome 
-- 'hemolytic-uremic syndrome' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008071
-Label(s): autosomal dominant progressive nephropathy with hypertension 
-- 'autosomal dominant progressive nephropathy with hypertension' SubClassOf 'genetic hypertension'
-+ 'autosomal dominant progressive nephropathy with hypertension' SubClassOf 'kidney disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012203
-Label(s): familial hyperthyroidism due to mutations in TSH receptor 
-- 'familial hyperthyroidism due to mutations in TSH receptor' SubClassOf 'genetic hypertension'
-+ 'familial hyperthyroidism due to mutations in TSH receptor' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008048
-Label(s): autosomal dominant centronuclear myopathy 
-- 'autosomal dominant centronuclear myopathy' SubClassOf 'centronuclear myopathy'
-+ 'autosomal dominant centronuclear myopathy' SubClassOf 'centronuclear myopathy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007313
-Label(s): HIV-associated nephropathy 
-- 'HIV-associated nephropathy' SubClassOf 'focal segmental glomerulosclerosis'
-+ 'HIV-associated nephropathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0005363
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001209
-Label(s): temporal arteritis 
-- 'temporal arteritis' SubClassOf 'secondary glomerular disease'
-+ 'temporal arteritis' SubClassOf 'kidney disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019737
-Label(s): thrombotic microangiopathy 
-- 'thrombotic microangiopathy' SubClassOf 'kidney disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044746
-Label(s): zoonotic bacterial infection 
-- 'zoonotic bacterial infection' SubClassOf 'bacterial disease'
-- 'zoonotic bacterial infection' SubClassOf 'zoonosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019724
-Label(s): secondary glomerular disease 
-- 'secondary glomerular disease' SubClassOf 'glomerular disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000717
-Label(s): systemic scleroderma 
-- 'systemic scleroderma' SubClassOf 'autoimmune cardiomyopathy'
-- 'systemic scleroderma' SubClassOf 'secondary glomerular disease'
-- 'systemic scleroderma' SubClassOf 'familial restrictive cardiomyopathy'
-- 'systemic scleroderma' SubClassOf 'respiratory system disease'
-- 'systemic scleroderma' SubClassOf 'Non-familial restrictive cardiomyopathy'
-+ 'systemic scleroderma' SubClassOf 'respiratory system disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0032936
-Label(s): myopathy, congenital, with respiratory insufficiency and bone fractures 
-- 'myopathy, congenital, with respiratory insufficiency and bone fractures' SubClassOf 'genetic disorder'
-+ 'myopathy, congenital, with respiratory insufficiency and bone fractures' SubClassOf 'congenital myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017984
-Label(s): familial lambdoid synostosis 
-- 'familial lambdoid synostosis' SubClassOf 'isolated craniosynostosis'
-+ 'familial lambdoid synostosis' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004236
-Label(s): focal segmental glomerulosclerosis 
-- 'focal segmental glomerulosclerosis' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018088
-Label(s): familial Mediterranean fever 
-- 'familial Mediterranean fever' SubClassOf 'secondary glomerular disease'
-- 'familial Mediterranean fever' SubClassOf 'inherited kidney disorder'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0011143
-Label(s): upper urinary tract 
-- 'upper urinary tract' SubClassOf 'anatomical entity'
-+ 'upper urinary tract' SubClassOf 'part_of' some 'anatomical system'
-+ 'upper urinary tract' SubClassOf 'anatomical structure'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019439
-Label(s): AA amyloidosis 
-- 'AA amyloidosis' SubClassOf 'secondary glomerular disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019438
-Label(s): AL amyloidosis 
-- 'AL amyloidosis' SubClassOf 'secondary glomerular disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019161
-Label(s): pseudohypoaldosteronism type 1 
-- 'pseudohypoaldosteronism type 1' SubClassOf 'pseudohypoaldosteronism'
-+ 'pseudohypoaldosteronism type 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100323
-
-Class: http://purl.obolibrary.org/obo/MONDO_0030701
-Label(s): autoimmune cardiomyopathy 
-- 'autoimmune cardiomyopathy' SubClassOf 'cardiomyopathy'
-- 'autoimmune cardiomyopathy' SubClassOf 'autoimmune disorder of musculoskeletal system'
-- 'autoimmune cardiomyopathy' SubClassOf 'autoimmune disorder of cardiovascular system'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015512
-Label(s): genetic hypertension 
-- 'genetic hypertension' SubClassOf 'bearer_of' some 'rare'
-- 'genetic hypertension' EquivalentTo 'hypertension' and ('bearer_of' some 'inherited')
-- 'genetic hypertension' SubClassOf 'inherited kidney disorder'
-- 'genetic hypertension' SubClassOf 'hypertension'
-+ 'genetic hypertension' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013743
-Label(s): autosomal systemic lupus erythematosus type 16 
-- 'autosomal systemic lupus erythematosus type 16' SubClassOf 'inherited blood coagulation disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013731
-Label(s): MEGF10-Related Myopathy 
-- 'MEGF10-Related Myopathy' SubClassOf 'congenital myopathy'
-+ 'MEGF10-Related Myopathy' SubClassOf 'congenital myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0060627
-Label(s): glycosylphosphatidylinositol biosynthesis defect 15 
-- 'glycosylphosphatidylinositol biosynthesis defect 15' SubClassOf 'congenital nervous system disorder'
-- 'glycosylphosphatidylinositol biosynthesis defect 15' SubClassOf 'central nervous system malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011577
-Label(s): myopathy, proximal, and ophthalmoplegia 
-+ 'myopathy, proximal, and ophthalmoplegia' SubClassOf 'congenital myopathy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007374
-Label(s): mixed connective tissue disease 
-- 'mixed connective tissue disease' SubClassOf 'secondary glomerular disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000784
-Label(s): microscopic polyangiitis 
-- 'microscopic polyangiitis' SubClassOf 'secondary glomerular disease'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0003153
-Label(s): head capsule 
-- 'head capsule' SubClassOf 'anatomical entity'
-+ 'head capsule' SubClassOf 'part_of' some 'anatomical system'
-+ 'head capsule' SubClassOf 'part_of' some 'integumental system'
-+ 'head capsule' SubClassOf 'anatomical structure'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005297
-Label(s): Granulomatosis with Polyangiitis 
-- 'Granulomatosis with Polyangiitis' SubClassOf 'secondary glomerular disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009609
-Label(s): methylcobalamin deficiency type cblG 
-- 'methylcobalamin deficiency type cblG' SubClassOf 'inherited kidney disorder'
-- 'methylcobalamin deficiency type cblG' SubClassOf 'thrombotic microangiopathy'
-- 'methylcobalamin deficiency type cblG' SubClassOf 'inherited blood coagulation disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009671
-Label(s): intellectual disability-myopathy-short stature-endocrine defect syndrome 
-- 'intellectual disability-myopathy-short stature-endocrine defect syndrome' SubClassOf 'congenital myopathy'
-+ 'intellectual disability-myopathy-short stature-endocrine defect syndrome' SubClassOf 'congenital myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009722
-Label(s): Bailey-Bloch congenital myopathy 
-- 'Bailey-Bloch congenital myopathy' SubClassOf 'congenital myopathy'
-+ 'Bailey-Bloch congenital myopathy' SubClassOf 'congenital myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007788
-Label(s): hypertriglyceridemia, familial 
-- 'hypertriglyceridemia, familial' SubClassOf 'major hypertriglyceridemia'
-- 'hypertriglyceridemia, familial' SubClassOf 'familial hyperlipidemia'
-- 'hypertriglyceridemia, familial' EquivalentTo 'Hypertriglyceridemia' and ('bearer_of' some 'inherited')
-- 'hypertriglyceridemia, familial' SubClassOf 'Hypertriglyceridemia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007781
-Label(s): essential hypertension, genetic 
-- 'essential hypertension, genetic' SubClassOf 'genetic hypertension'
-+ 'essential hypertension, genetic' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009925
-Label(s): autosomal recessive inherited pseudoxanthoma elasticum 
-- 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'genetic hypertension'
-- 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'familial restrictive cardiomyopathy'
-- 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'developmental defect during embryogenesis'
-- 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'eye disease'
-+ 'autosomal recessive inherited pseudoxanthoma elasticum' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011303
-Label(s): focal segmental glomerulosclerosis 1 
-- 'focal segmental glomerulosclerosis 1' SubClassOf 'focal segmental glomerulosclerosis'
-+ 'focal segmental glomerulosclerosis 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0005363
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011309
-Label(s): familial gestational hyperthyroidism 
-- 'familial gestational hyperthyroidism' SubClassOf 'hypertension, pregnancy-induced'
-- 'familial gestational hyperthyroidism' SubClassOf 'genetic hypertension'
-+ 'familial gestational hyperthyroidism' SubClassOf 'bearer_of' some 'rare'
-+ 'familial gestational hyperthyroidism' SubClassOf 'pregnancy disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011382
-Label(s): sickle cell anemia 
-- 'sickle cell anemia' SubClassOf 'inherited kidney disorder'
-- 'sickle cell anemia' SubClassOf 'secondary avascular necrosis'
-- 'sickle cell anemia' SubClassOf 'congenital hypogonadotropic hypogonadism'
-- 'sickle cell anemia' SubClassOf 'avascular necrosis of genetic origin'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011399
-Label(s): alpha thalassemia 
-- 'alpha thalassemia' SubClassOf 'inherited kidney disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003063
-Label(s): polymyositis 
-- 'polymyositis' SubClassOf 'secondary glomerular disease'
-- 'polymyositis' SubClassOf 'acquired idiopathic inflammatory myopathy'
-+ 'polymyositis' SubClassOf 'kidney disease'
-+ 'polymyositis' SubClassOf 'acquired idiopathic inflammatory myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011517
-Label(s): pseudohyperaldosteronism type 2 
-- 'pseudohyperaldosteronism type 2' SubClassOf 'hypertension, pregnancy-induced'
-- 'pseudohyperaldosteronism type 2' SubClassOf 'genetic hypertension'
-+ 'pseudohyperaldosteronism type 2' SubClassOf 'bearer_of' some 'rare'
-+ 'pseudohyperaldosteronism type 2' SubClassOf 'pregnancy disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013276
-Label(s): Reynolds syndrome 
-- 'Reynolds syndrome' SubClassOf 'secondary glomerular disease'
-+ 'Reynolds syndrome' SubClassOf 'type II hypersensitivity reaction disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013291
-Label(s): glycogen storage disease XV 
-- 'glycogen storage disease XV' SubClassOf 'disorder of glycogen metabolism'
-+ 'glycogen storage disease XV' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100314
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100167
-Label(s): pulmonary disease, chronic obstructive, susceptibility to 
-- 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'predisposes towards' some 'chronic obstructive pulmonary disease'
-- 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007211
-Label(s): brachydactyly-arterial hypertension syndrome 
-- 'brachydactyly-arterial hypertension syndrome' SubClassOf 'genetic hypertension'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013458
-Label(s): hyperuricemia-pulmonary hypertension-renal failure-alkalosis syndrome 
-- 'hyperuricemia-pulmonary hypertension-renal failure-alkalosis syndrome' SubClassOf 'genetic hypertension'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0032937
-Label(s): myopathy, congenital proximal, with minicore lesions 
-- 'myopathy, congenital proximal, with minicore lesions' SubClassOf 'genetic disorder'
-+ 'myopathy, congenital proximal, with minicore lesions' SubClassOf 'congenital myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007099
-Label(s): familial visceral amyloidosis 
-- 'familial visceral amyloidosis' SubClassOf 'secondary glomerular disease'
-- 'familial visceral amyloidosis' SubClassOf 'inherited kidney disorder'
-+ 'familial visceral amyloidosis' SubClassOf 'bearer_of' some 'rare'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007080
-Label(s): glucocorticoid-remediable aldosteronism 
-- 'glucocorticoid-remediable aldosteronism' SubClassOf 'genetic hypertension'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018975
-Label(s): neurofibromatosis type 1 
-- 'neurofibromatosis type 1' SubClassOf 'eye disease'
-- 'neurofibromatosis type 1' SubClassOf 'neurovascular disorder'
-- 'neurofibromatosis type 1' SubClassOf 'genetic hypertension'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018965
-Label(s): Alport syndrome 
-- 'Alport syndrome' SubClassOf 'lens shape anomaly'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017148
-Label(s): heritable pulmonary arterial hypertension 
-- 'heritable pulmonary arterial hypertension' SubClassOf 'genetic hypertension'
-+ 'heritable pulmonary arterial hypertension' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020121
-Label(s): muscular dystrophy 
-- 'muscular dystrophy' SubClassOf 'pulmonary disease, chronic obstructive, susceptibility to'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000959
-Label(s): malignant hypertensive renal disease 
-- 'malignant hypertensive renal disease' SubClassOf 'genetic hypertension'
+Class: http://purl.obolibrary.org/obo/MONDO_0016779
+Label(s): multiple congenital anomalies due to 14q32.2 maternally expressed gene defect 
++ 'multiple congenital anomalies due to 14q32.2 maternally expressed gene defect' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100499
+
+Class: http://purl.obolibrary.org/obo/CL_0000398
+Label(s): polygonal cell 
+- 'polygonal cell' SubClassOf 'hemocyte (sensu Arthropoda)'
++ 'polygonal cell' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018197
+Label(s): mitochondrial DNA depletion syndrome, hepatocerebrorenal form 
+- 'mitochondrial DNA depletion syndrome, hepatocerebrorenal form' SubClassOf 'mitochondrial DNA depletion syndrome'
++ 'mitochondrial DNA depletion syndrome, hepatocerebrorenal form' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100512
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012933
+Label(s): breast-ovarian cancer, familial, susceptibility to, 2 
+- 'breast-ovarian cancer, familial, susceptibility to, 2' SubClassOf 'hereditary breast ovarian cancer syndrome'
++ 'breast-ovarian cancer, familial, susceptibility to, 2' SubClassOf 'inherited disease susceptibility'
++ 'breast-ovarian cancer, familial, susceptibility to, 2' SubClassOf 'predisposes towards' some 'hereditary breast ovarian cancer syndrome'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008571
+Label(s): viral conjunctivitis 
+- 'viral conjunctivitis' SubClassOf 'eye infectious disorder'
++ 'viral conjunctivitis' SubClassOf 'viral eye infection'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014368
+Label(s): melanoma, cutaneous malignant, susceptibility to, 10 
+- 'melanoma, cutaneous malignant, susceptibility to, 10' SubClassOf 'familial melanoma'
+- 'melanoma, cutaneous malignant, susceptibility to, 10' SubClassOf 'familial cutaneous melanoma'
++ 'melanoma, cutaneous malignant, susceptibility to, 10' SubClassOf 'predisposes towards' some 'cutaneous melanoma'
++ 'melanoma, cutaneous malignant, susceptibility to, 10' SubClassOf 'inherited disease susceptibility'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016003
+Label(s): ehrlichiosis 
+- 'ehrlichiosis' SubClassOf 'primary bacterial infectious disease'
+- 'ehrlichiosis' SubClassOf 'tick-borne infectious disease'
+- 'ehrlichiosis' SubClassOf 'primary Anaplasmataceae infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010940
+Label(s): inherited susceptibility to asthma 
+- 'inherited susceptibility to asthma' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/HP_0031456
+Label(s): Ectopic pregnancy 
+- 'Ectopic pregnancy' SubClassOf 'Abnormality of prenatal development or birth'
++ 'Ectopic pregnancy' SubClassOf 'clinical history'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010897
+Label(s): mesothelial cell of small intestine 
+- 'mesothelial cell of small intestine' SubClassOf 'mesothelial cell'
+- 'mesothelial cell of small intestine' SubClassOf 'intestinal epithelial cell'
+- 'mesothelial cell of small intestine' EquivalentTo 'mesothelial cell' and ('part_of' some 'small intestine')
++ 'mesothelial cell of small intestine' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006390
+Label(s): DMS 454 
+- 'DMS 454' SubClassOf 'derives_from' some 
+('polygonal cell' and ('part_of' some 
+('lung' and ('part_of' some 'Homo sapiens'))))
++ 'DMS 454' SubClassOf 'derives_from' some 
+('prohemocyte (sensu Nematoda and Protostomia)' and ('part_of' some 
+('lung' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006385
+Label(s): COV504 
+- 'COV504' SubClassOf 'derives_from' some 
+('polygonal cell' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
++ 'COV504' SubClassOf 'derives_from' some 
+('prohemocyte (sensu Nematoda and Protostomia)' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006384
+Label(s): COV434 
+- 'COV434' SubClassOf 'derives_from' some 
+('polygonal cell' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
++ 'COV434' SubClassOf 'derives_from' some 
+('prohemocyte (sensu Nematoda and Protostomia)' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006382
+Label(s): COV318 
+- 'COV318' SubClassOf 'derives_from' some 
+('polygonal cell' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
++ 'COV318' SubClassOf 'derives_from' some 
+('prohemocyte (sensu Nematoda and Protostomia)' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002352
+Label(s): atrioventricular node 
+- 'atrioventricular node' SubClassOf 'part_of' some 'heart'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002350
+Label(s): conducting system of heart 
+- 'conducting system of heart' SubClassOf 'part_of' some 'heart'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025484
+Label(s): simian acquired immunodeficiency syndrome 
+- 'simian acquired immunodeficiency syndrome' SubClassOf 'disease arises from feature' some 'simian immunodeficiency virus infection'
+- 'simian acquired immunodeficiency syndrome' SubClassOf 'immune system disorder, non-human animal'
+- 'simian acquired immunodeficiency syndrome' EquivalentTo 'immune system disorder, non-human animal' and ('disease arises from feature' some 'simian immunodeficiency virus infection')
+- 'simian acquired immunodeficiency syndrome' SubClassOf 'post-viral disorder'
+- 'simian acquired immunodeficiency syndrome' SubClassOf 'monkey disease'
+- 'simian acquired immunodeficiency syndrome' SubClassOf 'cross-species analog' some 'acquired immunodeficiency'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025013
+Label(s): non-human primate disease 
+- 'non-human primate disease' SubClassOf 'animal disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008758
+Label(s): mitochondrial DNA depletion syndrome 4a 
+- 'mitochondrial DNA depletion syndrome 4a' SubClassOf 'mitochondrial DNA depletion syndrome'
++ 'mitochondrial DNA depletion syndrome 4a' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100512
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025371
+Label(s): Parvoviridae infectious disease 
+- 'Parvoviridae infectious disease' SubClassOf 'infectious disease'
++ 'Parvoviridae infectious disease' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010060
+Label(s): infantile onset spinocerebellar ataxia 
+- 'infantile onset spinocerebellar ataxia' SubClassOf 'mitochondrial DNA depletion syndrome'
++ 'infantile onset spinocerebellar ataxia' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100512
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025270
+Label(s): toxoplasmosis, non-human animal 
+- 'toxoplasmosis, non-human animal' SubClassOf 'cross-species analog' some 'toxoplasmosis'
+- 'toxoplasmosis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'toxoplasmosis')
+- 'toxoplasmosis, non-human animal' SubClassOf 'protozoan infections, animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700209
+Label(s): Strongylida infectious disease, non-human animal 
+- 'Strongylida infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Strongylida infectious disease'
+- 'Strongylida infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Strongylida infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700208
+Label(s): Caliciviridae infectious disease, non-human animal 
+- 'Caliciviridae infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
+- 'Caliciviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Caliciviridae infectious disease'
+- 'Caliciviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Caliciviridae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700202
+Label(s): Bunyaviridae infectious disease, non-human animal 
+- 'Bunyaviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Bunyaviridae infectious disease'
+- 'Bunyaviridae infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
+- 'Bunyaviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Bunyaviridae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700201
+Label(s): tick-borne infectious disease, non-human animal 
+- 'tick-borne infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'tick-borne infectious disease')
+- 'tick-borne infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'tick-borne infectious disease'
+- 'tick-borne infectious disease, non-human animal' SubClassOf 'vector-borne disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025149
+Label(s): encephalopathy, bovine spongiform 
+- 'encephalopathy, bovine spongiform' SubClassOf 'cross-species analog' some 'variant Creutzfeldt-Jakob disease'
+- 'encephalopathy, bovine spongiform' EquivalentTo 'animal disease' and ('cross-species analog' some 'variant Creutzfeldt-Jakob disease')
+- 'encephalopathy, bovine spongiform' SubClassOf 'disease shares features of' some 'variant Creutzfeldt-Jakob disease'
+- 'encephalopathy, bovine spongiform' SubClassOf 'cattle disease'
+- 'encephalopathy, bovine spongiform' SubClassOf 'prion disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/HP_0012227
+Label(s): Urethral stricture 
+- 'Urethral stricture' SubClassOf 'Abnormality of the genital system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025114
+Label(s): protozoan infections, animal 
+- 'protozoan infections, animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'protozoa infectious disease')
+- 'protozoan infections, animal' SubClassOf 'parasitic disease, non-human animal'
+- 'protozoan infections, animal' SubClassOf 'cross-species analog' some 'protozoa infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700109
+Label(s): skin disease caused by bacterial infection, non-human animal 
+- 'skin disease caused by bacterial infection, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'skin disease caused by bacterial infection')
+- 'skin disease caused by bacterial infection, non-human animal' SubClassOf 'cross-species analog' some 'skin disease caused by bacterial infection'
+- 'skin disease caused by bacterial infection, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700108
+Label(s): prion disease, non-human animal 
+- 'prion disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'prion disease')
+- 'prion disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
+- 'prion disease, non-human animal' SubClassOf 'cross-species analog' some 'prion disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700105
+Label(s): difference of sexual differentiation, non-human animal 
+- 'difference of sexual differentiation, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'disorder of sexual differentiation')
+- 'difference of sexual differentiation, non-human animal' SubClassOf 'cross-species analog' some 'disorder of sexual differentiation'
+- 'difference of sexual differentiation, non-human animal' SubClassOf 'cross-species analog' some 'difference of sexual differentiation, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700102
+Label(s): lymphoma, non-human animal 
+- 'lymphoma, non-human animal' SubClassOf 'cross-species analog' some 'lymphoma'
+- 'lymphoma, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'lymphoma')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025102
+Label(s): monkey disease 
+- 'monkey disease' SubClassOf 'non-human primate disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700099
+Label(s): adenocarcinoma, non-human animal 
+- 'adenocarcinoma, non-human animal' SubClassOf 'carcinoma, non-human animal'
+- 'adenocarcinoma, non-human animal' SubClassOf 'cross-species analog' some 'adenocarcinoma'
+- 'adenocarcinoma, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'adenocarcinoma')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700095
+Label(s): Reoviridae infectious disease, non-human animal 
+- 'Reoviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Reoviridae infectious disease'
+- 'Reoviridae infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
+- 'Reoviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Reoviridae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025085
+Label(s): hepatitis, viral, animal 
+- 'hepatitis, viral, animal' SubClassOf 'hepatitis, non-human animal'
+- 'hepatitis, viral, animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'viral human hepatitis infection')
+- 'hepatitis, viral, animal' SubClassOf 'cross-species analog' some 'viral human hepatitis infection'
+- 'hepatitis, viral, animal' SubClassOf 'viral infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025082
+Label(s): helminthiasis, animal 
+- 'helminthiasis, animal' SubClassOf 'cross-species analog' some 'Helminthiasis'
+- 'helminthiasis, animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Helminthiasis')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700059
+Label(s): Actinobacillus infectious disease, non-human animal 
+- 'Actinobacillus infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Actinobacillus infectious disease')
+- 'Actinobacillus infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Actinobacillus infectious disease'
+- 'Actinobacillus infectious disease, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700056
+Label(s): fungal infectious disease, non-human animal 
+- 'fungal infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'fungal infectious disease'
+- 'fungal infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'fungal infectious disease')
+- 'fungal infectious disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700050
+Label(s): bacterial infectious disease, non-human animal 
+- 'bacterial infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'bacterial disease')
+- 'bacterial infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'bacterial disease'
+- 'bacterial infectious disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700049
+Label(s): infectious disease, non-human animal 
+- 'infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'infectious disease'
+- 'infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025028
+Label(s): vesicular stomatitis 
+- 'vesicular stomatitis' EquivalentTo 'animal disease' and ('cross-species analog' some 'stomatitis')
+- 'vesicular stomatitis' SubClassOf 'Rhabdoviridae infectious disease, non-human animal'
+- 'vesicular stomatitis' SubClassOf 'cross-species analog' some 'stomatitis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021673
+Label(s): post-bacterial disorder 
+- 'post-bacterial disorder' EquivalentTo 'disease' and ('disease arises from feature' some 'bacterial disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021669
+Label(s): post-infectious disorder 
+- 'post-infectious disorder' EquivalentTo 'disease' and ('disease arises from feature' some 'infectious disease')
+- 'post-infectious disorder' SubClassOf 'infectious disease or post-infectious disorder'
++ 'post-infectious disorder' SubClassOf 'disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012183
+Label(s): melanoma, cutaneous malignant, susceptibility to, 3 
+- 'melanoma, cutaneous malignant, susceptibility to, 3' SubClassOf 'familial cutaneous melanoma'
+- 'melanoma, cutaneous malignant, susceptibility to, 3' SubClassOf 'familial melanoma'
++ 'melanoma, cutaneous malignant, susceptibility to, 3' SubClassOf 'predisposes towards' some 'cutaneous melanoma'
++ 'melanoma, cutaneous malignant, susceptibility to, 3' SubClassOf 'inherited disease susceptibility'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0005741
+Label(s): infectious disease 
+- 'infectious disease' SubClassOf 'infectious disease or post-infectious disorder'
++ 'infectious disease' SubClassOf 'disease'
+
+Class: http://purl.obolibrary.org/obo/UBERON_6001791
+Label(s): insect dorsal histoblast nest abdominal 
+- 'insect dorsal histoblast nest abdominal' SubClassOf 'insect dorsal imaginal precursor'
+- 'insect dorsal histoblast nest abdominal' SubClassOf 'embryonic structure'
+- 'insect dorsal histoblast nest abdominal' SubClassOf 'part_of' some 'pupa'
+- 'insect dorsal histoblast nest abdominal' SubClassOf 'part_of' some 'late embryo'
++ 'insect dorsal histoblast nest abdominal' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/HP_0100601
+Label(s): Eclampsia 
+- 'Eclampsia' SubClassOf 'Abnormality of prenatal development or birth'
++ 'Eclampsia' SubClassOf 'clinical history'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700098
+Label(s): neoplasm, non-human animal 
+- 'neoplasm, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'neoplasm')
+- 'neoplasm, non-human animal' SubClassOf 'cross-species analog' some 'neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000763
+Label(s): viral disease 
+- 'viral disease' SubClassOf 'viral disease or post-viral disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000777
+Label(s): human granulocytic anaplasmosis 
+- 'human granulocytic anaplasmosis' SubClassOf 'ehrlichiosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018087
+Label(s): viral hemorrhagic fever 
++ 'viral hemorrhagic fever' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700100
+Label(s): leukemia, non-human animal 
+- 'leukemia, non-human animal' SubClassOf 'immune system disorder, non-human animal'
+- 'leukemia, non-human animal' SubClassOf 'neoplasm, non-human animal'
+- 'leukemia, non-human animal' SubClassOf 'cross-species analog' some 'leukemia'
+- 'leukemia, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'leukemia')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700101
+Label(s): carcinoma, non-human animal 
+- 'carcinoma, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'carcinoma')
+- 'carcinoma, non-human animal' SubClassOf 'cross-species analog' some 'carcinoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700103
+Label(s): nutritional deficiency disease, non-human animal 
+- 'nutritional deficiency disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'nutritional deficiency disease')
+- 'nutritional deficiency disease, non-human animal' SubClassOf 'animal disease'
+- 'nutritional deficiency disease, non-human animal' SubClassOf 'cross-species analog' some 'nutritional deficiency disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700104
+Label(s): respiratory system disorder, non-human animal 
+- 'respiratory system disorder, non-human animal' SubClassOf 'cross-species analog' some 'respiratory system disease'
+- 'respiratory system disorder, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'respiratory system disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700110
+Label(s): pneumonia, non-human animal 
+- 'pneumonia, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'pneumonia')
+- 'pneumonia, non-human animal' SubClassOf 'infectious disease, non-human animal'
+- 'pneumonia, non-human animal' SubClassOf 'cross-species analog' some 'pneumonia'
+- 'pneumonia, non-human animal' SubClassOf 'respiratory system disorder, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700111
+Label(s): bacterial pneumonia, non-human animal 
+- 'bacterial pneumonia, non-human animal' SubClassOf 'cross-species analog' some 'bacterial pneumonia'
+- 'bacterial pneumonia, non-human animal' SubClassOf 'pneumonia, non-human animal'
+- 'bacterial pneumonia, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'bacterial pneumonia')
+- 'bacterial pneumonia, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700113
+Label(s): Anaplasmataceae infectious disease, non-human animal 
+- 'Anaplasmataceae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'primary Anaplasmataceae infectious disease'
+- 'Anaplasmataceae infectious disease, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+- 'Anaplasmataceae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'primary Anaplasmataceae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700131
+Label(s): sarcoma, non-human animal 
+- 'sarcoma, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'sarcoma')
+- 'sarcoma, non-human animal' SubClassOf 'cross-species analog' some 'sarcoma'
+- 'sarcoma, non-human animal' SubClassOf 'neoplasm, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700203
+Label(s): pestivirus infectious disease, non-human animal 
+- 'pestivirus infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Pestivirus infectious disease')
+- 'pestivirus infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Pestivirus infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700206
+Label(s): Parvoviridae infectious disease, non-human animal 
+- 'Parvoviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Parvoviridae infectious disease'
+- 'Parvoviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Parvoviridae infectious disease')
+- 'Parvoviridae infectious disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700212
+Label(s): tuberculosis, non-human animal 
+- 'tuberculosis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'tuberculosis')
+- 'tuberculosis, non-human animal' SubClassOf 'cross-species analog' some 'tuberculosis'
+- 'tuberculosis, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700213
+Label(s): trypanosomiasis, non-human animal 
+- 'trypanosomiasis, non-human animal' SubClassOf 'cross-species analog' some 'trypanosomiasis'
+- 'trypanosomiasis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'trypanosomiasis')
+- 'trypanosomiasis, non-human animal' SubClassOf 'protozoan infections, animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700214
+Label(s): Herpesviridae infectious disease, non-human animal 
+- 'Herpesviridae infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
+- 'Herpesviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Herpesviridae infectious disease'
+- 'Herpesviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Herpesviridae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0032677
+Label(s): lissencephaly 9 with complex brainstem malformation 
+- 'lissencephaly 9 with complex brainstem malformation' SubClassOf 'lissencephaly spectrum disorders'
++ 'lissencephaly 9 with complex brainstem malformation' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100472
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700072
+Label(s): Rhabdoviridae infectious disease, non-human animal 
+- 'Rhabdoviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Rhabdoviridae infectious disease'
+- 'Rhabdoviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Rhabdoviridae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/CL_0000385
+Label(s): prohemocyte (sensu Nematoda and Protostomia) 
+- 'prohemocyte (sensu Nematoda and Protostomia)' SubClassOf 'blood cell (sensu Nematoda and Protostomia)'
++ 'prohemocyte (sensu Nematoda and Protostomia)' SubClassOf 'hematopoietic cell'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006383
+Label(s): COV362 
+- 'COV362' SubClassOf 'derives_from' some 
+('polygonal cell' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
++ 'COV362' SubClassOf 'derives_from' some 
+('prohemocyte (sensu Nematoda and Protostomia)' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0006386
+Label(s): COV644 
+- 'COV644' SubClassOf 'derives_from' some 
+('polygonal cell' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
++ 'COV644' SubClassOf 'derives_from' some 
+('prohemocyte (sensu Nematoda and Protostomia)' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens'))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000693
+Label(s): erythema infectiosum 
+- 'erythema infectiosum' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011450
+Label(s): breast-ovarian cancer, familial, susceptibility to, 1 
+- 'breast-ovarian cancer, familial, susceptibility to, 1' SubClassOf 'hereditary breast ovarian cancer syndrome'
++ 'breast-ovarian cancer, familial, susceptibility to, 1' SubClassOf 'inherited disease susceptibility'
++ 'breast-ovarian cancer, familial, susceptibility to, 1' SubClassOf 'predisposes towards' some 'hereditary breast ovarian cancer syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700211
+Label(s): Erysipelothrix infectious disease, non-human animal 
+- 'Erysipelothrix infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Erysipelothrix infectious disease'
+- 'Erysipelothrix infectious disease, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+- 'Erysipelothrix infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Erysipelothrix infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700106
+Label(s): immune system disorder, non-human animal 
+- 'immune system disorder, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'immune system disease')
+- 'immune system disorder, non-human animal' SubClassOf 'animal disease'
+- 'immune system disorder, non-human animal' SubClassOf 'cross-species analog' some 'immune system disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000071
+Label(s): Adenoid Cystic Breast Carcinoma 
+- 'Adenoid Cystic Breast Carcinoma' SubClassOf 'bearer_of' some 'rare'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700205
+Label(s): ehrlichiosis, non-human animal 
+- 'ehrlichiosis, non-human animal' SubClassOf 'Anaplasmataceae infectious disease, non-human animal'
+- 'ehrlichiosis, non-human animal' SubClassOf 'tick-borne infectious disease, non-human animal'
+- 'ehrlichiosis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'ehrlichiosis')
+- 'ehrlichiosis, non-human animal' SubClassOf 'cross-species analog' some 'ehrlichiosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100320
+Label(s): post-COVID-19 disorder 
+- 'post-COVID-19 disorder' EquivalentTo 'disease' and ('disease arises from feature' some 'COVID-19')
+- 'post-COVID-19 disorder' SubClassOf 'SARS-CoV-2-related disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700053
+Label(s): viral infectious disease, non-human animal 
+- 'viral infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'viral disease')
+- 'viral infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700133
+Label(s): adenoma, non-human 
+- 'adenoma, non-human' SubClassOf 'neoplasm, non-human animal'
+- 'adenoma, non-human' SubClassOf 'cross-species analog' some 'adenoma'
+- 'adenoma, non-human' EquivalentTo 'animal disease' and ('cross-species analog' some 'adenoma')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024969
+Label(s): parasitic disease, non-human animal 
+- 'parasitic disease, non-human animal' SubClassOf 'cross-species analog' some 'parasitic infection'
+- 'parasitic disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'parasitic infection')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024945
+Label(s): hepatitis, non-human animal 
+- 'hepatitis, non-human animal' SubClassOf 'animal disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007299
+Label(s): hemorrhagic fever with renal syndrome 
+- 'hemorrhagic fever with renal syndrome' SubClassOf 'viral disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007131
+Label(s): acute hemorrhagic conjunctivitis 
+- 'acute hemorrhagic conjunctivitis' SubClassOf 'viral eye infection'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009636
+Label(s): mitochondrial DNA depletion syndrome 3 
+- 'mitochondrial DNA depletion syndrome 3' SubClassOf 'mitochondrial DNA depletion syndrome'
++ 'mitochondrial DNA depletion syndrome 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100512
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007964
+Label(s): melanoma, cutaneous malignant, susceptibility to, 2 
+- 'melanoma, cutaneous malignant, susceptibility to, 2' SubClassOf 'familial cutaneous melanoma'
+- 'melanoma, cutaneous malignant, susceptibility to, 2' SubClassOf 'autosomal dominant disease'
+- 'melanoma, cutaneous malignant, susceptibility to, 2' SubClassOf 'familial melanoma'
++ 'melanoma, cutaneous malignant, susceptibility to, 2' SubClassOf 'inherited disease susceptibility'
++ 'melanoma, cutaneous malignant, susceptibility to, 2' SubClassOf 'predisposes towards' some 'cutaneous melanoma'
+
+Class: http://purl.obolibrary.org/obo/CL_0000387
+Label(s): hemocyte (sensu Arthropoda) 
+- 'hemocyte (sensu Arthropoda)' SubClassOf 'hematopoietic cell'
++ 'hemocyte (sensu Arthropoda)' SubClassOf 'blood cell (sensu Nematoda and Protostomia)'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100318
+Label(s): SARS-CoV-2-related disease 
+- 'SARS-CoV-2-related disease' EquivalentTo 'COVID-19' or 'post-COVID-19 disorder'
+- 'SARS-CoV-2-related disease' SubClassOf 'viral disease or post-viral disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100336
+Label(s): infectious disease or post-infectious disorder 
+- 'infectious disease or post-infectious disorder' EquivalentTo 'post-infectious disorder' or 'infectious disease'
+- 'infectious disease or post-infectious disorder' SubClassOf 'disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010894
+Label(s): stromal cell of lamina propria of large intestine 
+- 'stromal cell of lamina propria of large intestine' SubClassOf 'stromal cell'
+- 'stromal cell of lamina propria of large intestine' EquivalentTo 'stromal cell' and ('part_of' some 'lamina propria of large intestine')
++ 'stromal cell of lamina propria of large intestine' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010895
+Label(s): stromal cell of lamina propria of small intestine 
+- 'stromal cell of lamina propria of small intestine' EquivalentTo 'stromal cell' and ('part_of' some 'lamina propria of small intestine')
+- 'stromal cell of lamina propria of small intestine' SubClassOf 'stromal cell'
++ 'stromal cell of lamina propria of small intestine' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009747
+Label(s): Navajo neurohepatopathy 
+- 'Navajo neurohepatopathy' SubClassOf 'mitochondrial DNA depletion syndrome'
++ 'Navajo neurohepatopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100512
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024462
+Label(s): familial cutaneous melanoma 
+- 'familial cutaneous melanoma' EquivalentTo 'inherited disease susceptibility' and ('predisposes towards' some 'cutaneous melanoma')
+- 'familial cutaneous melanoma' SubClassOf 'predisposes towards' some 'cutaneous melanoma'
+- 'familial cutaneous melanoma' SubClassOf 'inherited disease susceptibility'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024318
+Label(s): viral infection of central nervous system 
++ 'viral infection of central nervous system' SubClassOf 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700114
+Label(s): vector-borne disease, non-human animal 
+- 'vector-borne disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'vector-borne disease')
+- 'vector-borne disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
+- 'vector-borne disease, non-human animal' SubClassOf 'cross-species analog' some 'vector-borne disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700132
+Label(s): melanoma, non-human animal 
+- 'melanoma, non-human animal' SubClassOf 'cross-species analog' some 'melanoma'
+- 'melanoma, non-human animal' SubClassOf 'neoplasm, non-human animal'
+- 'melanoma, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'melanoma')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024965
+Label(s): muscular dystrophy, non-human animal 
+- 'muscular dystrophy, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'muscular dystrophy')
+- 'muscular dystrophy, non-human animal' SubClassOf 'animal disease'
+- 'muscular dystrophy, non-human animal' SubClassOf 'cross-species analog' some 'muscular dystrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024982
+Label(s): salmonella infections, animal 
+- 'salmonella infections, animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'salmonellosis')
+- 'salmonella infections, animal' SubClassOf 'cross-species analog' some 'salmonellosis'
+- 'salmonella infections, animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700210
+Label(s): enterovirus infectious disease, non-human animal 
+- 'enterovirus infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Enterovirus infectious disease')
+- 'enterovirus infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
+- 'enterovirus infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Enterovirus infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007471
+Label(s): Doyne honeycomb retinal dystrophy 
+- 'Doyne honeycomb retinal dystrophy' SubClassOf 'disease predisposing to age-related macular degeneration'
+
+Class: http://purl.obolibrary.org/obo/HP_0009800
+Label(s): Maternal diabetes 
+- 'Maternal diabetes' SubClassOf 'Abnormality of prenatal development or birth'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100096
+Label(s): COVID-19 
+- 'COVID-19' SubClassOf 'SARS-CoV-2-related disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100321
+Label(s): viral disease or post-viral disorder 
+- 'viral disease or post-viral disorder' SubClassOf 'infectious disease or post-infectious disorder'
+- 'viral disease or post-viral disorder' EquivalentTo 'post-viral disorder' or 'viral disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021674
+Label(s): post-viral disorder 
+- 'post-viral disorder' EquivalentTo 'disease' and ('disease arises from feature' some 'viral disease')
+- 'post-viral disorder' SubClassOf 'viral disease or post-viral disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700204
+Label(s): trichostrongyloidiasis, non-human animal 
+- 'trichostrongyloidiasis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'trichostrongyloidiasis')
+- 'trichostrongyloidiasis, non-human animal' SubClassOf 'cross-species analog' some 'trichostrongyloidiasis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020245
+Label(s): disease predisposing to age-related macular degeneration 
+- 'disease predisposing to age-related macular degeneration' SubClassOf 'disease has feature' some 'age-related macular degeneration'
+- 'disease predisposing to age-related macular degeneration' SubClassOf 'inherited vitreous-retinal disease'
++ 'disease predisposing to age-related macular degeneration' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013759
+Label(s): melanoma, cutaneous malignant, susceptibility to, 8 
+- 'melanoma, cutaneous malignant, susceptibility to, 8' SubClassOf 'familial cutaneous melanoma'
+- 'melanoma, cutaneous malignant, susceptibility to, 8' SubClassOf 'hereditary neoplastic syndrome'
++ 'melanoma, cutaneous malignant, susceptibility to, 8' SubClassOf 'predisposes towards' some 'cutaneous melanoma'
++ 'melanoma, cutaneous malignant, susceptibility to, 8' SubClassOf 'inherited disease susceptibility'
 
 ----------------------------------
 
@@ -537,36 +1404,264 @@ Label(s): malignant hypertensive renal disease
 
 @Classes deleted from this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0025481
-Label(s): zoonosis 
-+ 'zoonosis' SubClassOf 'infectious disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0016003
+Label(s): ehrlichiosis 
++ 'ehrlichiosis' SubClassOf 'primary bacterial infectious disease'
++ 'ehrlichiosis' SubClassOf 'tick-borne infectious disease'
++ 'ehrlichiosis' SubClassOf 'primary Anaplasmataceae infectious disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0044746
-Label(s): zoonotic bacterial infection 
-+ 'zoonotic bacterial infection' SubClassOf 'bacterial disease'
-+ 'zoonotic bacterial infection' SubClassOf 'zoonosis'
+Class: http://purl.obolibrary.org/obo/MONDO_0025484
+Label(s): simian acquired immunodeficiency syndrome 
++ 'simian acquired immunodeficiency syndrome' SubClassOf 'disease arises from feature' some 'simian immunodeficiency virus infection'
++ 'simian acquired immunodeficiency syndrome' SubClassOf 'immune system disorder, non-human animal'
++ 'simian acquired immunodeficiency syndrome' EquivalentTo 'immune system disorder, non-human animal' and ('disease arises from feature' some 'simian immunodeficiency virus infection')
++ 'simian acquired immunodeficiency syndrome' SubClassOf 'post-viral disorder'
++ 'simian acquired immunodeficiency syndrome' SubClassOf 'monkey disease'
++ 'simian acquired immunodeficiency syndrome' SubClassOf 'cross-species analog' some 'acquired immunodeficiency'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0019724
-Label(s): secondary glomerular disease 
-+ 'secondary glomerular disease' SubClassOf 'glomerular disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0025013
+Label(s): non-human primate disease 
++ 'non-human primate disease' SubClassOf 'animal disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0030701
-Label(s): autoimmune cardiomyopathy 
-+ 'autoimmune cardiomyopathy' SubClassOf 'cardiomyopathy'
-+ 'autoimmune cardiomyopathy' SubClassOf 'autoimmune disorder of musculoskeletal system'
-+ 'autoimmune cardiomyopathy' SubClassOf 'autoimmune disorder of cardiovascular system'
+Class: http://purl.obolibrary.org/obo/MONDO_0025270
+Label(s): toxoplasmosis, non-human animal 
++ 'toxoplasmosis, non-human animal' SubClassOf 'cross-species analog' some 'toxoplasmosis'
++ 'toxoplasmosis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'toxoplasmosis')
++ 'toxoplasmosis, non-human animal' SubClassOf 'protozoan infections, animal'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0007788
-Label(s): hypertriglyceridemia, familial 
-+ 'hypertriglyceridemia, familial' SubClassOf 'major hypertriglyceridemia'
-+ 'hypertriglyceridemia, familial' SubClassOf 'familial hyperlipidemia'
-+ 'hypertriglyceridemia, familial' EquivalentTo 'Hypertriglyceridemia' and ('bearer_of' some 'inherited')
-+ 'hypertriglyceridemia, familial' SubClassOf 'Hypertriglyceridemia'
+Class: http://purl.obolibrary.org/obo/MONDO_0700208
+Label(s): Caliciviridae infectious disease, non-human animal 
++ 'Caliciviridae infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
++ 'Caliciviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Caliciviridae infectious disease'
++ 'Caliciviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Caliciviridae infectious disease')
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100167
-Label(s): pulmonary disease, chronic obstructive, susceptibility to 
-+ 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'predisposes towards' some 'chronic obstructive pulmonary disease'
-+ 'pulmonary disease, chronic obstructive, susceptibility to' SubClassOf 'inherited disease susceptibility'
+Class: http://purl.obolibrary.org/obo/MONDO_0700202
+Label(s): Bunyaviridae infectious disease, non-human animal 
++ 'Bunyaviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Bunyaviridae infectious disease'
++ 'Bunyaviridae infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
++ 'Bunyaviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Bunyaviridae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700201
+Label(s): tick-borne infectious disease, non-human animal 
++ 'tick-borne infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'tick-borne infectious disease')
++ 'tick-borne infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'tick-borne infectious disease'
++ 'tick-borne infectious disease, non-human animal' SubClassOf 'vector-borne disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025149
+Label(s): encephalopathy, bovine spongiform 
++ 'encephalopathy, bovine spongiform' SubClassOf 'cross-species analog' some 'variant Creutzfeldt-Jakob disease'
++ 'encephalopathy, bovine spongiform' EquivalentTo 'animal disease' and ('cross-species analog' some 'variant Creutzfeldt-Jakob disease')
++ 'encephalopathy, bovine spongiform' SubClassOf 'disease shares features of' some 'variant Creutzfeldt-Jakob disease'
++ 'encephalopathy, bovine spongiform' SubClassOf 'cattle disease'
++ 'encephalopathy, bovine spongiform' SubClassOf 'prion disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025114
+Label(s): protozoan infections, animal 
++ 'protozoan infections, animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'protozoa infectious disease')
++ 'protozoan infections, animal' SubClassOf 'parasitic disease, non-human animal'
++ 'protozoan infections, animal' SubClassOf 'cross-species analog' some 'protozoa infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700109
+Label(s): skin disease caused by bacterial infection, non-human animal 
++ 'skin disease caused by bacterial infection, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'skin disease caused by bacterial infection')
++ 'skin disease caused by bacterial infection, non-human animal' SubClassOf 'cross-species analog' some 'skin disease caused by bacterial infection'
++ 'skin disease caused by bacterial infection, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700108
+Label(s): prion disease, non-human animal 
++ 'prion disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'prion disease')
++ 'prion disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
++ 'prion disease, non-human animal' SubClassOf 'cross-species analog' some 'prion disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025102
+Label(s): monkey disease 
++ 'monkey disease' SubClassOf 'non-human primate disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700099
+Label(s): adenocarcinoma, non-human animal 
++ 'adenocarcinoma, non-human animal' SubClassOf 'carcinoma, non-human animal'
++ 'adenocarcinoma, non-human animal' SubClassOf 'cross-species analog' some 'adenocarcinoma'
++ 'adenocarcinoma, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'adenocarcinoma')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700095
+Label(s): Reoviridae infectious disease, non-human animal 
++ 'Reoviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Reoviridae infectious disease'
++ 'Reoviridae infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
++ 'Reoviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Reoviridae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025085
+Label(s): hepatitis, viral, animal 
++ 'hepatitis, viral, animal' SubClassOf 'hepatitis, non-human animal'
++ 'hepatitis, viral, animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'viral human hepatitis infection')
++ 'hepatitis, viral, animal' SubClassOf 'cross-species analog' some 'viral human hepatitis infection'
++ 'hepatitis, viral, animal' SubClassOf 'viral infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700059
+Label(s): Actinobacillus infectious disease, non-human animal 
++ 'Actinobacillus infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Actinobacillus infectious disease')
++ 'Actinobacillus infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Actinobacillus infectious disease'
++ 'Actinobacillus infectious disease, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700056
+Label(s): fungal infectious disease, non-human animal 
++ 'fungal infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'fungal infectious disease'
++ 'fungal infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'fungal infectious disease')
++ 'fungal infectious disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700050
+Label(s): bacterial infectious disease, non-human animal 
++ 'bacterial infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'bacterial disease')
++ 'bacterial infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'bacterial disease'
++ 'bacterial infectious disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0025028
+Label(s): vesicular stomatitis 
++ 'vesicular stomatitis' EquivalentTo 'animal disease' and ('cross-species analog' some 'stomatitis')
++ 'vesicular stomatitis' SubClassOf 'Rhabdoviridae infectious disease, non-human animal'
++ 'vesicular stomatitis' SubClassOf 'cross-species analog' some 'stomatitis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700100
+Label(s): leukemia, non-human animal 
++ 'leukemia, non-human animal' SubClassOf 'immune system disorder, non-human animal'
++ 'leukemia, non-human animal' SubClassOf 'neoplasm, non-human animal'
++ 'leukemia, non-human animal' SubClassOf 'cross-species analog' some 'leukemia'
++ 'leukemia, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'leukemia')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700103
+Label(s): nutritional deficiency disease, non-human animal 
++ 'nutritional deficiency disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'nutritional deficiency disease')
++ 'nutritional deficiency disease, non-human animal' SubClassOf 'animal disease'
++ 'nutritional deficiency disease, non-human animal' SubClassOf 'cross-species analog' some 'nutritional deficiency disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700110
+Label(s): pneumonia, non-human animal 
++ 'pneumonia, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'pneumonia')
++ 'pneumonia, non-human animal' SubClassOf 'infectious disease, non-human animal'
++ 'pneumonia, non-human animal' SubClassOf 'cross-species analog' some 'pneumonia'
++ 'pneumonia, non-human animal' SubClassOf 'respiratory system disorder, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700111
+Label(s): bacterial pneumonia, non-human animal 
++ 'bacterial pneumonia, non-human animal' SubClassOf 'cross-species analog' some 'bacterial pneumonia'
++ 'bacterial pneumonia, non-human animal' SubClassOf 'pneumonia, non-human animal'
++ 'bacterial pneumonia, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'bacterial pneumonia')
++ 'bacterial pneumonia, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700113
+Label(s): Anaplasmataceae infectious disease, non-human animal 
++ 'Anaplasmataceae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'primary Anaplasmataceae infectious disease'
++ 'Anaplasmataceae infectious disease, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
++ 'Anaplasmataceae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'primary Anaplasmataceae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700131
+Label(s): sarcoma, non-human animal 
++ 'sarcoma, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'sarcoma')
++ 'sarcoma, non-human animal' SubClassOf 'cross-species analog' some 'sarcoma'
++ 'sarcoma, non-human animal' SubClassOf 'neoplasm, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700206
+Label(s): Parvoviridae infectious disease, non-human animal 
++ 'Parvoviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Parvoviridae infectious disease'
++ 'Parvoviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Parvoviridae infectious disease')
++ 'Parvoviridae infectious disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700212
+Label(s): tuberculosis, non-human animal 
++ 'tuberculosis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'tuberculosis')
++ 'tuberculosis, non-human animal' SubClassOf 'cross-species analog' some 'tuberculosis'
++ 'tuberculosis, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700213
+Label(s): trypanosomiasis, non-human animal 
++ 'trypanosomiasis, non-human animal' SubClassOf 'cross-species analog' some 'trypanosomiasis'
++ 'trypanosomiasis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'trypanosomiasis')
++ 'trypanosomiasis, non-human animal' SubClassOf 'protozoan infections, animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700214
+Label(s): Herpesviridae infectious disease, non-human animal 
++ 'Herpesviridae infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
++ 'Herpesviridae infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Herpesviridae infectious disease'
++ 'Herpesviridae infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Herpesviridae infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700211
+Label(s): Erysipelothrix infectious disease, non-human animal 
++ 'Erysipelothrix infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Erysipelothrix infectious disease'
++ 'Erysipelothrix infectious disease, non-human animal' SubClassOf 'bacterial infectious disease, non-human animal'
++ 'Erysipelothrix infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Erysipelothrix infectious disease')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700106
+Label(s): immune system disorder, non-human animal 
++ 'immune system disorder, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'immune system disease')
++ 'immune system disorder, non-human animal' SubClassOf 'animal disease'
++ 'immune system disorder, non-human animal' SubClassOf 'cross-species analog' some 'immune system disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700205
+Label(s): ehrlichiosis, non-human animal 
++ 'ehrlichiosis, non-human animal' SubClassOf 'Anaplasmataceae infectious disease, non-human animal'
++ 'ehrlichiosis, non-human animal' SubClassOf 'tick-borne infectious disease, non-human animal'
++ 'ehrlichiosis, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'ehrlichiosis')
++ 'ehrlichiosis, non-human animal' SubClassOf 'cross-species analog' some 'ehrlichiosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700133
+Label(s): adenoma, non-human 
++ 'adenoma, non-human' SubClassOf 'neoplasm, non-human animal'
++ 'adenoma, non-human' SubClassOf 'cross-species analog' some 'adenoma'
++ 'adenoma, non-human' EquivalentTo 'animal disease' and ('cross-species analog' some 'adenoma')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024945
+Label(s): hepatitis, non-human animal 
++ 'hepatitis, non-human animal' SubClassOf 'animal disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100318
+Label(s): SARS-CoV-2-related disease 
++ 'SARS-CoV-2-related disease' EquivalentTo 'COVID-19' or 'post-COVID-19 disorder'
++ 'SARS-CoV-2-related disease' SubClassOf 'viral disease or post-viral disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100336
+Label(s): infectious disease or post-infectious disorder 
++ 'infectious disease or post-infectious disorder' EquivalentTo 'post-infectious disorder' or 'infectious disease'
++ 'infectious disease or post-infectious disorder' SubClassOf 'disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024462
+Label(s): familial cutaneous melanoma 
++ 'familial cutaneous melanoma' EquivalentTo 'inherited disease susceptibility' and ('predisposes towards' some 'cutaneous melanoma')
++ 'familial cutaneous melanoma' SubClassOf 'predisposes towards' some 'cutaneous melanoma'
++ 'familial cutaneous melanoma' SubClassOf 'inherited disease susceptibility'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700114
+Label(s): vector-borne disease, non-human animal 
++ 'vector-borne disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'vector-borne disease')
++ 'vector-borne disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
++ 'vector-borne disease, non-human animal' SubClassOf 'cross-species analog' some 'vector-borne disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700132
+Label(s): melanoma, non-human animal 
++ 'melanoma, non-human animal' SubClassOf 'cross-species analog' some 'melanoma'
++ 'melanoma, non-human animal' SubClassOf 'neoplasm, non-human animal'
++ 'melanoma, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'melanoma')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024965
+Label(s): muscular dystrophy, non-human animal 
++ 'muscular dystrophy, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'muscular dystrophy')
++ 'muscular dystrophy, non-human animal' SubClassOf 'animal disease'
++ 'muscular dystrophy, non-human animal' SubClassOf 'cross-species analog' some 'muscular dystrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024982
+Label(s): salmonella infections, animal 
++ 'salmonella infections, animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'salmonellosis')
++ 'salmonella infections, animal' SubClassOf 'cross-species analog' some 'salmonellosis'
++ 'salmonella infections, animal' SubClassOf 'bacterial infectious disease, non-human animal'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700210
+Label(s): enterovirus infectious disease, non-human animal 
++ 'enterovirus infectious disease, non-human animal' EquivalentTo 'animal disease' and ('cross-species analog' some 'Enterovirus infectious disease')
++ 'enterovirus infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
++ 'enterovirus infectious disease, non-human animal' SubClassOf 'cross-species analog' some 'Enterovirus infectious disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100321
+Label(s): viral disease or post-viral disorder 
++ 'viral disease or post-viral disorder' SubClassOf 'infectious disease or post-infectious disorder'
++ 'viral disease or post-viral disorder' EquivalentTo 'post-viral disorder' or 'viral disease'
 
 ----------------------------------
 4. Scope of the Ontology
