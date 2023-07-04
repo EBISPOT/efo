@@ -311,7 +311,7 @@ $(BUILDDIR)/$(ONT)-base.owl: build/efo.owl
 
 # these live in the ../sparql directory, and have suffix -violation.sparql
 # adding the name here will make the violation check live
-VCHECKS = duplicate-label  nolabels multiple-label no-webulous-uris no-urigen-uris no-www-uris no-dangling id-length deprecated obsolete-replaced-whitespace
+VCHECKS = duplicate-label  nolabels multiple-label no-webulous-uris no-urigen-uris no-www-uris no-dangling id-length deprecated obsolete-replaced-whitespace wrong_efo_purl
 
 # run all violation checks
 VQUERIES = $(foreach V,$(VCHECKS),$(SPARQLDIR)/$V-violation.sparql)
