@@ -33,8 +33,8 @@ curl -L https://data.monarchinitiative.org/ttl/hpoa.ttl > mirror/hpoa.owl
 #echo "Fetching OTAR therapeutic areas..."
 #curl -L https://raw.githubusercontent.com/opentargets/platform-therapeutic-areas/master/tas.tsv | awk '{print $1}' > imports/OTAR_terms.txt
 
-#echo "Fetching HANCESTRO..."
-#curl -L https://raw.githubusercontent.com/EBISPOT/ancestro/master/src/ontology/hancestro-edit.owl > mirror/hancestro.owl
+echo "Fetching HANCESTRO..."
+curl -L https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro-base.owl > mirror/hancestro.owl
 
 echo "Fetching FBbt..."
 curl -L http://purl.obolibrary.org/obo/fbbt.owl > mirror/fbbt.owl
