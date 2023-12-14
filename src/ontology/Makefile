@@ -141,7 +141,7 @@ edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
 D2P_SOURCES=hpoa mondo-owl
 D2P_RAW=$(foreach V,$(D2P_SOURCES), components/d2p_$V.ttl)
 
-COMPONENTS=subclasses mondo_efo_import anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
+COMPONENTS=subclasses import_replaced_by mondo_efo_import anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
 COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 FOREIGN_AXIOMS=hancestro uberon
 FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
@@ -152,6 +152,9 @@ components/subclasses.owl: ../templates/subclasses.csv
 
 components/d2p_%.ttl: mirror/%.owl
 	$(ROBOT) query -f ttl -i $< --query $(SPARQLDIR)/d2p-$*.ru $@
+
+components/import_replaced_by.owl: ../templates/import_replaced_by.csv
+	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/import_replaced_by.owl" -o $@
 
 components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
 	python3 ../scripts/rename_tsv_subset.py $^ $@
