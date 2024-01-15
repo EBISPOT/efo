@@ -1503,7 +1503,6 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000125">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
         <obo:IAO_0000115>A non-neuronal cell of the nervous system. They not only provide physical support, but also respond to injury, regulate the ionic and chemical composition of the extracellular milieu. Guide neuronal migration during development, and exchange metabolites with neurons.</obo:IAO_0000115>
-        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
         <oboInOwl:hasDbXref>BTO:0002606</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>CALOHA:TS-0415</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FBbt:00005144</oboInOwl:hasDbXref>
@@ -1511,7 +1510,6 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <oboInOwl:hasExactSynonym>neuroglial cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>neuroglia</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Not all glial cells develop from glioblasts, with microglia developing from the mesoderm instead. See https://github.com/obophenotype/cell-ontology/issues/1571</rdfs:comment>
         <rdfs:label>glial cell</rdfs:label>
     </owl:Class>
@@ -6690,10 +6688,12 @@ The modern definition of neurosecretion has evolved to include the release of an
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002031"/>
         <obo:IAO_0000115>A progenitor cell restricted to the myeloid lineage.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
         <oboInOwl:hasBroadSynonym>myeloid progenitor cell</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>BTO:0004730</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>CALOHA:TS-2099</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:70339</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Note that this is a class of cell types, not an identified single cell type.</rdfs:comment>
         <rdfs:label>myeloid lineage restricted progenitor cell</rdfs:label>
     </owl:Class>
@@ -14286,7 +14286,7 @@ The modern definition of neurosecretion has evolved to include the release of an
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002363">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000057"/>
-        <obo:IAO_0000115>A keratocyte is a specialized fibroblastÂ residing in the cornea stroma that has a flattened, dendritic cell located between the lamellae with a large flattened nucleus and lengthy processes which communicate with neighboring cells. ThisÂ cornealÂ layer, representing about 85-90% of corneal thickness, is built up from highly regular collagenous lamellae and extracellular matrix components. Keratocytes play the major role in keeping it transparent, healing its wounds, and synthesizing its components. This cell type secretes collagen I, V, VI, and keratin sulfate.</obo:IAO_0000115>
+        <obo:IAO_0000115>A keratocyte is a specialized fibroblast residing in the cornea stroma that has a flattened, dendritic morphology; located between the lamellae with a large flattened nucleus, and lengthy processes which communicate with neighboring cells. This corneal layer, representing about 85-90% of corneal thickness, is built up from highly regular collagenous lamellae and extracellular matrix components. Keratocytes play the major role in keeping it transparent, healing its wounds, and synthesizing its components. This cell type secretes collagen I, V, VI, and keratan sulfate.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
         <oboInOwl:creation_date>2010-09-22T01:57:40Z</oboInOwl:creation_date>
@@ -14299,9 +14299,9 @@ The modern definition of neurosecretion has evolved to include the release of an
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002363"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A keratocyte is a specialized fibroblastÂ residing in the cornea stroma that has a flattened, dendritic cell located between the lamellae with a large flattened nucleus and lengthy processes which communicate with neighboring cells. ThisÂ cornealÂ layer, representing about 85-90% of corneal thickness, is built up from highly regular collagenous lamellae and extracellular matrix components. Keratocytes play the major role in keeping it transparent, healing its wounds, and synthesizing its components. This cell type secretes collagen I, V, VI, and keratin sulfate.</owl:annotatedTarget>
+        <owl:annotatedTarget>A keratocyte is a specialized fibroblast residing in the cornea stroma that has a flattened, dendritic morphology; located between the lamellae with a large flattened nucleus, and lengthy processes which communicate with neighboring cells. This corneal layer, representing about 85-90% of corneal thickness, is built up from highly regular collagenous lamellae and extracellular matrix components. Keratocytes play the major role in keeping it transparent, healing its wounds, and synthesizing its components. This cell type secretes collagen I, V, VI, and keratan sulfate.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:978-0-7020-2958-5</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:9780702029585</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
