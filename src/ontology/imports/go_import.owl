@@ -532,7 +532,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005575 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005575">
-        <obo:IAO_0000115>A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of  cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).</obo:IAO_0000115>
+        <obo:IAO_0000115>A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/17729</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0008372</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
@@ -553,7 +553,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of  cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).</owl:annotatedTarget>
+        <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -701,8 +701,8 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
         <rdfs:label>cytoplasm</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1101,20 +1101,22 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005844 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005844">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <obo:IAO_0000115>A multiribosomal structure representing a linear array of ribosomes held together by messenger RNA. They represent the active complexes in cellular protein synthesis and are able to incorporate amino acids into polypeptides both in vivo and in vitro.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. A multiribosomal structure representing a linear array of ribosomes held together by messenger RNA. They represent the active complexes in cellular protein synthesis and are able to incorporate amino acids into polypeptides both in vivo and in vitro.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/24651</obo:IAO_0000233>
+        <oboInOwl:consider>GO:0005840</oboInOwl:consider>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1038025871</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Polysome</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>polyribosome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005844</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <rdfs:label>polysome</rdfs:label>
+        <rdfs:comment>The reason for obsoletion is that the term is out of scope for GO.</rdfs:comment>
+        <rdfs:label>obsolete polysome</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005844"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A multiribosomal structure representing a linear array of ribosomes held together by messenger RNA. They represent the active complexes in cellular protein synthesis and are able to incorporate amino acids into polypeptides both in vivo and in vitro.</owl:annotatedTarget>
+        <owl:annotatedTarget>OBSOLETE. A multiribosomal structure representing a linear array of ribosomes held together by messenger RNA. They represent the active complexes in cellular protein synthesis and are able to incorporate amino acids into polypeptides both in vivo and in vitro.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ISBN:0198506732</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1038025871</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1144,8 +1146,8 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_mouse"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
         <rdfs:label>cytoskeleton</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1194,8 +1196,8 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_mouse"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
         <rdfs:label>plasma membrane</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1288,8 +1290,8 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
         <rdfs:label>carbohydrate metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1444,8 +1446,8 @@
         <oboInOwl:id>GO:0006486</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
         <rdfs:label>protein glycosylation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1517,8 +1519,8 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
         <rdfs:label>lipid metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1758,9 +1760,11 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006807">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving organic or inorganic compounds that contain nitrogen.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26424</obo:IAO_0000233>
         <oboInOwl:hasExactSynonym>nitrogen compound metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006807</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:label>nitrogen compound metabolic process</rdfs:label>
@@ -1795,7 +1799,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <rdfs:comment>Note that this term should not be used for direct annotation. It should be possible to make a more specific annotation to one of the children of this term, for e.g. to transmembrane transport, to microtubule-based transport or to vesicle-mediated transport.</rdfs:comment>
         <rdfs:label>transport</rdfs:label>
     </owl:Class>
@@ -2682,7 +2686,7 @@
         <oboInOwl:hasRelatedSynonym>necrosis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0008219</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
-        <rdfs:comment>This term should not be used for direct annotation, it is currently kept in GO as a placeholder for describing cell death phenotypes in uPHENO.  When information is provided on a programmed cell death mechanism, annotations should be made to the appropriate descendant of &apos;cell death&apos; (such as, but not limited to, GO:0097300 &apos;programmed necrotic cell death&apos; or GO:0006915 &apos;apoptotic process&apos;). Unintentional cell death, i.e. cell death caused by injury, ageing, or cell phenotypes observed as a result of a pathological mutation in an essential gene should NOT be annotated using GO terms.</rdfs:comment>
+        <rdfs:comment>This term should not be used for direct annotation, it is currently kept in GO as a placeholder for describing cell death phenotypes in uPHENO. When information is provided on a programmed cell death mechanism, annotations should be made to the appropriate descendant of &apos;cell death&apos; (such as, but not limited to, GO:0097300 &apos;programmed necrotic cell death&apos; or GO:0006915 &apos;apoptotic process&apos;). Unintentional cell death, i.e. cell death caused by injury, ageing, or cell phenotypes observed as a result of a pathological mutation in an essential gene should NOT be annotated using GO terms.</rdfs:comment>
         <rdfs:label>cell death</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3495,7 +3499,7 @@
         <oboInOwl:hasExactSynonym>outer membrane of cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009279</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <rdfs:comment>To annotate the plasma (cytoplasmic) membrane, see instead GO:0005886.</rdfs:comment>
         <rdfs:label>cell outer membrane</rdfs:label>
     </owl:Class>
@@ -5227,7 +5231,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <rdfs:label>extracellular matrix</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -5765,13 +5769,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0033643">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043657"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Any constituent part of a host cell. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">GO:0033643</obo:IAO_0000233>
         <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0033643</oboInOwl:id>
@@ -5864,9 +5863,11 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006807"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving various organic and inorganic nitrogenous compounds, as carried out by individual cells.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26424</obo:IAO_0000233>
         <oboInOwl:hasExactSynonym>cellular nitrogen compound metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0034641</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <rdfs:label>cellular nitrogen compound metabolic process</rdfs:label>
     </owl:Class>
@@ -6130,7 +6131,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <rdfs:label>protein modification process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7048,6 +7049,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043170">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071704"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26424</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0034960</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0043283</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044259</oboInOwl:hasAlternativeId>
@@ -7057,6 +7059,7 @@
         <oboInOwl:hasNarrowSynonym>multicellular organismal macromolecule metabolic process</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0043170</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:label>macromolecule metabolic process</rdfs:label>
     </owl:Class>
@@ -7126,7 +7129,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <rdfs:label>organelle</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7271,7 +7274,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043278">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014072"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a morphine stimulus. Morphine is an opioid alkaloid, isolated from opium, with a complex ring structure.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0043278</oboInOwl:id>
@@ -7366,7 +7368,7 @@
         <obo:IAO_0000115>The region of a bacterial cell to which the DNA is confined.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0043590</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <rdfs:label>bacterial nucleoid</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7547,9 +7549,11 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044238">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26424</obo:IAO_0000233>
         <oboInOwl:hasExactSynonym>primary metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044238</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:label>primary metabolic process</rdfs:label>
     </owl:Class>
@@ -8923,7 +8927,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_mouse"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
         <rdfs:label>response to stimulus</rdfs:label>
     </owl:Class>
@@ -9455,6 +9459,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0055062">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042592"/>
         <obo:IAO_0000115>Any process involved in the maintenance of an internal steady state of phosphate ions within an organism or cell.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26429</obo:IAO_0000233>
+        <oboInOwl:hasBroadSynonym>phosphate homeostasis</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>Pi homeostasis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0055062</oboInOwl:id>
         <rdfs:label>phosphate ion homeostasis</rdfs:label>
@@ -9528,8 +9535,8 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
         <rdfs:label>nucleobase-containing small molecule metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10129,6 +10136,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071704">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26424</obo:IAO_0000233>
         <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-08T03:32:18Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>organic molecular entity metabolic process</oboInOwl:hasExactSynonym>
@@ -10136,6 +10144,7 @@
         <oboInOwl:hasExactSynonym>organic substance metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0071704</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>organic substance metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10151,7 +10160,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071944">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <obo:IAO_0000115>The broad region around and including the plasma membrane of a cell,  encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.</obo:IAO_0000115>
+        <obo:IAO_0000115>The broad region around and including the plasma membrane of a cell, encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.</obo:IAO_0000115>
         <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-04T01:51:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -10162,7 +10171,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071944"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The broad region around and including the plasma membrane of a cell,  encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.</owl:annotatedTarget>
+        <owl:annotatedTarget>The broad region around and including the plasma membrane of a cell, encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11017,7 +11026,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_mouse"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
         <rdfs:label>carbohydrate derivative metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11367,11 +11376,13 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006807"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071704"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving organonitrogen compound.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26424</obo:IAO_0000233>
         <oboInOwl:created_by>pr</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-11-04T15:17:52Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>organonitrogen compound metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:1901564</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>organonitrogen compound metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
