@@ -25,51 +25,15 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
     
 
 
@@ -133,12 +97,6 @@
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
@@ -184,28 +142,8 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
-
-A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>part_of</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
@@ -215,10 +153,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <rdfs:label>part of</rdfs:label>
         <rdfs:label xml:lang="en">part of</rdfs:label>
         <rdfs:label>part_of</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
-        <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Part_of</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
@@ -227,12 +161,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <oboInOwl:hasDbXref>RO:0000052</oboInOwl:hasDbXref>
         <oboInOwl:id>inheres_in</oboInOwl:id>
         <oboInOwl:shorthand>inheres_in</oboInOwl:shorthand>
@@ -9062,7 +8991,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000618">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0007663"/>
-        <obo:IAO_0000115>Blindness is the condition of lacking visual perception defined as visual perception below 3/60 and/or a visual field of no greater than 10 degrees in radius around central fixation.</obo:IAO_0000115>
+        <obo:IAO_0000115>Blindness is the condition of lacking visual perception defined as a profound reduction in visual perception. On the 6m visual acuity scale, blindness is defined as less than 3/60. On the 20ft visual acuity scale, blindness is defined as less than 20/400. On the decimal visual acuity scale, blindness is defined as less than 0.05. Blindness is typically characterized by a visual field of no greater than 10 degrees in radius around central fixation.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0007839</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Fyler:4866</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MSH:D001766</oboInOwl:hasDbXref>
@@ -9080,7 +9009,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000618"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Blindness is the condition of lacking visual perception defined as visual perception below 3/60 and/or a visual field of no greater than 10 degrees in radius around central fixation.</owl:annotatedTarget>
+        <owl:annotatedTarget>Blindness is the condition of lacking visual perception defined as a profound reduction in visual perception. On the 6m visual acuity scale, blindness is defined as less than 3/60. On the 20ft visual acuity scale, blindness is defined as less than 20/400. On the decimal visual acuity scale, blindness is defined as less than 0.05. Blindness is typically characterized by a visual field of no greater than 10 degrees in radius around central fixation.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-8727-6592"/>
         <oboInOwl:hasDbXref>PMID:28779882</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -9269,6 +9198,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000649">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0012638"/>
         <obo:IAO_0000115>An anomaly of visually evoked potentials (VEP), which are electrical potentials, initiated by brief visual stimuli, which are recorded from the scalp overlying the visual cortex.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>SNOMEDCT_US:102968003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0522214</oboInOwl:hasDbXref>
@@ -10422,42 +10352,11 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <!-- http://purl.obolibrary.org/obo/HP_0000735 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000735">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
-        <obo:IAO_0000115>Difficulty interacting with others through emotional, physical, or verbal communication.</obo:IAO_0000115>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0001-5395-5036"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0001-6886-767X"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0001-8423-2623"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0001-9114-8737"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0375-6247"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-2414-5605"/>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-4487-3589"/>
-        <oboInOwl:hasDbXref>MSH:D000067404</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:88598008</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0150080</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Impaired social interaction</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Impaired social interactions</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Poor social interactions</oboInOwl:hasExactSynonym>
+        <obo:IAO_0100001>HP:0012760</obo:IAO_0100001>
         <oboInOwl:id>HP:0000735</oboInOwl:id>
-        <rdfs:label>Impaired social interactions</rdfs:label>
+        <rdfs:label>obsolete Impaired social interactions</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000735"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Impaired social interaction</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000735"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Impaired social interactions</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000735"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Poor social interactions</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
     
 
 
@@ -11920,24 +11819,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormality of the spine</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormality of the vertebral column</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Abnormality of the backbone</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any abnormality of the vertebral column.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -11953,6 +11834,24 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Abnormal vertebral column</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormality of the spine</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormality of the vertebral column</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000925"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>Abnormality of the backbone</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -14497,7 +14396,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001279">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011025"/>
-        <obo:IAO_0000115>Syncope refers to a generalized weakness of muscles with loss of postural tone, inability to stand upright, and loss of consciousness. Once the patient is in a horizontal position, blood flow to the brain is no longer hindered by gravitation and consciousness is regained. Unconsciousness usually lasts for seconds to minutes. Headache and drowsiness (which usually follow seizures) do not follow a syncopal attack. Syncope results from a sudden impairment of brain metabolism usually due to a reduction in cerebral blood flow.</obo:IAO_0000115>
+        <obo:IAO_0000115>Syncope is a syndrome in which loss of consciousness is of relatively sudden onset, temporary (usually less than 1 to 2 minutes), self-terminating, and of usually rapid recovery. Syncope leads to a generalized weakness of muscles with loss of postural tone, inability to stand upright, and loss of consciousness. Once the patient is in a horizontal position, blood flow to the brain is no longer hindered by gravitation and consciousness is regained. Unconsciousness usually lasts for seconds to minutes. Headache and drowsiness (which usually follow seizures) do not follow a syncopal attack. Syncope results from a sudden impairment of brain metabolism usually due to a reduction in cerebral blood flow.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2008-02-25T10:37:00Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>MSH:D013575</oboInOwl:hasDbXref>
@@ -14512,8 +14411,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001279"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Syncope refers to a generalized weakness of muscles with loss of postural tone, inability to stand upright, and loss of consciousness. Once the patient is in a horizontal position, blood flow to the brain is no longer hindered by gravitation and consciousness is regained. Unconsciousness usually lasts for seconds to minutes. Headache and drowsiness (which usually follow seizures) do not follow a syncopal attack. Syncope results from a sudden impairment of brain metabolism usually due to a reduction in cerebral blood flow.</owl:annotatedTarget>
+        <owl:annotatedTarget>Syncope is a syndrome in which loss of consciousness is of relatively sudden onset, temporary (usually less than 1 to 2 minutes), self-terminating, and of usually rapid recovery. Syncope leads to a generalized weakness of muscles with loss of postural tone, inability to stand upright, and loss of consciousness. Once the patient is in a horizontal position, blood flow to the brain is no longer hindered by gravitation and consciousness is regained. Unconsciousness usually lasts for seconds to minutes. Headache and drowsiness (which usually follow seizures) do not follow a syncopal attack. Syncope results from a sudden impairment of brain metabolism usually due to a reduction in cerebral blood flow.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:29255499</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001279"/>
@@ -18192,9 +18092,10 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>Pes equinovarus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Pes equinus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Talipes varus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Fetal foot inversion</oboInOwl:hasNarrowSynonym>
         <oboInOwl:id>HP:0001762</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
-        <rdfs:comment>Clubfoot is a complex, multifactorial deformity with genetic and intrauterine factors. One popular theory postulates that a clubfoot is a result of intrauterine maldevelopment of the talus that leads to adduction and plantarflexion of the foot. On radiographic projection a clubfoot can be noted as parallel axes of talus and calcaneus.</rdfs:comment>
+        <rdfs:comment>Clubfoot is a complex, multifactorial deformity with genetic and intrauterine factors. One popular theory postulates that a clubfoot is a result of intrauterine maldevelopment of the talus that leads to adduction and plantarflexion of the foot. On radiographic projection a clubfoot can be noted as parallel axes of talus and calcaneus. Fetal foot inversion refers to malposition of the foot originating during development involving inversion at the region of the metacarpals or more usually the subtalar joint and represents the prenatal sonographic equivalent of talipes equinovarus.</rdfs:comment>
         <rdfs:label>Talipes equinovarus</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -27199,6 +27100,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>Abnormal liver enzymes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal liver function</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal liver function tests</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Elevated circulating hepatic transaminase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated liver enzymes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated serum transaminases</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated transaminases</oboInOwl:hasExactSynonym>
@@ -27210,7 +27112,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>Subclinical abnormal liver function tests</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Elevated liver function tests</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0002910</oboInOwl:id>
-        <rdfs:label>Elevated hepatic transaminase</rdfs:label>
+        <rdfs:label>Elevated circulating hepatic transaminase concentration</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002910"/>
@@ -28707,6 +28609,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>SNOMEDCT_US:59606006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0409495</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormally indented hip sockets</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Acetabular protrusion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Protrusio acetabulae</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003179</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
@@ -47270,6 +47173,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000153"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0025031"/>
         <obo:IAO_0000115>An odontogenic tumor of the cementum of tooth.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2013-08-12T08:55:10Z</oboInOwl:creation_date>
@@ -47654,7 +47558,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>Delayed milestone development</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Delayed social development</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0012434</oboInOwl:id>
-        <rdfs:comment>This term should be applied to describe a child whose social development is delayed compared to age-related norms. For instance, at the age of three months, a child smiles in response to social interaction. At the age of seven months, a child responds to the facial expressions of others. And at the age of 12 months, a child is shy around strangers.</rdfs:comment>
+        <rdfs:comment>This term may be applied to describe a child whose social development is delayed compared to age-related norms. For instance, at the age of three months, a child smiles in response to social interaction;. aAt the age of seven months, a child responds to the facial expressions of others;. aAnd at the age of 12 months, a child is shy around strangers.</rdfs:comment>
         <rdfs:label>Delayed early-childhood social milestone development</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -48399,6 +48303,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012668">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001279"/>
+        <obo:IAO_0000115>A vasovagal episode or vasovagal syncope is the most common form of reflex syncope. Reflex syncope is a general term used to describe types of syncope resulting from a failure in autoregulation of blood pressure, and ultimately, in cerebral perfusion pressure resulting in transient loss of consciousness. The mechanisms responsible for this are complex and involve both depression of cardiac output as well as a decrease in vascular tone.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2014-02-15T01:33:13Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>MSH:D013575</oboInOwl:hasDbXref>
@@ -48411,9 +48316,16 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>Neurocardiogenic syncope</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Reflex syncope</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Situational syncope</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Vasovagal episode</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0012668</oboInOwl:id>
         <rdfs:label>Vasovagal syncope</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012668"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A vasovagal episode or vasovagal syncope is the most common form of reflex syncope. Reflex syncope is a general term used to describe types of syncope resulting from a failure in autoregulation of blood pressure, and ultimately, in cerebral perfusion pressure resulting in transient loss of consciousness. The mechanisms responsible for this are complex and involve both depression of cardiac output as well as a decrease in vascular tone.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:29262088</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -48706,6 +48618,52 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A deviation from normal of the neurological development of a child, which may include any or all of the aspects of the development of personal, social, gross or fine motor, and cognitive abilities.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:KI_phemming</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0012760 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012760">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
+        <obo:IAO_0000115>A reduced ability to participate in the back-and-forth flow of social interaction appropriate to culture and developmental level, which is normally characterized by an influence of the behavior of one person on the behavior of another person. This results in difficulty interacting with others through emotional, physical, or verbal communication.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0001-9112-5148"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-4142-7153"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6670-9157"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-9593-5508"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:creation_date>2014-04-03T12:52:44Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>HP:0000735</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C4022736</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Impaired social interaction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Impaired social interactions</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Impaired social reciprocity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Poor social interactions</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Reduced friendship reciprocity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:id>HP:0012760</oboInOwl:id>
+        <rdfs:comment>Reciprocity can be assessed by determining the extent to which a child demonstrates activity similar to that of peers or of the examiner (e.g., playing the same game), shows turn-taking behavior, or recognizes the intentions of the other person and contributes to an activity that a peer or the examiner has initiated. In the diagnostic process, it may be difficult to decide whether limitations in social behavior of children with intellectual disability (ID) are due to a co-occurring autism spectrum disorder (ASD) and are often unduly attributed to the ID, a phenomenon also known as diagnostic overshadowing. This term is intended to apply to impaired social reciprocity that is not attributed to ID.</rdfs:comment>
+        <rdfs:label>Reduced social reciprocity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012760"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A reduced ability to participate in the back-and-forth flow of social interaction appropriate to culture and developmental level, which is normally characterized by an influence of the behavior of one person on the behavior of another person. This results in difficulty interacting with others through emotional, physical, or verbal communication.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:28707360</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012760"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Impaired social reciprocity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-9112-5148"/>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-4142-7153"/>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6670-9157"/>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-9593-5508"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0012760"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Poor social interactions</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -49598,11 +49556,11 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <!-- http://purl.obolibrary.org/obo/HP_0025428 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0025428">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002086"/>
-        <obo:IAO_0000115>A spasm (sudden, involuntary constriction) of the bronchioles.</obo:IAO_0000115>
+        <obo:IAO_0100001>HP:4000007</obo:IAO_0100001>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-23T12:52:53Z</dc:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-        <rdfs:label xml:lang="en">Bronchospasm</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete Bronchospasm</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -51163,7 +51121,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031956">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002910"/>
-        <obo:IAO_0000115>An abnormally high concentration in the circulation of aspartate aminotransferase (AST).</obo:IAO_0000115>
+        <obo:IAO_0000115>The concentration of aspartate aminotransferase (AST) in the blood circulation is above the upper limit of normal.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-07T13:54:55Z</dc:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasExactSynonym>Aspartate aminotransferase increased</oboInOwl:hasExactSynonym>
@@ -52338,8 +52296,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <!-- http://purl.obolibrary.org/obo/HP_0100035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100033"/>
-        <obo:IAO_0000115>Involuntary sounds produced by moving air through the nose, mouth, or throat. The vocal cords are not involved in all tics that produce sound.</obo:IAO_0000115>
+        <obo:IAO_0000115>Tics are defined as movements or sounds that resemble physiological motor behaviors, but are typically inopportune to social context and appear sudden, repetitive, and often exaggerated. Tic vocalizations commonly termed vocal or phonic tics may include any possible sound (eg, sniffing, coughing, throat clearing, whistling, or grunting), word, or sentence and are most commonly encountered within the spectrum of primary tic disorders, as Tourette syndrome.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-4142-7153"/>
@@ -52352,8 +52311,15 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasExactSynonym>Verbal tics</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Vocal tics</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0100035</oboInOwl:id>
+        <rdfs:comment>In Tourette syndrome (TS), affected individuals have tics, including phonic and vocal behaviors, that are typically preceded by premonitory urges and can be suppressed voluntarily. Individuals with autism spectrum disorders (ASD) may also present with vocal tics. However, in ASD premonitory urges and overall vocal tic awareness may be reduced compared to people with primary tic disorders and TS. Phonic tics have been described in a variety of other disorders including Klinefelter, fragile X, and Adams-Oliver syndrome, monosomy 9p and trisomy 16p, neurodegenerative syndromes such as Huntington disease. Furthermore, chorea-acanthocytosis because of VPS13A mutations, Amyotrophic lateral sclerosis frontotemporal dementia overlap syndromes, progressive supranuclear palsy, and pantothenate kinase-associated neurodegeneration may present with vocal tics. Neurometabolic disorders such as Wilson&apos;s disease or phenylketonuria, focal brain lesions, infectious, and other autoimmune diseases are additional causes of vocal tics. Finally, phonic or vocal tics may also be drug-induced, either directly related to the acute effects of drugs (e.g., cocaine) or as a long-term consequence, such as in tardive tic disorders.</rdfs:comment>
         <rdfs:label>Phonic tics</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100035"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Tics are defined as movements or sounds that resemble physiological motor behaviors, but are typically inopportune to social context and appear sudden, repetitive, and often exaggerated. Tic vocalizations commonly termed vocal or phonic tics may include any possible sound (eg, sniffing, coughing, throat clearing, whistling, or grunting), word, or sentence and are most commonly encountered within the spectrum of primary tic disorders, as Tourette syndrome.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:31651053</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100035"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
