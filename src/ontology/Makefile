@@ -76,9 +76,9 @@ imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt $
 	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/hancestro_import.owl
 	
-imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
-	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/%_import.owl
+#imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
+#	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
+#.PRECIOUS: imports/%_import.owl
 
 # ----------------------------------------
 # Pipeline for removing a merged ontology
