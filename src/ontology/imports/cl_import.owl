@@ -25,18 +25,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -46,12 +34,6 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
     
 
 
@@ -73,12 +55,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002161 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002161"/>
@@ -88,12 +64,6 @@
     <!-- http://purl.obolibrary.org/obo/RO_0002175 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002175"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
     
 
 
@@ -202,29 +172,15 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
 
 A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>part_of</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
@@ -246,12 +202,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
         <rdfs:label xml:lang="en">characteristic of</rdfs:label>
     </owl:ObjectProperty>
@@ -983,6 +934,30 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
+        <obo:IAO_0000115>Skeletogenic cell that produces enamel, overlies the odontogenic papilla, and arises from the differentiation of a preameloblast cell.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BTO:0001663</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:70576</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>amelocyte</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>enamel secreting cell</oboInOwl:hasExactSynonym>
+        <rdfs:comment>non-encoded relationship from VSAO produces VSAO:0000066</rdfs:comment>
+        <rdfs:label>ameloblast</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000059"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Skeletogenic cell that produces enamel, overlies the odontogenic papilla, and arises from the differentiation of a preameloblast cell.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO_REF:0000034</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D000565</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0000062 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000062">
@@ -1065,7 +1040,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <!-- http://purl.obolibrary.org/obo/CL_0000071 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000071">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000076"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000115"/>
         <obo:IAO_0000115>An endothelial cell that lines the vasculature.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
@@ -1083,11 +1058,23 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0000076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <oboInOwl:hasDbXref>CALOHA:TS-1249</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>squamous epithelial cell</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0000077 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000077">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000076"/>
         <obo:IAO_0000115>A flattened epithelial cell of mesenchymal origin that lines the serous cavity.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
         <oboInOwl:hasDbXref>FMA:66773</oboInOwl:hasDbXref>
@@ -1233,6 +1220,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000092">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000766"/>
         <obo:IAO_0000115>A specialized phagocytic cell associated with the absorption and removal of the mineralized matrix of bone tissue, which typically differentiates from monocytes. This cell has the following markers: tartrate-resistant acid phosphatase type 5-positive, PU.1-positive, c-fos-positive, nuclear factor NF-kappa-B p100 subunit-positive, tumor necrosis factor receptor superfamily member 11A-positive and macrophage colony-stimulating factor 1 receptor-positive.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>BTO:0000968</oboInOwl:hasDbXref>
@@ -1292,7 +1280,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
     <!-- http://purl.obolibrary.org/obo/CL_0000096 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000096">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000775"/>
         <obo:IAO_0000115>A fully differentiated neutrophil, a granular leukocyte having a nucleus with three to five lobes connected by slender threads, and cytoplasm containing fine inconspicuous granules and stainable by neutral dyes. They are produced in bone marrow at a rate of 5e10-10e10/day and have a half-life of 6-8 hours. Neutrophils are CD15-positive, CD16-positive, CD32-positive, CD43-positive, CD181-positive, and CD182-positive.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
@@ -1910,6 +1898,27 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0000166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000166">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000165"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000540"/>
+        <obo:IAO_0000115>A cell that stores epinephrine secretory vesicles. During times of stress, the nervous system signals the vesicles to secrete their hormonal content. Their name derives from their ability to stain a brownish color with chromic salts. Characteristically, they are located in the adrenal medulla and paraganglia of the sympathetic nervous system.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BTO:0000259</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:69263</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>phaeochromocyte</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>chromaffin cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000166"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell that stores epinephrine secretory vesicles. During times of stress, the nervous system signals the vesicles to secrete their hormonal content. Their name derives from their ability to stain a brownish color with chromic salts. Characteristically, they are located in the adrenal medulla and paraganglia of the sympathetic nervous system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>MESH:D019439</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0000168 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000168">
@@ -2200,6 +2209,12 @@ The modern definition of neurosecretion has evolved to include the release of an
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000192"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>myocytes, smooth muscle</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>MESH:D032389</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000192"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A non-striated, elongated, spindle-shaped cell found lining the digestive tract, uterus, and blood vessels. They develop from specialized myoblasts (smooth muscle myoblast).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>MESH:D032389</oboInOwl:hasDbXref>
@@ -2211,12 +2226,6 @@ The modern definition of neurosecretion has evolved to include the release of an
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>SMCs</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:9315361</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000192"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>myocytes, smooth muscle</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MESH:D032389</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2236,6 +2245,28 @@ The modern definition of neurosecretion has evolved to include the release of an
         <owl:annotatedTarget>A mechanoreceptor cell of the auditory or vestibular system that is sensitive to auditory stimuli. The accessory sensory structures are arranged so that appropriate stimuli cause movement of the hair-like projections (stereocilia and kinocilia) which relay the information centrally in the nervous system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>MESH:D006198</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>WikipediaVersioned:Hair_cell&amp;oldid=1045345915</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000210 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000210">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000101"/>
+        <obo:IAO_0000115>A cell specialized to detect and transduce light.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BTO:0001060</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CALOHA:TS-0868</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:86740</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>photoreceptor cell</rdfs:label>
+        <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.swissbiopics.org/api/image/Photoreceptor_cell.svg</foaf:depiction>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000210"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell specialized to detect and transduce light.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>MESH:D010786</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2285,6 +2316,7 @@ The modern definition of neurosecretion has evolved to include the release of an
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000218">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000125"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002573"/>
         <obo:IAO_0000115>A neuroglial cell of the peripheral nervous system which forms the insulating myelin sheaths of peripheral axons.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Schwann cell</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>peripheral neuroglial cell</oboInOwl:hasBroadSynonym>
@@ -2391,10 +2423,32 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0000234 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000234">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <obo:IAO_0000115>Any cell capable of ingesting particulate matter via phagocytosis.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BTO:0001044</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:83806</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D010586</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>phagocyte</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any cell capable of ingesting particulate matter via phagocytosis.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:add</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721601464</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0000235 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000235">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000738"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000766"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000842"/>
@@ -2454,6 +2508,26 @@ The modern definition of neurosecretion has evolved to include the release of an
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0781735149</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000244 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000244">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <obo:IAO_0000115>A cell characteristically found lining hollow organs that are subject to great mechanical change due to contraction and distention; originally thought to represent a transition between stratified squamous and columnar epithelium.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <oboInOwl:hasDbXref>FMA:66778</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
+        <rdfs:label>transitional epithelial cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000244"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell characteristically found lining hollow organs that are subject to great mechanical change due to contraction and distention; originally thought to represent a transition between stratified squamous and columnar epithelium.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721662544</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2531,6 +2605,7 @@ The modern definition of neurosecretion has evolved to include the release of an
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000312">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000076"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000362"/>
         <obo:IAO_0000115>An epidermal cell which synthesizes keratin and undergoes a characteristic change as it moves upward from the basal layers of the epidermis to the cornified (horny) layer of the skin. Successive stages of differentiation of the keratinocytes forming the epidermal layers are basal cell, spinous or prickle cell, and the granular cell.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
@@ -2562,8 +2637,7 @@ The modern definition of neurosecretion has evolved to include the release of an
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000333">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000048"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002321"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0011012"/>
         <obo:IAO_0000115>A cell derived from the specialized ectoderm flanking each side of the embryonic neural plate, which after the closure of the neural tube, forms masses of cells that migrate out from the dorsal aspect of the neural tube to spread throughout the body.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>FMA:86667</oboInOwl:hasDbXref>
         <rdfs:label>migratory neural crest cell</rdfs:label>
@@ -2582,8 +2656,7 @@ The modern definition of neurosecretion has evolved to include the release of an
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000336">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000165"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000540"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000166"/>
         <obo:IAO_0000115>A cell found within the adrenal medulla that secrete biogenic amine hormones upon stimulation.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>FMA:69262</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>medullary chromaffin cell of adrenal gland</oboInOwl:hasExactSynonym>
@@ -2667,6 +2740,17 @@ The modern definition of neurosecretion has evolved to include the release of an
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0618947256</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000354 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000354">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000048"/>
+        <oboInOwl:hasDbXref>ncithesaurus:Blastemal_Cell</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>blastema cell</oboInOwl:hasExactSynonym>
+        <rdfs:label>blastemal cell</rdfs:label>
+    </owl:Class>
     
 
 
@@ -2849,8 +2933,8 @@ The modern definition of neurosecretion has evolved to include the release of an
     <!-- http://purl.obolibrary.org/obo/CL_0000421 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000421">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000080"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <obo:IAO_0000115>A free floating cell, including amebocytes and eleocytes, in the coelom of certain animals, especially annelids.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>BTO:0002856</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>WBbt:0005751</oboInOwl:hasDbXref>
@@ -2893,6 +2977,7 @@ The modern definition of neurosecretion has evolved to include the release of an
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000451">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000738"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000842"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CL_0000542"/>
@@ -3852,10 +3937,90 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0000570 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000570">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
+        <obo:IAO_0000115>A neuroepithelial cells that occurs singly or in small groups, close to the outer follicular borders but within the follicular basement membrane of the thyroid. Expresses a form of the neural cell adhesion molecule (N-CAM) on their surface. Secretes calcitonin, 5-hydroxytryptamine and dopamine.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>FMA:68653</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SCTID:176770005</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>C cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>C cell of thyroid gland</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>clear cell of thyroid gland</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>parafollicular cell of thyroid gland</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>thyroid parafollicular cell</oboInOwl:hasExactSynonym>
+        <rdfs:label>parafollicular cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000570"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A neuroepithelial cells that occurs singly or in small groups, close to the outer follicular borders but within the follicular basement membrane of the thyroid. Expresses a form of the neural cell adhesion molecule (N-CAM) on their surface. Secretes calcitonin, 5-hydroxytryptamine and dopamine.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0517223651</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000570"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>C cell of thyroid gland</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FMA:68653</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000570"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>clear cell of thyroid gland</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FMA:68653</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000570"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>parafollicular cell of thyroid gland</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FMA:68653</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000570"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>thyroid parafollicular cell</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FMA:68653</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000573 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000573">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000210"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0009004"/>
+        <obo:IAO_0000115>One of the two photoreceptor cell types in the vertebrate retina. In cones the photopigment is in invaginations of the cell membrane of the outer segment. Cones are less sensitive to light than rods, but they provide vision with higher spatial and temporal acuity, and the combination of signals from cones with different pigments allows color vision.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <oboInOwl:hasDbXref>BTO:0001036</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CALOHA:TS-0866</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:67748</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>cone</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
+        <rdfs:label>retinal cone cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000573"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>One of the two photoreceptor cell types in the vertebrate retina. In cones the photopigment is in invaginations of the cell membrane of the outer segment. Cones are less sensitive to light than rods, but they provide vision with higher spatial and temporal acuity, and the combination of signals from cones with different pigments allows color vision.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>MESH:D017949</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000573"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>cone</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1038/s41598-020-66092-9</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0000576 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000576">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000766"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000842"/>
         <obo:IAO_0000115>Myeloid mononuclear recirculating leukocyte that can act as a precursor of tissue macrophages, osteoclasts and some populations of tissue dendritic cells.</obo:IAO_0000115>
@@ -4758,6 +4923,27 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0000731 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000731">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000244"/>
+        <obo:IAO_0000115>A cell of a layer of transitional epithelium in the wall of the proximal urethra, bladder, ureter or renal pelvis, external to the lamina propria.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>FMA:84127</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>urinary tract transitional epithelial cell</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>urothelial cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000731"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell of a layer of transitional epithelium in the wall of the proximal urethra, bladder, ureter or renal pelvis, external to the lamina propria.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>doi:10.1038/s41385-022-00565-0</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0000738 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000738">
@@ -4791,8 +4977,8 @@ The modern definition of neurosecretion has evolved to include the release of an
     <!-- http://purl.obolibrary.org/obo/CL_0000746 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000746">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000187"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002494"/>
         <obo:IAO_0000115>Cardiac muscle cells are striated muscle cells that are responsible for heart contraction. In mammals, the contractile fiber resembles those of skeletal muscle but are only one third as large in diameter, are richer in sarcoplasm, and contain centrally located instead of peripheral nuclei.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
         <oboInOwl:hasAlternativeId>FMA:83808</oboInOwl:hasAlternativeId>
@@ -5223,6 +5409,7 @@ The modern definition of neurosecretion has evolved to include the release of an
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000778">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000092"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000842"/>
         <obo:IAO_0000115>A specialized mononuclear osteoclast associated with the absorption and removal of bone, precursor of multinuclear osteoclasts.</obo:IAO_0000115>
         <rdfs:comment>Morphology: mononuclear, highly vesicular.</rdfs:comment>
@@ -5247,6 +5434,7 @@ The modern definition of neurosecretion has evolved to include the release of an
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000779">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000092"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000234"/>
         <obo:IAO_0000115>A specialized multinuclear osteoclast associated with the absorption and removal of bone.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>multinucleated osteoclast</oboInOwl:hasExactSynonym>
         <rdfs:comment>Morphology: multinucleated, highly vesicular.</rdfs:comment>
@@ -7442,16 +7630,56 @@ The modern definition of neurosecretion has evolved to include the release of an
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000879">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000878"/>
-        <obo:IAO_0000115>A central nervous system macrophage found in the meninges (the three membranes that surround the brain). This macrophage types is highly phagocytic and expresses scavenger receptors.</obo:IAO_0000115>
+        <obo:IAO_0000115>A border associated macrophage that is part of a meninx. This macrophage type is elongated and amoeboid spindle-shaped with limited mobility. This macrophage is highly phagocytic, expresses scavenger receptors, has dynamic protrusions and extends its processes during inflammation.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>subdural leptomeningeal macrophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>subdural meningeal macrophage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>MM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>MnMΦ</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>sdΜΦ</oboInOwl:hasRelatedSynonym>
         <rdfs:label>meningeal macrophage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000879"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A central nervous system macrophage found in the meninges (the three membranes that surround the brain). This macrophage types is highly phagocytic and expresses scavenger receptors.</owl:annotatedTarget>
+        <owl:annotatedTarget>A border associated macrophage that is part of a meninx. This macrophage type is elongated and amoeboid spindle-shaped with limited mobility. This macrophage is highly phagocytic, expresses scavenger receptors, has dynamic protrusions and extends its processes during inflammation.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:ana</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:11591794</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:24078900</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:37232741</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000879"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>subdural leptomeningeal macrophage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:33556248</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000879"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>subdural meningeal macrophage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:28323268</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000879"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>MM</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:33556248</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000879"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>MnMΦ</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:38347231</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000879"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>sdΜΦ</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:37232741</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
     </owl:Axiom>
     
 
@@ -7460,16 +7688,25 @@ The modern definition of neurosecretion has evolved to include the release of an
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000880">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000878"/>
-        <obo:IAO_0000115>A central nervous system macrophage found at the interface between the blood and the cerebrospinal fluid in the brain. This cell expresses scavenger receptors.</obo:IAO_0000115>
-        <rdfs:label>choroid-plexus macrophage</rdfs:label>
+        <obo:IAO_0000115>A border associated macrophage found at the interface between the blood and the cerebrospinal fluid in the brain. This central nervous system macrophage has a star-like shaped body and expresses scavenger receptors.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>cpMΦ</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>choroid plexus macrophage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000880"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A central nervous system macrophage found at the interface between the blood and the cerebrospinal fluid in the brain. This cell expresses scavenger receptors.</owl:annotatedTarget>
+        <owl:annotatedTarget>A border associated macrophage found at the interface between the blood and the cerebrospinal fluid in the brain. This central nervous system macrophage has a star-like shaped body and expresses scavenger receptors.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:ana</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:37232741</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:9550136</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000880"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>cpMΦ</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:37232741</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
     </owl:Axiom>
     
 
@@ -7479,17 +7716,25 @@ The modern definition of neurosecretion has evolved to include the release of an
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000881">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000878"/>
-        <obo:IAO_0000115>A central nervous system macrophage found in small blood vessels in the brain. Markers include CD14+CD16+CD163+.</obo:IAO_0000115>
-        <rdfs:comment>Markers: Human/monkey, mice: CD163. Human: CD14+CD16+CD163+.</rdfs:comment>
+        <obo:IAO_0000115>A border associated macrophage that is adjacent to a small blood vessel of a brain. A perivascular macrophage expresses the markers CD14, CD16 and CD163. In homeostatic conditions, this central nervous system macrophage has a non-motile cell body with extending and retracting projections through the blood vessel wall.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>pvMΦ</oboInOwl:hasRelatedSynonym>
         <rdfs:label>perivascular macrophage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000881"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A central nervous system macrophage found in small blood vessels in the brain. Markers include CD14+CD16+CD163+.</owl:annotatedTarget>
+        <owl:annotatedTarget>A border associated macrophage that is adjacent to a small blood vessel of a brain. A perivascular macrophage expresses the markers CD14, CD16 and CD163. In homeostatic conditions, this central nervous system macrophage has a non-motile cell body with extending and retracting projections through the blood vessel wall.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:16507898</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:37232741</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000881"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>pvMΦ</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:37232741</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
     </owl:Axiom>
     
 
@@ -12748,6 +12993,37 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0002064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000083"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000622"/>
+        <obo:IAO_0000115>A secretory cell found in pancreatic acini that secretes digestive enzymes and mucins. This cell is a typical zymogenic cell, have a basal nucleus and basophilic cytoplasm consisting of regular arrays of granular endoplasmic reticulum with mitochondria and dense secretory granules.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2010-06-24T03:16:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>BTO:0000028</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CALOHA:TS-0737</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:63032</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>acinar cell of pancreas</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
+        <rdfs:label>pancreatic acinar cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002064"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A secretory cell found in pancreatic acini that secretes digestive enzymes and mucins. This cell is a typical zymogenic cell, have a basal nucleus and basophilic cytoplasm consisting of regular arrays of granular endoplasmic reticulum with mitochondria and dense secretory granules.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0517223651</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20395539</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.copewithcytokines.de/cope.cgi?key=pancreatic%20acinar%20cells</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0002079 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002079">
@@ -13485,6 +13761,32 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0002138 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002138">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000115"/>
+        <obo:IAO_0000115>A endothelial cell of a lymphatic vessel. The border of the oak leaf-shaped endothelial cell of initial lymphatics are joined by specialized buttons. The discontinuous feature of buttons distinguishes them from zippers in collecting lymphatics, but both types of junctions are composed of proteins typical of adherens junctions and tight junctions found in the endothelium of blood vessels. Buttons seal the sides of flaps of the oak leaf-shaped endothelial cell, leaving open the tips of flaps as routes for fluid entry without disassembly and reformation of intercellular junctions.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2010-08-24T02:05:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>BTO:0004167</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:68458</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>LEC</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>lymphatic endothelial cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
+        <rdfs:label>endothelial cell of lymphatic vessel</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002138"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A endothelial cell of a lymphatic vessel. The border of the oak leaf-shaped endothelial cell of initial lymphatics are joined by specialized buttons. The discontinuous feature of buttons distinguishes them from zippers in collecting lymphatics, but both types of junctions are composed of proteins typical of adherens junctions and tight junctions found in the endothelium of blood vessels. Buttons seal the sides of flaps of the oak leaf-shaped endothelial cell, leaving open the tips of flaps as routes for fluid entry without disassembly and reformation of intercellular junctions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:17846148</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0002144 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002144">
@@ -13596,6 +13898,30 @@ The modern definition of neurosecretion has evolved to include the release of an
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A crenated erythrocyte with 30+ crenations, bumps or spurs that are the result of damage due to age or disease.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0002187 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002187">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000312"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000646"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000723"/>
+        <obo:IAO_0000115>A basally situated, mitotically active, columnar-shaped keratinocyte attached to the basement membrane.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2010-08-26T03:12:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FMA:70571</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>basal cell of epidermis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002187"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A basally situated, mitotically active, columnar-shaped keratinocyte attached to the basement membrane.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0517223651</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13957,6 +14283,58 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0002293 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002293">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <obo:IAO_0000115>An epithelial cell of the thymus. Epithelial reticular cells are pleomorphic, stellate, non-phagocytic cells which seem to be supportive in function and are held together by desmosomes. They replace the fibroblastoid reticular cells found in other lymphoid organs. Other epithelial cells in the medulla have the ultrastructure of secretory cells. Although different epithelial cells throughout the thymus appear alike by light microscopy their ultrastructure and function varies.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2010-09-13T02:34:22Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>CALOHA:TS-1040</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:72208</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>epithelial cell of thymus gland</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>epithelial reticular cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>epithelial reticular cell of thymus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>thymic epithelial cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>epithelial cell of thymus</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002293"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An epithelial cell of the thymus. Epithelial reticular cells are pleomorphic, stellate, non-phagocytic cells which seem to be supportive in function and are held together by desmosomes. They replace the fibroblastoid reticular cells found in other lymphoid organs. Other epithelial cells in the medulla have the ultrastructure of secretory cells. Although different epithelial cells throughout the thymus appear alike by light microscopy their ultrastructure and function varies.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FMA:72208</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0002312 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002312">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000166"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
+        <obo:IAO_0000115>An acidophilic cell of the anterior pituitary that produces growth hormone, somatotropin.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2010-09-14T02:33:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FMA:83095</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D052683</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>somatotrope</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>somatotropic cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>somatrophic cell</oboInOwl:hasExactSynonym>
+        <rdfs:label>somatotroph</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002312"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An acidophilic cell of the anterior pituitary that produces growth hormone, somatotropin.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SANBI:mhl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0002318 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002318">
@@ -14068,6 +14446,26 @@ The modern definition of neurosecretion has evolved to include the release of an
         <owl:annotatedTarget>An epithelial cell of the mammary gland.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:19022771</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0002328 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002328">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002368"/>
+        <obo:IAO_0000115>An epithelial cell of the bronchus.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2010-09-20T02:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>BTO:0002922</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>bronchial epithelial cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002328"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An epithelial cell of the bronchus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14546,7 +14944,7 @@ The modern definition of neurosecretion has evolved to include the release of an
     <!-- http://purl.obolibrary.org/obo/CL_0002364 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002364">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002293"/>
         <obo:IAO_0000115>An epithelial cell of the cortical portion of the thymus. Epithelial cells in this region are required for positive selection of CD8-positive T cells.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
@@ -14570,7 +14968,7 @@ The modern definition of neurosecretion has evolved to include the release of an
     <!-- http://purl.obolibrary.org/obo/CL_0002365 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002365">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002293"/>
         <obo:IAO_0000115>An epithelial cell of the medullary thymus. This cell type expresses a diverse range of tissue-specific antigens. This promiscuous gene expression is a cell-autonomous property of medullary epithelial cells and is maintained during the entire period of thymic T cell output.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
         <oboInOwl:creation_date>2010-09-23T03:17:14Z</oboInOwl:creation_date>
@@ -16542,6 +16940,30 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0002494 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002494">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <obo:IAO_0000115>A cell located in the heart, including both muscle and non muscle cells.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2010-12-07T09:37:22Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>BTO:0001539</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CALOHA:TS-0115</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:83808</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:84791</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>heart cell</oboInOwl:hasExactSynonym>
+        <rdfs:comment>From Onard of the FMA: Cardiac muscle cell or cardiac myocyte is a striated muscle cell. Cardiocyte on the other hand is any cell in the heart which includes cells other than muscle cells (e.g. endothelial cell of endocardium). Unless there is a consensus among anatomists that cardiocytes refer only to muscle cells, we will treat them as a general class of cells in the heart.</rdfs:comment>
+        <rdfs:label>cardiocyte</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002494"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell located in the heart, including both muscle and non muscle cells.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0002496 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002496">
@@ -16998,6 +17420,77 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0002573 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002573">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000125"/>
+        <obo:IAO_0000115>A glial cell that myelinates or ensheathes axons in the peripheral nervous system.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2011-03-02T01:19:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>BTO:0001220</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CALOHA:TS-0898</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D012583</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
+        <rdfs:comment>A myelinating Schwann cell wraps around a single axon. Myelination occurs in larger diameter axons, while a process called ensheathment occurs on smaller diameter axons in which a single cell wraps around multiple small, unmyelinated axons separating them with a thin layer of cytoplasm. The structure formed is called a Remak bundle.</rdfs:comment>
+        <rdfs:label>Schwann cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002573"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A glial cell that myelinates or ensheathes axons in the peripheral nervous system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:16807057</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002573"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>A myelinating Schwann cell wraps around a single axon. Myelination occurs in larger diameter axons, while a process called ensheathment occurs on smaller diameter axons in which a single cell wraps around multiple small, unmyelinated axons separating them with a thin layer of cytoplasm. The structure formed is called a Remak bundle.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:16807057</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0002576 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002576">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000125"/>
+        <obo:IAO_0000115>A glial cell that is part of the perineurium. This cell type has thin long bipolar cytoplasmic processes, pinocytotic vesicles, fragments of external lamina and/or external lamina-like material, attachment plaques, and desmosome-like junctions. Perineurial cells historically have been referred to as fibroblasts because of shape; however, unlike fibroblasts, a perineurial cell: does not have a compact nucleus and large endoplasmic reticulum; does have a double basement membrane opposed to a single basal lamina; is carefully joined to other perineurial cells by tight junctions into a single sheet as opposed to arranged in a large mass; and finally, can surround a small axon bundle at a nerve terminal whereas a fibroblast cannot.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
+        <oboInOwl:creation_date>2011-03-02T03:03:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>perineurial glial cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
+        <rdfs:comment>There are studies that largely accept the idea that the perineurial cell is a modified fibroblast with myofibroblastic features.</rdfs:comment>
+        <rdfs:label>perineurial cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002576"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A glial cell that is part of the perineurium. This cell type has thin long bipolar cytoplasmic processes, pinocytotic vesicles, fragments of external lamina and/or external lamina-like material, attachment plaques, and desmosome-like junctions. Perineurial cells historically have been referred to as fibroblasts because of shape; however, unlike fibroblasts, a perineurial cell: does not have a compact nucleus and large endoplasmic reticulum; does have a double basement membrane opposed to a single basal lamina; is carefully joined to other perineurial cells by tight junctions into a single sheet as opposed to arranged in a large mass; and finally, can surround a small axon bundle at a nerve terminal whereas a fibroblast cannot.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:tfm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C41442</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:25818566</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Perineurium</oboInOwl:hasDbXref>
+        <rdfs:comment rdf:resource="https://orcid.org/0000-0001-7655-4833"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002576"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>perineurial glial cell</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:25818566</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002576"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>There are studies that largely accept the idea that the perineurial cell is a modified fibroblast with myofibroblastic features.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:36244793</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0002598 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002598">
@@ -17207,6 +17700,20 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0008019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0008019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <obo:IAO_0000115>A non-polarised cell precursor cell that is part of some mesenchyme, is associated with the cell matrix but is not connected to other cells and is capable of migration.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <oboInOwl:hasExactSynonym>mesenchyme cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
+        <rdfs:label>mesenchymal cell</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0009004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0009004">
@@ -17277,6 +17784,25 @@ The modern definition of neurosecretion has evolved to include the release of an
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A mesothelial cell that is part of the small intestine.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>http://orcid.org/0000-0003-4183-8865</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0011012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0011012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000048"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002321"/>
+        <obo:IAO_0000115>A cell of the neural crest. Neural crest cells are multipotent. Premigratory neural crest cells are found at the neural plate boarder, some of which will undergo ectomesynchymal transition and delamination to form migratory neural crest cells.</obo:IAO_0000115>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <rdfs:label>neural crest cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0011012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell of the neural crest. Neural crest cells are multipotent. Premigratory neural crest cells are found at the neural plate boarder, some of which will undergo ectomesynchymal transition and delamination to form migratory neural crest cells.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-9900-7880</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17398,6 +17924,30 @@ The modern definition of neurosecretion has evolved to include the release of an
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_1001428 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1001428">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000731"/>
+        <obo:IAO_0000115>A urothelial cell that is part of the urothelium of the urinary bladder.</obo:IAO_0000115>
+        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <oboInOwl:hasDbXref>KUPO:0001121</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C32210</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>bladder transitional cell</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>transitional epithelial cell of urinary bladder</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
+        <rdfs:label>bladder urothelial cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_1001428"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A urothelial cell that is part of the urothelium of the urinary bladder.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1038/s41385-022-00565-0</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_1001431 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1001431">
@@ -17471,9 +18021,9 @@ The modern definition of neurosecretion has evolved to include the release of an
     <!-- http://purl.obolibrary.org/obo/CL_2000018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_2000018">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000071"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000115"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002494"/>
         <obo:IAO_0000115>Any endothelial cell of artery that is part of a coronary artery.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://www.wikidata.org/entity/Q35563349"/>
         <oboInOwl:creation_date>2014-06-04T17:08:47Z</oboInOwl:creation_date>
