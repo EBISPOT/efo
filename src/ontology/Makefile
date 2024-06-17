@@ -69,7 +69,7 @@ imports/%_terms.txt: iri_dependencies/%_terms.txt iri_dependencies/efo-relations
 	cat $^ | sort | uniq > $@
 
 imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_exclude.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_exclude.txt -o $@
+	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_exclude.txt --term rdfs:comment -o $@
 .PRECIOUS: imports/mondo_import.owl
 	
 imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt $(SRC)
