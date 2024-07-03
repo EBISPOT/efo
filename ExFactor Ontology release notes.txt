@@ -11,17 +11,17 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.66.0
-Date Released: 15th May 2024
-Class Count: 54973
+Experimental Factor Ontology version 3.67.1
+Date Released: 3rd July 2024
+Class Count: 55,318
 
 Summary:
 
-EFO 3.66.0 includes further alignments between EFO and MONDO as well as terms required for Open Targets projects, HCA, Array Express/Expression Atlas and the GWAS Catalog.
+EFO 3.67.1 is a patch release to fix bugs with duplicated imports occuring in 3.67.0. 
 
-Number of classes changed: 125
-Number of classes added: 40
-Number of classes deleted: 3
+Number of classes changed: 275
+Number of classes added: 4
+Number of classes deleted: 0
 
 ----------------------------------
 1.	Changes to URIs
@@ -37,812 +37,2762 @@ Number of classes deleted: 3
 
 @Classes new to this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0015528
-Label(s): congenital epulis 
-+ 'congenital epulis' SubClassOf 'hamartoma'
-+ 'congenital epulis' SubClassOf 'epulis'
-+ 'congenital epulis' SubClassOf 'gingival neoplasm'
-+ 'congenital epulis' SubClassOf 'neoplasm of jaw'
-+ 'congenital epulis' SubClassOf 'Granular Cell Tumor'
-+ 'congenital epulis' SubClassOf 'congenital nervous system disorder'
-+ 'congenital epulis' SubClassOf 'Soft Tissue Neoplasm'
-+ 'congenital epulis' SubClassOf 'disease has location' some 'alveolar ridge'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0610
+Label(s): Indigenous in North America 
++ 'Indigenous in North America' SubClassOf 'Indigenous American'
 
-Class: http://purl.obolibrary.org/obo/CHEBI_138015
-Label(s): endocrine disruptor 
-+ 'endocrine disruptor' SubClassOf 'drug'
+Class: http://dbpedia.org/resource/North_Korea
+Label(s): North Korea 
++ 'North Korea' SubClassOf 'Country'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0004103
-Label(s): alveolar ridge 
-+ 'alveolar ridge' SubClassOf 'part_of' some 'bone element'
-+ 'alveolar ridge' SubClassOf 'skeleton structure'
-+ 'alveolar ridge' SubClassOf 'part_of' some 'jaw skeleton'
+Class: http://purl.obolibrary.org/obo/GO_0045271
+Label(s): respiratory chain complex I 
++ 'respiratory chain complex I' SubClassOf 'cellular_component'
++ 'respiratory chain complex I' SubClassOf 'part_of' some 'membrane'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100559
-Label(s): ALG14-congenital disorder of glycosylation 
-+ 'ALG14-congenital disorder of glycosylation' SubClassOf 'congenital disorder of glycosylation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_1011300
-Label(s): acute disease, non-human animal 
-+ 'acute disease, non-human animal' SubClassOf 'animal disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0803689
-Label(s): trait in response to traditional medicine 
-+ 'trait in response to traditional medicine' SubClassOf 'response to xenobiotic stimulus'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700272
-Label(s): PALB2-related cancer predisposition 
-+ 'PALB2-related cancer predisposition' SubClassOf 'hereditary neoplastic syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700269
-Label(s): BRCA2-related cancer predisposition 
-+ 'BRCA2-related cancer predisposition' SubClassOf 'hereditary neoplastic syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700249
-Label(s): epidermolytic hyperkeratosis 1 
-+ 'epidermolytic hyperkeratosis 1' SubClassOf 'epidermolytic ichthyosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700206
-Label(s): Parvoviridae infectious disease, non-human animal 
-+ 'Parvoviridae infectious disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0602
-Label(s): geographic category 
-+ 'geographic category' SubClassOf 'population'
-+ 'geographic category' EquivalentTo ('isDemonymOf' some 'Country') or ('has_quality' some 'geographic descriptor')
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0600
-Label(s): geographic descriptor 
-+ 'geographic descriptor' SubClassOf 'quality'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0968949
-Label(s): palmoplantar keratoderma, epidermolytic 
-+ 'palmoplantar keratoderma, epidermolytic' SubClassOf 'hereditary palmoplantar keratoderma'
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0599
-Label(s): ethnicity descriptor 
-+ 'ethnicity descriptor' SubClassOf 'quality'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014542
-Label(s): congenital myasthenic syndrome 15 
-+ 'congenital myasthenic syndrome 15' SubClassOf 'ALG14-congenital disorder of glycosylation'
-+ 'congenital myasthenic syndrome 15' SubClassOf 'congenital myasthenic syndrome'
-+ 'congenital myasthenic syndrome 15' SubClassOf 'congenital nervous system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700268
-Label(s): BRCA1-related cancer predisposition 
-+ 'BRCA1-related cancer predisposition' SubClassOf 'hereditary neoplastic syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0957421
-Label(s): borna virus encephalitis 
-+ 'borna virus encephalitis' SubClassOf 'viral encephalitis'
-+ 'borna virus encephalitis' SubClassOf 'Mononegavirales infectious disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700270
-Label(s): ATM-related cancer predisposition 
-+ 'ATM-related cancer predisposition' SubClassOf 'hereditary neoplastic syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100563
-Label(s): digenic alpha thalassemia spectrum 
-+ 'digenic alpha thalassemia spectrum' SubClassOf 'alpha thalassemia spectrum'
-
-Class: http://purl.obolibrary.org/obo/OBA_2050419
-Label(s): level of endocrine disruptor in urine 
-+ 'level of endocrine disruptor in urine' SubClassOf 'amount'
-
-Class: http://purl.obolibrary.org/obo/MONDO_1010029
-Label(s): aleutian mink disease, human 
-+ 'aleutian mink disease, human' SubClassOf 'Parvoviridae infectious disease'
-+ 'aleutian mink disease, human' SubClassOf 'primary viral infectious disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022605
-Label(s): 10x 5' v3 
-+ '10x 5' v3' SubClassOf '10x 5' transcription profiling'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022604
-Label(s): 10x 3' v4 
-+ '10x 3' v4' SubClassOf '10x 3' transcription profiling'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022603
-Label(s): Parse Biosciences technology 
-+ 'Parse Biosciences technology' SubClassOf 'SPLiT-seq'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022602
-Label(s): Parse Evercode Whole Transcriptome v3 
-+ 'Parse Evercode Whole Transcriptome v3' SubClassOf 'Parse Biosciences technology'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022601
-Label(s): Parse Evercode Whole Transcriptome v2 
-+ 'Parse Evercode Whole Transcriptome v2' SubClassOf 'Parse Biosciences technology'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022600
-Label(s): Parse Evercode Whole Transcriptome v1 
-+ 'Parse Evercode Whole Transcriptome v1' SubClassOf 'Parse Biosciences technology'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_3732
-Label(s): clarithromycin 
-+ 'clarithromycin' SubClassOf 'organic heterocyclic compound'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_76172
-Label(s): loxoprofen 
-+ 'loxoprofen' SubClassOf 'chemical entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022606
-Label(s): 10x gene expression flex 
-+ '10x gene expression flex' SubClassOf '10x technology'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0800485
-Label(s): AKT3-related overgrowth spectrum 
-+ 'AKT3-related overgrowth spectrum' SubClassOf 'genetic disorder'
-+ 'AKT3-related overgrowth spectrum' SubClassOf 'overgrowth syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_1011327
-Label(s): inflammatory disease, non-human animal 
-+ 'inflammatory disease, non-human animal' SubClassOf 'animal disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0968951
-Label(s): hypouricemia, renal 
-+ 'hypouricemia, renal' SubClassOf 'hereditary renal hypouricemia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100556
-Label(s): PRRT2-associated paroxysmal movement disorder 
-+ 'PRRT2-associated paroxysmal movement disorder' SubClassOf 'movement disorder'
-+ 'PRRT2-associated paroxysmal movement disorder' SubClassOf 'hereditary neurological disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100558
-Label(s): RNU4ATAC spectrum disorder 
-+ 'RNU4ATAC spectrum disorder' SubClassOf 'syndromic disease'
-+ 'RNU4ATAC spectrum disorder' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100571
-Label(s): CTNNB1-related neurodevelopmental disorder and/or vitreoretinopathy 
-+ 'CTNNB1-related neurodevelopmental disorder and/or vitreoretinopathy' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0958184
-Label(s): epidermolytic hyperkeratosis 2 
-+ 'epidermolytic hyperkeratosis 2' SubClassOf 'epidermolytic ichthyosis'
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0601
-Label(s): ethnicity category 
-+ 'ethnicity category' SubClassOf 'population'
-+ 'ethnicity category' EquivalentTo 'has_quality' some 'ethnicity descriptor'
-
-Class: http://purl.obolibrary.org/obo/OBA_2050420
-Label(s): trait in response to loxoprofen 
-+ 'trait in response to loxoprofen' SubClassOf 'trait in response to antirheumatic drug'
-+ 'trait in response to loxoprofen' SubClassOf 'response to non-steroidal anti-inflammatory'
-
-Class: http://purl.obolibrary.org/obo/OBA_2050421
-Label(s): trait in response to clarithromycin 
-+ 'trait in response to clarithromycin' SubClassOf 'response to antibiotic'
+Class: http://purl.obolibrary.org/obo/MONDO_0005562
+Label(s): obsolete age-related hearing impairment 
++ 'obsolete age-related hearing impairment' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
 ----------------------------------
 2. Changes to EFO3
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012682
-Label(s): immunodeficiency 35 
-- 'immunodeficiency 35' SubClassOf 'hereditary predisposition to infections'
-+ 'immunodeficiency 35' SubClassOf 'immunodeficiency disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0002087
+Label(s): peritoneum cancer 
++ 'peritoneum cancer' SubClassOf 'digestive system cancer'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0019946
-Label(s): ligneous conjunctivitis 
-- 'ligneous conjunctivitis' SubClassOf 'chronic conjunctivitis'
-+ 'ligneous conjunctivitis' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/MONDO_0001926
+Label(s): ureteral disorder 
++ 'ureteral disorder' SubClassOf 'kidney disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012482
-Label(s): West Nile virus, susceptibility to 
-- 'West Nile virus, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'West Nile virus, susceptibility to' SubClassOf 'inherited disease susceptibility'
+Class: http://purl.obolibrary.org/obo/HP_0002251
+Label(s): Megacolon Aganglionic megacolon 
+- 'Aganglionic megacolon' SubClassOf 'Abnormal intestine morphology'
++ 'Aganglionic megacolon' SubClassOf 'Abnormal large intestine morphology'
 
-Class: http://www.ebi.ac.uk/efo/EFO_1000069
-Label(s): Adamantinomatous Craniopharyngioma 
-+ 'Adamantinomatous Craniopharyngioma' SubClassOf 'reproductive system neoplasm'
+Class: http://purl.obolibrary.org/obo/MONDO_0004517
+Label(s): ureter tuberculosis 
+- 'ureter tuberculosis' SubClassOf 'bacterial urinary tract infection'
++ 'ureter tuberculosis' SubClassOf 'renal tuberculosis'
 
-Class: http://purl.obolibrary.org/obo/GO_0044271
-Label(s): cellular nitrogen compound biosynthetic process 
-- 'cellular nitrogen compound biosynthetic process' SubClassOf 'cellular biosynthetic process'
-- 'cellular nitrogen compound biosynthetic process' SubClassOf 'cellular nitrogen compound metabolic process'
-+ 'cellular nitrogen compound biosynthetic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://www.ebi.ac.uk/efo/EFO_0008490
+Label(s): ampulla of Vater adenocarcinoma 
++ 'ampulla of Vater adenocarcinoma' SubClassOf 'pancreatic adenocarcinoma'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0017902
-Label(s): autosomal recessive Mendelian susceptibility to mycobacterial diseases due to partial IFNgammaR2 deficiency 
-- 'autosomal recessive Mendelian susceptibility to mycobacterial diseases due to partial IFNgammaR2 deficiency' SubClassOf 'hereditary predisposition to infections'
-+ 'autosomal recessive Mendelian susceptibility to mycobacterial diseases due to partial IFNgammaR2 deficiency' SubClassOf 'inherited disease susceptibility'
+Class: http://www.ebi.ac.uk/efo/EFO_0022703
+Label(s): HSC-3 
+- 'HSC-3' SubClassOf 'bearer_of' some 'oral squamous cell carcinoma'
+- 'HSC-3' SubClassOf 'derives_from' some 'tongue'
+- 'HSC-3' SubClassOf 'derives_from' some 'cell type'
+- 'HSC-3' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'HSC-3' SubClassOf 'cancer cell line' and ('bearer_of' some 'oral squamous cell carcinoma')
++ 'HSC-3' SubClassOf 'Homo sapiens cell line'
++ 'HSC-3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('tongue' and ('part_of' some 'Homo sapiens')))))
 
-Class: http://purl.obolibrary.org/obo/MONDO_0007239
-Label(s): epidermolytic ichthyosis 
-- 'epidermolytic ichthyosis' SubClassOf 'keratinopathic ichthyosis'
-+ 'epidermolytic ichthyosis' SubClassOf 'keratinization disease'
-+ 'epidermolytic ichthyosis' SubClassOf 'keratinopathic ichthyosis'
+Class: http://www.ebi.ac.uk/efo/EFO_1000317
+Label(s): Lacrimal Gland Adenoid Cystic Carcinoma 
++ 'Lacrimal Gland Adenoid Cystic Carcinoma' SubClassOf 'cutaneous adenocystic carcinoma'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012161
-Label(s): susceptibility to respiratory infections associated with CD8alpha chain mutation 
-- 'susceptibility to respiratory infections associated with CD8alpha chain mutation' SubClassOf 'hereditary predisposition to infections'
-+ 'susceptibility to respiratory infections associated with CD8alpha chain mutation' SubClassOf 'inherited disease susceptibility'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000383
-Label(s): Mixed Somatotroph-Lactotroph Pituitary Gland Adenoma 
-+ 'Mixed Somatotroph-Lactotroph Pituitary Gland Adenoma' SubClassOf 'reproductive system neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012057
-Label(s): legionnaire disease, susceptibility to 
-- 'legionnaire disease, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'legionnaire disease, susceptibility to' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_1011336
-Label(s): nervous system disorder, non-human animal 
-- 'nervous system disorder, non-human animal' SubClassOf 'animal disease'
-+ 'nervous system disorder, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_1011327
-+ 'nervous system disorder, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_1011300
-
-Class: http://purl.obolibrary.org/obo/GO_0008614
-Label(s): pyridoxine metabolic process 
-- 'pyridoxine metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'pyridoxine metabolic process' SubClassOf 'cellular nitrogen compound metabolic process'
-- 'pyridoxine metabolic process' SubClassOf 'heterocycle metabolic process'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0000007
-Label(s): pituitary gland 
-+ 'pituitary gland' SubClassOf 'part_of' some 'reproductive system'
-+ 'pituitary gland' SubClassOf 'part_of' some 'anatomical system'
-
-Class: http://purl.obolibrary.org/obo/GO_0046483
-Label(s): heterocycle metabolic process 
-- 'heterocycle metabolic process' SubClassOf 'cellular metabolic process'
-+ 'heterocycle metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004527
-Label(s): congenital granular cell tumor 
-- 'congenital granular cell tumor' SubClassOf 'Granular Cell Tumor'
-- 'congenital granular cell tumor' SubClassOf 'congenital nervous system disorder'
-
-Class: http://purl.obolibrary.org/obo/GO_0006772
-Label(s): thiamine metabolic process 
-- 'thiamine metabolic process' SubClassOf 'cellular nitrogen compound metabolic process'
-- 'thiamine metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'thiamine metabolic process' SubClassOf 'heterocycle metabolic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004491
-Label(s): uterine corpus choriocarcinoma 
-- 'uterine corpus choriocarcinoma' EquivalentTo 'choriocarcinoma' and ('disease has location' some 'body of uterus')
-- 'uterine corpus choriocarcinoma' SubClassOf 'choriocarcinoma'
-+ 'uterine corpus choriocarcinoma' EquivalentTo 'gestational choriocarcinoma' and ('disease has location' some 'body of uterus')
-+ 'uterine corpus choriocarcinoma' SubClassOf 'gestational choriocarcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004490
-Label(s): gestational uterine corpus choriocarcinoma 
-- 'gestational uterine corpus choriocarcinoma' SubClassOf 'gestational choriocarcinoma'
-- 'gestational uterine corpus choriocarcinoma' SubClassOf 'uterine corpus choriocarcinoma'
-- 'gestational uterine corpus choriocarcinoma' EquivalentTo 'gestational choriocarcinoma' and ('disease has location' some 'body of uterus')
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004380
-Label(s): dendritic cell sarcoma 
-- 'dendritic cell sarcoma' SubClassOf 'Histiocytic and Dendritic Cell Neoplasm'
-+ 'dendritic cell sarcoma' SubClassOf 'dendritic cell tumor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014722
-Label(s): Roifman syndrome 
-- 'Roifman syndrome' SubClassOf 'syndromic disease'
-+ 'Roifman syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100558
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009522
-Label(s): Leukomelanoderma-infantilism-intellectual disability-hypodontia-hypotrichosis syndrome 
-- 'Leukomelanoderma-infantilism-intellectual disability-hypodontia-hypotrichosis syndrome' SubClassOf 'ectodermal dysplasia syndrome'
-+ 'Leukomelanoderma-infantilism-intellectual disability-hypodontia-hypotrichosis syndrome' SubClassOf 'ectodermal dysplasia syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009500
-Label(s): kuru, susceptibility to 
-- 'kuru, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'kuru, susceptibility to' SubClassOf 'inherited disease susceptibility'
+Class: http://www.ebi.ac.uk/efo/EFO_0000637
+Label(s): osteosarcoma 
+- 'osteosarcoma' SubClassOf 'bone neoplasm'
+- 'osteosarcoma' SubClassOf 'musculoskeletal system cancer'
++ 'osteosarcoma' SubClassOf 'Malignant Bone Neoplasm'
 
 Class: http://purl.obolibrary.org/obo/HANCESTRO_0575
 Label(s): Yoruban 
-+ 'Yoruban' SubClassOf 'has_quality' some http://purl.obolibrary.org/obo/HANCESTRO_0599
-+ 'Yoruban' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0601
+- 'Yoruban' SubClassOf 'has_quality' some 'ethnicity descriptor'
+
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0574
+Label(s): Pacific Islander 
++ 'Pacific Islander' SubClassOf 'ethnicity category'
 
 Class: http://purl.obolibrary.org/obo/HANCESTRO_0573
 Label(s): Native Hawaiian 
-+ 'Native Hawaiian' SubClassOf 'has_quality' some http://purl.obolibrary.org/obo/HANCESTRO_0599
-+ 'Native Hawaiian' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0601
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0568
-Label(s): African American 
-+ 'African American' SubClassOf 'has_quality' some http://purl.obolibrary.org/obo/HANCESTRO_0599
-+ 'African American' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0601
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700204
-Label(s): trichostrongyloidiasis, non-human animal 
-+ 'trichostrongyloidiasis, non-human animal' SubClassOf 'infectious disease, non-human animal'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017901
-Label(s): autosomal recessive Mendelian susceptibility to mycobacterial diseases due to partial IFNgammaR1 deficiency 
-- 'autosomal recessive Mendelian susceptibility to mycobacterial diseases due to partial IFNgammaR1 deficiency' SubClassOf 'hereditary predisposition to infections'
-+ 'autosomal recessive Mendelian susceptibility to mycobacterial diseases due to partial IFNgammaR1 deficiency' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0498
-Label(s): Filipino 
-+ 'Filipino' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0487
-Label(s): Indian 
-+ 'Indian' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014407
-Label(s): megalencephaly-polymicrogyria-polydactyly-hydrocephalus syndrome 2 
-+ 'megalencephaly-polymicrogyria-polydactyly-hydrocephalus syndrome 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0800485
-
-Class: http://purl.obolibrary.org/obo/GO_0000050
-Label(s): urea cycle 
-- 'urea cycle' SubClassOf 'cellular nitrogen compound biosynthetic process'
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0383
-Label(s): Irish 
-+ 'Irish' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0019
-Label(s): Japanese 
-+ 'Japanese' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
-
-Class: http://purl.obolibrary.org/obo/MONDO_0017611
-Label(s): pituitary tumor 
-+ 'pituitary tumor' SubClassOf 'reproductive system neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024969
-Label(s): parasitic disease, non-human animal 
-- 'parasitic disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
-+ 'parasitic disease, non-human animal' SubClassOf 'animal disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004951
-Label(s): susceptibility to HIV infection 
-- 'susceptibility to HIV infection' SubClassOf 'hereditary predisposition to infections'
-- 'susceptibility to HIV infection' EquivalentTo 'hereditary predisposition to infections' and ('predisposes towards' some 'HIV infection')
-+ 'susceptibility to HIV infection' SubClassOf 'inherited disease susceptibility'
-+ 'susceptibility to HIV infection' EquivalentTo 'inherited disease susceptibility' and ('predisposes towards' some 'HIV infection')
-
-Class: http://purl.obolibrary.org/obo/GO_0046146
-Label(s): tetrahydrobiopterin metabolic process 
-- 'tetrahydrobiopterin metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'tetrahydrobiopterin metabolic process' SubClassOf 'heterocycle metabolic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009191
-Label(s): Lowry-Wood syndrome 
-+ 'Lowry-Wood syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100558
-
-Class: http://purl.obolibrary.org/obo/GO_0006558
-Label(s): L-phenylalanine metabolic process 
-- 'L-phenylalanine metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-
-Class: http://purl.obolibrary.org/obo/GO_0006568
-Label(s): tryptophan metabolic process 
-- 'tryptophan metabolic process' SubClassOf 'heterocycle metabolic process'
-- 'tryptophan metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'tryptophan metabolic process' SubClassOf 'cellular nitrogen compound metabolic process'
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0021
-Label(s): Chinese 
-+ 'Chinese' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014035
-Label(s): severe intellectual disability-progressive spastic diplegia syndrome 
-+ 'severe intellectual disability-progressive spastic diplegia syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100571
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005578
-Label(s): pituitary cancer 
-+ 'pituitary cancer' SubClassOf 'reproductive system cancer'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012839
-Label(s): pyogenic bacterial infections due to MyD88 deficiency 
-- 'pyogenic bacterial infections due to MyD88 deficiency' SubClassOf 'hereditary predisposition to infections'
-+ 'pyogenic bacterial infections due to MyD88 deficiency' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012292
-Label(s): hepatitis C virus, susceptibility to 
-- 'hepatitis C virus, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'hepatitis C virus, susceptibility to' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100303
-Label(s): ichthyosis, annular epidermolytic 1 
-+ 'ichthyosis, annular epidermolytic 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0958184
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011888
-Label(s): immunodeficiency 67 
-- 'immunodeficiency 67' SubClassOf 'hereditary predisposition to infections'
-
-Class: http://purl.obolibrary.org/obo/GO_0072521
-Label(s): purine-containing compound metabolic process 
-- 'purine-containing compound metabolic process' SubClassOf 'heterocycle metabolic process'
-- 'purine-containing compound metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'purine-containing compound metabolic process' SubClassOf 'cellular nitrogen compound metabolic process'
-
-Class: http://purl.obolibrary.org/obo/GO_0072522
-Label(s): purine-containing compound biosynthetic process 
-- 'purine-containing compound biosynthetic process' SubClassOf 'aromatic compound biosynthetic process'
-- 'purine-containing compound biosynthetic process' SubClassOf 'cellular nitrogen compound biosynthetic process'
-- 'purine-containing compound biosynthetic process' SubClassOf 'heterocycle biosynthetic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019146
-Label(s): inherited susceptibility to mycobacterial diseases 
-- 'inherited susceptibility to mycobacterial diseases' SubClassOf 'hereditary predisposition to infections'
-+ 'inherited susceptibility to mycobacterial diseases' SubClassOf 'inherited disease susceptibility'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009607
-Label(s): pituitary gland disease 
-+ 'pituitary gland disease' SubClassOf 'reproductive system disease'
-
-Class: http://purl.obolibrary.org/obo/GO_1901564
-Label(s): organonitrogen compound metabolic process 
-- 'organonitrogen compound metabolic process' SubClassOf 'nitrogen compound metabolic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700203
-Label(s): pestivirus infectious disease, non-human animal 
-- 'pestivirus infectious disease, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
-+ 'pestivirus infectious disease, non-human animal' SubClassOf 'infectious disease, non-human animal'
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0462
-Label(s): British 
-+ 'British' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
-
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0463
-Label(s): American 
-+ 'American' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
-
-Class: http://purl.obolibrary.org/obo/PR_000013872
-Label(s): regenerating islet-derived protein 3-gamma 
-- 'regenerating islet-derived protein 3-gamma' SubClassOf 'protein'
-+ 'regenerating islet-derived protein 3-gamma' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015979
-Label(s): hereditary predisposition to infections 
-- 'hereditary predisposition to infections' EquivalentTo 'inherited disease susceptibility' and ('predisposes towards' some 'infectious disease')
-- 'hereditary predisposition to infections' SubClassOf 'inherited disease susceptibility'
-- 'hereditary predisposition to infections' SubClassOf 'predisposes towards' some 'infectious disease'
-+ 'hereditary predisposition to infections' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021439
-Label(s): benign neoplasm of pituitary gland 
-+ 'benign neoplasm of pituitary gland' SubClassOf 'benign reproductive system neoplasm'
-
-Class: http://purl.obolibrary.org/obo/GO_0006768
-Label(s): biotin metabolic process 
-- 'biotin metabolic process' SubClassOf 'heterocycle metabolic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003629
-Label(s): uterine corpus serous adenocarcinoma 
-- 'uterine corpus serous adenocarcinoma' SubClassOf 'serous adenocarcinoma'
-- 'uterine corpus serous adenocarcinoma' SubClassOf 'uterine carcinoma'
-- 'uterine corpus serous adenocarcinoma' SubClassOf 'uterine corpus cancer'
-- 'uterine corpus serous adenocarcinoma' EquivalentTo 'serous adenocarcinoma' and ('disease has location' some 'body of uterus')
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021024
-Label(s): malaria, susceptibility to 
-- 'malaria, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'malaria, susceptibility to' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018347
-Label(s): severe intellectual disability-progressive postnatal microcephaly- midline stereotypic hand movements syndrome 
-- 'severe intellectual disability-progressive postnatal microcephaly- midline stereotypic hand movements syndrome' SubClassOf 'syndromic disease'
-+ 'severe intellectual disability-progressive postnatal microcephaly- midline stereotypic hand movements syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007336
-Label(s): Langerhans cell sarcoma 
-- 'Langerhans cell sarcoma' SubClassOf 'dendritic cell tumor'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001109
-Label(s): pituitary dwarfism 
-+ 'pituitary dwarfism' SubClassOf 'reproductive system disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008905
-Label(s): predisposition to invasive fungal disease due to CARD9 deficiency 
-- 'predisposition to invasive fungal disease due to CARD9 deficiency' SubClassOf 'hereditary predisposition to infections'
-+ 'predisposition to invasive fungal disease due to CARD9 deficiency' SubClassOf 'inherited disease susceptibility'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007276
-Label(s): follicular dendritic cell sarcoma 
-- 'follicular dendritic cell sarcoma' SubClassOf 'dendritic cell tumor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013920
-Label(s): herpes simplex encephalitis, susceptibility to, 3 
-- 'herpes simplex encephalitis, susceptibility to, 3' SubClassOf 'hereditary predisposition to infections'
-+ 'herpes simplex encephalitis, susceptibility to, 3' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008871
-Label(s): microcephalic osteodysplastic primordial dwarfism type I 
-+ 'microcephalic osteodysplastic primordial dwarfism type I' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100558
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007178
-Label(s): borna disease 
-- 'borna disease' SubClassOf 'encephalomyelitis'
-- 'borna disease' SubClassOf 'Mononegavirales infectious disease'
-- 'borna disease' SubClassOf 'viral infection of central nervous system'
-+ 'borna disease' SubClassOf 'nervous system disorder, non-human animal'
-+ 'borna disease' SubClassOf 'viral infectious disease, non-human animal'
-+ 'borna disease' SubClassOf 'encephalomyelitis'
-
-Class: http://purl.obolibrary.org/obo/GO_0042360
-Label(s): vitamin E metabolic process 
-- 'vitamin E metabolic process' SubClassOf 'heterocycle metabolic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018938
-Label(s): mucopolysaccharidosis type 4 
-- 'mucopolysaccharidosis type 4' SubClassOf 'syndromic disease'
-- 'mucopolysaccharidosis type 4' SubClassOf 'bone disease'
-- 'mucopolysaccharidosis type 4' SubClassOf 'eye disease'
-+ 'mucopolysaccharidosis type 4' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/GO_0009235
-Label(s): cobalamin metabolic process 
-- 'cobalamin metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'cobalamin metabolic process' SubClassOf 'heterocycle metabolic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013713
-Label(s): dengue virus, susceptibility to 
-- 'dengue virus, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'dengue virus, susceptibility to' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013685
-Label(s): pancreatic cancer, susceptibility to, 4 
-- 'pancreatic cancer, susceptibility to, 4' SubClassOf 'hereditary neoplastic syndrome'
-+ 'pancreatic cancer, susceptibility to, 4' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700268
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018878
-Label(s): branchiootic syndrome 
-+ 'branchiootic syndrome' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/GO_0046655
-Label(s): folic acid metabolic process 
-- 'folic acid metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'folic acid metabolic process' SubClassOf 'heterocycle metabolic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013427
-Label(s): immunodeficiency 31B 
-- 'immunodeficiency 31B' SubClassOf 'hereditary predisposition to infections'
-+ 'immunodeficiency 31B' SubClassOf 'autosomal recessive disease'
-+ 'immunodeficiency 31B' SubClassOf 'immunodeficiency disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020307
-Label(s): benign childhood occipital epilepsy, Panayiotopoulos type 
-+ 'benign childhood occipital epilepsy, Panayiotopoulos type' SubClassOf 'childhood-onset epilepsy syndrome'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001053
-Label(s): arthropod neurohemal organ 
-- 'arthropod neurohemal organ' SubClassOf 'endocrine gland'
-+ 'arthropod neurohemal organ' SubClassOf 'neuroendocrine gland'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013512
-Label(s): hemoglobin H disease 
-- 'hemoglobin H disease' SubClassOf 'alpha thalassemia'
-+ 'hemoglobin H disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100563
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000447
-Label(s): Papillary Craniopharyngioma 
-+ 'Papillary Craniopharyngioma' SubClassOf 'reproductive system neoplasm'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004708
-Label(s): nodular sclerosis Hodgkin lymphoma 
-- 'nodular sclerosis Hodgkin lymphoma' SubClassOf 'classic Hodgkin lymphoma'
-+ 'nodular sclerosis Hodgkin lymphoma' SubClassOf 'classic Hodgkin lymphoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013093
-Label(s): glioma susceptibility 3 
-+ 'glioma susceptibility 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700269
-
-Class: http://purl.obolibrary.org/obo/GO_0018130
-Label(s): heterocycle biosynthetic process 
-- 'heterocycle biosynthetic process' SubClassOf 'heterocycle metabolic process'
-- 'heterocycle biosynthetic process' SubClassOf 'cellular biosynthetic process'
-+ 'heterocycle biosynthetic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013562
-Label(s): aspergillosis, susceptibility to 
-- 'aspergillosis, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'aspergillosis, susceptibility to' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013855
-Label(s): influenza, severe, susceptibility to 
-- 'influenza, severe, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'influenza, severe, susceptibility to' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013921
-Label(s): herpes simplex encephalitis, susceptibility to, 4 
-- 'herpes simplex encephalitis, susceptibility to, 4' SubClassOf 'hereditary predisposition to infections'
-+ 'herpes simplex encephalitis, susceptibility to, 4' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000108
-Label(s): bacteremia, susceptibility 
-- 'bacteremia, susceptibility' SubClassOf 'hereditary predisposition to infections'
-+ 'bacteremia, susceptibility' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010790
-Label(s): MERRF syndrome 
-- 'MERRF syndrome' SubClassOf 'familial dilated cardiomyopathy'
-- 'MERRF syndrome' SubClassOf 'hereditary peripheral neuropathy'
-- 'MERRF syndrome' SubClassOf 'early myoclonic encephalopathy'
-+ 'MERRF syndrome' SubClassOf 'hereditary neurological disease'
-+ 'MERRF syndrome' SubClassOf 'metabolic epilepsy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000070
-Label(s): mycobacterium tuberculosis, susceptibility 
-- 'mycobacterium tuberculosis, susceptibility' SubClassOf 'hereditary predisposition to infections'
-+ 'mycobacterium tuberculosis, susceptibility' SubClassOf 'inherited disease susceptibility'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0002198
-Label(s): neurohypophysis 
-+ 'neurohypophysis' SubClassOf 'part_of' some 'reproductive system'
-
-Class: http://purl.obolibrary.org/obo/GO_0042423
-Label(s): catecholamine biosynthetic process 
-- 'catecholamine biosynthetic process' SubClassOf 'aromatic compound biosynthetic process'
-- 'catecholamine biosynthetic process' SubClassOf 'cellular nitrogen compound biosynthetic process'
-
-Class: http://purl.obolibrary.org/obo/GO_0042403
-Label(s): thyroid hormone metabolic process 
-- 'thyroid hormone metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-+ 'thyroid hormone metabolic process' SubClassOf 'cellular metabolic process'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0033619
-Label(s): myopathy, epilepsy, and progressive cerebral atrophy 
-- 'myopathy, epilepsy, and progressive cerebral atrophy' SubClassOf 'genetic disorder'
-+ 'myopathy, epilepsy, and progressive cerebral atrophy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100559
-
-Class: http://purl.obolibrary.org/obo/GO_0019853
-Label(s): L-ascorbic acid biosynthetic process 
-- 'L-ascorbic acid biosynthetic process' SubClassOf 'heterocycle biosynthetic process'
-+ 'L-ascorbic acid biosynthetic process' SubClassOf 'cellular biosynthetic process'
-
-Class: http://purl.obolibrary.org/obo/GO_0009107
-Label(s): lipoate biosynthetic process 
-- 'lipoate biosynthetic process' SubClassOf 'heterocycle biosynthetic process'
-+ 'lipoate biosynthetic process' SubClassOf 'cellular biosynthetic process'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007139
-Label(s): aleutian mink disease 
-- 'aleutian mink disease' SubClassOf 'primary viral infectious disease'
-- 'aleutian mink disease' SubClassOf 'Parvoviridae infectious disease'
-+ 'aleutian mink disease' SubClassOf 'viral disease'
-+ 'aleutian mink disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700206
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005184
-Label(s): pancreatic ductal adenocarcinoma 
-- 'pancreatic ductal adenocarcinoma' EquivalentTo 'adenocarcinoma' and ('disease has location' some 'pancreatic duct')
-+ 'pancreatic ductal adenocarcinoma' EquivalentTo 'tubular adenocarcinoma' and ('disease has location' some 'pancreatic duct')
-+ 'pancreatic ductal adenocarcinoma' SubClassOf 'tubular adenocarcinoma'
-
-Class: http://purl.obolibrary.org/obo/GO_0019438
-Label(s): aromatic compound biosynthetic process 
-- 'aromatic compound biosynthetic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'aromatic compound biosynthetic process' SubClassOf 'cellular biosynthetic process'
-+ 'aromatic compound biosynthetic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0033572
-Label(s): intellectual developmental disorder with epilepsy, behavioral abnormalities, and coarse facies 
-- 'intellectual developmental disorder with epilepsy, behavioral abnormalities, and coarse facies' SubClassOf 'genetic disorder'
-+ 'intellectual developmental disorder with epilepsy, behavioral abnormalities, and coarse facies' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100559
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011178
-Label(s): infantile convulsions and choreoathetosis 
-+ 'infantile convulsions and choreoathetosis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100556
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007845
-Label(s): Kaposi sarcoma, susceptibility to 
-- 'Kaposi sarcoma, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-
-Class: http://purl.obolibrary.org/obo/GO_0006807
-Label(s): nitrogen compound metabolic process 
-- 'nitrogen compound metabolic process' SubClassOf 'metabolic process'
-+ 'nitrogen compound metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015579
-Label(s): Hb Bart's hydrops fetalis 
-- 'Hb Bart's hydrops fetalis' SubClassOf 'alpha thalassemia'
-+ 'Hb Bart's hydrops fetalis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100563
-
-Class: http://purl.obolibrary.org/obo/GO_0006778
-Label(s): porphyrin-containing compound metabolic process 
-- 'porphyrin-containing compound metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'porphyrin-containing compound metabolic process' SubClassOf 'heterocycle metabolic process'
-
-Class: http://purl.obolibrary.org/obo/GO_0006725
-Label(s): cellular aromatic compound metabolic process 
-- 'cellular aromatic compound metabolic process' SubClassOf 'cellular metabolic process'
-+ 'cellular aromatic compound metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011450
-Label(s): breast-ovarian cancer, familial, susceptibility to, 1 
-+ 'breast-ovarian cancer, familial, susceptibility to, 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700268
-+ 'breast-ovarian cancer, familial, susceptibility to, 1' SubClassOf 'autosomal dominant disease'
+- 'Native Hawaiian' SubClassOf 'has_quality' some 'ethnicity descriptor'
+
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0570
+Label(s): Pima Indian 
+- 'Pima Indian' SubClassOf 'Native American'
++ 'Pima Indian' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0610
+
+Class: http://purl.obolibrary.org/obo/GO_0005747
+Label(s): mitochondrial respiratory chain complex I 
+- 'mitochondrial respiratory chain complex I' SubClassOf 'part_of' some 'membrane'
+- 'mitochondrial respiratory chain complex I' SubClassOf 'cellular_component'
+- 'mitochondrial respiratory chain complex I' SubClassOf 'part_of' some 'mitochondrion'
++ 'mitochondrial respiratory chain complex I' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003016
+Label(s): collecting duct carcinoma 
++ 'collecting duct carcinoma' SubClassOf 'Kidney Medullary Carcinoma'
+
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0290
+Label(s): genetically isolated population 
+- 'genetically isolated population' EquivalentTo 'hasAncestryStatus' only 'genetically isolated ancestry'
++ 'genetically isolated population' SubClassOf 'hasAncestryStatus' some 'genetically isolated ancestry'
++ 'genetically isolated population' EquivalentTo 'hasAncestryStatus' some 'genetically isolated ancestry'
+
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0013
+Label(s): Native American 
++ 'Native American' SubClassOf 'ethnicity category'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022668
+Label(s): OVCAR-10 
+- 'OVCAR-10' SubClassOf 'bearer_of' some 'ovarian carcinoma'
+- 'OVCAR-10' SubClassOf 'derives_from' some 'ovary'
+- 'OVCAR-10' SubClassOf 'cultured cell'
+- 'OVCAR-10' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'OVCAR-10' SubClassOf 'derives_from' some 'cell type'
++ 'OVCAR-10' SubClassOf 'ovarian cancer cell lines'
++ 'OVCAR-10' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens')))))
++ 'OVCAR-10' SubClassOf 'cultured cell' and ('bearer_of' some 'ovarian carcinoma')
++ 'OVCAR-10' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022757
+Label(s): TRAMP-C1 
+- 'TRAMP-C1' SubClassOf 'derives_from' some 'Mus musculus'
+- 'TRAMP-C1' SubClassOf 'derives_from' some 'prostate gland'
+- 'TRAMP-C1' SubClassOf 'derives_from' some 'cell type'
+- 'TRAMP-C1' SubClassOf 'derives_from' some 'epithelial cell'
++ 'TRAMP-C1' SubClassOf 'mouse cell line'
++ 'TRAMP-C1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022766
+Label(s): B16 
+- 'B16' SubClassOf 'derives_from' some 'skin of body'
+- 'B16' SubClassOf 'derives_from' some 'Mus musculus'
+- 'B16' SubClassOf 'cultured cell'
+- 'B16' SubClassOf 'bearer_of' some 'melanoma'
+- 'B16' SubClassOf 'derives_from' some 'cell type'
++ 'B16' SubClassOf 'cultured cell' and ('bearer_of' some 'melanoma')
++ 'B16' SubClassOf 'melanoma cell line'
++ 'B16' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('skin of body' and ('part_of' some 'Mus musculus')))))
++ 'B16' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022791
+Label(s): N18 
+- 'N18' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'N18' SubClassOf 'derives_from' some 'cell type'
+- 'N18' SubClassOf 'derives_from' some 'Mus musculus'
++ 'N18' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022795
+Label(s): MES-23.5  
+- 'MES-23.5 ' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'MES-23.5 ' SubClassOf 'bearer_of' some 'neuroblastoma'
+- 'MES-23.5 ' SubClassOf 'derives_from' some 'cell type'
+- 'MES-23.5 ' SubClassOf 'derives_from' some 'Mus musculus'
++ 'MES-23.5 ' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022796
+Label(s): 32D 
+- '32D' SubClassOf 'derives_from' some 'cell type'
+- '32D' SubClassOf 'derives_from' some 'Mus musculus'
+- '32D' SubClassOf 'derives_from' some 'bone marrow'
+- '32D' SubClassOf 'cultured cell'
++ '32D' SubClassOf 'mouse cell line'
++ '32D' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('bone marrow' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.orpha.net/ORDO/Orphanet_98685
+Label(s): Oculomotor palsy 
+- 'Oculomotor palsy' SubClassOf 'palsy'
++ 'Oculomotor palsy' SubClassOf 'facial paralysis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021953
+Label(s): tuberculous fibrosis of lung 
+- 'tuberculous fibrosis of lung' SubClassOf 'respiratory tract infectious disorder'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003047
+Label(s): hepatitis C virus infection 
++ 'hepatitis C virus infection' SubClassOf 'disease has primary infectious agent' some 'Hepatitis C virus'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021804
+Label(s): silicotuberculosis 
+- 'silicotuberculosis' SubClassOf 'respiratory tract infectious disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0044750
+Label(s): lassa virus infectious disease 
++ 'lassa virus infectious disease' EquivalentTo 'infectious disease' and ('disease has primary infectious agent' some 'Lassa virus')
++ 'lassa virus infectious disease' SubClassOf 'disease has primary infectious agent' some 'Lassa virus'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001769
+Label(s): carcinoid heart disease 
++ 'carcinoid heart disease' SubClassOf 'neoplasm of thorax'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022682
+Label(s): Flp-In-T-REx 
+- 'Flp-In-T-REx' SubClassOf 'cultured cell'
+- 'Flp-In-T-REx' SubClassOf 'derives_from' some 'cell type'
+- 'Flp-In-T-REx' SubClassOf 'derives_from' some 'kidney'
+- 'Flp-In-T-REx' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'Flp-In-T-REx' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'Homo sapiens')))))
++ 'Flp-In-T-REx' SubClassOf 'Homo sapiens cell line'
++ 'Flp-In-T-REx' SubClassOf 'kidney derived cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022686
+Label(s): HEK293S GnTI- 
+- 'HEK293S GnTI-' SubClassOf 'cultured cell'
+- 'HEK293S GnTI-' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HEK293S GnTI-' SubClassOf 'derives_from' some 'cell type'
+- 'HEK293S GnTI-' SubClassOf 'derives_from' some 'kidney'
++ 'HEK293S GnTI-' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'Homo sapiens')))))
++ 'HEK293S GnTI-' SubClassOf 'kidney derived cell line'
++ 'HEK293S GnTI-' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001394
+Label(s): Peritoneal Fibrosis 
++ 'Peritoneal Fibrosis' SubClassOf 'digestive system neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007536
+Label(s): vesicoureteral reflux 
+- 'vesicoureteral reflux' SubClassOf 'kidney disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003553
+Label(s): ampulla of vater adenosquamous carcinoma 
++ 'ampulla of vater adenosquamous carcinoma' SubClassOf 'pancreatic adenosquamous carcinoma'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001228
+Label(s): ureterolithiasis 
+- 'ureterolithiasis' SubClassOf 'kidney disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001227
+Label(s): ureterocele 
+- 'ureterocele' SubClassOf 'kidney disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003490
+Label(s): ampulla of vater squamous cell carcinoma 
++ 'ampulla of vater squamous cell carcinoma' SubClassOf 'squamous cell carcinoma of pancreas'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001940
+Label(s): basaloid squamous cell carcinoma 
+- 'basaloid squamous cell carcinoma' SubClassOf 'digestive system disease'
++ 'basaloid squamous cell carcinoma' SubClassOf 'Digestive System Carcinoma'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007338
+Label(s): Lassa fever 
++ 'Lassa fever' EquivalentTo 'viral hemorrhagic fever' and ('disease has primary infectious agent' some 'Lassa virus')
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001100
+Label(s): peritoneal neoplasm 
++ 'peritoneal neoplasm' SubClassOf 'digestive system neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0021960
+Label(s): ureteritis 
+- 'ureteritis' SubClassOf 'kidney disease'
+- 'ureteritis' SubClassOf 'inflammatory disease'
++ 'ureteritis' SubClassOf 'nephritis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007169
+Label(s): biliary dyskinesia 
++ 'biliary dyskinesia' SubClassOf 'pancreas disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007143
+Label(s): alveolar soft part sarcoma 
+- 'alveolar soft part sarcoma' SubClassOf 'digestive system disease'
++ 'alveolar soft part sarcoma' SubClassOf 'digestive system cancer'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022835
+Label(s): HL-1 
+- 'HL-1' SubClassOf 'derives_from' some 'cell type'
+- 'HL-1' SubClassOf 'derives_from' some 'heart'
+- 'HL-1' SubClassOf 'derives_from' some 'Mus musculus'
+- 'HL-1' SubClassOf 'derives_from' some 'cardiac muscle cell'
++ 'HL-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022832
+Label(s): H19-7 
+- 'H19-7' SubClassOf 'derives_from' some 'cell type'
+- 'H19-7' SubClassOf 'derives_from' some 'Rattus norvegicus'
++ 'H19-7' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022831
+Label(s): F111 
+- 'F111' SubClassOf 'derives_from' some 'embryo'
+- 'F111' SubClassOf 'derives_from' some 'cell type'
+- 'F111' SubClassOf 'derives_from' some 'Rattus norvegicus'
++ 'F111' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('embryo' and ('part_of' some 'Rattus norvegicus')))))
++ 'F111' SubClassOf 'embryonic cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022830
+Label(s): DC2.4 
+- 'DC2.4' SubClassOf 'derives_from' some 'bone marrow'
+- 'DC2.4' SubClassOf 'derives_from' some 'cell type'
+- 'DC2.4' SubClassOf 'cultured cell'
+- 'DC2.4' SubClassOf 'derives_from' some 'dendritic cell'
+- 'DC2.4' SubClassOf 'derives_from' some 'Mus musculus'
++ 'DC2.4' SubClassOf 'mouse cell line'
++ 'DC2.4' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022828
+Label(s): CHOP 
+- 'CHOP' SubClassOf 'derives_from' some 'Cricetulus griseus'
+- 'CHOP' SubClassOf 'derives_from' some 'cell type'
+- 'CHOP' SubClassOf 'derives_from' some 'epithelial cell'
+- 'CHOP' SubClassOf 'derives_from' some 'ovary'
++ 'CHOP' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022827
+Label(s): CHO-IR 
+- 'CHO-IR' SubClassOf 'derives_from' some 'ovary'
+- 'CHO-IR' SubClassOf 'derives_from' some 'epithelial cell'
+- 'CHO-IR' SubClassOf 'derives_from' some 'Cricetulus griseus'
+- 'CHO-IR' SubClassOf 'derives_from' some 'cell type'
++ 'CHO-IR' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022826
+Label(s): CHO9 
+- 'CHO9' SubClassOf 'derives_from' some 'cell type'
+- 'CHO9' SubClassOf 'derives_from' some 'Cricetulus griseus'
+- 'CHO9' SubClassOf 'derives_from' some 'fibroblast'
++ 'CHO9' SubClassOf 'cultured cell' and ('derives_from' some 
+('fibroblast' and ('part_of' some 
+('organism part' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022825
+Label(s): CF2Th 
+- 'CF2Th' SubClassOf 'derives_from' some 'Canis lupus familiaris'
+- 'CF2Th' SubClassOf 'derives_from' some 'thymus'
+- 'CF2Th' SubClassOf 'derives_from' some 'cell type'
++ 'CF2Th' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('thymus' and ('part_of' some 'Canis lupus familiaris')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022824
+Label(s): Dede 
+- 'Dede' SubClassOf 'derives_from' some 'Cricetulus griseus'
+- 'Dede' SubClassOf 'derives_from' some 'fibroblast of lung'
+- 'Dede' SubClassOf 'derives_from' some 'lung'
+- 'Dede' SubClassOf 'derives_from' some 'cell type'
++ 'Dede' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022823
+Label(s): C-127  
+- 'C-127 ' SubClassOf 'bearer_of' some 'breast neoplasm'
+- 'C-127 ' SubClassOf 'derives_from' some 'Mus musculus'
+- 'C-127 ' SubClassOf 'derives_from' some 'cell type'
+- 'C-127 ' SubClassOf 'derives_from' some 'mammary gland'
++ 'C-127 ' SubClassOf 'mouse cell line'
++ 'C-127 ' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('mammary gland' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022822
+Label(s): BAEC 
+- 'BAEC' SubClassOf 'derives_from' some 'Bos taurus'
+- 'BAEC' SubClassOf 'derives_from' some 'aorta endothelium'
+- 'BAEC' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/CL_0002544
+- 'BAEC' SubClassOf 'derives_from' some 'cell type'
++ 'BAEC' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Bos taurus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022821
+Label(s): B16-F1  
+- 'B16-F1 ' SubClassOf 'derives_from' some 'cell type'
+- 'B16-F1 ' SubClassOf 'bearer_of' some 'melanoma'
+- 'B16-F1 ' SubClassOf 'derives_from' some 'skin of body'
+- 'B16-F1 ' SubClassOf 'cultured cell'
+- 'B16-F1 ' SubClassOf 'derives_from' some 'Mus musculus'
++ 'B16-F1 ' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('skin of body' and ('part_of' some 'Mus musculus')))))
++ 'B16-F1 ' SubClassOf 'cultured cell' and ('bearer_of' some 'melanoma')
++ 'B16-F1 ' SubClassOf 'melanoma cell line'
++ 'B16-F1 ' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022820
+Label(s): B104 
+- 'B104' SubClassOf 'bearer_of' some 'neuroblastoma'
+- 'B104' SubClassOf 'derives_from' some 'central nervous system'
+- 'B104' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'B104' SubClassOf 'cultured cell'
+- 'B104' SubClassOf 'derives_from' some 'cell type'
++ 'B104' SubClassOf 'cultured cell' and ('bearer_of' some 'neuroblastoma')
++ 'B104' SubClassOf 'rat cell line'
++ 'B104' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('central nervous system' and ('part_of' some 'Rattus norvegicus')))))
++ 'B104' SubClassOf 'neuroblastoma cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022819
+Label(s): alphaT3-1 
+- 'alphaT3-1' SubClassOf 'cultured cell'
+- 'alphaT3-1' SubClassOf 'bearer_of' some 'pituitary cancer'
+- 'alphaT3-1' SubClassOf 'derives_from' some 'Mus musculus'
+- 'alphaT3-1' SubClassOf 'derives_from' some 'pituitary gland'
+- 'alphaT3-1' SubClassOf 'bearer_of' some 'pituitary tumor'
+- 'alphaT3-1' SubClassOf 'derives_from' some 'cell type'
++ 'alphaT3-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('pituitary gland' and ('part_of' some 'Mus musculus')))))
++ 'alphaT3-1' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022818
+Label(s): NS-0 
+- 'NS-0' SubClassOf 'derives_from' some 'Mus musculus'
+- 'NS-0' SubClassOf 'bearer_of' some 'multiple myeloma'
+- 'NS-0' SubClassOf 'derives_from' some 'cell type'
+- 'NS-0' SubClassOf 'cultured cell'
++ 'NS-0' SubClassOf 'cancer cell line'
++ 'NS-0' SubClassOf 'mouse cell line'
++ 'NS-0' SubClassOf 'lymphoma or leukaemia cell line'
++ 'NS-0' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'NS-0' SubClassOf 'cultured cell' and ('bearer_of' some 'multiple myeloma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022817
+Label(s): PFHR 9 
+- 'PFHR 9' SubClassOf 'derives_from' some 'embryo'
+- 'PFHR 9' SubClassOf 'derives_from' some 'cell type'
+- 'PFHR 9' SubClassOf 'cultured cell'
+- 'PFHR 9' SubClassOf 'derives_from' some 'Mus musculus'
++ 'PFHR 9' SubClassOf 'embryonic cell line'
++ 'PFHR 9' SubClassOf 'mouse cell line'
++ 'PFHR 9' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('embryo' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022816
+Label(s): RN33B 
+- 'RN33B' SubClassOf 'cultured cell'
+- 'RN33B' SubClassOf 'derives_from' some 'cell type'
+- 'RN33B' SubClassOf 'derives_from' some 'brain'
+- 'RN33B' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'RN33B' SubClassOf 'derives_from' some 'embryo'
++ 'RN33B' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'RN33B' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022815
+Label(s): AKR-2B 
+- 'AKR-2B' SubClassOf 'immortal cell line cell'
+- 'AKR-2B' SubClassOf 'derives_from' some 'embryo'
+- 'AKR-2B' SubClassOf 'derives_from' some 'cell type'
+- 'AKR-2B' SubClassOf 'derives_from' some 'Mus musculus'
+- 'AKR-2B' SubClassOf 'derives_from' some 'embryonic cell (metazoa)'
++ 'AKR-2B' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'AKR-2B' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022814
+Label(s): AR4-2J 
+- 'AR4-2J' SubClassOf 'derives_from' some 'pancreas'
+- 'AR4-2J' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'AR4-2J' SubClassOf 'bearer_of' some 'pancreatic neuroendocrine tumor'
+- 'AR4-2J' SubClassOf 'derives_from' some 'cell type'
++ 'AR4-2J' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('pancreas' and ('part_of' some 'Mus musculus')))))
++ 'AR4-2J' SubClassOf 'mouse cell line'
++ 'AR4-2J' SubClassOf 'cancer cell line' and ('bearer_of' some 'pancreatic neuroendocrine tumor')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022809
+Label(s): ROS-17/2.8 
+- 'ROS-17/2.8' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'ROS-17/2.8' SubClassOf 'bearer_of' some 'osteosarcoma'
+- 'ROS-17/2.8' SubClassOf 'derives_from' some 'cell type'
++ 'ROS-17/2.8' SubClassOf 'rat cell line'
++ 'ROS-17/2.8' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022808
+Label(s): HIB-1B 
+- 'HIB-1B' SubClassOf 'derives_from' some 'adipocyte'
+- 'HIB-1B' SubClassOf 'derives_from' some 'cell type'
+- 'HIB-1B' SubClassOf 'derives_from' some 'brown adipose tissue'
+- 'HIB-1B' SubClassOf 'cultured cell'
+- 'HIB-1B' SubClassOf 'derives_from' some 'Mus musculus'
++ 'HIB-1B' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'HIB-1B' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022807
+Label(s): MTLn3 
+- 'MTLn3' SubClassOf 'derives_from' some 'mammary gland'
+- 'MTLn3' SubClassOf 'bearer_of' some 'breast adenocarcinoma'
+- 'MTLn3' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'MTLn3' SubClassOf 'derives_from' some 'cell type'
++ 'MTLn3' SubClassOf 'breast adenocarcinoma cell line'
++ 'MTLn3' SubClassOf 'rat cell line'
++ 'MTLn3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('mammary gland' and ('part_of' some 'Rattus norvegicus')))))
++ 'MTLn3' SubClassOf 'mammary gland cell line' and ('bearer_of' some 'breast adenocarcinoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022806
+Label(s): UMR-106 
+- 'UMR-106' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'UMR-106' SubClassOf 'derives_from' some 'cell type'
+- 'UMR-106' SubClassOf 'bearer_of' some 'osteosarcoma'
++ 'UMR-106' SubClassOf 'rat cell line'
++ 'UMR-106' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022805
+Label(s): T37i 
+- 'T37i' SubClassOf 'derives_from' some 'cell type'
+- 'T37i' SubClassOf 'cultured cell'
+- 'T37i' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/CL_0000449
+- 'T37i' SubClassOf 'derives_from' some 'brown adipose tissue'
+- 'T37i' SubClassOf 'derives_from' some 'Mus musculus'
++ 'T37i' SubClassOf 'mouse cell line'
++ 'T37i' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022804
+Label(s): RN-46A 
+- 'RN-46A' SubClassOf 'derives_from' some 'neuron'
+- 'RN-46A' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'RN-46A' SubClassOf 'derives_from' some 'cell type'
++ 'RN-46A' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('neuron' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022803
+Label(s): GD25 
+- 'GD25' SubClassOf 'cultured cell'
+- 'GD25' SubClassOf 'derives_from' some 'Mus musculus'
+- 'GD25' SubClassOf 'derives_from' some 'embryonic stem cell'
+- 'GD25' SubClassOf 'derives_from' some 'embryo'
+- 'GD25' SubClassOf 'derives_from' some 'cell type'
++ 'GD25' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'GD25' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022802
+Label(s): BAC1.2F5 
+- 'BAC1.2F5' SubClassOf 'derives_from' some 'Mus musculus'
+- 'BAC1.2F5' SubClassOf 'derives_from' some 'cell type'
+- 'BAC1.2F5' SubClassOf 'derives_from' some 'macrophage'
++ 'BAC1.2F5' SubClassOf 'cultured cell' and ('derives_from' some 
+('macrophage' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'BAC1.2F5' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022801
+Label(s): B95-8 
+- 'B95-8' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/NCBITaxon_9490
+- 'B95-8' SubClassOf 'derives_from' some 'cell type'
+- 'B95-8' SubClassOf 'derives_from' some 'blood'
+- 'B95-8' SubClassOf 'derives_from' some 'lymphocyte'
++ 'B95-8' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022800
+Label(s): NMuMg 
+- 'NMuMg' SubClassOf 'derives_from' some 'Mus musculus'
+- 'NMuMg' SubClassOf 'derives_from' some 'cell type'
+- 'NMuMg' SubClassOf 'derives_from' some 'mammary gland epithelial cell'
+- 'NMuMg' SubClassOf 'derives_from' some 'mammary gland'
++ 'NMuMg' SubClassOf 'mouse cell line'
++ 'NMuMg' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022799
+Label(s): MTD-1A 
+- 'MTD-1A' SubClassOf 'derives_from' some 'Mus musculus'
+- 'MTD-1A' SubClassOf 'derives_from' some 'epithelial cell'
+- 'MTD-1A' SubClassOf 'derives_from' some 'cell type'
+- 'MTD-1A' SubClassOf 'bearer_of' some 'breast neoplasm'
++ 'MTD-1A' SubClassOf 'epithelial cell derived cell line' and ('bearer_of' some 'breast neoplasm')
++ 'MTD-1A' SubClassOf 'mouse cell line'
++ 'MTD-1A' SubClassOf 'cultured cell' and ('derives_from' some 
+('epithelial cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022798
+Label(s): CHO-AA8  
+- 'CHO-AA8 ' SubClassOf 'derives_from' some 'Cricetulus griseus'
+- 'CHO-AA8 ' SubClassOf 'derives_from' some 'ovary'
+- 'CHO-AA8 ' SubClassOf 'derives_from' some 'cell type'
++ 'CHO-AA8 ' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ovary' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022797
+Label(s): MES13 
+- 'MES13' SubClassOf 'derives_from' some 'embryo'
+- 'MES13' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/NCBITaxon_452646
+- 'MES13' SubClassOf 'derives_from' some 'embryonic stem cell'
+- 'MES13' SubClassOf 'derives_from' some 'cell type'
++ 'MES13' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022794
+Label(s): OKP 
+- 'OKP' SubClassOf 'derives_from' some 'cell type'
+- 'OKP' SubClassOf 'derives_from' some 'kidney'
+- 'OKP' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/NCBITaxon_9267
++ 'OKP' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022793
+Label(s): SVEC4-10 
+- 'SVEC4-10' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/CL_0002139
+- 'SVEC4-10' SubClassOf 'cultured cell'
+- 'SVEC4-10' SubClassOf 'derives_from' some 'lymph node'
+- 'SVEC4-10' SubClassOf 'derives_from' some 'cell type'
+- 'SVEC4-10' SubClassOf 'derives_from' some 'Mus musculus'
++ 'SVEC4-10' SubClassOf 'mouse cell line'
++ 'SVEC4-10' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022792
+Label(s): BV-2 
+- 'BV-2' SubClassOf 'derives_from' some 'Mus musculus'
+- 'BV-2' SubClassOf 'cultured cell'
+- 'BV-2' SubClassOf 'derives_from' some 'brain'
+- 'BV-2' SubClassOf 'derives_from' some 'microglial cell'
+- 'BV-2' SubClassOf 'derives_from' some 'cell type'
++ 'BV-2' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'BV-2' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022790
+Label(s): MC-1 
+- 'MC-1' SubClassOf 'cultured cell'
+- 'MC-1' SubClassOf 'derives_from' some 'cell type'
+- 'MC-1' SubClassOf 'derives_from' some 'Mus musculus'
++ 'MC-1' SubClassOf 'mouse cell line'
++ 'MC-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022789
+Label(s): FL5.12 
+- 'FL5.12' SubClassOf 'cultured cell'
+- 'FL5.12' SubClassOf 'derives_from' some 'Mus musculus'
+- 'FL5.12' SubClassOf 'derives_from' some 'cell type'
++ 'FL5.12' SubClassOf 'mouse cell line'
++ 'FL5.12' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022788
+Label(s): R9 
+- 'R9' SubClassOf 'derives_from' some 'cell type'
+- 'R9' SubClassOf 'derives_from' some 'embryo'
+- 'R9' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/CL_2000042
+- 'R9' SubClassOf 'derives_from' some 'Rattus norvegicus'
++ 'R9' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022787
+Label(s): L8057 
+- 'L8057' SubClassOf 'derives_from' some 'Mus musculus'
+- 'L8057' SubClassOf 'derives_from' some 'megakaryocyte progenitor cell'
+- 'L8057' SubClassOf 'derives_from' some 'cell type'
+- 'L8057' SubClassOf 'bearer_of' some 'leukemia'
+- 'L8057' SubClassOf 'cultured cell'
++ 'L8057' SubClassOf 'cultured cell' and ('bearer_of' some 'leukemia')
++ 'L8057' SubClassOf 'lymphoma or leukaemia cell line'
++ 'L8057' SubClassOf 'cultured cell' and ('derives_from' some 
+('megakaryocyte progenitor cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'L8057' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022786
+Label(s): RT4 NF2.17  
+- 'RT4 NF2.17 ' SubClassOf 'cultured cell'
+- 'RT4 NF2.17 ' SubClassOf 'derives_from' some 'peripheral nervous system'
+- 'RT4 NF2.17 ' SubClassOf 'bearer_of' some 'schwannoma'
+- 'RT4 NF2.17 ' SubClassOf 'derives_from' some 'cell type'
+- 'RT4 NF2.17 ' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'RT4 NF2.17 ' SubClassOf 'derives_from' some 'Schwann cell'
++ 'RT4 NF2.17 ' SubClassOf 'cultured cell' and ('bearer_of' some 'schwannoma')
++ 'RT4 NF2.17 ' SubClassOf 'rat cell line'
++ 'RT4 NF2.17 ' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022785
+Label(s): RT4-67 
+- 'RT4-67' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'RT4-67' SubClassOf 'derives_from' some 'peripheral nervous system'
+- 'RT4-67' SubClassOf 'bearer_of' some 'schwannoma'
+- 'RT4-67' SubClassOf 'cultured cell'
+- 'RT4-67' SubClassOf 'derives_from' some 'cell type'
+- 'RT4-67' SubClassOf 'derives_from' some 'Schwann cell'
++ 'RT4-67' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'RT4-67' SubClassOf 'cultured cell' and ('bearer_of' some 'schwannoma')
++ 'RT4-67' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022783
+Label(s): BP8 
+- 'BP8' SubClassOf 'derives_from' some 'liver'
+- 'BP8' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'BP8' SubClassOf 'derives_from' some 'cell type'
++ 'BP8' SubClassOf 'rat cell line'
++ 'BP8' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022782
+Label(s): CHO-K1 
+- 'CHO-K1' SubClassOf 'derives_from' some 'ovary'
+- 'CHO-K1' SubClassOf 'derives_from' some 'cell type'
+- 'CHO-K1' SubClassOf 'derives_from' some 'Cricetulus griseus'
++ 'CHO-K1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ovary' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022781
+Label(s): McA-RH7777 
+- 'McA-RH7777' SubClassOf 'derives_from' some 'liver'
+- 'McA-RH7777' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'McA-RH7777' SubClassOf 'derives_from' some 'cell type'
++ 'McA-RH7777' SubClassOf 'rat cell line'
++ 'McA-RH7777' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022780
+Label(s): Rat-2 
+- 'Rat-2' SubClassOf 'derives_from' some 'cell type'
+- 'Rat-2' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/CL_2000042
+- 'Rat-2' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'Rat-2' SubClassOf 'derives_from' some 'embryo'
++ 'Rat-2' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'Rat-2' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022779
+Label(s): C6 glioma cell 
+- 'C6 glioma cell' SubClassOf 'cultured cell'
+- 'C6 glioma cell' SubClassOf 'derives_from' some 'brain'
+- 'C6 glioma cell' SubClassOf 'bearer_of' some 'glioma'
+- 'C6 glioma cell' SubClassOf 'derives_from' some 'cell type'
+- 'C6 glioma cell' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'C6 glioma cell' SubClassOf 'derives_from' some 'glial cell'
++ 'C6 glioma cell' SubClassOf 'cell type'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022777
+Label(s): AtT-20 
+- 'AtT-20' SubClassOf 'derives_from' some 'pituitary gland'
+- 'AtT-20' SubClassOf 'cultured cell'
+- 'AtT-20' SubClassOf 'derives_from' some 'Mus musculus'
+- 'AtT-20' SubClassOf 'bearer_of' some 'pituitary cancer'
+- 'AtT-20' SubClassOf 'bearer_of' some 'pituitary tumor'
+- 'AtT-20' SubClassOf 'derives_from' some 'cell type'
++ 'AtT-20' SubClassOf 'mouse cell line'
++ 'AtT-20' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('pituitary gland' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022775
+Label(s): Do11.10 
+- 'Do11.10' SubClassOf 'cultured cell'
+- 'Do11.10' SubClassOf 'derives_from' some 'cell type'
+- 'Do11.10' SubClassOf 'derives_from' some 'Mus musculus'
++ 'Do11.10' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'Do11.10' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022774
+Label(s): P-19 
+- 'P-19' SubClassOf 'derives_from' some 'cell type'
+- 'P-19' SubClassOf 'derives_from' some 'Mus musculus'
+- 'P-19' SubClassOf 'derives_from' some 'embryo'
+- 'P-19' SubClassOf 'cultured cell'
++ 'P-19' SubClassOf 'mouse cell line'
++ 'P-19' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('embryo' and ('part_of' some 'Mus musculus')))))
++ 'P-19' SubClassOf 'embryonic cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022773
+Label(s): ME17 
+- 'ME17' SubClassOf 'cultured cell'
+- 'ME17' SubClassOf 'derives_from' some 'Mus musculus'
+- 'ME17' SubClassOf 'derives_from' some 'erythroblast'
+- 'ME17' SubClassOf 'derives_from' some 'cell type'
+- 'ME17' SubClassOf 'derives_from' some 'liver'
++ 'ME17' SubClassOf 'mouse cell line'
++ 'ME17' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022772
+Label(s): J2E 
+- 'J2E' SubClassOf 'derives_from' some 'Mus musculus'
+- 'J2E' SubClassOf 'derives_from' some 'cell type'
+- 'J2E' SubClassOf 'derives_from' some 'liver'
+- 'J2E' SubClassOf 'derives_from' some 'erythroblast'
+- 'J2E' SubClassOf 'cultured cell'
++ 'J2E' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'J2E' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022771
+Label(s): BSC-40 
+- 'BSC-40' SubClassOf 'derives_from' some 'cell type'
+- 'BSC-40' SubClassOf 'derives_from' some 'kidney'
+- 'BSC-40' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/NCBITaxon_60710
++ 'BSC-40' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022770
+Label(s): REF-52 
+- 'REF-52' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'REF-52' SubClassOf 'derives_from' some 'cell type'
++ 'REF-52' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'REF-52' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022769
+Label(s): 70Z/3 
+- '70Z/3' SubClassOf 'derives_from' some 'cell type'
+- '70Z/3' SubClassOf 'bearer_of' some 'leukemia'
+- '70Z/3' SubClassOf 'derives_from' some 'precursor B cell'
+- '70Z/3' SubClassOf 'derives_from' some 'Mus musculus'
++ '70Z/3' SubClassOf 'cultured cell' and ('derives_from' some 
+('precursor B cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ '70Z/3' SubClassOf 'mouse cell line'
++ '70Z/3' SubClassOf 'B cell derived cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022768
+Label(s): H-4-II-E 
+- 'H-4-II-E' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'H-4-II-E' SubClassOf 'cultured cell'
+- 'H-4-II-E' SubClassOf 'derives_from' some 'liver'
+- 'H-4-II-E' SubClassOf 'derives_from' some 'cell type'
++ 'H-4-II-E' SubClassOf 'rat cell line'
++ 'H-4-II-E' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022767
+Label(s): L-6 
+- 'L-6' SubClassOf 'derives_from' some 'skeletal muscle myoblast'
+- 'L-6' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'L-6' SubClassOf 'derives_from' some 'cell type'
++ 'L-6' SubClassOf 'cultured cell' and ('derives_from' some 
+('skeletal muscle myoblast' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'L-6' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022765
+Label(s): RK-13 
+- 'RK-13' SubClassOf 'derives_from' some 'Oryctolagus cuniculus'
+- 'RK-13' SubClassOf 'derives_from' some 'cell type'
+- 'RK-13' SubClassOf 'derives_from' some 'kidney'
++ 'RK-13' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'Oryctolagus cuniculus')))))
++ 'RK-13' SubClassOf 'kidney derived cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022764
+Label(s): RIN-m 
+- 'RIN-m' SubClassOf 'derives_from' some 'cell type'
+- 'RIN-m' SubClassOf 'derives_from' some 'pancreas'
+- 'RIN-m' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'RIN-m' SubClassOf 'cultured cell'
+- 'RIN-m' SubClassOf 'derives_from' some 'type B pancreatic cell'
++ 'RIN-m' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'RIN-m' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022763
+Label(s): P6 
+- 'P6' SubClassOf 'derives_from' some 'cell type'
+- 'P6' SubClassOf 'derives_from' some 'Mus musculus'
+- 'P6' SubClassOf 'cultured cell'
++ 'P6' SubClassOf 'mouse cell line'
++ 'P6' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022762
+Label(s): NRK-52E 
+- 'NRK-52E' SubClassOf 'derives_from' some 'cell type'
+- 'NRK-52E' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'NRK-52E' SubClassOf 'derives_from' some 'kidney'
++ 'NRK-52E' SubClassOf 'rat cell line'
++ 'NRK-52E' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022761
+Label(s): PC12h 
+- 'PC12h' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'PC12h' SubClassOf 'derives_from' some 'adrenal gland'
+- 'PC12h' SubClassOf 'derives_from' some 'cell type'
+- 'PC12h' SubClassOf 'bearer_of' some 'adrenal gland pheochromocytoma'
++ 'PC12h' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('adrenal gland' and ('part_of' some 'Rattus norvegicus')))))
++ 'PC12h' SubClassOf 'cancer cell line' and ('bearer_of' some 'adrenal gland pheochromocytoma')
++ 'PC12h' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022760
+Label(s): CHO 
+- 'CHO' SubClassOf 'derives_from' some 'ovary'
+- 'CHO' SubClassOf 'derives_from' some 'Cricetulus griseus'
+- 'CHO' SubClassOf 'derives_from' some 'cell type'
++ 'CHO' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ovary' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022758
+Label(s): H2.35 
+- 'H2.35' SubClassOf 'derives_from' some 'Mus musculus'
+- 'H2.35' SubClassOf 'derives_from' some 'liver'
+- 'H2.35' SubClassOf 'derives_from' some 'cell type'
+- 'H2.35' SubClassOf 'derives_from' some 'hepatocyte'
++ 'H2.35' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'H2.35' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022756
+Label(s): Neuro-2a 
+- 'Neuro-2a' SubClassOf 'derives_from' some 'cell type'
+- 'Neuro-2a' SubClassOf 'bearer_of' some 'neuroblastoma'
+- 'Neuro-2a' SubClassOf 'derives_from' some 'Mus musculus'
+- 'Neuro-2a' SubClassOf 'derives_from' some 'neuroblast (sensu Vertebrata)'
+- 'Neuro-2a' SubClassOf 'derives_from' some 'peripheral nervous system'
++ 'Neuro-2a' SubClassOf 'mouse cell line'
++ 'Neuro-2a' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022755
+Label(s): 32D clone3 
+- '32D clone3' SubClassOf 'derives_from' some 'bone marrow'
+- '32D clone3' SubClassOf 'derives_from' some 'cell type'
+- '32D clone3' SubClassOf 'cultured cell'
+- '32D clone3' SubClassOf 'derives_from' some 'Mus musculus'
+- '32D clone3' SubClassOf 'derives_from' some 'bone marrow cell'
++ '32D clone3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ '32D clone3' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022754
+Label(s): TBY-2 
+- 'TBY-2' SubClassOf 'derives_from' some 'cell type'
+- 'TBY-2' SubClassOf 'derives_from' some 'Nicotiana tabacum'
++ 'TBY-2' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Nicotiana tabacum')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022753
+Label(s): Mv1Lu 
+- 'Mv1Lu' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/NCBITaxon_452646
+- 'Mv1Lu' SubClassOf 'derives_from' some 'cell type'
++ 'Mv1Lu' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022752
+Label(s): MLE-15 
+- 'MLE-15' SubClassOf 'derives_from' some 'Mus musculus'
+- 'MLE-15' SubClassOf 'derives_from' some 'lung'
+- 'MLE-15' SubClassOf 'derives_from' some 'cell type'
++ 'MLE-15' SubClassOf 'mouse cell line'
++ 'MLE-15' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('lung' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022751
+Label(s): PCCL-3 
+- 'PCCL-3' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'PCCL-3' SubClassOf 'cultured cell'
+- 'PCCL-3' SubClassOf 'derives_from' some 'cell type'
+- 'PCCL-3' SubClassOf 'derives_from' some 'thyroid gland'
++ 'PCCL-3' SubClassOf 'rat cell line'
++ 'PCCL-3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('thyroid gland' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022750
+Label(s): FAO 
+- 'FAO' SubClassOf 'derives_from' some 'liver'
+- 'FAO' SubClassOf 'derives_from' some 'cell type'
+- 'FAO' SubClassOf 'derives_from' some 'Rattus norvegicus'
++ 'FAO' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Rattus norvegicus')))))
++ 'FAO' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022747
+Label(s): BHK-21 
+- 'BHK-21' SubClassOf 'derives_from' some 'kidney'
+- 'BHK-21' SubClassOf 'derives_from' some 'Mesocricetus auratus'
+- 'BHK-21' SubClassOf 'derives_from' some 'cell type'
++ 'BHK-21' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'Mesocricetus auratus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022746
+Label(s): MDCK 
+- 'MDCK' SubClassOf 'derives_from' some 'kidney'
+- 'MDCK' SubClassOf 'derives_from' some 'Canis lupus familiaris'
+- 'MDCK' SubClassOf 'derives_from' some 'cell type'
++ 'MDCK' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'Canis lupus familiaris')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022745
+Label(s): SF-9 
+- 'SF-9' SubClassOf 'derives_from' some 'ovary'
+- 'SF-9' SubClassOf 'derives_from' some 'pupal stage'
+- 'SF-9' SubClassOf 'derives_from' some 'Spodoptera frugiperda'
+- 'SF-9' SubClassOf 'derives_from' some 'cell type'
++ 'SF-9' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Spodoptera frugiperda')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022744
+Label(s): SF-21 
+- 'SF-21' SubClassOf 'derives_from' some 'ovary'
+- 'SF-21' SubClassOf 'derives_from' some 'cell type'
+- 'SF-21' SubClassOf 'derives_from' some 'Spodoptera frugiperda'
++ 'SF-21' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ovary' and ('part_of' some 'Spodoptera frugiperda')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022743
+Label(s): QT6 
+- 'QT6' SubClassOf 'bearer_of' some 'fibrosarcoma'
+- 'QT6' SubClassOf 'derives_from' some 'fibroblast'
+- 'QT6' SubClassOf 'derives_from' some 'Coturnix japonica'
+- 'QT6' SubClassOf 'derives_from' some 'cell type'
++ 'QT6' SubClassOf 'cultured cell' and ('derives_from' some 
+('fibroblast' and ('part_of' some 
+('organism part' and ('part_of' some 'Coturnix japonica')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022742
+Label(s): COS-1 
+- 'COS-1' SubClassOf 'derives_from' some 'cell type'
+- 'COS-1' SubClassOf 'derives_from' some 'Chlorocebus aethiops'
+- 'COS-1' SubClassOf 'derives_from' some 'kidney cell'
+- 'COS-1' SubClassOf 'derives_from' some 'kidney'
++ 'COS-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Chlorocebus aethiops')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022741
+Label(s): DA-3 
+- 'DA-3' SubClassOf 'cultured cell'
+- 'DA-3' SubClassOf 'derives_from' some 'Mus musculus'
+- 'DA-3' SubClassOf 'bearer_of' some 'lymphoma'
+- 'DA-3' SubClassOf 'derives_from' some 'lymphocyte'
+- 'DA-3' SubClassOf 'derives_from' some 'cell type'
++ 'DA-3' SubClassOf 'cultured cell' and ('bearer_of' some 'lymphoma')
++ 'DA-3' SubClassOf 'mouse cell line'
++ 'DA-3' SubClassOf 'lymphoma or leukaemia cell line'
++ 'DA-3' SubClassOf 'cultured cell' and ('derives_from' some 
+('lymphocyte' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022740
+Label(s): N1E-115 
+- 'N1E-115' SubClassOf 'derives_from' some 'Mus musculus'
+- 'N1E-115' SubClassOf 'derives_from' some 'cell type'
+- 'N1E-115' SubClassOf 'bearer_of' some 'neuroblastoma'
+- 'N1E-115' SubClassOf 'derives_from' some 'neuroblast (sensu Vertebrata)'
++ 'N1E-115' SubClassOf 'mouse cell line'
++ 'N1E-115' SubClassOf 'cultured cell' and ('derives_from' some 
+('neuroblast (sensu Vertebrata)' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022739
+Label(s): FDCP-1 
+- 'FDCP-1' SubClassOf 'derives_from' some 'bone marrow'
+- 'FDCP-1' SubClassOf 'derives_from' some 'bone marrow cell'
+- 'FDCP-1' SubClassOf 'derives_from' some 'cell type'
+- 'FDCP-1' SubClassOf 'cultured cell'
+- 'FDCP-1' SubClassOf 'derives_from' some 'Mus musculus'
++ 'FDCP-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'FDCP-1' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022738
+Label(s): HTC 
+- 'HTC' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'HTC' SubClassOf 'derives_from' some 'ascitic fluid'
+- 'HTC' SubClassOf 'derives_from' some 'cell type'
++ 'HTC' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ascitic fluid' and ('part_of' some 'Rattus norvegicus')))))
++ 'HTC' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022737
+Label(s): P-388D1 
+- 'P-388D1' SubClassOf 'cultured cell'
+- 'P-388D1' SubClassOf 'derives_from' some 'Mus musculus'
+- 'P-388D1' SubClassOf 'derives_from' some 'cell type'
+- 'P-388D1' SubClassOf 'bearer_of' some 'lymphoma'
+- 'P-388D1' SubClassOf 'derives_from' some 'lymphocyte'
++ 'P-388D1' SubClassOf 'mouse cell line'
++ 'P-388D1' SubClassOf 'cultured cell' and ('derives_from' some 
+('lymphocyte' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'P-388D1' SubClassOf 'lymphoma or leukaemia cell line'
++ 'P-388D1' SubClassOf 'cultured cell' and ('bearer_of' some 'lymphoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022734
+Label(s): Vero 
+- 'Vero' SubClassOf 'derives_from' some 'Chlorocebus sabaeus'
+- 'Vero' SubClassOf 'derives_from' some 'cell type'
+- 'Vero' SubClassOf 'derives_from' some 'kidney cell'
+- 'Vero' SubClassOf 'derives_from' some 'kidney'
++ 'Vero' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Chlorocebus sabaeus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022733
+Label(s): CV-1 
+- 'CV-1' SubClassOf 'derives_from' some 'cell type'
+- 'CV-1' SubClassOf 'derives_from' some 'Chlorocebus aethiops'
+- 'CV-1' SubClassOf 'derives_from' some 'kidney cell'
+- 'CV-1' SubClassOf 'derives_from' some 'kidney'
++ 'CV-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Chlorocebus aethiops')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022732
+Label(s): NIH EGFR-T17 
+- 'NIH EGFR-T17' SubClassOf 'cultured cell'
+- 'NIH EGFR-T17' SubClassOf 'derives_from' some 'embryo'
+- 'NIH EGFR-T17' SubClassOf 'derives_from' some 'fibroblast'
+- 'NIH EGFR-T17' SubClassOf 'derives_from' some 'cell type'
+- 'NIH EGFR-T17' SubClassOf 'derives_from' some 'Mus musculus'
++ 'NIH EGFR-T17' SubClassOf 'mouse cell line'
++ 'NIH EGFR-T17' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022731
+Label(s): HER 14 
+- 'HER 14' SubClassOf 'derives_from' some 'cell type'
+- 'HER 14' SubClassOf 'derives_from' some 'fibroblast'
+- 'HER 14' SubClassOf 'cultured cell'
+- 'HER 14' SubClassOf 'derives_from' some 'Mus musculus'
+- 'HER 14' SubClassOf 'derives_from' some 'embryo'
++ 'HER 14' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Mus musculus')))))
++ 'HER 14' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022730
+Label(s): Rat-1 
+- 'Rat-1' SubClassOf 'derives_from' some 'cell type'
+- 'Rat-1' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'Rat-1' SubClassOf 'derives_from' some 'fibroblast'
+- 'Rat-1' SubClassOf 'derives_from' some 'connective tissue'
++ 'Rat-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'Rat-1' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022729
+Label(s): NIH-3T3-A14 
+- 'NIH-3T3-A14' SubClassOf 'derives_from' some 'fibroblast'
+- 'NIH-3T3-A14' SubClassOf 'derives_from' some 'cell type'
+- 'NIH-3T3-A14' SubClassOf 'cultured cell'
+- 'NIH-3T3-A14' SubClassOf 'derives_from' some 'Mus musculus'
++ 'NIH-3T3-A14' SubClassOf 'mouse cell line'
++ 'NIH-3T3-A14' SubClassOf 'fibroblast derived cell line'
++ 'NIH-3T3-A14' SubClassOf 'cultured cell' and ('derives_from' some 
+('fibroblast' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022728
+Label(s): BRL 3A 
+- 'BRL 3A' SubClassOf 'cultured cell'
+- 'BRL 3A' SubClassOf 'derives_from' some 'cell type'
+- 'BRL 3A' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'BRL 3A' SubClassOf 'derives_from' some 'liver'
++ 'BRL 3A' SubClassOf 'rat cell line'
++ 'BRL 3A' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Rattus norvegicus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022727
+Label(s): BL-3 
+- 'BL-3' SubClassOf 'derives_from' some 'cell type'
+- 'BL-3' SubClassOf 'derives_from' some 'Bos taurus'
++ 'BL-3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Bos taurus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022726
+Label(s): L-M 
+- 'L-M' SubClassOf 'derives_from' some 'Mus musculus'
+- 'L-M' SubClassOf 'derives_from' some 'cell type'
+- 'L-M' SubClassOf 'derives_from' some 'fibroblast'
++ 'L-M' SubClassOf 'cultured cell' and ('derives_from' some 
+('fibroblast' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'L-M' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022725
+Label(s): COS-7 
+- 'COS-7' SubClassOf 'derives_from' some 'Chlorocebus aethiops'
+- 'COS-7' SubClassOf 'derives_from' some 'cell type'
++ 'COS-7' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Chlorocebus aethiops')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022724
+Label(s): Tn5 B1-4 
+- 'Tn5 B1-4' SubClassOf 'derives_from' some 'cell type'
+- 'Tn5 B1-4' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/NCBITaxon_7111
++ 'Tn5 B1-4' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022723
+Label(s): GC-2 
+- 'GC-2' SubClassOf 'derives_from' some 'cell type'
+- 'GC-2' SubClassOf 'cultured cell'
+- 'GC-2' SubClassOf 'derives_from' some 'Mus musculus'
++ 'GC-2' SubClassOf 'mouse cell line'
++ 'GC-2' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022722
+Label(s): fluid shear stress 
+- 'fluid shear stress' SubClassOf 'cultured cell'
++ 'fluid shear stress' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022721
+Label(s): Nucleosome 
+- 'Nucleosome' SubClassOf 'cultured cell'
++ 'Nucleosome' SubClassOf 'organelle'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022720
+Label(s): MEL-JUSO 
+- 'MEL-JUSO' SubClassOf 'derives_from' some 'skin of body'
+- 'MEL-JUSO' SubClassOf 'bearer_of' some 'melanoma'
+- 'MEL-JUSO' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'MEL-JUSO' SubClassOf 'derives_from' some 'cell type'
++ 'MEL-JUSO' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('skin of body' and ('part_of' some 'Homo sapiens')))))
++ 'MEL-JUSO' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022718
+Label(s): TCam-2 
+- 'TCam-2' SubClassOf 'derives_from' some 'testis'
+- 'TCam-2' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'TCam-2' SubClassOf 'derives_from' some 'cell type'
+- 'TCam-2' SubClassOf 'cultured cell'
+- 'TCam-2' SubClassOf 'bearer_of' some 'testicular seminoma'
++ 'TCam-2' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('testis' and ('part_of' some 'Homo sapiens')))))
++ 'TCam-2' SubClassOf 'Homo sapiens cell line'
++ 'TCam-2' SubClassOf 'cancer cell line'
++ 'TCam-2' SubClassOf 'cultured cell' and ('bearer_of' some 'testicular seminoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022717
+Label(s): 8305C 
+- '8305C' SubClassOf 'derives_from' some 'Homo sapiens'
+- '8305C' SubClassOf 'derives_from' some 'cell type'
+- '8305C' SubClassOf 'bearer_of' some 'thyroid carcinoma'
+- '8305C' SubClassOf 'derives_from' some 'thyroid gland'
++ '8305C' SubClassOf 'Homo sapiens cell line'
++ '8305C' SubClassOf 'cancer cell line' and ('bearer_of' some 'thyroid carcinoma')
++ '8305C' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('thyroid gland' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022716
+Label(s): WRL-68 
+- 'WRL-68' SubClassOf 'bearer_of' some 'cervical adenocarcinoma'
+- 'WRL-68' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'WRL-68' SubClassOf 'derives_from' some 'uterine cervix'
+- 'WRL-68' SubClassOf 'derives_from' some 'cell type'
++ 'WRL-68' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('uterine cervix' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022715
+Label(s): SK-CO15 
+- 'SK-CO15' SubClassOf 'derives_from' some 'cell type'
+- 'SK-CO15' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'SK-CO15' SubClassOf 'derives_from' some 'intestinal epithelial cell'
++ 'SK-CO15' SubClassOf 'cultured cell' and ('derives_from' some 
+('intestinal epithelial cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'SK-CO15' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022713
+Label(s): Nthy-ori 3-1 
+- 'Nthy-ori 3-1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'Nthy-ori 3-1' SubClassOf 'derives_from' some 'cell type'
+- 'Nthy-ori 3-1' SubClassOf 'cultured cell'
++ 'Nthy-ori 3-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'Nthy-ori 3-1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022712
+Label(s): LN-428 
+- 'LN-428' SubClassOf 'derives_from' some 'brain'
+- 'LN-428' SubClassOf 'bearer_of' some 'glioblastoma multiforme'
+- 'LN-428' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'LN-428' SubClassOf 'bearer_of' some 'glioblastoma'
+- 'LN-428' SubClassOf 'derives_from' some 'cell type'
+- 'LN-428' SubClassOf 'cultured cell'
++ 'LN-428' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('brain' and ('part_of' some 'Homo sapiens')))))
++ 'LN-428' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022711
+Label(s): LX-2 
+- 'LX-2' SubClassOf 'derives_from' some 'hepatic stellate cell'
+- 'LX-2' SubClassOf 'cultured cell'
+- 'LX-2' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'LX-2' SubClassOf 'derives_from' some 'cell type'
++ 'LX-2' SubClassOf 'fibroblast derived cell line'
++ 'LX-2' SubClassOf 'cultured cell' and ('derives_from' some 
+('hepatic stellate cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'LX-2' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022710
+Label(s): Mahlavu 
+- 'Mahlavu' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'Mahlavu' SubClassOf 'cancer cell line'
+- 'Mahlavu' SubClassOf 'derives_from' some 'cell type'
+- 'Mahlavu' SubClassOf 'bearer_of' some 'hepatocellular carcinoma'
+- 'Mahlavu' SubClassOf 'derives_from' some 'liver'
++ 'Mahlavu' SubClassOf 'Homo sapiens cell line'
++ 'Mahlavu' SubClassOf 'hepatoma cell line'
++ 'Mahlavu' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Homo sapiens')))))
++ 'Mahlavu' SubClassOf 'cancer cell line' and ('bearer_of' some 'hepatocellular carcinoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022708
+Label(s): PD20 
+- 'PD20' SubClassOf 'derives_from' some 'fibroblast'
+- 'PD20' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'PD20' SubClassOf 'derives_from' some 'cell type'
+- 'PD20' SubClassOf 'bearer_of' some 'Fanconi anemia complementation group D2'
++ 'PD20' SubClassOf 'fibroblast' and ('bearer_of' some 'Fanconi anemia complementation group D2')
++ 'PD20' SubClassOf 'disease cell type'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022707
+Label(s): HKE-3 
+- 'HKE-3' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HKE-3' SubClassOf 'bearer_of' some 'colorectal carcinoma'
+- 'HKE-3' SubClassOf 'derives_from' some 'colon'
+- 'HKE-3' SubClassOf 'derives_from' some 'cell type'
+- 'HKE-3' SubClassOf 'cultured cell'
++ 'HKE-3' SubClassOf 'cultured cell' and ('bearer_of' some 'colorectal carcinoma')
++ 'HKE-3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('colon' and ('part_of' some 'Homo sapiens')))))
++ 'HKE-3' SubClassOf 'colorectal cancer cell line'
++ 'HKE-3' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022706
+Label(s): U3082MG 
+- 'U3082MG' SubClassOf 'derives_from' some 'cell type'
+- 'U3082MG' SubClassOf 'bearer_of' some 'glioblastoma multiforme'
+- 'U3082MG' SubClassOf 'derives_from' some 'brain'
+- 'U3082MG' SubClassOf 'cultured cell'
+- 'U3082MG' SubClassOf 'bearer_of' some 'glioblastoma'
+- 'U3082MG' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'U3082MG' SubClassOf 'Homo sapiens cell line'
++ 'U3082MG' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('brain' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022705
+Label(s): U3118MG 
+- 'U3118MG' SubClassOf 'derives_from' some 'brain'
+- 'U3118MG' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'U3118MG' SubClassOf 'cultured cell'
+- 'U3118MG' SubClassOf 'derives_from' some 'cell type'
+- 'U3118MG' SubClassOf 'bearer_of' some 'glioblastoma'
+- 'U3118MG' SubClassOf 'bearer_of' some 'glioblastoma multiforme'
++ 'U3118MG' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('brain' and ('part_of' some 'Homo sapiens')))))
++ 'U3118MG' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022701
+Label(s): MCF-7/C4-12 
+- 'MCF-7/C4-12' SubClassOf 'bearer_of' some 'Invasive Breast Carcinoma'
+- 'MCF-7/C4-12' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'MCF-7/C4-12' SubClassOf 'cultured cell'
+- 'MCF-7/C4-12' SubClassOf 'derives_from' some 'cell type'
+- 'MCF-7/C4-12' SubClassOf 'derives_from' some 'breast'
++ 'MCF-7/C4-12' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('breast' and ('part_of' some 'Homo sapiens')))))
++ 'MCF-7/C4-12' SubClassOf 'breast cancer cell line'
++ 'MCF-7/C4-12' SubClassOf 'cultured cell' and ('bearer_of' some 'Invasive Breast Carcinoma')
++ 'MCF-7/C4-12' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022700
+Label(s): EW-7 
+- 'EW-7' SubClassOf 'bearer_of' some 'Ewing sarcoma'
+- 'EW-7' SubClassOf 'derives_from' some 'cell type'
+- 'EW-7' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'EW-7' SubClassOf 'cultured cell'
++ 'EW-7' SubClassOf 'cancer cell line'
++ 'EW-7' SubClassOf 'cultured cell' and ('bearer_of' some 'Ewing sarcoma')
++ 'EW-7' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'EW-7' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022699
+Label(s): RAO-3 
+- 'RAO-3' SubClassOf 'derives_from' some 'cell type'
+- 'RAO-3' SubClassOf 'cultured cell'
+- 'RAO-3' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'RAO-3' SubClassOf 'derives_from' some 'mammary gland epithelial cell'
++ 'RAO-3' SubClassOf 'cultured cell' and ('derives_from' some 
+('mammary gland epithelial cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'RAO-3' SubClassOf 'epithelial cell derived cell line'
++ 'RAO-3' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022698
+Label(s): XPCS2BA 
+- 'XPCS2BA' SubClassOf 'bearer_of' some 'xeroderma pigmentosum'
+- 'XPCS2BA' SubClassOf 'derives_from' some 'cell type'
+- 'XPCS2BA' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'XPCS2BA' SubClassOf 'derives_from' some 'fibroblast'
++ 'XPCS2BA' SubClassOf 'Homo sapiens cell line'
++ 'XPCS2BA' SubClassOf 'fibroblast derived cell line' and ('bearer_of' some 'xeroderma pigmentosum')
++ 'XPCS2BA' SubClassOf 'cultured cell' and ('derives_from' some 
+('fibroblast' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022697
+Label(s): tsA-201 
+- 'tsA-201' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'tsA-201' SubClassOf 'cultured cell'
+- 'tsA-201' SubClassOf 'derives_from' some 'cell type'
+- 'tsA-201' SubClassOf 'derives_from' some 'kidney'
++ 'tsA-201' SubClassOf 'Homo sapiens cell line'
++ 'tsA-201' SubClassOf 'kidney derived cell line'
++ 'tsA-201' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('kidney' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022696
+Label(s): HVTs-SM1 
+- 'HVTs-SM1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HVTs-SM1' SubClassOf 'cultured cell'
+- 'HVTs-SM1' SubClassOf 'derives_from' some 'cell type'
++ 'HVTs-SM1' SubClassOf 'Homo sapiens cell line'
++ 'HVTs-SM1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022695
+Label(s): U6A 
+- 'U6A' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'U6A' SubClassOf 'cultured cell'
+- 'U6A' SubClassOf 'bearer_of' some 'sarcoma'
+- 'U6A' SubClassOf 'derives_from' some 'cell type'
++ 'U6A' SubClassOf 'cancer cell line'
++ 'U6A' SubClassOf 'cultured cell' and ('bearer_of' some 'sarcoma')
++ 'U6A' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'U6A' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022694
+Label(s): MOLM-13 
+- 'MOLM-13' SubClassOf 'cultured cell'
+- 'MOLM-13' SubClassOf 'derives_from' some 'blood'
+- 'MOLM-13' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'MOLM-13' SubClassOf 'bearer_of' some 'acute myeloid leukemia'
+- 'MOLM-13' SubClassOf 'derives_from' some 'cell type'
++ 'MOLM-13' SubClassOf 'Homo sapiens cell line'
++ 'MOLM-13' SubClassOf 'cancer cell line'
++ 'MOLM-13' SubClassOf 'lymphoma or leukaemia cell line'
++ 'MOLM-13' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
++ 'MOLM-13' SubClassOf 'cultured cell' and ('bearer_of' some 'acute myeloid leukemia')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022692
+Label(s): IMR-5 
+- 'IMR-5' SubClassOf 'bearer_of' some 'neuroblastoma'
+- 'IMR-5' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'IMR-5' SubClassOf 'derives_from' some 'abdomen'
+- 'IMR-5' SubClassOf 'derives_from' some 'cell type'
++ 'IMR-5' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('abdomen' and ('part_of' some 'Homo sapiens')))))
++ 'IMR-5' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022690
+Label(s): 697 
+- '697' SubClassOf 'cultured cell'
+- '697' SubClassOf 'derives_from' some 'Homo sapiens'
+- '697' SubClassOf 'derives_from' some 'bone marrow'
+- '697' SubClassOf 'bearer_of' some 'acute lymphoblastic leukemia'
+- '697' SubClassOf 'derives_from' some 'cell type'
++ '697' SubClassOf 'cultured cell' and ('bearer_of' some 'acute lymphoblastic leukemia')
++ '697' SubClassOf 'lymphoma or leukaemia cell line'
++ '697' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('bone marrow' and ('part_of' some 'Homo sapiens')))))
++ '697' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022689
+Label(s): FU-OV-1 
+- 'FU-OV-1' SubClassOf 'derives_from' some 'cell type'
+- 'FU-OV-1' SubClassOf 'derives_from' some 'ovary'
+- 'FU-OV-1' SubClassOf 'bearer_of' some 'ovarian serous adenocarcinoma'
+- 'FU-OV-1' SubClassOf 'cultured cell'
+- 'FU-OV-1' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'FU-OV-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens')))))
++ 'FU-OV-1' SubClassOf 'ovarian cancer cell lines'
++ 'FU-OV-1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022687
+Label(s): HuTu-80 
+- 'HuTu-80' SubClassOf 'derives_from' some 'duodenum'
+- 'HuTu-80' SubClassOf 'derives_from' some 'cell type'
+- 'HuTu-80' SubClassOf 'bearer_of' some 'Duodenal Adenocarcinoma'
+- 'HuTu-80' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'HuTu-80' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('duodenum' and ('part_of' some 'Homo sapiens')))))
++ 'HuTu-80' SubClassOf 'Homo sapiens cell line'
++ 'HuTu-80' SubClassOf 'cancer cell line' and ('bearer_of' some 'Duodenal Adenocarcinoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022685
+Label(s): PER.C6 
+- 'PER.C6' SubClassOf 'cultured cell'
+- 'PER.C6' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'PER.C6' SubClassOf 'derives_from' some 'cell type'
++ 'PER.C6' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'PER.C6' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022680
+Label(s): T2 
+- 'T2' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'T2' SubClassOf 'derives_from' some 'blood'
+- 'T2' SubClassOf 'derives_from' some 'cell type'
+- 'T2' SubClassOf 'cultured cell'
++ 'T2' SubClassOf 'Homo sapiens cell line'
++ 'T2' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022679
+Label(s): SACC-83 
+- 'SACC-83' SubClassOf 'derives_from' some 'saliva-secreting gland'
+- 'SACC-83' SubClassOf 'derives_from' some 'cell type'
+- 'SACC-83' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'SACC-83' SubClassOf 'bearer_of' some 'salivary gland adenoid cystic carcinoma'
+- 'SACC-83' SubClassOf 'bearer_of' some 'adenoid cystic carcinoma'
++ 'SACC-83' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('saliva-secreting gland' and ('part_of' some 'Homo sapiens')))))
++ 'SACC-83' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022678
+Label(s): HCCLM-3 
+- 'HCCLM-3' SubClassOf 'derives_from' some 'cell type'
+- 'HCCLM-3' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HCCLM-3' SubClassOf 'derives_from' some 'liver'
+- 'HCCLM-3' SubClassOf 'bearer_of' some 'hepatocellular carcinoma'
+- 'HCCLM-3' SubClassOf 'cancer cell line'
++ 'HCCLM-3' SubClassOf 'Homo sapiens cell line'
++ 'HCCLM-3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Homo sapiens')))))
++ 'HCCLM-3' SubClassOf 'cancer cell line' and ('bearer_of' some 'hepatocellular carcinoma')
++ 'HCCLM-3' SubClassOf 'hepatoma cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022677
+Label(s): 5-8F 
+- '5-8F' SubClassOf 'derives_from' some 'nasopharynx'
+- '5-8F' SubClassOf 'bearer_of' some 'nasopharyngeal carcinoma'
+- '5-8F' SubClassOf 'derives_from' some 'cell type'
+- '5-8F' SubClassOf 'derives_from' some 'Homo sapiens'
+- '5-8F' SubClassOf 'bearer_of' some 'nasopharyngeal squamous cell carcinoma'
+- '5-8F' SubClassOf 'cultured cell'
++ '5-8F' SubClassOf 'Homo sapiens cell line'
++ '5-8F' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('nasopharynx' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022676
+Label(s): SW-1736 
+- 'SW-1736' SubClassOf 'derives_from' some 'thyroid gland'
+- 'SW-1736' SubClassOf 'derives_from' some 'cell type'
+- 'SW-1736' SubClassOf 'bearer_of' some 'Thyroid Gland Undifferentiated (Anaplastic) Carcinoma'
+- 'SW-1736' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'SW-1736' SubClassOf 'Homo sapiens cell line'
++ 'SW-1736' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('thyroid gland' and ('part_of' some 'Homo sapiens')))))
++ 'SW-1736' SubClassOf 'cancer cell line' and ('bearer_of' some 'Thyroid Gland Undifferentiated (Anaplastic) Carcinoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022675
+Label(s): NCI-H3122 
+- 'NCI-H3122' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'NCI-H3122' SubClassOf 'bearer_of' some 'lung adenocarcinoma'
+- 'NCI-H3122' SubClassOf 'derives_from' some 'pleural effusion'
+- 'NCI-H3122' SubClassOf 'derives_from' some 'cell type'
+- 'NCI-H3122' SubClassOf 'cultured cell'
++ 'NCI-H3122' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('lung' and ('part_of' some 'Homo sapiens')))))
++ 'NCI-H3122' SubClassOf 'lung cancer cell line'
++ 'NCI-H3122' SubClassOf 'Homo sapiens cell line'
++ 'NCI-H3122' SubClassOf 'cultured cell' and ('bearer_of' some 'lung adenocarcinoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022674
+Label(s): K1 
+- 'K1' SubClassOf 'bearer_of' some 'papillary thyroid carcinoma'
+- 'K1' SubClassOf 'derives_from' some 'thyroid gland'
+- 'K1' SubClassOf 'cultured cell'
+- 'K1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'K1' SubClassOf 'derives_from' some 'cell type'
++ 'K1' SubClassOf 'cancer cell line'
++ 'K1' SubClassOf 'cultured cell' and ('bearer_of' some 'papillary thyroid carcinoma')
++ 'K1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('thyroid gland' and ('part_of' some 'Homo sapiens')))))
++ 'K1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022672
+Label(s): GES-1 
+- 'GES-1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'GES-1' SubClassOf 'cultured cell'
+- 'GES-1' SubClassOf 'derives_from' some 'cell type'
++ 'GES-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'GES-1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022666
+Label(s): HeLa M 
+- 'HeLa M' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HeLa M' SubClassOf 'bearer_of' some 'cervical adenocarcinoma'
+- 'HeLa M' SubClassOf 'derives_from' some 'uterine cervix'
+- 'HeLa M' SubClassOf 'derives_from' some 'cell type'
++ 'HeLa M' SubClassOf 'cervical adenocarcinoma cell line'
++ 'HeLa M' SubClassOf 'HeLa' and ('bearer_of' some 'cervical adenocarcinoma')
++ 'HeLa M' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('uterine cervix' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022665
+Label(s): SF-188 
+- 'SF-188' SubClassOf 'derives_from' some 'brain'
+- 'SF-188' SubClassOf 'derives_from' some 'cell type'
+- 'SF-188' SubClassOf 'bearer_of' some 'glioma'
+- 'SF-188' SubClassOf 'cultured cell'
+- 'SF-188' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'SF-188' SubClassOf 'Homo sapiens cell line'
++ 'SF-188' SubClassOf 'cultured cell' and ('bearer_of' some 'glioma')
++ 'SF-188' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('brain' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022663
+Label(s): HuH-7-Lunet 
+- 'HuH-7-Lunet' SubClassOf 'derives_from' some 'liver'
+- 'HuH-7-Lunet' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HuH-7-Lunet' SubClassOf 'bearer_of' some 'hepatocellular carcinoma'
+- 'HuH-7-Lunet' SubClassOf 'cultured cell'
+- 'HuH-7-Lunet' SubClassOf 'derives_from' some 'cell type'
++ 'HuH-7-Lunet' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Homo sapiens')))))
++ 'HuH-7-Lunet' SubClassOf 'hepatoma cell line'
++ 'HuH-7-Lunet' SubClassOf 'cultured cell' and ('bearer_of' some 'hepatocellular carcinoma')
++ 'HuH-7-Lunet' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022662
+Label(s): OSU-2 
+- 'OSU-2' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'OSU-2' SubClassOf 'derives_from' some 'cell type'
++ 'OSU-2' SubClassOf 'Homo sapiens cell line'
++ 'OSU-2' SubClassOf 'cultured cell' and ('derives_from' some 
+('fibroblast' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022658
+Label(s): TE-1 
+- 'TE-1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'TE-1' SubClassOf 'bearer_of' some 'esophageal squamous cell carcinoma'
+- 'TE-1' SubClassOf 'cultured cell'
+- 'TE-1' SubClassOf 'derives_from' some 'esophagus'
+- 'TE-1' SubClassOf 'derives_from' some 'cell type'
++ 'TE-1' SubClassOf 'cancer cell line'
++ 'TE-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('esophagus' and ('part_of' some 'Homo sapiens')))))
++ 'TE-1' SubClassOf 'cultured cell' and ('bearer_of' some 'esophageal squamous cell carcinoma')
++ 'TE-1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022657
+Label(s): HOM-2 
+- 'HOM-2' SubClassOf 'derives_from' some 'cell type'
+- 'HOM-2' SubClassOf 'derives_from' some 'B cell'
+- 'HOM-2' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HOM-2' SubClassOf 'derives_from' some 'blood'
++ 'HOM-2' SubClassOf 'Homo sapiens cell line'
++ 'HOM-2' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022656
+Label(s): J.CaM1.6 
+- 'J.CaM1.6' SubClassOf 'derives_from' some 'blood'
+- 'J.CaM1.6' SubClassOf 'derives_from' some 'T cell'
+- 'J.CaM1.6' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'J.CaM1.6' SubClassOf 'derives_from' some 'cell type'
+- 'J.CaM1.6' SubClassOf 'bearer_of' some 'T-cell acute lymphoblastic leukemia'
++ 'J.CaM1.6' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022655
+Label(s): MLS 402-91 
+- 'MLS 402-91' SubClassOf 'cultured cell'
+- 'MLS 402-91' SubClassOf 'bearer_of' some 'myxoid liposarcoma'
+- 'MLS 402-91' SubClassOf 'derives_from' some 'cell type'
+- 'MLS 402-91' SubClassOf 'derives_from' some 'adipose tissue'
+- 'MLS 402-91' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'MLS 402-91' SubClassOf 'cancer cell line'
++ 'MLS 402-91' SubClassOf 'cultured cell' and ('bearer_of' some 'myxoid liposarcoma')
++ 'MLS 402-91' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('adipose tissue' and ('part_of' some 'Homo sapiens')))))
++ 'MLS 402-91' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022653
+Label(s): Hs-578Bst  
+- 'Hs-578Bst ' SubClassOf 'derives_from' some 'mammary gland epithelial cell'
+- 'Hs-578Bst ' SubClassOf 'cultured cell'
+- 'Hs-578Bst ' SubClassOf 'derives_from' some 'cell type'
+- 'Hs-578Bst ' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'Hs-578Bst ' SubClassOf 'epithelial cell derived cell line'
++ 'Hs-578Bst ' SubClassOf 'Homo sapiens cell line'
++ 'Hs-578Bst ' SubClassOf 'cultured cell' and ('derives_from' some 
+('mammary gland epithelial cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022652
+Label(s): C3ABR 
+- 'C3ABR' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'C3ABR' SubClassOf 'derives_from' some 'cell type'
+- 'C3ABR' SubClassOf 'derives_from' some 'blood'
++ 'C3ABR' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
++ 'C3ABR' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022651
+Label(s): IHKE-1 
+- 'IHKE-1' SubClassOf 'cultured cell'
+- 'IHKE-1' SubClassOf 'derives_from' some 'cell type'
+- 'IHKE-1' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'IHKE-1' SubClassOf 'Homo sapiens cell line'
++ 'IHKE-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022650
+Label(s): UPCI-SCC-131 
+- 'UPCI-SCC-131' SubClassOf 'cultured cell'
+- 'UPCI-SCC-131' SubClassOf 'derives_from' some 'oral cavity'
+- 'UPCI-SCC-131' SubClassOf 'bearer_of' some 'oral squamous cell carcinoma'
+- 'UPCI-SCC-131' SubClassOf 'derives_from' some 'cell type'
+- 'UPCI-SCC-131' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'UPCI-SCC-131' SubClassOf 'cultured cell' and ('bearer_of' some 'oral squamous cell carcinoma')
++ 'UPCI-SCC-131' SubClassOf 'Homo sapiens cell line'
++ 'UPCI-SCC-131' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('oral cavity' and ('part_of' some 'Homo sapiens')))))
++ 'UPCI-SCC-131' SubClassOf 'cancer cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022648
+Label(s): 253J-BV 
+- '253J-BV' SubClassOf 'derives_from' some 'cell type'
+- '253J-BV' SubClassOf 'derives_from' some 'Homo sapiens'
+- '253J-BV' SubClassOf 'bearer_of' some 'Transitional Cell Carcinoma'
+- '253J-BV' SubClassOf 'cultured cell'
++ '253J-BV' SubClassOf 'cancer cell line'
++ '253J-BV' SubClassOf 'cultured cell' and ('bearer_of' some 'Transitional Cell Carcinoma')
++ '253J-BV' SubClassOf 'Homo sapiens cell line'
++ '253J-BV' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022647
+Label(s): C-28/I2 
+- 'C-28/I2' SubClassOf 'derives_from' some 'cell type'
+- 'C-28/I2' SubClassOf 'cultured cell'
+- 'C-28/I2' SubClassOf 'derives_from' some 'chondrocyte'
+- 'C-28/I2' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'C-28/I2' SubClassOf 'cultured cell' and ('derives_from' some 
+('chondrocyte' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'C-28/I2' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022646
+Label(s): HER911 
+- 'HER911' SubClassOf 'derives_from' some 'cell type'
+- 'HER911' SubClassOf 'cultured cell'
+- 'HER911' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'HER911' SubClassOf 'Homo sapiens cell line'
++ 'HER911' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022645
+Label(s): CWR-R1 
+- 'CWR-R1' SubClassOf 'derives_from' some 'prostate gland'
+- 'CWR-R1' SubClassOf 'derives_from' some 'cell type'
+- 'CWR-R1' SubClassOf 'bearer_of' some 'prostate carcinoma'
+- 'CWR-R1' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'CWR-R1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('prostate gland' and ('part_of' some 'Homo sapiens')))))
++ 'CWR-R1' SubClassOf 'Homo sapiens cell line'
++ 'CWR-R1' SubClassOf 'prostate derived cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022643
+Label(s): BON-1  
+- 'BON-1 ' SubClassOf 'derives_from' some 'cell type'
+- 'BON-1 ' SubClassOf 'bearer_of' some 'pancreatic neuroendocrine tumor'
+- 'BON-1 ' SubClassOf 'cultured cell'
+- 'BON-1 ' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'BON-1 ' SubClassOf 'derives_from' some 'lymph node'
++ 'BON-1 ' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('lymph node' and ('part_of' some 'Homo sapiens')))))
++ 'BON-1 ' SubClassOf 'cultured cell' and ('bearer_of' some 'pancreatic neuroendocrine tumor')
++ 'BON-1 ' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022642
+Label(s): PLH 
+- 'PLH' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'PLH' SubClassOf 'derives_from' some 'blood'
+- 'PLH' SubClassOf 'derives_from' some 'cell type'
++ 'PLH' SubClassOf 'Homo sapiens cell line'
++ 'PLH' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022641
+Label(s): BM9 
+- 'BM9' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'BM9' SubClassOf 'derives_from' some 'blood'
+- 'BM9' SubClassOf 'derives_from' some 'cell type'
++ 'BM9' SubClassOf 'Homo sapiens cell line'
++ 'BM9' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022640
+Label(s): SAVC 
+- 'SAVC' SubClassOf 'derives_from' some 'cell type'
+- 'SAVC' SubClassOf 'derives_from' some 'blood'
+- 'SAVC' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'SAVC' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
++ 'SAVC' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022638
+Label(s): SK-UT-2  
+- 'SK-UT-2 ' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'SK-UT-2 ' SubClassOf 'derives_from' some 'endometrium'
+- 'SK-UT-2 ' SubClassOf 'bearer_of' some 'endometrial carcinoma'
+- 'SK-UT-2 ' SubClassOf 'cultured cell'
+- 'SK-UT-2 ' SubClassOf 'derives_from' some 'cell type'
++ 'SK-UT-2 ' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('endometrium' and ('part_of' some 'Homo sapiens')))))
++ 'SK-UT-2 ' SubClassOf 'cultured cell' and ('bearer_of' some 'endometrial carcinoma')
++ 'SK-UT-2 ' SubClassOf 'Homo sapiens cell line'
++ 'SK-UT-2 ' SubClassOf 'cancer cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022637
+Label(s): T47D:A18 
+- 'T47D:A18' SubClassOf 'derives_from' some 'pleural effusion'
+- 'T47D:A18' SubClassOf 'cultured cell'
+- 'T47D:A18' SubClassOf 'bearer_of' some 'Invasive Breast Carcinoma'
+- 'T47D:A18' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'T47D:A18' SubClassOf 'derives_from' some 'cell type'
++ 'T47D:A18' SubClassOf 'cultured cell' and ('bearer_of' some 'Invasive Breast Carcinoma')
++ 'T47D:A18' SubClassOf 'Homo sapiens cell line'
++ 'T47D:A18' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'T47D:A18' SubClassOf 'breast cancer cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022636
+Label(s): FET 
+- 'FET' SubClassOf 'derives_from' some 'colon'
+- 'FET' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'FET' SubClassOf 'derives_from' some 'cell type'
+- 'FET' SubClassOf 'bearer_of' some 'colorectal cancer'
++ 'FET' SubClassOf 'Homo sapiens cell line'
++ 'FET' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('colon' and ('part_of' some 'Homo sapiens')))))
++ 'FET' SubClassOf 'colorectal cancer cell line' and ('bearer_of' some 'colorectal cancer')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022635
+Label(s): PRIESS 
+- 'PRIESS' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'PRIESS' SubClassOf 'derives_from' some 'blood'
+- 'PRIESS' SubClassOf 'derives_from' some 'cell type'
++ 'PRIESS' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
++ 'PRIESS' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022634
+Label(s): H157 
+- 'H157' SubClassOf 'derives_from' some 'cell type'
+- 'H157' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'H157' SubClassOf 'derives_from' some 'oral cavity'
+- 'H157' SubClassOf 'bearer_of' some 'oral squamous cell carcinoma'
++ 'H157' SubClassOf 'cancer cell line' and ('bearer_of' some 'oral squamous cell carcinoma')
++ 'H157' SubClassOf 'Homo sapiens cell line'
++ 'H157' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('oral cavity' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022633
+Label(s): IHCF 
+- 'IHCF' SubClassOf 'derives_from' some 'cornea'
+- 'IHCF' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'IHCF' SubClassOf 'cultured cell'
+- 'IHCF' SubClassOf 'derives_from' some 'cell type'
+- 'IHCF' SubClassOf 'derives_from' some 'fibroblast'
++ 'IHCF' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'IHCF' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022632
+Label(s): 2BS 
+- '2BS' SubClassOf 'derives_from' some 'fibroblast of lung'
+- '2BS' SubClassOf 'cultured cell'
+- '2BS' SubClassOf 'derives_from' some 'Homo sapiens'
+- '2BS' SubClassOf 'derives_from' some 'cell type'
++ '2BS' SubClassOf 'cultured cell' and ('derives_from' some 
+('fibroblast of lung' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ '2BS' SubClassOf 'fibroblast derived cell line'
++ '2BS' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022631
+Label(s): RCB1903 cell 
+- 'RCB1903 cell' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'RCB1903 cell' SubClassOf 'bearer_of' some 'Ovarian Endometrioid Adenocarcinoma'
+- 'RCB1903 cell' SubClassOf 'derives_from' some 'ascitic fluid'
+- 'RCB1903 cell' SubClassOf 'fibroblast derived cell line'
+- 'RCB1903 cell' SubClassOf 'derives_from' some 'cell type'
++ 'RCB1903 cell' SubClassOf 'fibroblast'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022630
+Label(s): AC16 
+- 'AC16' SubClassOf 'cultured cell'
+- 'AC16' SubClassOf 'derives_from' some 'cell type'
+- 'AC16' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'AC16' SubClassOf 'derives_from' some 'cardiac muscle cell'
++ 'AC16' SubClassOf 'muscle cell derived cell line'
++ 'AC16' SubClassOf 'cultured cell' and ('derives_from' some 
+('cardiac muscle cell' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'AC16' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022629
+Label(s): TPC-1  
+- 'TPC-1 ' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'TPC-1 ' SubClassOf 'bearer_of' some 'papillary thyroid carcinoma'
+- 'TPC-1 ' SubClassOf 'derives_from' some 'cell type'
+- 'TPC-1 ' SubClassOf 'derives_from' some 'thyroid gland'
++ 'TPC-1 ' SubClassOf 'cancer cell line' and ('bearer_of' some 'papillary thyroid carcinoma')
++ 'TPC-1 ' SubClassOf 'Homo sapiens cell line'
++ 'TPC-1 ' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('thyroid gland' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022627
+Label(s): U-178MG 
+- 'U-178MG' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'U-178MG' SubClassOf 'cultured cell'
+- 'U-178MG' SubClassOf 'bearer_of' some 'astrocytoma'
+- 'U-178MG' SubClassOf 'derives_from' some 'cell type'
+- 'U-178MG' SubClassOf 'derives_from' some 'central nervous system'
++ 'U-178MG' SubClassOf 'Homo sapiens cell line'
++ 'U-178MG' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('central nervous system' and ('part_of' some 'Homo sapiens')))))
++ 'U-178MG' SubClassOf 'cultured cell' and ('bearer_of' some 'astrocytoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022626
+Label(s): C666 
+- 'C666' SubClassOf 'cultured cell'
+- 'C666' SubClassOf 'bearer_of' some 'nasopharyngeal squamous cell carcinoma'
+- 'C666' SubClassOf 'derives_from' some 'cell type'
+- 'C666' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'C666' SubClassOf 'derives_from' some 'nasopharynx'
++ 'C666' SubClassOf 'Homo sapiens cell line'
++ 'C666' SubClassOf 'cultured cell' and ('bearer_of' some 'nasopharyngeal squamous cell carcinoma')
++ 'C666' SubClassOf 'cancer cell line'
++ 'C666' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('nasopharynx' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022625
+Label(s): ST-1 
+- 'ST-1' SubClassOf 'derives_from' some 'blood'
+- 'ST-1' SubClassOf 'bearer_of' some 'adult T-cell leukemia/lymphoma'
+- 'ST-1' SubClassOf 'cultured cell'
+- 'ST-1' SubClassOf 'derives_from' some 'cell type'
+- 'ST-1' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'ST-1' SubClassOf 'cultured cell' and ('bearer_of' some 'adult T-cell leukemia/lymphoma')
++ 'ST-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
++ 'ST-1' SubClassOf 'lymphoma or leukaemia cell line'
++ 'ST-1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022624
+Label(s): HuT 102 cell 
+- 'HuT 102 cell' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HuT 102 cell' SubClassOf 'derives_from' some 'blood'
+- 'HuT 102 cell' SubClassOf 'bearer_of' some 'lymphoma'
+- 'HuT 102 cell' SubClassOf 'bearer_of' some 'mycosis fungoides'
+- 'HuT 102 cell' SubClassOf 'derives_from' some 'cell type'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022623
+Label(s): SOSP-9607 
+- 'SOSP-9607' SubClassOf 'derives_from' some 'cell type'
+- 'SOSP-9607' SubClassOf 'bearer_of' some 'osteosarcoma'
+- 'SOSP-9607' SubClassOf 'derives_from' some 'bone tissue'
+- 'SOSP-9607' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'SOSP-9607' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('bone tissue' and ('part_of' some 'Homo sapiens')))))
++ 'SOSP-9607' SubClassOf 'Homo sapiens cell line'
++ 'SOSP-9607' SubClassOf 'cultured cell' and ('bearer_of' some 'osteosarcoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022622
+Label(s): LCL 721.221 
+- 'LCL 721.221' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'LCL 721.221' SubClassOf 'derives_from' some 'cell type'
+- 'LCL 721.221' SubClassOf 'derives_from' some 'blood'
++ 'LCL 721.221' SubClassOf 'Homo sapiens cell line'
++ 'LCL 721.221' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022621
+Label(s): OECM-1 
+- 'OECM-1' SubClassOf 'bearer_of' some 'oral squamous cell carcinoma'
+- 'OECM-1' SubClassOf 'derives_from' some 'oral cavity'
+- 'OECM-1' SubClassOf 'derives_from' some 'cell type'
+- 'OECM-1' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'OECM-1' SubClassOf 'Homo sapiens cell line'
++ 'OECM-1' SubClassOf 'cultured cell' and ('bearer_of' some 'oral squamous cell carcinoma')
++ 'OECM-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('oral cavity' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022619
+Label(s): Rh-28 
+- 'Rh-28' SubClassOf 'bearer_of' some 'alveolar rhabdomyosarcoma'
+- 'Rh-28' SubClassOf 'cultured cell'
+- 'Rh-28' SubClassOf 'derives_from' some 'cell type'
+- 'Rh-28' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'Rh-28' SubClassOf 'derives_from' some 'lymph node'
++ 'Rh-28' SubClassOf 'Homo sapiens cell line'
++ 'Rh-28' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('lymph node' and ('part_of' some 'Homo sapiens')))))
++ 'Rh-28' SubClassOf 'cancer cell line'
++ 'Rh-28' SubClassOf 'cultured cell' and ('bearer_of' some 'alveolar rhabdomyosarcoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022618
+Label(s): MGR3 
+- 'MGR3' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'MGR3' SubClassOf 'derives_from' some 'cell type'
+- 'MGR3' SubClassOf 'cultured cell'
+- 'MGR3' SubClassOf 'derives_from' some 'brain'
++ 'MGR3' SubClassOf 'cancer cell line'
++ 'MGR3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('brain' and ('part_of' some 'Homo sapiens')))))
++ 'MGR3' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022617
+Label(s): MM200 
+- 'MM200' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'MM200' SubClassOf 'derives_from' some 'skin of body'
+- 'MM200' SubClassOf 'derives_from' some 'cell type'
+- 'MM200' SubClassOf 'bearer_of' some 'melanoma'
++ 'MM200' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('skin of body' and ('part_of' some 'Homo sapiens')))))
++ 'MM200' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022616
+Label(s): BD-215 
+- 'BD-215' SubClassOf 'derives_from' some 'blood'
+- 'BD-215' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'BD-215' SubClassOf 'cultured cell'
+- 'BD-215' SubClassOf 'derives_from' some 'cell type'
+- 'BD-215' SubClassOf 'bearer_of' some 'Fanconi anemia'
++ 'BD-215' SubClassOf 'Homo sapiens cell line'
++ 'BD-215' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
++ 'BD-215' SubClassOf 'cultured cell' and ('bearer_of' some 'Fanconi anemia')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022812
+Label(s): SV40LT-SMC Clone HEP-SA 
+- 'SV40LT-SMC Clone HEP-SA' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'SV40LT-SMC Clone HEP-SA' SubClassOf 'derives_from' some 'cell type'
+- 'SV40LT-SMC Clone HEP-SA' SubClassOf 'cultured cell'
++ 'SV40LT-SMC Clone HEP-SA' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'SV40LT-SMC Clone HEP-SA' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000355
+Label(s): Malignant Mesothelioma 
++ 'Malignant Mesothelioma' SubClassOf 'digestive system cancer'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000921
+Label(s): ampulla of vater neoplasm 
++ 'ampulla of vater neoplasm' SubClassOf 'pancreatic neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000919
+Label(s): ampulla of vater cancer 
++ 'ampulla of vater cancer' SubClassOf 'Malignant Pancreatic Neoplasm'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022671
+Label(s): UWR2 
+- 'UWR2' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'UWR2' SubClassOf 'cultured cell'
+- 'UWR2' SubClassOf 'derives_from' some 'cell type'
+- 'UWR2' SubClassOf 'bearer_of' some 'glioblastoma'
+- 'UWR2' SubClassOf 'derives_from' some 'brain'
+- 'UWR2' SubClassOf 'bearer_of' some 'glioblastoma multiforme'
++ 'UWR2' SubClassOf 'Homo sapiens cell line'
++ 'UWR2' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('brain' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0009913
+Label(s): ossifying fibroma of the jaw 
++ 'ossifying fibroma of the jaw' SubClassOf 'digestive system neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003425
+Label(s): ophthalmoplegia 
++ 'ophthalmoplegia' SubClassOf 'facial paralysis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022620
+Label(s): CFBE41o- 
+- 'CFBE41o-' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'CFBE41o-' SubClassOf 'derives_from' some 'bronchial epithelial cell'
+- 'CFBE41o-' SubClassOf 'bearer_of' some 'cystic fibrosis'
+- 'CFBE41o-' SubClassOf 'derives_from' some 'cell type'
++ 'CFBE41o-' SubClassOf 'Homo sapiens cell line'
++ 'CFBE41o-' SubClassOf 'cultured cell' and ('bearer_of' some 'cystic fibrosis')
++ 'CFBE41o-' SubClassOf 'cultured cell' and ('derives_from' some 
+('bronchial epithelial cell' and ('part_of' some 
+('lung' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022639
+Label(s): MO3.13 
+- 'MO3.13' SubClassOf 'derives_from' some 'oligodendrocyte'
+- 'MO3.13' SubClassOf 'derives_from' some 'cell type'
+- 'MO3.13' SubClassOf 'cultured cell'
+- 'MO3.13' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'MO3.13' SubClassOf 'Homo sapiens cell line'
++ 'MO3.13' SubClassOf 'cultured cell' and ('derives_from' some 
+('oligodendrocyte' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022644
+Label(s): PH5CH8 
+- 'PH5CH8' SubClassOf 'derives_from' some 'cell type'
+- 'PH5CH8' SubClassOf 'derives_from' some 'hepatocyte'
+- 'PH5CH8' SubClassOf 'cultured cell'
+- 'PH5CH8' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'PH5CH8' SubClassOf 'Homo sapiens cell line'
++ 'PH5CH8' SubClassOf 'cultured cell' and ('derives_from' some 
+('hepatocyte' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'PH5CH8' SubClassOf 'epithelial cell derived cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022649
+Label(s): KHYG-1 
+- 'KHYG-1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'KHYG-1' SubClassOf 'cultured cell'
+- 'KHYG-1' SubClassOf 'bearer_of' some 'aggressive NK-cell leukemia'
+- 'KHYG-1' SubClassOf 'derives_from' some 'cell type'
+- 'KHYG-1' SubClassOf 'derives_from' some 'blood'
++ 'KHYG-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
++ 'KHYG-1' SubClassOf 'Homo sapiens cell line'
++ 'KHYG-1' SubClassOf 'cultured cell' and ('bearer_of' some 'aggressive NK-cell leukemia')
++ 'KHYG-1' SubClassOf 'lymphoma or leukaemia cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022659
+Label(s): EoL-1 
+- 'EoL-1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'EoL-1' SubClassOf 'derives_from' some 'blood'
+- 'EoL-1' SubClassOf 'bearer_of' some 'Chronic Eosinophilic Leukemia, Not Otherwise Specified'
+- 'EoL-1' SubClassOf 'derives_from' some 'cell type'
++ 'EoL-1' SubClassOf 'Homo sapiens cell line'
++ 'EoL-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022660
+Label(s): PITOUT 
+- 'PITOUT' SubClassOf 'derives_from' some 'cell type'
+- 'PITOUT' SubClassOf 'derives_from' some 'B cell'
+- 'PITOUT' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'PITOUT' SubClassOf 'derives_from' some 'blood'
++ 'PITOUT' SubClassOf 'Homo sapiens cell line'
++ 'PITOUT' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022661
+Label(s): LCL1 
+- 'LCL1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'LCL1' SubClassOf 'derives_from' some 'cell type'
+- 'LCL1' SubClassOf 'derives_from' some 'blood'
++ 'LCL1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Homo sapiens')))))
++ 'LCL1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022664
+Label(s): Colo-320 
+- 'Colo-320' SubClassOf 'derives_from' some 'cell type'
+- 'Colo-320' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'Colo-320' SubClassOf 'derives_from' some 'colon'
+- 'Colo-320' SubClassOf 'bearer_of' some 'colorectal carcinoma'
+- 'Colo-320' SubClassOf 'bearer_of' some 'colorectal cancer'
++ 'Colo-320' SubClassOf 'Homo sapiens cell line'
++ 'Colo-320' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('colon' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022667
+Label(s): RCB2099 
+- 'RCB2099' SubClassOf 'cultured cell'
+- 'RCB2099' SubClassOf 'bearer_of' some 'esophageal squamous cell carcinoma'
+- 'RCB2099' SubClassOf 'derives_from' some 'esophagus'
+- 'RCB2099' SubClassOf 'derives_from' some 'cell type'
+- 'RCB2099' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'RCB2099' SubClassOf 'cancer cell line'
++ 'RCB2099' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('esophagus' and ('part_of' some 'Homo sapiens')))))
++ 'RCB2099' SubClassOf 'Homo sapiens cell line'
++ 'RCB2099' SubClassOf 'cultured cell' and ('bearer_of' some 'esophageal squamous cell carcinoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022669
+Label(s): 8505C 
+- '8505C' SubClassOf 'bearer_of' some 'Thyroid Gland Undifferentiated (Anaplastic) Carcinoma'
+- '8505C' SubClassOf 'derives_from' some 'cell type'
+- '8505C' SubClassOf 'derives_from' some 'Homo sapiens'
+- '8505C' SubClassOf 'derives_from' some 'thyroid gland'
++ '8505C' SubClassOf 'cancer cell line' and ('bearer_of' some 'Thyroid Gland Undifferentiated (Anaplastic) Carcinoma')
++ '8505C' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('thyroid gland' and ('part_of' some 'Homo sapiens')))))
++ '8505C' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022670
+Label(s): UWR1 
+- 'UWR1' SubClassOf 'cultured cell'
+- 'UWR1' SubClassOf 'bearer_of' some 'anaplastic astrocytoma'
+- 'UWR1' SubClassOf 'derives_from' some 'cell type'
+- 'UWR1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'UWR1' SubClassOf 'derives_from' some 'brain'
++ 'UWR1' SubClassOf 'cultured cell' and ('bearer_of' some 'anaplastic astrocytoma')
++ 'UWR1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('brain' and ('part_of' some 'Homo sapiens')))))
++ 'UWR1' SubClassOf 'cancer cell line'
++ 'UWR1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022681
+Label(s): SO-Rb50 
+- 'SO-Rb50' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'SO-Rb50' SubClassOf 'bearer_of' some 'retinoblastoma'
+- 'SO-Rb50' SubClassOf 'derives_from' some 'cell type'
+- 'SO-Rb50' SubClassOf 'derives_from' some 'eye'
++ 'SO-Rb50' SubClassOf 'cancer cell line' and ('bearer_of' some 'retinoblastoma')
++ 'SO-Rb50' SubClassOf 'Homo sapiens cell line'
++ 'SO-Rb50' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('eye' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022683
+Label(s): T-REx-HeLa 
+- 'T-REx-HeLa' SubClassOf 'derives_from' some 'cell type'
+- 'T-REx-HeLa' SubClassOf 'derives_from' some 'uterus'
+- 'T-REx-HeLa' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'T-REx-HeLa' SubClassOf 'bearer_of' some 'cervical adenocarcinoma'
++ 'T-REx-HeLa' SubClassOf 'Homo sapiens cell line'
++ 'T-REx-HeLa' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('uterus' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022684
+Label(s): T/C-28a2 
+- 'T/C-28a2' SubClassOf 'cultured cell'
+- 'T/C-28a2' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'T/C-28a2' SubClassOf 'derives_from' some 'chondrocyte'
+- 'T/C-28a2' SubClassOf 'derives_from' some 'cell type'
++ 'T/C-28a2' SubClassOf 'cultured cell' and ('derives_from' some 
+('chondrocyte' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'T/C-28a2' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022688
+Label(s): LAN-5 
+- 'LAN-5' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'LAN-5' SubClassOf 'derives_from' some 'bone marrow'
+- 'LAN-5' SubClassOf 'derives_from' some 'cell type'
+- 'LAN-5' SubClassOf 'bearer_of' some 'neuroblastoma'
++ 'LAN-5' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('bone marrow' and ('part_of' some 'Homo sapiens')))))
++ 'LAN-5' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022691
+Label(s): BPH-1 
+- 'BPH-1' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'BPH-1' SubClassOf 'derives_from' some 'cell type'
+- 'BPH-1' SubClassOf 'derives_from' some 'prostate gland'
+- 'BPH-1' SubClassOf 'bearer_of' some 'benign prostatic hyperplasia'
+- 'BPH-1' SubClassOf 'derives_from' some 'epithelial cell of prostate'
++ 'BPH-1' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Homo sapiens')))))
++ 'BPH-1' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022704
+Label(s): NCM-460 
+- 'NCM-460' SubClassOf 'derives_from' some 'cell type'
+- 'NCM-460' SubClassOf 'derives_from' some 'colon'
+- 'NCM-460' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'NCM-460' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('colon' and ('part_of' some 'Homo sapiens')))))
++ 'NCM-460' SubClassOf 'Homo sapiens cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022709
+Label(s): BEL-7402 
+- 'BEL-7402' SubClassOf 'derives_from' some 'cell type'
+- 'BEL-7402' SubClassOf 'derives_from' some 'uterine cervix'
+- 'BEL-7402' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'BEL-7402' SubClassOf 'bearer_of' some 'cervical adenocarcinoma'
++ 'BEL-7402' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('uterine cervix' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022714
+Label(s): LN-308 
+- 'LN-308' SubClassOf 'bearer_of' some 'glioblastoma multiforme'
+- 'LN-308' SubClassOf 'derives_from' some 'brain'
+- 'LN-308' SubClassOf 'bearer_of' some 'glioblastoma'
+- 'LN-308' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'LN-308' SubClassOf 'derives_from' some 'cell type'
+- 'LN-308' SubClassOf 'cultured cell'
++ 'LN-308' SubClassOf 'Homo sapiens cell line'
++ 'LN-308' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('brain' and ('part_of' some 'Homo sapiens')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022735
+Label(s): J-774A.1 
+- 'J-774A.1' SubClassOf 'derives_from' some 'cell type'
+- 'J-774A.1' SubClassOf 'derives_from' some 'Mus musculus'
+- 'J-774A.1' SubClassOf 'derives_from' some 'macrophage'
++ 'J-774A.1' SubClassOf 'mouse cell line'
++ 'J-774A.1' SubClassOf 'cultured cell' and ('derives_from' some 
+('macrophage' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022736
+Label(s): EL-4 
+- 'EL-4' SubClassOf 'bearer_of' some 'lymphoma'
+- 'EL-4' SubClassOf 'derives_from' some 'ascitic fluid'
+- 'EL-4' SubClassOf 'derives_from' some 'Mus musculus'
+- 'EL-4' SubClassOf 'derives_from' some 'cell type'
+- 'EL-4' SubClassOf 'derives_from' some 'T cell'
++ 'EL-4' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
++ 'EL-4' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022748
+Label(s): PS120 
+- 'PS120' SubClassOf 'derives_from' some 'cell type'
+- 'PS120' SubClassOf 'derives_from' some 'Cricetulus griseus'
+- 'PS120' SubClassOf 'derives_from' some 'lung'
+- 'PS120' SubClassOf 'derives_from' some 'fibroblast of lung'
++ 'PS120' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022749
+Label(s): BA/F3 
+- 'BA/F3' SubClassOf 'derives_from' some 'cell type'
+- 'BA/F3' SubClassOf 'derives_from' some 'blood'
+- 'BA/F3' SubClassOf 'derives_from' some 'pro-B cell'
+- 'BA/F3' SubClassOf 'cultured cell'
+- 'BA/F3' SubClassOf 'derives_from' some 'Mus musculus'
++ 'BA/F3' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('blood' and ('part_of' some 'Mus musculus')))))
++ 'BA/F3' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022759
+Label(s): B16-F10 
+- 'B16-F10' SubClassOf 'derives_from' some 'Mus musculus'
+- 'B16-F10' SubClassOf 'derives_from' some 'skin of body'
+- 'B16-F10' SubClassOf 'derives_from' some 'cell type'
+- 'B16-F10' SubClassOf 'bearer_of' some 'melanoma'
++ 'B16-F10' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('skin of body' and ('part_of' some 'Mus musculus')))))
++ 'B16-F10' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022776
+Label(s): S-180 
+- 'S-180' SubClassOf 'derives_from' some 'ascitic fluid'
+- 'S-180' SubClassOf 'bearer_of' some 'sarcoma'
+- 'S-180' SubClassOf 'cultured cell'
+- 'S-180' SubClassOf 'derives_from' some 'Mus musculus'
+- 'S-180' SubClassOf 'derives_from' some 'cell type'
++ 'S-180' SubClassOf 'mouse cell line'
++ 'S-180' SubClassOf 'cultured cell' and ('bearer_of' some 'sarcoma')
++ 'S-180' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ascitic fluid' and ('part_of' some 'Mus musculus')))))
++ 'S-180' SubClassOf 'cancer cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022778
+Label(s): RT4-D6P2T 
+- 'RT4-D6P2T' SubClassOf 'bearer_of' some 'schwannoma'
+- 'RT4-D6P2T' SubClassOf 'cultured cell'
+- 'RT4-D6P2T' SubClassOf 'derives_from' some 'cell type'
+- 'RT4-D6P2T' SubClassOf 'derives_from' some 'Rattus norvegicus'
++ 'RT4-D6P2T' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'RT4-D6P2T' SubClassOf 'cultured cell' and ('bearer_of' some 'schwannoma')
++ 'RT4-D6P2T' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022784
+Label(s): 3T6-Swiss albino cell 
+- '3T6-Swiss albino cell' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/CL_2000042
+- '3T6-Swiss albino cell' SubClassOf 'derives_from' some 'embryo'
+- '3T6-Swiss albino cell' SubClassOf 'derives_from' some 'Mus musculus'
+- '3T6-Swiss albino cell' SubClassOf 'derives_from' some 'cell type'
++ '3T6-Swiss albino cell' SubClassOf 'mouse cell line'
++ '3T6-Swiss albino cell' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022810
+Label(s): B1-8 
+- 'B1-8' SubClassOf 'cultured cell'
+- 'B1-8' SubClassOf 'derives_from' some 'Mus musculus'
+- 'B1-8' SubClassOf 'derives_from' some 'cell type'
++ 'B1-8' SubClassOf 'mouse cell line'
++ 'B1-8' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022811
+Label(s): MA-104 
+- 'MA-104' SubClassOf 'derives_from' some 'cell type'
+- 'MA-104' SubClassOf 'derives_from' some http://purl.obolibrary.org/obo/NCBITaxon_60710
++ 'MA-104' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'organism')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022813
+Label(s): V-79 
+- 'V-79' SubClassOf 'derives_from' some 'Cricetulus griseus'
+- 'V-79' SubClassOf 'derives_from' some 'cell type'
+- 'V-79' SubClassOf 'derives_from' some 'fibroblast of lung'
+- 'V-79' SubClassOf 'derives_from' some 'lung'
++ 'V-79' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Cricetulus griseus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022829
+Label(s): Comma-D 
+- 'Comma-D' SubClassOf 'derives_from' some 'Mus musculus'
+- 'Comma-D' SubClassOf 'derives_from' some 'cell type'
+- 'Comma-D' SubClassOf 'derives_from' some 'mammary gland'
+- 'Comma-D' SubClassOf 'derives_from' some 'mammary gland epithelial cell'
++ 'Comma-D' SubClassOf 'mouse cell line'
++ 'Comma-D' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Mus musculus')))))
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022833
+Label(s): Hepa 1-6 
+- 'Hepa 1-6' SubClassOf 'derives_from' some 'Mus musculus'
+- 'Hepa 1-6' SubClassOf 'derives_from' some 'cell type'
+- 'Hepa 1-6' SubClassOf 'derives_from' some 'liver'
++ 'Hepa 1-6' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('liver' and ('part_of' some 'Mus musculus')))))
++ 'Hepa 1-6' SubClassOf 'mouse cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022834
+Label(s): HIRc-B 
+- 'HIRc-B' SubClassOf 'derives_from' some 'Rattus norvegicus'
+- 'HIRc-B' SubClassOf 'derives_from' some 'embryo'
+- 'HIRc-B' SubClassOf 'derives_from' some 'fibroblast'
+- 'HIRc-B' SubClassOf 'derives_from' some 'cell type'
+- 'HIRc-B' SubClassOf 'immortal cell line cell'
++ 'HIRc-B' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('organism part' and ('part_of' some 'Rattus norvegicus')))))
++ 'HIRc-B' SubClassOf 'rat cell line'
+
+Class: http://www.ebi.ac.uk/efo/EFO_1000921
+Label(s): endomyocardial fibrosis 
++ 'endomyocardial fibrosis' SubClassOf 'neoplasm of thorax'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022673
+Label(s): BHP5-16 
+- 'BHP5-16' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'BHP5-16' SubClassOf 'derives_from' some 'hypodermis'
+- 'BHP5-16' SubClassOf 'derives_from' some 'cell type'
+- 'BHP5-16' SubClassOf 'bearer_of' some 'amelanotic melanoma'
+- 'BHP5-16' SubClassOf 'cultured cell'
++ 'BHP5-16' SubClassOf 'Homo sapiens cell line'
++ 'BHP5-16' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('hypodermis' and ('part_of' some 'Homo sapiens')))))
++ 'BHP5-16' SubClassOf 'melanoma cell line'
++ 'BHP5-16' SubClassOf 'cultured cell' and ('bearer_of' some 'amelanotic melanoma')
 
 Class: http://purl.obolibrary.org/obo/HANCESTRO_0022
 Label(s): Korean 
-+ 'Korean' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
++ 'Korean' SubClassOf 'isDemonymOf' some http://dbpedia.org/resource/North_Korea
 
 Class: http://purl.obolibrary.org/obo/HANCESTRO_0027
 Label(s): Han Chinese 
-- 'Han Chinese' SubClassOf 'Chinese'
-+ 'Han Chinese' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0601
-+ 'Han Chinese' SubClassOf 'East Asian'
-+ 'Han Chinese' SubClassOf 'has_quality' some http://purl.obolibrary.org/obo/HANCESTRO_0599
-+ 'Han Chinese' SubClassOf http://purl.obolibrary.org/obo/RO_0002151 some 'Chinese'
+- 'Han Chinese' SubClassOf 'has_quality' some 'ethnicity descriptor'
 
-Class: http://purl.obolibrary.org/obo/GO_0006570
-Label(s): tyrosine metabolic process 
-- 'tyrosine metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
+Class: http://purl.obolibrary.org/obo/GO_0030284
+Label(s): nuclear estrogen receptor activity 
+- 'nuclear estrogen receptor activity' SubClassOf 'signaling receptor activity'
++ 'nuclear estrogen receptor activity' SubClassOf 'nuclear receptor activity'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0020308
-Label(s): benign childhood occipital epilepsy, Gastaut type 
-+ 'benign childhood occipital epilepsy, Gastaut type' SubClassOf 'childhood-onset epilepsy syndrome'
+Class: http://www.ebi.ac.uk/efo/EFO_1000513
+Label(s): Salivary Gland Acinic Cell Carcinoma 
+- 'Salivary Gland Acinic Cell Carcinoma' SubClassOf 'digestive system disease'
++ 'Salivary Gland Acinic Cell Carcinoma' SubClassOf 'Digestive System Carcinoma'
 
-Class: http://purl.obolibrary.org/obo/GO_0034654
-Label(s): nucleobase-containing compound biosynthetic process 
-- 'nucleobase-containing compound biosynthetic process' SubClassOf 'aromatic compound biosynthetic process'
-- 'nucleobase-containing compound biosynthetic process' SubClassOf 'heterocycle biosynthetic process'
+Class: http://www.ebi.ac.uk/efo/EFO_0006566
+Label(s): dysplastic oral keratinocyte 
++ 'dysplastic oral keratinocyte' SubClassOf 'digestive system neoplasm'
 
-Class: http://purl.obolibrary.org/obo/GO_0034641
-Label(s): cellular nitrogen compound metabolic process 
-- 'cellular nitrogen compound metabolic process' SubClassOf 'cellular metabolic process'
-- 'cellular nitrogen compound metabolic process' SubClassOf 'nitrogen compound metabolic process'
-+ 'cellular nitrogen compound metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://www.ebi.ac.uk/efo/EFO_1000304
+Label(s): Intestinal Type Adenocarcinoma 
++ 'Intestinal Type Adenocarcinoma' SubClassOf 'Digestive System Carcinoma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_1000496
-Label(s): Prolactin-Producing Pituitary Gland Adenoma 
-- 'Prolactin-Producing Pituitary Gland Adenoma' SubClassOf 'reproductive system neoplasm'
+Class: http://www.ebi.ac.uk/efo/EFO_0009029
+Label(s): Central precocious puberty 
++ 'Central precocious puberty' SubClassOf 'precocious puberty in female'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0006471
-Label(s): pancreatic tubular adenocarcinoma 
-- 'pancreatic tubular adenocarcinoma' SubClassOf 'tubular adenocarcinoma'
-- 'pancreatic tubular adenocarcinoma' EquivalentTo 'tubular adenocarcinoma' and ('disease has location' some 'pancreas')
-+ 'pancreatic tubular adenocarcinoma' SubClassOf 'tubular adenocarcinoma'
+Class: http://www.ebi.ac.uk/efo/EFO_1000270
+Label(s): Gastric Diffuse Large B-Cell Lymphoma 
++ 'Gastric Diffuse Large B-Cell Lymphoma' SubClassOf 'gastrointestinal lymphoma'
++ 'Gastric Diffuse Large B-Cell Lymphoma' SubClassOf 'lymphatic system cancer'
 
-Class: http://www.ebi.ac.uk/efo/EFO_1000238
-Label(s): Endometrial Serous Adenocarcinoma 
-- 'Endometrial Serous Adenocarcinoma' SubClassOf 'serous adenocarcinoma'
-- 'Endometrial Serous Adenocarcinoma' SubClassOf 'female reproductive system neoplasm'
-- 'Endometrial Serous Adenocarcinoma' SubClassOf 'reproductive system cancer'
-+ 'Endometrial Serous Adenocarcinoma' SubClassOf 'serous adenocarcinoma'
-+ 'Endometrial Serous Adenocarcinoma' SubClassOf 'uterine corpus cancer'
-+ 'Endometrial Serous Adenocarcinoma' SubClassOf 'uterine carcinoma'
+Class: http://www.ebi.ac.uk/efo/EFO_1000224
+Label(s): Duodenal Gastrin-Producing Neuroendocrine Tumor 
++ 'Duodenal Gastrin-Producing Neuroendocrine Tumor' SubClassOf 'digestive system neoplasm'
 
-Class: http://purl.obolibrary.org/obo/HANCESTRO_0438
-Label(s): Iranian 
-+ 'Iranian' SubClassOf http://purl.obolibrary.org/obo/HANCESTRO_0602
+Class: http://purl.obolibrary.org/obo/HP_0002307
+Label(s): Drooling 
+- 'Drooling' SubClassOf 'Atypical behavior'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0019303
-Label(s): premature aging syndrome 
-- 'premature aging syndrome' SubClassOf 'disease disrupts' some 'obsolete aging'
+Class: http://purl.obolibrary.org/obo/MONDO_0002401
+Label(s): malignant tenosynovial giant cell tumor 
++ 'malignant tenosynovial giant cell tumor' SubClassOf 'Malignant Bone Neoplasm'
 
-Class: http://purl.obolibrary.org/obo/GO_0006139
-Label(s): nucleobase-containing compound metabolic process 
-- 'nucleobase-containing compound metabolic process' SubClassOf 'heterocycle metabolic process'
-- 'nucleobase-containing compound metabolic process' SubClassOf 'cellular aromatic compound metabolic process'
-- 'nucleobase-containing compound metabolic process' SubClassOf 'cellular nitrogen compound metabolic process'
+Class: http://www.ebi.ac.uk/efo/EFO_0022628
+Label(s): 90C 
+- '90C' SubClassOf 'bearer_of' some 'Lung Giant Cell Carcinoma'
+- '90C' SubClassOf 'derives_from' some 'Homo sapiens'
+- '90C' SubClassOf 'derives_from' some 'pleural effusion'
+- '90C' SubClassOf 'derives_from' some 'cell type'
++ '90C' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('pleural effusion' and ('part_of' some 'Homo sapiens')))))
 
-Class: http://purl.obolibrary.org/obo/MONDO_0010853
-Label(s): Helicobacter pylori infection, susceptibility to 
-- 'Helicobacter pylori infection, susceptibility to' SubClassOf 'hereditary predisposition to infections'
-+ 'Helicobacter pylori infection, susceptibility to' SubClassOf 'inherited disease susceptibility'
+Class: http://www.ebi.ac.uk/efo/EFO_0022654
+Label(s): MLS 2645-94 
+- 'MLS 2645-94' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'MLS 2645-94' SubClassOf 'derives_from' some 'cell type'
+- 'MLS 2645-94' SubClassOf 'cultured cell'
+- 'MLS 2645-94' SubClassOf 'derives_from' some 'adipose tissue'
+- 'MLS 2645-94' SubClassOf 'bearer_of' some 'myxoid liposarcoma'
++ 'MLS 2645-94' SubClassOf 'cultured cell' and ('bearer_of' some 'myxoid liposarcoma')
++ 'MLS 2645-94' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('adipose tissue' and ('part_of' some 'Homo sapiens')))))
++ 'MLS 2645-94' SubClassOf 'cancer cell line'
++ 'MLS 2645-94' SubClassOf 'Homo sapiens cell line'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0002616
-Label(s): macroglobulinemia 
-- 'macroglobulinemia' SubClassOf 'plasma protein metabolism disease'
-+ 'macroglobulinemia' SubClassOf 'plasma protein metabolism disease'
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0568
+Label(s): African American 
+- 'African American' SubClassOf 'has_quality' some 'ethnicity descriptor'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100352
-Label(s): episodic kinesigenic dyskinesia 1 
-+ 'episodic kinesigenic dyskinesia 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100556
+Class: http://www.ebi.ac.uk/efo/EFO_0022693
+Label(s): HET-1A 
+- 'HET-1A' SubClassOf 'cultured cell'
+- 'HET-1A' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'HET-1A' SubClassOf 'derives_from' some 'esophagus'
+- 'HET-1A' SubClassOf 'derives_from' some 'cell type'
++ 'HET-1A' SubClassOf 'Homo sapiens cell line'
++ 'HET-1A' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('esophagus' and ('part_of' some 'Homo sapiens')))))
 
-Class: http://purl.obolibrary.org/obo/UBERON_0002196
-Label(s): adenohypophysis 
-+ 'adenohypophysis' SubClassOf 'part_of' some 'reproductive system'
+Class: http://www.ebi.ac.uk/efo/EFO_1000058
+Label(s): nasopharyngeal squamous cell carcinoma 
+- 'nasopharyngeal squamous cell carcinoma' SubClassOf 'digestive system disease'
++ 'nasopharyngeal squamous cell carcinoma' SubClassOf 'Digestive System Carcinoma'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0007758
-Label(s): epidermolytic palmoplantar keratoderma 
-+ 'epidermolytic palmoplantar keratoderma' SubClassOf http://purl.obolibrary.org/obo/MONDO_0968949
+Class: http://www.ebi.ac.uk/efo/EFO_1000049
+Label(s): pulmonary tuberculosis 
++ 'pulmonary tuberculosis' SubClassOf 'respiratory tract infectious disorder'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012793
-Label(s): hypouricemia, renal, 2 
-- 'hypouricemia, renal, 2' SubClassOf 'hereditary renal hypouricemia'
-+ 'hypouricemia, renal, 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0968951
+Class: http://purl.obolibrary.org/obo/HANCESTRO_0601
+Label(s): ethnicity category 
++ 'ethnicity category' SubClassOf 'has_quality' some 'ethnicity descriptor'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002113
+Label(s): peritoneal carcinoma 
+- 'peritoneal carcinoma' SubClassOf 'carcinoma'
++ 'peritoneal carcinoma' SubClassOf 'Digestive System Carcinoma'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022702
+Label(s): OV-2008 
+- 'OV-2008' SubClassOf 'derives_from' some 'cell type'
+- 'OV-2008' SubClassOf 'bearer_of' some 'ovarian serous cystadenocarcinoma'
+- 'OV-2008' SubClassOf 'cancer cell line'
+- 'OV-2008' SubClassOf 'derives_from' some 'Homo sapiens'
+- 'OV-2008' SubClassOf 'derives_from' some 'ovary'
++ 'OV-2008' SubClassOf 'Homo sapiens cell line'
++ 'OV-2008' SubClassOf 'ovarian cancer cell lines'
++ 'OV-2008' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('ovary' and ('part_of' some 'Homo sapiens')))))
++ 'OV-2008' SubClassOf 'cancer cell line' and ('bearer_of' some 'ovarian serous cystadenocarcinoma')
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022719
+Label(s): RH-41 
+- 'RH-41' SubClassOf 'derives_from' some 'lung'
+- 'RH-41' SubClassOf 'bearer_of' some 'alveolar rhabdomyosarcoma'
+- 'RH-41' SubClassOf 'cultured cell'
+- 'RH-41' SubClassOf 'derives_from' some 'cell type'
+- 'RH-41' SubClassOf 'derives_from' some 'Homo sapiens'
++ 'RH-41' SubClassOf 'Homo sapiens cell line'
++ 'RH-41' SubClassOf 'cultured cell' and ('bearer_of' some 'alveolar rhabdomyosarcoma')
++ 'RH-41' SubClassOf 'cancer cell line'
++ 'RH-41' SubClassOf 'cultured cell' and ('derives_from' some 
+('cell type' and ('part_of' some 
+('lung' and ('part_of' some 'Homo sapiens')))))
 
 ----------------------------------
 
@@ -850,23 +2800,6 @@ Label(s): hypouricemia, renal, 2
 
 @Classes deleted from this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0004527
-Label(s): congenital granular cell tumor 
-+ 'congenital granular cell tumor' SubClassOf 'Granular Cell Tumor'
-+ 'congenital granular cell tumor' SubClassOf 'congenital nervous system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004490
-Label(s): gestational uterine corpus choriocarcinoma 
-+ 'gestational uterine corpus choriocarcinoma' SubClassOf 'gestational choriocarcinoma'
-+ 'gestational uterine corpus choriocarcinoma' SubClassOf 'uterine corpus choriocarcinoma'
-+ 'gestational uterine corpus choriocarcinoma' EquivalentTo 'gestational choriocarcinoma' and ('disease has location' some 'body of uterus')
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003629
-Label(s): uterine corpus serous adenocarcinoma 
-+ 'uterine corpus serous adenocarcinoma' SubClassOf 'serous adenocarcinoma'
-+ 'uterine corpus serous adenocarcinoma' SubClassOf 'uterine carcinoma'
-+ 'uterine corpus serous adenocarcinoma' SubClassOf 'uterine corpus cancer'
-+ 'uterine corpus serous adenocarcinoma' EquivalentTo 'serous adenocarcinoma' and ('disease has location' some 'body of uterus')
 
 
 
