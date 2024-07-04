@@ -3,10 +3,7 @@
 mkdir -p mirror
 
 echo "Fetching MONDO..."
-#TEMPORARY REMOVAL OF OLS MIRROR DOWNLOAD
-#curl -L https://www.ebi.ac.uk/ols/ontologies/mondo/download > mirror/mondo.owl
-#TEMPORARY DOWNLOAD OF MONDO MIRROR
-curl -L http://purl.obolibrary.org/obo/mondo-base.obo > mirror/mondo.obo && ../../bin/robot convert -i mirror/mondo.obo -f owl -o mirror/mondo.owl
+curl -L http://purl.obolibrary.org/obo/mondo-base.owl > mirror/mondo.owl
 
 echo "Fetching UBERON..."
 curl -L http://purl.obolibrary.org/obo/uberon.owl > mirror/uberon.owl
@@ -34,7 +31,7 @@ curl -L https://data.monarchinitiative.org/ttl/hpoa.ttl > mirror/hpoa.owl
 #curl -L https://raw.githubusercontent.com/opentargets/platform-therapeutic-areas/master/tas.tsv | awk '{print $1}' > imports/OTAR_terms.txt
 
 echo "Fetching HANCESTRO..."
-curl -L https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro-base.owl > mirror/hancestro.owl
+curl -L https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl > mirror/hancestro.owl
 
 echo "Fetching FBbt..."
 curl -L http://purl.obolibrary.org/obo/fbbt.owl > mirror/fbbt.owl
