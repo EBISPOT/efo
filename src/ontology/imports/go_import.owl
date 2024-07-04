@@ -1370,6 +1370,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: an aldehyde + H2O + NAD+ = a carboxylate + 2 H+ + NADH.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27180</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28144</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:ALDHDEHYDROG-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:16185</oboInOwl:hasDbXref>
@@ -6226,31 +6227,20 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005747 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005747">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005739"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>A protein complex located in the mitochondrial inner membrane that forms part of the mitochondrial respiratory chain. It contains about 25 different polypeptide subunits, including NADH dehydrogenase (ubiquinone), flavin mononucleotide and several different iron-sulfur clusters containing non-heme iron. The iron undergoes oxidation-reduction between Fe(II) and Fe(III), and catalyzes proton translocation linked to the oxidation of NADH by ubiquinone.</obo:IAO_0000115>
-        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4895"/>
-        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4930"/>
+        <obo:IAO_0000115>OBSOLETE. A protein complex located in the mitochondrial inner membrane that forms part of the mitochondrial respiratory chain. It contains about 25 different polypeptide subunits, including NADH dehydrogenase (ubiquinone), flavin mononucleotide and several different iron-sulfur clusters containing non-heme iron. The iron undergoes oxidation-reduction between Fe(II) and Fe(III), and catalyzes proton translocation linked to the oxidation of NADH by ubiquinone.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27253</obo:IAO_0000233>
+        <obo:IAO_0100001>GO:0045271</obo:IAO_0100001>
         <oboInOwl:hasAlternativeId>GO:0005748</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005747</oboInOwl:id>
-        <rdfs:label>mitochondrial respiratory chain complex I</rdfs:label>
+        <rdfs:comment>The reason for obsoletion is that this term unnecssarily specified a cellular compartment.</rdfs:comment>
+        <rdfs:label>obsolete mitochondrial respiratory chain complex I</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005747"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A protein complex located in the mitochondrial inner membrane that forms part of the mitochondrial respiratory chain. It contains about 25 different polypeptide subunits, including NADH dehydrogenase (ubiquinone), flavin mononucleotide and several different iron-sulfur clusters containing non-heme iron. The iron undergoes oxidation-reduction between Fe(II) and Fe(III), and catalyzes proton translocation linked to the oxidation of NADH by ubiquinone.</owl:annotatedTarget>
+        <owl:annotatedTarget>OBSOLETE. A protein complex located in the mitochondrial inner membrane that forms part of the mitochondrial respiratory chain. It contains about 25 different polypeptide subunits, including NADH dehydrogenase (ubiquinone), flavin mononucleotide and several different iron-sulfur clusters containing non-heme iron. The iron undergoes oxidation-reduction between Fe(II) and Fe(III), and catalyzes proton translocation linked to the oxidation of NADH by ubiquinone.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mtg_sensu</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0198547684</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -12411,36 +12401,6 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-210439</owl:annotatedTarget>
-        <rdfs:label>glutamate uptake by astrocytes</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-212642</owl:annotatedTarget>
-        <rdfs:label>L-Glutamine transport into neurons</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-351963</owl:annotatedTarget>
-        <rdfs:label>SLC6A18 transports Gly from extracellular region to cytosol</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-351987</owl:annotatedTarget>
-        <rdfs:label>SLC6A6-mediated uptake of taurine and beta-alanine</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-352029</owl:annotatedTarget>
-        <rdfs:label>SLC6A12 (BGT-1)-mediated uptake of GABA and betaine</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-352052</owl:annotatedTarget>
         <rdfs:label>SLC6A20 cotransports L-Pro, Na+ from the extracellular region to cytosol</rdfs:label>
     </owl:Axiom>
@@ -12691,6 +12651,36 @@
         <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:mtg_transport</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0815340729</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-210439</owl:annotatedTarget>
+        <rdfs:label>glutamate uptake by astrocytes</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-212642</owl:annotatedTarget>
+        <rdfs:label>L-Glutamine transport into neurons</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-351963</owl:annotatedTarget>
+        <rdfs:label>SLC6A18 transports Gly from extracellular region to cytosol</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-351987</owl:annotatedTarget>
+        <rdfs:label>SLC6A6-mediated uptake of taurine and beta-alanine</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-352029</owl:annotatedTarget>
+        <rdfs:label>SLC6A12 (BGT-1)-mediated uptake of GABA and betaine</rdfs:label>
     </owl:Axiom>
     
 
@@ -14436,7 +14426,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030168"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A series of progressive, overlapping events triggered by exposure of the platelets to subendothelial tissue. These events include shape change, adhesiveness, aggregation, and release reactions. When carried through to completion, these events lead to the formation of a stable hemostatic plug.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://www.graylab.ac.uk/omd/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:27403440</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030168"/>
@@ -14552,8 +14542,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0030284 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030284">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0038023"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0004879"/>
         <obo:IAO_0000115>Combining with estrogen and transmitting the signal within the cell to trigger a change in cell activity or function.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/16717</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>estrogen receptor activity</oboInOwl:hasBroadSynonym>
@@ -18869,6 +18858,40 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0045271 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045271">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Respiratory chain complex I is an enzyme of the respiratory chain. It consists of several polypeptide chains and is L-shaped, with a horizontal arm lying in the membrane and a vertical arm that projects into the matrix. The electrons of NADH enter the chain at this complex.</obo:IAO_0000115>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <oboInOwl:hasAlternativeId>GO:0045279</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>NADH dehydrogenase (ubiquinone) complex</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>NADH dehydrogenase complex (ubiquinone)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>NADH-Q oxidoreductase complex</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>electron transport complex I</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0045271</oboInOwl:id>
+        <rdfs:comment>Note that this term represents a location and not a function; the activity possessed by this complex is mentioned in the definition for the purpose of describing and distinguishing the complex. The function possessed by this complex is represented by the molecular function term &apos;NADH dehydrogenase (ubiquinone) activity ; GO:0008137&apos;.</rdfs:comment>
+        <rdfs:label>respiratory chain complex I</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045271"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Respiratory chain complex I is an enzyme of the respiratory chain. It consists of several polypeptide chains and is L-shaped, with a horizontal arm lying in the membrane and a vertical arm that projects into the matrix. The electrons of NADH enter the chain at this complex.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:imk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0716749556</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0045321 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045321">
@@ -20231,7 +20254,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0050957"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The series of events required for an organism to receive an orientational stimulus, convert it to a molecular signal, and recognize and characterize the signal. Equilibrioception refers to a combination of processes by which an organism can perceive its orientation with respect to gravity. In animals, stimuli come from labyrinth system of the inner ears, monitoring the direction of motion; visual stimuli, with information on orientation and motion; pressure receptors, which tell the organism which body surfaces are in contact with the ground; and proprioceptive cues, which report which parts of the body are in motion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://www.medterms.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:29303967</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -24535,5 +24558,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

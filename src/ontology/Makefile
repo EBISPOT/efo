@@ -72,8 +72,8 @@ imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependenc
 	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_exclude.txt --term rdfs:comment -o $@
 .PRECIOUS: imports/mondo_import.owl
 	
-imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ -o $@
+imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt iri_dependencies/hancestro_exclude.txt $(SRC)
+	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/hancestro_exclude.txt -o $@
 .PRECIOUS: imports/hancestro_import.owl
 	
 imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
@@ -262,8 +262,8 @@ nuclear_strike: $(SRC) foreign_axiom_diff
 #components/anatomagram_placenta.owl: ../templates/anatomagram_liver.tsv $(SRC)
 #	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_placenta.owl" -o $@
 
-components/anatomagram_%.owl: ../templates/anatomagram_%.tsv $(SRC)
-	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_$*.owl" -o $@
+#components/anatomagram_%.owl: ../templates/anatomagram_%.tsv $(SRC)
+#	$(ROBOT) template -i $(SRC) --template $< --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(CLPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/anatomagram_$*.owl" -o $@
 
 # ----------------------------------------
 # OTAR therapeutic areas
@@ -287,7 +287,7 @@ release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json $
 	
 $(BUILDDIR)/$(ONT).owl: $(SRC)
 	$(ROBOT) merge -i $< \
-	reason -s true -m false -r hermit --equivalent-classes-allowed asserted-only \
+	reason -s true -m false -r hermit -v --equivalent-classes-allowed asserted-only \
 	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT).owl -o $@
 
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
@@ -438,5 +438,5 @@ components/gwas_template.owl: $(SRC) iri_dependencies/gwas_terms.tsv
 	$(ROBOT) template --input $< -t iri_dependencies/gwas_terms.tsv query -c $(SPARQLDIR)/gwas_trait.ru $@
 
 components/gwas_import.owl: components/gwas_template.owl
-	$(ROBOT) annotate -i $< -O "http://www.ebi.ac.uk/efo/components/gwas_import.owl" -o $@
+	$(ROBOT) annotate -i $< -O "http://www.ebi.ac.uk/efo/components/gwas_import.owl" convert -f ofn -o $@
 	rm components/gwas_template.owl
