@@ -2,8 +2,8 @@
 
 mkdir -p mirror
 
-echo "Fetching MONDO..."
-curl -L http://purl.obolibrary.org/obo/mondo-base.owl > mirror/mondo.owl
+#echo "Fetching MONDO..."
+#curl -L http://purl.obolibrary.org/obo/mondo-base.owl > mirror/mondo.owl
 
 echo "Fetching UBERON..."
 curl -L http://purl.obolibrary.org/obo/uberon.owl > mirror/uberon.owl
