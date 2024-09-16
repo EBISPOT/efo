@@ -1514,7 +1514,6 @@
         <oboInOwl:hasDbXref>SNOMEDCT_US:82525005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0022680</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1567435</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Enlarged polycystic kidneys</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Polycystic kidneys</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Polycystic kidney disease</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0000113</oboInOwl:id>
@@ -2970,9 +2969,10 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000929"/>
         <obo:IAO_0000115>An abnormality of the anterior fontanelle, i.e., the cranial fontanelle that is located at the intersection of the coronal and sagittal sutures.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C4025875</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormality of the anterior fontanelle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormality of the forehead soft spot</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0000236</oboInOwl:id>
-        <rdfs:label>Abnormality of the anterior fontanelle</rdfs:label>
+        <rdfs:label>Abnormal anterior fontanelle morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000236"/>
@@ -5834,6 +5834,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000358">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000377"/>
         <obo:IAO_0000115>A type of abnormal location of the ears in which the position of the ears is characterized by posterior rotation (the superior part of the ears is rotated towards the back of the head, and the inferior part of the ears towards the front).</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0000368</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0008535</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>SNOMEDCT_US:253251006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0431478</oboInOwl:hasDbXref>
@@ -6156,21 +6157,12 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000368 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000368">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000358"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000369"/>
-        <obo:IAO_0000115>Ears that are low-set and posteriorly rotated.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>UMLS:C1857486</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Low-set posteriorly rotated ears</oboInOwl:hasExactSynonym>
+        <obo:IAO_0100001>HP:0000358</obo:IAO_0100001>
         <oboInOwl:id>HP:0000368</oboInOwl:id>
-        <rdfs:comment>This bundled term is left for convenience because of its common use in the literature. It is preferable to code each feature separately.</rdfs:comment>
-        <rdfs:label>Low-set, posteriorly rotated ears</rdfs:label>
+        <rdfs:comment>This bundled term has been retired. It is preferable to code each feature separately.</rdfs:comment>
+        <rdfs:label>obsolete Low-set, posteriorly rotated ears</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000368"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Ears that are low-set and posteriorly rotated.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
     
 
 
@@ -8131,7 +8123,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000483">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000481"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000539"/>
-        <obo:IAO_0000115>A type of astigmatism associated with abnormal curvatures on the anterior and/or posterior surface of the cornea.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of refraction error associated with abnormal curvatures on the anterior and/or posterior surface of the cornea.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>SNOMEDCT_US:82649003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0004106</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormal curving of the cornea or lens of the eye</oboInOwl:hasExactSynonym>
@@ -8144,7 +8136,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000483"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of astigmatism associated with abnormal curvatures on the anterior and/or posterior surface of the cornea.</owl:annotatedTarget>
+        <owl:annotatedTarget>A type of refraction error associated with abnormal curvatures on the anterior and/or posterior surface of the cornea.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0003-0986-4123"/>
         <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:DDD_ncarter</oboInOwl:hasDbXref>
@@ -10774,7 +10766,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000708">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
-        <obo:IAO_0000115>Atypical behavior is an abnormality in a person&apos;s actions, which can be controlled or modulated by the will of the individual. While abnormal behaviors can be difficult to control, they are distinct from other abnormal actions that cannot be affected by the individual&apos;s will.</obo:IAO_0000115>
+        <obo:IAO_0000115>Atypical behavior is an abnormality in a person&apos;s actions that can be controlled or modulated by the will of the individual. While abnormal behaviors can be difficult to control, they are distinct from other abnormal actions that cannot be affected by the individual&apos;s will.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-4142-7153"/>
@@ -11033,8 +11025,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000713 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000713">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
-        <obo:IAO_0000115>A state of extreme restlessness and excessive motor activity is associated with mental distress or a feeling of inner tension.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <obo:IAO_0000115>A state of excessive motor activity that is associated with mental distress or a feeling of substantial unease or inner tension. Distinguished from restlessness by the increased level of emotional distress and negative intensity of the experience. Agitation has a significant level of physical activity that is typically threatening to the self or others.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1111-7357"/>
@@ -11233,6 +11225,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000732">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
         <obo:IAO_0000115>A need to strictly adhere to repetitive routines or patterns of behavior which are created by the environment. One becomes upset or distressed when their routines are disrupted or altered.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -11667,8 +11660,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000741 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000741">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
-        <obo:IAO_0000115>Apathy is a quantitative reduction of motivation and the initiation and persistence of goal-directed behavior, where the accompanying emotions, thoughts, and social interactions are also suppressed.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <obo:IAO_0000115>Apathy is a quantitative reduction of interest, motivation and the initiation and persistence of goal-directed behavior, where often the accompanying emotions, thoughts, and social interactions are also diminished. The individual is typically non-reactive to provocations, positive or negative, and appears to not care. Distinguished from lethargy which involves lack of physical or mental energy.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1111-7357"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-7954-5235"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-2897-0458"/>
@@ -11680,6 +11673,7 @@
         <oboInOwl:hasExactSynonym>Lack of feeling, emotion, interest, motivation, initiation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>State of indifference</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0000741</oboInOwl:id>
+        <rdfs:comment>Apathy may co-occur with lethargy.</rdfs:comment>
         <rdfs:label>Apathy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11767,12 +11761,6 @@
         <rdfs:comment>Language delay can be characterized by a failure to meet the developmental milestones for language development, an inability to follow directions, or slow or incomprehensible speech after the age of three years, as well as with severe problems with syntax or articulation.</rdfs:comment>
         <rdfs:label>Delayed speech and language development</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Impaired speech development</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -11890,6 +11878,12 @@
         <owl:annotatedTarget>Impaired speech and language development</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Impaired speech development</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
     
 
 
@@ -11931,6 +11925,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000752">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
         <obo:IAO_0000115>Hyperactivity is a condition characterized by constant and unusually high levels of activity, even in situations where it is deemed inappropriate.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-6624-2975"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
@@ -13984,6 +13979,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
         <obo:IAO_0000115>An abnormal accumulation of fluid beneath the skin, or in one or more cavities of the body.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0000990</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>Soft tissue swelling</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>SNOMEDCT_US:20741006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US:267038008</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US:423666004</oboInOwl:hasDbXref>
@@ -14306,7 +14302,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000979">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001933"/>
-        <obo:IAO_0000115>Purpura (from Latin: purpura, meaning &quot;purple&quot;) is the appearance of red or purple discolorations on the skin that do not blanch on applying pressure. They are caused by bleeding underneath the skin. This term refers to an abnormally increased susceptibility to developing purpura. Purpura are larger than petechiae.</obo:IAO_0000115>
+        <obo:IAO_0000115>Purpura (from Latin: purpura, meaning purple) is the appearance of red or purple discolorations on the skin that do not blanch on applying pressure. They are caused by bleeding underneath the skin. This term refers to an abnormally increased susceptibility to developing purpura. Purpura are larger than petechiae.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Blood spots</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>SNOMEDCT_US:12393003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US:387778001</oboInOwl:hasDbXref>
@@ -14321,7 +14317,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000979"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Purpura (from Latin: purpura, meaning &quot;purple&quot;) is the appearance of red or purple discolorations on the skin that do not blanch on applying pressure. They are caused by bleeding underneath the skin. This term refers to an abnormally increased susceptibility to developing purpura. Purpura are larger than petechiae.</owl:annotatedTarget>
+        <owl:annotatedTarget>Purpura (from Latin: purpura, meaning purple) is the appearance of red or purple discolorations on the skin that do not blanch on applying pressure. They are caused by bleeding underneath the skin. This term refers to an abnormally increased susceptibility to developing purpura. Purpura are larger than petechiae.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasDbXref>PMID:11515831</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -15845,8 +15841,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0001233 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001233">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0006101"/>
-        <obo:IAO_0000115>Syndactyly with fusion of fingers two and three.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010554"/>
+        <obo:IAO_0000115>A soft tissue continuity in the anteroposterior axis between the second to the third fingers that extends distally to at least the level of the proximal interphalangeal joints.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0006039</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0006122</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>SNOMEDCT_US:205139009</oboInOwl:hasDbXref>
@@ -15855,12 +15851,12 @@
         <oboInOwl:hasExactSynonym>Syndactyly, 2-3 finger</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Webbed 2nd-3rd fingers</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0001233</oboInOwl:id>
-        <rdfs:label>2-3 finger syndactyly</rdfs:label>
+        <rdfs:label>2-3 finger cutaneous syndactyly</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001233"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Syndactyly with fusion of fingers two and three.</owl:annotatedTarget>
+        <owl:annotatedTarget>A soft tissue continuity in the anteroposterior axis between the second to the third fingers that extends distally to at least the level of the proximal interphalangeal joints.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -16097,8 +16093,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0001254 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001254">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
-        <obo:IAO_0000115>A state of disinterest, listlessness, and indifference, resulting in difficulty performing simple tasks or concentrating.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <obo:IAO_0000115>A state of fatigue, either physical or mental slowness and sluggishness, with difficulties in initiating or performing simple tasks. Distinguished from apathy which implies indifference and a lack of desire or interest in the task. A person with lethargy may have the desire, but not the energy to engage in personal or socially relevant tasks.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-6262-8264"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-9446-5121"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1592-0825"/>
@@ -16115,6 +16111,7 @@
         <oboInOwl:hasExactSynonym>Slowness</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Torpor</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0001254</oboInOwl:id>
+        <rdfs:comment>Apathy and lethargy may co-occur.</rdfs:comment>
         <rdfs:label>Lethargy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16548,7 +16545,9 @@
         <oboInOwl:hasAlternativeId>HP:0007251</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1854301</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C4020874</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Delay in development of motor milestones</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Delay in motor development</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Delayed development of motor milestones</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Delayed early motor milestones</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Delayed motor development</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Delayed motor milestones</oboInOwl:hasExactSynonym>
@@ -16557,6 +16556,7 @@
         <oboInOwl:hasExactSynonym>Motor developmental milestones not achieved</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Motor retardation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Retarded motor development</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Slow development of motor milestones</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>No development of motor milestones</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0001270</oboInOwl:id>
         <rdfs:label>Motor delay</rdfs:label>
@@ -16769,23 +16769,29 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001288">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100022"/>
-        <obo:IAO_0000115>The term gait disturbance can refer to any disruption of the ability to walk. In general, this can refer to neurological diseases but also fractures or other sources of pain that is triggered upon walking. However, in the current context gait disturbance refers to difficulty walking on the basis of a neurological or muscular disease.</obo:IAO_0000115>
+        <obo:IAO_0000115>The term gait disturbance can refer to any disruption of the ability to walk.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0002355</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0006953</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0007101</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0009030</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>SNOMEDCT_US:22325002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0575081</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormal gait</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal walk</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Difficulty in walking</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Gait abnormalities</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Gait difficulties</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Gait disturbances</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Impaired gait</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Walking disability</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0001288</oboInOwl:id>
+        <rdfs:comment>Gait disturbances can be caused by neurological or muscular diseases but also fractures or other sources of pain that is triggered upon walking.</rdfs:comment>
         <rdfs:label>Gait disturbance</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The term gait disturbance can refer to any disruption of the ability to walk. In general, this can refer to neurological diseases but also fractures or other sources of pain that is triggered upon walking. However, in the current context gait disturbance refers to difficulty walking on the basis of a neurological or muscular disease.</owl:annotatedTarget>
+        <owl:annotatedTarget>The term gait disturbance can refer to any disruption of the ability to walk.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasDbXref>PMID:27770207</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -16800,6 +16806,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Abnormal walk</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Difficulty in walking</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -19618,7 +19630,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001597">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001574"/>
-        <obo:IAO_0000115>Abnormality of the nail.</obo:IAO_0000115>
+        <obo:IAO_0000115>Abnormal structure or appearance of the nail.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>SNOMEDCT_US:17790008</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0027339</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0853087</oboInOwl:hasDbXref>
@@ -19626,12 +19638,12 @@
         <oboInOwl:hasRelatedSynonym>Nail disease</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0001597</oboInOwl:id>
         <rdfs:comment>Abnormality of the fingernails and/or toenails.</rdfs:comment>
-        <rdfs:label>Abnormality of the nail</rdfs:label>
+        <rdfs:label>Abnormal nail morphology</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001597"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Abnormality of the nail.</owl:annotatedTarget>
+        <owl:annotatedTarget>Abnormal structure or appearance of the nail.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -19843,7 +19855,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001620">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002167"/>
-        <obo:IAO_0000115>An abnormal increase in the pitch (frequency) of the voice.</obo:IAO_0000115>
+        <obo:IAO_0000115>A persistent (minutes to hours) abnormal increase in the pitch (frequency) of the voice for the context or social situation or significantly different from baseline of the individual.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-2592-4715"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-9593-5508"/>
@@ -19856,11 +19868,10 @@
         <oboInOwl:hasAlternativeId>HP:0009146</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>SNOMEDCT_US:51406002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0241703</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Abnormally high-pitched voice</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>High pitched voice</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>High-pitched voice</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0001620</oboInOwl:id>
-        <rdfs:label>High pitched voice</rdfs:label>
+        <rdfs:label>Abnormally high-pitched voice</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001620"/>
@@ -21952,6 +21963,8 @@
         <oboInOwl:hasExactSynonym>Front half of foot turns inward</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Metatarsus adductovarsus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Metatarsus varus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Sickle foot</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Sickled feet</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Intoe</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0001840</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
@@ -22865,6 +22878,7 @@
         <oboInOwl:hasDbXref>SNOMEDCT_US:14669001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0022660</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C2609414</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>AKI</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Acute kidney failure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Acute renal failure</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0001919</oboInOwl:id>
@@ -22876,6 +22890,12 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Sudden loss of renal function, as manifested by decreased urine production, and a rise in serum creatinine or blood urea nitrogen concentration (azotemia).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001919"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>AKI</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#abbreviation"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0001919"/>
@@ -24841,16 +24861,30 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002061">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001257"/>
-        <obo:IAO_0000115>Spasticity (velocity-dependent increase in tonic stretch reflexes with increased muscle tone and hyperexcitable tendon reflexes) in the muscles of the lower limbs, hips, and pelvis</obo:IAO_0000115>
+        <obo:IAO_0000115>Spasticity (velocity-dependent increase in tonic stretch reflexes with increased muscle tone and hyperexcitable tendon reflexes) in the muscles of the lower limbs, hips, and pelvis.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>SNOMEDCT_US:394679006</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1271100</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Lower extremities spasticity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Lower extremity spasticity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spastic lower extremities</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spastic lower extremity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spastic lower limb</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spastic lower limbs</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity in lower extremities</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity in lower extremity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity in lower limb</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity in lower limbs</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity of lower extremities</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity of lower extremity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity of lower limb</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity of lower limbs</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0002061</oboInOwl:id>
         <rdfs:label>Lower limb spasticity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002061"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Spasticity (velocity-dependent increase in tonic stretch reflexes with increased muscle tone and hyperexcitable tendon reflexes) in the muscles of the lower limbs, hips, and pelvis</owl:annotatedTarget>
+        <owl:annotatedTarget>Spasticity (velocity-dependent increase in tonic stretch reflexes with increased muscle tone and hyperexcitable tendon reflexes) in the muscles of the lower limbs, hips, and pelvis.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasDbXref>HPO_CONTRIBUTOR:UKT_rschuele</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -26318,8 +26352,9 @@
         <oboInOwl:hasDbXref>SNOMEDCT_US:110987009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0406438</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Nail pterygium</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Pterygium of nails</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0002165</oboInOwl:id>
-        <rdfs:label>Pterygium of nails</rdfs:label>
+        <rdfs:label>Nail pterygium</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002165"/>
@@ -26396,7 +26431,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002167">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
-        <obo:IAO_0000115>Abnormalities in the sound of a person&apos;s speech or vocalization are not necessarily associated with a known physical cause or due to stuttering or stammering.</obo:IAO_0000115>
+        <obo:IAO_0000115>An abnormality in the sound (volume) or cadence (rate) of speech.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-2592-4715"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-9593-5508"/>
@@ -26405,8 +26440,10 @@
         <oboInOwl:hasExactSynonym>Abnormal speech</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal vocalisation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Abnormal vocalization</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormality of speech or vocalization</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0002167</oboInOwl:id>
-        <rdfs:label>Abnormality of speech or vocalization</rdfs:label>
+        <rdfs:comment>The term Abnormal speech pattern includes both psychiatric and neurological conditions that affect the rate, rhythm, and volume of expressed speech.</rdfs:comment>
+        <rdfs:label>Abnormal speech pattern</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002167"/>
@@ -26594,11 +26631,17 @@
         <oboInOwl:hasAlternativeId>HP:0008973</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>SNOMEDCT_US:430099007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1837658</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Delayed attainment of gross motor milestones</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Delayed attainment of gross motor skills</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Delayed development of gross motor milestones</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Delayed development of gross motor skills</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Delayed gross motor milestones</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Delayed gross motor skills</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Delayed motor skills</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Developmental delay, gross motor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Gross motor delay</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Limited gross motor development</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Limited gross motor skills</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0002194</oboInOwl:id>
         <rdfs:label>Delayed gross motor development</rdfs:label>
     </owl:Class>
@@ -27811,7 +27854,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002300">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002167"/>
-        <obo:IAO_0000115>Inability to speak or communicate verbally past the age of typical language development.</obo:IAO_0000115>
+        <obo:IAO_0000115>Complete lack of speech or verbal communication in a person despite attempts to engage in conversation. Mutism as a phenomena assumes the individual has previous capacity for speech and in the pediatric population it assumes that the person is past the age of typical language development.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-5395-5036"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-6886-767X"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8423-2623"/>
@@ -27826,6 +27869,12 @@
         <oboInOwl:id>HP:0002300</oboInOwl:id>
         <rdfs:label>Mutism</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002300"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Complete lack of speech or verbal communication in a person despite attempts to engage in conversation. Mutism as a phenomena assumes the individual has previous capacity for speech and in the pediatric population it assumes that the person is past the age of typical language development.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:26709680</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -28337,37 +28386,11 @@
     <!-- http://purl.obolibrary.org/obo/HP_0002355 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002355">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001288"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011804"/>
-        <obo:IAO_0000115>Reduced ability to walk (ambulate).</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>HP:0007101</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>HP:0009030</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>SNOMEDCT_US:228158008</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>UMLS:C0311394</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Difficulty in walking</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Difficulty walking</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Walking disability</oboInOwl:hasExactSynonym>
+        <obo:IAO_0100001>HP:0001288</obo:IAO_0100001>
         <oboInOwl:id>HP:0002355</oboInOwl:id>
-        <rdfs:label>Difficulty walking</rdfs:label>
+        <rdfs:label>obsolete Difficulty walking</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002355"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Reduced ability to walk (ambulate).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002355"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Difficulty in walking</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002355"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Difficulty walking</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
     
 
 
@@ -28504,7 +28527,9 @@
         <oboInOwl:hasDbXref>UMLS:C1855996</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1857121</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1859678</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Loss of acquired milestones</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Loss of developmental milestones</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Loss of milestones</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Mental deterioration in childhood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Neurodevelopmental regression</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Psychomotor regression</oboInOwl:hasExactSynonym>
@@ -33618,8 +33643,9 @@
         <oboInOwl:hasExactSynonym>Elevated immunoglobulin E</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Elevated serum IgE</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>High immunoglobulin E</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased circulating IgE level</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003212</oboInOwl:id>
-        <rdfs:label>Increased circulating IgE level</rdfs:label>
+        <rdfs:label>Increased circulating IgE concentration</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003212"/>
@@ -34401,11 +34427,12 @@
         <obo:IAO_0000115>An decreased level of renin in the blood.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0003263</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1845206</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Decreased circulating renin level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Decreased plasma renin activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Low plasma renin activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Suppressed plasma renin activity</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0003351</oboInOwl:id>
-        <rdfs:label>Decreased circulating renin level</rdfs:label>
+        <rdfs:label>Decreased circulating renin concentration</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003351"/>
@@ -36265,6 +36292,7 @@
         <oboInOwl:hasDbXref>UMLS:C0086438</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C4048270</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Decreased antibody level in blood</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Decreased circulating antibody level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Decreased immunoglobulin level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Decreased serum immunoglobulin</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Hypogammaglobulinemia</oboInOwl:hasExactSynonym>
@@ -36272,7 +36300,7 @@
         <oboInOwl:hasExactSynonym>Reduced immunoglobulin levels</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0004313</oboInOwl:id>
         <rdfs:comment>In humans, immunoglobulins comprise the five antibody isotypes IgA, IgD, IgE, IgG and IgM.</rdfs:comment>
-        <rdfs:label>Decreased circulating antibody level</rdfs:label>
+        <rdfs:label>Decreased circulating antibody concentration</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004313"/>
@@ -36303,13 +36331,14 @@
         <oboInOwl:hasDbXref>UMLS:C0162539</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Decreased IgG level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Decreased IgG level in blood</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Decreased circulating IgG level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Decreased gamma-globin expression</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Decreased immunoglobulin G</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Decreased serum IgG</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>IgG deficiency</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Reduced IgG levels</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0004315</oboInOwl:id>
-        <rdfs:label>Decreased circulating IgG level</rdfs:label>
+        <rdfs:label>Decreased circulating IgG concentration</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004315"/>
@@ -36323,7 +36352,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0004319 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004319">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000834"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000818"/>
         <obo:IAO_0000115>Abnormally reduced levels of aldosterone.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2008-02-25T10:45:00Z</oboInOwl:creation_date>
@@ -36343,7 +36372,7 @@
         <oboInOwl:hasExactSynonym>Mineralocorticoid insufficiency</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0004319</oboInOwl:id>
         <rdfs:comment>Aldosterone is a hormone that is produce by the adrenal cortex and that acts on the distal tubules and collecting ducts to favor retention of sodium excretion of potassium, and increased water retention, thereby tending to increase blood pressure. Aldosterone is sometimes called a mineralocorticoid because of its influence on sodium homeostasis.</rdfs:comment>
-        <rdfs:label>Decreased circulating aldosterone level</rdfs:label>
+        <rdfs:label>Decreased circulating aldosterone concentration</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004319"/>
@@ -36802,7 +36831,15 @@
         <oboInOwl:hasDbXref>UMLS:C0005904</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1832160</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormality of temperature regulation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Impaired temperature control</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Impaired temperature regulation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Inability to control temperature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Inability to regulate temperature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Poor control of temperature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Poor regulation of temperature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Poor temperature control</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Poor temperature regulation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Unable to control temperature</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Body temperature changes</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0004370</oboInOwl:id>
         <rdfs:label>Abnormality of temperature regulation</rdfs:label>
@@ -41209,32 +41246,11 @@
     <!-- http://purl.obolibrary.org/obo/HP_0006919 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0006919">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100851"/>
-        <oboInOwl:hasBroadSynonym>Aggressive/violent behavior</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>Aggressive/violent behaviour</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>UMLS:C4024963</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Abnormal aggressive, impulsive or violent behaviour</oboInOwl:hasExactSynonym>
+        <obo:IAO_0100001>HP:0000718</obo:IAO_0100001>
         <oboInOwl:id>HP:0006919</oboInOwl:id>
-        <rdfs:label>Abnormal aggressive, impulsive or violent behavior</rdfs:label>
+        <rdfs:label>obsolete Abnormal aggressive, impulsive or violent behavior</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006919"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-        <owl:annotatedTarget>Aggressive/violent behavior</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006919"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-        <owl:annotatedTarget>Aggressive/violent behaviour</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006919"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Abnormal aggressive, impulsive or violent behaviour</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
-    </owl:Axiom>
     
 
 
@@ -41291,7 +41307,21 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001257"/>
         <oboInOwl:hasDbXref>SNOMEDCT_US:394680009</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C1273957</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Spastic upper extremities</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spastic upper extremity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spastic upper limb</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spastic upper limbs</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity in upper extremities</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity in upper extremity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity in upper limb</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity in upper limbs</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity of upper extremities</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity of upper extremity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity of upper limb</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Spasticity of upper limbs</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Uncontrollable movement in upper arms</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Upper extremities spasticity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Upper extremity spasticity</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0006986</oboInOwl:id>
         <rdfs:label>Upper limb spasticity</rdfs:label>
     </owl:Class>
@@ -43501,10 +43531,11 @@
         <oboInOwl:hasAlternativeId>HP:0008310</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C4021545</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Decreased IgG2 level in blood</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Decreased circulating IgG2 level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Immunoglobulin IgG2 deficiency</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Reduced IgG2 levels</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0008348</oboInOwl:id>
-        <rdfs:label>Decreased circulating IgG2 level</rdfs:label>
+        <rdfs:label>Decreased circulating IgG2 concentration</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0008348"/>
@@ -44159,6 +44190,7 @@
         <oboInOwl:hasExactSynonym>Obsessive-compulsive trait</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Obsessive-compulsive traits</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0008770</oboInOwl:id>
+        <rdfs:comment>Obsessions have been defined as intrusive and unwanted thoughts that are subjectively experienced as unacceptable.</rdfs:comment>
         <rdfs:label>Obsessive-compulsive trait</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -44166,6 +44198,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The presence of one or more obsessive-compulsive personality traits. Obsessions refer to persistent intrusive thoughts, and compulsions to intrusive behaviors, which the affected person experiences as involuntary, senseless, or repugnant.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:35230863</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0008770"/>
@@ -44227,6 +44260,7 @@
         <oboInOwl:hasAlternativeId>HP:0008799</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1328407</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Dysplastic acetabulae</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Decreased femoral head coverage by acetabulum</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>HP:0008807</oboInOwl:id>
         <rdfs:comment>Acetabular dysplasia can lead to hip pain and early-onset hip osteoarthritis.</rdfs:comment>
         <rdfs:label>Acetabular dysplasia</rdfs:label>
@@ -45958,7 +45992,6 @@
     <!-- http://purl.obolibrary.org/obo/HP_0009800 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0009800">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000819"/>
         <obo:IAO_0000115>Maternal diabetes can either be a gestational, mostly type 2 diabetes, or a type 1 diabetes. Essential is the resulting maternal hyperglycemia as a non-specific teratogen, imposing the same risk of congenital malformations to pregnant women with both type 1 and type2 diabetes.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
         <oboInOwl:creation_date>2009-02-12T05:44:58Z</oboInOwl:creation_date>
@@ -48034,19 +48067,19 @@
     <!-- http://purl.obolibrary.org/obo/HP_0010705 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010705">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0006101"/>
-        <obo:IAO_0000115>Syndactyly with fusion of fingers four and five.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010554"/>
+        <obo:IAO_0000115>A soft tissue continuity in the anteroposterior axis between the fourth (ring) to the fifth (little) finger that extends distally to at least the level of the proximal interphalangeal joints.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
         <oboInOwl:creation_date>2010-03-26T05:12:44Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>UMLS:C4023731</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Webbed 4th-5th finger</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0010705</oboInOwl:id>
-        <rdfs:label>4-5 finger syndactyly</rdfs:label>
+        <rdfs:label>4-5 finger cutaneous syndactyly</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0010705"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Syndactyly with fusion of fingers four and five.</owl:annotatedTarget>
+        <owl:annotatedTarget>A soft tissue continuity in the anteroposterior axis between the fourth (ring) to the fifth (little) finger that extends distally to at least the level of the proximal interphalangeal joints.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -48862,6 +48895,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010865">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
         <obo:IAO_0000115>An enduring pattern of uncooperative, defiant, and hostile behavior towards authority figures that does not involve major antisocial violations, is not accounted for by the child&apos;s developmental stage, and results in significant functional impairment. A certain level of oppositional behavior is common in children and adolescents.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1111-7357"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-7954-5235"/>
@@ -52106,7 +52140,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0011736 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011736">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002717"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000818"/>
         <obo:IAO_0000115>A form of hyperaldosteronism caused by a defect within the adrenal gland.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2012-04-21T09:26:05Z</oboInOwl:creation_date>
@@ -52963,7 +52997,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011999">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
-        <obo:IAO_0000115>An inappropriate feeling of being persecuted or being the subject of hostility from others.</obo:IAO_0000115>
+        <obo:IAO_0000115>The feeling and belief that one is being targeted or is a focus of negative or untoward actions, overt or covert, from others. The affected individual expresses a concern that people are in general against the individual and are engaging in subtle behaviors to make things difficult for them. The origins of such thinking may arise from real events and become amplified over time. Paranoia may also arise in the absence of any action or interaction between the person and their environment.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-7062-8192"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-7941-2961"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-9221-9226"/>
@@ -52977,12 +53011,13 @@
         <oboInOwl:hasDbXref>UMLS:C1456784</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Paranoia</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0011999</oboInOwl:id>
+        <rdfs:comment>Paranoia is defined as a non-delusional state characterized by a vague sense that &apos;everyone and anyone&apos; is unfavorable towards one as in &apos;the whole world hates me&apos;. A persecutory delusion is, in contrast, typically fixed and focused - as in &apos;my neighbor is pumping poison into my house&apos;.</rdfs:comment>
         <rdfs:label>Paranoia</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0011999"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An inappropriate feeling of being persecuted or being the subject of hostility from others.</owl:annotatedTarget>
+        <owl:annotatedTarget>The feeling and belief that one is being targeted or is a focus of negative or untoward actions, overt or covert, from others. The affected individual expresses a concern that people are in general against the individual and are engaging in subtle behaviors to make things difficult for them. The origins of such thinking may arise from real events and become amplified over time. Paranoia may also arise in the absence of any action or interaction between the person and their environment.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:34618805</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -58378,7 +58413,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031844">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100851"/>
-        <obo:IAO_0000115>Euphoria is a feeling of intense joy, happiness, excitement, or elation that surpasses what would typically be anticipated in a given situation.</obo:IAO_0000115>
+        <obo:IAO_0000115>Euphoria is an overwhelming and all-encompassing feeling of intense inner sense of joy, happiness, excitement, or elation that is far beyond and blatantly abnormal for what would typically be anticipated in the context or social circumstance. It is experienced as an unusual pleasurable feeling often with an inspirational sense of profound insight.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-05T15:29:11Z</dc:date>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1111-7357"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-7954-5235"/>
@@ -58387,6 +58422,7 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-4618-6544"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasExactSynonym>Euphoric mood</oboInOwl:hasExactSynonym>
+        <rdfs:comment>While euphoria may occasionally be experienced as personal and internally, it is typically expressed behaviorally through expressions and speech.</rdfs:comment>
         <rdfs:label>Euphoria</rdfs:label>
     </owl:Class>
     
@@ -58489,8 +58525,9 @@
     <!-- http://purl.obolibrary.org/obo/HP_0031987 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031987">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100543"/>
-        <obo:IAO_0000115>Being unable to focus one&apos;s attention or mental effort on a particular object or activity.</obo:IAO_0000115>
+        <obo:IAO_0000115>The inability to focus or concentrate on a specific task, activity, or object. The subject may find themselves unable to grasp or understand written text and re-reads frequently without understanding. Familiar tasks or activities are severely compromised due to the lack of ability to concentrate. Thinking through multi-step problems is typically very difficult or impossible, leading to avoidance of such activities.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-09T01:48:46Z</dc:date>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -58499,6 +58536,7 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-3777-1389"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasExactSynonym>Concentration problems</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Labored thinking</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Lack of concentration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Poor concentration</oboInOwl:hasExactSynonym>
         <rdfs:label>Diminished ability to concentrate</rdfs:label>
@@ -58506,7 +58544,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0031987"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Being unable to focus one&apos;s attention or mental effort on a particular object or activity.</owl:annotatedTarget>
+        <owl:annotatedTarget>The inability to focus or concentrate on a specific task, activity, or object. The subject may find themselves unable to grasp or understand written text and re-reads frequently without understanding. Familiar tasks or activities are severely compromised due to the lack of ability to concentrate. Thinking through multi-step problems is typically very difficult or impossible, leading to avoidance of such activities.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:26386541</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -58785,7 +58823,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0032397">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0003355"/>
-        <obo:IAO_0000115>An increased concentration of citrulline in the urine.</obo:IAO_0000115>
+        <obo:IAO_0000115>The amount of citrulline in the urine, when normalized for urine concentration, is above the upper limit of normal.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-24T16:59:47Z</dc:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:hasExactSynonym>Citrulline high in urine</oboInOwl:hasExactSynonym>
@@ -58795,7 +58833,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0032397"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An increased concentration of citrulline in the urine.</owl:annotatedTarget>
+        <owl:annotatedTarget>The amount of citrulline in the urine, when normalized for urine concentration, is above the upper limit of normal.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-8169-9049"/>
         <oboInOwl:hasDbXref>PMID:29695388</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -59698,7 +59736,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0100035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011442"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100033"/>
         <obo:IAO_0000115>Tics are defined as movements or sounds that resemble physiological motor behaviors, but are typically inopportune to social context and appear sudden, repetitive, and often exaggerated. Tic vocalizations commonly termed vocal or phonic tics may include any possible sound (eg, sniffing, coughing, throat clearing, whistling, or grunting), word, or sentence and are most commonly encountered within the spectrum of primary tic disorders, as Tourette syndrome.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-8430-6039"/>
@@ -61608,7 +61646,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100851">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
-        <obo:IAO_0000115>Abnormalities in the intensity, frequency, or duration of emotional experiences.</obo:IAO_0000115>
+        <obo:IAO_0000115>Emotions are complex psychological states that involve three distinct components: a subjective experience, a physiological response, and a behavioral or expressive response. In an abnormal emotional state, an affected individual shows altered intensity, frequency, or duration of emotional experiences.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1111-7357"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-7954-5235"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-2897-0458"/>
@@ -61624,7 +61662,8 @@
         <oboInOwl:hasExactSynonym>Abnormal mood/emotion/affect/thought</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Emotion dysregulation</oboInOwl:hasExactSynonym>
         <oboInOwl:id>HP:0100851</oboInOwl:id>
-        <rdfs:label>Abnormal emotion</rdfs:label>
+        <rdfs:comment>When one is assessing whether an individual has an Abnormal emotional state, emphasis should be placed on the observed clinical phenomena and subjective perceptions of the person, without regard to interpretation of the possibility of causality or context.</rdfs:comment>
+        <rdfs:label>Abnormal emotional state</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0100851"/>
