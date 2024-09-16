@@ -725,22 +725,10 @@ BEB, GIH, ITU, PJL and STU populations.</obo:IAO_0000115>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HANCESTRO_0011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HANCESTRO_0011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0010"/>
-        <obo:IAO_0000115 xml:lang="en">Includes individuals who either self-report or have been described by authors as SubSaharan African or one of the subpopulations from this region (e.g. Yoruban).
-This category also includes individuals who genetically cluster with reference populations from this region for example 1000 Genomes and/or HapMap ESN, LWK, GWD, MSL, MKK and YRI populations.</obo:IAO_0000115>
-        <rdfs:label>Sub-Saharan African</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HANCESTRO_0013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HANCESTRO_0013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0004"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0601"/>
         <obo:IAO_0000115 xml:lang="en">Includes indigenous individuals of North, Central and South America, descended from the original human migration into the Americas from Siberia. We note that there does not appear to be a suitable reference population for this category and efforts are required to fill this gap.</obo:IAO_0000115>
         <rdfs:comment>Class previously labelled as &quot;Native American&quot;. Use of this term, alongside other terms such as &quot;First Nations&quot;, should be discontinued in favour of the more appropriate &quot;Indigenous American&quot;, which includes indigenous communities across the Americas while the former serve as political designations in the USA and Canada, respectively.</rdfs:comment>
         <rdfs:label xml:lang="en">Indigenous American</rdfs:label>
@@ -1057,6 +1045,7 @@ This category also includes individuals who genetically cluster with reference p
     <!-- http://purl.obolibrary.org/obo/HANCESTRO_0570 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HANCESTRO_0570">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0601"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0610"/>
         <obo:IAO_0000115>Individuals who self-identify or are reported by authors as belonging to a group of indigenous Americans living in an area consisting of what is now central and southern Arizona, as well as northwestern Mexico in the states of Sonora and Chihuahua. The majority population of the two current bands of the Akimel O&apos;odham in the United States are based in two reservations: the Keli Akimel Oʼodham on the Gila River Indian Community (GRIC) and the On&apos;k Akimel O&apos;odham on the Salt River Pima-Maricopa Indian Community (SRPMIC).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>Akimel O&apos;otham</oboInOwl:hasExactSynonym>
@@ -1090,9 +1079,9 @@ This category also includes individuals who genetically cluster with reference p
     <!-- http://purl.obolibrary.org/obo/HANCESTRO_0575 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HANCESTRO_0575">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0011"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HANCESTRO_0601"/>
-        <rdfs:label>Yoruban</rdfs:label>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/AfPO_0000105"/>
+        <rdfs:label>obsolete Yoruban</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
