@@ -605,9 +605,10 @@ Eur J Cancer. 2009 Jan;45(1):74-81. PMID: 19008094</obo:IAO_0000112>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000111>specimen collection process</obo:IAO_0000111>
-        <obo:IAO_0000112>drawing blood from a patient for analysis, collecting a piece of a plant for depositing in a herbarium, buying meat from a butcher in order to measure its protein content in an investigation</obo:IAO_0000112>
+        <obo:IAO_0000112>drawing blood from a patient for analysis, collecting a piece of a plant for depositing in a herbarium, buying meat from a butcher in order to measure its protein content in an investigation, collecting a stone from a site</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A planned process with the objective of collecting a specimen.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A planned process with the objective to obtain a material entity for potential use as an input upon which measurements or observations are performed.</obo:IAO_0000115>
+        <obo:IAO_0000116>Definition updated following discussion on 2024-10-07 OBI dev call.</obo:IAO_0000116>
         <obo:IAO_0000116>Note: definition is in specimen creation objective which is defined as an objective to obtain and store a material entity for potential use as an input during an investigation.</obo:IAO_0000116>
         <obo:IAO_0000116>Philly2013: A specimen collection can have as part a material entity acquisition, such as ordering from a bank. The distinction is that specimen collection necessarily involves the creation of a specimen role. However ordering cell lines cells from ATCC for use in an investigation is NOT a specimen collection, because the cell lines already have a specimen role.</obo:IAO_0000116>
         <obo:IAO_0000116>Philly2013: The specimen_role for the specimen is created during the specimen collection process.</obo:IAO_0000116>
@@ -677,9 +678,9 @@ http://sourceforge.net/p/obi/obi-terms/716/</obo:IAO_0000116>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that has the material sample role</obo:IAO_0000115>
         <obo:IAO_0000117>OBI: workshop</obo:IAO_0000117>
+        <obo:IAO_0000118>sample</obo:IAO_0000118>
         <obo:IAO_0000118>sample population</obo:IAO_0000118>
-        <obo:IAO_0000233 rdf:resource="https://github.com/obi-ontology/obi/issues/1013"/>
-        <obo:OBI_0001847>sample</obo:OBI_0001847>
+        <obo:IAO_0000233>https://github.com/obi-ontology/obi/issues/1013</obo:IAO_0000233>
         <rdfs:label>material sample</rdfs:label>
     </owl:Class>
     
@@ -747,9 +748,6 @@ http://sourceforge.net/p/obi/obi-terms/716/</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000922">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001472"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/OBI_0000950"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/OBI_0000971"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/OBI_0000981"/>
         <obo:IAO_0000111>frozen specimen</obo:IAO_0000111>
         <obo:IAO_0000112>Frozen blood plasma</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
@@ -779,8 +777,6 @@ http://sourceforge.net/p/obi/obi-terms/716/</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000950">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001472"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/OBI_0000971"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/OBI_0000981"/>
         <obo:IAO_0000111>paraffin specimen</obo:IAO_0000111>
         <obo:IAO_0000112>liver tissue embedded in paraffin</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
@@ -797,7 +793,6 @@ http://sourceforge.net/p/obi/obi-terms/716/</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000971">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001472"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/OBI_0000981"/>
         <obo:IAO_0000111>fresh specimen</obo:IAO_0000111>
         <obo:IAO_0000112>a liver freshly removed from a rat</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
@@ -901,13 +896,13 @@ http://svitsrv25.epfl.ch/R-doc/library/qvalue.html</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001468">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100051"/>
-        <obo:IAO_0000111 xml:lang="en">cell specimen</obo:IAO_0000111>
+        <obo:IAO_0000111>cell specimen</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A specimen primarily composed of a cell or cells collected from a multicellular organism or a cell culture.</obo:IAO_0000115>
-        <obo:IAO_0000116>Discussed on obi call Jan 23, 2017. To improve cell specimen that include single cell specimen. Details see tracker: https://sourceforge.net/p/obi/obi-terms/828/</obo:IAO_0000116>
+        <obo:IAO_0000116>Discussed on obi call Jan 23, 2017. To improve cell specimen that include single cell specimen. Details see tracker: https://sourceforge.net/p/obi/obi-terms/828</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON: Chris Stoeckert, Jie Zheng, Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000119>MO_612 cell</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">cell specimen</rdfs:label>
+        <rdfs:label>cell specimen</rdfs:label>
     </owl:Class>
     
 
@@ -916,12 +911,12 @@ http://svitsrv25.epfl.ch/R-doc/library/qvalue.html</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001472">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100051"/>
-        <obo:IAO_0000111 xml:lang="en">specimen with known storage state</obo:IAO_0000111>
+        <obo:IAO_0000111>specimen with known storage state</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A specimen for which it is known whether it has been subjected to storage of a specified type.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON: Chris Stoeckert, Jie Zheng</obo:IAO_0000117>
         <obo:IAO_0000119>MO_95 BiosourceType</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">specimen with known storage state</rdfs:label>
+        <rdfs:label>specimen with known storage state</rdfs:label>
     </owl:Class>
     
 
@@ -1027,10 +1022,9 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100051">
         <obo:IAO_0000111 xml:lang="en">specimen</obo:IAO_0000111>
-        <obo:IAO_0000112>Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen; collecting a stone from a site.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A material entity that has the specimen role.</obo:IAO_0000115>
-        <obo:IAO_0000116>Note: definition is in specimen creation objective which is defined as an objective to obtain and store a material entity for potential use as an input during an investigation.</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">A material entity that is collected for potential use as an input upon which measurements or observations are performed.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON: James Malone</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">GROUP: OBI Biomaterial Branch</obo:IAO_0000119>
