@@ -125,36 +125,6 @@
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>part_of</oboInOwl:id>
-        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
-        <rdfs:label>part of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -889,6 +859,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0003094 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003094">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003014"/>
+        <obo:IAO_0000115>The process in which plasma is filtered through the glomerular membrane which consists of capillary endothelial cells, the basement membrane, and epithelial cells. The glomerular filtrate is the same as plasma except it has no significant amount of protein.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0003094</oboInOwl:id>
+        <rdfs:label>glomerular filtration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003094"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The process in which plasma is filtered through the glomerular membrane which consists of capillary endothelial cells, the basement membrane, and epithelial cells. The glomerular filtrate is the same as plasma except it has no significant amount of protein.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:mtg_cardio</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:sart</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721643949</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0003674 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003674">
@@ -1397,6 +1387,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>NAD-dependent aldehyde dehydrogenase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>NAD-linked aldehyde dehydrogenase activity</owl:annotatedTarget>
         <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1500,12 +1496,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>NAD-dependent 4-hydroxynonenal dehydrogenase activity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>NAD-dependent aldehyde dehydrogenase activity</owl:annotatedTarget>
         <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -5537,12 +5527,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005183">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The action characteristic of gonadotropin hormone-releasing hormone (GnRH), any of a family of decapeptide amide hormones that are released by the hypothalamus in response to neural and/or chemical stimuli. In at least mammals, upon receptor binding, GnRH causes the release of follicle-stimulating hormone (FSH) and luteinizing hormone (LH) by the anterior pituitary.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>GnRH activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>LH/FSH-RF</oboInOwl:hasExactSynonym>
@@ -5874,22 +5858,32 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0005577 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005577">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <obo:IAO_0000115>A highly soluble, elongated protein complex found in blood plasma and involved in clot formation. It is converted into fibrin monomer by the action of thrombin. In the mouse, fibrinogen is a hexamer, 46 nm long and 9 nm maximal diameter, containing two sets of nonidentical chains (alpha, beta, and gamma) linked together by disulfide bonds.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>fibrinogen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>fibrinogen alpha chain</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>fibrinogen beta chain</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>fibrinogen gamma chain</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0005577</oboInOwl:id>
+        <rdfs:label>fibrinogen complex</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005577"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A highly soluble, elongated protein complex found in blood plasma and involved in clot formation. It is converted into fibrin monomer by the action of thrombin. In the mouse, fibrinogen is a hexamer, 46 nm long and 9 nm maximal diameter, containing two sets of nonidentical chains (alpha, beta, and gamma) linked together by disulfide bonds.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ISBN:0198547684</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0005579 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005579">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A protein complex produced by sequentially activated components of the complement cascade inserted into a target cell membrane and forming a pore leading to cell lysis via ion and water flow.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Complement_membrane_attack_complex</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>MAC</oboInOwl:hasExactSynonym>
@@ -6083,12 +6077,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005730">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043232"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0031981"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A small, dense body one or more of which are present in the nucleus of eukaryotic cells. It is rich in RNA and protein, is not bounded by a limiting membrane, and is not seen during mitosis. Its prime function is the transcription of the nucleolar DNA into 45S ribosomal-precursor RNA, the processing of this RNA into 5.8S, 18S, and 28S components of ribosomal RNA, and the association of these components with 5S RNA and proteins synthesized outside the nucleolus. This association results in the formation of ribonucleoprotein precursors; these pass into the cytoplasm and mature into the 40S and 60S subunits of the ribosome.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1820400233</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Nucleolus</oboInOwl:hasDbXref>
@@ -6116,12 +6104,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005737">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/23023</obo:IAO_0000233>
         <oboInOwl:hasDbXref>Wikipedia:Cytoplasm</oboInOwl:hasDbXref>
@@ -6151,12 +6133,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005739">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A semiautonomous, self replicating organelle that occurs in varying numbers, shapes, and sizes in the cytoplasm of virtually all eukaryotic cells. It is notably the site of tissue respiration.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1860313010</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Mitochondrion</oboInOwl:hasDbXref>
@@ -6192,12 +6168,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005740">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031967"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005739"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The double lipid bilayer enclosing the mitochondrion and separating its contents from the cell cytoplasm; includes the intermembrane space.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005740</oboInOwl:id>
@@ -6333,12 +6303,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005758">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031970"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005740"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The region between the inner and outer lipid bilayers of the mitochondrial envelope.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0031971</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao118944228</oboInOwl:hasDbXref>
@@ -6385,12 +6349,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005773">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material. Cells contain one or several vacuoles, that may have different functions from each other. Vacuoles have a diverse array of functions. They can act as a storage organelle for nutrients or waste products, as a degradative compartment, as a cost-effective way of increasing cell size, and as a homeostatic regulator controlling both turgor pressure and pH of the cytosol.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Vacuole</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -6424,12 +6382,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005777">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A small organelle enclosed by a single membrane, and found in most eukaryotic cells. Contains peroxidases and other enzymes involved in a variety of metabolic processes including free radical detoxification, lipid catabolism and biosynthesis, and hydrogen peroxide metabolism.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0019818</oboInOwl:hasAlternativeId>
         <oboInOwl:hasBroadSynonym>peroxisome vesicle</oboInOwl:hasBroadSynonym>
@@ -6463,18 +6415,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005783">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0012505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The irregular network of unit membranes, visible only by electron microscopy, that occurs in the cytoplasm of many eukaryotic cells. The membranes form a complex meshwork of tubular channels, which are often expanded into slitlike cavities called cisternae. The ER takes two forms, rough (or granular), with ribosomes adhering to the outer surface, and smooth (with no ribosomes attached).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1036339110</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Endoplasmic_reticulum</oboInOwl:hasDbXref>
@@ -6551,18 +6491,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005794">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0012505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A membrane-bound cytoplasmic organelle of the endomembrane system that further processes the core oligosaccharides (e.g. N-glycans) added to proteins in the endoplasmic reticulum and packages them into membrane-bound vesicles. The Golgi apparatus operates at the intersection of the secretory, lysosomal, and endocytic pathways.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Golgi</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao451912436</oboInOwl:hasDbXref>
@@ -6598,12 +6526,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005801">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005794"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The network of interconnected tubular and cisternal structures located at the convex side of the Golgi apparatus, which abuts the endoplasmic reticulum.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>cis face</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao632188024</oboInOwl:hasDbXref>
@@ -6636,12 +6558,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005819">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043232"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0015630"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The array of microtubules and associated molecules that forms between opposite poles of a eukaryotic cell during mitosis or meiosis and serves to move the duplicated chromosomes apart.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Spindle_apparatus</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -6661,12 +6577,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005829">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The part of the cytoplasm that does not contain organelles but which does contain other particulate matter, such as protein complexes.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao101633890</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cytosol</oboInOwl:hasDbXref>
@@ -6761,12 +6671,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005886">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0071944"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0005887</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0005904</oboInOwl:hasAlternativeId>
@@ -6825,12 +6729,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005901">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045121"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A membrane raft that forms small pit, depression, or invagination that communicates with the outside of a cell and extends inward, indenting the cytoplasm and the cell membrane. Examples include flask-shaped invaginations of the plasma membrane in adipocytes associated with caveolin proteins, and minute pits or incuppings of the cell membrane formed during pinocytosis. Caveolae may be pinched off to form free vesicles within the cytoplasm.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0016599</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Caveolae</oboInOwl:hasDbXref>
@@ -7476,12 +7374,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006486">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0036211"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043413"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009101"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A protein modification process that results in the addition of a carbohydrate or carbohydrate derivative unit to a protein amino acid, e.g. the addition of glycan chains to proteins.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0065006</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>protein amino acid glycosylation</oboInOwl:hasExactSynonym>
@@ -8621,12 +8513,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006911">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016043"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006909"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis, including the membrane and cytoskeletal processes required, which involves one of three mechanisms: zippering of pseudopods around a target via repeated receptor-ligand interactions, sinking of the target directly into plasma membrane of the phagocytosing cell, or induced uptake via an enhanced membrane ruffling of the phagocytosing cell similar to macropinocytosis.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>phagosome biosynthesis</oboInOwl:hasRelatedSynonym>
@@ -8971,26 +8857,9 @@
     <!-- http://purl.obolibrary.org/obo/GO_0007052 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007052">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007051"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000278"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000226"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007051"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022402"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000278"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of the microtubule spindle during a mitotic cell cycle.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/15341</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0000071</oboInOwl:hasAlternativeId>
@@ -9072,18 +8941,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007165">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0051716"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0023014</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0023015</oboInOwl:hasAlternativeId>
@@ -9241,12 +9098,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007420">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048513"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007417"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The process whose specific outcome is the progression of the brain over time, from its formation to the mature structure. Brain development begins with patterning events in the neural tube and ends with the mature structure that is the center of thought and emotion. The brain is responsible for the coordination and control of bodily activities and the interpretation of information from the senses (sight, hearing, smell, etc.).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007420</oboInOwl:id>
@@ -9288,12 +9139,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007507">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048513"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0072359"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The process whose specific outcome is the progression of the heart over time, from its formation to the mature structure. The heart is a hollow, muscular organ, which, by contracting rhythmically, keeps up the circulation of the blood.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7227"/>
         <oboInOwl:hasAlternativeId>GO:0007511</oboInOwl:hasAlternativeId>
@@ -9448,12 +9293,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007596">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042060"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The sequential process in which the multiple coagulation factors of the blood interact, ultimately resulting in the formation of an insoluble fibrin clot; it may be divided into three stages: stage 1, the formation of intrinsic and extrinsic prothrombin converting principle; stage 2, the formation of thrombin; stage 3, the formation of stable fibrin polymers.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Coagulation</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>blood clotting</oboInOwl:hasExactSynonym>
@@ -10220,12 +10059,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008517">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0015884"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Enables the transfer of folic acid (pteroylglutamic acid) from one side of a membrane to the other. Folic acid is widely distributed as a member of the vitamin B complex and is essential for the synthesis of purine and pyrimidines.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Reactome:R-HSA-200646</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-200652</oboInOwl:hasDbXref>
@@ -11175,30 +11008,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0009279 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009279">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019867"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030313"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019867"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030312"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030313"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A lipid bilayer that forms the outermost membrane of the cell envelope; enriched in polysaccharide and protein; the outer leaflet of the membrane contains specific lipopolysaccharide structures.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>outer membrane of cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -11463,12 +11273,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009526">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031967"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009536"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The double lipid bilayer enclosing a plastid and separating its contents from the rest of the cytoplasm; includes the intermembrane space.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009526</oboInOwl:id>
@@ -11487,12 +11291,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009536">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Any member of a family of organelles found in the cytoplasm of plants and some protists, which are membrane-bounded and contain DNA. Plant plastids develop from a common type, the proplastid.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Plastid</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -11641,12 +11439,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009941">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009526"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009507"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The double lipid bilayer enclosing the chloroplast and separating its contents from the rest of the cytoplasm; includes the intermembrane space.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009941</oboInOwl:id>
@@ -11877,12 +11669,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0012507">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030658"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030662"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030134"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The lipid bilayer surrounding a vesicle transporting substances from the endoplasmic reticulum to the Golgi.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0030664</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>COPII coated vesicle membrane</oboInOwl:hasExactSynonym>
@@ -11955,12 +11741,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0014069">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0098794"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>An electron dense network of proteins within and adjacent to the postsynaptic membrane of an asymmetric, neuron-neuron synapse. Its major components include neurotransmitter receptors and the proteins that spatially and functionally organize them such as anchoring and scaffolding molecules, signaling enzymes and cytoskeletal components.</obo:IAO_0000115>
         <oboInOwl:created_by>pr</oboInOwl:created_by>
         <oboInOwl:creation_date>2013-07-02T09:44:28Z</oboInOwl:creation_date>
@@ -12295,6 +12075,62 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Enables the transfer of amino acids from one side of a membrane to the other. Amino acids are organic molecules that contain an amino group and a carboxyl group.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_transport</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0815340729</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-210439</owl:annotatedTarget>
+        <rdfs:label>glutamate uptake by astrocytes</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-212642</owl:annotatedTarget>
+        <rdfs:label>L-Glutamine transport into neurons</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-351963</owl:annotatedTarget>
+        <rdfs:label>SLC6A18 transports Gly from extracellular region to cytosol</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-351987</owl:annotatedTarget>
+        <rdfs:label>SLC6A6-mediated uptake of taurine and beta-alanine</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-352029</owl:annotatedTarget>
+        <rdfs:label>SLC6A12 (BGT-1)-mediated uptake of GABA and betaine</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-352052</owl:annotatedTarget>
+        <rdfs:label>SLC6A20 cotransports L-Pro, Na+ from the extracellular region to cytosol</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-352059</owl:annotatedTarget>
+        <rdfs:label>SLC6A15-mediated amino acid uptake</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-352103</owl:annotatedTarget>
+        <rdfs:label>SLC43A1 (LAT3)-mediated uptake of large neutral amino acids</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-352107</owl:annotatedTarget>
         <rdfs:label>SLC43A2 (LAT4)-mediated uptake of large neutral amino acids</rdfs:label>
@@ -12521,62 +12357,6 @@
         <owl:annotatedTarget>Reactome:R-HSA-8952726</owl:annotatedTarget>
         <rdfs:label>SLC38A9 transports L-Arg from lysosomal lumen to cytosol</rdfs:label>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Enables the transfer of amino acids from one side of a membrane to the other. Amino acids are organic molecules that contain an amino group and a carboxyl group.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:mtg_transport</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0815340729</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-210439</owl:annotatedTarget>
-        <rdfs:label>glutamate uptake by astrocytes</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-212642</owl:annotatedTarget>
-        <rdfs:label>L-Glutamine transport into neurons</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-351963</owl:annotatedTarget>
-        <rdfs:label>SLC6A18 transports Gly from extracellular region to cytosol</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-351987</owl:annotatedTarget>
-        <rdfs:label>SLC6A6-mediated uptake of taurine and beta-alanine</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-352029</owl:annotatedTarget>
-        <rdfs:label>SLC6A12 (BGT-1)-mediated uptake of GABA and betaine</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-352052</owl:annotatedTarget>
-        <rdfs:label>SLC6A20 cotransports L-Pro, Na+ from the extracellular region to cytosol</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-352059</owl:annotatedTarget>
-        <rdfs:label>SLC6A15-mediated amino acid uptake</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-352103</owl:annotatedTarget>
-        <rdfs:label>SLC43A1 (LAT3)-mediated uptake of large neutral amino acids</rdfs:label>
-    </owl:Axiom>
     
 
 
@@ -12746,18 +12526,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A protein complex formed of four sarcoglycans plus sarcospan; there are six known sarcoglycans: alpha-, beta-, gamma-, delta-, epsilon- and zeta-sarcoglycan; all are N-glycosylated single-pass transmembrane proteins. The sarcoglycan-sarcospan complex is a subcomplex of the dystrophin glycoprotein complex, and is fixed to the dystrophin axis by a lateral association with the dystroglycan complex.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>sarcoglycan-sarcospan complex</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -13278,12 +13046,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0017119">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005794"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A multisubunit tethering complex of the CATCHR family (complexes associated with tethering containing helical rods) that has a role in tethering vesicles to the Golgi prior to fusion. Composed of 8 subunits COG1-8.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>COG complex</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>conserved oligomeric Golgi complex</oboInOwl:hasExactSynonym>
@@ -13533,12 +13295,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044057"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008015"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of reductions in the diameter of blood vessels.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0019229</oboInOwl:id>
@@ -13774,12 +13530,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019915">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010876"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The accumulation and maintenance in cells or tissues of lipids, compounds soluble in organic solvents but insoluble or sparingly soluble in aqueous solvents. Lipid reserves can be accumulated during early developmental stages for mobilization and utilization at later stages of development.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lipid retention</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>retention of lipids</oboInOwl:hasExactSynonym>
@@ -13857,24 +13607,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0022402 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022402">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0009987"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007049"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007049"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The cellular process that ensures successive accurate and complete genome replication and chromosome segregation.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0022402</oboInOwl:id>
@@ -14106,12 +13839,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030133">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031410"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0012505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Any of the vesicles of the constitutive secretory pathway, which carry cargo from the endoplasmic reticulum to the Golgi, between Golgi cisternae, from the Golgi to the ER (retrograde transport) or to destinations within or outside the cell.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao885490876</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>constitutive secretory pathway transport vesicle</oboInOwl:hasExactSynonym>
@@ -14215,12 +13942,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007586"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The regulated release of pancreatic juice by the exocrine pancreas into the upper part of the intestine. Pancreatic juice is slightly alkaline and contains numerous enzymes and inactive enzyme precursors including alpha-amylase, chymotrypsinogen, lipase, procarboxypeptidase, proelastase, prophospholipase A2, ribonuclease, and trypsinogen. Its high concentration of bicarbonate ions helps to neutralize the acid from the stomach.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0030157</oboInOwl:id>
@@ -14240,12 +13961,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030168">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0001775"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007596"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A series of progressive, overlapping events triggered by exposure of the platelets to subendothelial tissue. These events include shape change, adhesiveness, aggregation, and release reactions. When carried through to completion, these events lead to the formation of a stable hemostatic plug.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>blood coagulation, platelet activation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -14299,12 +14014,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030218">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034101"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The process in which a myeloid precursor cell acquires specializes features of an erythrocyte.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Erythropoiesis</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>RBC differentiation</oboInOwl:hasExactSynonym>
@@ -14394,12 +14103,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030312">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0071944"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A structure that lies outside the plasma membrane and surrounds the entire cell or cells. This does not include the periplasmic space.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0030312</oboInOwl:id>
@@ -14438,6 +14141,51 @@
         <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:mlg</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://pathmicro.med.sc.edu/fox/cell_envelope.htm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0030317 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030317">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
+        <obo:IAO_0000115>The directed, self-propelled movement of a cilium (aka flagellum) that contributes to the movement of a flagellated sperm.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>GO:0097724</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:1905419</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>sperm motility</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>sperm movement</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>Wikipedia:Sperm_motility</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>flagellated sperm movement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sperm flagellum movement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sperm flagellum movement involved in flagellated sperm motility</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sperm flagellum movement involved in flagellated sperm movement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0030317</oboInOwl:id>
+        <rdfs:label>flagellated sperm motility</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030317"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The directed, self-propelled movement of a cilium (aka flagellum) that contributes to the movement of a flagellated sperm.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:cilia</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:krc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO_REF:0000060</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26680031</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030317"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>sperm flagellum movement</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:cilia</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:krc</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030317"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>sperm flagellum movement involved in flagellated sperm movement</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14555,12 +14303,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030658">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030659"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031090"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030133"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The lipid bilayer surrounding a transport vesicle.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>secretory vesicle membrane</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>constitutive secretory pathway transport vesicle membrane</oboInOwl:hasExactSynonym>
@@ -14580,24 +14322,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0030659 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030659">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0016020"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0031410"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0012506"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0031410"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The lipid bilayer surrounding a cytoplasmic vesicle.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0030659</oboInOwl:id>
@@ -14617,12 +14342,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030662">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030659"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031090"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030135"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The lipid bilayer surrounding a coated vesicle.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0030662</oboInOwl:id>
@@ -14799,24 +14518,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0031090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031090">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0016020"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043227"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043227"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A membrane that is one of the two lipid bilayers of an organelle envelope or the outermost membrane of single membrane bound organelle.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao830981606</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -14844,12 +14546,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031091">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031410"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0012505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A secretory organelle found in blood platelets, which is unique in that it exhibits further compartmentalization and acquires its protein content via two distinct mechanisms: (1) biosynthesis predominantly at the megakaryocyte (MK) level (with some vestigial platelet synthesis) (e.g. platelet factor 4) and (2) endocytosis and pinocytosis at both the MK and circulating platelet levels (e.g. fibrinogen (Fg) and IgG).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Platelet_alpha-granule</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>platelet alpha-granule</oboInOwl:hasExactSynonym>
@@ -14871,12 +14567,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031410">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043227"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A vesicle found in the cytoplasm of a cell.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0016023</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao180601769</oboInOwl:hasDbXref>
@@ -15040,18 +14730,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031967">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043227"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043229"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A double membrane structure enclosing an organelle, including two lipid bilayers and the region between them. In some cases, an organelle envelope may have more than two membranes.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0031967</oboInOwl:id>
@@ -15072,12 +14750,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031969">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042170"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009941"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Either of the lipid bilayers that surround a chloroplast and form the chloroplast envelope.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Chloroplast_membrane</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -15098,24 +14770,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031970">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031974"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0031967"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043229"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The region between the inner and outer lipid bilayers of an organelle envelope.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>organelle intermembrane space</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -15154,24 +14808,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031981">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031974"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043229"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The volume enclosed by the nuclear inner membrane.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0031981</oboInOwl:id>
@@ -15219,12 +14855,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032274">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046879"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The regulated release of a gonadotropin, any hormone that stimulates the gonads, especially follicle-stimulating hormone and luteinizing hormone.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>gonadotrophin secretion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -15517,12 +15147,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0033646">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033643"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043656"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Any constituent part of the living contents of a host cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>host cell intracellular part</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -15663,6 +15287,81 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>red blood cell homeostasis</owl:annotatedTarget>
         <oboInOwl:hasDbXref>CL:0000232</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0034361 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0034361">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <obo:IAO_0000115>A triglyceride-rich lipoprotein particle that is typically composed of APOB100, APOE and APOCs and has a density of about 1.006 g/ml and a diameter of between 20-80 nm. It is found in blood and transports endogenous products (newly synthesized cholesterol and triglycerides) from the liver.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>VLDL complex</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VLDL particle</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>very-low-density lipoprotein complex</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0034361</oboInOwl:id>
+        <rdfs:label>very-low-density lipoprotein particle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0034361"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A triglyceride-rich lipoprotein particle that is typically composed of APOB100, APOE and APOCs and has a density of about 1.006 g/ml and a diameter of between 20-80 nm. It is found in blood and transports endogenous products (newly synthesized cholesterol and triglycerides) from the liver.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:BHF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:expert_pt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:rl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0034362 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0034362">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <obo:IAO_0000115>A lipoprotein particle, rich in cholesterol esters and low in triglycerides that is typically composed of APOB100 and APOE and has a density of 1.02-1.06 g/ml and a diameter of between 20-25 nm. LDL particles are formed from VLDL particles (via IDL) by the loss of triglyceride and gain of cholesterol ester. They transport endogenous cholesterol (and to some extent triglycerides) from peripheral tissues back to the liver.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>LDL complex</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>LDL particle</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>low-density lipoprotein complex</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0034362</oboInOwl:id>
+        <rdfs:label>low-density lipoprotein particle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0034362"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A lipoprotein particle, rich in cholesterol esters and low in triglycerides that is typically composed of APOB100 and APOE and has a density of 1.02-1.06 g/ml and a diameter of between 20-25 nm. LDL particles are formed from VLDL particles (via IDL) by the loss of triglyceride and gain of cholesterol ester. They transport endogenous cholesterol (and to some extent triglycerides) from peripheral tissues back to the liver.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:BHF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:expert_pt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:rl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0034364 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0034364">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <obo:IAO_0000115>A lipoprotein particle with a high density (typically 1.063-1.21 g/ml) and a diameter of 5-10 nm that contains APOAs and may contain APOCs and APOE; found in blood and carries lipids from body tissues to the liver as part of the reverse cholesterol transport process.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>HDL complex</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>HDL particle</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>high-density lipoprotein class complex</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>HDL2</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>HDL3</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0034364</oboInOwl:id>
+        <rdfs:label>high-density lipoprotein particle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0034364"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A lipoprotein particle with a high density (typically 1.063-1.21 g/ml) and a diameter of 5-10 nm that contains APOAs and may contain APOCs and APOE; found in blood and carries lipids from body tissues to the liver as part of the reverse cholesterol transport process.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:BHF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:expert_pt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pde</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:rl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15819,12 +15518,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0035483">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007586"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The process in which the liquid and liquid-suspended solid contents of the stomach exit through the pylorus into the duodenum.</obo:IAO_0000115>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-04-23T10:51:33Z</oboInOwl:creation_date>
@@ -15877,12 +15570,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0035812">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003014"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007588"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0055078"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The elimination of sodium ions from peritubular capillaries (or surrounding hemolymph in invertebrates) into the renal tubules to be incorporated subsequently into the urine.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/22368</obo:IAO_0000233>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
@@ -15979,16 +15666,64 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0035882 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0035882">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <obo:IAO_0000115>The rhythmic process of defecation that consists of an intestinal oscillator which regulates calcium waves. These waves in turn control a stereotypical, three-part pattern of muscle contractions. In some organisms, defecation can recur with a regularity more frequent than every 24 hours. For example, in a well-fed Caenorhabditis elegans, the defecation motor program occurs approximately every 45 seconds, and is temperature- and touch-compensated.</obo:IAO_0000115>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-06-06T11:36:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>DMP</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>defecation cycle</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>defecation motor program</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>defecation behavior</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0035882</oboInOwl:id>
+        <rdfs:label>defecation rhythm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035882"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The rhythmic process of defecation that consists of an intestinal oscillator which regulates calcium waves. These waves in turn control a stereotypical, three-part pattern of muscle contractions. In some organisms, defecation can recur with a regularity more frequent than every 24 hours. For example, in a well-fed Caenorhabditis elegans, the defecation motor program occurs approximately every 45 seconds, and is temperature- and touch-compensated.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:bf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:7479775</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:8158250</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:9066270</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035882"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>DMP</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:9066270</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035882"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>defecation cycle</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:8158250</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035882"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>defecation motor program</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:9066270</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035882"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>defecation behavior</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:7479775</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:9066270</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0035898 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0035898">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046879"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The regulated release of parathyroid hormone into the circulatory system.</obo:IAO_0000115>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-06-22T09:28:54Z</oboInOwl:creation_date>
@@ -16035,18 +15770,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046879"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010876"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The regulated release of aldosterone into the circulatory system. Aldosterone is a pregnane-based steroid hormone produced by the outer-section (zona glomerulosa) of the adrenal cortex in the adrenal gland, and acts on the distal tubules and collecting ducts of the kidney to cause the conservation of sodium, secretion of potassium, increased water retention, and increased blood pressure. The overall effect of aldosterone is to increase reabsorption of ions and water in the kidney.</obo:IAO_0000115>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-07-20T01:06:24Z</oboInOwl:creation_date>
@@ -16702,24 +16425,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0042170 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042170">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0016020"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009536"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031090"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009526"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Either of the lipid bilayers that surround a plastid and form the plastid envelope.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0042170</oboInOwl:id>
@@ -16904,12 +16610,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042476">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0048513"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The process whose specific outcome is the progression of a tooth or teeth over time, from formation to the mature structure(s). A tooth is any hard bony, calcareous, or chitinous organ found in the mouth or pharynx of an animal and used in procuring or masticating food.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0042477</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Odontogenesis</oboInOwl:hasDbXref>
@@ -17011,16 +16711,31 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0042627 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042627">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <obo:IAO_0000115>A large lipoprotein particle (diameter 75-1200 nm) composed of a central core of triglycerides and cholesterol surrounded by a protein-phospholipid coating. The proteins include one molecule of apolipoprotein B-48 and may include a variety of apolipoproteins, including APOAs, APOCs and APOE. Chylomicrons are found in blood or lymph and carry lipids from the intestines into other body tissues.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Wikipedia:Chylomicron</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0042627</oboInOwl:id>
+        <rdfs:label>chylomicron</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0042627"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A large lipoprotein particle (diameter 75-1200 nm) composed of a central core of triglycerides and cholesterol surrounded by a protein-phospholipid coating. The proteins include one molecule of apolipoprotein B-48 and may include a variety of apolipoproteins, including APOAs, APOCs and APOE. Chylomicrons are found in blood or lymph and carry lipids from the intestines into other body tissues.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:rl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:10580165</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0042630 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042630">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009414"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that results in a change in the behavior of an organism as a result of deprivation of water.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>behavioral response to drought</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>behavioral response to thirst</oboInOwl:hasExactSynonym>
@@ -17202,18 +16917,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043020">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A enzyme complex of which the core is a heterodimer composed of a light (alpha) and heavy (beta) chain, and requires the cytosolic regulatory subunits at least NCF1/p47-phox, NCF2/p67-phox, NCF4/p40-phox and the small GTPase RAC1 or RAC2 for activity. Functions in superoxide generation by the NADPH-dependent reduction of O2.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/29068</obo:IAO_0000233>
         <oboInOwl:hasNarrowSynonym>flavocytochrome b558</oboInOwl:hasNarrowSynonym>
@@ -17395,24 +17098,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0043229 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043229">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0043226"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28153</obo:IAO_0000233>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -17453,17 +17139,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0043231 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043231">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0043227"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043227"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043229"/>
         <obo:IAO_0000115>Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane.</obo:IAO_0000115>
@@ -17529,12 +17204,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043292">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043232"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Fibers, composed of actin, myosin, and associated proteins, found in cells of smooth or striated muscle.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27281</obo:IAO_0000233>
         <oboInOwl:hasExactSynonym>contractile fibre</oboInOwl:hasExactSynonym>
@@ -17558,18 +17227,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046879"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010876"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The regulated release of cortisol, a steroid hormone that in humans is the major circulating hormone of the cortex, or outer layer, of the adrenal gland.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>hydrocortisone secretion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -18409,12 +18066,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044691">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042476"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The tooth development process in which the teeth enter the mouth and become visible.</obo:IAO_0000115>
         <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-08-15T14:58:17Z</oboInOwl:creation_date>
@@ -18502,6 +18153,29 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0044850 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044850">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
+        <obo:IAO_0000115>A type of ovulation cycle where the endometrium is shed if pregnancy does not occur.</obo:IAO_0000115>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
+        <oboInOwl:creation_date>2014-07-16T13:51:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>Wikipedia:Menstrual_cycle</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0044850</oboInOwl:id>
+        <rdfs:label>menstrual cycle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044850"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of ovulation cycle where the endometrium is shed if pregnancy does not occur.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0045061 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045061">
@@ -18528,9 +18202,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045087">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0002376"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006950"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098542"/>
         <obo:IAO_0000115>Innate immune responses are defense responses mediated by germline encoded components that directly recognize components of potential pathogens.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0002226</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Innate_immune_system</oboInOwl:hasDbXref>
@@ -18684,12 +18357,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045259">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A proton-transporting two-sector ATPase complex that catalyzes the phosphorylation of ADP to ATP during oxidative phosphorylation. The complex comprises a membrane sector (F0) that carries out proton transport and a cytoplasmic compartment sector (F1) that catalyzes ATP synthesis by a rotational mechanism; the extramembrane sector (containing 3 a and 3 b subunits) is connected via the d-subunit to the membrane sector by several smaller subunits. Within this complex, the g and e subunits and the 9-12 c subunits rotate by consecutive 120 degree angles and perform parts of ATP synthesis. This movement is driven by the hydrogen ion electrochemical potential gradient.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28017</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0045255</oboInOwl:hasAlternativeId>
@@ -18715,12 +18382,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045271">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Respiratory chain complex I is an enzyme of the respiratory chain. It consists of several polypeptide chains and is L-shaped, with a horizontal arm lying in the membrane and a vertical arm that projects into the matrix. The electrons of NADH enter the chain at this complex.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0045279</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>NADH dehydrogenase (ubiquinone) complex</oboInOwl:hasExactSynonym>
@@ -18747,12 +18408,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045275">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A protein complex that transfers electrons from ubiquinol to cytochrome c and translocates two protons across a membrane. The complex contains a core structure of three catalytic subunits: cytochrome b, the Rieske iron sulfur protein (ISP), and cytochrome c1, which are arranged in an integral membrane-bound dimeric complex; additional subunits are present, and vary among different species.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0032842</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0045285</oboInOwl:hasAlternativeId>
@@ -18809,12 +18464,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045453">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042592"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0046849"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The process in which specialized cells known as osteoclasts degrade the organic and inorganic portions of bone, and endocytose and transport the degradation products.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Bone_resorption</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -19991,12 +19640,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050892">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007586"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process in which nutrients are taken up from the contents of the intestine.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26825</obo:IAO_0000233>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -20335,12 +19978,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051458">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046879"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050886"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The regulated release of corticotropin by a cell. Corticotropin hormone is a polypeptide hormone synthesized and secreted from corticotropes in the anterior lobe of the pituitary gland in response to corticotropin-releasing hormone (CRH) released by the hypothalamus.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>ACTH secretion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>adrenocorticotropic hormone secretion</oboInOwl:hasExactSynonym>
@@ -20450,12 +20087,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051649">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051234"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0051641"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Any process, occurring in a cell, that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>establishment of localisation in cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>establishment of intracellular localization</oboInOwl:hasNarrowSynonym>
@@ -20815,6 +20446,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0060047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0060047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003015"/>
+        <obo:IAO_0000115>The multicellular organismal process in which the heart decreases in volume in a characteristic way to propel blood through the body.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>heart beating</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>cardiac contraction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>hemolymph circulation</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0060047</oboInOwl:id>
+        <rdfs:label>heart contraction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0060047"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The multicellular organismal process in which the heart decreases in volume in a characteristic way to propel blood through the body.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0060073 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0060073">
@@ -21021,12 +20673,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061042">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042060"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Blood vessel formation when new vessels emerge from the proliferation of pre-existing blood vessels and contribute to the series of events that restore integrity to damaged vasculature.</obo:IAO_0000115>
         <oboInOwl:created_by>dph</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-25T10:18:26Z</oboInOwl:creation_date>
@@ -21200,12 +20846,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061626">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0060037"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The process in which the anatomical structures of a pharyngeal arch artery is generated and organized. The pharyngeal arch arteries are a series of six paired embryological vascular structures, the development of which give rise to several major arteries, such as the stapedial artery, the middle meningeal artery, the internal carotid artery and the pulmonary artery.</obo:IAO_0000115>
         <oboInOwl:created_by>dph</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-05-09T15:34:06Z</oboInOwl:creation_date>
@@ -21235,12 +20875,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061702">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005829"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A cytosolic protein complex that is capable of activating caspase-1.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/24798</obo:IAO_0000233>
         <oboInOwl:created_by>dph</oboInOwl:created_by>
@@ -21513,12 +21147,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0070527">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030168"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The adhesion of one platelet to one or more other platelets via adhesion molecules.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>blood platelet aggregation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -21921,12 +21549,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071953">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0031012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>An supramolecular fiber that consists of an insoluble core of polymerized tropoelastin monomers and a surrounding mantle of microfibrils. Elastic fibers provide elasticity and recoiling to tissues and organs, and maintain structural integrity against mechanical strain.</obo:IAO_0000115>
         <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-11T11:44:57Z</oboInOwl:creation_date>
@@ -22513,16 +22135,40 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0098542 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0098542">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006950"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
+        <obo:IAO_0000115>Reactions triggered in response to the presence of another organism that act to protect the cell or organism from damage caused by that organism.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/22173</obo:IAO_0000233>
+        <oboInOwl:created_by>dos</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-11-11T12:59:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0009814</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasNarrowSynonym>defence response incompatible interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>defence response to pathogen, incompatible interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>defense response, incompatible interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>resistance response to pathogen</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0098542</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_prokaryote"/>
+        <rdfs:label>defense response to other organism</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0098542"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Reactions triggered in response to the presence of another organism that act to protect the cell or organism from damage caused by that organism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:dos</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0098794 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0098794">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The part of a synapse that is part of the post-synaptic cell.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0098794</oboInOwl:id>
@@ -22585,12 +22231,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0098975">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098794"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0031594"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The postsynapse of a neuromuscular junction. In vertebrate muscles this includes the motor end-plate, consisting of postjunctional folds of the sarcolemma.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0098975</oboInOwl:id>
@@ -22631,12 +22271,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0120054">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007586"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Contractions of the intestinal tract that include peristalsis (moving contents onward) and non-peristaltic movement (moving contents back and forth).</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/13607</obo:IAO_0000233>
         <oboInOwl:created_by>krc</oboInOwl:created_by>
@@ -22733,12 +22367,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050708"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008015"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of renin secretion into blood stream.</obo:IAO_0000115>
         <oboInOwl:created_by>rph</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-02-27T10:32:01Z</oboInOwl:creation_date>
@@ -24276,12 +23904,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1990110">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042060"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>The process by which a callus is formed at a wound site. A plant callus is a portion of plant tissue that consists of mass of undifferentiated plant cells. It consists primarily of parenchyma cells but possibly contains other cell types as the callus begins to differentiate.</obo:IAO_0000115>
         <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2013-05-29T22:02:52Z</oboInOwl:creation_date>
