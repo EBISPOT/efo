@@ -292,12 +292,10 @@ $(BUILDDIR)/$(ONT).owl: $(SRC)
 
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo.owl \
-	query --update ../sparql/inject-subset-declaration.sparql \
 	convert --check false -f obo -o $@
 	
 $(BUILDDIR)/$(ONT).json: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo.owl \
-	query --update ../sparql/inject-subset-declaration.sparql \
 	convert -f json -o $@
 
 $(BUILDDIR)/$(ONT)-base.owl: build/efo.owl
