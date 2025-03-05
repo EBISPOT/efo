@@ -138,24 +138,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:id>part_of</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
-        <rdfs:label>part of</rdfs:label>
-        <rdfs:label xml:lang="en">part of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
@@ -2962,10 +2944,32 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0000235 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000235">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000929"/>
+        <obo:IAO_0000115>Any abnormality of the fontanelles (the regions covered by a thick membrane that normally ossify in the first two years of life) or the cranial sutures (the fibrous joints in which the articulating bones or cartilages of the skull are connected by sutural ligaments).</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4025876</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormality of the fontanelles or cranial sutures</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0000235</oboInOwl:id>
+        <rdfs:comment>Fontanels are the fibrous, membrane-covered gaps created when more than two cranial bones are juxtaposed, as opposed to sutures, which are narrow seams of fibrous connective tissue that separate the flat bones of the skull. At birth, an infant has six fontanels (the anterior and posterior, two mastoid, and two sphenoid). The anterior fontanel is the largest and most important for clinical evaluation. The average size of the anterior fontanel is 2.1 cm, and the median time of closure is 13.8 months.</rdfs:comment>
+        <rdfs:label>Abnormal cranial suture/fontanelle morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000235"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any abnormality of the fontanelles (the regions covered by a thick membrane that normally ossify in the first two years of life) or the cranial sutures (the fibrous joints in which the articulating bones or cartilages of the skull are connected by sutural ligaments).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:12825844</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:31194354</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0000236 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000236">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000929"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000235"/>
         <obo:IAO_0000115>An abnormality of the anterior fontanelle, i.e., the cranial fontanelle that is located at the intersection of the coronal and sagittal sutures.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C4025875</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Abnormality of the anterior fontanelle</oboInOwl:hasExactSynonym>
@@ -3433,8 +3437,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0000260 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000260">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000235"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000236"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000929"/>
         <obo:IAO_0000115>Enlargement of the anterior fontanelle with respect to age-dependent norms.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UMLS:C1866134</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Large anterior fontanel</oboInOwl:hasExactSynonym>
@@ -9331,6 +9335,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000565">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000486"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0020045"/>
         <obo:IAO_0000115>A form of strabismus with one or both eyes turned inward (&apos;crossed&apos;) to a relatively severe degree, usually defined as 10 diopters or more.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>SNOMEDCT_US:16596007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UMLS:C0014877</oboInOwl:hasDbXref>
@@ -11069,6 +11074,57 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0000718 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000718">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <obo:IAO_0000115>Behavior or an act aimed at harming a person, animal, or physical property (e.g., acts of physical violence; shouting, swearing, and using harsh language; slashing someone&apos;s tires).</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-1111-7357"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-7954-5235"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-2897-0458"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-4298-5074"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-4618-6544"/>
+        <oboInOwl:hasAlternativeId>HP:0006919</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:248004009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:61372001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0001807</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0424323</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C1457883</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Aggression</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Aggressive behavior</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Aggressiveness</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>physical aggression</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>HP:0000718</oboInOwl:id>
+        <rdfs:label>Aggressive behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000718"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Aggression</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000718"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Aggressive behavior</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000718"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Aggressiveness</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000718"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>physical aggression</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0000720 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000720">
@@ -11758,6 +11814,36 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Delayed speech and language development</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Delayed speech development</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Impaired speech and language development</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Impaired speech development</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Language delay</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Language delayed</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
@@ -11846,36 +11932,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Delayed speech acquisition</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Delayed speech and language development</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Delayed speech development</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Impaired speech and language development</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Impaired speech development</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000750"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Language delay</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -13020,6 +13076,51 @@
         <oboInOwl:id>HP:0000857</oboInOwl:id>
         <rdfs:label>Neonatal insulin-dependent diabetes mellitus</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0000859 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000859">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000818"/>
+        <obo:IAO_0000115>Overproduction of the mineralocorticoid aldosterone by the adrenal cortex.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0004318</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0005975</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:88213004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0020428</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Elevated plasma aldosterone</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased aldosterone</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased aldosterone production</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Mineralocorticoid excess</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Hyperaldosteronism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>HP:0000859</oboInOwl:id>
+        <rdfs:label>Increased circulating aldosterone concentration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000859"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Overproduction of the mineralocorticoid aldosterone by the adrenal cortex.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0538-4547"/>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000859"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Elevated plasma aldosterone</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000859"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Increased aldosterone</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0000859"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Increased aldosterone production</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
     
 
 
@@ -18737,8 +18838,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0001476 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001476">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000235"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000236"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000929"/>
         <obo:IAO_0000115>A delay in closure (ossification) of the anterior fontanelle, which generally undergoes closure around the 18th month of life.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Delayed closure of the soft spot on the skull</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Late closure of soft spot on the skull</oboInOwl:hasBroadSynonym>
@@ -25990,6 +26091,34 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0002132 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002132">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002060"/>
+        <obo:IAO_0000115>A cavity within the cerebral hemisphere, filled with cerebrospinal fluid, that communicates directly with the ventricular system.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4082173</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Cavity within brain</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0002132</oboInOwl:id>
+        <rdfs:comment>Porencephaly is usually the result of damage from stroke or infection after birth, but may also be the result of a developmental defect. Porencephaly is often associated with various ophthalmic and neurologic signs, including visual-field defects, abnormal pupillary responses, optic nerve hypoplasia, decreased vision, nystagmus, strabismus, hemi-inattention, seizures, and mental deficiencies.</rdfs:comment>
+        <rdfs:label>Porencephalic cyst</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002132"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cavity within the cerebral hemisphere, filled with cerebrospinal fluid, that communicates directly with the ventricular system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:9279052</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0002132"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Cavity within brain</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6548-5200"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0002134 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002134">
@@ -31548,10 +31677,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0002850 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002850">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002715"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004313"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010701"/>
         <obo:IAO_0000115>An abnormally decreased level of immunoglobulin M (IgM) in blood.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0003147</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0005385</oboInOwl:hasAlternativeId>
@@ -32945,6 +33072,29 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0003084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003084">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002757"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011314"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115>An increased tendency to fractures of the long bones (Mainly, the femur, tibia, fibula, humerus, radius, and ulna).</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0005847</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C0240231</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Fractures of the long bones</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Increased long bone fracture rate</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0003084</oboInOwl:id>
+        <rdfs:label>Recurrent long bone fractures</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0003084"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An increased tendency to fractures of the long bones (Mainly, the femur, tibia, fibula, humerus, radius, and ulna).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0003086 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003086">
@@ -33778,9 +33928,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0003212 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003212">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002715"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010701"/>
         <obo:IAO_0000115>An abnormally increased overall level of immunoglobulin E in blood.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0005382</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0005418</oboInOwl:hasAlternativeId>
@@ -36433,9 +36581,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0004313 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004313">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002715"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010701"/>
         <obo:IAO_0000115>An abnormally decreased level of immunoglobulin in blood.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2008-02-20T03:34:00Z</oboInOwl:creation_date>
@@ -36466,10 +36612,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0004315 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004315">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002715"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004313"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010701"/>
         <obo:IAO_0000115>An abnormally decreased level of immunoglobulin G (IgG) in blood.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2008-02-20T03:43:00Z</oboInOwl:creation_date>
@@ -37563,7 +37707,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0004443 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004443">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000929"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000235"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002683"/>
         <obo:IAO_0000115>A kind of craniosynostosis affecting the lambdoidal suture.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
@@ -39284,7 +39428,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0005458 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0005458">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000929"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000235"/>
         <obo:IAO_0000115>Normally, the posterior and lateral fontanelles are obliterated by about six months after birth, the anterior fontanelle closes by about the middle of the second year. This term refers to the situation in which the fontanelles close at an inappropriately early time point.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>Early closure of the cranial sutures</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Premature closure of the cranial sutures</oboInOwl:hasBroadSynonym>
@@ -39595,8 +39739,8 @@
     <!-- http://purl.obolibrary.org/obo/HP_0005487 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0005487">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000235"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000271"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000929"/>
         <obo:IAO_0000115>Vertical bony ridge positioned in the midline of the forehead.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0005488</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>HP:0005751</oboInOwl:hasAlternativeId>
@@ -39650,8 +39794,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0005508">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000118"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002715"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010701"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0031047"/>
         <obo:IAO_0000115>Presence of a monoclonal immunoglobulin M protein in the serum.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>SNOMEDCT_US:190817009</oboInOwl:hasDbXref>
@@ -40235,6 +40378,35 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0006097 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0006097">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0006101"/>
+        <obo:IAO_0000115>Fusion of the third (middle) and fourth (ring) finger, involving soft parts and including fusion of individual finger bones.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0006133</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C1856889</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Partial or complete syndactyly 3rd-4th fingers</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Webbed 3rd-4th finger</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Webbed 3rd-4th fingers</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0006097</oboInOwl:id>
+        <rdfs:label>3-4 finger osseus syndactyly</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006097"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Fusion of the third (middle) and fourth (ring) finger, involving soft parts and including fusion of individual finger bones.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006097"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Webbed 3rd-4th fingers</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0006101 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0006101">
@@ -40575,6 +40747,42 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Radial longitudinal deficiency</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0006443 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0006443">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000924"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002814"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0040064"/>
+        <obo:IAO_0000115>Absence of the patella.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>HP:0003046</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>HP:0006475</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C1868578</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Absent kneecap</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Absent patella</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Absent patellae</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Absent patellas</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Aplastic patellae</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0006443</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
+        <rdfs:label>Patellar aplasia</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006443"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Absence of the patella.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0006443"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Absent kneecap</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-6908-9849"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
 
@@ -44435,6 +44643,31 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0008822 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0008822">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011842"/>
+        <obo:IAO_0000115>Underdevelopment of the ischiopubic ramus, which is comprised of the inferior pubic ramus and the inferior ramus of the ischium.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>UMLS:C4024617</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Hypoplastic ischiopubic rami</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0008822</oboInOwl:id>
+        <rdfs:label>Hypoplastic ischiopubic ramus</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0008822"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Underdevelopment of the ischiopubic ramus, which is comprised of the inferior pubic ramus and the inferior ramus of the ischium.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0008822"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Hypoplastic ischiopubic rami</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#plural_form"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0008846 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0008846">
@@ -48221,6 +48454,69 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0010698 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010698">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000518"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0007648"/>
+        <obo:IAO_0000115>A type of nuclear cataract involving congenital dust-like (pulverulent) opacity of the embryonal and fetal nucleus.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:creation_date>2010-03-20T02:53:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>UMLS:C4021237</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Central pulverulent cataract</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Coppock-like cataract</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Pulverulent nuclear cataract</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>cataracta pulverulenta centralis</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0010698</oboInOwl:id>
+        <rdfs:label>Nuclear pulverulent cataract</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0010698"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of nuclear cataract involving congenital dust-like (pulverulent) opacity of the embryonal and fetal nucleus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:10634616</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:14059288</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0010701 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010701">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002715"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011017"/>
+        <obo:IAO_0000115>An abnormal deviation from normal levels of immunoglobulins in blood.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:creation_date>2010-03-22T08:17:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>HP:0100032</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>UMLS:C1855755</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormal immunoglobulin concentration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormal immunoglobulin level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormal serum immunoglobulin concentration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormal serum immunoglobulin levels</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormal serum level of immunoglobulin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Immunoglobulin abnormality</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0010701</oboInOwl:id>
+        <rdfs:comment>&apos;has part&apos; some (amount and (&apos;inheres in&apos; some (IMR_0002090 and (&apos;part of&apos; some blood))) and (&apos;has modifier&apos; some abnormal))</rdfs:comment>
+        <rdfs:label>Abnormal circulating immunoglobulin concentration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0010701"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An abnormal deviation from normal levels of immunoglobulins in blood.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0010701"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormal serum immunoglobulin levels</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0010705 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010705">
@@ -49051,8 +49347,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0010865 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010865">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000708"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011446"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000718"/>
         <obo:IAO_0000115>An enduring pattern of uncooperative, defiant, and hostile behavior towards authority figures that does not involve major antisocial violations, is not accounted for by the child&apos;s developmental stage, and results in significant functional impairment. A certain level of oppositional behavior is common in children and adolescents.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1111-7357"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-7954-5235"/>
@@ -52298,7 +52593,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0011736 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0011736">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000818"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000859"/>
         <obo:IAO_0000115>A form of hyperaldosteronism caused by a defect within the adrenal gland.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
         <oboInOwl:creation_date>2012-04-21T09:26:05Z</oboInOwl:creation_date>
@@ -56148,6 +56443,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0020045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0020045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000486"/>
+        <obo:IAO_0000115>A manifest or latent ocular deviation in which one or both eyes tends to deviate nasally.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-20T17:20:06Z</dc:date>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasExactSynonym>Convergent squint</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Convergent strabismus</oboInOwl:hasExactSynonym>
+        <rdfs:label>Esodeviation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0020045"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A manifest or latent ocular deviation in which one or both eyes tends to deviate nasally.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0003-0986-4123"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0020046 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0020046">
@@ -58109,9 +58424,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0031047 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031047">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002715"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0011017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0010701"/>
         <obo:IAO_0000115>An abnormal immunoglobulin or part of an Ig (light chain) in the circulation. Paraproteins are typically produced by a clonal population of B-cell derived plasma cells.</obo:IAO_0000115>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-27T14:25:46Z</dc:date>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
