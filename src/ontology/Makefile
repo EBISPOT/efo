@@ -80,8 +80,10 @@ imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
 	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
 
+# Change the parent of imported PR terms to "protein" (ChEBI:36080) to match existing EFO terms, rather than PR:000000001
+#
 imports/pr_import.owl: mirror/pr.owl imports/pr_terms.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/pr_terms.txt --method BOT -O $(BASE)/$@ -o $@
+	$(ROBOT) extract -i $< -T imports/pr_terms.txt --method BOT -O $(BASE)/$@ query --update sparql/pr_protein_to_chebi.ru remove --term obo:PR_000000001 -o $@
 .PRECIOUS: imports/pr_import.owl
 
 # ----------------------------------------
