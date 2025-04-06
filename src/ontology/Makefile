@@ -51,7 +51,7 @@ gh_actions: qc $(BUILDDIR)/$(ONT).owl
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon hp cl fbbt obi oba chebi go
+IMPORTS = mondo hancestro uberon hp cl fbbt obi oba chebi pr go
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
@@ -79,6 +79,10 @@ imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt i
 imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
 	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
+
+imports/pr_import.owl: mirror/pr.owl imports/pr_terms.txt $(SRC)
+	$(ROBOT) extract -i $< -T imports/pr_terms.txt --method BOT -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/pr_import.owl
 
 # ----------------------------------------
 # Pipeline for removing a merged ontology
