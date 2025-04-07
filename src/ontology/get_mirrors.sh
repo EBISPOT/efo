@@ -17,6 +17,9 @@ curl -L http://purl.obolibrary.org/obo/mondo.owl > mirror/mondo-owl.owl
 echo "Fetching CHEBI..."
 curl -L http://purl.obolibrary.org/obo/chebi.owl > mirror/chebi.owl
 
+echo "Fetching PR..."
+curl -L http://purl.obolibrary.org/obo/pr.owl > mirror/pr.owl
+
 echo "Fetching CL..."
 curl -L http://purl.obolibrary.org/obo/cl.owl > mirror/cl.owl
 
