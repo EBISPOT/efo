@@ -51,7 +51,7 @@ gh_actions: qc $(BUILDDIR)/$(ONT).owl
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon hp cl fbbt obi oba chebi go
+IMPORTS = mondo hancestro uberon hp cl fbbt obi oba chebi pr go
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
@@ -79,6 +79,13 @@ imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt i
 imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
 	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
+
+# Change the parent of imported PR terms to "protein" (ChEBI:36080) to match existing EFO terms, rather than PR:000000001
+# We also need to map to resolve some conflicts with ChEBI and proteins that already exist in EFO so we don't end up with duplicates.
+#
+imports/pr_import.owl: mirror/pr.owl imports/pr_terms.txt $(SRC)
+	$(ROBOT) extract -i $< -T imports/pr_terms.txt --method BOT --copy-ontology-annotations true -O $(BASE)/$@ rename --mappings pr_efo_map.tsv -o $@
+.PRECIOUS: imports/pr_import.owl
 
 # ----------------------------------------
 # Pipeline for removing a merged ontology
