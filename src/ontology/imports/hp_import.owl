@@ -138,6 +138,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
+        <oboInOwl:id>part_of</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
+        <rdfs:label>part of</rdfs:label>
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
@@ -36893,6 +36911,35 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0004327 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004327">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004329"/>
+        <obo:IAO_0000115>Any structural anomaly of the vitreous body.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:creation_date>2008-02-27T04:20:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>UMLS:C4025356</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormal vitreous humour morphology</oboInOwl:hasExactSynonym>
+        <oboInOwl:id>HP:0004327</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/hp#hposlim_core"/>
+        <rdfs:comment>The vitreous humor is the clear gel that fills the space between the lens and the retina.</rdfs:comment>
+        <rdfs:label>Abnormal vitreous humor morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004327"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any structural anomaly of the vitreous body.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0004327"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormal vitreous humour morphology</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#uk_spelling"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0004328 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004328">
@@ -42998,7 +43045,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0007773 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007773">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004329"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004327"/>
         <obo:IAO_0000115>Ocular abnormality characterized by premature degeneration of the vitreous and the retina that may be associated with increased risk of retinal detachment.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>HP:0000655</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>UMLS:C1850109</oboInOwl:hasDbXref>
@@ -43254,7 +43301,7 @@
     <!-- http://purl.obolibrary.org/obo/HP_0007968 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0007968">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004329"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004327"/>
         <obo:IAO_0000115>Persistence of the hyaloid artery, which is the embryonic artery that runs from the optic disc to the posterior lens capsule may persist; the site of attachment may form an opacity. The hyaloid artery is a branch of the ophthalmic artery, and usually regresses completely before birth. This features results from a failure of regression of the hyaloid vessel, which supplies the primary vitreous during embryogenesis and normally regresses in the third trimester of pregnancy, leading to a particular form of posterior cataract.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>SNOMEDCT_US:314270008</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SNOMEDCT_US:44647001</oboInOwl:hasDbXref>
@@ -47958,6 +48005,27 @@
         <oboInOwl:id>HP:0010524</oboInOwl:id>
         <rdfs:label>Disturbed sensory perception</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0010534 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0010534">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100543"/>
+        <obo:IAO_0000115>A paroxysmal, transient loss of memory function with preservation of immediate recall and remote memory but with a severe impairment of memory for recent events and ability to retain new information.</obo:IAO_0000115>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:creation_date>2009-09-20T09:33:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:230736007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0338591</oboInOwl:hasDbXref>
+        <oboInOwl:id>HP:0010534</oboInOwl:id>
+        <rdfs:label>Transient global amnesia</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0010534"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A paroxysmal, transient loss of memory function with preservation of immediate recall and remote memory but with a severe impairment of memory for recent events and ability to retain new information.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+    </owl:Axiom>
     
 
 
@@ -57901,6 +57969,34 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0030423 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030423">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0100763"/>
+        <obo:IAO_0000115>A closed sac located in the spleen.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>SNOMEDCT_US:79040006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0272407</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Cyst on spleen</oboInOwl:hasExactSynonym>
+        <rdfs:label>Splenic cyst</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030423"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A closed sac located in the spleen.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-0736-9199"/>
+        <oboInOwl:hasDbXref>PMID:24794024</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0030423"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Cyst on spleen</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0030436 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030436">
@@ -59545,6 +59641,32 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>Curvature of finger</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_0040057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0040057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000366"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-5316-1399"/>
+        <oboInOwl:hasDbXref>UMLS:C4021858</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Abnormality of nasal hair</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Abnormality of nose hair</oboInOwl:hasExactSynonym>
+        <rdfs:label>Abnormal nasal hair morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040057"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormality of nasal hair</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0040057"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Abnormality of nose hair</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
     
@@ -62125,7 +62247,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100832">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0000504"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004329"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0004327"/>
         <obo:IAO_0000115>Deposits of various size, shape, consistency, refractive index, and motility within the eye&apos;s vitreous humor, which is normally transparent.</obo:IAO_0000115>
         <terms:creator rdf:resource="https://orcid.org/0009-0006-4530-3154"/>
         <oboInOwl:creation_date>2011-06-09T05:58:09Z</oboInOwl:creation_date>
@@ -62707,6 +62829,25 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/HP_0410149 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0410149">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0002715"/>
+        <obo:IAO_0000115>A form of anaphylaxis that is triggered by intake of drugs or medications.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T21:33:42Z</dc:date>
+        <terms:creator rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:hasExactSynonym>Drug induced anaphylaxis</oboInOwl:hasExactSynonym>
+        <rdfs:label>Drug-induced anaphylaxis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_0410149"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A form of anaphylaxis that is triggered by intake of drugs or medications.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:29135486</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/HP_0410176 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0410176">
@@ -62921,6 +63062,25 @@
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <owl:annotatedTarget>The adenoid, a mass of lymphatic tissue situated posterior to the nasal cavity, in the roof of the nasopharynx, where the nose blends into the throat.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0001-5889-4463"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/HP_4000181 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_4000181">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/HP_0006482"/>
+        <obo:IAO_0000115>A higher than expected amount of attrition of teeth, as menifested by loss of tooth characteristics including rounding or sharpening of incisal edges, loss of cusps, and fracturing of teeth, to an extent that is deemed more than would be expected at a given age.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-19T16:40:36Z</dc:date>
+        <oboInOwl:hasExactSynonym>Excessive tooth attrition</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Excessive wear and tear on teeth</oboInOwl:hasExactSynonym>
+        <rdfs:label>Excessive dental attrition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/HP_4000181"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Excessive wear and tear on teeth</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/hp#layperson"/>
     </owl:Axiom>
 </rdf:RDF>
 
