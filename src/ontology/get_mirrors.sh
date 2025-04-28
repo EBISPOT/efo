@@ -20,6 +20,9 @@ curl -L http://purl.obolibrary.org/obo/chebi.owl > mirror/chebi.owl
 echo "Fetching PR..."
 curl -L http://purl.obolibrary.org/obo/pr.owl > mirror/pr.owl
 
+echo "Fetching ECTO..."
+curl -L http://purl.obolibrary.org/obo/ecto.owl > mirror/ecto.owl
+
 echo "Fetching CL..."
 curl -L http://purl.obolibrary.org/obo/cl.owl > mirror/cl.owl
 
