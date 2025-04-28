@@ -28,6 +28,7 @@ HPPREFIX = "HP: http://purl.obolibrary.org/obo/HP_"
 CLPREFIX = "CL: http://purl.obolibrary.org/obo/CL_"
 CLPREFIX = "Orphanet: http://www.orpha.net/ORDO/Orphanet_"
 BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
+ECTOPREFIX = "ECTO: http://purl.obolibrary.org/obo/ECTO_"
 EFOPREPRO = $(BUILDDIR)/efo-edit-release.owl
 EFOFIXER = ../../bin/efo-fixer.jar
 MIRRORDIR=./mirror
@@ -51,7 +52,7 @@ gh_actions: qc $(BUILDDIR)/$(ONT).owl
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon hp cl fbbt obi oba chebi pr go
+IMPORTS = mondo hancestro uberon hp cl fbbt obi oba chebi pr go ecto
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
@@ -155,7 +156,7 @@ FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
 FOREIGN_AXIOM_FILES_DIFF=$(patsubst %, qc/diff_efo-%.txt, $(FOREIGN_AXIOMS))
 
 components/subclasses.owl: ../templates/subclasses.csv
-	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
+	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --prefix $(ECTOPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
 
 components/d2p_%.ttl: mirror/%.owl
 	$(ROBOT) query -f ttl -i $< --query $(SPARQLDIR)/d2p-$*.ru $@
