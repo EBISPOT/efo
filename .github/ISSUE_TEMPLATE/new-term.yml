@@ -1,17 +1,20 @@
 name: New Term Request
-description: Request a new term to be added to EFO (if wanting to request multiple terms, please select bulk term request)
-title: [NTR] Request for new term [term name here]
-labels: [ new issue ]
+description: Request a new term to be added to EFO (if wanting to request
+  multiple terms, please select bulk term request)
+title: "[NTR] Request for new term [term name here]"
+labels:
+  - new issue
 body:
   - type: markdown
-    attributes: 
+    attributes: null
     value: |
-        Use this form to request a new ontology term be added to EFO.
+      Use this form to request a new ontology term be added to EFO.
   - type: input
     id: Label
     attributes:
       label: Term Label
-      description: Preferred label for the requested term. The term label should be lowercase unless it is a proper name, e.g. Parkinson's disease.
+      description: Preferred label for the requested term. The term label should be
+        lowercase unless it is a proper name, e.g. Parkinson's disease.
       placeholder: e.g. pain measurement
     validations:
       required: true
@@ -19,15 +22,18 @@ body:
     id: Definition
     attributes:
       label: Definition
-      description: Description of the term. This can be taken from a publication, database, website, or written by yourself. Please state this in the next field (definition citation).
+      description: Description of the term. This can be taken from a publication,
+        database, website, or written by yourself. Please state this in the next
+        field (definition citation).
       placeholder: e.g. Quantification of levels of pain.
     validations:
-      required: true 
+      required: true
   - type: input
     id: Citation
     attributes:
       label: Definition citation
-      description: Citation for the above definition if applicable. This can be a website, PMID, ORCID ID etc.
+      description: Citation for the above definition if applicable. This can be a
+        website, PMID, ORCID ID etc.
       placeholder: e.g. PMID:31669095
     validations:
       required: false
@@ -35,7 +41,8 @@ body:
     id: Synonyms
     attributes:
       label: Synonyms
-      description: Alternative term(s), acronyms etc. Please separate multiple synonyms via ||.
+      description: Alternative term(s), acronyms etc. Please separate multiple
+        synonyms via ||.
       placeholder: e.g. pain level
     validations:
       required: false
@@ -43,7 +50,8 @@ body:
     id: parent
     attributes:
       label: Parent term
-      description: Please provide a parent term (ID and label) that this new term should be classified under. This term must exist in EFO.
+      description: Please provide a parent term (ID and label) that this new term
+        should be classified under. This term must exist in EFO.
       placeholder: e.g. EFO:0001444 measurement
     validations:
       required: true
@@ -51,7 +59,8 @@ body:
     id: child
     attributes:
       label: Child terms
-      description: Please list any existing terms in EFO (ID and label) that should be moved to sit under this requested term.
+      description: Please list any existing terms in EFO (ID and label) that should be
+        moved to sit under this requested term.
       placeholder: e.g. EFO:0010640 chronic post-operative pain measurement
     validations:
       required: false
@@ -59,6 +68,7 @@ body:
     id: comment
     attributes:
       label: Any additional comments
-      description: Please provide any additional comments, evidence or information that will be useful here. 
+      description: Please provide any additional comments, evidence or information
+        that will be useful here.
     validations:
       required: false
