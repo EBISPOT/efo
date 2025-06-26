@@ -1,0 +1,22 @@
+name: New Bulk EFO Term Request
+description: "Request multiple new terms to be added to EFO (if wanting to request a single term, please select new term request)"
+title: "[NTR] Request for new [general description] terms"
+labels: [ "new issue" ]
+body:
+  - type: markdown
+    attributes: 
+      value: "Use this form to request multiple new ontology terms be added to EFO. The template can be found here (please go to File -> Make a Copy in order to fill in your own version of the template): https://docs.google.com/spreadsheets/d/1vEMwqc0PWEKZUCeMkynRW2NDYScF6C9b3r6MaATEebU/edit?usp=sharing"
+  - type: textarea
+    id: Template
+    attributes:
+      label: Completed template
+      description: Please paste the share link or attach the file for your version of the template here. If sharing the link, please ensure that sharing is set to "Anyone with the link" so it is accessible.
+    validations:
+      required: true 
+  - type: textarea
+    id: comment
+    attributes:
+      label: Any additional comments
+      description: Please provide any additional comments, evidence or information that will be useful here. 
+    validations:
+      required: false

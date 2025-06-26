@@ -1,0 +1,32 @@
+name: Import external term(s) into EFO
+description: Request to import another ontology term into EFO.
+title: '[Import] Request to import [term]'
+labels:
+  - new issue
+body:
+  - type: markdown
+    attributes: 
+      value: "Please note, currently we only import from the following ontologies: CHEBI, CL, ECTO, FBBT, GO, HANCESTRO, HP, MONDO, OBA, OBI, PR, UBERON."
+  - type: input
+    id: term
+    attributes:
+      label: Term(s) to be imported
+      description: Please indicate the term(s) to import (ID and
+          label). If multiple, separate via ||.
+    validations:
+        required: true
+  - type: input
+    id: parent
+    attributes:
+      label: Parent term(s)
+      description: Please provide at least one parent term (ID and label) that each imported term should be classified under. This term must exist in EFO.
+      placeholder: e.g. EFO:0001444 measurement
+    validations:
+        required: true
+  - type: textarea
+    id: comment
+    attributes:
+      label: Any additional comments
+      description: Please provide any additional comments, evidence or information that will be useful here. 
+    validations:
+      required: false
