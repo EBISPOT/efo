@@ -1,14 +1,17 @@
 name: Update Existing EFO Term
-description: "Request changes to an existing EFO term"
-title: "[NTR] Request for new [general description] terms"
-labels: [ "new issue" ]
+description: Request changes to an existing EFO term
+title: '[Update] Request for update to [term label]'
+labels:
+  - new issue
 body:
   - type: input
     id: term
     attributes:
       label: Term to be updated
-      description: Please indicate the term(s) that the request is being made about (ID and label). If multiple, separate via ||.
-      placeholder: e.g. EFO:0001444 measurement
+      description: >-
+        Please indicate the term(s) that the request is being made about (ID and
+        label). If multiple, separate via ||.
+      placeholder: 'e.g. EFO:0001444 measurement'
     validations:
       required: true
   - type: checkboxes
@@ -17,9 +20,9 @@ body:
       label: Change(s) to EFO term(s)
       description: Please indicate which change(s) are being requested.
       options:
-        - Typo (label, definition, synonym etc.)
-        - Incorrect annotation (xref, synonym, etc.)
-        - New annotation (xref,synonym, etc.)
+        - 'Typo (label, definition, synonym etc.)'
+        - 'Incorrect annotation (xref, synonym, etc.)'
+        - 'New annotation (xref,synonym, etc.)'
         - Update label
         - Update parent term(s)
         - Update child term(s)
@@ -30,6 +33,6 @@ body:
     id: comment
     attributes:
       label: Comment
-      description: Please provide all information regarding the required changes. 
+      description: Please provide all information regarding the required changes.
     validations:
       required: true
