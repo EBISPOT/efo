@@ -1,85 +1,64 @@
-name: "New Term Request"
-description: "Request a new term to be added to EFO (if wanting to request multiple terms, please select bulk term request)""
+name: New EFO Term Request
+description: "Request a new term to be added to EFO (if wanting to request multiple terms, please select bulk term request)"
 title: "[NTR] Request for new term [term name here]"
-labels: [ new issue ]
+labels: [ "new issue" ]
 body:
   - type: markdown
-    attributes:
-      value: |
-        Use this form to request a new ontology term be added to Mondo. See additional guidance here: https://mondo.readthedocs.io/en/latest/editors-guide/c-make-good-term-request/.
+    attributes: 
+    value: |
+        Use this form to request a new ontology term be added to EFO.
   - type: input
     id: Label
     attributes:
-      label: Label
-      description: Preferred term label. Please add the label in lowercase, unless it is a proper name.
-      placeholder: ex. spindle cell rhabdomyosarcoma
+      label: Term Label
+      description: Preferred label for the requested term. The term label should be lowercase unless it is a proper name, e.g. Parkinson's disease.
+      placeholder: e.g. pain measurement
     validations:
       required: true
-  - type: input
-    id: synonyms
-    attributes:
-      label: Synonyms
-      description: Alternative term(s) or acroynymm for the preferred label. Separate by a comma.
-      placeholder:  ex. SCRMS, SC rhabdomyosarcoma
-    validations:
-      required: false
-  - type: dropdown
-    id: synonym_type
-    attributes:
-      label: Synonym type
-      description: Please indicate if the synonym is exact, broad, narrow or related. See [here for more explanation of synonym scope](https://mondo.readthedocs.io/en/latest/editors-guide/f-entities/#synonym-scope).
-      options:
-        - exact
-        - broad
-        - narrow
-        - related
-    validations:
-      required: false
   - type: textarea
-    id: description
+    id: Definition
     attributes:
       label: Definition
-      description: |
-        Please provide a definition of the term and a reference, such as a PubMed ID, if applicable, in format PMID:#######. 
+      description: Description of the term. This can be taken from a publication, database, website, or written by yourself. Please state this in the next field (definition citation).
+      placeholder: e.g. Quantification of levels of pain.
     validations:
-      required: true
+      required: true 
+  - type: input
+    id: Citation
+    attributes:
+      label: Definition citation
+      description: Citation for the above definition if applicable. This can be a website, PMID, ORCID ID etc.
+      placeholder: e.g. PMID:31669095
+    validations:
+      required: false
+  - type: input
+    id: Synonyms
+    attributes:
+      label: Synonyms
+      description: Alternative term(s), acronyms etc. Please separate multiple synonyms via ||.
+      placeholder: e.g. pain level
+    validations:
+      required: false
   - type: input
     id: parent
     attributes:
       label: Parent term
-      description: Provide a parent term or superclass (ie the class this new term should be classified under. Provide the ID and label.
-      placeholder: ex. MONDO:0005212 rhabdomyosarcoma
+      description: Please provide a parent term (ID and label) that this new term should be classified under. This term must exist in EFO.
+      placeholder: e.g. EFO:0001444 measurement
     validations:
       required: true
   - type: input
-    id: children
+    id: child
     attributes:
-      label: Children term(s)
-      description: List any existing terms that should be classified underneath this new proposed term, if applicable. Provide the ID and label.
-      placeholder: ex. MONDO:0100067 childhood spindle cell rhabdomyosarcoma
-    validations:
-      required: false
-  - type: input
-    id: orcid
-    attributes:
-      label: ORCID Identifier
-      description: What is the ORCID identifier of the person requesting this term? ORCID identifiers can be made at https://orcid.org.
-      placeholder: e.g. https://orcid.org/0000-0001-5208-3432
-    validations:
-      required: false
-  - type: input
-    id: website
-    attributes:
-      label: Website URL
-      description: Provide a website URL that you'd like to be associated with this new term.
-      placeholder: e.g. https://clinicalgenome.org/affiliation/40005/
+      label: Child terms
+      description: Please list any existing terms in EFO (ID and label) that should be moved to sit under this requested term.
+      placeholder: e.g. EFO:0010640 chronic post-operative pain measurement
     validations:
       required: false
   - type: textarea
-    id: comments
+    id: comment
     attributes:
-      label: Additional comments
-      description: |
-        Please provide any additional comments here. 
+      label: Any additional comments
+      description: Please provide any additional comments, evidence or information that will be useful here. 
     validations:
       required: false
