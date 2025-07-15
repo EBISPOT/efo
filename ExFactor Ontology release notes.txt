@@ -11,15 +11,15 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.79.0
-Date Released: 16th June 2025
-Class Count: 67,010
+Experimental Factor Ontology version 3.80.0
+Date Released: 15th July 2025
+Class Count: 67,035
 
 Summary:
 
-EFO 3.79.0 contains new assay terms, assay related terms and relationships between exposure measurements and exposure terms imported from ECTO.
-Number of classes changed: 20
-Number of classes added: 15
+EFO 3.80.0 contains a new dynamic import for GSSO to cover gender, sex and sexuality terms. New terms have also been added to cater for GWAS and Open Targets as well as new assays and some improvements to previously created terms.
+Number of classes changed: 10
+Number of classes added: 25
 Number of classes deleted: 0
  
 
@@ -37,67 +37,108 @@ Number of classes deleted: 0
 
 @Classes new to this version
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022949
-Label(s): subcellular protein localization assay 
-+ 'subcellular protein localization assay' SubClassOf 'assay'
+Class: http://purl.obolibrary.org/obo/GSSO_000708
+Label(s): female homosexuality 
++ 'female homosexuality' SubClassOf 'homoseksualitet'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022944
-Label(s): immunofluorescence assay 
-+ 'immunofluorescence assay' SubClassOf 'assay'
-+ 'immunofluorescence assay' SubClassOf 'immunohistochemistry'
+Class: http://purl.obolibrary.org/obo/GSSO_000707
+Label(s): male homosexuality 
++ 'male homosexuality' SubClassOf 'homoseksualitet'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022948
-Label(s): patch clamp 
-+ 'patch clamp' SubClassOf 'experimental process'
+Class: http://purl.obolibrary.org/obo/GSSO_000706
+Label(s): heteroseksualitet heterosexuality хетеросексуа́лност 
++ 'хетеросексуа́лност' SubClassOf 'monosexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022942
-Label(s): minigene splicing assay 
-+ 'minigene splicing assay' SubClassOf 'assay'
+Class: http://purl.obolibrary.org/obo/GSSO_000705
+Label(s): homosexuality хомосексуа́лност гомасексуалі́зм homoseksualitet 
++ 'homoseksualitet' SubClassOf 'non-heterosexuality'
++ 'homoseksualitet' SubClassOf 'monosexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022945
-Label(s): Western blotting 
-+ 'Western blotting' SubClassOf 'immunohistochemistry'
+Class: http://purl.obolibrary.org/obo/GSSO_000414
+Label(s): sexuality seksualitet 
++ 'sexuality' SubClassOf 'cinsel rol davranışı'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022943
-Label(s): immunohistochemistry 
-+ 'immunohistochemistry' SubClassOf 'experimental process'
+Class: http://purl.obolibrary.org/obo/GSSO_000712
+Label(s): demisexuality 
++ 'demisexuality' SubClassOf 'gray asexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022947
-Label(s): enzyme assay 
-+ 'enzyme assay' SubClassOf 'assay'
+Class: http://purl.obolibrary.org/obo/GSSO_004911
+Label(s): autochorisexuality 
++ 'autochorisexuality' SubClassOf 'gray asexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022956
-Label(s): Vizgen MERSCOPE 
-+ 'Vizgen MERSCOPE' SubClassOf 'imaging based spatial transcriptomics'
+Class: http://purl.obolibrary.org/obo/GSSO_009263
+Label(s): megasexuality 
++ 'megasexuality' SubClassOf 'allosexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022955
-Label(s): imaging based spatial transcriptomics 
-+ 'imaging based spatial transcriptomics' SubClassOf 'microscopy assay'
-+ 'imaging based spatial transcriptomics' SubClassOf 'spatial transcriptomics'
+Class: http://purl.obolibrary.org/obo/GSSO_000702
+Label(s): plurisexuality 
++ 'plurisexuality' SubClassOf 'allosexuality'
++ 'plurisexuality' SubClassOf 'non-heterosexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022954
-Label(s): chronic thromboembolic pulmonary hypertension 
-+ 'chronic thromboembolic pulmonary hypertension' SubClassOf 'pulmonary hypertension'
+Class: http://purl.obolibrary.org/obo/GSSO_000700
+Label(s): allosexuality 
++ 'allosexuality' SubClassOf 'sexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022953
-Label(s): animal model 
-+ 'animal model' SubClassOf 'experimental process'
+Class: http://purl.obolibrary.org/obo/GSSO_000710
+Label(s): polysexuality 
++ 'polysexuality' SubClassOf 'plurisexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022952
-Label(s): cell survival assay 
-+ 'cell survival assay' SubClassOf 'assay'
+Class: http://purl.obolibrary.org/obo/GSSO_000711
+Label(s): gray asexuality 
++ 'gray asexuality' SubClassOf 'non-heterosexuality'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022951
-Label(s): DNA binding assay 
-+ 'DNA binding assay' SubClassOf 'assay'
+Class: http://purl.obolibrary.org/obo/HP_0034984
+Label(s): Fetal alcohol exposure 
++ 'Fetal alcohol exposure' SubClassOf 'clinical history'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022950
-Label(s): promoter activity assay 
-+ 'promoter activity assay' SubClassOf 'assay'
+Class: http://purl.obolibrary.org/obo/HP_0000791
+Label(s): Uric acid nephrolithiasis 
++ 'Uric acid nephrolithiasis' SubClassOf 'Abnormal renal morphology'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022946
-Label(s): in vitro motility assay 
-+ 'in vitro motility assay' SubClassOf 'motility assay'
+Class: http://purl.obolibrary.org/obo/GSSO_000413
+Label(s): sexual behavior cinsel rol davranışı comportement sexuel 
++ 'cinsel rol davranışı' SubClassOf 'behavior'
+
+Class: http://purl.obolibrary.org/obo/GSSO_000703
+Label(s): бисексуа́лност bisexuality bisexualité biseksualitet 
++ 'bisexualité' SubClassOf 'polysexuality'
+
+Class: http://purl.obolibrary.org/obo/HP_0030035
+Label(s): Struvite nephrolithiasis 
++ 'Struvite nephrolithiasis' SubClassOf 'Abnormal renal morphology'
+
+Class: http://purl.obolibrary.org/obo/GSSO_001379
+Label(s): non-heterosexuality 
++ 'non-heterosexuality' SubClassOf 'sexuality'
+
+Class: http://purl.obolibrary.org/obo/GSSO_000701
+Label(s): monosexuality 
++ 'monosexuality' SubClassOf 'allosexuality'
+
+Class: http://purl.obolibrary.org/obo/HP_0012580
+Label(s): Calcium phosphate nephrolithiasis 
++ 'Calcium phosphate nephrolithiasis' SubClassOf 'Calcium nephrolithiasis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022961
+Label(s): GATA1 gene mutation 
++ 'GATA1 gene mutation' SubClassOf 'spontaneous mutation'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022960
+Label(s): female chronic pelvic pain 
++ 'female chronic pelvic pain' SubClassOf 'Chronic pain'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022959
+Label(s): hand eczema 
++ 'hand eczema' SubClassOf 'atopic eczema'
++ 'hand eczema' SubClassOf 'contact dermatitis'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022958
+Label(s): income 
++ 'income' SubClassOf 'quality'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022957
+Label(s): early-onset Alzheimers disease 
++ 'early-onset Alzheimers disease' SubClassOf 'Alzheimer disease'
 
 ----------------------------------
 
@@ -105,92 +146,55 @@ Label(s): in vitro motility assay
 
 @Classes modified from previous
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022615
-Label(s): 10x Xenium 
-- '10x Xenium' SubClassOf 'spatial transcriptomics'
-+ '10x Xenium' SubClassOf http://www.ebi.ac.uk/efo/EFO_0022955
+Class: http://www.ebi.ac.uk/efo/EFO_0008486
+Label(s): male homosexuality 
+- 'male homosexuality' SubClassOf 'homosexuality'
++ 'male homosexuality' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://www.ebi.ac.uk/efo/EFO_0008362
-Label(s): farm exposure measurement 
-+ 'farm exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to farm')
+Class: http://www.ebi.ac.uk/efo/EFO_0008485
+Label(s): homosexuality 
+- 'homosexuality' SubClassOf 'phenotype'
++ 'homosexuality' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://www.ebi.ac.uk/efo/EFO_0008361
-Label(s): environmental tobacco smoke exposure measurement 
-+ 'environmental tobacco smoke exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to tobacco smoking')
+Class: http://purl.obolibrary.org/obo/CL_0002453
+Label(s): oligodendrocyte precursor cell 
++ 'oligodendrocyte precursor cell' SubClassOf 'part_of' some 'glial cell'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0008255
-Label(s): particulate matter air pollution measurement 
-+ 'particulate matter air pollution measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to air pollution')
+Class: http://www.ebi.ac.uk/efo/EFO_0005659
+Label(s): plasma beta-amyloid 1-40 measurement 
+- 'plasma beta-amyloid 1-40 measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
++ 'plasma beta-amyloid 1-40 measurement' SubClassOf 'amyloid-beta measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022039
-Label(s): ultraviolet radiation 
-+ 'ultraviolet radiation' SubClassOf 'measurement' and ('is_about' some 'exposure to ultraviolet radiation')
+Class: http://www.ebi.ac.uk/efo/EFO_0004670
+Label(s): beta-amyloid 1-42 measurement 
+- 'beta-amyloid 1-42 measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
+- 'beta-amyloid 1-42 measurement' SubClassOf 'protein measurement'
++ 'beta-amyloid 1-42 measurement' SubClassOf 'amyloid-beta measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0004806
-Label(s): asbestos exposure measurement 
-+ 'asbestos exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to asbestos')
+Class: http://www.ebi.ac.uk/efo/EFO_0010142
+Label(s): same-sex sexual behavior 
+- 'same-sex sexual behavior' SubClassOf 'sexual behavior'
++ 'same-sex sexual behavior' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://www.ebi.ac.uk/efo/EFO_0801079
-Label(s): bisphenol A measurement 
-+ 'bisphenol A measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to bisphenol A')
+Class: http://www.ebi.ac.uk/efo/EFO_0010141
+Label(s): sexual behavior 
+- 'sexual behavior' SubClassOf 'behavior'
++ 'sexual behavior' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://www.ebi.ac.uk/efo/EFO_0801078
-Label(s): triclosan measurement 
-+ 'triclosan measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to triclosan')
+Class: http://www.ebi.ac.uk/efo/EFO_0600016
+Label(s): plasma beta-amyloid 1-40:1-42 ratio measurement 
+- 'plasma beta-amyloid 1-40:1-42 ratio measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
++ 'plasma beta-amyloid 1-40:1-42 ratio measurement' SubClassOf 'amyloid-beta measurement'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0009113
-Label(s): alcohol exposure measurement 
-- 'alcohol exposure measurement' SubClassOf 'is_about' some 'alcohol drinking'
-+ 'alcohol exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to alcohol')
-+ 'alcohol exposure measurement' SubClassOf 'measurement' and ('is_about' some 'alcohol drinking')
+Class: http://www.ebi.ac.uk/efo/EFO_0009695
+Label(s): household income 
+- 'household income' SubClassOf 'quality'
++ 'household income' SubClassOf http://www.ebi.ac.uk/efo/EFO_0022958
 
-Class: http://www.ebi.ac.uk/efo/EFO_0020980
-Label(s): radiation exposure 
-+ 'radiation exposure' SubClassOf 'measurement' and ('is_about' some 'exposure to radiation')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006924
-Label(s): household air pollution measurement 
-+ 'household air pollution measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to air pollution')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007944
-Label(s): allergen exposure measurement 
-+ 'allergen exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to allergen')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010233
-Label(s): genotoxic compound exposure measurement 
-+ 'genotoxic compound exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to genotoxin')
-
-Class: http://purl.obolibrary.org/obo/GO_1990542
-Label(s): mitochondrial transmembrane transport 
-- 'mitochondrial transmembrane transport' SubClassOf 'cellular process'
-+ 'mitochondrial transmembrane transport' SubClassOf 'establishment of localization in cell'
-+ 'mitochondrial transmembrane transport' SubClassOf 'cellular localization'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009370
-Label(s): radon exposure measurement 
-+ 'radon exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to radon')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009115
-Label(s): tobacco smoke exposure measurement 
-+ 'tobacco smoke exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to tobacco smoking')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0600007
-Label(s): fish oil supplement exposure measurement 
-+ 'fish oil supplement exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to fish oil supplement via ingestion')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007840
-Label(s): pesticide exposure measurement 
-+ 'pesticide exposure measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to pesticide')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007908
-Label(s): traffic air pollution measurement 
-+ 'traffic air pollution measurement' SubClassOf 'measurement' and ('is_about' some 'exposure to air pollution')
-
-Class: http://purl.obolibrary.org/obo/UBERON_0005170
-Label(s): granulosa cell layer 
-- 'granulosa cell layer' SubClassOf 'epithelium'
-- 'granulosa cell layer' SubClassOf 'part_of' some 'ovary'
-- 'granulosa cell layer' SubClassOf 'part_of' some 'gonad'
+Class: http://www.ebi.ac.uk/efo/EFO_0005660
+Label(s): plasma beta-amyloid 1-42 measurement 
+- 'plasma beta-amyloid 1-42 measurement' SubClassOf 'Alzheimer's disease biomarker measurement'
++ 'plasma beta-amyloid 1-42 measurement' SubClassOf 'amyloid-beta measurement'
 
 ----------------------------------
 
