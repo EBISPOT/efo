@@ -89,6 +89,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000234 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000234"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000600 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600"/>
@@ -329,9 +335,23 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000047">
+        <obo:IAO_0000111 xml:lang="en">processed material</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">Examples include gel matrices, filter paper, parafilm and buffer solutions, mass spectrometer, tissue samples</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Is a material entity that is created or changed during material processing.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">processed material</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000049 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>mass spectrometer</obo:IAO_0000111>
         <obo:IAO_0000112>LCQ Fleet Ion Trap MSn manufactured by thermo fisher scientific</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -506,6 +526,12 @@ for now.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0000415 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000415">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000111>polymerase chain reaction</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Opisthorchis viverrini: Detection by polymerase chain reaction (PCR) in human stool samples. Exp Parasitol. 2008 Sep 9.  PMID: 18805413</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
@@ -537,6 +563,12 @@ that has_part some material entity is a material entity. If we add as equivalent
     <!-- http://purl.obolibrary.org/obo/OBI_0000512 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000512">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000111>isolation of cell population</obo:IAO_0000111>
         <obo:IAO_0000112>removing CD4+ cells from PBMCs using magnetic beads.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
@@ -562,6 +594,12 @@ that has_part some material entity is a material entity. If we add as equivalent
     <!-- http://purl.obolibrary.org/obo/OBI_0000552 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000552">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000111>reverse transcribed polymerase chain reaction</obo:IAO_0000111>
         <obo:IAO_0000112>Harmonisation of multi-centre real-time reverse-transcribed PCR results of a candidate prognostic marker in breast cancer: an EU-FP6 supported study of members of the EORTC - PathoBiology Group.
 
@@ -642,6 +680,12 @@ http://sourceforge.net/p/obi/obi-terms/716/</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0000711 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000711">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000111>library preparation</obo:IAO_0000111>
         <obo:IAO_0000112>PMID: 19570239. Construction and analysis of cotton (Gossypium arboreum L.) drought-related cDNA library. Zhang L, Li FG, Liu CL, Zhang CJ, Zhang XY. BMC Res Notes. 2009 Jul 2;2:120.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
@@ -731,6 +775,7 @@ http://sourceforge.net/p/obi/obi-terms/716/</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0000869 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000869">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100051"/>
         <obo:IAO_0000111>polyA RNA extract</obo:IAO_0000111>
         <obo:IAO_0000112>Preparation of polyA RNA by cellulose-bound oligo-dT (Aviv, H., Leder, P. 1972. Purification of biologically active globin messenger RNA by chromatography on oligothymidylic acid-cellulose. Proc. Nat. Acad. Sci. USA 69, 1408-1412.)</obo:IAO_0000112>
@@ -762,6 +807,7 @@ http://sourceforge.net/p/obi/obi-terms/716/</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0000924 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000924">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100051"/>
         <obo:IAO_0000111>labeled specimen</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
@@ -785,6 +831,34 @@ http://sourceforge.net/p/obi/obi-terms/716/</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON: Jie Zheng</obo:IAO_0000117>
         <obo:IAO_0000119>MO_990 paraffin_sample</obo:IAO_0000119>
         <rdfs:label>paraffin specimen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000968 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000968">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+        <obo:IAO_0000111>device</obo:IAO_0000111>
+        <obo:IAO_0000112>A voltmeter is a measurement device which is intended to perform some measure function.</obo:IAO_0000112>
+        <obo:IAO_0000112>An autoclave is a device that sterlizes instruments or contaminated waste by applying high temperature and pressure.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A material entity that is designed to perform a function in a scientific investigation, but is not a reagent.</obo:IAO_0000115>
+        <obo:IAO_0000116>2012-12-17 JAO: In common lab usage, there is a distinction made between devices and reagents that is difficult to model. Therefore we have chosen to specifically exclude reagents from the definition of &quot;device&quot;, and are enumerating the types of roles that a reagent can perform.
+
+2013-6-5 MHB: The following clarifications are outcomes of the May 2013 Philly Workshop. Reagents are distinguished from devices that also participate in scientific techniques by the fact that reagents are chemical or biological in nature and necessarily participate in some chemical interaction or reaction during the realization of their experimental role. By contrast, devices do not participate in such chemical reactions/interactions.  Note that there are cases where devices use reagent components during their operation, where the reagent-device distinction is less clear.  For example:
+
+(1) An HPLC machine is considered a device, but has a column that holds a stationary phase resin as an operational component.  This resin qualifies as a device if it participates purely in size exclusion, but bears a reagent role that is realized in the running of a column if it interacts electrostatically or chemically with the evaluant. The container the resin is in (“the column”) considered alone is a device. So the entire column as well as the entire HPLC machine are devices that have a reagent as an operating part.
+
+(2) A pH meter is a device, but its electrode component bears a reagent role in virtue of its interacting directly with the evaluant in execution of an assay.
+
+(3) A gel running  box  is a device that has a metallic lead as a component that participates in a chemical reaction with the running buffer when a charge is passed through it.  This metallic lead is considered to have a reagent role as a component of this device realized in the running of a gel.
+
+In the examples above, a reagent is an operational component of a device, but the device itself does not realize a reagent role (as bearing a reagent role is not transitive across the part_of relation).  In this way, the asserted disjointness between a reagent and device holds, as both roles are never realized in the same bearer during execution of an assay.</obo:IAO_0000116>
+        <obo:IAO_0000117>PERSON: Helen Parkinson</obo:IAO_0000117>
+        <obo:IAO_0000118>instrument</obo:IAO_0000118>
+        <obo:IAO_0000119>OBI development call 2012-12-17.</obo:IAO_0000119>
+        <rdfs:label>device</rdfs:label>
     </owl:Class>
     
 
@@ -997,6 +1071,23 @@ http://svitsrv25.epfl.ch/R-doc/library/qvalue.html</obo:IAO_0000119>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0003369 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0003369">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
+        <obo:IAO_0000111>assay kit</obo:IAO_0000111>
+        <obo:IAO_0000112>Glutathione S-Transferase (GST) Assay Kit: https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/101/301/cs0410bul.pdf</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A device that consists of reagents and devices that enable the performance of a specific type of assay, which could, in addition, require specific instruments not included in the kit.</obo:IAO_0000115>
+        <obo:IAO_0000117>John Judkins</obo:IAO_0000117>
+        <obo:IAO_0000119>OBI, VEuPathDB</obo:IAO_0000119>
+        <obo:IAO_0000233>https://github.com/obi-ontology/obi/issues/1456</obo:IAO_0000233>
+        <obo:IAO_0000234>VEuPathDB</obo:IAO_0000234>
+        <rdfs:label>assay kit</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0100026 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
@@ -1109,6 +1200,12 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0302903 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0302903">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000111>nucleic acid hybridization</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">PMID: 18555787.Quantitative analysis of DNA hybridization in a flowthrough microarray for molecular testing. Anal Biochem. 2008 May 27.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
@@ -1124,6 +1221,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400103 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>DNA sequencer</obo:IAO_0000111>
         <obo:IAO_0000112>ABI 377 DNA Sequencer, ABI 310 DNA Sequencer</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1138,6 +1236,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400104 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400104">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>array scanner</obo:IAO_0000111>
         <obo:IAO_0000112>GenePix 4200A, GenePix4000B</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1152,6 +1251,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400105 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400105">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>arrayer</obo:IAO_0000111>
         <obo:IAO_0000112>BioRobotics Microgrid II TAS, Affymetrix GMS 417</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
@@ -1166,6 +1266,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400106 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>centrifuge</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">A device with a rapidly rotating container that applies centrifugal force to its contents</obo:IAO_0000115>
@@ -1181,6 +1282,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400107 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>computer</obo:IAO_0000111>
         <obo:IAO_0000112>Apple PowerBook, Dell OptiPlex</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1196,6 +1298,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400108 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400108">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>heating block</obo:IAO_0000111>
         <obo:IAO_0000112>An instrument used to heat and/or maintain material at a set temperature.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1210,6 +1313,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400109 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>homogenizer</obo:IAO_0000111>
         <obo:IAO_0000112>mortar, blender</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1225,6 +1329,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400110 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>hybridization chamber</obo:IAO_0000111>
         <obo:IAO_0000112>Glass Array Hybridization Cassette</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
@@ -1239,6 +1344,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400111 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>hybridization station</obo:IAO_0000111>
         <obo:IAO_0000112>Labnet Problot12</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
@@ -1253,6 +1359,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400112 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>liquid handler</obo:IAO_0000111>
         <obo:IAO_0000112>Beckman BioMek 2000</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
@@ -1269,6 +1376,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400113 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>oligonucleotide synthesizer</obo:IAO_0000111>
         <obo:IAO_0000112>Automated Multiplex Oligonucleotide Synthesizer</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1283,6 +1391,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400114 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>sonicator</obo:IAO_0000111>
         <obo:IAO_0000112>Sonicator 3000</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1297,6 +1406,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400115 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400115">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>spectrophotometer</obo:IAO_0000111>
         <obo:IAO_0000112>Helios Gamma Spectrophotometer</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1312,6 +1422,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400116 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400116">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>thermal cycler</obo:IAO_0000111>
         <obo:IAO_0000112>Piko(tm) 96-well Thermal Cycler</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1331,6 +1442,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400117 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>vacuum dryer</obo:IAO_0000111>
         <obo:IAO_0000112>Model 777 Microarray Oven</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1345,6 +1457,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400118 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>vortexer</obo:IAO_0000111>
         <obo:IAO_0000112>VWR  Genie 2</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1361,6 +1474,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0400155 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0400155">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000111>water bath</obo:IAO_0000111>
         <obo:IAO_0000112>A water bath was used to allow for cell incubation at 38 degree centigrade for 8 hours.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
@@ -1446,6 +1560,12 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0600044">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0600005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">lavage</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">the collection of bronchoalveolar lavage fluid (BAL) from the lungs of mice in order to study the cytokines present</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
@@ -1461,6 +1581,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_1000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_1000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
         <obo:IAO_0000111 xml:lang="en">cell culture supernatant</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">solution containing RPMI, fetal calf sera, antibiotics, and monoclonal antibody UCHT1.
 Isolation of proliferation factor of immature T-cell clone in concanavalin A-stimulated splenocyte culture supernatant. Immunology. 2003 Jun;109(2):209-16. PMID: 12757615</obo:IAO_0000112>
