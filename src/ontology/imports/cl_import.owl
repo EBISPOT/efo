@@ -9,6 +9,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:sssom="https://w3id.org/sssom/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
@@ -93,6 +94,18 @@
     
 
 
+    <!-- http://purl.org/dc/terms/licence -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/licence"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
@@ -147,6 +160,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/depiction -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
@@ -184,6 +203,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <rdfs:label>part of</rdfs:label>
         <rdfs:label xml:lang="en">part of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
@@ -235,6 +255,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ubprop#_upper_level"/>
         <rdfs:comment>The definition of cell is intended to represent all cells, and thus a cell is defined as a material entity and not an anatomical structure, which implies that it is part of an organism (or the entirety of one).</rdfs:comment>
         <rdfs:label>cell</rdfs:label>
+        <skos:prefLabel>cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
@@ -288,6 +309,7 @@ Covers cells actively being cultured or stored in a quiescent state for future u
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>early embryonic cell (metazoa)</rdfs:label>
+        <skos:prefLabel>early embryonic cell (metazoa)</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000007"/>
@@ -528,7 +550,6 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000031">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000055"/>
         <obo:IAO_0000115>A cell that will develop into a neuron often after a migration phase.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>BTO:0000930</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:70563</oboInOwl:hasDbXref>
@@ -538,6 +559,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>neuroblast (sensu Vertebrata)</rdfs:label>
+        <skos:prefLabel>neuroblast (sensu Vertebrata)</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000031"/>
@@ -572,6 +594,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>This term applies to metazoan. For plant stem cells, consider using PO:0004011 ‘initial cell’ or its parent PO:0004010 ‘meristematic cell’.</rdfs:comment>
         <rdfs:label>stem cell</rdfs:label>
+        <skos:prefLabel>stem cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000034"/>
@@ -614,6 +637,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Markers differ between species, and two sets of markers have been described for mice. HSCs are reportedly CD34-positive, CD45-positive, CD48-negative, CD150-positive, CD133-positive, and CD244-negative.</rdfs:comment>
         <rdfs:label>hematopoietic stem cell</rdfs:label>
+        <skos:prefLabel>hematopoietic stem cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000037"/>
@@ -659,6 +683,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>erythroid progenitor cell</rdfs:label>
+        <skos:prefLabel>erythroid progenitor cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000038"/>
@@ -877,6 +902,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>multi fate stem cell</rdfs:label>
+        <skos:prefLabel>multi fate stem cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000048"/>
@@ -918,6 +944,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term &apos;common myeloid progenitor, CD34-positive&apos; (CL_0001059).</rdfs:comment>
         <rdfs:label>common myeloid progenitor</rdfs:label>
+        <skos:prefLabel>common myeloid progenitor</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000049"/>
@@ -1005,6 +1032,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>MEPs are reportedly CD19-negative, CD34-negative, CD45RA-negative, CD110-positive, CD117-positive, and SCA1-negative and reportedly express the transcription factors GATA-1 and NF-E2.</rdfs:comment>
         <rdfs:label>megakaryocyte-erythroid progenitor cell</rdfs:label>
+        <skos:prefLabel>megakaryocyte-erythroid progenitor cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000050"/>
@@ -1084,21 +1112,23 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
     <!-- http://purl.obolibrary.org/obo/CL_0000055 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000055">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
-        <obo:IAO_0000115>A precursor cell with a limited number of potential fates.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. A precursor cell with a limited number of potential fates.</obo:IAO_0000115>
+        <obo:IAO_0000233>https://github.com/obophenotype/cell-ontology/issues/2922</obo:IAO_0000233>
+        <oboInOwl:consider rdf:resource="http://purl.obolibrary.org/obo/CL_0011026"/>
         <oboInOwl:hasDbXref>BTO:0000125</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:84782</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>blast cell</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
+        <rdfs:comment>Redundant grouping term</rdfs:comment>
         <rdfs:comment>define using PATO mulit-potent or oligopotent?</rdfs:comment>
-        <rdfs:label>non-terminally differentiated cell</rdfs:label>
+        <rdfs:label>obsolete non-terminally differentiated cell</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:prefLabel>non-terminally differentiated cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000055"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A precursor cell with a limited number of potential fates.</owl:annotatedTarget>
+        <owl:annotatedTarget>OBSOLETE. A precursor cell with a limited number of potential fates.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>SANBI:mhl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1108,7 +1138,6 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000056">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000055"/>
         <obo:IAO_0000115>A cell that is commited to differentiating into a muscle cell.  Embryonic myoblasts develop from the mesoderm. They undergo proliferation, migrate to their various sites, and then differentiate into the appropriate form of myocytes.  Myoblasts also occur as transient populations of cells in muscles undergoing repair.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>BTO:0000222</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>CALOHA:TS-0650</oboInOwl:hasDbXref>
@@ -1120,6 +1149,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>myoblast</rdfs:label>
+        <skos:prefLabel>myoblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000056"/>
@@ -1157,12 +1187,12 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:hasDbXref>VHOG:0001482</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ZFA:0009026</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.</rdfs:comment>
         <rdfs:label>fibroblast</rdfs:label>
+        <skos:prefLabel>fibroblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000057"/>
@@ -1211,7 +1241,6 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000062">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000055"/>
         <obo:IAO_0000115>Skeletogenic cell that secretes osteoid, is capable of producing mineralized (hydroxyapatite) matrix, is located adjacent to or within osteoid tissue, and arises from the transformation of a preosteoblast cell.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>BTO:0001593</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>CALOHA:TS-0720</oboInOwl:hasDbXref>
@@ -1256,6 +1285,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>ependymal cell</rdfs:label>
+        <skos:prefLabel>ependymal cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000065"/>
@@ -1305,6 +1335,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>epithelial cell</rdfs:label>
+        <skos:prefLabel>epithelial cell</skos:prefLabel>
         <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.swissbiopics.org/api/image/Epithelial_cells.svg</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
@@ -1342,6 +1373,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>blood vessel endothelial cell</rdfs:label>
+        <skos:prefLabel>blood vessel endothelial cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000071"/>
@@ -1368,6 +1400,7 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>squamous epithelial cell</rdfs:label>
+        <skos:prefLabel>squamous epithelial cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000076"/>
@@ -1452,10 +1485,10 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:hasDbXref>MESH:D001773</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ZFA:0009044</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>blood cell</rdfs:label>
+        <skos:prefLabel>blood cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000081"/>
@@ -1521,7 +1554,6 @@ The process of fertilization occurs when one sperm cell successfully penetrates 
         <oboInOwl:hasRelatedSynonym>immature T cell</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>mature T cell</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
@@ -1570,6 +1602,7 @@ Kupffer cells also play key roles in various immune responses and inflammatory p
         <rdfs:comment>Markers: Mouse: F4/80+, CD11b-low, CD68+, sialoadhesin+, CD163/SRCR+; role or process: immune, antigen-presentation, clearance of senescent erythrocytes, iron metabolism. Kupffer cells are also reportedly C3aR-positive, CD14-low, CD54-positive, CD88-positive, and CD284-positive. They are also capable of producing IL-1, IL-6, TNF-alpha, nitric oxide, PGD2, PGE2, PGF2alpha, and TXA2.</rdfs:comment>
         <rdfs:label>Kupffer cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000091</rdfs:seeAlso>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/liver-liver-lobule/v1.3/assets/2d-ftu-liver-liver-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000091"/>
@@ -1602,6 +1635,13 @@ Kupffer cells also play key roles in various immune responses and inflammatory p
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0000091</owl:annotatedTarget>
         <rdfs:label>Kupffer cell on CELLxGENE CellGuide</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000091"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/liver-liver-lobule/v1.3/assets/2d-ftu-liver-liver-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM889.CJPK.447</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1737,6 +1777,12 @@ Osteoclasts also collaborate with osteoblasts, responsible for new bone formatio
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000096"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>ZFA:0009049</owl:annotatedTarget>
+        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000096"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A fully differentiated neutrophil, a granular leukocyte having a nucleus with three to five lobes connected by slender threads, and cytoplasm containing fine inconspicuous granules and stainable by neutral dyes. They are produced in bone marrow at a rate of 5e10-10e10/day and have a half-life of 6-8 hours. Neutrophils are CD15-positive, CD16-positive, CD32-positive, CD43-positive, CD181-positive, and CD182-positive.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:add</oboInOwl:hasDbXref>
@@ -1747,12 +1793,6 @@ Osteoclasts also collaborate with osteoblasts, responsible for new bone formatio
         <oboInOwl:hasDbXref>PMID:15514007</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:7880385</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.cap.org</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000096"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ZFA:0009049</owl:annotatedTarget>
-        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
     </owl:Axiom>
     
 
@@ -1834,6 +1874,7 @@ Osteoclasts also collaborate with osteoblasts, responsible for new bone formatio
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>interneuron</rdfs:label>
+        <skos:prefLabel>interneuron</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000099"/>
@@ -1874,6 +1915,7 @@ Osteoclasts also collaborate with osteoblasts, responsible for new bone formatio
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>motor neuron</rdfs:label>
+        <skos:prefLabel>motor neuron</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000100"/>
@@ -1914,6 +1956,7 @@ Osteoclasts also collaborate with osteoblasts, responsible for new bone formatio
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>sensory neuron</rdfs:label>
+        <skos:prefLabel>sensory neuron</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000101"/>
@@ -1997,11 +2040,13 @@ Osteoclasts also collaborate with osteoblasts, responsible for new bone formatio
         <oboInOwl:hasDbXref>ZFA:0009065</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>endotheliocyte</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>From FMA: 9.07.2001: Endothelial cell has always been classified as a kind of epithelial cell, specifically a squamous cell but that is not true. First, endothelial cell can either be squamous or cuboidal (e.g. high-endothelial cell) and secondly, it has different embryological derivation (mesodermal) than a true epithelial cell (ectodermal and endodermal). The basis for present classification is the fact that it comprises the outermost layer or lining of anatomical structures (location-based) but a better structural basis for the differentia is the cytoskeleton of the cell. Endothelial cell has vimentin filaments while an epithelial cell has keratin filaments. [Onard].</rdfs:comment>
         <rdfs:label>endothelial cell</rdfs:label>
+        <skos:prefLabel>endothelial cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000115"/>
@@ -2055,13 +2100,13 @@ Despite their overarching function in the support and protection of neurons, gli
         <oboInOwl:hasExactSynonym>neuroglial cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>neuroglia</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Not all glial cells develop from glioblasts, with microglia developing from the mesoderm instead. See https://github.com/obophenotype/cell-ontology/issues/1571</rdfs:comment>
         <rdfs:label>glial cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000125</rdfs:seeAlso>
+        <skos:prefLabel>glial cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000125"/>
@@ -2306,11 +2351,11 @@ While their protective role generally benefits the brain, their over-activation 
         <oboInOwl:hasExactSynonym>adipose cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fat cell</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>adipocyte</rdfs:label>
+        <skos:prefLabel>adipocyte</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000136"/>
@@ -2342,6 +2387,7 @@ While their protective role generally benefits the brain, their over-activation 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>chondrocyte</rdfs:label>
+        <skos:prefLabel>chondrocyte</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000138"/>
@@ -2429,6 +2475,7 @@ In addition to melanin production, melanocytes also engage in a variety of other
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>secretory cell</rdfs:label>
+        <skos:prefLabel>secretory cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
@@ -2597,11 +2644,11 @@ Goblet cells are capable of rapidly altering their secretory output in response 
         <oboInOwl:hasDbXref>ZFA:0009096</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>endocrinocyte</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>endocrine cell</rdfs:label>
+        <skos:prefLabel>endocrine cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000163"/>
@@ -2641,6 +2688,7 @@ Goblet cells are capable of rapidly altering their secretory output in response 
 
 The modern definition of neurosecretion has evolved to include the release of any neuronal secretory product from a neuron.</rdfs:comment>
         <rdfs:label>neuroendocrine cell</rdfs:label>
+        <skos:prefLabel>neuroendocrine cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000165"/>
@@ -2692,6 +2740,7 @@ In addition to their role in stress response, chromaffin cells also contribute t
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>chromaffin cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000166</rdfs:seeAlso>
+        <skos:prefLabel>chromaffin cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000166"/>
@@ -2787,6 +2836,7 @@ In addition to their role in stress response, chromaffin cells also contribute t
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Pancreatic beta cells are also reportedly CD284-positive. Upon activation, they upregulate their CD14 expression.</rdfs:comment>
         <rdfs:label>type B pancreatic cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-islets-langerhans/v1.2/assets/2d-ftu-pancreas-islets-langerhans.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000169"/>
@@ -2856,6 +2906,13 @@ In addition to their role in stress response, chromaffin cells also contribute t
         <owl:annotatedTarget>beta cell islet</owl:annotatedTarget>
         <oboInOwl:hasDbXref>MA:0002419</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000169"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-islets-langerhans/v1.2/assets/2d-ftu-pancreas-islets-langerhans.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM637.SFSW.654</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -2879,6 +2936,7 @@ In addition to their role in stress response, chromaffin cells also contribute t
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>pancreatic A cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-islets-langerhans/v1.2/assets/2d-ftu-pancreas-islets-langerhans.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000171"/>
@@ -2892,6 +2950,13 @@ In addition to their role in stress response, chromaffin cells also contribute t
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>ZFA:0009104</owl:annotatedTarget>
         <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000171"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-islets-langerhans/v1.2/assets/2d-ftu-pancreas-islets-langerhans.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM637.SFSW.654</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2920,6 +2985,7 @@ In addition to their role in stress response, chromaffin cells also contribute t
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>pancreatic D cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-islets-langerhans/v1.2/assets/2d-ftu-pancreas-islets-langerhans.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000173"/>
@@ -2933,6 +2999,13 @@ In addition to their role in stress response, chromaffin cells also contribute t
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>ZFA:0005743</owl:annotatedTarget>
         <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000173"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-islets-langerhans/v1.2/assets/2d-ftu-pancreas-islets-langerhans.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM637.SFSW.654</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3023,6 +3096,7 @@ Alterations in hepatocyte function have significant implications for overall hum
         <rdfs:comment>Hepatocytes are reportedly MHC Class I-positive and MHC Class II-positive.</rdfs:comment>
         <rdfs:label>hepatocyte</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000182</rdfs:seeAlso>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/liver-liver-lobule/v1.3/assets/2d-ftu-liver-liver-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000182"/>
@@ -3059,6 +3133,13 @@ Alterations in hepatocyte function have significant implications for overall hum
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0000182</owl:annotatedTarget>
         <rdfs:label>hepatocyte on CELLxGENE CellGuide</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000182"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/liver-liver-lobule/v1.3/assets/2d-ftu-liver-liver-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM889.CJPK.447</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3112,9 +3193,11 @@ Alterations in hepatocyte function have significant implications for overall hum
         <oboInOwl:hasExactSynonym>muscle fiber</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>myocyte</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>muscle cell</rdfs:label>
+        <skos:prefLabel>muscle cell</skos:prefLabel>
         <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.swissbiopics.org/api/image/Muscle_cells.svg</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
@@ -3158,12 +3241,12 @@ On a cellular level, smooth muscle cells possess a single, centrally located nuc
         <oboInOwl:hasExactSynonym>myocytes, smooth muscle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>smooth muscle fiber</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>smooth muscle cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000192</rdfs:seeAlso>
+        <skos:prefLabel>smooth muscle cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000192"/>
@@ -3257,6 +3340,7 @@ On a cellular level, smooth muscle cells possess a single, centrally located nuc
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>photoreceptor cell</rdfs:label>
+        <skos:prefLabel>photoreceptor cell</skos:prefLabel>
         <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.swissbiopics.org/api/image/Photoreceptor_cell.svg</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
@@ -3289,6 +3373,7 @@ On a cellular level, smooth muscle cells possess a single, centrally located nuc
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>electrically active cell</rdfs:label>
+        <skos:prefLabel>electrically active cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000211"/>
@@ -3391,6 +3476,7 @@ In embryonic development, these cells are instrumental, contributing to the body
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>mesodermal cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000222</rdfs:seeAlso>
+        <skos:prefLabel>mesodermal cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000222"/>
@@ -3443,6 +3529,7 @@ In embryonic development, these cells are instrumental, contributing to the body
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>erythrocyte</rdfs:label>
+        <skos:prefLabel>erythrocyte</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000232"/>
@@ -3544,7 +3631,6 @@ In embryonic development, these cells are instrumental, contributing to the body
         <oboInOwl:hasExactSynonym>histiocyte</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#blood_and_immune_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
@@ -3587,7 +3673,6 @@ In embryonic development, these cells are instrumental, contributing to the body
         <oboInOwl:hasExactSynonym>B-lymphocyte</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#blood_and_immune_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
@@ -3714,32 +3799,27 @@ In embryonic development, these cells are instrumental, contributing to the body
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000076"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000362"/>
-        <obo:IAO_0000115>An epidermal cell which synthesizes keratin and undergoes a characteristic change as it moves upward from the basal layers of the epidermis to the cornified (horny) layer of the skin. Successive stages of differentiation of the keratinocytes forming the epidermal layers are basal cell, spinous or prickle cell, and the granular cell.</obo:IAO_0000115>
+        <obo:IAO_0000115>An epithelial cell of stratified squamous tissues, including skin, oral mucosa (Hiroshima et al., 2011), and esophagus (Whelan et al., 2018), that produces keratin proteins and secretes antimicrobial peptides to form a resilient barrier against environmental damage, dehydration, pathogens, and microbial invasion. It undergoes successive stages of differentiation marked by changes in keratin expression, supporting tissue integrity, wound repair, and contributing to immune defense.</obo:IAO_0000115>
         <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
         <oboInOwl:hasDbXref>BTO:0000667</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>CALOHA:TS-0500</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:62879</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ZFA:0009158</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>keratinized cell of epidermis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>malpighian cell</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
-        <rdfs:comment>Keratinocytes are reportedly CDw210a-negative, CDw210b-positive, CD281-positive, CD282-positive, CD285-positive, IL22Ra1-positive, Human keratinocytes are reportedly capable of secreting BD-2, BD-3, hCAP-18, CXCL1, CXCL5, CXCL8, elafin, MMP-3, NGAL, PDGF-A, S100A7, S100A8, and S100A9. Transcription factors: STAT3-positive.</rdfs:comment>
         <rdfs:label>keratinocyte</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000312"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An epidermal cell which synthesizes keratin and undergoes a characteristic change as it moves upward from the basal layers of the epidermis to the cornified (horny) layer of the skin. Successive stages of differentiation of the keratinocytes forming the epidermal layers are basal cell, spinous or prickle cell, and the granular cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:dsd</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MESH:D015603</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:15582983</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>An epithelial cell of stratified squamous tissues, including skin, oral mucosa (Hiroshima et al., 2011), and esophagus (Whelan et al., 2018), that produces keratin proteins and secretes antimicrobial peptides to form a resilient barrier against environmental damage, dehydration, pathogens, and microbial invasion. It undergoes successive stages of differentiation marked by changes in keratin expression, supporting tissue integrity, wound repair, and contributing to immune defense.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:15749908</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:19256306</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:19727116</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Keratinocyte</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:29713660</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:37873034</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000312"/>
@@ -3761,6 +3841,7 @@ In embryonic development, these cells are instrumental, contributing to the body
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>migratory neural crest cell</rdfs:label>
+        <skos:prefLabel>migratory neural crest cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000333"/>
@@ -3922,6 +4003,7 @@ Trophoblast cells also play a crucial role in immune tolerance, preventing the m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>epiblast cell</rdfs:label>
+        <skos:prefLabel>epiblast cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000352"/>
@@ -4011,6 +4093,7 @@ Trophoblast cells also play a crucial role in immune tolerance, preventing the m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>animal zygote</rdfs:label>
+        <skos:prefLabel>animal zygote</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000365"/>
@@ -4197,12 +4280,28 @@ Trophoblast cells also play a crucial role in immune tolerance, preventing the m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Due to its unique lineage and distinct function, this is not a type of dendritic cell; CL:0000451.</rdfs:comment>
         <rdfs:label>follicular dendritic cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-red-pulp/v1.2/assets/2d-ftu-spleen-red-pulp.png</foaf:depiction>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-white-pulp/v1.2/assets/2d-ftu-spleen-white-pulp.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000442"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cell with extensive dendritic processes found in the B cell areas (primary follicles and germinal centers) of lymphoid tissue. They are unrelated to the dendritic cell associated with T cells. Follicular dendritic cells have Fc receptors and C3b receptors, but unlike other dendritic cells, they do not process or present antigen in a way that allows recognition by T cells. Instead, they hold antigen in the form of immune complexes on their surfaces for long periods and can present antigen to B cells during an immune response.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ISBN:127520252</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000442"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-red-pulp/v1.2/assets/2d-ftu-spleen-red-pulp.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM355.ZFMS.256</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000442"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-white-pulp/v1.2/assets/2d-ftu-spleen-white-pulp.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM559.FNBB.6273</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4225,7 +4324,6 @@ Trophoblast cells also play a crucial role in immune tolerance, preventing the m
         <oboInOwl:hasRelatedSynonym>interdigitating cell</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>veiled cell</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
@@ -4398,11 +4496,11 @@ Trophoblast cells also play a crucial role in immune tolerance, preventing the m
         <oboInOwl:hasDbXref>FMA:83624</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ZFA:0009226</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>stromal cell</rdfs:label>
+        <skos:prefLabel>stromal cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000499"/>
@@ -4550,6 +4648,7 @@ Functionally, smooth muscle myoblasts and the mature muscle cells they generate 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>smooth muscle myoblast</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000514</rdfs:seeAlso>
+        <skos:prefLabel>smooth muscle myoblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000514"/>
@@ -4594,7 +4693,6 @@ Functionally, smooth muscle myoblasts and the mature muscle cells they generate 
     <!-- http://purl.obolibrary.org/obo/CL_0000515 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000515">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000056"/>
         <obo:IAO_0000115>A myoblast that differentiates into skeletal muscle fibers.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>FMA:84799</oboInOwl:hasDbXref>
@@ -4604,6 +4702,7 @@ Functionally, smooth muscle myoblasts and the mature muscle cells they generate 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>skeletal muscle myoblast</rdfs:label>
+        <skos:prefLabel>skeletal muscle myoblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000515"/>
@@ -4704,12 +4803,12 @@ Functionally, smooth muscle myoblasts and the mature muscle cells they generate 
         <oboInOwl:hasDbXref>ZFA:0009248</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>nerve cell</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>These cells are also reportedly CD4-negative and CD200-positive. They are also capable of producing CD40L and IFN-gamma.</rdfs:comment>
         <rdfs:label>neuron</rdfs:label>
+        <skos:prefLabel>neuron</skos:prefLabel>
         <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.swissbiopics.org/api/image/Neuron_cells.svg</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
@@ -4882,6 +4981,7 @@ Functionally, smooth muscle myoblasts and the mature muscle cells they generate 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>proerythroblast</rdfs:label>
+        <skos:prefLabel>proerythroblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000547"/>
@@ -4914,6 +5014,7 @@ Functionally, smooth muscle myoblasts and the mature muscle cells they generate 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>basophilic erythroblast</rdfs:label>
+        <skos:prefLabel>basophilic erythroblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000549"/>
@@ -4972,6 +5073,7 @@ Functionally, smooth muscle myoblasts and the mature muscle cells they generate 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>polychromatophilic erythroblast</rdfs:label>
+        <skos:prefLabel>polychromatophilic erythroblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000550"/>
@@ -5039,6 +5141,7 @@ Functionally, smooth muscle myoblasts and the mature muscle cells they generate 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>orthochromatic erythroblast</rdfs:label>
+        <skos:prefLabel>orthochromatic erythroblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000552"/>
@@ -5296,6 +5399,7 @@ Their primary role is to generate mature granulocytes and monocytes, essential c
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>reticulocyte</rdfs:label>
+        <skos:prefLabel>reticulocyte</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000558"/>
@@ -5455,7 +5559,8 @@ Their primary role is to generate mature granulocytes and monocytes, essential c
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000570">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
-        <obo:IAO_0000115>A neuroepithelial cells that occurs singly or in small groups, close to the outer follicular borders but within the follicular basement membrane of the thyroid. Expresses a form of the neural cell adhesion molecule (N-CAM) on their surface. Secretes calcitonin, 5-hydroxytryptamine and dopamine.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000163"/>
+        <obo:IAO_0000115>A neuroepithelial cells that occurs singly or in small groups, close to the outer follicular borders but within the follicular basement membrane of the thyroid. This cell expresses a form of the neural cell adhesion molecule (N-CAM) on its surface and secretes calcitonin and serotonin (5-hydroxytryptamine).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>FMA:68653</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SCTID:176770005</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ZFA:0009260</oboInOwl:hasDbXref>
@@ -5471,7 +5576,7 @@ Their primary role is to generate mature granulocytes and monocytes, essential c
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000570"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A neuroepithelial cells that occurs singly or in small groups, close to the outer follicular borders but within the follicular basement membrane of the thyroid. Expresses a form of the neural cell adhesion molecule (N-CAM) on their surface. Secretes calcitonin, 5-hydroxytryptamine and dopamine.</owl:annotatedTarget>
+        <owl:annotatedTarget>A neuroepithelial cells that occurs singly or in small groups, close to the outer follicular borders but within the follicular basement membrane of the thyroid. This cell expresses a form of the neural cell adhesion molecule (N-CAM) on its surface and secretes calcitonin and serotonin (5-hydroxytryptamine).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0517223651</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -5527,6 +5632,7 @@ Their primary role is to generate mature granulocytes and monocytes, essential c
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>retinal cone cell</rdfs:label>
+        <skos:prefLabel>retinal cone cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000573"/>
@@ -5564,7 +5670,6 @@ Their primary role is to generate mature granulocytes and monocytes, essential c
         <oboInOwl:hasDbXref>ZFA:0009265</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#blood_and_immune_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
@@ -5839,6 +5944,7 @@ Beyond their role in host defense, alveolar macrophages contribute to tissue rem
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>germ cell</rdfs:label>
+        <skos:prefLabel>germ cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000586"/>
@@ -5922,6 +6028,7 @@ Beyond their role in host defense, alveolar macrophages contribute to tissue rem
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>pyramidal neuron</rdfs:label>
+        <skos:prefLabel>pyramidal neuron</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000598"/>
@@ -6092,6 +6199,7 @@ Beyond their role in host defense, alveolar macrophages contribute to tissue rem
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>GABAergic neuron</rdfs:label>
+        <skos:prefLabel>GABAergic neuron</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000617"/>
@@ -6192,7 +6300,6 @@ Acinar cells have high protein synthesis rates and are susceptible to accumulati
         <oboInOwl:hasDbXref>ZFA:0009278</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>NK cell</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
@@ -6307,6 +6414,7 @@ Acinar cells have high protein synthesis rates and are susceptible to accumulati
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Hepatic stellate cells are CD271-positive, desmin-positive, DDR-2-positive, GFAP-positive, synamin-positive, synaptophysin-positive, vimentin-positive, They are capable of producing angiotensin II, fibronectin, laminin, MMP-1, MMP-2, MMP-3, MMP-9, MMP-11, TGF-beta1, TIMP-1, TIMP-2, type I collagen, type III collagen, type IV collagen, and type VI collagen.</rdfs:comment>
         <rdfs:label>hepatic stellate cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/liver-liver-lobule/v1.3/assets/2d-ftu-liver-liver-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000632"/>
@@ -6331,6 +6439,13 @@ Acinar cells have high protein synthesis rates and are susceptible to accumulati
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>vitamin A-storing cells</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:12808230</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000632"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/liver-liver-lobule/v1.3/assets/2d-ftu-liver-liver-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM889.CJPK.447</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6539,6 +6654,7 @@ The importance of podocytes is further emphasized by the effects of their damage
         <rdfs:label>podocyte</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000653</rdfs:seeAlso>
         <rdfs:seeAlso>https://github.com/obophenotype/cell-ontology/issues/1460</rdfs:seeAlso>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/kidney-renal-corpuscle/v1.2/assets/2d-ftu-kidney-renal-corpuscle.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000653"/>
@@ -6585,6 +6701,13 @@ The importance of podocytes is further emphasized by the effects of their damage
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0000653</owl:annotatedTarget>
         <rdfs:label>podocyte on CELLxGENE CellGuide</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000653"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/kidney-renal-corpuscle/v1.2/assets/2d-ftu-kidney-renal-corpuscle.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM778.SHGJ.294</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6683,6 +6806,7 @@ The importance of podocytes is further emphasized by the effects of their damage
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>glutamatergic neuron</rdfs:label>
+        <skos:prefLabel>glutamatergic neuron</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000679"/>
@@ -6716,6 +6840,7 @@ The importance of podocytes is further emphasized by the effects of their damage
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>dopaminergic neuron</rdfs:label>
+        <skos:prefLabel>dopaminergic neuron</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000700"/>
@@ -6774,6 +6899,7 @@ The importance of podocytes is further emphasized by the effects of their damage
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>somatic stem cell</rdfs:label>
+        <skos:prefLabel>somatic stem cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000723"/>
@@ -6908,7 +7034,6 @@ Unlike skeletal muscle cells which can tire and need rest, cardiac muscle cells 
         <oboInOwl:hasExactSynonym>cardiomyocyte</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>heart muscle cell</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
@@ -7004,6 +7129,7 @@ Unlike skeletal muscle cells which can tire and need rest, cardiac muscle cells 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>myeloid cell</rdfs:label>
+        <skos:prefLabel>myeloid cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000763"/>
@@ -7037,6 +7163,7 @@ Unlike skeletal muscle cells which can tire and need rest, cardiac muscle cells 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Note that in FMA erythropoietic cells are types of nucleated erythrocytes and thus don&apos;t include erythrocytes.</rdfs:comment>
         <rdfs:label>erythroid lineage cell</rdfs:label>
+        <skos:prefLabel>erythroid lineage cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000764"/>
@@ -7071,6 +7198,7 @@ Unlike skeletal muscle cells which can tire and need rest, cardiac muscle cells 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>erythroblast</rdfs:label>
+        <skos:prefLabel>erythroblast</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000765"/>
@@ -8381,6 +8509,7 @@ Unlike skeletal muscle cells which can tire and need rest, cardiac muscle cells 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Thymocytes of this stage are undergoing positive and negative selection.</rdfs:comment>
         <rdfs:label>double-positive, alpha-beta thymocyte</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000809"/>
@@ -8390,6 +8519,13 @@ Unlike skeletal muscle cells which can tire and need rest, cardiac muscle cells 
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0781735149</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000809"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM322.LZLG.752</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9284,6 +9420,7 @@ Unlike skeletal muscle cells which can tire and need rest, cardiac muscle cells 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Markers differ between mouse and human.</rdfs:comment>
         <rdfs:label>hematopoietic multipotent progenitor cell</rdfs:label>
+        <skos:prefLabel>hematopoietic multipotent progenitor cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000837"/>
@@ -9354,6 +9491,7 @@ Unlike skeletal muscle cells which can tire and need rest, cardiac muscle cells 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Note that this is a class of cell types, not an identified single cell type.</rdfs:comment>
         <rdfs:label>myeloid lineage restricted progenitor cell</rdfs:label>
+        <skos:prefLabel>myeloid lineage restricted progenitor cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000839"/>
@@ -9911,6 +10049,7 @@ Despite the beneficial role of inflammatory macrophages in dealing with pathogen
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Markers: Mouse: F4/80-, MARCO+, SR-A+, SIGN-R1+, Dectin2+.</rdfs:comment>
         <rdfs:label>splenic marginal zone macrophage</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-red-pulp/v1.2/assets/2d-ftu-spleen-red-pulp.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000872"/>
@@ -9919,6 +10058,13 @@ Despite the beneficial role of inflammatory macrophages in dealing with pathogen
         <oboInOwl:hasDbXref>GOC:ana</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:16861066</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000872"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-red-pulp/v1.2/assets/2d-ftu-spleen-red-pulp.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM355.ZFMS.256</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9955,6 +10101,7 @@ Despite the beneficial role of inflammatory macrophages in dealing with pathogen
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Markers: Mouse: F4/80+, CD68+, MR+, Dectin2+, macrosialin+, sialoadhesin-low; role or process: immune, clearance of senescent erythrocytes.</rdfs:comment>
         <rdfs:label>splenic red pulp macrophage</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-red-pulp/v1.2/assets/2d-ftu-spleen-red-pulp.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000874"/>
@@ -9963,6 +10110,13 @@ Despite the beneficial role of inflammatory macrophages in dealing with pathogen
         <oboInOwl:hasDbXref>GOC:ana</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:19644016</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000874"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-red-pulp/v1.2/assets/2d-ftu-spleen-red-pulp.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM355.ZFMS.256</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10007,6 +10161,7 @@ Despite the beneficial role of inflammatory macrophages in dealing with pathogen
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>Markers: Mouse: F4/80-, CD68+, macrosialin+.</rdfs:comment>
         <rdfs:label>splenic white pulp macrophage</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-white-pulp/v1.2/assets/2d-ftu-spleen-white-pulp.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000876"/>
@@ -10015,6 +10170,13 @@ Despite the beneficial role of inflammatory macrophages in dealing with pathogen
         <oboInOwl:hasDbXref>GOC:ana</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:11207597</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000876"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-white-pulp/v1.2/assets/2d-ftu-spleen-white-pulp.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM559.FNBB.6273</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10029,6 +10191,7 @@ Despite the beneficial role of inflammatory macrophages in dealing with pathogen
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>splenic tingible body macrophage</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-red-pulp/v1.2/assets/2d-ftu-spleen-red-pulp.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000877"/>
@@ -10038,6 +10201,13 @@ Despite the beneficial role of inflammatory macrophages in dealing with pathogen
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:19631584</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000877"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/spleen-red-pulp/v1.2/assets/2d-ftu-spleen-red-pulp.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM355.ZFMS.256</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10222,6 +10392,7 @@ CNS macrophages are also involved in the initiation and progression of many neur
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>thymic medullary macrophage</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000882"/>
@@ -10230,6 +10401,13 @@ CNS macrophages are also involved in the initiation and progression of many neur
         <oboInOwl:hasDbXref>GOC:ana</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:9048205</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000882"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM322.LZLG.752</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10244,6 +10422,7 @@ CNS macrophages are also involved in the initiation and progression of many neur
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>thymic cortical macrophage</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000883"/>
@@ -10253,6 +10432,13 @@ CNS macrophages are also involved in the initiation and progression of many neur
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:9048205</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000883"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM322.LZLG.752</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11961,6 +12147,7 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>thymic plasmacytoid dendritic cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000942"/>
@@ -11971,6 +12158,13 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000031</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:19941119</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000942"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM322.LZLG.752</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13174,9 +13368,11 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <oboInOwl:hasExactSynonym>haemopoietic cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>hemopoietic cell</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>hematopoietic cell</rdfs:label>
+        <skos:prefLabel>hematopoietic cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000988"/>
@@ -15044,6 +15240,7 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>hematopoietic lineage restricted progenitor cell</rdfs:label>
+        <skos:prefLabel>hematopoietic lineage restricted progenitor cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002031"/>
@@ -15069,6 +15266,7 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:comment>This cell type is intended to be compatible with any vertebrate hematopoietic oligopotent progenitor cell.  For mammalian hematopoietic oligopotent progenitor cells known to be lineage-negative, please use the term &apos;hematopoietic oligopotent progenitor cell&apos; (CL_0001060).</rdfs:comment>
         <rdfs:label>hematopoietic oligopotent progenitor cell</rdfs:label>
+        <skos:prefLabel>hematopoietic oligopotent progenitor cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002032"/>
@@ -15883,6 +16081,7 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>The marker set AGER can identify the Human cell type pulmonary alveolar type 1 cell in the lung with a confidence of 0.85 (NS-Forest FBeta value).</rdfs:comment>
         <rdfs:label>pulmonary alveolar type 1 cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/lung-pulmonary-alveolus/v1.3/assets/2d-ftu-lung-pulmonary-alveolus.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002062"/>
@@ -15917,6 +16116,13 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <owl:annotatedTarget>The marker set AGER can identify the Human cell type pulmonary alveolar type 1 cell in the lung with a confidence of 0.85 (NS-Forest FBeta value).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://doi.org/10.5281/zenodo.11165918</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002062"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/lung-pulmonary-alveolus/v1.3/assets/2d-ftu-lung-pulmonary-alveolus.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM558.BZLS.992</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15955,6 +16161,7 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>The marker set SFTPA1 can identify the Human cell type pulmonary alveolar type 2 cell in the lung with a confidence of 0.95 (NS-Forest FBeta value).</rdfs:comment>
         <rdfs:label>pulmonary alveolar type 2 cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/lung-pulmonary-alveolus/v1.3/assets/2d-ftu-lung-pulmonary-alveolus.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002063"/>
@@ -15991,6 +16198,13 @@ However, dysfunction of M2 macrophages can be harmful. Alternatively activated m
         <owl:annotatedTarget>The marker set SFTPA1 can identify the Human cell type pulmonary alveolar type 2 cell in the lung with a confidence of 0.95 (NS-Forest FBeta value).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://doi.org/10.5281/zenodo.11165918</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002063"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/lung-pulmonary-alveolus/v1.3/assets/2d-ftu-lung-pulmonary-alveolus.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM558.BZLS.992</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -16023,6 +16237,7 @@ Dysregulation in the function of pancreatic acinar cells can lead to severe heal
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>pancreatic acinar cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0002064</rdfs:seeAlso>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-pancreatic-acinus/v1.2/assets/2d-ftu-pancreas-pancreatic-acinus.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002064"/>
@@ -16059,6 +16274,13 @@ Dysregulation in the function of pancreatic acinar cells can lead to severe heal
         <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0002064</owl:annotatedTarget>
         <rdfs:label>pancreatic acinar cell on CELLxGENE CellGuide</rdfs:label>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002064"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-pancreatic-acinus/v1.2/assets/2d-ftu-pancreas-pancreatic-acinus.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM586.MNXV.276</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -16078,6 +16300,8 @@ Dysregulation in the function of pancreatic acinar cells can lead to severe heal
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>pancreatic ductal cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-intercalated-duct/v1.2/assets/2d-ftu-pancreas-intercalated-duct.png</foaf:depiction>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-pancreatic-acinus/v1.2/assets/2d-ftu-pancreas-pancreatic-acinus.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002079"/>
@@ -16092,6 +16316,20 @@ Dysregulation in the function of pancreatic acinar cells can lead to severe heal
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>ZFA:0009380</owl:annotatedTarget>
         <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002079"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-intercalated-duct/v1.2/assets/2d-ftu-pancreas-intercalated-duct.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM992.RCJX.478</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002079"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-pancreatic-acinus/v1.2/assets/2d-ftu-pancreas-pancreatic-acinus.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM586.MNXV.276</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17055,6 +17293,7 @@ Furthermore, endothelial cells of lymphatic vessels play a pivotal role in the b
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002187">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000312"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000362"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000646"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000723"/>
         <obo:IAO_0000115>A mitotically active, columnar-shaped keratinocyte located in the stratum basale of the epidermis and attached to the basement membrane. This cell exhibits heterogeneity, encompassing stem and progenitor subpopulations with distinct molecular and proliferative characteristics (Haensel et al., 2020), and serves as the primary source of new keratinocytes for epidermal renewal, homeostasis, and regeneration.</obo:IAO_0000115>
@@ -17546,6 +17785,7 @@ The pancreatic polypeptide hormone from PP cells also aids in adapting to low ph
         <rdfs:comment>The term PP cell of pancreatic acinus was obsoleted due to a lack of evidence, making PP cell of pancreatic islets synonymous with pancreatic PP cell.</rdfs:comment>
         <rdfs:label>pancreatic PP cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0002275</rdfs:seeAlso>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-islets-langerhans/v1.2/assets/2d-ftu-pancreas-islets-langerhans.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002275"/>
@@ -17578,6 +17818,13 @@ The pancreatic polypeptide hormone from PP cells also aids in adapting to low ph
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0002275</owl:annotatedTarget>
         <rdfs:label>pancreatic PP cell on CELLxGENE CellGuide</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002275"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/pancreas-islets-langerhans/v1.2/assets/2d-ftu-pancreas-islets-langerhans.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM637.SFSW.654</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17616,6 +17863,7 @@ The pancreatic polypeptide hormone from PP cells also aids in adapting to low ph
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000166"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000540"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
         <obo:IAO_0000115>An acidophilic cell of the anterior pituitary that produces growth hormone, somatotropin.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-1980-3228"/>
@@ -17628,6 +17876,7 @@ The pancreatic polypeptide hormone from PP cells also aids in adapting to low ph
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>somatotroph</rdfs:label>
+        <skos:prefLabel>somatotroph</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002312"/>
@@ -17671,9 +17920,11 @@ The pancreatic polypeptide hormone from PP cells also aids in adapting to low ph
         <oboInOwl:hasDbXref>CALOHA:TS-2040</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:70333</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>neural cell</rdfs:label>
+        <skos:prefLabel>neural cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
@@ -17705,6 +17956,7 @@ The balance between cell proliferation and differentiation in embryonic cells is
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>embryonic cell (metazoa)</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0002321</rdfs:seeAlso>
+        <skos:prefLabel>embryonic cell (metazoa)</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002321"/>
@@ -18397,6 +18649,7 @@ mTECs themselves have a self-renewing ability and sustain the continuous export 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>medullary thymic epithelial cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0002365</rdfs:seeAlso>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002365"/>
@@ -18423,6 +18676,13 @@ mTECs themselves have a self-renewing ability and sustain the continuous export 
         <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0002365</owl:annotatedTarget>
         <rdfs:label>medullary thymic epithelial cell on CELLxGENE CellGuide</rdfs:label>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002365"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/thymus-thymus-lobule/v1.3/assets/2d-ftu-thymus-thymus-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM322.LZLG.752</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -18440,6 +18700,7 @@ mTECs themselves have a self-renewing ability and sustain the continuous export 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>respiratory tract epithelial cell</rdfs:label>
+        <skos:prefLabel>respiratory tract epithelial cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002368"/>
@@ -20072,6 +20333,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>epidermal Langerhans cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/skin-epidermal-ridge/v1.2/assets/2d-ftu-skin-epidermal-ridge.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002457"/>
@@ -20079,6 +20341,13 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <owl:annotatedTarget>A Langerhans cell that is in the epidermis and is CD45-positive, MHCII-positive, and CD11b-positive.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002457"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/skin-epidermal-ridge/v1.2/assets/2d-ftu-skin-epidermal-ridge.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM642.BMZS.772</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -20637,6 +20906,7 @@ TA: Transit Amplifying Cells</rdfs:comment>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:comment>From Onard of the FMA: Cardiac muscle cell or cardiac myocyte is a striated muscle cell. Cardiocyte on the other hand is any cell in the heart which includes cells other than muscle cells (e.g. endothelial cell of endocardium). Unless there is a consensus among anatomists that cardiocytes refer only to muscle cells, we will treat them as a general class of cells in the heart.</rdfs:comment>
         <rdfs:label>cardiocyte</rdfs:label>
+        <skos:prefLabel>cardiocyte</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002494"/>
@@ -21382,6 +21652,7 @@ At the cellular level, these transitions involve significant changes in the elec
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>hippocampal neuron</rdfs:label>
+        <skos:prefLabel>hippocampal neuron</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002608"/>
@@ -21684,6 +21955,7 @@ During fetal development, when they form a layer around the islet, epsilon cells
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>mesenchymal cell</rdfs:label>
+        <skos:prefLabel>mesenchymal cell</skos:prefLabel>
     </owl:Class>
     
 
@@ -21694,10 +21966,10 @@ During fetal development, when they form a layer around the islet, epsilon cells
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
         <obo:IAO_0000115>Any cell in the retina, the innermost layer or coating at the back of the eyeball, which is sensitive to light and in which the optic nerve terminates.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>PMID:10702418</oboInOwl:hasDbXref>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>retinal cell</rdfs:label>
+        <skos:prefLabel>retinal cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0009004"/>
@@ -21785,6 +22057,7 @@ Disorders or aberrations in the development or migration of the neural crest cel
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <rdfs:label>neural crest cell</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0011012</rdfs:seeAlso>
+        <skos:prefLabel>neural crest cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0011012"/>
@@ -21862,6 +22135,7 @@ HSECs further play a vital role in immune functionality in the liver. They act a
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>endothelial cell of hepatic sinusoid</rdfs:label>
         <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_1000398</rdfs:seeAlso>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/liver-liver-lobule/v1.3/assets/2d-ftu-liver-liver-lobule.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_1000398"/>
@@ -21908,6 +22182,13 @@ HSECs further play a vital role in immune functionality in the liver. They act a
         <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_1000398</owl:annotatedTarget>
         <rdfs:label>endothelial cell of hepatic sinusoid on CELLxGENE CellGuide</rdfs:label>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_1000398"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/liver-liver-lobule/v1.3/assets/2d-ftu-liver-liver-lobule.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM889.CJPK.447</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -21926,6 +22207,7 @@ HSECs further play a vital role in immune functionality in the liver. They act a
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>parietal epithelial cell</rdfs:label>
+        <foaf:depiction>https://cdn.humanatlas.io/digital-objects/2d-ftu/kidney-renal-corpuscle/v1.2/assets/2d-ftu-kidney-renal-corpuscle.png</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_1000452"/>
@@ -21938,6 +22220,13 @@ HSECs further play a vital role in immune functionality in the liver. They act a
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>epithelial cell of parietal layer of glomerular capsule</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FMA:70968</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_1000452"/>
+        <owl:annotatedProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <owl:annotatedTarget>https://cdn.humanatlas.io/digital-objects/2d-ftu/kidney-renal-corpuscle/v1.2/assets/2d-ftu-kidney-renal-corpuscle.png</owl:annotatedTarget>
+        <terms:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <oboInOwl:hasDbXref>doi:10.48539/HBM778.SHGJ.294</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
