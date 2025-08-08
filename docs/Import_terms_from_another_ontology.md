@@ -151,7 +151,7 @@ MONDO:0042489,BFO:0000019
 4. Rebuild the ontology:
 
 ```bash
-cd src/ontology
+cd src/ontology #If you are not in the ontology folder
 make components/subclasses.owl      
 ```
 
