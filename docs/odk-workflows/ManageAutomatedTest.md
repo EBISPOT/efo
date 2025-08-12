@@ -23,5 +23,5 @@ We can define custom checks using [SPARQL](https://www.w3.org/TR/rdf-sparql-quer
 3. Update the repository so your new SPARQL check will be included in the QC.
 
 ```shell
-sh run.sh make update_repo
+make all
 ```
