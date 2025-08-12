@@ -14,14 +14,13 @@ Workflow requirements:
 
 - git
 - github
-- docker
 - editing tool of choice, e.g. Protégé, your favourite text editor, etc
 
 #### 1. _Create issue_
 Ensure that there is a ticket on your issue tracker that describes the change you are about to make. While this seems optional, this is a very important part of the social contract of building an ontology - no change to the ontology should be performed without a good ticket, describing the motivation and nature of the intended change.
 
 #### 2. _Update main branch_ 
-In your local environment (e.g. your laptop), make sure you are on the `main` (prev. `master`) branch and ensure that you have all the upstream changes, for example:
+In your local environment (e.g. your laptop), make sure you are on the `master` branch and ensure that you have all the upstream changes, for example:
 
 ```
 git checkout master
@@ -75,18 +74,17 @@ git status
 git diff
 ```
 #### 5. Quality control
-Now it's time to run your quality control checks. This can either happen locally ([5a](#5a-local-testing)) or through your continuous integration system ([7/5b](#75b-continuous-integration-testing)).
 
-#### 5a. Local testing (not applicable to EFO yet)
-If you chose to run your test locally:
+You can run the ontology quality control (QC) checks manually with:
+
+```bash
+make qc
+```
+
+Alternatively, QC will run automatically when you execute:
 
 ```
-sh run.sh make IMP=false test
-```
-This will run the whole set of configured ODK tests on including your change. If you have a complex DOSDP pattern pipeline you may want to add `PAT=false` to skip the potentially lengthy process of rebuilding the patterns.
-
-```
-sh run.sh make IMP=false PAT=false test
+make all
 ```
 
 #### 6. Pull request

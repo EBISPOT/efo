@@ -1,4 +1,4 @@
-# EFO Ontology Project Guide
+# Experimental Factor Ontology Project Guide
 
 This includes instructions for editing the efo ontology. 
 
@@ -20,6 +20,7 @@ This includes instructions for editing the efo ontology.
 ## Before making edits
 - Read the request carefully and make a plan, especially if there is nuance
 - If related issues are mentioned read them: `gh issue view GITHUB-ISSUE-NUMBER`
+- Try identify if there are PMID or doi either in the title of in the body of the issue
 - if a PMID or doi is mentioned in the issue, ALWAYS try and read it
 - ALWAYS check proposed parent terms for consistency
 
@@ -96,7 +97,6 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
         obo:IAO_0000117Catherine Leroy</obo:IAO_0000117>
         obo:IAO_0100001http://www.ebi.ac.uk/efo/EFO_1000172</obo:IAO_0100001>
         efo:obsoleted_in_version2.65</efo:obsoleted_in_version>
-        efo:organizational_classtrue</efo:organizational_class>
         efo:reason_for_obsolescenceuse : EFO_1000172 label : cervical squamous cell carcinoma</efo:reason_for_obsolescence>
         rdfs:labelobsolete_cervical squamous cell carcinoma</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -128,8 +128,16 @@ make components/subclasses.owl
 
 ## Relationships
 
-All terms should have at least one "is_a" (SubClassOf to a named class) -- (this can be implicit by a logical definition, see below).
-Many terms in this ontology have part_of relationships to UBERON.
+**All terms** must have at least one `is_a` (SubClassOf to a named class). This can be explicit or implicit via a logical definition.  
+- Many terms in this ontology have `part_of` relationships to UBERON terms where applicable.  
+
+### Additional domain-specific expectations 
+- **Disease terms** should have a `has_disease_location` relationship to an appropriate anatomical entity.  
+  - This relationship may be inherited from a parent or ancestor term; explicit addition is not required if inherited.  
+  - If the issue is not providing this relationship, **make a comment in the PR**.  
+- **Measurement terms** should have an `is_about` relationship to the entity or process being measured  
+  (e.g., `sleep measurement` → `is_about` some `sleep`).  
+  - If the issue is not providing this relationship, **make a comment in the PR**. 
 
 ## Logical definitions
 
