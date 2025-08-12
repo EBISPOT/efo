@@ -20,7 +20,7 @@ This includes instructions for editing the efo ontology.
 ## Before making edits
 - Read the request carefully and make a plan, especially if there is nuance
 - If related issues are mentioned read them: `gh issue view GITHUB-ISSUE-NUMBER`
-- Try identify if there are PMID or doi either in the title of in the body of the issue
+- Try identify if there are PMID or doi either in the title or in the body of the issue
 - if a PMID or doi is mentioned in the issue, ALWAYS try and read it
 - ALWAYS check proposed parent terms for consistency
 
