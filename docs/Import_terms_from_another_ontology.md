@@ -70,7 +70,7 @@ To regenerate all import files at once:
 
 ```bash
 cd src/ontology
-make all -B
+make all_imports -B
 ```
 
 ## What Happens When You Run `make`
@@ -111,7 +111,7 @@ To update all imports:
 
 ```bash
 cd src/ontology
-make all -B
+make all_imports -B
 ```
 
 ## Fixing Dangling Imported Terms
