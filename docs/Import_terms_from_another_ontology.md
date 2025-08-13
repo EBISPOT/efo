@@ -9,7 +9,7 @@ This document describes how to refresh imported ontology terms in the Experiment
   - `.owl` import files (e.g., `uberon_import.owl`)
   - Copies of the imported term lists as a safeguard against term disappearance
 
-- `src/ontology/iri_dependancies/`  
+- `src/ontology/iri_dependencies/`  
   **This is where you should make changes.** This folder contains plain-text files, each corresponding to an imported ontology. Each file contains a list of IRIs to be imported:
   - `mondo_terms.txt`
   - `uberon_terms.txt`
@@ -36,7 +36,7 @@ To add or remove imported terms:
 
 1. Navigate to:
    ```bash
-   src/ontology/iri_dependancies/
+   src/ontology/iri_dependencies/
    ```
 2. Open the relevant file (e.g., `uberon_terms.txt`) in a text editor.
 3. Add or remove full IRIs of the terms you want to import, one per line.
@@ -77,7 +77,7 @@ make all_imports -B
 
 Running `make [ontology]_import.owl` will:
 
-1. Read the list of IRIs from `iri_dependancies/[ontology]_terms.txt`
+1. Read the list of IRIs from `iri_dependencies/[ontology]_terms.txt`
 2. Resolve those IRIs using the updated mirrors
 3. Generate:
    - An `.owl` file in `src/ontology/imports/` (e.g., `uberon_import.owl`)
@@ -88,7 +88,7 @@ This system ensures reproducibility, traceability, and prevents accidental loss 
 ## Notes and Best Practices
 
 - Always run `./get_mirrors.sh` before running `make`, especially if terms may have changed upstream.
-- Only edit the `.txt` files in `src/ontology/iri_dependancies/`.
+- Only edit the `.txt` files in `src/ontology/iri_dependencies/`.
 - Do not directly modify any `.owl` files or `.txt` backups in the `imports` folder.
 - Use `-B` with `make` if the system appears not to be updating the files.
 - Review changes using `git diff` to ensure that the intended terms were updated.
@@ -100,7 +100,7 @@ This system ensures reproducibility, traceability, and prevents accidental loss 
 ./get_mirrors.sh
 
 # Step 2: Edit IRIs (if needed)
-nano src/ontology/iri_dependancies/uberon_terms.txt #Or use a text editor such as VSC
+nano src/ontology/iri_dependencies/uberon_terms.txt #Or use a text editor such as VSC
 
 # Step 3: Run the import
 cd src/ontology

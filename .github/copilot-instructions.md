@@ -10,7 +10,7 @@ This includes instructions for editing the efo ontology.
 
 - Use grep/rg to find terms, but be aware that in RDF/XML files like efo-edit.owl, axioms may span multiple lines.
     - `grep -i ATAC-seq src/ontology/efo-edit.owl` - all axioms that mention ATAC-seq
-    - `grep 'AnnotationAssertion(rdfs:label.*ATAC-seq' src/ontology/efo-edit.owl` - all label axioms that mention ATAC-seq
+    - `grep '<rdfs:label.*ATAC-seq' src/ontology/efo-edit.owl` - all label axioms that mention ATAC-seq
 - All mentions of an ID
     - `obo-grep.pl -r 'EFO_:_0007045' src/ontology/efo-edit.owl`
 - Only search over `src/ontology/efo-edit.owl`
@@ -94,11 +94,11 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
     <!-- http://www.ebi.ac.uk/efo/EFO_1000022 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_1000022">
-        obo:IAO_0000117Catherine Leroy</obo:IAO_0000117>
-        obo:IAO_0100001http://www.ebi.ac.uk/efo/EFO_1000172</obo:IAO_0100001>
-        efo:obsoleted_in_version2.65</efo:obsoleted_in_version>
-        efo:reason_for_obsolescenceuse : EFO_1000172 label : cervical squamous cell carcinoma</efo:reason_for_obsolescence>
-        rdfs:labelobsolete_cervical squamous cell carcinoma</rdfs:label>
+        <obo:IAO_0000117>Catherine Leroy</obo:IAO_0000117>
+        <obo:IAO_0100001>http://www.ebi.ac.uk/efo/EFO_1000172</obo:IAO_0100001>
+        <efo:obsoleted_in_version>2.65</efo:obsoleted_in_version>
+        <efo:reason_for_obsolescence>use : EFO_1000172 label : cervicals quamous cell carcinoma</efo:reason_for_obsolescence>
+        <rdfs:label>obsolete_cervical squamous cell carcinoma</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 ```
