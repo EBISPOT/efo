@@ -51,19 +51,19 @@ make normalize_src
 - You should cite publications appropriately, e.g. `def: "...." [PMID:nnnn, doi:mmmm]
 
 ## GitHub Contribution Process
-- most requests from users should follow one of two patterns:
-    - you are not confident how to proceed, in which case end with asking a clarifying question (via `gh`)
+- Most requests from users should follow one of two patterns:
+    - You are not confident how to proceed, in which case end with asking a clarifying question (via `gh`)
     - you are confident how to proceed, you make changes, commit on a branch, and open a PR for the user to review
 - Check existing terms before adding new ones
 - For new terms: provide name, definition, place in hierarchy, and references
 - Include PMIDs for all assertions
 - Follow naming conventions from parent terms
-- always commit in a branch, e.g. issue-NNN
-- don't commit the tools directory or anything from it
-- if there is an existing PR which you started then checkout that branch and continue, rather than starting a new PR (unless you explicitly want to abandon the original PR, e.g. it was on completely the wrong tracks)
-- always make clear detailed commit messages, saying what you did and why
-- always sign your commits `@dragon-ai-agent`
-- create PRs using `gh pr create ...`
+- Always commit in a branch, e.g. issue-NNN
+- Don't commit the tools directory or anything from it
+- If there is an existing PR which you started then checkout that branch and continue, rather than starting a new PR (unless you explicitly want to abandon the original PR, e.g. it was on completely the wrong tracks)
+- Always make clear detailed commit messages, saying what you did and why
+- Always sign your commits `@dragon-ai-agent`
+- Create PRs using `gh pr create ...`
 - File PRs with clear descriptions, and sign your PR
 
 ## Handling GitHub issues and requests
@@ -72,8 +72,8 @@ make normalize_src
 
 ## TROUBLESHOOTING
 
-- if your obo file has syntax errors, you can use `robot convert -vvv` to see full trace
-- use `robot reason` to validate
+- If your obo file has syntax errors, you can use `robot convert -vvv` to see full trace
+- Use `robot reason` to validate
 
 ## How to Obsolete a Term in EFO
 ### Overview
