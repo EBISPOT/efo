@@ -25,6 +25,15 @@ This includes instructions for editing the efo ontology.
 - ALWAYS check proposed parent terms for consistency
 
 ## Editors guide
+- When you are finished editing the efo-edit.owl file, please normalize by running:
+
+```bash
+cd src/ontology #If you are not in the ontology folder
+make normalize_src
+```
+
+- For any edition that does not involve obsoleting terms, there is no need to add a 'term tracker item' pointing to the GitHub issue
+- Only add subclass axioms in subclasses.csv when linking terms from different ontologies (e.g., EFO ⊑ OBA), and never if the axiom already exists in EFO or its imports.
 
 ## OBO Guidelines
 - Term ID format: EFO_NNNNNNN (7-digit number)
@@ -85,6 +94,8 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
 		- If the current EFO version is X.YY.Z, set efo:obsoleted_in_version to X.(YY+1)
 			Example: 3.80.0 → 3.81
 		- The release version can be found in the 'ExFactor Ontology release notes.txt' file, in line 14 (example: Experimental Factor Ontology version 3.80.0).
+        - Update the ontology version only when a term is newly obsoleted.
+        - If you are editing a term that is already obsoleted (e.g., changing its term_replaced_by target or other metadata), do not update the version.
 	- If the obsolete term has a direct replacement, add the annotation property obo:IAO_0100001 (term replaced by) with the full IRI of the replacement term.
 	- Add efo:reason_for_obsolescence describing the reason and replacement that you will find in the GitHub ticket.
 	- Synonyms and xrefs can be migrated judiciously.
@@ -110,7 +121,7 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
 			- Rebuild the 'sublasses.owl' component:
 
 ```bash
-cd src/ontology #If you are not inn the ontology folder
+cd src/ontology #If you are not in the ontology folder
 make components/subclasses.owl      
 ```
 
