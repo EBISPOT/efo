@@ -50,6 +50,7 @@ This includes instructions for editing the efo ontology.
 - Include PMIDs for all assertions
 - Follow naming conventions from parent terms
 - always commit in a branch, e.g. issue-NNN
+- don't commit the tools directory or anything from it
 - if there is an existing PR which you started then checkout that branch and continue, rather than starting a new PR (unless you explicitly want to abandon the original PR, e.g. it was on completely the wrong tracks)
 - always make clear detailed commit messages, saying what you did and why
 - always sign your commits `@dragon-ai-agent`
