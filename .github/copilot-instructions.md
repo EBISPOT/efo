@@ -136,7 +136,7 @@ make components/subclasses.owl
 
 - Link back to the issue you are dealing with using the `term_tracker_item`
 - All terms should have definitions, with at least one definition xref, ideally a PMID
-- You can sign terms as `<obo:IAO_0000117>dragon-ai-agent</obo:IAO_0000117>`
+- You can sign terms as `<obo:IAO_0000117>dragon-ai-agent</obo:IAO_0000117>` (without the @ symbol)
 
 ## Relationships
 
