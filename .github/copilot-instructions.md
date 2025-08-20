@@ -25,6 +25,15 @@ This includes instructions for editing the efo ontology.
 - ALWAYS check proposed parent terms for consistency
 
 ## Editors guide
+- When you are finished editing the efo-edit.owl file, please normalize by running:
+
+```bash
+cd src/ontology #If you are not in the ontology folder
+make normalize_src
+```
+
+- For any edition that does not involve obsoleting terms, there is no need to add a 'term tracker item' pointing to the GitHub issue
+- Only add subclass axioms in subclasses.csv when linking terms from different ontologies (e.g., EFO ⊑ OBA), and never if the axiom already exists in EFO or its imports.
 
 ## OBO Guidelines
 - Term ID format: EFO_NNNNNNN (7-digit number)
@@ -42,19 +51,19 @@ This includes instructions for editing the efo ontology.
 - You should cite publications appropriately, e.g. `def: "...." [PMID:nnnn, doi:mmmm]
 
 ## GitHub Contribution Process
-- most requests from users should follow one of two patterns:
-    - you are not confident how to proceed, in which case end with asking a clarifying question (via `gh`)
+- Most requests from users should follow one of two patterns:
+    - You are not confident how to proceed, in which case end with asking a clarifying question (via `gh`)
     - you are confident how to proceed, you make changes, commit on a branch, and open a PR for the user to review
 - Check existing terms before adding new ones
 - For new terms: provide name, definition, place in hierarchy, and references
 - Include PMIDs for all assertions
 - Follow naming conventions from parent terms
-- always commit in a branch, e.g. issue-NNN
-- don't commit the tools directory or anything from it
-- if there is an existing PR which you started then checkout that branch and continue, rather than starting a new PR (unless you explicitly want to abandon the original PR, e.g. it was on completely the wrong tracks)
-- always make clear detailed commit messages, saying what you did and why
-- always sign your commits `@dragon-ai-agent`
-- create PRs using `gh pr create ...`
+- Always commit in a branch, e.g. issue-NNN
+- Don't commit the tools directory or anything from it
+- If there is an existing PR which you started then checkout that branch and continue, rather than starting a new PR (unless you explicitly want to abandon the original PR, e.g. it was on completely the wrong tracks)
+- Always make clear detailed commit messages, saying what you did and why
+- Always sign your commits `@dragon-ai-agent`
+- Create PRs using `gh pr create ...`
 - File PRs with clear descriptions, and sign your PR
 
 ## Handling GitHub issues and requests
@@ -63,8 +72,8 @@ This includes instructions for editing the efo ontology.
 
 ## TROUBLESHOOTING
 
-- if your obo file has syntax errors, you can use `robot convert -vvv` to see full trace
-- use `robot reason` to validate
+- If your obo file has syntax errors, you can use `robot convert -vvv` to see full trace
+- Use `robot reason` to validate
 
 ## How to Obsolete a Term in EFO
 ### Overview
@@ -85,6 +94,8 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
 		- If the current EFO version is X.YY.Z, set efo:obsoleted_in_version to X.(YY+1)
 			Example: 3.80.0 → 3.81
 		- The release version can be found in the 'ExFactor Ontology release notes.txt' file, in line 14 (example: Experimental Factor Ontology version 3.80.0).
+        - Update the ontology version only when a term is newly obsoleted.
+        - If you are editing a term that is already obsoleted (e.g., changing its term_replaced_by target or other metadata), do not update the version.
 	- If the obsolete term has a direct replacement, add the annotation property obo:IAO_0100001 (term replaced by) with the full IRI of the replacement term.
 	- Add efo:reason_for_obsolescence describing the reason and replacement that you will find in the GitHub ticket.
 	- Synonyms and xrefs can be migrated judiciously.
@@ -110,7 +121,7 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
 			- Rebuild the 'sublasses.owl' component:
 
 ```bash
-cd src/ontology #If you are not inn the ontology folder
+cd src/ontology #If you are not in the ontology folder
 make components/subclasses.owl      
 ```
 
@@ -125,7 +136,7 @@ make components/subclasses.owl
 
 - Link back to the issue you are dealing with using the `term_tracker_item`
 - All terms should have definitions, with at least one definition xref, ideally a PMID
-- You can sign terms as `<obo:IAO_0000117>dragon-ai-agent</obo:IAO_0000117>`
+- You can sign terms as `<obo:IAO_0000117>dragon-ai-agent</obo:IAO_0000117>` (without the @ symbol)
 
 ## Relationships
 
