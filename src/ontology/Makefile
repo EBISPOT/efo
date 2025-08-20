@@ -33,6 +33,7 @@ EFOPREPRO = $(BUILDDIR)/efo-edit-release.owl
 EFOFIXER = ../../bin/efo-fixer.jar
 MIRRORDIR=./mirror
 HANCESTROGENERATED= ./build/efo-hancestro
+TMPDIR = tmp
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
@@ -65,6 +66,10 @@ imports/%_bot.owl: mirror/%.owl imports/%_terms.txt
 imports/%_import.owl: imports/%_bot.owl imports/%_terms.txt $(SRC)
 	$(ROBOT) filter -i $< --term-file imports/$*_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
+
+# Normalize source ontology
+normalize_src: $(SRC)
+	$(ROBOT) convert -i $< -f owl -o $(TMPDIR)/normalise && mv $(TMPDIR)/normalise $<
 
 imports/%_terms.txt: iri_dependencies/%_terms.txt iri_dependencies/efo-relations.txt
 	cat $^ | sort | uniq > $@
