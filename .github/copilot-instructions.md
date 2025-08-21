@@ -33,7 +33,10 @@ make normalize_src
 ```
 
 - For any edition that does not involve obsoleting terms, there is no need to add a 'term tracker item' pointing to the GitHub issue
-- Only add subclass axioms in subclasses.csv when linking terms from different ontologies (e.g., EFO ⊑ OBA), and never if the axiom already exists in EFO or its imports.
+- For importing new terms, please read carefully the doumentation in `/docs/Import_terms_from_another_ontology.md`
+- Only add subclass axioms in subclasses.csv when linking terms from different ontologies (e.g., EFO ⊑ OBA), and never if the axiom already exists in EFO or its imports. If the ticket asks for a parent term that is already in the imported ontology, do NOT add the relationship in the `subclasses.csv` file
+  - ALWAYS first import the term before adding it to `subclasses.csv`
+  - Check in the owl file of the ontology that is being updated if the relationship already exist
 
 ## OBO Guidelines
 - Term ID format: EFO_NNNNNNN (7-digit number)
