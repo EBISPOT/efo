@@ -34,6 +34,12 @@ EFOFIXER = ../../bin/efo-fixer.jar
 MIRRORDIR=./mirror
 HANCESTROGENERATED= ./build/efo-hancestro
 TMPDIR = tmp
+
+TODAY ?= $(shell date +%Y-%m-%d)
+OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
+VERSION= $(TODAY)
+ANNOTATE_ONTOLOGY_VERSION = annotate -V $(BASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
+ANNOTATE_CONVERT_FILE = annotate --ontology-iri $(BASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
@@ -64,33 +70,38 @@ imports/%_bot.owl: mirror/%.owl imports/%_terms.txt
 
 # Use ROBOT, driven entirely by terms lists NOT from source ontology
 imports/%_import.owl: imports/%_bot.owl imports/%_terms.txt $(SRC)
-	$(ROBOT) filter -i $< --term-file imports/$*_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
+	$(ROBOT) filter -i $< --term-file imports/$*_terms.txt --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@.tmp.owl \
+		$(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: imports/%_import.owl
 
 # Normalize source ontology
 normalize_src: $(SRC)
-	$(ROBOT) convert -i $< -f owl -o $(TMPDIR)/normalise && mv $(TMPDIR)/normalise $<
+	$(ROBOT) convert -i $< -f ofn -o $(TMPDIR)/normalise && mv $(TMPDIR)/normalise $<
 
 imports/%_terms.txt: iri_dependencies/%_terms.txt iri_dependencies/efo-relations.txt
 	cat $^ | sort | uniq > $@
 
 imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_exclude.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_exclude.txt --term rdfs:comment -o $@
+	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_exclude.txt --term rdfs:comment -o $@.tmp.owl \
+		$(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: imports/mondo_import.owl
 	
 imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt iri_dependencies/hancestro_exclude.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/hancestro_exclude.txt -o $@
+	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/hancestro_exclude.txt -o $@.tmp.owl \
+		$(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: imports/hancestro_import.owl
-	
+    
 imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
-	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/%_import.owl
+	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@.tmp.owl \
+		$(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: imports/oba_import.owl
 
 # Change the parent of imported PR terms to "protein" (ChEBI:36080) to match existing EFO terms, rather than PR:000000001
 # We also need to map to resolve some conflicts with ChEBI and proteins that already exist in EFO so we don't end up with duplicates.
 #
 imports/pr_import.owl: mirror/pr.owl imports/pr_terms.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/pr_terms.txt --method BOT --copy-ontology-annotations true -O $(BASE)/$@ rename --mappings pr_efo_map.tsv -o $@
+	$(ROBOT) extract -i $< -T imports/pr_terms.txt --method BOT --copy-ontology-annotations true -O $(BASE)/$@ rename --mappings pr_efo_map.tsv -o $@.tmp.owl \
+		$(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: imports/pr_import.owl
 
 # ----------------------------------------
@@ -119,7 +130,7 @@ build/preserve-axioms-%.ttl: build/remaining-%.ofn
 	$(ROBOT) query -i $< -c $(SPARQLDIR)/preserve_$*_axioms.sparql $@
 
 build/preserve-axioms-%.owl: build/preserve-axioms-%.ttl
-	$(ROBOT) convert -i $< -f owl -o $@
+	$(ROBOT) convert -i $< -f ofn -o $@
 
 # 2. Dump all axioms from the ontology apart from the set of preserved axioms. 
 # Preserved axioms are extracted using the preserve_xyz_axioms.sparql query (for example xrefs.)
@@ -161,7 +172,7 @@ FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
 FOREIGN_AXIOM_FILES_DIFF=$(patsubst %, qc/diff_efo-%.txt, $(FOREIGN_AXIOMS))
 
 components/subclasses.owl: ../templates/subclasses.csv
-	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --prefix $(ECTOPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
+	$(ROBOT) template --template $<  --format ofn --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --prefix $(ECTOPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/subclasses.owl" -o $@
 
 components/d2p_%.ttl: mirror/%.owl
 	$(ROBOT) query -f ttl -i $< --query $(SPARQLDIR)/d2p-$*.ru $@
