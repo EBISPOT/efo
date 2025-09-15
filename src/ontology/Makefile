@@ -89,8 +89,8 @@ imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
 # Change the parent of imported PR terms to "protein" (ChEBI:36080) to match existing EFO terms, rather than PR:000000001
 # We also need to map to resolve some conflicts with ChEBI and proteins that already exist in EFO so we don't end up with duplicates.
 #
-imports/pr_import.owl: mirror/pr.owl imports/pr_terms.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/pr_terms.txt --method BOT --copy-ontology-annotations true -O $(BASE)/$@ rename --mappings pr_efo_map.tsv -o $@
+imports/pr_import.owl: mirror/pr.owl imports/pr_terms.txt iri_dependencies/pr_exclude.txt $(SRC)
+	$(ROBOT) extract -i $< -T imports/pr_terms.txt --method BOT --copy-ontology-annotations true -O $(BASE)/$@ rename --mappings pr_efo_map.tsv remove -T iri_dependencies/pr_exclude.txt -o $@
 .PRECIOUS: imports/pr_import.owl
 
 # ----------------------------------------
