@@ -65,13 +65,13 @@ make normalize_src
 - Don't commit the tools directory or anything from it
 - If there is an existing PR which you started then checkout that branch and continue, rather than starting a new PR (unless you explicitly want to abandon the original PR, e.g. it was on completely the wrong tracks)
 - Always make clear detailed commit messages, saying what you did and why
-- Always sign your commits `@dragon-ai-agent`
+- Always sign your commits `@AI agent`
 - Create PRs using `gh pr create ...`
 - File PRs with clear descriptions, and sign your PR
 
 ## Handling GitHub issues and requests
 - Use `gh` to read and write issues/PRs
-- Sign all commits and PRs as `@dragon-ai-agent`
+- Sign all commits and PRs as `@AI agent`
 
 ## TROUBLESHOOTING
 
@@ -139,7 +139,7 @@ make components/subclasses.owl
 
 - Link back to the issue you are dealing with using the `term_tracker_item`
 - All terms should have definitions, with at least one definition xref, ideally a PMID
-- You can sign terms as `<obo:IAO_0000117>dragon-ai-agent</obo:IAO_0000117>` (without the @ symbol)
+- You can sign terms as `<obo:IAO_0000117>AI agent</obo:IAO_0000117>` (without the @ symbol)
 
 ## Relationships
 
