@@ -49,19 +49,19 @@ To regenerate the import file for a single ontology, run:
 
 ```bash
 cd src/ontology
-make [ontology]_import.owl
+make imports/[ontology]_import.owl
 ```
 
 For example, to update UBERON:
 
 ```bash
-make uberon_import.owl
+make imports/uberon_import.owl
 ```
 
 If you encounter issues (e.g., caching, stale builds), you can force the rebuild:
 
 ```bash
-make uberon_import.owl -B
+make imports/uberon_import.owl -B
 ```
 
 ### 4. Refresh All Imports (Optional)
@@ -75,7 +75,7 @@ make all_imports -B
 
 ## What Happens When You Run `make`
 
-Running `make [ontology]_import.owl` will:
+Running `make imports/[ontology]_import.owl` will:
 
 1. Read the list of IRIs from `iri_dependencies/[ontology]_terms.txt`
 2. Resolve those IRIs using the updated mirrors
