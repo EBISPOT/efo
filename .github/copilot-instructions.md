@@ -53,6 +53,7 @@ docs to act correctly. Always prefer the full docs for more detail.
 - Update local ontology mirrors before regenerating imports:
 
 ```bash
+cd src/ontology
 ./get_mirrors.sh
 ```
 
@@ -260,8 +261,7 @@ These should follow genus-differentia form, and the text definition should mirro
 The reasoner can find the most specific `is_a`, so it's OK to leave this off.
 
 ## When using OLS MCP for term IDs
-1. Always verify retrieved term IDs with a second query
-1. Provide the complete URL used to retrieve the term
-1. Include the raw response when referencing a term ID
+1. NEVER guess or interpolate IDs - only use exact matches from OLS
+1. If you provide a term ID retrieved from a query, always verify with a second query
 1. If uncertain about a term ID, explicitly state "This ID needs verification"
-1. Never guess or interpolate IDs - only use exact matches from OLS
+1. If you have retrieved multiple terms IDs to be imported, query all the IDs into OLS and check that the ID matches with the term you were looking (in label or synonym)
