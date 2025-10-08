@@ -39,6 +39,67 @@ make normalize_src
 1. Reference relevant sections in your response
 1. Follow the documented workflow exactly
 
+### Essential import workflow (embedded)
+The instructions below are a concise, copy-pasteable subset of
+`docs/Import_terms_from_another_ontology.md`. They are included here so
+the agent has the minimal steps inlined and does not need to open the
+docs to act correctly. Always prefer the full docs for more detail.
+
+- Edit the IRI dependency lists, never the generated imports:
+    - Edit files in `src/ontology/iri_dependencies/` (e.g. `mondo_terms.txt`, `cl_terms.txt`).
+    - Each line must be the full IRI of the term to import.
+    - DO NOT edit anything in `src/ontology/imports/` (these are generated).
+
+- Update local ontology mirrors before regenerating imports:
+
+```bash
+./get_mirrors.sh
+```
+
+- Regenerate a single import (from `src/ontology`):
+
+```bash
+cd src/ontology
+make imports/[ontology]_import.owl -B
+# example: make imports/uberon_import.owl
+```
+
+- Regenerate all imports (if needed):
+
+```bash
+make all_imports -B
+```
+
+- What the make target does:
+    - Reads `iri_dependencies/[ontology]_terms.txt`, resolves IRIs using mirrors and writes a generated `.owl` into `src/ontology/imports/` and a backup copy of the term list.
+
+- Fix dangling imported terms (no asserted parent):
+    1. Add a row to `src/templates/subclasses.csv` with `ID_OF_IMPORTED_TERM,ID_OF_PARENT_TERM_IN_EFO`.
+    2. Rebuild the component:
+
+```bash
+cd src/ontology
+make components/subclasses.owl
+```
+
+Notes:
+- Always run `./get_mirrors.sh` before `make` when updating imports.
+- Do not edit generated `.owl` files directly. Make changes in the `iri_dependencies/` text files or `src/templates/subclasses.csv` as appropriate.
+
+### Minimal verification checklist the agent must perform when updating imports
+- Confirm the IRI you add is valid (correct prefix and IRI syntax).
+- Verify the term exists in the local mirror (or OLS) after `./get_mirrors.sh`.
+- When adding subclass assertions, ensure the parent exists in EFO or its imports and that the relationship is not already present upstream.
+
+### Potential pitfalls and mitigations (flagged for future agents)
+- Stale mirrors: forgetting `./get_mirrors.sh` causes unresolvable IRIs. Mitigation: always run mirrors update and include it in PR description when imports change.
+- Editing generated files: modifying files under `src/ontology/imports/` will be overwritten and is discouraged. Mitigation: only edit `src/ontology/iri_dependencies/*.txt` or `src/templates/subclasses.csv`.
+- Missing parent relationships: imported terms can become dangling. Mitigation: prefer using `subclasses.csv` to assert parentage and run `make components/subclasses.owl`.
+- Caching/build issues: use `-B` to force rebuild when results look stale.
+- Incorrect subclass assertions: do not add subclass axioms for relationships that already exist in the source ontology or in EFO imports; check source OWL first.
+
+If you need the full, unabridged procedure, consult `docs/Import_terms_from_another_ontology.md` (this file must remain authoritative).
+
 - Only add subclass axioms in subclasses.csv when linking terms from different ontologies (e.g., EFO ⊑ OBA), and never if the axiom already exists in EFO or its imports. If the ticket asks for a parent term that is already in the imported ontology, do NOT add the relationship in the `subclasses.csv` file
   - ALWAYS first import the term before adding it to `subclasses.csv`
   - Check in the owl file of the ontology that is being updated if the relationship already exist
