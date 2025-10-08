@@ -33,7 +33,12 @@ make normalize_src
 ```
 
 - For any edition that does not involve obsoleting terms, there is no need to add a 'term tracker item' pointing to the GitHub issue
-- For importing new terms, please read carefully the doumentation in `/docs/Import_terms_from_another_ontology.md`
+
+### Before answering import-related questions
+1. REQUIRED: Read the full content of docs/Import_terms_from_another_ontology.md
+1. Reference relevant sections in your response
+1. Follow the documented workflow exactly
+
 - Only add subclass axioms in subclasses.csv when linking terms from different ontologies (e.g., EFO ⊑ OBA), and never if the axiom already exists in EFO or its imports. If the ticket asks for a parent term that is already in the imported ontology, do NOT add the relationship in the `subclasses.csv` file
   - ALWAYS first import the term before adding it to `subclasses.csv`
   - Check in the owl file of the ontology that is being updated if the relationship already exist
@@ -193,3 +198,9 @@ These should follow genus-differentia form, and the text definition should mirro
 
 The reasoner can find the most specific `is_a`, so it's OK to leave this off.
 
+## When using OLS MCP for term IDs
+1. Always verify retrieved term IDs with a second query
+1. Provide the complete URL used to retrieve the term
+1. Include the raw response when referencing a term ID
+1. If uncertain about a term ID, explicitly state "This ID needs verification"
+1. Never guess or interpolate IDs - only use exact matches from OLS
