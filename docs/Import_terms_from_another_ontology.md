@@ -93,7 +93,7 @@ This system ensures reproducibility, traceability, and prevents accidental loss 
 - Use `-B` with `make` if the system appears not to be updating the files.
 - Review changes using `git diff` to ensure that the intended terms were updated.
 
-## Example Workflow
+### Example Workflow
 
 ```bash
 # Step 1: Update local mirrors
@@ -113,6 +113,24 @@ To update all imports:
 cd src/ontology
 make all_imports -B
 ```
+
+## Importing terms from Mondo
+
+If you update MONDO terms, regenerating the raw import alone is not enough. EFO uses the consolidated component mondo_efo_import.owl, so after rebuilding the MONDO import you must also rebuild that component.
+
+Example:
+
+```bash
+cd src/ontology
+
+# regenerate the MONDO import (force rebuild if needed)
+make imports/mondo_import.owl -B
+
+# then regenerate the EFO component that EFO actually imports
+make components/mondo_efo_import.owl -B
+```
+
+Always run the second command to ensure newly imported MONDO terms appear in EFO.
 
 ## Fixing Dangling Imported Terms
 
