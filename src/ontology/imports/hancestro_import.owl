@@ -699,6 +699,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:BFO_0000179>quality</obo:BFO_0000179>
         <obo:BFO_0000180>Quality</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">the ambient temperature of this portion of air</obo:IAO_0000112>
@@ -865,7 +871,7 @@ BEB, GIH, ITU, PJL and STU populations.</obo:IAO_0000115>
         <obo:IAO_0000115>Includes individuals who either self-report or are described by authors as Hispanic, Latino, Latin American or one of the sub-populations from this region. This category includes individuals with known admixture of primarily European, African and Native American ancestries, though some may have also a degree of Asian (e.g. Peru). We also note that the levels of admixture vary depending on the country, with Caribbean countries carrying higher levels of African admixture when compared to South American countries, for example. This category also includes individuals who genetically cluster with reference populations from this region, for example 1000 Genomes and/or HapMap CLM, MXL, PEL and PUR populations</obo:IAO_0000115>
         <obo:IAO_0000117>Jackie MacArthur</obo:IAO_0000117>
         <obo:IAO_0000117>Joannella Morales</obo:IAO_0000117>
-        <oboInOwl:hasExactSynonym>Latin or Admised American</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Latin or Admixed American</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Mestizo</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Pardo</oboInOwl:hasExactSynonym>
         <rdfs:comment>Synonyms include historical and contemporary terms in use in parts of Canada, Alaska and USA by some Indigenous populations, local and national governmental institutions</rdfs:comment>
