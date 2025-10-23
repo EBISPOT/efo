@@ -132,13 +132,11 @@ If you need the full, unabridged procedure, consult `docs/Import_terms_from_anot
 - Don't commit the tools directory or anything from it
 - If there is an existing PR which you started then checkout that branch and continue, rather than starting a new PR (unless you explicitly want to abandon the original PR, e.g. it was on completely the wrong tracks)
 - Always make clear detailed commit messages, saying what you did and why
-- Always sign your commits `@AI agent`
 - Create PRs using `gh pr create ...`
-- File PRs with clear descriptions, and sign your PR
+- File PRs with clear descriptions
 
 ## Handling GitHub issues and requests
 - Use `gh` to read and write issues/PRs
-- Sign all commits and PRs as `@AI agent`
 
 ## TROUBLESHOOTING
 
