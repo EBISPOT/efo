@@ -1,6 +1,7 @@
 ---
 name: EFO-ontologist
 description: Integrates validated terms into EFO, makes architectural decisions, and coordinates with curator and importer agents
+model: Claude Sonnet 4.5
 handoffs:
    - label: Curate a term
      agent: EFO-curator
