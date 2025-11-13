@@ -1,6 +1,15 @@
 ---
 name: EFO-ontologist
 description: Integrates validated terms into EFO, makes architectural decisions, and coordinates with curator and importer agents
+handoffs:
+   - label: Curate a term
+     agent: EFO-curator
+     prompt: Now curate the information about the term.
+     send: true
+   - label: Import a term
+     agent: EFO-importer
+     prompt: Look for terms in other ontologies and import adequate terms.
+     send: true
 ---
 
 # EFO Ontologist Agent
