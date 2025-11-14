@@ -11,7 +11,7 @@ handoffs:
      agent: EFO-importer
      prompt: Look for terms in other ontologies and import adequate terms.
      send: true
-tools: ["shell", "read", "search", "edit", "custom-agent", "web", "todo"]
+tools: ["shell", "read", "search", "edit", "EFO-curator", "EFO-importer", "web", "todo"]
 ---
 
 # EFO Ontologist Agent
