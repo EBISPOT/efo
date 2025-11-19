@@ -263,3 +263,212 @@ The reasoner can find the most specific `is_a`, so it's OK to leave this off.
 1. If you provide a term ID retrieved from a query, always verify with a second query
 1. If uncertain about a term ID, explicitly state "This ID needs verification"
 1. If you have retrieved multiple terms IDs to be imported, query all the IDs into OLS and check that the ID matches with the term you were looking (in label or synonym)
+
+
+
+## Multi-Agent Coordination
+
+This section describes how to coordinate work across the three specialized EFO agents. The workflow orchestration is managed by these instructions, not by individual agents.
+
+### Agent Roles and Capabilities
+
+#### EFO-curator
+**Purpose**: Literature research, evidence gathering, and term validation  
+**Calls when**: You need to analyze publications, extract definitions, validate scientific accuracy  
+**Inputs to provide**: PMIDs/DOIs, issue context, specific questions  
+**Outputs expected**: Curated definitions, parent term candidates, synonyms, cross-references (PMIDs/DOIs)
+
+#### EFO-importer  
+**Purpose**: External term imports and IRI management  
+**Calls when**: You need to import terms from other ontologies (MONDO, UBERON, CL, etc.)  
+**Inputs to provide**: Term names or IDs to import, target ontology  
+**Outputs expected**: Updated iri_dependencies files, regenerated imports, verified IRIs
+
+#### EFO-ontologist
+**Purpose**: Direct OWL/XML editing in efo-edit.owl  
+**Calls when**: You need to add/edit/obsolete terms, add relationships, update metadata or search terms in efo-edit.owl
+**Inputs to provide**: Complete term specifications (ID, label, definition, parent, xrefs)  
+**Outputs expected**: Updated efo-edit.owl, normalized file, git commits
+
+### Common Workflow Patterns
+
+#### Pattern 1: New Term Request (NTR) with PMID
+
+```
+Step 1: Call @EFO-curator
+  Task: Analyze PMID:12345678 for issue #XXXX and extract new term details
+  Extract: Definition, parent candidates, synonyms, related terms
+  Context: [brief issue summary]
+  
+Step 2: Review curator output
+  Validate: Definition quality, parent term appropriateness
+  Decision: Accept, modify, or request clarification
+  
+Step 3a: If imports needed → Call @EFO-importer
+  Task: Import [list of terms] from [ontology]
+  Verify: Terms exist in source, relationships are correct
+  
+Step 3b: If no imports → Skip to Step 4
+
+Step 4: Call @EFO-ontologist
+  Task: Add new term to efo-edit.owl
+  Provide: Complete specification from Steps 1-3
+  Include: ID (EFO_092xxxx), label, definition with xrefs, parent(s), synonyms
+```
+
+#### Pattern 2: Import-Only Request
+
+```
+Step 1: Call @EFO-importer
+  Task: Import MONDO:1234567 (disease name) for issue #XXXX
+  Verify: Term exists, check if parent assertion needed
+  
+Step 2: If dangling term → Call @EFO-ontologist
+  Task: Add subclass assertion in subclasses.csv
+  Specify: Imported term → EFO parent
+  Note: Only if relationship doesn't exist upstream
+```
+
+#### Pattern 3: Obsolete Term with Replacement
+
+```
+Step 1: Verify replacement term exists
+  Check: Use grep/obo-grep.pl in efo-edit.owl
+  If missing: Follow Pattern 1 or 2 to add it first
+  
+Step 2: Call @EFO-ontologist
+  Task: Obsolete EFO_XXXXXXX with replacement EFO_YYYYYYY
+  Provide: Issue number, reason for obsolescence
+  Ensure: All references updated (efo-edit.owl + subclasses.csv)
+```
+
+#### Pattern 4: Complex Curation (multiple PMIDs, conflicting sources)
+
+```
+Step 1: Call @EFO-curator
+  Task: Reconcile conflicting definitions from PMID:AAA, PMID:BBB, PMID:CCC
+  Request: Evidence-based recommendation with confidence assessment
+  Context: [describe conflict]
+  
+Step 2: Review and decide
+  Options: Accept curator recommendation, request additional research, consult user
+  
+Step 3-4: Follow Pattern 1 steps 3-4
+```
+
+### Handoff State Tracking
+
+When delegating to an agent, always provide:
+
+1. **Issue context**: GitHub issue number and brief summary
+2. **Current state**: What's been done, what's pending
+3. **Specific task**: Clear, actionable request
+4. **Expected output**: What you need back to continue
+5. **Dependencies**: Terms that must exist first, files that must be updated
+
+Example handoff:
+```
+@EFO-curator Please analyze PMID:30215383 for issue #2546
+
+Context: Adding bronchiectasis endotype terms
+Current state: Parent term MONDO:0004822 exists in EFO
+Task: Extract definitions and parent candidates for:
+  - neutrophilic bronchiectasis
+  - eosinophilic bronchiectasis
+  - mixed granulocytic bronchiectasis
+  - paucigranulocytic bronchiectasis
+
+Expected output:
+  - Definition for each term (with confidence)
+  - Parent term recommendation (likely all → MONDO:0004822)
+  - Synonyms and cross-references
+  - Any additional PMIDs for validation
+
+Dependencies: None, proceed with analysis
+```
+
+### Decision Points and Routing
+
+**When to handle directly vs delegate:**
+
+| Scenario | Action |
+|----------|--------|
+| Simple grep/search query | Handle directly with tools |
+| Term exists, just needs minor edit | Call @EFO-ontologist |
+| PMID mentioned but no definition provided | Call @EFO-curator first |
+| Import needed | Call @EFO-importer |
+| Complex multi-step workflow | Orchestrate sequence yourself |
+| User asks "what should I do?" | Analyze and recommend, don't auto-execute |
+
+**Quality checks before handing off:**
+
+- [ ] Issue has been read (`gh issue view`)
+- [ ] Related issues checked if referenced
+- [ ] Existing terms searched (don't duplicate)
+- [ ] PMIDs/DOIs identified and accessible
+- [ ] Parent terms verified to exist
+- [ ] Import dependencies identified
+
+### Error Handling and Recovery
+
+**If an agent returns incomplete output:**
+1. Provide specific feedback on what's missing
+2. Re-request with clarification
+3. Don't proceed to next step until resolved
+
+**If an agent can't complete the task:**
+1. Review the constraint (e.g., import term doesn't exist)
+2. Adjust plan (e.g., pick different term or add NTR)
+3. Inform user if fundamental blocker
+
+**If conflicts arise between agents:**
+1. Curator says X, but ontologist finds Y already exists
+2. Pause workflow
+3. Reconcile with user input
+
+### Multi-Step Workflow Example
+
+**Complete NTR with import and curation:**
+
+```bash
+# Step 1: Understand request
+gh issue view 2546
+# Identified: Need 4 new bronchiectasis endotype terms, PMID:30215383
+
+# Step 2: Delegate curation
+@EFO-curator analyze PMID:30215383 for bronchiectasis endotypes
+# Wait for: definitions, parents, synonyms, confidence
+
+# Step 3: Review curation output
+# Decision: Definitions look good, parent is MONDO:0004822
+
+# Step 4: Check if parent needs import
+grep -i "MONDO:0004822" src/ontology/efo-edit.owl
+# Result: Already imported, no action needed
+
+# Step 5: Generate term IDs
+grep "EFO_092" src/ontology/efo-edit.owl | tail -n 1
+# Result: Last ID is EFO_0920123, use 0920124-0920127
+
+# Step 6: Delegate OWL editing
+@EFO-ontologist add 4 new terms:
+  EFO_0920124 neutrophilic bronchiectasis
+  EFO_0920125 eosinophilic bronchiectasis  
+  EFO_0920126 mixed granulocytic bronchiectasis
+  EFO_0920127 paucigranulocytic bronchiectasis
+[provide full specifications from curator]
+
+# Step 7: Create PR
+git checkout -b issue-2546
+# EFO-ontologist commits changes
+gh pr create --title "Add bronchiectasis endotype terms" --body "Fixes #2546..."
+```
+
+### Notes on Agent Limitations
+
+- **No agent orchestrates other agents** - that's the job of these instructions
+- **Agents don't make architectural decisions** - escalate to user when unclear
+- **Agents stay in their lane** - curator doesn't edit OWL, ontologist doesn't curate literature
+- **Serial not parallel** - complete one agent's task fully before moving to next
+
+This coordination model ensures clear separation of concerns while maintaining workflow coherence.

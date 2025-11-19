@@ -2,7 +2,7 @@
 
 This directory contains the specifications for three specialized agents that work together to manage the Experimental Factor Ontology (EFO).
 
-## Agent Architecture v1.2
+## Agent Architecture v1.1
 
 ### Three-Agent System with Workflow Orchestration
 
@@ -12,24 +12,24 @@ This directory contains the specifications for three specialized agents that wor
                     └────────┬────────┘
                              │
                     ┌────────▼────────────┐
-                    │copilot-instructions│ ◄─── Workflow Orchestrator
-                    │  (Decision Logic)  │      & Decision Maker
+                    │copilot-instructions │ ◄─── Workflow Orchestrator
+                    │  (Decision Logic)   │      & Decision Maker
                     └────┬───────┬────────┘
                          │       │
-         ┌───────────────┼───────┼───────────────┐
-         │               │       │               │
-    ┌────▼─────┐  ┌─────▼───┐ ┌─▼──────────┐   │
-    │   EFO-   │  │   EFO-  │ │    EFO-    │   │
-    │ontologist│  │ curator │ │  importer  │   │
+         ┌───────────────┼───────┼──────────────┐
+         │               │       │              │
+    ┌────▼─────┐  ┌────-─▼─-─┐ ┌─▼──────────┐   │
+    │   EFO-   │  │   EFO-   │ │    EFO-    │   │
+    │ontologist│  │ curator  │ │  importer  │   │
     │(Editor)  │  │(Research)│ │  (Import)  │   │
-    └──────────┘  └─────────┘ └────────────┘   │
+    └──────────┘  └────────-─┘ └────────────┘   │
          │               │            │         │
          └───────────────┴────────────┴─────────┘
                          │
                     Shared Context
 ```
 
-**Key Changes in v1.2**:
+**Key Changes in v1.1**:
 - Workflow orchestration moved to `copilot-instructions.md`
 - Decision logic (ontology placement, agent routing) centralized
 - Agents are now narrow specialists with clear boundaries
@@ -37,7 +37,7 @@ This directory contains the specifications for three specialized agents that wor
 
 ## The Agents
 
-### 1. EFO-ontologist (Specialist Editor) v1.2
+### 1. EFO-ontologist (Specialist Editor) v1.1
 **File**: `.github/agents/EFO-ontologist.md`
 
 **Role**: OWL/XML editing specialist
@@ -49,10 +49,10 @@ This directory contains the specifications for three specialized agents that wor
 - Maintains ontology consistency
 
 **What it does NOT do**:
-- ❌ Literature research (→ EFO-curator)
-- ❌ External term imports (→ EFO-importer)
-- ❌ Workflow orchestration (→ copilot-instructions)
-- ❌ Architectural decisions (→ copilot-instructions)
+- Literature research (→ EFO-curator)
+- External term imports (→ EFO-importer)
+- Workflow orchestration (→ copilot-instructions)
+- Architectural decisions (→ copilot-instructions)
 
 **When to invoke**: 
 - Add/edit/obsolete terms in efo-edit.owl
@@ -209,7 +209,7 @@ Or directly:
 |-----------|-----------|---------|----------|
 | Literature search | ❌ | ✅ | ❌ |
 | OWL/XML editing | ✅ | ❌ | ❌ |
-| OLS search | Limited | ✅ | ✅ |
+| OLS search | Limited | Limited | ✅ |
 | Definition validation | ❌ | ✅ | ❌ |
 | Parent term import | ❌ | ❌ | ✅ |
 | Ontology placement advisory | ❌ | ✅ | ❌ |

@@ -1,6 +1,6 @@
-# EFO Agent Handoff Protocol v1.2
+# EFO Agent Handoff Protocol v1.1
 
-This document defines the interaction patterns, communication protocols, and handoff procedures for the EFO agent system. In v1.2, workflow orchestration is handled by `copilot-instructions.md`, with agents functioning as narrow specialists.
+This document defines the interaction patterns, communication protocols, and handoff procedures for the EFO agent system. In v1.1, workflow orchestration is handled by `copilot-instructions.md`, with agents functioning as narrow specialists.
 
 ## Agent Roles Summary
 
@@ -11,7 +11,7 @@ This document defines the interaction patterns, communication protocols, and han
 | **EFO-curator** | Researcher & validator | Research requests | Validation reports with literature evidence |
 | **EFO-importer** | External term importer | Term labels, ontology hints | Imported IRIs in dependency files |
 
-**Key Change in v1.2**: No agent orchestrates others. Copilot-instructions coordinates all workflows.
+**Key Change in v1.1**: No agent orchestrates others. Copilot-instructions coordinates all workflows.
 
 ## Communication Protocol
 
@@ -447,7 +447,7 @@ Will [verify term with user / try alternative ontology /
 
 ---
 
-## Multi-Agent Workflows v1.2
+## Multi-Agent Workflows v1.1
 
 ### Complex New Term (All Three Agents + Instructions)
 

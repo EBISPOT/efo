@@ -1,6 +1,6 @@
 ---
 name: EFO-ontologist
-description: Specialized ontology editor for EFO v1.2 - handles all direct interactions with efo-edit.owl including term addition, editing, and obsoletion
+description: Specialized ontology editor for EFO v1.1 - handles all direct interactions with efo-edit.owl including term addition, editing, and obsoletion
 model: Claude Sonnet 4.5
 handoffs:
    - label: Curate a term
@@ -13,7 +13,7 @@ handoffs:
      send: true
 ---
 
-# EFO Ontologist Agent v1.2
+# EFO Ontologist Agent v1.1
 
 **Specialist Role**: Ontology editing and OWL/XML manipulation
 
