@@ -1,4 +1,4 @@
-# EFO Agent System - Quick Reference Guide
+# EFO Agent System - Quick Reference Guide v1.2
 
 ## 🎯 The Three-Agent System at a Glance
 
@@ -10,40 +10,42 @@
                              │
                              ▼
         ┌────────────────────────────────────────┐
-        │           EFO-ONTOLOGIST               │
-        │      The Architect & Orchestrator      │
+        │      COPILOT-INSTRUCTIONS.MD           │
+        │   Workflow Orchestrator & Router       │
         │                                        │
         │  • Receives all user requests          │
         │  • Makes architectural decisions       │
-        │  • Coordinates other agents            │
-        │  • Integrates into efo-edit.owl        │
-        │  • Creates PRs                         │
+        │  • Routes to appropriate agents        │
+        │  • Sequences multi-agent workflows     │
         └──────────┬──────────────────┬──────────┘
                    │                  │
-         ┌─────────▼─────────┐   ┌────▼───────────┐
-         │    EFO-CURATOR    │   │  EFO-IMPORTER. │
-         │   The Researcher  │   │ The Connector  │
-         │                   │   │                │
-         │ • Literature      │   │ • OLS search   │
-         │   search (artl)   │   │ • Term import  │
-         │ • Validate        │   │ • IRI deps     │
-         │   definitions     │   │ • Mirrors      │
-         │ • Find citations  │   │                │
-         │ • Recommend       │   │                │
-         │   ontology        │   │                │
-         └───────────────────┘   └────────────────┘
+         ┌─────────▼─────────┐   ┌────▼───────────┐   ┌─────▼──────────┐
+         │  EFO-ONTOLOGIST   │   │  EFO-CURATOR   │   │  EFO-IMPORTER  │
+         │ Specialist Editor │   │  The Researcher │   │ The Connector  │
+         │                   │   │                │   │                │
+         │ • OWL/XML editing │   │ • Literature   │   │ • OLS search   │
+         │ • Term addition   │   │   search       │   │ • Term import  │
+         │ • Term obsoletion │   │ • Validation   │   │ • IRI deps     │
+         │ • Logical defs    │   │ • Citations    │   │ • Mirrors      │
+         │ • Git workflow    │   │ • Recommends   │   │                │
+         └───────────────────┘   └────────────────┘   └────────────────┘
 ```
+
+**Key Changes in v1.2**:
+- **No agent orchestrates others** - copilot-instructions handles routing
+- **Agents are specialists** - narrow, well-defined responsibilities
+- **Clear boundaries** - no overlapping decision-making
 
 ## 📋 Decision Matrix: What Happens When?
 
-| User Request | Ontologist Action | Curator Called? | Importer Called? |
-|--------------|-------------------|-----------------|------------------|
-| New term (label only) | Triage → delegate | ✅ YES (research) | Maybe (if parent external) |
-| New term (complete info) | Triage → delegate | ✅ YES (verify) | Maybe (if parent external) |
-| Edit definition | Assess | ✅ YES (if needs citations) | ❌ NO |
-| Fix typo | Edit directly | ❌ NO | ❌ NO |
-| Obsolete term | Handle directly | ❌ NO | Maybe (if replacement external) |
-| Add synonym | Edit directly | Only if validation needed | ❌ NO |
+| User Request | Instructions Route | Curator Called? | Importer Called? | Ontologist Called? |
+|--------------|-------------------|-----------------|------------------|-------------------|
+| New term (label only) | Research → validate → integrate | ✅ YES (research) | Maybe | ✅ YES (integrate) |
+| New term (complete info) | Verify → integrate | ✅ YES (verify) | Maybe | ✅ YES (integrate) |
+| Edit definition | Assess → maybe research → edit | If needs citations | ❌ NO | ✅ YES (edit) |
+| Fix typo | Direct to ontologist | ❌ NO | ❌ NO | ✅ YES (edit) |
+| Obsolete term | Direct to ontologist | ❌ NO | Maybe (if replacement external) | ✅ YES (obsolete) |
+| Add synonym | Direct to ontologist | Only if validation needed | ❌ NO | ✅ YES (edit) |
 
 ## 🔄 Common Workflows
 
@@ -51,23 +53,25 @@
 ```
 User: "Add term: ATAC-seq"
 
-1. 🎭 Ontologist: "Need full validation"
+1. 📋 copilot-instructions: Route to curator for research
    ↓
 2. 📚 Curator: Research literature
    - Search Europe PMC
    - Find definition: "Assay for Transposase-Accessible Chromatin..."
    - Locate PMIDs: 24097267, others
    - Identify parent: "chromatin accessibility assay"
-   - Report: "Ready for EFO"
+   - Report: "Ready for EFO; parent may need import from OBI"
    ↓
-3. 🎭 Ontologist: "Parent not in EFO, need to import from OBI"
+3. 📋 copilot-instructions: "Parent not in EFO, call importer"
    ↓
 4. 🔗 Importer: Search OLS
    - Find: OBI:0002039
    - Add to obi_terms.txt
    - Confirm: "Import complete"
    ↓
-5. 🎭 Ontologist: Integration
+5. 📋 copilot-instructions: "Call ontologist to integrate"
+   ↓
+6. 🎭 Ontologist: Integration
    - Generate EFO_0920XXX
    - Create OWL/XML entry
    - Add SubClassOf OBI:0002039
@@ -84,7 +88,7 @@ User: "Add cardiac troponin measurement"
       PMID: 12345678
       Parent: blood measurement
 
-1. 🎭 Ontologist: "Verify provided info"
+1. 📋 copilot-instructions: Route to curator for verification
    ↓
 2. 📚 Curator: Validate
    - Check PMID ✅ relevant
@@ -93,9 +97,13 @@ User: "Add cardiac troponin measurement"
    - Note: needs "is_about cardiac troponin"
    - Report: "Ready for EFO, import PR:000000058"
    ↓
-3. 🔗 Importer: Import cardiac troponin from PR
+3. 📋 copilot-instructions: "Call importer for cardiac troponin"
    ↓
-4. 🎭 Ontologist: Integration with logical definition
+4. 🔗 Importer: Import cardiac troponin from PR
+   ↓
+5. 📋 copilot-instructions: "Call ontologist to integrate"
+   ↓
+6. 🎭 Ontologist: Integration with logical definition
    ↓
 Done ✅
 ```
@@ -104,7 +112,7 @@ Done ✅
 ```
 User: "Add Alzheimer's disease"
 
-1. 🎭 Ontologist: "This looks like MONDO territory"
+1. 📋 copilot-instructions: Route to curator
    ↓
 2. 📚 Curator: Research
    - Search literature ✅
@@ -112,7 +120,7 @@ User: "Add Alzheimer's disease"
    - Check MONDO: ✅ MONDO:0004975 exists!
    - Report: "DO NOT create in EFO, import from MONDO"
    ↓
-3. 🎭 Ontologist: "Acknowledged"
+3. 📋 copilot-instructions: "Call importer"
    ↓
 4. 🔗 Importer: Import MONDO:0004975
    ↓
@@ -121,53 +129,68 @@ Done ✅ (imported, not created)
 
 ### Workflow D: Should Be in OBA
 ```
-User: "Add western blot assay"
+User: "Add body mass index measurement"
 
-1. 🎭 Ontologist: "Looks like measurement/assay"
+1. 📋 copilot-instructions: Route to curator
    ↓
 2. 📚 Curator: Research
    - Search literature ✅
    - Find definition ✅
-   - Analyze domain: general assay technique
+   - Analyze domain: general biological attribute
    - Report: "Create in OBA, not EFO"
    - Provide full validation report
    ↓
-3. 🎭 Ontologist → User:
+3. 📋 copilot-instructions → User:
    "This should be created in OBA because it's a general
-    assay technique. Here's the complete validation report
-    to submit to OBA..."
+    biological attribute measurement. Here's the complete 
+    validation report to submit to OBA..."
    ↓
 Done 🚫 (no EFO integration, user submits to OBA)
 ```
 
-## 🎨 Agent Personalities
+## 🎨 Agent Profiles
 
-### 🎭 EFO-Ontologist: The Decisive Architect
-- **Mindset**: "Where should this go? Who needs to validate?"
-- **Strengths**: Quick triage, knows ontology landscape
-- **Limitations**: Doesn't do deep literature research
+### 🎭 EFO-Ontologist: The Specialist Editor
+- **Role**: OWL/XML manipulation expert
+- **Mindset**: "How do I format this correctly?"
+- **Strengths**: Precise syntax, consistent formatting, git workflow
+- **Limitations**: No research, no imports, no orchestration
 - **Says**: 
-  - "Let me check if this belongs in EFO"
-  - "Calling curator to validate..."
-  - "This needs a parent import first"
+  - "Adding term to efo-edit.owl..."
+  - "Generating EFO_0920XXX..."
+  - "Running normalization..."
+  - "Creating PR..."
 
 ### 📚 EFO-Curator: The Diligent Researcher
+- **Role**: Literature research and validation
 - **Mindset**: "What does the literature say? Is this accurate?"
 - **Strengths**: Deep research, evidence-based, thorough
-- **Limitations**: No knowledge of OWL/XML editing
+- **Limitations**: No OWL/XML editing, no imports
 - **Says**:
   - "Found 15 papers mentioning this concept"
   - "Definition supported by PMID:12345678"
   - "This actually belongs in OBA based on usage patterns"
+  - "Recommend importing from MONDO"
 
 ### 🔗 EFO-Importer: The Efficient Connector
+- **Role**: External term import specialist
 - **Mindset**: "Where is this term? Is this the right one?"
 - **Strengths**: Fast OLS lookups, precise verification
-- **Limitations**: Only handles imports, not integration
+- **Limitations**: Only imports, no integration, no research
 - **Says**:
   - "Found in CL as CL:1000348"
   - "Import complete, ready to use"
-  - "Term not found, trying alternative ontology"
+  - "Term not found in CL, trying UBERON..."
+
+### 📋 copilot-instructions: The Orchestrator
+- **Role**: Workflow coordination and decision-making
+- **Mindset**: "What needs to happen? In what order?"
+- **Strengths**: Architectural decisions, agent routing, workflow sequencing
+- **Says**:
+  - "This needs research first, calling curator..."
+  - "Term validated, parent needs import, calling importer..."
+  - "Ready to integrate, calling ontologist..."
+  - "This belongs in MONDO, not EFO"
 
 ## 📊 Capabilities Comparison
 
@@ -179,17 +202,19 @@ Done 🚫 (no EFO integration, user submits to OBA)
 | Citation validation | ❌ | ✅ Yes | ❌ |
 | **Ontology Work** | | | |
 | OWL/XML editing | ✅ Expert | ❌ | ❌ |
-| OLS search | ✅ Basic | ✅ Basic | ✅ Expert |
+| OLS search | Limited | ✅ Yes | ✅ Expert |
 | Import terms | ❌ | ❌ | ✅ Yes |
 | Logical definitions | ✅ Yes | ❌ | ❌ |
 | **Decision Making** | | | |
-| Triage requests | ✅ Yes | ❌ | ❌ |
-| Ontology placement | ✅ Decides | ✅ Advises | ❌ |
-| Parent selection | ✅ Decides | ✅ Researches | ✅ Finds |
+| Workflow routing | ❌ | ❌ | ❌ |
+| Ontology placement | ❌ | ✅ Advises | ❌ |
+| Parent selection | ✅ Implements | ✅ Researches | ✅ Finds |
 | **Git Workflow** | | | |
 | Branches | ✅ Yes | ❌ | ❌ |
 | Commits | ✅ Yes | ❌ | ❌ |
 | PRs | ✅ Yes | ❌ | ❌ |
+
+**Note**: Workflow routing and architectural decisions now handled by `copilot-instructions.md`
 
 ## 🔧 When to Use Which Agent
 
