@@ -12,8 +12,11 @@ Based on the new requirement to focus only on chemical terms (excluding vaccines
 
 ## Implementation Status
 
-### ✅ Completed (14 terms)
-Successfully added `has_primary_input` (RO:0004009) axioms to 14 EFO terms with CHEBI entities that were already imported:
+### ✅ COMPLETED (35 terms total)
+
+**Final implementation complete!** Successfully added `has_primary_input` (RO:0004009) axioms to 35 EFO terms:
+- 14 terms completed initially (with already-imported CHEBI entities)
+- 21 terms completed after regenerating CHEBI import (with newly imported entities)
 
 | EFO ID | EFO Label | CHEBI ID | CHEBI Label |
 |--------|-----------|----------|-------------|
@@ -129,3 +132,30 @@ To regenerate this table at any time:
 ```bash
 grep -B 5 "RO_0004009" src/ontology/efo-edit.owl | grep -E "(EFO_|CHEBI_)"
 ```
+
+## Final Results (After CHEBI Import Regeneration)
+
+### Complete List of 35 Terms with has_primary_input Axioms
+
+See complete table in PR description or at `/tmp/has_primary_input_complete_table.csv`
+
+### Breakdown
+- ✅ **35 terms completed** - all have has_primary_input axioms
+- ❌ **1 term not found** - CHEBI_36809 (tricyclic antidepressant) doesn't exist in CHEBI
+- 🚫 **13 terms unavailable** - biologics not in CHEBI (monoclonal antibodies, proteins without the newly found ones)
+- 🚫 **37 terms excluded** - non-chemical terms (vaccines, diets, therapies, procedures)
+
+### Changes Made
+1. Downloaded CHEBI mirror (773MB) to `src/ontology/mirror/chebi.owl`
+2. Regenerated CHEBI import with 22 new terms (imports/chebi_import.owl)
+3. Added has_primary_input axioms to 21 additional terms in efo-edit.owl
+4. Total of 35 terms now have complete RO:0004009 axioms
+
+### Commits
+- Initial: a9b944d - Added axioms for 14 terms
+- Update: 1d1c484 - Added 23 CHEBI IRIs to dependencies
+- Final: 1502347 - Downloaded mirror, regenerated import, added 21 more axioms
+
+## Task Status: ✅ COMPLETE
+
+All work requested in issue #2826 has been successfully completed.
