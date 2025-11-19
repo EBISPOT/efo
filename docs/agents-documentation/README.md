@@ -2,77 +2,99 @@
 
 This directory contains the specifications for three specialized agents that work together to manage the Experimental Factor Ontology (EFO).
 
-## Agent Architecture
+## Agent Architecture v1.1
 
-###  Three-Agent System
+### Three-Agent System with Workflow Orchestration
 
 ```
                     ┌─────────────────┐
                     │  User Request   │
                     └────────┬────────┘
                              │
-                    ┌────────▼────────┐
-                    │ EFO-ontologist  │ ◄─── Orchestrator
-                    │  (Integrator)   │
-                    └────┬───────┬────┘
+                    ┌────────▼────────────┐
+                    │copilot-instructions │ ◄─── Workflow Orchestrator
+                    │  (Decision Logic)   │      & Decision Maker
+                    └────┬───────┬────────┘
                          │       │
-              ┌──────────▼─┐   ┌─▼──────────┐
-              │EFO-curator │   │EFO-importer│
-              │(Researcher)│   │  (Import)  │
-              └────────────┘   └────────────┘
+         ┌───────────────┼───────┼──────────────┐
+         │               │       │              │
+    ┌────▼─────┐  ┌────-─▼─-─┐ ┌─▼──────────┐   │
+    │   EFO-   │  │   EFO-   │ │    EFO-    │   │
+    │ontologist│  │ curator  │ │  importer  │   │
+    │(Editor)  │  │(Research)│ │  (Import)  │   │
+    └──────────┘  └────────-─┘ └────────────┘   │
+         │               │            │         │
+         └───────────────┴────────────┴─────────┘
+                         │
+                    Shared Context
 ```
+
+**Key Changes in v1.1**:
+- Workflow orchestration moved to `copilot-instructions.md`
+- Decision logic (ontology placement, agent routing) centralized
+- Agents are now narrow specialists with clear boundaries
+- No agent-to-agent orchestration - all coordinated by instructions
 
 ## The Agents
 
-### 1. EFO-ontologist (Orchestrator)
-**File**: `EFO-ontologist.md`
+### 1. EFO-ontologist (Specialist Editor) v1.1
+**File**: `.github/agents/EFO-ontologist.md`
 
-**Role**: Main orchestrator and integration specialist
-- First point of contact for all term requests
-- Makes architectural decisions (EFO vs external ontologies)
-- Coordinates curator and importer agents
-- Handles OWL/XML editing and term integration
-- Manages obsoletion and simple edits directly
+**Role**: OWL/XML editing specialist
+- Handles all direct manipulation of `efo-edit.owl`
+- Adds new terms (with pre-validated information)
+- Edits existing terms
+- Obsoletes terms following proper workflow
+- Manages logical definitions and relationships
+- Maintains ontology consistency
+
+**What it does NOT do**:
+- Literature research (→ EFO-curator)
+- External term imports (→ EFO-importer)
+- Workflow orchestration (→ copilot-instructions)
+- Architectural decisions (→ copilot-instructions)
 
 **When to invoke**: 
-- Any new term request
-- Term edits or obsoletions
-- Architectural questions
-- General ontology work
+- Add/edit/obsolete terms in efo-edit.owl
+- Fix OWL/XML syntax issues
+- Update relationships or metadata
+
+**Prerequisites**:
+- New terms need pre-validated information
+- External terms must be pre-imported
 
 **Key capabilities**:
-- Triage and workflow routing
 - OWL/XML formatting
-- Git workflow (branches, commits, PRs)
-- Quality assurance
-- Cross-ontology decisions
+- Term integration
+- Logical definitions
+- Relationship management
+- Git workflow
 
-### 2. EFO-curator (The Researcher)
-**File**: `EFO-curator.md`
+### 2. EFO-curator (Research Specialist)
+**File**: `.github/agents/EFO-curator.md`
 
-**Role**: Literature research and validation specialist
+**Role**: Literature research and validation
 - Deep literature searches using artl-mcp
-- Validates all term components (label, definition, xrefs, parent)
+- Validates term components (label, definition, xrefs, parent)
 - Generates comprehensive validation reports
-- Recommends appropriate ontology placement
-- Domain-specific expertise (diseases, measurements, cells, etc.)
+- Provides evidence-based recommendations
+- Domain-specific expertise
 
-**When to invoke** (by ontologist):
-- New term with missing information
-- New term needing validation
-- Definition changes requiring literature support
-- Unclear parent term relationships
-- Ontology placement questions
+**When to invoke**:
+- New term needs research/validation
+- Definition requires literature support
+- Parent term relationship unclear
+- Ontology placement needs research
 
 **Key capabilities**:
-- Europe PMC literature search
-- Full-text analysis
+- Europe PMC full-text search
 - Citation validation
+- Evidence gathering
 - Domain expertise
-- Evidence-based recommendations
+- Structured reporting
 
-### 3. EFO-importer (The Connector)
-**File**: `EFO-importer.md`
+### 3. EFO-importer (Import Specialist)
+**File**: `.github/agents/EFO-importer.md`
 
 **Role**: External ontology term importer
 - Searches OLS for terms in external ontologies
@@ -80,16 +102,34 @@ This directory contains the specifications for three specialized agents that wor
 - Adds IRIs to dependency files
 - Updates mirrors and regenerates imports
 
-**When to invoke** (by ontologist):
+**When to invoke**:
 - Parent term exists in external ontology
 - Need to import related terms
 - Cross-ontology relationships needed
 
 **Key capabilities**:
-- OLS search (mcp_ols4)
+- OLS search
 - IRI validation
 - Dependency file management
-- Import generation (VS Code only)
+- Import generation
+
+## Workflow Orchestration
+
+**Location**: `.github/copilot-instructions.md`
+
+The copilot instructions file now handles:
+- Initial request triage
+- Ontology placement decisions (EFO vs MONDO vs OBA vs CL, etc.)
+- Agent invocation routing
+- Workflow sequencing
+- Quality assurance checks
+
+**Decision patterns**:
+- Standard diseases → MONDO import
+- General measurements → OBA consideration
+- Experimental assays → EFO
+- Cell types → CL import
+- Anatomical entities → UBERON import
 
 ## Handoff Protocol
 
@@ -103,21 +143,19 @@ Defines:
 - State tracking
 
 **Key patterns**:
-1. **New term (minimal info)**: Ontologist → Curator → Ontologist
-2. **New term (complete info)**: Ontologist → Curator (verify) → Ontologist
-3. **Import needed**: Ontologist → Importer → Ontologist
-4. **External ontology**: Ontologist → Curator → User (no integration)
+1. **New term (needs research)**: copilot-instructions → Curator → Ontologist
+2. **New term (pre-validated)**: copilot-instructions → Ontologist
+3. **Import needed**: copilot-instructions → Importer → Ontologist
+4. **External ontology**: Curator → User (no integration)
 5. **Simple edit**: Ontologist only
 
 ## Quick Start
 
 ### For New Term Requests
 
-As a user, you only need to interact with **EFO-ontologist**:
+For basic requests, describe what you need:
 
 ```markdown
-@EFO-ontologist
-
 Please add a new term:
 - Label: [term name]
 - Definition: [if you have one]
@@ -125,30 +163,44 @@ Please add a new term:
 - References: [if you have any]
 ```
 
-The ontologist will:
-1. Assess what you've provided
-2. Call curator to fill gaps or validate
-3. Call importer if external terms needed
-4. Integrate into EFO or recommend external ontology
+The workflow will:
+1. Assess what you've provided (copilot-instructions)
+2. Call @EFO-curator to fill gaps or validate
+3. Call @EFO-importer if external terms needed
+4. Call @EFO-ontologist to integrate into EFO
 5. Create a PR for review
+
+Or invoke agents directly:
+
+```markdown
+@EFO-curator please research [term name]
+@EFO-importer please import [term name] from MONDO
+@EFO-ontologist please add this validated term to efo-edit.owl
+```
 
 ### For Editing Existing Terms
 
 ```markdown
-@EFO-ontologist
-
 Please edit [term name] (EFO:XXXXXXX):
 - [Describe the change needed]
+```
+
+Or directly:
+```markdown
+@EFO-ontologist edit EFO:XXXXXXX to update the definition
 ```
 
 ### For Obsoleting Terms
 
 ```markdown
-@EFO-ontologist
-
 Please obsolete [term name] (EFO:XXXXXXX)
 Replacement: [term name] (EFO:YYYYYYY)
 Reason: [why obsoleting]
+```
+
+Or directly:
+```markdown
+@EFO-ontologist obsolete EFO:XXXXXXX, replaced by EFO:YYYYYYY
 ```
 
 ## Agent Capabilities Matrix
@@ -157,12 +209,15 @@ Reason: [why obsoleting]
 |-----------|-----------|---------|----------|
 | Literature search | ❌ | ✅ | ❌ |
 | OWL/XML editing | ✅ | ❌ | ❌ |
-| OLS search | ✅ | ✅ | ✅ |
+| OLS search | Limited | Limited | ✅ |
 | Definition validation | ❌ | ✅ | ❌ |
 | Parent term import | ❌ | ❌ | ✅ |
-| Ontology placement decision | ✅ | Advisory | ❌ |
+| Ontology placement advisory | ❌ | ✅ | ❌ |
 | Git workflow | ✅ | ❌ | ❌ |
 | Term integration | ✅ | ❌ | ❌ |
+| Workflow orchestration | ❌ | ❌ | ❌ |
+
+**Note**: Workflow orchestration and architectural decisions now handled by `copilot-instructions.md`
 
 ## Tools Used
 
@@ -194,37 +249,41 @@ Used by: **All agents**
 ```
 User: "Add term: ATAC-seq"
     ↓
-Ontologist: Triage → Call curator
+copilot-instructions: Triage → Call curator for research
     ↓
 Curator: Research literature → Generate report
     ↓ 
-Ontologist: Review → Parent needs import → Call importer
+copilot-instructions: Decide parent needs import → Call importer
     ↓
 Importer: Import parent from OBI
     ↓
-Ontologist: Integrate term → Create PR
+copilot-instructions: Call ontologist to integrate
+    ↓
+Ontologist: Add to efo-edit.owl → Create PR
 ```
 
 ### Example 2: Complete Information
 ```
 User: "Add cardiac measurement with definition, PMID, parent"
     ↓
-Ontologist: Triage → Call curator (verify)
+copilot-instructions: Triage → Call curator to verify
     ↓
-Curator: Verify citations → Validate parent → Confirm
+Curator: Verify citations → Validate parent → Confirm EFO placement
     ↓
-Ontologist: Integrate term → Create PR
+copilot-instructions: Call ontologist to integrate
+    ↓
+Ontologist: Add term → Create PR
 ```
 
 ### Example 3: Should Be External
 ```
 User: "Add general disease term"
     ↓
-Ontologist: Triage → Call curator
+copilot-instructions: Triage → Call curator for research
     ↓
-Curator: Research → Recommend MONDO
+Curator: Research → Recommend MONDO (not EFO)
     ↓
-Ontologist: Acknowledge → Inform user
+copilot-instructions: Acknowledge → Inform user (no integration)
     ↓
 User: Submit to MONDO with curator's report
 ```

@@ -1,20 +1,23 @@
-# EFO Agent Handoff Protocol
+# EFO Agent Handoff Protocol v1.1
 
-This document defines the interaction patterns, communication protocols, and handoff procedures between the three EFO agents: **EFO-ontologist**, **EFO-curator**, and **EFO-importer**.
+This document defines the interaction patterns, communication protocols, and handoff procedures for the EFO agent system. In v1.1, workflow orchestration is handled by `copilot-instructions.md`, with agents functioning as narrow specialists.
 
 ## Agent Roles Summary
 
 | Agent | Primary Role | Input | Output |
 |-------|-------------|-------|--------|
-| **EFO-ontologist** | Orchestrator & integrator | User requests, term specifications | Integrated terms, PRs, or recommendations |
-| **EFO-curator** | Researcher & validator | Term metadata (partial/complete) | Validation reports with literature evidence |
+| **copilot-instructions** | Orchestrator & decision-maker | User requests | Agent routing, workflow sequencing |
+| **EFO-ontologist** | OWL/XML editor | Validated term specifications | Integrated terms in efo-edit.owl, PRs |
+| **EFO-curator** | Researcher & validator | Research requests | Validation reports with literature evidence |
 | **EFO-importer** | External term importer | Term labels, ontology hints | Imported IRIs in dependency files |
+
+**Key Change in v1.1**: No agent orchestrates others. Copilot-instructions coordinates all workflows.
 
 ## Communication Protocol
 
 ### Agent Invocation Syntax
 
-When one agent needs to call another:
+When copilot-instructions routes to an agent:
 
 ```markdown
 @[agent-name] [task description]
@@ -29,10 +32,10 @@ Expected output:
 
 ### Response Format
 
-Responding agents should structure replies as:
+Agents should structure replies to maintain context:
 
 ```markdown
-@[calling-agent-name] - RESPONSE
+[Agent Name] - [STATUS]
 
 [Summary of findings]
 
@@ -43,18 +46,18 @@ Responding agents should structure replies as:
 ✓ Complete / ⚠️ Partial / ✗ Failed
 
 ## Recommendations
-[Next steps or additional actions needed]
+[Next steps if any]
 ```
 
 ## Handoff Patterns
 
-### Pattern 1: Ontologist → Curator (New Term, Minimal Info)
+### Pattern 1: Instructions → Curator (Research Request)
 
-**Scenario**: User provides only a label, or incomplete information
+**Scenario**: User provides term that needs research or validation
 
-**Ontologist initiates**:
+**Instructions routes to curator**:
 ```markdown
-@EFO-curator - VALIDATION REQUEST
+@EFO-curator - RESEARCH REQUEST
 
 Term: [label]
 Source: Issue #NNNN
@@ -70,17 +73,17 @@ Required actions:
 - [ ] Find authoritative citations (PMIDs/DOIs)
 - [ ] Identify and validate parent term(s)
 - [ ] Search for synonyms in literature
-- [ ] Determine appropriate ontology placement
+- [ ] Recommend ontology placement (EFO vs external)
 
 Expected output:
 - Complete validation report
-- Ontology placement recommendation (EFO vs external)
+- Ontology placement recommendation
 - Literature evidence for all claims
 ```
 
 **Curator responds**:
 ```markdown
-@EFO-ontologist - CURATION COMPLETE
+EFO-CURATOR - CURATION COMPLETE
 
 ## Status
 ✓ Validation complete
@@ -98,21 +101,23 @@ Expected output:
 ## Detailed Report
 [Full markdown report as specified in EFO-curator.md]
 
-## Next Steps for Ontologist
-[Specific recommendations]
+## Next Steps
+[If parent needs import, recommend calling importer]
+[If ready for EFO, confirm integration readiness]
 ```
 
-**Ontologist decision**:
-- If curator recommends external ontology → Inform user, provide report
-- If curator approves EFO → Check if parent needs importing → Proceed to integration
+**Instructions decision**:
+- If curator recommends external ontology → Inform user, provide report (no integration)
+- If parent needs importing → Route to importer
+- If ready for EFO → Route to ontologist
 
 ---
 
-### Pattern 2: Ontologist → Curator (Validation Only)
+### Pattern 2: Instructions → Curator (Validation Only)
 
 **Scenario**: User provides complete information, but it needs verification
 
-**Ontologist initiates**:
+**Instructions routes to curator**:
 ```markdown
 @EFO-curator - VERIFICATION REQUEST
 
@@ -140,7 +145,7 @@ Expected output:
 
 **Curator responds**:
 ```markdown
-@EFO-ontologist - VERIFICATION COMPLETE
+EFO-CURATOR - VERIFICATION COMPLETE
 
 ## Status
 ✓ Verified with modifications / ✓ Verified as-is / ⚠️ Issues found
@@ -176,23 +181,24 @@ Status: ✓ Validated / ⚠️ Issues found
 High / Medium / Low - [explanation]
 ```
 
-**Ontologist decision**:
-- Apply corrections from curator
-- Proceed with integration or recommend external ontology
+**Instructions decision**:
+- If parent needs importing → Route to importer
+- If ready for integration → Route to ontologist
+- If external ontology recommended → Inform user
 
 ---
 
-### Pattern 3: Ontologist → Importer → Ontologist
+### Pattern 3: Instructions → Importer → Ontologist
 
 **Scenario**: Parent term or related term needs importing from external ontology
 
-**Ontologist initiates**:
+**Instructions routes to importer**:
 ```markdown
 @EFO-importer - IMPORT REQUEST
 
 Term to import: [term label]
 Expected source ontology: [CL / MONDO / UBERON / ChEBI / GO / HP / OBI / other]
-Reason: [parent term for EFO:XXXXXXX / relationship requirement]
+Reason: [parent term for new EFO term / relationship requirement]
 
 Context:
 [Why this import is needed]
@@ -205,7 +211,7 @@ Expected output:
 
 **Importer responds**:
 ```markdown
-@EFO-ontologist - IMPORT COMPLETE
+EFO-IMPORTER - IMPORT COMPLETE
 
 ## Status
 ✓ Import successful / ⚠️ Partial / ✗ Failed
@@ -229,20 +235,70 @@ Term can now be referenced in efo-edit.owl using IRI:
 [full IRI]
 ```
 
-**Ontologist proceeds**:
-- Use the provided IRI in term relationships
-- Check if subclasses.csv entry needed
-- Continue with integration
+**Instructions routes to ontologist**:
+- Provides validated term info + imported parent IRI
+- Ontologist uses IRI in relationships
+- Checks if subclasses.csv entry needed
+- Continues with integration
 
 ---
 
-### Pattern 4: Curator → Ontologist (Unsolicited Recommendation)
+### Pattern 4: Instructions → Ontologist (Direct Integration)
+
+**Scenario**: Simple edit, obsoletion, or pre-validated term ready for integration
+
+**Instructions routes to ontologist**:
+```markdown
+@EFO-ontologist - INTEGRATION REQUEST
+
+Task: [Add new term / Edit term / Obsolete term]
+Source: Issue #NNNN
+
+Term specification:
+- Label: [term label]
+- Definition: [validated definition with xrefs]
+- Parent: [parent term with IRI]
+- ID: [EFO:XXXXXXX or generate new]
+- Synonyms: [if any]
+- Logical definition: [if applicable]
+- Relationships: [part_of, is_about, etc. if applicable]
+
+Additional notes:
+[Any special requirements]
+```
+
+**Ontologist responds**:
+```markdown
+EFO-ONTOLOGIST - INTEGRATION COMPLETE
+
+## Status
+✓ Integration complete
+
+## Actions Taken
+- [Generated EFO:XXXXXXX / Edited EFO:XXXXXXX / Obsoleted EFO:XXXXXXX]
+- Added to efo-edit.owl at line [NNNN]
+- Relationships: [list]
+- Normalized successfully
+- Committed to branch: issue-NNNN
+- PR created: #MMMM
+
+## Term Details
+- Label: [term label]
+- ID: EFO:XXXXXXX
+- Parent: [parent label] ([PARENT:ID])
+
+Ready for review.
+```
+
+---
+
+### Pattern 5: Curator Reports External Ontology
 
 **Scenario**: During research, curator discovers term should be in external ontology
 
 **Curator reports**:
 ```markdown
-@EFO-ontologist - EXTERNAL ONTOLOGY DETECTED
+EFO-CURATOR - EXTERNAL ONTOLOGY RECOMMENDATION
 
 ## Alert
 Term should NOT be created in EFO
@@ -257,34 +313,27 @@ Reason: [detailed explanation]
 ## Report
 [Full validation report follows]
 [User can use this to submit to external ontology]
-
-## Suggested User Communication
-"Thank you for your term request. Based on our research, this term 
-would be more appropriately created in [ONTOLOGY] because [reason]. 
-We've prepared a complete validation report below that you can use 
-to submit a new term request to [ONTOLOGY]..."
 ```
 
-**Ontologist responds**:
+**Instructions responds**:
 ```markdown
-@EFO-curator - ACKNOWLEDGED
+ACKNOWLEDGED - No EFO integration
 
-✓ External ontology recommendation accepted
-✓ Will inform user with your complete report
-✓ Closing workflow without integration
+Will inform user with curator's complete report.
+Workflow closed without integration.
 
 Thank you for the thorough research.
 ```
 
 ---
 
-### Pattern 5: Curator → Ontologist (Import Recommendation)
+### Pattern 6: Curator Recommends Import
 
 **Scenario**: Curator identifies that proposed parent term should be imported
 
 **Curator reports**:
 ```markdown
-@EFO-ontologist - IMPORT REQUIRED
+EFO-CURATOR - IMPORT REQUIRED
 
 ## Curation Status
 ✓ Term validated for EFO integration
@@ -292,6 +341,7 @@ Thank you for the thorough research.
 ## Import Required
 Term: [parent term label]
 Source: [ontology]
+ID: [ONTOLOGY:ID]
 Reason: Appropriate parent not in EFO, found in [ontology]
 
 ## Evidence
@@ -300,22 +350,17 @@ Definition: [definition]
 Relationship: [proposed EFO term] SubClassOf [external term]
 
 ## Recommendation
-1. Call @EFO-importer to import [external term]
-2. Use as parent for [EFO term]
-3. Proceed with integration
+Import [external term] before integration
 
 ## Full Report
 [Validation report follows]
 ```
 
-**Ontologist proceeds**:
+**Instructions responds**:
 ```markdown
-@EFO-curator - ACKNOWLEDGED
+ACKNOWLEDGED - Import required
 
-✓ Will import required parent term
-✓ Will proceed with integration after import
-
-Calling @EFO-importer...
+Routing to importer, then will proceed to ontologist.
 ```
 
 ---
@@ -326,7 +371,7 @@ Calling @EFO-importer...
 
 **Curator reports**:
 ```markdown
-@EFO-ontologist - INSUFFICIENT EVIDENCE
+EFO-CURATOR - INSUFFICIENT EVIDENCE
 
 ## Status
 ⚠️ Incomplete validation
@@ -351,6 +396,14 @@ Calling @EFO-importer...
 [What would help complete validation]
 ```
 
+**Instructions responds**:
+```markdown
+ACKNOWLEDGED - Need user clarification
+
+Will request additional information from user.
+Workflow paused pending clarification.
+```
+
 **Ontologist response**:
 ```markdown
 @EFO-curator - ACKNOWLEDGED
@@ -365,7 +418,7 @@ Specific questions to ask:
 
 **Importer reports**:
 ```markdown
-@EFO-ontologist - IMPORT FAILED
+EFO-IMPORTER - IMPORT FAILED
 
 ## Status
 ✗ Term not found
@@ -384,62 +437,44 @@ Specific questions to ask:
 [Any potentially related terms found]
 ```
 
-**Ontologist responds**:
+**Instructions responds**:
 ```markdown
-@EFO-importer - ACKNOWLEDGED
+ACKNOWLEDGED - Import failed
 
-Will [verify term name with user / search alternative ontologies / 
-      recommend external term creation]
-```
-
-### When Ontologist Rejects Curator Recommendation
-
-**Scenario**: Ontologist has additional context that changes decision
-
-**Ontologist responds**:
-```markdown
-@EFO-curator - RECOMMENDATION OVERRIDE
-
-## Decision
-Proceeding with [alternative action] instead of recommended [action]
-
-## Justification
-[Detailed explanation of why override is appropriate]
-[Additional context not available to curator]
-
-## Acknowledgment
-Thank you for the thorough research. Your report will be [used for X]
-
-## Next Steps
-[What will actually happen]
+Will [verify term with user / try alternative ontology / 
+     recommend external term creation first]
 ```
 
 ---
 
-## Multi-Agent Workflows
+## Multi-Agent Workflows v1.1
 
-### Complex New Term (All Three Agents)
+### Complex New Term (All Three Agents + Instructions)
 
 ```
 User Request
     ↓
-[EFO-ontologist] - Triage
+[copilot-instructions] - Triage
     ↓
-[EFO-ontologist] → @EFO-curator - "Validate this term"
+[copilot-instructions] → @EFO-curator - "Research and validate"
     ↓
 [EFO-curator] - Research & validate
     ↓
-[EFO-curator] → @EFO-ontologist - "Ready for EFO, but needs parent import"
+[EFO-curator] → report - "Ready for EFO, parent needs import"
     ↓
-[EFO-ontologist] → @EFO-importer - "Import parent term"
+[copilot-instructions] - Assess → Route to importer
+    ↓
+[copilot-instructions] → @EFO-importer - "Import parent term"
     ↓
 [EFO-importer] - Import parent
     ↓
-[EFO-importer] → @EFO-ontologist - "Import complete"
+[EFO-importer] → report - "Import complete"
     ↓
-[EFO-ontologist] - Integrate term
+[copilot-instructions] - Route to ontologist with full spec
     ↓
-[EFO-ontologist] - Create PR
+[copilot-instructions] → @EFO-ontologist - "Integrate term"
+    ↓
+[EFO-ontologist] - Integrate term, create PR
     ↓
 User Review
 ```
