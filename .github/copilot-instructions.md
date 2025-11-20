@@ -51,7 +51,7 @@ make normalize_src
 
 **When you identify an import need:**
 1. Stop your workflow
-2. Call @EFO-importer with the term label and expected ontology
+2. Call @EFO-importer with the term label/s and expected ontology
 3. Wait for import confirmation
 4. Then proceed with your task using the imported term
 

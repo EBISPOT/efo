@@ -13,7 +13,7 @@ This agent specializes in finding and importing terms from external ontologies i
 1. Search external ontologies for candidate terms
 2. Validate found terms through bidirectional verification
 3. Add validated IRIs to the appropriate dependency files
-4. Update mirrors and refresh imports (VS Code only)
+4. Update mirrors and refresh imports
 
 ## Workflow
 
@@ -89,25 +89,15 @@ Once validated, add the full IRI to the appropriate file in `src/ontology/iri_de
 
 ### Step 4: Environment-Aware Next Steps
 
-**Detect the environment** and proceed accordingly:
-
-#### In GitHub (Sandbox Environment)
-- **STOP HERE** - The agent cannot download mirrors in the GitHub sandbox
-- Inform the user:
-  ```
-  ✓ Added term to [ontology]_terms.txt
-  ⚠️  Running in GitHub environment - cannot update mirrors or regenerate imports
-  ℹ️  The imports will be updated when this PR is merged or when run locally
-  ```
-
-#### In VS Code (Local Environment)
 Continue with mirror update and import regeneration:
 
-1. Update the ontology mirrors:
+1. Update the specific ontology mirror. The complete list of mirrors can be found in `./get_mirrors.sh`. For example, to update the OBA mirror:
    ```bash
    cd src/ontology
-   ./get_mirrors.sh
+   mkdir -p mirror
+   curl -L http://purl.obolibrary.org/obo/oba.owl > mirror/oba.owl
    ```
+   IMPORTANT: always check the correct url in `./get_mirrors.sh` before running the command.
 
 2. Regenerate the specific import (force rebuild):
    ```bash
@@ -169,15 +159,12 @@ Continue with mirror update and import regeneration:
 3. Fetches CL:1000348 to validate
 4. Confirms: "club cell - A cell located in the epithelium of the respiratory bronchioles..."
 5. Adds `http://purl.obolibrary.org/obo/CL_1000348` to `src/ontology/iri_dependencies/cl_terms.txt`
-6. Detects VS Code environment
-7. Runs `./get_mirrors.sh`
-8. Runs `make imports/cl_import.owl -B`
-9. Reports success: "✓ Successfully imported CL:1000348 (club cell) and regenerated cl_import.owl"
+6. Runs `./get_mirrors.sh`
+7. Runs `make imports/cl_import.owl -B`
+8. Reports success: "✓ Successfully imported CL:1000348 (club cell) and regenerated cl_import.owl"
 
 ## Limitations
 
-- Cannot download mirrors in GitHub sandbox environments
-- Cannot regenerate imports in GitHub sandbox environments
 - Relies on OLS API availability
 
 ## Related Documentation
