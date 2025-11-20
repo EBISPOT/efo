@@ -234,6 +234,7 @@ make components/subclasses.owl
 **All terms** must have at least one `is_a` (SubClassOf to a named class). This can be explicit or implicit via a logical definition.  
 - Many terms in this ontology have `part_of` relationships to UBERON terms where applicable.  
 
+
 ### Additional domain-specific expectations 
 - **Disease terms** should have a `has_disease_location` relationship to an appropriate anatomical entity.  
   - This relationship may be inherited from a parent or ancestor term; explicit addition is not required if inherited.  
@@ -413,6 +414,45 @@ Expected output:
 Dependencies: None, proceed with analysis
 ```
 
+### Preconditions for Adding New Terms (MANDATORY)
+
+Before requesting @EFO-ontologist to edit `src/ontology/efo-edit.owl` for **any new term**, the following must be present:
+
+**Required from @EFO-curator:**
+- Curator output attached: definitions, PMIDs/DOIs, synonyms, suggested parent(s), and confidence assessment
+- OR explicit curator sign-off: `@EFO-curator: SIGN-OFF`
+
+**Required from @EFO-importer (if applicable):**
+- Import completion confirmed for any external terms needed
+
+**Required term specification:**
+- Label
+- Textual definition with xref(s)
+- Parent term(s)
+- Synonyms (if any)
+- Logical definitions and relationships (if applicable)
+
+**EFO-ontologist MUST verify these preconditions.** If any are missing, refuse to proceed and respond with:
+
+```
+Cannot proceed: missing [specific items].
+Please call @EFO-curator for [what's needed]
+OR call @EFO-importer for [what import is needed]
+```
+
+**Example refusal:**
+```
+Cannot proceed: missing curator sign-off and definitions for new term 'ATAC-seq peak intensity'.
+Please call @EFO-curator to research and validate this term first.
+```
+
+**For PRs adding new terms, include this checklist:**
+```markdown
+- [ ] Curator output attached or @EFO-curator sign-off provided
+- [ ] @EFO-importer confirmed necessary imports (if any)
+- [ ] Complete term spec provided (label, definition, parent(s), synonyms)
+```
+
 ### Decision Points and Routing
 
 **When to handle directly vs delegate:**
@@ -423,6 +463,7 @@ Dependencies: None, proceed with analysis
 | Term exists, just needs minor edit | Call @EFO-ontologist |
 | PMID mentioned but no definition provided | Call @EFO-curator first |
 | **ANY import needed** | **ALWAYS call @EFO-importer** |
+| **New term request** | **ALWAYS call @EFO-curator first, then @EFO-ontologist** |
 | Complex multi-step workflow | Orchestrate sequence yourself |
 | User asks "what should I do?" | Analyze and recommend, don't auto-execute |
 
