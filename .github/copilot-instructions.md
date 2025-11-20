@@ -34,16 +34,35 @@ make normalize_src
 
 - For any edition that does not involve obsoleting terms, there is no need to add a 'term tracker item' pointing to the GitHub issue
 
-### Before answering import-related questions
-1. REQUIRED: Read the full content of docs/Import_terms_from_another_ontology.md
-1. Reference relevant sections in your response
-1. Follow the documented workflow exactly
+## Import Policy - CRITICAL
 
-### Essential import workflow (embedded)
-The instructions below are a concise, copy-pasteable subset of
-`docs/Import_terms_from_another_ontology.md`. They are included here so
-the agent has the minimal steps inlined and does not need to open the
-docs to act correctly. Always prefer the full docs for more detail.
+**ALL IMPORTS MUST BE DELEGATED TO @EFO-importer**
+
+- **NEVER perform imports yourself** - always call @EFO-importer
+- This applies to:
+  - Parent terms from external ontologies (MONDO, UBERON, CL, etc.)
+  - Terms needed for relationships (is_about, part_of, etc.)
+  - Any term from outside EFO that needs to be referenced
+- The EFO-importer agent has specialized knowledge of:
+  - OLS search and verification
+  - IRI dependency management
+  - Mirror updates and import regeneration
+  - Bidirectional term validation
+
+**When you identify an import need:**
+1. Stop your workflow
+2. Call @EFO-importer with the term label/s and expected ontology
+3. Wait for import confirmation
+4. Then proceed with your task using the imported term
+
+### Before answering import-related questions
+1. REQUIRED: Delegate to @EFO-importer for actual import operations
+2. You may read docs/Import_terms_from_another_ontology.md for context
+3. Never execute import commands yourself
+
+### Essential import workflow (for reference only - delegate to @EFO-importer)
+The instructions below are for understanding the import process.
+**DO NOT execute these yourself - always call @EFO-importer instead.**
 
 - Edit the IRI dependency lists, never the generated imports:
     - Edit files in `src/ontology/iri_dependencies/` (e.g. `mondo_terms.txt`, `cl_terms.txt`).
@@ -87,12 +106,14 @@ Notes:
 - Always run `./get_mirrors.sh` before `make` when updating imports.
 - Do not edit generated `.owl` files directly. Make changes in the `iri_dependencies/` text files or `src/templates/subclasses.csv` as appropriate.
 
-### Minimal verification checklist the agent must perform when updating imports
+**REMINDER: The above workflow is for reference only. Always delegate actual import operations to @EFO-importer.**
+
+### Minimal verification checklist (for @EFO-importer)
 - Confirm the IRI you add is valid (correct prefix and IRI syntax).
 - Verify the term exists in the local mirror (or OLS) after `./get_mirrors.sh`.
 - When adding subclass assertions, ensure the parent exists in EFO or its imports and that the relationship is not already present upstream.
 
-### Potential pitfalls and mitigations (flagged for future agents)
+### Potential pitfalls (for @EFO-importer)
 - Stale mirrors: forgetting `./get_mirrors.sh` causes unresolvable IRIs. Mitigation: always run mirrors update and include it in PR description when imports change.
 - Editing generated files: modifying files under `src/ontology/imports/` will be overwritten and is discouraged. Mitigation: only edit `src/ontology/iri_dependencies/*.txt` or `src/templates/subclasses.csv`.
 - Missing parent relationships: imported terms can become dangling. Mitigation: prefer using `subclasses.csv` to assert parentage and run `make components/subclasses.owl`.
@@ -101,8 +122,10 @@ Notes:
 
 If you need the full, unabridged procedure, consult `docs/Import_terms_from_another_ontology.md` (this file must remain authoritative).
 
+**CRITICAL: Do not perform imports yourself. Always call @EFO-importer for any import operation.**
+
 - Only add subclass axioms in subclasses.csv when linking terms from different ontologies (e.g., EFO ⊑ OBA), and never if the axiom already exists in EFO or its imports. If the ticket asks for a parent term that is already in the imported ontology, do NOT add the relationship in the `subclasses.csv` file
-  - ALWAYS first import the term before adding it to `subclasses.csv`
+  - ALWAYS first call @EFO-importer to import the term before adding it to `subclasses.csv`
   - Check in the owl file of the ontology that is being updated if the relationship already exist
 
 ## OBO Guidelines
@@ -211,6 +234,7 @@ make components/subclasses.owl
 **All terms** must have at least one `is_a` (SubClassOf to a named class). This can be explicit or implicit via a logical definition.  
 - Many terms in this ontology have `part_of` relationships to UBERON terms where applicable.  
 
+
 ### Additional domain-specific expectations 
 - **Disease terms** should have a `has_disease_location` relationship to an appropriate anatomical entity.  
   - This relationship may be inherited from a parent or ancestor term; explicit addition is not required if inherited.  
@@ -280,7 +304,8 @@ This section describes how to coordinate work across the three specialized EFO a
 
 #### EFO-importer  
 **Purpose**: External term imports and IRI management  
-**Calls when**: You need to import terms from other ontologies (MONDO, UBERON, CL, etc.)  
+**Calls when**: **ALWAYS when ANY term needs importing from external ontologies** (MONDO, UBERON, CL, CHEBI, GO, OBI, etc.)  
+**Critical**: ALL import operations MUST be delegated to this agent - never perform imports yourself  
 **Inputs to provide**: Term names or IDs to import, target ontology  
 **Outputs expected**: Updated iri_dependencies files, regenerated imports, verified IRIs
 
@@ -304,9 +329,10 @@ Step 2: Review curator output
   Validate: Definition quality, parent term appropriateness
   Decision: Accept, modify, or request clarification
   
-Step 3a: If imports needed → Call @EFO-importer
+Step 3a: If imports needed → ALWAYS call @EFO-importer
   Task: Import [list of terms] from [ontology]
   Verify: Terms exist in source, relationships are correct
+  CRITICAL: Never skip this step - all imports must go through EFO-importer
   
 Step 3b: If no imports → Skip to Step 4
 
@@ -319,9 +345,10 @@ Step 4: Call @EFO-ontologist
 #### Pattern 2: Import-Only Request
 
 ```
-Step 1: Call @EFO-importer
+Step 1: ALWAYS call @EFO-importer
   Task: Import MONDO:1234567 (disease name) for issue #XXXX
   Verify: Term exists, check if parent assertion needed
+  CRITICAL: Never attempt to import yourself
   
 Step 2: If dangling term → Call @EFO-ontologist
   Task: Add subclass assertion in subclasses.csv
@@ -387,6 +414,45 @@ Expected output:
 Dependencies: None, proceed with analysis
 ```
 
+### Preconditions for Adding New Terms (MANDATORY)
+
+Before requesting @EFO-ontologist to edit `src/ontology/efo-edit.owl` for **any new term**, the following must be present:
+
+**Required from @EFO-curator:**
+- Curator output attached: definitions, PMIDs/DOIs, synonyms, suggested parent(s), and confidence assessment
+- OR explicit curator sign-off: `@EFO-curator: SIGN-OFF`
+
+**Required from @EFO-importer (if applicable):**
+- Import completion confirmed for any external terms needed
+
+**Required term specification:**
+- Label
+- Textual definition with xref(s)
+- Parent term(s)
+- Synonyms (if any)
+- Logical definitions and relationships (if applicable)
+
+**EFO-ontologist MUST verify these preconditions.** If any are missing, refuse to proceed and respond with:
+
+```
+Cannot proceed: missing [specific items].
+Please call @EFO-curator for [what's needed]
+OR call @EFO-importer for [what import is needed]
+```
+
+**Example refusal:**
+```
+Cannot proceed: missing curator sign-off and definitions for new term 'ATAC-seq peak intensity'.
+Please call @EFO-curator to research and validate this term first.
+```
+
+**For PRs adding new terms, include this checklist:**
+```markdown
+- [ ] Curator output attached or @EFO-curator sign-off provided
+- [ ] @EFO-importer confirmed necessary imports (if any)
+- [ ] Complete term spec provided (label, definition, parent(s), synonyms)
+```
+
 ### Decision Points and Routing
 
 **When to handle directly vs delegate:**
@@ -396,7 +462,8 @@ Dependencies: None, proceed with analysis
 | Simple grep/search query | Handle directly with tools |
 | Term exists, just needs minor edit | Call @EFO-ontologist |
 | PMID mentioned but no definition provided | Call @EFO-curator first |
-| Import needed | Call @EFO-importer |
+| **ANY import needed** | **ALWAYS call @EFO-importer** |
+| **New term request** | **ALWAYS call @EFO-curator first, then @EFO-ontologist** |
 | Complex multi-step workflow | Orchestrate sequence yourself |
 | User asks "what should I do?" | Analyze and recommend, don't auto-execute |
 
