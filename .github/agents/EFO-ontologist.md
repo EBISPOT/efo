@@ -145,6 +145,60 @@ This agent should be called when you need to:
 
 ## Integration Technical Details
 
+### Critical Implementation Requirements
+
+Before proceeding with any term integration, ensure compliance with these mandatory specifications:
+
+#### 1. Synonym Type Implementation
+
+When adding synonyms, use the correct annotation property based on curator categorization:
+
+```xml
+<!-- Exact synonyms - terms that mean exactly the same thing -->
+<oboInOwl:hasExactSynonym>5-aminosalicylic acid</oboInOwl:hasExactSynonym>
+
+<!-- Related synonyms - abbreviations or acronyms -->
+<oboInOwl:hasRelatedSynonym>5-ASA</oboInOwl:hasRelatedSynonym>
+
+<!-- Narrow synonyms - brand names or more specific/granular terms -->
+<oboInOwl:hasNarrowSynonym>Asacol</oboInOwl:hasNarrowSynonym>
+<oboInOwl:hasNarrowSynonym>Pentasa</oboInOwl:hasNarrowSynonym>
+
+<!-- Broad synonyms - more general terms -->
+<oboInOwl:hasBroadSynonym>anti-inflammatory drug</oboInOwl:hasBroadSynonym>
+```
+
+**Categorization Rules**:
+- **Abbreviations/Acronyms** → `hasRelatedSynonym` (e.g., "5-ASA" for "5-aminosalicylic acid")
+- **Brand names/Narrow terms** → `hasNarrowSynonym` (e.g., "Asacol" for "mesalamine")
+- **Exact synonyms** → `hasExactSynonym`
+- **Broader terms** → `hasBroadSynonym`
+
+#### 2. Definition with Embedded PMIDs
+
+**MINIMUM 2 PMID REFERENCES REQUIRED for all new terms**
+
+PMIDs must be embedded as nested `<oboInOwl:hasDbXref>` within the definition element:
+
+```xml
+<obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Definition text here.
+    <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12345678</oboInOwl:hasDbXref>
+    <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:87654321</oboInOwl:hasDbXref>
+</obo:IAO_0000115>
+```
+
+**Reference**: See EFO:0700018 for working example
+
+**If fewer than 2 PMIDs are provided**:
+- Request additional literature search from @EFO-curator
+- DO NOT proceed with term creation until minimum requirement met
+
+
+#### 3. RO Relations Restriction
+
+**DO NOT add RO (Relation Ontology) terms to `src/ontology/efo-relations.txt`** unless explicitly specified by the user.
+
+
 ### Generating New EFO IDs
 
 1. New terms use the range: EFO_092xxxx (7-digit format)
@@ -153,6 +207,7 @@ This agent should be called when you need to:
    grep EFO_092 src/ontology/efo-edit.owl
    ```
 3. Use next available ID in sequence
+4. If creating multiple terms, check that none of the new IDs clash with existing terms
 
 ### OWL/XML Formatting
 
