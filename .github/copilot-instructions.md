@@ -34,6 +34,36 @@ make normalize_src
 
 - For any edition that does not involve obsoleting terms, there is no need to add a 'term tracker item' pointing to the GitHub issue
 
+## Critical Pre-Creation Checks
+
+### BEFORE Creating Any New Term:
+
+1. **MANDATORY OLS Search for Existing Terms**
+   - **ALWAYS search OLS MCP** to check if the term already exists in ontologies we import from (MONDO, UBERON, CL, CHEBI, GO, OBI, etc.)
+   - If term exists in an imported ontology:
+     - **DO NOT create a new EFO term**
+     - Instead, add the term IRI to the appropriate file in `src/ontology/iri_dependencies/`
+     - Call @EFO-importer to handle the import
+     - **NO curation is needed** for imported terms
+   - Only create new EFO terms if:
+     - Term does not exist in any imported ontology
+     - Term is EFO-specific (e.g., experimental factors, assays)
+
+2. **Verify Parent Terms and Relationships Are Not Obsolete**
+   - **ALWAYS check** that any term used for classification or relationships is NOT obsolete
+   - Check for parent terms (SubClassOf relationships)
+   - Check for any object property relationships (part_of, realizes, etc.)
+   - Search for `owl:deprecated` or `obsolete_` prefix in the term's label
+   - If parent/related term is obsolete:
+     - Find the replacement term (check `obo:IAO_0100001` term_replaced_by annotation)
+     - Use the replacement term instead
+     - If no replacement exists, request clarification from the user
+
+3. **RO Terms in efo-relations.txt**
+   - **DO NOT add RO (Relation Ontology) terms** to `src/ontology/efo-relations.txt` unless explicitly specified by the user
+   - RO terms should be imported via the standard import mechanism
+   - Only add non-standard or EFO-specific relations to efo-relations.txt
+
 ## Import Policy - CRITICAL
 
 **ALL IMPORTS MUST BE DELEGATED TO @EFO-importer**
@@ -229,6 +259,26 @@ make components/subclasses.owl
 - All terms should have definitions, with at least one definition xref, ideally a PMID
 - You can sign terms as `<obo:IAO_0000117>AI agent</obo:IAO_0000117>` (without the @ symbol)
 
+### CRITICAL: Reference Requirements for New Terms
+
+**MINIMUM 2 PMID REFERENCES REQUIRED**
+
+- **All new terms MUST have at least 2 PMID cross-references**
+- PMIDs should be attached **directly to the definition** using `<oboInOwl:hasDbXref>` within the definition annotation
+- Prefer PMID over DOI for references
+- Example format (see EFO:0700018):
+
+```xml
+<obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Definition text here.
+    <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12345678</oboInOwl:hasDbXref>
+    <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:87654321</oboInOwl:hasDbXref>
+</obo:IAO_0000115>
+```
+
+- If EFO-curator provides PMIDs, use those
+- If insufficient PMIDs provided, request additional literature search from EFO-curator
+- **DO NOT proceed with term creation** if fewer than 2 PMIDs are available
+
 ## Relationships
 
 **All terms** must have at least one `is_a` (SubClassOf to a named class). This can be explicit or implicit via a logical definition.  
@@ -300,7 +350,24 @@ This section describes how to coordinate work across the three specialized EFO a
 **Purpose**: Literature research, evidence gathering, and term validation  
 **Calls when**: You need to analyze publications, extract definitions, validate scientific accuracy  
 **Inputs to provide**: PMIDs/DOIs, issue context, specific questions  
-**Outputs expected**: Curated definitions, parent term candidates, synonyms, cross-references (PMIDs/DOIs)
+**Outputs expected**: Curated definitions, parent term candidates, synonyms with categorization, cross-references (minimum 2 PMIDs/DOIs)
+
+**Synonym Categorization by EFO-curator:**
+- EFO-curator should categorize synonyms by type:
+  - **Abbreviations/Acronyms** → Mark as `hasRelatedSynonym` (e.g., "5-ASA" for "5-aminosalicylic acid")
+  - **Brand names/Narrow terms** → Mark as `hasNarrowSynonym` (e.g., "Asacol" for "mesalamine")
+  - **Exact synonyms** → Mark as `hasExactSynonym`
+  - **Broader terms** → Mark as `hasBroadSynonym`
+- EFO-curator should provide this categorization in the curation report
+- Example format:
+  ```
+  Synonyms:
+  - 5-aminosalicylic acid (hasExactSynonym)
+  - 5-ASA (hasRelatedSynonym - abbreviation)
+  - mesalazine (hasExactSynonym)
+  - Asacol (hasNarrowSynonym - brand name)
+  - Pentasa (hasNarrowSynonym - brand name)
+  ```
 
 #### EFO-importer  
 **Purpose**: External term imports and IRI management  
@@ -309,11 +376,19 @@ This section describes how to coordinate work across the three specialized EFO a
 **Inputs to provide**: Term names or IDs to import, target ontology  
 **Outputs expected**: Updated iri_dependencies files, regenerated imports, verified IRIs
 
-#### EFO-ontologist
+#### EFO-ontologist  
 **Purpose**: Direct OWL/XML editing in efo-edit.owl  
 **Calls when**: You need to add/edit/obsolete terms, add relationships, update metadata or search terms in efo-edit.owl
-**Inputs to provide**: Complete term specifications (ID, label, definition, parent, xrefs)  
+**Inputs to provide**: Complete term specifications (ID, label, definition with 2+ PMIDs, parent, synonym types, xrefs)  
 **Outputs expected**: Updated efo-edit.owl, normalized file, git commits
+
+**For detailed technical specifications**, see `.github/agents/EFO-ontologist.md`:
+- How to implement synonym types (XML format for each type)
+- How to embed PMIDs in definitions (nested oboInOwl:hasDbXref format)
+- How to verify parents are not obsolete (grep patterns and replacement logic)
+- RO terms restriction for efo-relations.txt
+- OWL/XML formatting patterns
+- Logical definition templates
 
 ### Common Workflow Patterns
 
@@ -419,7 +494,7 @@ Dependencies: None, proceed with analysis
 Before requesting @EFO-ontologist to edit `src/ontology/efo-edit.owl` for **any new term**, the following must be present:
 
 **Required from @EFO-curator:**
-- Curator output attached: definitions, PMIDs/DOIs, synonyms, suggested parent(s), and confidence assessment
+- Curator output attached: definitions, **minimum 2 PMIDs/DOIs**, synonyms **with type categorization** (exact/related/narrow/broad), suggested parent(s), and confidence assessment
 - OR explicit curator sign-off: `@EFO-curator: SIGN-OFF`
 
 **Required from @EFO-importer (if applicable):**
@@ -427,9 +502,9 @@ Before requesting @EFO-ontologist to edit `src/ontology/efo-edit.owl` for **any 
 
 **Required term specification:**
 - Label
-- Textual definition with xref(s)
-- Parent term(s)
-- Synonyms (if any)
+- Textual definition with **minimum 2 PMIDs embedded as xrefs**
+- Parent term(s) - **VERIFIED as non-obsolete**
+- Synonyms (if any) - **WITH type categorization** (exact/related/narrow/broad)
 - Logical definitions and relationships (if applicable)
 
 **EFO-ontologist MUST verify these preconditions.** If any are missing, refuse to proceed and respond with:
@@ -498,37 +573,57 @@ Please call @EFO-curator to research and validate this term first.
 **Complete NTR with import and curation:**
 
 ```bash
+# Step 0: PRE-CHECK - Search OLS for existing terms
+# ALWAYS do this BEFORE calling curator
+mcp_ols4_search "bronchiectasis endotype"
+# If found in imported ontology → call @EFO-importer instead
+# If not found → proceed to curation
+
 # Step 1: Understand request
 gh issue view 2546
 # Identified: Need 4 new bronchiectasis endotype terms, PMID:30215383
 
 # Step 2: Delegate curation
 @EFO-curator analyze PMID:30215383 for bronchiectasis endotypes
-# Wait for: definitions, parents, synonyms, confidence
+# Wait for: definitions, minimum 2 PMIDs per term, parents, synonyms WITH TYPES, confidence
 
 # Step 3: Review curation output
+# Verify: Each term has 2+ PMIDs, synonyms have types, definitions adequate
 # Decision: Definitions look good, parent is MONDO:0004822
 
-# Step 4: Check if parent needs import
+# Step 4: Verify parent is not obsolete
+grep -A 5 "MONDO:0004822" src/ontology/efo-edit.owl | grep -E "(owl:deprecated|obsolete_)"
+# Result: No obsolete flag found, parent is valid
+
+# Step 5: Check if parent needs import
 grep -i "MONDO:0004822" src/ontology/efo-edit.owl
 # Result: Already imported, no action needed
 
-# Step 5: Generate term IDs
+# Step 6: Generate term IDs
 grep "EFO_092" src/ontology/efo-edit.owl | tail -n 1
 # Result: Last ID is EFO_0920123, use 0920124-0920127
 
-# Step 6: Delegate OWL editing
+# Step 7: Delegate OWL editing
 @EFO-ontologist add 4 new terms:
   EFO_0920124 neutrophilic bronchiectasis
   EFO_0920125 eosinophilic bronchiectasis  
   EFO_0920126 mixed granulocytic bronchiectasis
   EFO_0920127 paucigranulocytic bronchiectasis
-[provide full specifications from curator]
+[provide full specifications from curator INCLUDING:
+ - Definitions with 2+ embedded PMIDs
+ - Synonyms with type annotations (exact/related/narrow/broad)
+ - Verified non-obsolete parent term]
 
-# Step 7: Create PR
+# Step 8: Create PR
 git checkout -b issue-2546
 # EFO-ontologist commits changes
-gh pr create --title "Add bronchiectasis endotype terms" --body "Fixes #2546..."
+gh pr create --title "Add bronchiectasis endotype terms" --body "Fixes #2546...
+
+Pre-creation checks completed:
+- OLS search confirmed terms not in imported ontologies
+- Parent term MONDO:0004822 verified as non-obsolete
+- All 4 terms include 2+ PMIDs embedded in definitions
+- Synonyms categorized by type (exact/related/narrow/broad)"
 ```
 
 ### Notes on Agent Limitations
