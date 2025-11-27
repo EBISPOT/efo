@@ -1033,9 +1033,9 @@ no valuable information is lost during the migration process.
 **EFO Synonyms** (to verify in Mondo):
 
 - Anthracosis *(type: exact)*
-- Coal Miner&apos;s Pneumoconiosis *(type: exact)*
-- Coal workers&apos; lung *(type: exact)*
-- Coal workers&apos; pneumoconiosis *(type: exact)*
+- Coal Miner's Pneumoconiosis *(type: exact)*
+- Coal workers' lung *(type: exact)*
+- Coal workers' pneumoconiosis *(type: exact)*
 - Melanoedema *(type: exact)*
 - black lung *(type: exact)*
 
@@ -1382,8 +1382,8 @@ no valuable information is lost during the migration process.
 
 - Byssinosis *(type: exact)*
 - Byssinosis (disorder) *(type: exact)*
-- Flax-dressers&apos; disease *(type: exact)*
-- Stripper&apos;s asthma *(type: exact)*
+- Flax-dressers' disease *(type: exact)*
+- Stripper's asthma *(type: exact)*
 - cotton mill fever *(type: exact)*
 
 ---
@@ -1743,7 +1743,7 @@ no valuable information is lost during the migration process.
 
 - De Quervain Disease *(type: exact)*
 - Radial styloid tenosynovitis *(type: exact)*
-- Tenosynovitis, de Quervain&apos;s *(type: exact)*
+- Tenosynovitis, de Quervain's *(type: exact)*
 
 ---
 
