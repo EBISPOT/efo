@@ -1,6 +1,6 @@
 # Mondo-EFO Mapping Analysis Report
 
-This report documents the migration of the first 100 EFO disease terms to their Mondo equivalents.
+This report documents the migration status and metadata analysis for the first 100 EFO disease terms being replaced with their Mondo equivalents.
 
 ## Migration Status
 
@@ -19,7 +19,7 @@ This report documents the migration of the first 100 EFO disease terms to their 
 - **Terms with xrefs**: 67 (380 total xrefs)
 - **Terms with synonyms**: 62 (452 total synonyms)
 
-The following sections document xrefs and synonyms present in the EFO terms that should be verified against the corresponding Mondo terms to ensure no valuable information is lost.
+The following sections document xrefs and synonyms present in the EFO terms that should be verified against the corresponding Mondo terms to ensure no valuable information is lost during migration.
 
 ## Detailed Analysis
 
