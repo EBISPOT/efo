@@ -1,25 +1,25 @@
 # Mondo-EFO Mapping Analysis Report
 
-This report analyzes the first 100 term mappings from `mondo_efo_mappings.tsv` to document
-xrefs and synonyms that exist in EFO terms which should be verified against the corresponding
-Mondo terms before completing the migration.
+This report documents the migration of the first 100 EFO disease terms to their Mondo equivalents.
 
-## Summary
+## Migration Status
+
+✅ **All 100 Mondo terms are already imported** in EFO (present in `iri_dependencies/mondo_terms.txt`)
+
+✅ **All 100 EFO terms have been obsoleted** with:
+- Label prefixed with `obsolete_`
+- `owl:deprecated true`
+- `efo:obsoleted_in_version "3.85"`
+- `obo:IAO_0100001` (term_replaced_by) pointing to the Mondo IRI
+- `efo:reason_for_obsolescence` explaining the migration
+
+## Metadata Comparison Summary
 
 - **Total terms analyzed**: 100
-- **Terms with xrefs**: 67
-- **Terms with synonyms**: 62
-- **Total xrefs to verify**: 380
-- **Total synonyms to verify**: 452
+- **Terms with xrefs**: 67 (380 total xrefs)
+- **Terms with synonyms**: 62 (452 total synonyms)
 
-## Methodology
-
-For each EFO term in the mapping, the following metadata was extracted:
-- Database cross-references (xrefs)
-- Synonyms (exact, related, broad, narrow)
-
-This metadata should be compared against the corresponding Mondo term to ensure
-no valuable information is lost during the migration process.
+The following sections document xrefs and synonyms present in the EFO terms that should be verified against the corresponding Mondo terms to ensure no valuable information is lost.
 
 ## Detailed Analysis
 
@@ -1886,4 +1886,4 @@ The following EFO terms have no xrefs or synonyms defined:
 ---
 
 *This report was generated as part of the Mondo-EFO mapping migration task (partial work on first 100 terms).*
-*Note: This report documents EFO metadata only. Manual verification against Mondo is required.*
+*All 100 EFO terms have been obsoleted. The xrefs and synonyms documented above should be verified against the Mondo equivalents.*
