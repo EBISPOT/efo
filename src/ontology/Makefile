@@ -53,7 +53,7 @@ gh_actions: qc $(BUILDDIR)/$(ONT).owl
 # Imports
 # ----------------------------------------
 
-IMPORTS = mondo hancestro uberon hp cl fbbt obi oba chebi pr go ecto gsso
+IMPORTS = mondo hancestro uberon hp cl fbbt obi oba chebi pr go ecto gsso fbbi
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # Make this target to regenerate ALL
