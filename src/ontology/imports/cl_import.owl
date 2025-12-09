@@ -4489,20 +4489,34 @@ Tissue-resident macrophages are diverse and heterogenous, likely as a result of 
     <!-- http://purl.obolibrary.org/obo/CL_0000346 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000346">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000048"/>
-        <obo:IAO_0000115>A specialized mesenchymal cell that resides in the dermal papilla located at the bottom of hair follicles. This cell plays a pivotal roles in hair formation, growth, and cycling.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0002551"/>
+        <obo:IAO_0000115>A specialized fibroblast that resides in the dermal papilla located at the bottom of hair follicles. This cell orchestrates reciprocal epithelial-mesenchymal signaling essential for hair follicle morphogenesis and cycling, regulating matrix cell proliferation and differentiation to control hair shaft size, shape, and growth. The dermal papilla cell is replenished each hair cycle from bipotent hair follicle dermal stem cells in the dermal sheath that simultaneously self-renew and contribute progeny to the papilla, particularly during anagen.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>hair follicle DPC</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#mouse_subset"/>
-        <rdfs:comment>Are these really all stem cells?</rdfs:comment>
+        <rdfs:comment>The dermal papilla contains functionally heterogeneous Sox2-positive subpopulations that serve as a niche for multipotent stem cells. These cells exhibit progenitor properties, generate skin-derived precursors (SKPs), and can differentiate into adipogenic and osteogenic lineages.</rdfs:comment>
         <rdfs:label>hair follicle dermal papilla cell</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000346"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A specialized mesenchymal cell that resides in the dermal papilla located at the bottom of hair follicles. This cell plays a pivotal roles in hair formation, growth, and cycling.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:9893172</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>A specialized fibroblast that resides in the dermal papilla located at the bottom of hair follicles. This cell orchestrates reciprocal epithelial-mesenchymal signaling essential for hair follicle morphogenesis and cycling, regulating matrix cell proliferation and differentiation to control hair shaft size, shape, and growth. The dermal papilla cell is replenished each hair cycle from bipotent hair follicle dermal stem cells in the dermal sheath that simultaneously self-renew and contribute progeny to the papilla, particularly during anagen.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:28418596</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:39798934</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:40867641</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000346"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>hair follicle DPC</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:39798934</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000346"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>The dermal papilla contains functionally heterogeneous Sox2-positive subpopulations that serve as a niche for multipotent stem cells. These cells exhibit progenitor properties, generate skin-derived precursors (SKPs), and can differentiate into adipogenic and osteogenic lineages.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:21444748</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17285,6 +17299,12 @@ The main function of pre-conventional dendritic cells is to constantly replenish
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002041"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>The immature NK T cell stage” (I–IV) represents mouse-specific stages used to define iNKT cell development. The immature NK T cells in humans typically exhibit a CD161low; CD4+ phenotype.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:17589542</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002041"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A CD24-low, CD44-positive, DX5-low, NK1.1-negative NK T cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:16087715</oboInOwl:hasDbXref>
@@ -17292,12 +17312,6 @@ The main function of pre-conventional dendritic cells is to constantly replenish
         <oboInOwl:hasDbXref>PMID:19423665</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:26802287</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:38440725</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002041"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <owl:annotatedTarget>The immature NK T cell stage” (I–IV) represents mouse-specific stages used to define iNKT cell development. The immature NK T cells in humans typically exhibit a CD161low; CD4+ phenotype.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:17589542</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17316,12 +17330,6 @@ The main function of pre-conventional dendritic cells is to constantly replenish
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002042"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <owl:annotatedTarget>The immature NK T cell stage” (I–IV) represents mouse-specific stages used to define iNKT cell development. The immature NK T cells in humans typically exhibit a CD161low; CD4+ phenotype.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:17589542</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002042"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A CD24-low, CD44-positive, DX5-high, NK1.1-negative NK T cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:tfm</oboInOwl:hasDbXref>
@@ -17331,6 +17339,12 @@ The main function of pre-conventional dendritic cells is to constantly replenish
         <oboInOwl:hasDbXref>PMID:26802287</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:38440725</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.immgen.org/index_content.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002042"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>The immature NK T cell stage” (I–IV) represents mouse-specific stages used to define iNKT cell development. The immature NK T cells in humans typically exhibit a CD161low; CD4+ phenotype.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:17589542</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
