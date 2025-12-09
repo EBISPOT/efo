@@ -51,6 +51,9 @@ curl -L http://purl.obolibrary.org/obo/obi.owl > mirror/obi.owl
 echo "Fetching OBA..."
 curl -L http://purl.obolibrary.org/obo/oba.owl > mirror/oba.owl
 
+echo "Fetching FBBI..."
+curl -L http://purl.obolibrary.org/obo/fbbi.owl > mirror/fbbi.owl
+
 echo "Fetching GO..."
 curl -L http://purl.obolibrary.org/obo/go.owl > mirror/go.owl
 
