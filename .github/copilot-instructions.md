@@ -9,13 +9,10 @@ This includes instructions for editing the efo ontology.
 ## Querying ontology
 
 - Use grep/rg to find terms, but be aware that in RDF/XML files like efo-edit.owl, axioms may span multiple lines.
-    - `grep -i ATAC-seq src/ontology/efo-edit.owl` - all axioms that mention ATAC-seq
-    - `grep '<rdfs:label.*ATAC-seq' src/ontology/efo-edit.owl` - all label axioms that mention ATAC-seq
+  - `grep -i ATAC-seq src/ontology/efo-edit.owl` - all axioms that mention ATAC-seq
+  - `grep '<rdfs:label.*ATAC-seq' src/ontology/efo-edit.owl` - all label axioms that mention ATAC-seq
 - All mentions of an ID
-    - `obo-grep.pl -r 'EFO_:_0007045' src/ontology/efo-edit.owl`
-- Only search over `src/ontology/efo-edit.owl`
-- DO NOT bother doing your own greps over the file, or looking for other files, unless otherwise asked, you will just waste time.
-- ONLY use the methods above for searching the ontology
+  - `obo-grep.pl -r 'EFO_:_0007045' src/ontology/efo-edit.owl`
 
 ## Before making edits
 - Read the request carefully and make a plan, especially if there is nuance
@@ -40,29 +37,48 @@ make normalize_src
 
 1. **MANDATORY OLS Search for Existing Terms**
    - **ALWAYS search OLS MCP** to check if the term already exists in ontologies we import from (MONDO, UBERON, CL, CHEBI, GO, OBI, etc.)
-   - If term exists in an imported ontology:
-     - **DO NOT create a new EFO term**
-     - Instead, add the term IRI to the appropriate file in `src/ontology/iri_dependencies/`
-     - Call @EFO-importer to handle the import
+    - If term exists in an imported ontology:
+      - **DO NOT create a new EFO term**
+      - Instead, add the term IRI to the appropriate file in `src/ontology/iri_dependencies/`
+      - Call @EFO-importer to handle the import
      - **NO curation is needed** for imported terms
-   - Only create new EFO terms if:
-     - Term does not exist in any imported ontology
-     - Term is EFO-specific (e.g., experimental factors, assays)
+    - Only create new EFO terms if:
+      - Term does not exist in any imported ontology
+      - Term is EFO-specific (e.g., experimental factors, assays)
 
 2. **Verify Parent Terms and Relationships Are Not Obsolete**
-   - **ALWAYS check** that any term used for classification or relationships is NOT obsolete
-   - Check for parent terms (SubClassOf relationships)
-   - Check for any object property relationships (part_of, realizes, etc.)
-   - Search for `owl:deprecated` or `obsolete_` prefix in the term's label
-   - If parent/related term is obsolete:
-     - Find the replacement term (check `obo:IAO_0100001` term_replaced_by annotation)
-     - Use the replacement term instead
-     - If no replacement exists, request clarification from the user
+  - **ALWAYS check** that any term used for classification or relationships is NOT obsolete
+  - Check for parent terms (SubClassOf relationships)
+  - Check for any object property relationships (part_of, realizes, etc.)
+  - Search for `owl:deprecated` or `obsolete_` prefix in the term's label
+  - If parent/related term is obsolete:
+    - Find the replacement term (check `obo:IAO_0100001` term_replaced_by annotation)
+    - Use the replacement term instead
+    - If no replacement exists, request clarification from the user
 
 3. **RO Terms in efo-relations.txt**
-   - **DO NOT add RO (Relation Ontology) terms** to `src/ontology/efo-relations.txt` unless explicitly specified by the user
-   - RO terms should be imported via the standard import mechanism
-   - Only add non-standard or EFO-specific relations to efo-relations.txt
+  - **DO NOT add RO (Relation Ontology) terms** to `src/ontology/efo-relations.txt` unless explicitly specified by the user
+  - RO terms should be imported via the standard import mechanism
+  - Only add non-standard or EFO-specific relations to efo-relations.txt
+
+4. **Search Before Adding New Terms**
+  - **ALWAYS search for existing terms** before proposing any new term
+  - Search for similar labels:
+    - `grep -i "term_name" src/ontology/efo-edit.owl`
+    - Search OLS for the concept using OLS MCP tools
+  - Search for synonyms:
+    - `grep -i "alternative_name" src/ontology/efo-edit.owl`
+  - If similar terms exist:
+    - Comment on the issue asking if new term is needed
+    - Propose modifications to existing term instead
+    - Wait for curator confirmation before creating new term
+  - Check for related term issues:
+    - Are there open issues about similar terms?
+    - Are similar terms flagged as problematic?
+  - Example search:
+    ```bash
+    grep -i "diffus.*capacity\|DLCO" src/ontology/efo-edit.owl
+    ```
 
 ## Import Policy - CRITICAL
 
@@ -95,14 +111,9 @@ The instructions below are for understanding the import process.
 **DO NOT execute these yourself - always call @EFO-importer instead.**
 
 - Edit the IRI dependency lists, never the generated imports:
-    - Edit files in `src/ontology/iri_dependencies/` (e.g. `mondo_terms.txt`, `cl_terms.txt`).
-    - Each line must be the full IRI of the term to import.
-    - DO NOT edit anything in `src/ontology/imports/` (these are generated).
-
-- Update local ontology mirrors before regenerating imports:
-
-```bash
-cd src/ontology
+  - Edit files in `src/ontology/iri_dependencies/` (e.g. `mondo_terms.txt`, `cl_terms.txt`).
+  - Each line must be the full IRI of the term to import.
+  - DO NOT edit anything in `src/ontology/imports/` (these are generated).
 ./get_mirrors.sh
 ```
 
@@ -121,12 +132,11 @@ make all_imports -B
 ```
 
 - What the make target does:
-    - Reads `iri_dependencies/[ontology]_terms.txt`, resolves IRIs using mirrors and writes a generated `.owl` into `src/ontology/imports/` and a backup copy of the term list.
+  - Reads `iri_dependencies/[ontology]_terms.txt`, resolves IRIs using mirrors and writes a generated `.owl` into `src/ontology/imports/` and a backup copy of the term list.
 
 - Fix dangling imported terms (no asserted parent):
-    1. Add a row to `src/templates/subclasses.csv` with `ID_OF_IMPORTED_TERM,ID_OF_PARENT_TERM_IN_EFO`.
-    2. Rebuild the component:
-
+  1. Add a row to `src/templates/subclasses.csv` with `ID_OF_IMPORTED_TERM,ID_OF_PARENT_TERM_IN_EFO`.
+  2. Rebuild the component:
 ```bash
 cd src/ontology
 make components/subclasses.owl
@@ -175,10 +185,8 @@ If you need the full, unabridged procedure, consult `docs/Import_terms_from_anot
 
 ## GitHub Contribution Process
 - Most requests from users should follow one of two patterns:
-    - You are not confident how to proceed, in which case end with asking a clarifying question (via `gh`)
-    - you are confident how to proceed, you make changes, commit on a branch, and open a PR for the user to review
-- Check existing terms before adding new ones
-- For new terms: provide name, definition, place in hierarchy, and references
+  - You are not confident how to proceed, in which case end with asking a clarifying question (via `gh`)
+  - you are confident how to proceed, you make changes, commit on a branch, and open a PR for the user to review
 - Include PMIDs for all assertions
 - Follow naming conventions from parent terms
 - Always commit in a branch, e.g. issue-NNN
@@ -204,22 +212,22 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
 ### Steps
 1. Locate the term to be obsoleted
 
-	- Search for the term in the efo-edit.owl file.
-	- Confirm the term’s IRI (e.g., http://www.ebi.ac.uk/efo/EFO_1000022).
+  - Search for the term in the efo-edit.owl file.
+  - Confirm the term’s IRI (e.g., http://www.ebi.ac.uk/efo/EFO_1000022).
 
 2. Update the term
 
-	- Prefix the label with obsolete_.
-	- Mark the term as deprecated.
-	- Add efo:obsoleted_in_version with the next ontology release version.
-		- If the current EFO version is X.YY.Z, set efo:obsoleted_in_version to X.(YY+1)
-			Example: 3.80.0 → 3.81
-		- The release version can be found in the 'ExFactor Ontology release notes.txt' file, in line 14 (example: Experimental Factor Ontology version 3.80.0).
+  - Prefix the label with obsolete_.
+  - Mark the term as deprecated.
+  - Add efo:obsoleted_in_version with the next ontology release version.
+    - If the current EFO version is X.YY.Z, set efo:obsoleted_in_version to X.(YY+1)
+      Example: 3.80.0 → 3.81
+    - The release version can be found in the 'ExFactor Ontology release notes.txt' file, in line 14 (example: Experimental Factor Ontology version 3.80.0).
         - Update the ontology version only when a term is newly obsoleted.
         - If you are editing a term that is already obsoleted (e.g., changing its term_replaced_by target or other metadata), do not update the version.
-	- If the obsolete term has a direct replacement, add the annotation property obo:IAO_0100001 (term replaced by) with the full IRI of the replacement term.
-	- Add efo:reason_for_obsolescence describing the reason and replacement that you will find in the GitHub ticket.
-	- Synonyms and xrefs can be migrated judiciously.
+  - If the obsolete term has a direct replacement, add the annotation property obo:IAO_0100001 (term replaced by) with the full IRI of the replacement term.
+  - Add efo:reason_for_obsolescence describing the reason and replacement that you will find in the GitHub ticket.
+  - Synonyms and xrefs can be migrated judiciously.
 
 3. Example
 
@@ -236,21 +244,20 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
     </owl:Class>
 ```
 4. Update subclasses of the obsolete term. No relationship should point to an obsolete term:
-	- Search for usage of the obsolete term in:
-		- efo-edit.owl — Replace all occurrences of the full IRI of the obsolete term in other classes (maintain IRI as it is in the obsoleted term) with the full IRI of the replacement term.
-		- src/templates/subclasses.csv — Check the column "Type (is-a)". If the obsolete term’s ID (e.g., EFO:XXXXXXX) appears in this column, replace it with the replacement term’s ID.
-			- Rebuild the 'sublasses.owl' component:
+  - Search for usage of the obsolete term in:
+    - efo-edit.owl — Replace all occurrences of the full IRI of the obsolete term in other classes (maintain IRI as it is in the obsoleted term) with the full IRI of the replacement term.
+    - src/templates/subclasses.csv — Check the column "Type (is-a)". If the obsolete term's ID (e.g., EFO:XXXXXXX) appears in this column, replace it with the replacement term's ID.
+      - Rebuild the 'sublasses.owl' component:
 
 ```bash
 cd src/ontology #If you are not in the ontology folder
 make components/subclasses.owl      
 ```
 
-
 5. Commit changes
 
-	- Commit to the repository with a message such as:
-		Obsoleted EFO_1000022; replaced with EFO_1000172
+  - Commit to the repository with a message such as:
+    Obsoleted EFO_1000022; replaced with EFO_1000172
 
 
 ## Other metadata

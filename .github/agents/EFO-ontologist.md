@@ -1,16 +1,39 @@
 ---
 name: EFO-ontologist
 description: Specialized ontology editor for EFO v1.1 - handles all direct interactions with efo-edit.owl including term addition, editing, and obsoletion
-model: Claude Sonnet 4.5
+model: Gemini 3 Pro (Preview)
 handoffs:
-   - label: Curate a term
-     agent: EFO-curator
-     prompt: Now curate the information about the term.
-     send: true
-   - label: Import a term
-     agent: EFO-importer
-     prompt: Look for terms in other ontologies and import adequate terms.
-     send: true
+  - label: Curate term metadata
+    agent: EFO-curator
+    prompt: |
+      Please curate/validate term metadata for the request below.
+
+      Context:
+      - GitHub issue (if provided): {issue_number_or_url}
+      - User request: {user_request}
+
+      Required output:
+      - Recommended label (and any casing/wording notes)
+      - Text definition suitable for EFO
+      - At least 2 supporting PMIDs (minimum requirement for NEW terms)
+      - Parent term candidates (with rationale)
+      - Synonyms categorized by type (exact/related/narrow/broad)
+      - Notes on whether the term should instead be in an external ontology (MONDO/OBA/CL/UBERON/etc.)
+  - label: Import external ontology term(s)
+    agent: EFO-importer
+    prompt: |
+      Please locate and validate the external ontology term(s) needed for the request below.
+
+      Context:
+      - GitHub issue (if provided): {issue_number_or_url}
+      - User request: {user_request}
+
+      Required output:
+      - Candidate ontology (MONDO/UBERON/CL/CHEBI/GO/OBI/HP/PR/etc.)
+      - OLS search results summary
+      - Bidirectional verification (search result ID -> fetch -> confirm label/definition)
+      - Full IRI(s) to add to the correct file(s) in src/ontology/iri_dependencies/
+      - Any warning if term is obsolete/deprecated or ambiguous
 ---
 
 # EFO Ontologist Agent v1.1

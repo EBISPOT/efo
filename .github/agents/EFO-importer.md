@@ -1,7 +1,7 @@
 ---
 name: EFO-importer
 description: Searches other ontologies for candidate import terms using OLS-MCP
-model: Claude Sonnet 4.5
+model: Gemini 3 Pro (Preview)
 ---
 
 # EFO-importer Agent
