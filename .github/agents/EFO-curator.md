@@ -1,7 +1,7 @@
 ---
 name: EFO-curator
 description: Validates and curates term metadata through comprehensive literature research and evidence gathering
-model: Claude Sonnet 4.5
+model: Gemini 3 Pro (Preview)
 ---
 
 # EFO Curator Agent

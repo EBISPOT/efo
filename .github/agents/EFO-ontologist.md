@@ -1,7 +1,7 @@
 ---
 name: EFO-ontologist
 description: Specialized ontology editor for EFO v1.1 - handles all direct interactions with efo-edit.owl including term addition, editing, and obsoletion
-model: Claude Sonnet 4.5
+model: Gemini 3 Pro (Preview)
 handoffs:
   - label: Curate term metadata
     agent: EFO-curator
