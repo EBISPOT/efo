@@ -63,6 +63,24 @@ make normalize_src
    - **DO NOT add RO (Relation Ontology) terms** to `src/ontology/efo-relations.txt` unless explicitly specified by the user
    - RO terms should be imported via the standard import mechanism
    - Only add non-standard or EFO-specific relations to efo-relations.txt
+4. **Search Before Adding New Terms**
+  - **ALWAYS search for existing terms** before proposing any new term
+  - Search for similar labels:
+    - `grep -i "term_name" src/ontology/efo-edit.owl`
+    - Search OLS for the concept using OLS MCP tools
+  - Search for synonyms:
+    - `grep -i "alternative_name" src/ontology/efo-edit.owl`
+  - If similar terms exist:
+    - Comment on the issue asking if new term is needed
+    - Propose modifications to existing term instead
+    - Wait for curator confirmation before creating new term
+  - Check for related term issues:
+    - Are there open issues about similar terms?
+    - Are similar terms flagged as problematic?
+  - Example search:
+    ```bash
+    grep -i "diffus.*capacity\|DLCO" src/ontology/efo-edit.owl
+    ```
 
 ## Import Policy - CRITICAL
 
