@@ -1,0 +1,181 @@
+id: efo
+title: "Experimental Factor Ontology"
+github_org: EBISPOT
+git_main_branch: master
+repo: efo
+report_fail_on: ERROR
+#report_fail_on: None
+use_dosdps: FALSE
+use_mappings: 
+use_edit_file_imports: 
+release_diff: TRUE
+workflows:
+  - docs
+export_formats:
+  - owl
+  - obo
+  - json
+obo_format_options: --clean-obo 'simple merge-comments'
+namespaces: 
+  - http://www.ebi.ac.uk/efo/EFO_
+  - "http://www.ebi.ac.uk/efo/EFO#"
+primary_release: full
+release_artefacts: 
+  - base
+  - full
+documentation:
+  documentation_system: mkdocs
+import_group:
+  use_base_merging: TRUE
+  slme_individuals: exclude
+  annotation_properties:
+    - rdfs:label
+    - IAO:0000115
+    - oboInOwl:is_metadata_tag
+    - OMO:0002000
+  #exclude_iri_patterns:
+  products: # need to check if we are using the base or full imports
+    - id: mondo
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/mondo_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/mondo_exclude.txt
+    - id: uberon
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/uberon_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/uberon_exclude.txt
+    - id: hp 
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/hp_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/hp_exclude.txt
+    #- id: mondo_owl
+      #mirror_from: http://purl.obolibrary.org/obo/mondo.owl
+    - id: chebi
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/chebi_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/chebi_exclude.txt
+    - id: pr
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/pr_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/pr_exclude.txt
+    - id: ecto
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/ecto_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/ecto_exclude.txt
+    - id: cl
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/cl_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/cl_exclude.txt
+    - id: gsso
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/gsso_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/gsso_exclude.txt
+    - id: hpoa
+      mirror_from: https://data.monarchinitiative.org/ttl/hpoa.ttl
+      exclude_iris:
+        - file: iri_dependencies/hpoa_exclude.txt
+    - id: hancestro
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl
+      exclude_iris:
+        - file: iri_dependencies/hancestro_exclude.txt
+    - id: fbbt
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/fbbt_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/fbbt_exclude.txt
+    - id: obi
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/obi_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/obi_exclude.txt
+    - id: oba
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/oba_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/oba_exclude.txt
+    - id: fbbi
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/fbbi_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/fbbi_exclude.txt
+    - id: go
+      use_base: TRUE
+      base_iris:
+        - file: iri_dependencies/go_terms.txt
+      exclude_iris:
+        - file: iri_dependencies/go_exclude.txt
+pattern_pipelines_group:
+  products:
+    - id: clustering
+  matches:
+    - id: matches
+robot_java_args: '-Xmx16G'
+reasoner: HermiT
+allow_equivalents: asserted-only
+robot_report:
+  release_reports: False
+  fail_on : ERROR
+  use_labels : False
+  custom_profile : False
+  use_base_iris: True
+  report_on :
+    - edit
+    - efo-full.owl
+  sparql_test_on:
+    - edit
+    - efo-full.owl
+  custom_sparql_checks :
+    - 
+  custom_sparql_exports:
+    - 
+components:
+  products:
+    - filename: subclasses.owl
+      use_template: True
+      templates:
+        - subclasses.csv
+    - filename: import_replaced_by.owl
+      use_template: True
+      templates:
+        - import_replaced_by.csv
+    - filename: anatomagram_lung.owl
+      use_template: True
+      templates:
+        - anatomagram_lung.tsv
+    - filename: anatomagram_kidney.owl
+      use_template: True
+      templates:
+        - anatomagram_kidney.tsv
+    - filename: anatomagram_pancreas.owl
+      use_template: True
+      templates:
+        - anatomagram_pancreas.tsv
+    - filename: anatomagram_liver.owl
+      use_template: True
+      templates:
+        - anatomagram_liver.tsv
+    - filename: anatomagram_placenta.owl
+      use_template: True
+      templates:
+        - anatomagram_placenta.tsv 
+
