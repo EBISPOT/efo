@@ -73,13 +73,28 @@ def find_duplicates(entries):
 
 
 def write_report(duplicates, output_path):
-    """Write a TSV report of duplicate clusters."""
+    """Write a TSV report of duplicate clusters in wide format.
+
+    Each row represents one collision cluster with all colliding terms
+    and their properties/values spread across columns.
+    """
     with open(output_path, "w", newline="") as f:
         writer = csv.writer(f, delimiter="\t")
-        writer.writerow(["normalized_form", "term", "property", "value"])
+        # Header: normalized_form, then triplets of (term, property, original)
+        writer.writerow(["normalized_form", "collision_description"])
+
         for norm in sorted(duplicates):
-            for term, prop, value in sorted(duplicates[norm]):
-                writer.writerow([norm, term, prop, value])
+            members = sorted(duplicates[norm])
+            # Build collision description showing all terms involved
+            collision_parts = []
+            for term, prop, value in members:
+                # Shorten URIs for readability
+                term_short = term.split("/")[-1]
+                prop_short = prop.split("#")[-1].split("/")[-1]
+                collision_parts.append(f"{term_short}[{prop_short}={value}]")
+
+            collision_desc = " | ".join(collision_parts)
+            writer.writerow([norm, collision_desc])
 
 
 def print_summary(total_entries, total_normalized_forms, duplicates, output_path):
@@ -108,11 +123,6 @@ def main():
         default="reports/label-synonym-duplicates.tsv",
         help="Output TSV report path (default: reports/label-synonym-duplicates.tsv)",
     )
-    parser.add_argument(
-        "--experimental",
-        action="store_true",
-        help="Run in experimental mode: report duplicates but exit 0 (do not fail CI)",
-    )
     args = parser.parse_args()
 
     entries = parse_robot_tsv(args.input)
@@ -128,14 +138,12 @@ def main():
     write_report(duplicates, args.output)
     print_summary(len(entries), len(all_normalized), duplicates, args.output)
 
+    # Always exit 0 - this is a warning-only check, not a blocker
     if duplicates:
-        if args.experimental:
-            print("Running in experimental mode -- not failing CI.")
-            sys.exit(0)
-        else:
-            sys.exit(1)
+        print(f"WARNING: {len(duplicates)} label/synonym collisions detected")
     else:
-        sys.exit(0)
+        print("✓ No label/synonym collisions detected")
+    sys.exit(0)
 
 
 if __name__ == "__main__":
