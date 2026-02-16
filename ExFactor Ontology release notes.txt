@@ -11,16 +11,17 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.86.0
-Date Released: 15th January 2026
-Class Count: 90,372
+Experimental Factor Ontology version 3.87.0
+Date Released: 16th February 2026
+Class Count: 90,548
 
 Summary:
 
 EFO 3.86.0 contains terms to cater for users, such as the GWAS Catalog, Open Targets, and more.
-Number of classes changed: 249
-Number of classes added: 14
-Number of classes deleted: 1
+
+Number of classes changed: 23
+Number of classes added: 177
+Number of classes deleted: 1 
  
 
 ----------------------------------
@@ -37,65 +38,764 @@ Number of classes deleted: 1
 
 @Classes new to this version
 
-Class: http://purl.obolibrary.org/obo/COB_0000026
-Label(s): processed material entity 
-+ 'processed material entity' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0850340
+Label(s): supratentorial ependymoma 
++ 'supratentorial ependymoma' SubClassOf 'anaplastic ependymoma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920056
-Label(s): buffer volume 
-+ 'buffer volume' EquivalentTo 'volume' and ('characteristic of' some 'buffer')
-+ 'buffer volume' SubClassOf 'volume'
+Class: http://purl.obolibrary.org/obo/MONDO_0850339
+Label(s): posterior fossa ependymoma 
++ 'posterior fossa ependymoma' SubClassOf 'anaplastic ependymoma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920055
-Label(s): sample volume 
-+ 'sample volume' EquivalentTo 'volume' and ('characteristic of' some 'specimen')
-+ 'sample volume' SubClassOf 'volume'
+Class: http://purl.obolibrary.org/obo/MONDO_0850335
+Label(s): IDH-wildtype glioblastoma 
++ 'IDH-wildtype glioblastoma' SubClassOf 'glioblastoma multiforme'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0979867
-Label(s): cerebral arteriopathy, autosomal recessive, with subcortical infarcts and leukoencephalopathy 1 
-+ 'cerebral arteriopathy, autosomal recessive, with subcortical infarcts and leukoencephalopathy 1' SubClassOf 'autosomal recessive disease'
-+ 'cerebral arteriopathy, autosomal recessive, with subcortical infarcts and leukoencephalopathy 1' SubClassOf 'cerebral arteriopathy with subcortical infarcts and leukoencephalopathy'
+Class: http://purl.obolibrary.org/obo/MONDO_0850332
+Label(s): IDH-mutant anaplastic astrocytoma 
++ 'IDH-mutant anaplastic astrocytoma' SubClassOf 'anaplastic astrocytoma'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0022205
-Label(s): pustular psoriasis 
-+ 'pustular psoriasis' SubClassOf 'psoriasis'
+Class: http://purl.obolibrary.org/obo/MONDO_0858959
+Label(s): polymorphous low grade neuroepithelial tumor of the young 
++ 'polymorphous low grade neuroepithelial tumor of the young' SubClassOf 'central nervous system organ benign neoplasm'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022981
-Label(s): metabolite extraction protocol 
-+ 'metabolite extraction protocol' SubClassOf 'extraction protocol'
+Class: http://purl.obolibrary.org/obo/MONDO_0858944
+Label(s): myxoid glioneuronal tumor 
++ 'myxoid glioneuronal tumor' SubClassOf 'central nervous system organ benign neoplasm'
 
-Class: http://purl.obolibrary.org/obo/CHEBI_35225
-Label(s): buffer 
-+ 'buffer' SubClassOf 'chemical role'
+Class: http://purl.obolibrary.org/obo/MONDO_0003389
+Label(s): epithelial-myoepithelial carcinoma 
++ 'epithelial-myoepithelial carcinoma' SubClassOf 'carcinoma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022978
-Label(s): metabolomic profiling by mass spectrometer 
-+ 'metabolomic profiling by mass spectrometer' SubClassOf 'assay by mass spectrometry'
+Class: http://purl.obolibrary.org/obo/MONDO_0003325
+Label(s): nodular ganglioneuroblastoma 
++ 'nodular ganglioneuroblastoma' SubClassOf 'ganglioneuroblastoma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022979
-Label(s): lipiodomic profiling by mass spectrometer 
-+ 'lipiodomic profiling by mass spectrometer' SubClassOf 'assay by mass spectrometry'
+Class: http://purl.obolibrary.org/obo/MONDO_0850198
+Label(s): medulloblastoma non-WNT/non-SHH 
++ 'medulloblastoma non-WNT/non-SHH' SubClassOf 'medulloblastoma'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0022980
-Label(s): 10x 3' v3.1 
-+ '10x 3' v3.1' SubClassOf '10x 3' v3'
+Class: http://purl.obolibrary.org/obo/MONDO_0003096
+Label(s): deep hemangioma 
++ 'deep hemangioma' SubClassOf 'hemangioma'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100491
-Label(s): generalized pustular psoriasis 
-+ 'generalized pustular psoriasis' SubClassOf 'pustular psoriasis'
+Class: http://purl.obolibrary.org/obo/MONDO_0003088
+Label(s): intramuscular hemangioma 
++ 'intramuscular hemangioma' SubClassOf 'deep hemangioma'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0800493
-Label(s): familial mesial temporal lobe epilepsy 
-+ 'familial mesial temporal lobe epilepsy' SubClassOf 'variable-age onset focal epilepsy syndrome'
-+ 'familial mesial temporal lobe epilepsy' SubClassOf 'temporal lobe epilepsy'
+Class: http://purl.obolibrary.org/obo/MONDO_0007385
+Label(s): idiopathic spontaneous coronary artery dissection 
++ 'idiopathic spontaneous coronary artery dissection' SubClassOf 'idiopathic disease'
++ 'idiopathic spontaneous coronary artery dissection' SubClassOf 'vascular disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700463
-Label(s): congenital trochlear nerve palsy 
-+ 'congenital trochlear nerve palsy' SubClassOf 'fourth cranial nerve palsy'
+Class: http://purl.obolibrary.org/obo/MONDO_0007365
+Label(s): seizures, benign familial neonatal, 1 
++ 'seizures, benign familial neonatal, 1' SubClassOf 'benign neonatal seizures'
 
-Class: http://purl.obolibrary.org/obo/COB_0000022
-Label(s): organism 
-+ 'organism' SubClassOf 'material entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0978301
+Label(s): neurodevelopmental disorder with dysmorphic facies, brain anomalies, and seizures 
++ 'neurodevelopmental disorder with dysmorphic facies, brain anomalies, and seizures' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007060
+Label(s): spermatogenic failure 6 
++ 'spermatogenic failure 6' SubClassOf 'azoospermia'
++ 'spermatogenic failure 6' SubClassOf 'male infertility due to globozoospermia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0958119
+Label(s): embryonal tumor with multilayered rosettes 
++ 'embryonal tumor with multilayered rosettes' SubClassOf 'central nervous system Ewing sarcoma/peripheral primitive neuroectodermal tumor'
+
+Class: http://purl.obolibrary.org/obo/HP_0006879
+Label(s): Pontocerebellar atrophy 
++ 'Pontocerebellar atrophy' SubClassOf 'Abnormal brainstem morphology'
++ 'Pontocerebellar atrophy' SubClassOf 'Cerebellar atrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010762
+Label(s): lymphoma, Hodgkin, Y-linked pseudoautosomal 
++ 'lymphoma, Hodgkin, Y-linked pseudoautosomal' SubClassOf 'Hodgkins lymphoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850101
+Label(s): spitzoid melanoma 
++ 'spitzoid melanoma' SubClassOf 'cutaneous melanoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850196
+Label(s): medulloblastoma WNT activated 
++ 'medulloblastoma WNT activated' SubClassOf 'medulloblastoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850197
+Label(s): medulloblastoma SHH activated 
++ 'medulloblastoma SHH activated' SubClassOf 'medulloblastoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978302
+Label(s): spermatogenic failure 100 
++ 'spermatogenic failure 100' SubClassOf 'azoospermia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014867
+Label(s): spinocerebellar ataxia 43 
++ 'spinocerebellar ataxia 43' SubClassOf 'autosomal dominant cerebellar ataxia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014866
+Label(s): Charcot-Marie-Tooth disease axonal type 2T 
++ 'Charcot-Marie-Tooth disease axonal type 2T' SubClassOf 'Charcot-Marie-Tooth disease type 2'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014614
+Label(s): congenital stationary night blindness 1G 
++ 'congenital stationary night blindness 1G' SubClassOf 'congenital nervous system disorder'
++ 'congenital stationary night blindness 1G' SubClassOf 'congenital stationary night blindness'
++ 'congenital stationary night blindness 1G' SubClassOf 'autosomal recessive disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014571
+Label(s): optic atrophy 9 
++ 'optic atrophy 9' SubClassOf 'ACO2-related optic atrophy with or without extraocular features'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014531
+Label(s): amyotrophic lateral sclerosis type 22 
++ 'amyotrophic lateral sclerosis type 22' SubClassOf 'familial amyotrophic lateral sclerosis'
+
+Class: http://purl.obolibrary.org/obo/HP_0033528
+Label(s): Abnormal cardiac output 
++ 'Abnormal cardiac output' SubClassOf 'Abnormality of blood circulation'
+
+Class: http://purl.obolibrary.org/obo/CHEBI_30813
+Label(s): decanoic acid 
++ 'decanoic acid' SubClassOf 'fatty acid'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979240
+Label(s): cataract, alopecia, oral mucosal disorder, and psoriasis-like syndrome 
++ 'cataract, alopecia, oral mucosal disorder, and psoriasis-like syndrome' SubClassOf 'genetic disorder'
++ 'cataract, alopecia, oral mucosal disorder, and psoriasis-like syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850066
+Label(s): SAMD9L-associated autoinflammatory syndrome 
++ 'SAMD9L-associated autoinflammatory syndrome' SubClassOf 'autoinflammatory syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1010177
+Label(s): IKZF2-related combined immunodeficiency 
++ 'IKZF2-related combined immunodeficiency' SubClassOf 'combined immunodeficiency syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002787
+Label(s): adamantinous craniopharyngioma 
++ 'adamantinous craniopharyngioma' SubClassOf 'Craniopharyngioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978293
+Label(s): Houge-Janssens syndrome 4 
++ 'Houge-Janssens syndrome 4' SubClassOf 'Houge-Janssens syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978294
+Label(s): LSM7-related leukodystrophy and cerebellar atrophy 
++ 'LSM7-related leukodystrophy and cerebellar atrophy' SubClassOf 'hereditary neurological disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978295
+Label(s): craniofaciocardiohepatic syndrome 
++ 'craniofaciocardiohepatic syndrome' SubClassOf 'syndromic disease'
++ 'craniofaciocardiohepatic syndrome' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978296
+Label(s): FICUS syndrome 
++ 'FICUS syndrome' SubClassOf 'syndromic disease'
++ 'FICUS syndrome' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978299
+Label(s): maturity-onset diabetes of the young, type 12 
++ 'maturity-onset diabetes of the young, type 12' SubClassOf 'maturity-onset diabetes of the young'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978300
+Label(s): neurodevelopmental disorder with ataxia and brain abnormalities 
++ 'neurodevelopmental disorder with ataxia and brain abnormalities' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978303
+Label(s): Li-Takada-Miyake syndrome 
++ 'Li-Takada-Miyake syndrome' SubClassOf 'syndromic disease'
++ 'Li-Takada-Miyake syndrome' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002696
+Label(s): Sertoli cell tumor 
++ 'Sertoli cell tumor' SubClassOf 'sex cord-stromal tumor'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014107
+Label(s): hypogonadotropic hypogonadism 21 with or without anosmia 
++ 'hypogonadotropic hypogonadism 21 with or without anosmia' SubClassOf 'Kallmann syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014045
+Label(s): Cowden syndrome 3 
++ 'Cowden syndrome 3' SubClassOf 'Cowden disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859597
+Label(s): cns neuroblastoma with FOXR2 activation 
++ 'cns neuroblastoma with FOXR2 activation' SubClassOf 'cerebral neuroblastoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0957197
+Label(s): diffuse glioma, H3 G34 mutant 
++ 'diffuse glioma, H3 G34 mutant' SubClassOf 'glioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003864
+Label(s): chronic lymphocytic leukemia/small lymphocytic lymphoma 
++ 'chronic lymphocytic leukemia/small lymphocytic lymphoma' SubClassOf 'chronic lymphocytic leukemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700076
+Label(s): glutaric acidemia IIc 
++ 'glutaric acidemia IIc' SubClassOf 'multiple acyl-CoA dehydrogenase deficiency'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060190
+Label(s): APP-related brain and vascular amyloidosis 
++ 'APP-related brain and vascular amyloidosis' SubClassOf 'cerebrovascular disorder'
++ 'APP-related brain and vascular amyloidosis' SubClassOf 'hereditary amyloidosis'
++ 'APP-related brain and vascular amyloidosis' SubClassOf 'inherited neurodegenerative disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100584
+Label(s): SNUPN-related muscular dystrophy with or without multi-system involvement 
++ 'SNUPN-related muscular dystrophy with or without multi-system involvement' SubClassOf 'congenital muscular dystrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013690
+Label(s): Pitt-Hopkins-like syndrome 2 
++ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'genetic disorder'
++ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'Pitt-Hopkins-like syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0800441
+Label(s): NKX2.5-related congenital, conduction and myopathic heart disease 
++ 'NKX2.5-related congenital, conduction and myopathic heart disease' SubClassOf 'familial cardiomyopathy'
++ 'NKX2.5-related congenital, conduction and myopathic heart disease' SubClassOf 'heart conduction disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0800464
+Label(s): SQSTM1-related multisystem proteinopathy 
++ 'SQSTM1-related multisystem proteinopathy' SubClassOf 'inborn errors of metabolism'
++ 'SQSTM1-related multisystem proteinopathy' SubClassOf 'proteostasis deficiencies'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013597
+Label(s): platelet-type bleeding disorder 14 
++ 'platelet-type bleeding disorder 14' SubClassOf 'inherited bleeding disorder, platelet-type'
++ 'platelet-type bleeding disorder 14' SubClassOf 'inherited blood coagulation disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013509
+Label(s): intellectual disability, autosomal dominant 6 
++ 'intellectual disability, autosomal dominant 6' SubClassOf 'GRIN2B-related complex neurodevelopmental disorder'
++ 'intellectual disability, autosomal dominant 6' SubClassOf 'intellectual disability, autosomal dominant'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013470
+Label(s): generalized epilepsy with febrile seizures plus, type 7 
++ 'generalized epilepsy with febrile seizures plus, type 7' SubClassOf 'generalized epilepsy with febrile seizures plus'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013253
+Label(s): breast-ovarian cancer, familial, susceptibility to, 3 
++ 'breast-ovarian cancer, familial, susceptibility to, 3' SubClassOf 'breast-ovarian cancer, familial, susceptibility to'
++ 'breast-ovarian cancer, familial, susceptibility to, 3' SubClassOf 'predisposes towards' some 'hereditary breast ovarian cancer syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060191
+Label(s): ciliopathy-IFT74 
++ 'ciliopathy-IFT74' SubClassOf 'ciliopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060185
+Label(s): systemic lupus erythematosus 18 
++ 'systemic lupus erythematosus 18' SubClassOf 'systemic lupus erythematosus'
++ 'systemic lupus erythematosus 18' SubClassOf 'hereditary disorder of connective tissue'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022988
+Label(s): Parkinson disease 6 
++ 'Parkinson disease 6' SubClassOf 'Parkinson disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022987
+Label(s): adiponectin deficiency 
++ 'adiponectin deficiency' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060179
+Label(s): RNU5B-1 related neurodevelopmental disorder with seizures and joint laxity 
++ 'RNU5B-1 related neurodevelopmental disorder with seizures and joint laxity' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013104
+Label(s): basal cell carcinoma, susceptibility to, 4 
++ 'basal cell carcinoma, susceptibility to, 4' SubClassOf 'basal cell carcinoma, susceptibility to'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978297
+Label(s): spermatogenic failure 99 
++ 'spermatogenic failure 99' SubClassOf 'azoospermia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979570
+Label(s): immunodeficiency 133 with ectodermal dysplasia with or without peripheral neuropathy 
++ 'immunodeficiency 133 with ectodermal dysplasia with or without peripheral neuropathy' SubClassOf 'immunodeficiency disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956990
+Label(s): supratentorial ependymoma, ZFTA fusion–positive 
++ 'supratentorial ependymoma, ZFTA fusion–positive' SubClassOf 'supratentorial ependymoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956964
+Label(s): medulloblastoma SHH activated and TP53 mutant 
++ 'medulloblastoma SHH activated and TP53 mutant' SubClassOf 'medulloblastoma SHH activated'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022984
+Label(s): bilateral breast cancer 
++ 'bilateral breast cancer' SubClassOf 'breast cancer'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0971094
+Label(s): cardiac anomalies-short stature-joint hypermobility-facial dysmorphism syndrome due to TAB2 mutation 
++ 'cardiac anomalies-short stature-joint hypermobility-facial dysmorphism syndrome due to TAB2 mutation' SubClassOf 'polyvalvular heart disease syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020813
+Label(s): benign testicular sertoli cell tumor 
++ 'benign testicular sertoli cell tumor' SubClassOf 'benign sertoli cell tumor'
++ 'benign testicular sertoli cell tumor' SubClassOf 'testicular sertoli cell tumor'
++ 'benign testicular sertoli cell tumor' SubClassOf 'benign neoplasm of testis'
+
+Class: http://purl.obolibrary.org/obo/HP_0012743
+Label(s): Abdominal obesity 
++ 'Abdominal obesity' SubClassOf 'Obesity'
+
+Class: http://purl.obolibrary.org/obo/HP_0012732
+Label(s): Anorectal anomaly 
++ 'Anorectal anomaly' SubClassOf 'Abnormal gastrointestinal tract morphology'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000081
+Label(s): metanephros 
++ 'metanephros' SubClassOf 'kidney'
+
+Class: http://purl.obolibrary.org/obo/HP_0000973
+Label(s): Cutis laxa 
++ 'Cutis laxa' SubClassOf 'Abnormally lax or hyperextensible skin'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011233
+Label(s): Axenfeld-Rieger syndrome type 3 
++ 'Axenfeld-Rieger syndrome type 3' SubClassOf 'Axenfeld-Rieger syndrome'
++ 'Axenfeld-Rieger syndrome type 3' SubClassOf 'FOXC1-related anterior segment dysgenesis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009433
+Label(s): hypoplastic left heart syndrome 1 
++ 'hypoplastic left heart syndrome 1' SubClassOf 'hypoplastic left heart syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979245
+Label(s): neurodevelopmental disorder with behavioral, ear, and skeletal abnormalities 
++ 'neurodevelopmental disorder with behavioral, ear, and skeletal abnormalities' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1040014
+Label(s): PPFIA3-related neurodevelopmental disorder 
++ 'PPFIA3-related neurodevelopmental disorder' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020809
+Label(s): benign sertoli cell tumor 
++ 'benign sertoli cell tumor' SubClassOf 'Sertoli cell tumor'
++ 'benign sertoli cell tumor' SubClassOf 'sex cord-stromal benign neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020808
+Label(s): testicular sertoli cell tumor 
++ 'testicular sertoli cell tumor' SubClassOf 'Sertoli cell tumor'
++ 'testicular sertoli cell tumor' SubClassOf 'testicular sex cord-stromal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020754
+Label(s): visceral myopathy 1 
++ 'visceral myopathy 1' SubClassOf 'familial visceral myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020697
+Label(s): lung epithelial-myoepithelial carcinoma 
++ 'lung epithelial-myoepithelial carcinoma' SubClassOf 'epithelial-myoepithelial carcinoma'
++ 'lung epithelial-myoepithelial carcinoma' EquivalentTo 'epithelial-myoepithelial carcinoma' and ('disease has location' some 'lung')
++ 'lung epithelial-myoepithelial carcinoma' SubClassOf 'lung carcinoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020694
+Label(s): salivary gland epithelial myoepithelial carcinoma 
++ 'salivary gland epithelial myoepithelial carcinoma' EquivalentTo 'epithelial-myoepithelial carcinoma' and ('disease has location' some 'saliva-secreting gland')
++ 'salivary gland epithelial myoepithelial carcinoma' SubClassOf 'salivary gland carcinoma'
++ 'salivary gland epithelial myoepithelial carcinoma' SubClassOf 'epithelial-myoepithelial carcinoma'
+
+Class: http://purl.obolibrary.org/obo/HP_0500015
+Label(s): Abnormal cardiac test 
++ 'Abnormal cardiac test' SubClassOf 'Abnormality of the cardiovascular system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011151
+Label(s): exudative vitreoretinopathy 4 
++ 'exudative vitreoretinopathy 4' SubClassOf 'LRP5-related exudative vitreoretinopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013248
+Label(s): Fanconi anemia complementation group O 
++ 'Fanconi anemia complementation group O' SubClassOf 'Fanconi anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024527
+Label(s): glomerulopathy with fibronectin deposits 1 
++ 'glomerulopathy with fibronectin deposits 1' SubClassOf 'fibronectin glomerulopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013356
+Label(s): vesicoureteral reflux 3 
++ 'vesicoureteral reflux 3' SubClassOf 'familial vesicoureteral reflux'
+
+Class: http://purl.obolibrary.org/obo/HP_0006480
+Label(s): Premature loss of teeth 
++ 'Premature loss of teeth' SubClassOf 'Abnormality of the dentition'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012760
+Label(s): epilepsy, idiopathic generalized, susceptibility to, 5 
++ 'epilepsy, idiopathic generalized, susceptibility to, 5' SubClassOf 'inherited disease susceptibility'
++ 'epilepsy, idiopathic generalized, susceptibility to, 5' SubClassOf 'predisposes towards' some 'generalised epilepsy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979883
+Label(s): cranioectodermal dysplasia 6 
++ 'cranioectodermal dysplasia 6' SubClassOf 'cranioectodermal dysplasia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979880
+Label(s): brain small vessel disease 5 with osteoporosis 
++ 'brain small vessel disease 5 with osteoporosis' SubClassOf 'familial porencephaly'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979876
+Label(s): Wilms tumor 7 
++ 'Wilms tumor 7' SubClassOf 'hereditary Wilms tumor'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979875
+Label(s): neurodevelopmental disorder with achalasia, polyneuropathy, and alacrima 
++ 'neurodevelopmental disorder with achalasia, polyneuropathy, and alacrima' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979872
+Label(s): developmental dysplasia of the hip 4 
++ 'developmental dysplasia of the hip 4' SubClassOf 'developmental dysplasia of the hip'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979865
+Label(s): Popov-Chang syndrome 
++ 'Popov-Chang syndrome' SubClassOf 'Neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0971171
+Label(s): muscular dystrophy, limb-girdle, autosomal recessive 29 
++ 'muscular dystrophy, limb-girdle, autosomal recessive 29' SubClassOf 'SNUPN-related muscular dystrophy with or without multi-system involvement'
++ 'muscular dystrophy, limb-girdle, autosomal recessive 29' SubClassOf 'autosomal recessive limb-girdle muscular dystrophy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022982
+Label(s): peak aortic velocity 
++ 'peak aortic velocity' SubClassOf 'heart function attribute'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022983
+Label(s): nucleated red blood cell count 
++ 'nucleated red blood cell count' SubClassOf 'nucleated cell count'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022985
+Label(s): neonatal encephalopathy 
++ 'neonatal encephalopathy' SubClassOf 'Encephalopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022986
+Label(s): rare venous malformation 
++ 'rare venous malformation' SubClassOf 'Venous malformation'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956965
+Label(s): medulloblastoma SHH activated and TP53 wild-type 
++ 'medulloblastoma SHH activated and TP53 wild-type' SubClassOf 'medulloblastoma SHH activated'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956966
+Label(s): medulloblastoma non-WNT/non-SHH group 3 
++ 'medulloblastoma non-WNT/non-SHH group 3' SubClassOf 'medulloblastoma non-WNT/non-SHH'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956967
+Label(s): medulloblastoma non-WNT/non-SHH group 4 
++ 'medulloblastoma non-WNT/non-SHH group 4' SubClassOf 'medulloblastoma non-WNT/non-SHH'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956992
+Label(s): posterior fossa group A ependymoma 
++ 'posterior fossa group A ependymoma' SubClassOf 'posterior fossa ependymoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956993
+Label(s): posterior fossa group B ependymoma 
++ 'posterior fossa group B ependymoma' SubClassOf 'posterior fossa ependymoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979575
+Label(s): intellectual developmental disorder, autosomal dominant 76 
++ 'intellectual developmental disorder, autosomal dominant 76' SubClassOf 'intellectual disability, autosomal dominant'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979574
+Label(s): retinitis pigmentosa 100 
++ 'retinitis pigmentosa 100' SubClassOf 'retinitis pigmentosa'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979573
+Label(s): cardiomyopathy, familial hypertrophic, 31 
++ 'cardiomyopathy, familial hypertrophic, 31' SubClassOf 'familial hypertrophic cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979572
+Label(s): spermatogenic failure 101 
++ 'spermatogenic failure 101' SubClassOf 'azoospermia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979571
+Label(s): exudative vitreoretinopathy 8 
++ 'exudative vitreoretinopathy 8' SubClassOf 'exudative vitreoretinopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012341
+Label(s): celiac disease, susceptibility to, 3 
++ 'celiac disease, susceptibility to, 3' SubClassOf 'inherited disease susceptibility'
++ 'celiac disease, susceptibility to, 3' SubClassOf 'predisposes towards' some 'celiac disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016686
+Label(s): diffuse astrocytoma 
++ 'diffuse astrocytoma' SubClassOf 'low-grade astrocytoma'
++ 'diffuse astrocytoma' SubClassOf 'grade II glioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016682
+Label(s): giant cell glioblastoma 
++ 'giant cell glioblastoma' SubClassOf 'brain glioblastoma'
+
+Class: http://purl.obolibrary.org/obo/HP_0008197
+Label(s): Absence of pubertal development 
++ 'Absence of pubertal development' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0001905
+Label(s): Congenital thrombocytopenia 
++ 'Congenital thrombocytopenia' SubClassOf 'Thrombocytopenia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979246
+Label(s): Nil-Deshwar neurodevelopmental syndrome 
++ 'Nil-Deshwar neurodevelopmental syndrome' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979241
+Label(s): fanconi anemia, complementation group 10 
++ 'fanconi anemia, complementation group 10' SubClassOf 'Fanconi anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979239
+Label(s): cardiomyopathy, dilated, 1QQ 
++ 'cardiomyopathy, dilated, 1QQ' SubClassOf 'familial dilated cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979238
+Label(s): developmental and epileptic encephalopathy 118 
++ 'developmental and epileptic encephalopathy 118' SubClassOf 'genetic developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979237
+Label(s): pulmonary hypertension, primary, 7 
++ 'pulmonary hypertension, primary, 7' SubClassOf 'heritable pulmonary arterial hypertension'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979236
+Label(s): cardiomyopathy, dilated, 2l 
++ 'cardiomyopathy, dilated, 2l' SubClassOf 'familial dilated cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979231
+Label(s): oocyte/zygote/embryo maturation arrest 23 
++ 'oocyte/zygote/embryo maturation arrest 23' SubClassOf 'inherited oocyte maturation defect'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979228
+Label(s): ectodermal dysplasia 17 with or without limb malformations 
++ 'ectodermal dysplasia 17 with or without limb malformations' SubClassOf 'ectodermal dysplasia syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979227
+Label(s): Guillouet-Gordon syndrome 
++ 'Guillouet-Gordon syndrome' SubClassOf 'genetic disorder'
++ 'Guillouet-Gordon syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100583
+Label(s): Jeune syndrome - GRK2-related 
++ 'Jeune syndrome - GRK2-related' SubClassOf 'Jeune syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100557
+Label(s): RBFOX2-related congenital heart disorder 
++ 'RBFOX2-related congenital heart disorder' SubClassOf 'cardiogenetic disease'
++ 'RBFOX2-related congenital heart disorder' SubClassOf 'congenital heart disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100539
+Label(s): hemiplegic migraine-developmental and epileptic encephalopathy spectrum 
++ 'hemiplegic migraine-developmental and epileptic encephalopathy spectrum' SubClassOf 'genetic developmental and epileptic encephalopathy'
++ 'hemiplegic migraine-developmental and epileptic encephalopathy spectrum' SubClassOf 'familial hemiplegic migraine'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100525
+Label(s): TCF7L2-related neurodevelopmental disorder 
++ 'TCF7L2-related neurodevelopmental disorder' SubClassOf 'Neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0004813
+Label(s): tuberculous pneumothorax 
++ 'tuberculous pneumothorax' SubClassOf 'pleural tuberculosis'
++ 'tuberculous pneumothorax' SubClassOf 'pneumothorax'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000379
+Label(s): malignant Sertoli-Leydig cell tumor 
++ 'malignant Sertoli-Leydig cell tumor' SubClassOf 'Sertoli-Leydig cell tumor'
++ 'malignant Sertoli-Leydig cell tumor' SubClassOf 'testicular carcinoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000378
+Label(s): malignant Sertoli cell tumor 
++ 'malignant Sertoli cell tumor' SubClassOf 'Sertoli cell tumor'
++ 'malignant Sertoli cell tumor' SubClassOf 'reproductive system cancer'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978291
+Label(s): retinitis pigmentosa 99 
++ 'retinitis pigmentosa 99' SubClassOf 'retinitis pigmentosa'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978298
+Label(s): combined oxidative phosphorylation deficiency 60 
++ 'combined oxidative phosphorylation deficiency 60' SubClassOf 'combined oxidative phosphorylation deficiency'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700351
+Label(s): argyrophilic grain disease 
++ 'argyrophilic grain disease' SubClassOf 'tauopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100235
+Label(s): FOXC1-related anterior segment dysgenesis 
++ 'FOXC1-related anterior segment dysgenesis' SubClassOf 'iridogoniodysgenesis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000213
+Label(s): autoimmune disease, multisystem, infantile-onset 
++ 'autoimmune disease, multisystem, infantile-onset' SubClassOf 'genetic disorder'
++ 'autoimmune disease, multisystem, infantile-onset' SubClassOf 'type II hypersensitivity reaction disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700273
+Label(s): RAD51C-related cancer predisposition 
++ 'RAD51C-related cancer predisposition' SubClassOf 'hereditary neoplastic syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0005731
+Label(s): obsolete dipetalonemiasis 
++ 'obsolete dipetalonemiasis' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0600014
+Label(s): alveolar capillary dysplasia without misalignment of pulmonary veins 
++ 'alveolar capillary dysplasia without misalignment of pulmonary veins' SubClassOf 'congenital pulmonary veins anomaly'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014505
+Label(s): developmental and epileptic encephalopathy, 27 
++ 'developmental and epileptic encephalopathy, 27' SubClassOf 'infantile spasms'
++ 'developmental and epileptic encephalopathy, 27' SubClassOf 'GRIN2B-related complex neurodevelopmental disorder'
++ 'developmental and epileptic encephalopathy, 27' SubClassOf 'genetic developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700348
+Label(s): BMPR1A-related juvenile polyposis syndrome 
++ 'BMPR1A-related juvenile polyposis syndrome' SubClassOf 'juvenile polyposis syndrome'
++ 'BMPR1A-related juvenile polyposis syndrome' SubClassOf 'autosomal dominant disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700350
+Label(s): GRIN2B-related complex neurodevelopmental disorder 
++ 'GRIN2B-related complex neurodevelopmental disorder' SubClassOf 'GRIN-related complex neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1040008
+Label(s): CAMK2D-related neurodevelopmental disorder and dilated cardiomyopathy 
++ 'CAMK2D-related neurodevelopmental disorder and dilated cardiomyopathy' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859763
+Label(s): mosaic neurofibromatosis type 1 
++ 'mosaic neurofibromatosis type 1' SubClassOf 'neurofibromatosis/schwannomatosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012497
+Label(s): congenital stationary night blindness autosomal dominant 3 
++ 'congenital stationary night blindness autosomal dominant 3' SubClassOf 'autosomal dominant disease'
++ 'congenital stationary night blindness autosomal dominant 3' SubClassOf 'congenital nervous system disorder'
++ 'congenital stationary night blindness autosomal dominant 3' SubClassOf 'congenital stationary night blindness'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859615
+Label(s): diffuse astrocytoma, MYB- or MYBL1-altered 
++ 'diffuse astrocytoma, MYB- or MYBL1-altered' SubClassOf 'diffuse astrocytoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859614
+Label(s): diffuse low-grade glioma, MAPK pathway–altered 
++ 'diffuse low-grade glioma, MAPK pathway–altered' SubClassOf 'low grade glioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859592
+Label(s): IDH-mutant and 1p/19q-codeleted oligodendroglioma 
++ 'IDH-mutant and 1p/19q-codeleted oligodendroglioma' SubClassOf 'anaplastic oligodendroglioma'
+
+Class: http://purl.obolibrary.org/obo/HP_0003771
+Label(s): Pulp calcification 
++ 'Pulp calcification' SubClassOf 'Abnormality of the dentition'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859008
+Label(s): neurofibromatosis/schwannomatosis 
++ 'neurofibromatosis/schwannomatosis' SubClassOf 'hereditary neoplastic syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979229
+Label(s): congenital myopathy 26 
++ 'congenital myopathy 26' SubClassOf 'congenital myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979232
+Label(s): oocyte/zygote/embryo maturation arrest 24 
++ 'oocyte/zygote/embryo maturation arrest 24' SubClassOf 'inherited oocyte maturation defect'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979233
+Label(s): immunodysregulation with variable immunodeficiency and autoimmunity 
++ 'immunodysregulation with variable immunodeficiency and autoimmunity' SubClassOf 'inborn error of immunity'
++ 'immunodysregulation with variable immunodeficiency and autoimmunity' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979234
+Label(s): ICHAD syndrome 
++ 'ICHAD syndrome' SubClassOf 'genetic disorder'
++ 'ICHAD syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979235
+Label(s): autoimmune disease, multisystem, infantile-onset, 5 
++ 'autoimmune disease, multisystem, infantile-onset, 5' SubClassOf 'autoimmune disease, multisystem, infantile-onset'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979243
+Label(s): cardiomyopathy, dilated, 2M 
++ 'cardiomyopathy, dilated, 2M' SubClassOf 'familial dilated cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0035534
+Label(s): DONSON-related microcephaly-short stature-limb abnormalities spectrum 
++ 'DONSON-related microcephaly-short stature-limb abnormalities spectrum' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002479
+Label(s): Sertoli-Leydig cell tumor 
++ 'Sertoli-Leydig cell tumor' SubClassOf 'testicular sex cord-stromal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060177
+Label(s): developmental and epileptic encephalopathy 119 
++ 'developmental and epileptic encephalopathy 119' SubClassOf 'genetic developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956995
+Label(s): astrocytoma, IDH-mutant, grade 3 
++ 'astrocytoma, IDH-mutant, grade 3' SubClassOf 'IDH-mutant anaplastic astrocytoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010016
+Label(s): sclerosteosis 1 
++ 'sclerosteosis 1' SubClassOf 'sclerosteosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018738
+Label(s): benign metanephric tumor 
++ 'benign metanephric tumor' SubClassOf 'disease has location' some 'metanephros'
++ 'benign metanephric tumor' EquivalentTo 'benign neoplasm' and ('disease has location' some 'metanephros')
++ 'benign metanephric tumor' SubClassOf 'kidney benign neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0030872
+Label(s): Abnormal cardiac ventricular function 
++ 'Abnormal cardiac ventricular function' SubClassOf 'Abnormal cardiovascular system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0030783
+Label(s): Increased circulating interleukin 6 concentration 
++ 'Increased circulating interleukin 6 concentration' SubClassOf 'Abnormality of immune system physiology'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979866
+Label(s): oculovertebral syndrome 
++ 'oculovertebral syndrome' SubClassOf 'genetic disorder'
++ 'oculovertebral syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979871
+Label(s): Alsahan-Harris syndrome 
++ 'Alsahan-Harris syndrome' SubClassOf 'syndromic disease'
++ 'Alsahan-Harris syndrome' SubClassOf 'ciliopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979873
+Label(s): brain small vessel disease 4 
++ 'brain small vessel disease 4' SubClassOf 'familial porencephaly'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014861
+Label(s): autoimmune disease, multisystem, infantile-onset, 2 
++ 'autoimmune disease, multisystem, infantile-onset, 2' SubClassOf 'autoimmune disease, multisystem, infantile-onset'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011413
+Label(s): cataract 9 multiple types 
++ 'cataract 9 multiple types' SubClassOf 'cataract'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0015795
+Label(s): undifferentiated embryonal sarcoma of the liver 
++ 'undifferentiated embryonal sarcoma of the liver' SubClassOf 'liver and intrahepatic bile duct neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979226
+Label(s): leukodystrophy, adult-onset, autosomal dominant, without amyloid angiopathy 
++ 'leukodystrophy, adult-onset, autosomal dominant, without amyloid angiopathy' SubClassOf 'leukodystrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1040003
+Label(s): KCND2-related neurodevelopmental disorder with or without seizures 
++ 'KCND2-related neurodevelopmental disorder with or without seizures' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0034021
+Label(s): spondylodysplastic Ehlers-Danlos syndrome 
++ 'spondylodysplastic Ehlers-Danlos syndrome' SubClassOf 'Ehlers-Danlos syndrome'
++ 'spondylodysplastic Ehlers-Danlos syndrome' SubClassOf 'linkeropathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011052
+Label(s): amelia cleft lip palate hydrocephalus iris coloboma 
++ 'amelia cleft lip palate hydrocephalus iris coloboma' SubClassOf 'syndromic disease'
++ 'amelia cleft lip palate hydrocephalus iris coloboma' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007963
+Label(s): melanoma, cutaneous malignant, susceptibility to, 1 
++ 'melanoma, cutaneous malignant, susceptibility to, 1' SubClassOf 'susceptibility to familial cutaneous melanoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018437
+Label(s): acute myeloid leukemia with NPM1 somatic mutations 
++ 'acute myeloid leukemia with NPM1 somatic mutations' SubClassOf 'acute myeloid leukemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007932
+Label(s): age related macular degeneration 2 
++ 'age related macular degeneration 2' SubClassOf 'age-related macular degeneration'
 
 ----------------------------------
 
@@ -103,1989 +803,121 @@ Label(s): organism
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/NCBITaxon_447426
-Label(s): human oral metagenome 
-- 'human oral metagenome' SubClassOf 'organism'
-+ 'human oral metagenome' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007784
-Label(s): selective pituitary resistance to thyroid hormone 
-- 'selective pituitary resistance to thyroid hormone' SubClassOf 'thyroid hormone resistance syndrome'
-+ 'selective pituitary resistance to thyroid hormone' SubClassOf 'resistance to thyroid hormone due to a mutation in thyroid hormone receptor beta'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019200
-Label(s): retinitis pigmentosa 
-- 'retinitis pigmentosa' SubClassOf 'inborn disorder of amino acid transport'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007626
-Label(s): familial congenital palsy of trochlear nerve 
-- 'familial congenital palsy of trochlear nerve' SubClassOf 'fourth cranial nerve palsy'
-+ 'familial congenital palsy of trochlear nerve' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700463
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019123
-Label(s): continuous spikes and waves during sleep 
-- 'continuous spikes and waves during sleep' SubClassOf 'syndromic disease'
-+ 'continuous spikes and waves during sleep' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0032766
-Label(s): hypoalphalipoproteinemia, primary, 2 
-- 'hypoalphalipoproteinemia, primary, 2' SubClassOf 'genetic disorder'
-+ 'hypoalphalipoproteinemia, primary, 2' SubClassOf 'apolipoprotein A-I deficiency'
-+ 'hypoalphalipoproteinemia, primary, 2' SubClassOf 'inborn errors of metabolism'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005376
-Label(s): UACC-257 
-- 'UACC-257' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('zone of skin' and ('part_of' some 'organism'))))
-+ 'UACC-257' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('zone of skin' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005377
-Label(s): UACC-62 
-- 'UACC-62' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('zone of skin' and ('part_of' some 'organism'))))
-+ 'UACC-62' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('zone of skin' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001090
-Label(s): BJABK3 
-- 'BJABK3' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'BJABK3' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001108
-Label(s): GM06993 
-- 'GM06993' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM06993' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0000769
-Label(s): Epstein-Barr virus infection 
-- 'Epstein-Barr virus infection' SubClassOf 'primary viral infectious disease'
-+ 'Epstein-Barr virus infection' SubClassOf 'Herpesviridae infectious disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007224
-Label(s): coronavirus infectious disease 
-- 'coronavirus infectious disease' SubClassOf 'Coronaviridae infectious disease'
-+ 'coronavirus infectious disease' SubClassOf 'viral disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004990
-Label(s): J1 
-- 'J1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-(('embryo' or 'embryonic structure') and ('part_of' some 'organism'))))
-+ 'J1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-(('embryo' or 'embryonic structure') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0700127
-Label(s): presynaptic congenital myasthenic syndrome 
-- 'presynaptic congenital myasthenic syndrome' SubClassOf 'congenital myasthenic syndrome'
-+ 'presynaptic congenital myasthenic syndrome' SubClassOf 'congenital myasthenic syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0700134
-Label(s): resistance to thyroid hormone due to a mutation in thyroid hormone receptor beta 
-+ 'resistance to thyroid hormone due to a mutation in thyroid hormone receptor beta' SubClassOf 'thyroid hormone resistance syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000747
-Label(s): parapsoriasis 
-- 'parapsoriasis' SubClassOf 'psoriasis'
-+ 'parapsoriasis' SubClassOf 'dermatitis'
-+ 'parapsoriasis' SubClassOf 'psoriasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0700136
-Label(s): apolipoprotein A-I deficiency 
-- 'apolipoprotein A-I deficiency' SubClassOf 'hypoalphalipoproteinemia'
-+ 'apolipoprotein A-I deficiency' SubClassOf 'hypoalphalipoproteinemia'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1000108
-Label(s): Benign Carotid Body Paraganglioma 
-- 'Benign Carotid Body Paraganglioma' SubClassOf 'benign blood vessel neoplasm'
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_408172
-Label(s): marine metagenome 
-- 'marine metagenome' SubClassOf 'organism'
-+ 'marine metagenome' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_358574
-Label(s): uncultured microorganism 
-- 'uncultured microorganism' SubClassOf 'organism'
-+ 'uncultured microorganism' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_2759
-Label(s): Eukaryota 
-- 'Eukaryota' SubClassOf 'organism'
-+ 'Eukaryota' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010131
-Label(s): thyroid hormone resistance, generalized, autosomal recessive 
-+ 'thyroid hormone resistance, generalized, autosomal recessive' SubClassOf 'resistance to thyroid hormone due to a mutation in thyroid hormone receptor beta'
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_155900
-Label(s): uncultured organism 
-- 'uncultured organism' SubClassOf 'organism'
-+ 'uncultured organism' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014213
-Label(s): intellectual disability-feeding difficulties-developmental delay-microcephaly syndrome 
-- 'intellectual disability-feeding difficulties-developmental delay-microcephaly syndrome' SubClassOf 'CTCF-related neurodevelopmental disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014052
-Label(s): congenital myasthenic syndrome 8 
-+ 'congenital myasthenic syndrome 8' SubClassOf 'presynaptic congenital myasthenic syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001062
-Label(s): cytomegalovirus infection 
-- 'cytomegalovirus infection' SubClassOf 'primary viral infectious disease'
-+ 'cytomegalovirus infection' SubClassOf 'Herpesviridae infectious disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001083
-Label(s): 293TsiLL 
-- '293TsiLL' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ '293TsiLL' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001110
-Label(s): GM07000 
-- 'GM07000' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM07000' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001145
-Label(s): GM12248 
-- 'GM12248' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12248' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001119
-Label(s): GM11831 
-- 'GM11831' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11831' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001129
-Label(s): GM12004 
-- 'GM12004' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12004' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001132
-Label(s): GM12043 
-- 'GM12043' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12043' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001138
-Label(s): GM12146 
-- 'GM12146' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12146' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001144
-Label(s): GM12239 
-- 'GM12239' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12239' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001158
-Label(s): GM12815 
-- 'GM12815' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12815' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001166
-Label(s): NCI-H720 
-- 'NCI-H720' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('lung' and ('part_of' some 'organism'))))
-+ 'NCI-H720' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('lung' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001186
-Label(s): HepaRG 
-- 'HepaRG' SubClassOf 'derives_from' some 
-('hepatocyte on CELLxGENE CellGuide' and ('part_of' some 
-('liver' and ('part_of' some 'organism'))))
-+ 'HepaRG' SubClassOf 'derives_from' some 
-('hepatocyte on CELLxGENE CellGuide' and ('part_of' some 
-('liver' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001194
-Label(s): IB3-1 
-- 'IB3-1' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('bronchus' and ('part_of' some 'organism'))))
-+ 'IB3-1' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('bronchus' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001226
-Label(s): R18 
-- 'R18' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'R18' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001229
-Label(s): R46 
-- 'R46' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'R46' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001237
-Label(s): SKGT4 
-- 'SKGT4' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('esophagus' and ('part_of' some 'organism'))))
-+ 'SKGT4' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('esophagus' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001249
-Label(s): TERV 
-- 'TERV' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ 'TERV' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/MONDO_0957221
-Label(s): spastic paraplegia 70, autosomal recessive 
-- 'spastic paraplegia 70, autosomal recessive' SubClassOf 'hereditary spastic paraplegia'
-+ 'spastic paraplegia 70, autosomal recessive' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_410658
-Label(s): soil metagenome 
-- 'soil metagenome' SubClassOf 'organism'
-+ 'soil metagenome' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_81077
-Label(s): artificial sequences 
-- 'artificial sequences' SubClassOf 'organism'
-+ 'artificial sequences' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002174
-Label(s): EB3 
-- 'EB3' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'EB3' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/HP_0200037
-Label(s): Skin vesicle 
-- 'Skin vesicle' SubClassOf 'Abnormal skin morphology'
-+ 'Skin vesicle' SubClassOf 'Abnormal blistering of the skin'
-
-Class: http://purl.obolibrary.org/obo/BTO_0000256
-Label(s): myoblast cell line 
-- 'myoblast cell line' EquivalentTo 'derives_from' some 
-('myoblast' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'myoblast cell line' EquivalentTo 'derives_from' some 
-('myoblast' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021053
-Label(s): carotid body paraganglioma 
-- 'carotid body paraganglioma' SubClassOf 'arterial disorder'
-- 'carotid body paraganglioma' SubClassOf 'blood vessel neoplasm'
-- 'carotid body paraganglioma' SubClassOf 'neurovascular disorder'
-
-Class: http://purl.obolibrary.org/obo/BTO_0000164
-Label(s): Burkitt lymphoma cell 
-- 'Burkitt lymphoma cell' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'Burkitt lymphoma cell' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013741
-Label(s): familial temporal lobe epilepsy 5 
-- 'familial temporal lobe epilepsy 5' SubClassOf 'temporal lobe epilepsy'
-+ 'familial temporal lobe epilepsy 5' SubClassOf http://purl.obolibrary.org/obo/MONDO_0800493
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003040
-Label(s): embryonic cell line 
-- 'embryonic cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-(('embryo' or 'embryonic structure') and ('part_of' some 'organism'))))
-- 'embryonic cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-(('embryo' or 'embryonic structure') and ('part_of' some 'organism'))))
-+ 'embryonic cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-(('embryo' or 'embryonic structure') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'embryonic cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-(('embryo' or 'embryonic structure') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013626
-Label(s): psoriasis 14, pustular 
-- 'psoriasis 14, pustular' SubClassOf 'psoriasis'
-+ 'psoriasis 14, pustular' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100491
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013552
-Label(s): hereditary spastic paraplegia 52 
-+ 'hereditary spastic paraplegia 52' SubClassOf 'AP-4 deficiency syndrome'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005292
-Label(s): lymphoblastoid cell line 
-- 'lymphoblastoid cell line' EquivalentTo 'cultured cell' and ('derives_from' some 
-('lymphoblast' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'lymphoblastoid cell line' EquivalentTo 'cultured cell' and ('derives_from' some 
-('lymphoblast' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://purl.obolibrary.org/obo/BTO_0004263
-Label(s): COM-3 cell 
-- 'COM-3 cell' SubClassOf 'derives_from' some 
-('myoblast' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'COM-3 cell' SubClassOf 'derives_from' some 
-('myoblast' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013401
-Label(s): hereditary spastic paraplegia 51 
-+ 'hereditary spastic paraplegia 51' SubClassOf 'AP-4 deficiency syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0976133
-Label(s): myopathy, myofibrillar, 13, with rimmed vacuoles 
-- 'myopathy, myofibrillar, 13, with rimmed vacuoles' SubClassOf 'myofibrillar myopathy'
-+ 'myopathy, myofibrillar, 13, with rimmed vacuoles' SubClassOf 'neuronopathy, distal hereditary motor, autosomal dominant'
-+ 'myopathy, myofibrillar, 13, with rimmed vacuoles' SubClassOf 'myofibrillar myopathy'
-+ 'myopathy, myofibrillar, 13, with rimmed vacuoles' SubClassOf 'congenital nervous system disorder'
-
-Class: http://purl.obolibrary.org/obo/OBI_0000968
-Label(s): device 
-- 'device' SubClassOf 'processed material'
-+ 'device' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/OBI_0000869
-Label(s): polyA RNA extract polyA RNA 
-- 'polyA RNA extract' SubClassOf 'processed material'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011758
-Label(s): Hurler syndrome 
-- 'Hurler syndrome' SubClassOf 'familial restrictive cardiomyopathy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001115
-Label(s): GM07345 
-- 'GM07345' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM07345' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001118
-Label(s): GM11830 
-- 'GM11830' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11830' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001127
-Label(s): GM11995 
-- 'GM11995' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11995' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001139
-Label(s): GM12154 
-- 'GM12154' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12154' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001152
-Label(s): GM12761 
-- 'GM12761' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12761' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001193
-Label(s): HT-29 
-- 'HT-29' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('colon' and ('part_of' some 'organism'))))
-+ 'HT-29' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('colon' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022835
-Label(s): HL-1 
-- 'HL-1' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'HL-1' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022811
-Label(s): MA-104 
-- 'MA-104' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'MA-104' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://purl.obolibrary.org/obo/OBI_0000552
-Label(s): reverse transcribed polymerase chain reaction 
-- 'reverse transcribed polymerase chain reaction' SubClassOf 'has_output' some 'processed material'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022797
-Label(s): MES13 
-- 'MES13' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'MES13' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_2
-Label(s): Bacteria 
-- 'Bacteria' SubClassOf 'organism'
-+ 'Bacteria' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022724
-Label(s): Tn5 B1-4 
-- 'Tn5 B1-4' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'Tn5 B1-4' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001219
-Label(s): MM1 
-- 'MM1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'MM1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/OBI_0000415
-Label(s): PCR polymerase chain reaction 
-- 'polymerase chain reaction' SubClassOf 'has_output' some 'processed material'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005736
-Label(s): bronchial smooth muscle cell derived cell line 
-- 'bronchial smooth muscle cell derived cell line' EquivalentTo 'derives_from' some 
-('bronchial smooth muscle cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'bronchial smooth muscle cell derived cell line' SubClassOf 'derives_from' some 
-('bronchial smooth muscle cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'bronchial smooth muscle cell derived cell line' SubClassOf 'derives_from' some 
-('bronchial smooth muscle cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'bronchial smooth muscle cell derived cell line' EquivalentTo 'derives_from' some 
-('bronchial smooth muscle cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002043
-Label(s): B140P 
-- 'B140P' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'B140P' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005730
-Label(s): endothelial cell derived cell line 
-- 'endothelial cell derived cell line' EquivalentTo 'derives_from' some 
-('endothelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'endothelial cell derived cell line' SubClassOf 'derives_from' some 
-('endothelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'endothelial cell derived cell line' EquivalentTo 'derives_from' some 
-('endothelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'endothelial cell derived cell line' SubClassOf 'derives_from' some 
-('endothelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002111
-Label(s): ARH77 
-- 'ARH77' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('lymphatic part of lymphoid system' and ('part_of' some 'organism'))))
-+ 'ARH77' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('lymphatic part of lymphoid system' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002169
-Label(s): Daudi 
-- 'Daudi' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'Daudi' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/OBI_0400155
-Label(s): water bath 
-- 'water bath' SubClassOf 'device'
-+ 'water bath' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400118
-Label(s): vortexer 
-- 'vortexer' SubClassOf 'device'
-+ 'vortexer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400116
-Label(s): thermal cycler 
-- 'thermal cycler' SubClassOf 'device'
-+ 'thermal cycler' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400114
-Label(s): sonicator 
-- 'sonicator' SubClassOf 'device'
-+ 'sonicator' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400113
-Label(s): oligonucleotide synthesizer 
-- 'oligonucleotide synthesizer' SubClassOf 'device'
-+ 'oligonucleotide synthesizer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400108
-Label(s): heating block 
-- 'heating block' SubClassOf 'device'
-+ 'heating block' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400106
-Label(s): centrifuge 
-- 'centrifuge' SubClassOf 'device'
-+ 'centrifuge' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400104
-Label(s): array scanner 
-- 'array scanner' SubClassOf 'device'
-+ 'array scanner' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400103
-Label(s): DNA sequencer 
-- 'DNA sequencer' SubClassOf 'device'
-+ 'DNA sequencer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0000049
-Label(s): mass spectrometer 
-- 'mass spectrometer' SubClassOf 'device'
-+ 'mass spectrometer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0100026
-Label(s): organism 
-- 'organism' SubClassOf 'material entity'
-+ 'organism' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/OBI_0600044
-Label(s): lavage 
-- 'lavage' SubClassOf 'has_output' some 'processed material'
-
-Class: http://purl.obolibrary.org/obo/OBI_0600015
-Label(s): group assignment 
-- 'group assignment' SubClassOf 'has_input' some 'organism'
-+ 'group assignment' SubClassOf 'has_input' some http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/OBI_0600005
-Label(s): collecting specimen from organism 
-- 'collecting specimen from organism' SubClassOf 'has_input' some 'organism'
-+ 'collecting specimen from organism' SubClassOf 'has_input' some http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/OBI_1000023
-Label(s): cell culture supernatant 
-- 'cell culture supernatant' SubClassOf 'processed material'
-
-Class: http://purl.obolibrary.org/obo/HP_0000533
-Label(s): Chorioretinal atrophy 
-- 'Chorioretinal atrophy' SubClassOf 'Chorioretinal degeneration'
-+ 'Chorioretinal atrophy' SubClassOf 'Abnormal choroid morphology'
-+ 'Chorioretinal atrophy' SubClassOf 'Abnormal retinal morphology'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002891
-Label(s): prostate derived cell line 
-- 'prostate derived cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('prostate gland' and ('part_of' some 'organism'))))
-- 'prostate derived cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('prostate gland' and ('part_of' some 'organism'))))
-+ 'prostate derived cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('prostate gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'prostate derived cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('prostate gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002886
-Label(s): stem cell derived cell line 
-- 'stem cell derived cell line' SubClassOf 'derives_from' some 
-('stem cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'stem cell derived cell line' EquivalentTo 'derives_from' some 
-('stem cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'stem cell derived cell line' SubClassOf 'derives_from' some 
-('stem cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'stem cell derived cell line' EquivalentTo 'derives_from' some 
-('stem cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002884
-Label(s): mammary gland cell line 
-- 'mammary gland cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('mammary gland' and ('part_of' some 'organism'))))
-- 'mammary gland cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('mammary gland' and ('part_of' some 'organism'))))
-+ 'mammary gland cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('mammary gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'mammary gland cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('mammary gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002883
-Label(s): haemopoietic system cell line 
-- 'haemopoietic system cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('hematopoietic system' and ('part_of' some 'organism'))))
-- 'haemopoietic system cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('hematopoietic system' and ('part_of' some 'organism'))))
-+ 'haemopoietic system cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('hematopoietic system' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'haemopoietic system cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('hematopoietic system' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002836
-Label(s): MS-1 
-- 'MS-1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'MS-1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002834
-Label(s): MKN74 
-- 'MKN74' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'MKN74' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002826
-Label(s): KS-IMM 
-- 'KS-IMM' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'KS-IMM' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002802
-Label(s): SK-N-SH_RA 
-- 'SK-N-SH_RA' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'SK-N-SH_RA' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002800
-Label(s): SAEC 
-- 'SAEC' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'SAEC' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002799
-Label(s): NHEK 
-- 'NHEK' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'NHEK' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002798
-Label(s): NB4 
-- 'NB4' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('bone marrow' and ('part_of' some 'organism'))))
-+ 'NB4' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('bone marrow' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002781
-Label(s): chorion cell line 
-- 'chorion cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('chorion membrane' and ('part_of' some 'organism'))))
-- 'chorion cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('chorion membrane' and ('part_of' some 'organism'))))
-+ 'chorion cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('chorion membrane' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'chorion cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('chorion membrane' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002779
-Label(s): BJ 
-- 'BJ' SubClassOf 'derives_from' some 
-('fibroblast' and ('part_of' some 
-('prepuce of penis' and ('part_of' some 'organism'))))
-+ 'BJ' SubClassOf 'derives_from' some 
-('fibroblast' and ('part_of' some 
-('prepuce of penis' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002776
-Label(s): H0287 
-- 'H0287' SubClassOf 'derives_from' some 
-('lymphoblast' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'H0287' SubClassOf 'derives_from' some 
-('lymphoblast' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002612
-Label(s): human herpesvirus 8 infection 
-- 'human herpesvirus 8 infection' SubClassOf 'primary viral infectious disease'
-+ 'human herpesvirus 8 infection' SubClassOf 'Herpesviridae infectious disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008569
-Label(s): thyroid hormone resistance, generalized, autosomal dominant 
-+ 'thyroid hormone resistance, generalized, autosomal dominant' SubClassOf 'resistance to thyroid hormone due to a mutation in thyroid hormone receptor beta'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002247
-Label(s): NC37 
-- 'NC37' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'NC37' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006509
-Label(s): Varicella Zoster infection 
-- 'Varicella Zoster infection' SubClassOf 'primary viral infectious disease'
-+ 'Varicella Zoster infection' SubClassOf 'Herpesviridae infectious disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002181
-Label(s): GA10 
-- 'GA10' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GA10' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002173
-Label(s): EB2 
-- 'EB2' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'EB2' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002172
-Label(s): EB1 
-- 'EB1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'EB1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002160
-Label(s): DG75 
-- 'DG75' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'DG75' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002155
-Label(s): ChaGoK1 
-- 'ChaGoK1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'ChaGoK1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022376
-Label(s): B5-589 cell 
-- 'B5-589 cell' SubClassOf 'derives_from' some 
-('mammary gland epithelial cell on CELLxGENE CellGuide' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'B5-589 cell' SubClassOf 'derives_from' some 
-('mammary gland epithelial cell on CELLxGENE CellGuide' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002112
-Label(s): AsPC1 
-- 'AsPC1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('pancreas' and ('part_of' some 'organism'))))
-+ 'AsPC1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('pancreas' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002109
-Label(s): AGS 
-- 'AGS' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('stomach' and ('part_of' some 'organism'))))
-+ 'AGS' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('stomach' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002055
-Label(s): G1E-ER4 
-- 'G1E-ER4' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'G1E-ER4' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002054
-Label(s): Fu97 
-- 'Fu97' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'Fu97' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002042
-Label(s): B140H 
-- 'B140H' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'B140H' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002041
-Label(s): B117P 
-- 'B117P' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'B117P' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002040
-Label(s): B117H 
-- 'B117H' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'B117H' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002009
-Label(s): fibroblast derived cell line 
-- 'fibroblast derived cell line' EquivalentTo 'derives_from' some 
-('fibroblast' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'fibroblast derived cell line' SubClassOf 'derives_from' some 
-('fibroblast' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'fibroblast derived cell line' EquivalentTo 'derives_from' some 
-('fibroblast' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'fibroblast derived cell line' SubClassOf 'derives_from' some 
-('fibroblast' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013396
-Label(s): chromosome 1p32-p31 deletion syndrome 
-+ 'chromosome 1p32-p31 deletion syndrome' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/HP_0001279
-Label(s): Syncope 
-+ 'Syncope' SubClassOf 'Loss of consciousness'
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_32630
-Label(s): synthetic construct 
-- 'synthetic construct' SubClassOf 'organism'
-+ 'synthetic construct' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022753
-Label(s): Mv1Lu 
-- 'Mv1Lu' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'Mv1Lu' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022771
-Label(s): BSC-40 
-- 'BSC-40' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism')))))
-+ 'BSC-40' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022791
-Label(s): N18 
-- 'N18' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'N18' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022794
-Label(s): OKP 
-- 'OKP' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism')))))
-+ 'OKP' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022795
-Label(s): MES-23.5  
-- 'MES-23.5 ' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'MES-23.5 ' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001107
-Label(s): GM06985 
-- 'GM06985' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM06985' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022801
-Label(s): B95-8 
-- 'B95-8' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism')))))
-+ 'B95-8' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://purl.obolibrary.org/obo/OBI_0000047
-Label(s): processed material 
-- 'processed material' SubClassOf 'material entity'
-+ 'processed material' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/BTO_0003250
-Label(s): colonic epithelium cell line 
-- 'colonic epithelium cell line' EquivalentTo 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('colon' and ('part_of' some 'organism'))))
-+ 'colonic epithelium cell line' EquivalentTo 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('colon' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001252
-Label(s): TERV-ST110 
-- 'TERV-ST110' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ 'TERV-ST110' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/OBI_0400105
-Label(s): arrayer 
-- 'arrayer' SubClassOf 'device'
-+ 'arrayer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400107
-Label(s): computer 
-- 'computer' SubClassOf 'device'
-+ 'computer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400109
-Label(s): homogenizer 
-- 'homogenizer' SubClassOf 'device'
-+ 'homogenizer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400110
-Label(s): hybridization chamber 
-- 'hybridization chamber' SubClassOf 'device'
-+ 'hybridization chamber' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400111
-Label(s): hybridization station 
-- 'hybridization station' SubClassOf 'device'
-+ 'hybridization station' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400112
-Label(s): liquid handler 
-- 'liquid handler' SubClassOf 'device'
-+ 'liquid handler' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400115
-Label(s): spectrophotometer 
-- 'spectrophotometer' SubClassOf 'device'
-+ 'spectrophotometer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0400117
-Label(s): vacuum dryer 
-- 'vacuum dryer' SubClassOf 'device'
-+ 'vacuum dryer' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/OBI_0000512
-Label(s): single cell isolation isolation of cell population 
-- 'single cell isolation' SubClassOf 'has_output' some 'processed material'
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_556182
-Label(s): freshwater sediment metagenome 
-- 'freshwater sediment metagenome' SubClassOf 'organism'
-+ 'freshwater sediment metagenome' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/OBI_0000711
-Label(s): library preparation 
-- 'library preparation' SubClassOf 'has_output' some 'processed material'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700294
-Label(s): CTCF-related neurodevelopmental disorder 
-- 'CTCF-related neurodevelopmental disorder' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'CTCF-related neurodevelopmental disorder' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/OBI_0000924
-Label(s): labeled specimen 
-- 'labeled specimen' SubClassOf 'processed material'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003064
-Label(s): primary cell line 
-- 'primary cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'primary cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007474
-Label(s): Roseolovirus infectious disease 
-- 'Roseolovirus infectious disease' SubClassOf 'primary viral infectious disease'
-+ 'Roseolovirus infectious disease' SubClassOf 'Herpesviridae infectious disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008666
-Label(s): volvulus of midgut 
-+ 'volvulus of midgut' SubClassOf 'intestinal disease'
-
-Class: http://purl.obolibrary.org/obo/OBI_0003369
-Label(s): assay kit 
-- 'assay kit' SubClassOf 'device'
-+ 'assay kit' SubClassOf http://purl.obolibrary.org/obo/COB_0000026
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000914
-Label(s): cerebral arteriopathy, autosomal dominant, with subcortical infarcts and leukoencephalopathy, type 1 
-+ 'cerebral arteriopathy, autosomal dominant, with subcortical infarcts and leukoencephalopathy, type 1' SubClassOf 'autosomal dominant disease'
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_10239
-Label(s): Virus 
-- 'Virus' SubClassOf 'organism'
-+ 'Virus' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/GO_0006486
-Label(s): obsolete protein glycosylation 
-- 'obsolete protein glycosylation' SubClassOf 'part_of' some 'glycoprotein biosynthetic process'
-
-Class: http://purl.obolibrary.org/obo/HP_0200065
-Label(s): Chorioretinal degeneration 
-- 'Chorioretinal degeneration' SubClassOf 'Abnormal retinal morphology'
-- 'Chorioretinal degeneration' SubClassOf 'Abnormal choroid morphology'
-+ 'Chorioretinal degeneration' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008025
-Label(s): neuronopathy, distal hereditary motor, type 2A 
-- 'neuronopathy, distal hereditary motor, type 2A' SubClassOf 'distal hereditary motor neuropathy type 2'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001643
-Label(s): kidney derived cell line 
-- 'kidney derived cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-- 'kidney derived cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ 'kidney derived cell line' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'kidney derived cell line' EquivalentTo 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001641
-Label(s): epithelial cell derived cell line 
-- 'epithelial cell derived cell line' EquivalentTo 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'epithelial cell derived cell line' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'epithelial cell derived cell line' EquivalentTo 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'epithelial cell derived cell line' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001640
-Label(s): B cell derived cell line 
-- 'B cell derived cell line' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'B cell derived cell line' EquivalentTo 'derives_from' some 
-('B cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'B cell derived cell line' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'B cell derived cell line' EquivalentTo 'derives_from' some 
-('B cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_2157
-Label(s): Archaea 
-- 'Archaea' SubClassOf 'organism'
-+ 'Archaea' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/HP_0007777
-Label(s): Chorioretinal scar 
-- 'Chorioretinal scar' SubClassOf 'Chorioretinal degeneration'
-+ 'Chorioretinal scar' SubClassOf 'Abnormal choroid morphology'
-+ 'Chorioretinal scar' SubClassOf 'Abnormal retinal morphology'
-
-Class: http://purl.obolibrary.org/obo/HP_0007754
-Label(s): Macular dystrophy 
-- 'Macular dystrophy' SubClassOf 'Retinal dystrophy'
-
-Class: http://purl.obolibrary.org/obo/HP_0007750
-Label(s): Hypoplasia of the fovea 
-- 'Hypoplasia of the fovea' SubClassOf 'Aplasia/Hypoplasia of the macula'
-+ 'Hypoplasia of the fovea' SubClassOf 'Abnormal macular morphology'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005742
-Label(s): lung fibroblast derived cell line 
-- 'lung fibroblast derived cell line' SubClassOf 'derives_from' some 
-('fibroblast of lung' and ('part_of' some 
-(('lung' or 'developmental stage') and ('part_of' some 'organism'))))
-- 'lung fibroblast derived cell line' EquivalentTo 'derives_from' some 
-('fibroblast of lung' and ('part_of' some 
-(('lung' or 'developmental stage') and ('part_of' some 'organism'))))
-+ 'lung fibroblast derived cell line' SubClassOf 'derives_from' some 
-('fibroblast of lung' and ('part_of' some 
-(('lung' or 'developmental stage') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'lung fibroblast derived cell line' EquivalentTo 'derives_from' some 
-('fibroblast of lung' and ('part_of' some 
-(('lung' or 'developmental stage') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005740
-Label(s): iPSC derived cell line 
-- 'iPSC derived cell line' SubClassOf 'derives_from' some 
-('induced pluripotent stem cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'iPSC derived cell line' EquivalentTo 'derives_from' some 
-('induced pluripotent stem cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'iPSC derived cell line' SubClassOf 'derives_from' some 
-('induced pluripotent stem cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'iPSC derived cell line' EquivalentTo 'derives_from' some 
-('induced pluripotent stem cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005735
-Label(s): smooth muscle cell derived cell line 
-- 'smooth muscle cell derived cell line' EquivalentTo 'derives_from' some 
-('smooth muscle cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'smooth muscle cell derived cell line' SubClassOf 'derives_from' some 
-('smooth muscle cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'smooth muscle cell derived cell line' SubClassOf 'derives_from' some 
-('smooth muscle cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'smooth muscle cell derived cell line' EquivalentTo 'derives_from' some 
-('smooth muscle cell on CELLxGENE CellGuide' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005734
-Label(s): muscle cell derived cell line 
-- 'muscle cell derived cell line' EquivalentTo 'derives_from' some 
-('muscle cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'muscle cell derived cell line' SubClassOf 'derives_from' some 
-('muscle cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'muscle cell derived cell line' EquivalentTo 'derives_from' some 
-('muscle cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'muscle cell derived cell line' SubClassOf 'derives_from' some 
-('muscle cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005731
-Label(s): cardiac myocyte cell derived cell line 
-- 'cardiac myocyte cell derived cell line' SubClassOf 'derives_from' some 
-('cardiac muscle cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'cardiac myocyte cell derived cell line' EquivalentTo 'cultured cell' and ('derives_from' some 
-('cardiac muscle cell' and ('part_of' some 
-(('developmental stage' or 'heart component') and ('part_of' some 'organism')))))
-+ 'cardiac myocyte cell derived cell line' SubClassOf 'derives_from' some 
-('cardiac muscle cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'cardiac myocyte cell derived cell line' EquivalentTo 'cultured cell' and ('derives_from' some 
-('cardiac muscle cell' and ('part_of' some 
-(('developmental stage' or 'heart component') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005728
-Label(s): bronchial epithelial cell derived cell line 
-- 'bronchial epithelial cell derived cell line' SubClassOf 'derives_from' some 
-('respiratory tract epithelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'bronchial epithelial cell derived cell line' EquivalentTo 'cultured cell' and ('derives_from' some 
-('respiratory tract epithelial cell' and ('part_of' some 
-(('epithelium of bronchus' or 'developmental stage') and ('part_of' some 'organism')))))
-+ 'bronchial epithelial cell derived cell line' EquivalentTo 'cultured cell' and ('derives_from' some 
-('respiratory tract epithelial cell' and ('part_of' some 
-(('epithelium of bronchus' or 'developmental stage') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022)))))
-+ 'bronchial epithelial cell derived cell line' SubClassOf 'derives_from' some 
-('respiratory tract epithelial cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001255
-Label(s): U373 
-- 'U373' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'U373' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001254
-Label(s): U266 
-- 'U266' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'U266' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001251
-Label(s): TERV-ST 
-- 'TERV-ST' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ 'TERV-ST' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001250
-Label(s): TERV-AntiSenseB56 
-- 'TERV-AntiSenseB56' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ 'TERV-AntiSenseB56' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001239
-Label(s): SUM1315MO2 
-- 'SUM1315MO2' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('mammary gland' and ('part_of' some 'organism'))))
-+ 'SUM1315MO2' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('mammary gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001232
-Label(s): RKO 
-- 'RKO' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('colon' and ('part_of' some 'organism'))))
-+ 'RKO' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('colon' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001230
-Label(s): R8 
-- 'R8' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'R8' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001228
-Label(s): R43 
-- 'R43' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'R43' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001227
-Label(s): R28 
-- 'R28' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'R28' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001221
-Label(s): NCI-H929 
-- 'NCI-H929' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('bone marrow' and ('part_of' some 'organism'))))
-+ 'NCI-H929' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('bone marrow' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001218
-Label(s): Met5A 
-- 'Met5A' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'Met5A' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001213
-Label(s): MDAMB435 
-- 'MDAMB435' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('zone of skin' and ('part_of' some 'organism'))))
-+ 'MDAMB435' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('zone of skin' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001200
-Label(s): MCF 10A 
-- 'MCF 10A' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('mammary gland' and ('part_of' some 'organism'))))
-+ 'MCF 10A' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('mammary gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001198
-Label(s): L3055 
-- 'L3055' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'L3055' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001197
-Label(s): Kin-S49 
-- 'Kin-S49' SubClassOf 'derives_from' some 
-('T cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'Kin-S49' SubClassOf 'derives_from' some 
-('T cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001183
-Label(s): HEK-293H 
-- 'HEK-293H' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ 'HEK-293H' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001182
-Label(s): HEK293 
-- 'HEK293' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ 'HEK293' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001157
-Label(s): GM12814 
-- 'GM12814' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12814' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001154
-Label(s): GM12763 
-- 'GM12763' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12763' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001153
-Label(s): GM12762 
-- 'GM12762' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12762' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001151
-Label(s): GM12760 
-- 'GM12760' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12760' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001150
-Label(s): GM12751 
-- 'GM12751' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12751' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001148
-Label(s): GM12717 
-- 'GM12717' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12717' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001147
-Label(s): GM12716 
-- 'GM12716' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12716' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001146
-Label(s): GM12249 
-- 'GM12249' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12249' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001143
-Label(s): GM12236 
-- 'GM12236' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12236' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001142
-Label(s): GM12234 
-- 'GM12234' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12234' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001141
-Label(s): GM12156 
-- 'GM12156' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12156' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001140
-Label(s): GM12155 
-- 'GM12155' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12155' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001137
-Label(s): GM12145 
-- 'GM12145' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12145' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001136
-Label(s): GM12144 
-- 'GM12144' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12144' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001135
-Label(s): GM12057 
-- 'GM12057' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12057' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001134
-Label(s): GM12056 
-- 'GM12056' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12056' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001133
-Label(s): GM12044 
-- 'GM12044' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12044' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001131
-Label(s): GM12006 
-- 'GM12006' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12006' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001130
-Label(s): GM12005 
-- 'GM12005' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12005' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001128
-Label(s): GM12003 
-- 'GM12003' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM12003' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001126
-Label(s): GM11994 
-- 'GM11994' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11994' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001125
-Label(s): GM11993 
-- 'GM11993' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11993' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001124
-Label(s): GM11992 
-- 'GM11992' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11992' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001123
-Label(s): GM11882 
-- 'GM11882' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11882' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001122
-Label(s): GM11881 
-- 'GM11881' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11881' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001121
-Label(s): GM11839 
-- 'GM11839' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11839' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001120
-Label(s): GM11832 
-- 'GM11832' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11832' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001117
-Label(s): GM11829 
-- 'GM11829' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM11829' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001116
-Label(s): GM07357 
-- 'GM07357' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM07357' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001114
-Label(s): GM07056 
-- 'GM07056' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM07056' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001113
-Label(s): GM07055 
-- 'GM07055' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM07055' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001112
-Label(s): GM07034 
-- 'GM07034' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM07034' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001111
-Label(s): GM07022 
-- 'GM07022' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM07022' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001109
-Label(s): GM06994 
-- 'GM06994' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'GM06994' SubClassOf 'derives_from' some 
-('B cell' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001103
-Label(s): CSBwt-rescued fibroblasts 
-- 'CSBwt-rescued fibroblasts' SubClassOf 'derives_from' some 
-('fibroblast' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'CSBwt-rescued fibroblasts' SubClassOf 'derives_from' some 
-('fibroblast' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001102
-Label(s): CFT-2 
-- 'CFT-2' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('trachea' and ('part_of' some 'organism'))))
-+ 'CFT-2' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('trachea' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001101
-Label(s): CC531 
-- 'CC531' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('colon' and ('part_of' some 'organism'))))
-+ 'CC531' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('colon' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001099
-Label(s): Caco-2 
-- 'Caco-2' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('colon' and ('part_of' some 'organism'))))
-+ 'Caco-2' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('colon' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001091
-Label(s): BL41K3 
-- 'BL41K3' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'BL41K3' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001089
-Label(s): BEAS-2B 
-- 'BEAS-2B' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('bronchus' and ('part_of' some 'organism'))))
-+ 'BEAS-2B' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('bronchus' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001087
-Label(s): AU565 
-- 'AU565' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('mammary gland' and ('part_of' some 'organism'))))
-+ 'AU565' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('mammary gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001085
-Label(s): 600MPE 
-- '600MPE' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('mammary gland' and ('part_of' some 'organism'))))
-+ '600MPE' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('mammary gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001082
-Label(s): HEK293T 293T 
-- '293T' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-- '293T' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('kidney' and ('part_of' some 'organism'))))
-+ '293T' SubClassOf 'derives_from' some 
-('epithelial cell' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ '293T' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('kidney' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001081
-Label(s): 267B1 Ki-ras 
-- '267B1 Ki-ras' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('prostate gland' and ('part_of' some 'organism'))))
-+ '267B1 Ki-ras' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('prostate gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0001080
-Label(s): 267B1 
-- '267B1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('prostate gland' and ('part_of' some 'organism'))))
-+ '267B1' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('prostate gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005216
-Label(s): hepatoma cell line 
-- 'hepatoma cell line' SubClassOf 'derives_from' some 
-('hepatocyte on CELLxGENE CellGuide' and ('part_of' some 
-('liver' and ('part_of' some 'organism'))))
-- 'hepatoma cell line' EquivalentTo 'derives_from' some 
-('hepatocyte on CELLxGENE CellGuide' and ('part_of' some 
-('liver' and ('part_of' some 'organism'))))
-+ 'hepatoma cell line' SubClassOf 'derives_from' some 
-('hepatocyte on CELLxGENE CellGuide' and ('part_of' some 
-('liver' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'hepatoma cell line' EquivalentTo 'derives_from' some 
-('hepatocyte on CELLxGENE CellGuide' and ('part_of' some 
-('liver' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/BTO_0002278
-Label(s): macrophage cell line 
-- 'macrophage cell line' EquivalentTo 'derives_from' some 
-('macrophage' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'macrophage cell line' EquivalentTo 'derives_from' some 
-('macrophage' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/BTO_0002178
-Label(s): HMEpC cell 
-- 'HMEpC cell' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('mammary gland' and ('part_of' some 'organism'))))
-+ 'HMEpC cell' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('mammary gland' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011393
-Label(s): hypoalphalipoproteinemia, primary, 1 
-- 'hypoalphalipoproteinemia, primary, 1' SubClassOf 'hypoalphalipoproteinemia'
-+ 'hypoalphalipoproteinemia, primary, 1' SubClassOf 'apolipoprotein A-I deficiency'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004650
-Label(s): malignant carotid body paraganglioma 
-- 'malignant carotid body paraganglioma' SubClassOf 'vascular cancer'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0002081
-Label(s): SN56.B5.G4 
-- 'SN56.B5.G4' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'organism'))))
-+ 'SN56.B5.G4' SubClassOf 'derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015597
-Label(s): pustulosis palmaris et plantaris 
-- 'pustulosis palmaris et plantaris' SubClassOf 'psoriasis'
-+ 'pustulosis palmaris et plantaris' SubClassOf http://purl.obolibrary.org/obo/MONDO_0022205
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005738
-Label(s): ESC derived cell line 
-- 'ESC derived cell line' EquivalentTo 'derives_from' some 
-('embryonic stem cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-- 'ESC derived cell line' SubClassOf 'derives_from' some 
-('embryonic stem cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some 'organism'))))
-+ 'ESC derived cell line' SubClassOf 'derives_from' some 
-('embryonic stem cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-+ 'ESC derived cell line' EquivalentTo 'derives_from' some 
-('embryonic stem cell' and ('part_of' some 
-(('developmental stage' or 'organism part') and ('part_of' some http://purl.obolibrary.org/obo/COB_0000022))))
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_408170
-Label(s): human gut metagenome 
-- 'human gut metagenome' SubClassOf 'organism'
-+ 'human gut metagenome' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/NCBITaxon_198431
-Label(s): uncultured prokaryote 
-- 'uncultured prokaryote' SubClassOf 'organism'
-+ 'uncultured prokaryote' SubClassOf http://purl.obolibrary.org/obo/COB_0000022
-
-Class: http://purl.obolibrary.org/obo/OBI_0302903
-Label(s): nucleic acid hybridization 
-- 'nucleic acid hybridization' SubClassOf 'has_output' some 'processed material'
+Class: http://www.orpha.net/ORDO/Orphanet_95430
+Label(s): Congenital tracheomalacia 
+- 'Congenital tracheomalacia' SubClassOf 'Rare otorhinolaryngological malformation'
+- 'Congenital tracheomalacia' SubClassOf 'Genetic respiratory or mediastinal malformation'
++ 'Congenital tracheomalacia' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007088
+Label(s): Alzheimer disease type 1 
++ 'Alzheimer disease type 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060190
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030462
+Label(s): Joubert syndrome 40 
++ 'Joubert syndrome 40' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060191
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014926
+Label(s): Bardet-Biedl syndrome 22 
++ 'Bardet-Biedl syndrome 22' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060191
+
+Class: http://www.orpha.net/ORDO/Orphanet_391677
+Label(s): Short stature-optic atrophy-Pelger-Huët anomaly syndrome 
+- 'Short stature-optic atrophy-Pelger-Huët anomaly syndrome' SubClassOf 'Genetic malformation syndrome with short stature'
++ 'Short stature-optic atrophy-Pelger-Huët anomaly syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014306
+Label(s): vasculitis due to ADA2 deficiency 
+- 'vasculitis due to ADA2 deficiency' SubClassOf 'deficiency of adenosine deaminase 2'
++ 'vasculitis due to ADA2 deficiency' SubClassOf 'hereditary disorder of connective tissue'
++ 'vasculitis due to ADA2 deficiency' SubClassOf 'type 1 interferonopathy of childhood'
+
+Class: http://purl.obolibrary.org/obo/HP_0025168
+Label(s): Left ventricular diastolic dysfunction 
+- 'Left ventricular diastolic dysfunction' SubClassOf 'Abnormal cardiovascular system physiology'
++ 'Left ventricular diastolic dysfunction' SubClassOf http://purl.obolibrary.org/obo/HP_0030872
+
+Class: http://purl.obolibrary.org/obo/HP_0008647
+Label(s): Pubertal developmental failure in females 
+- 'Pubertal developmental failure in females' SubClassOf 'Abnormality of the endocrine system'
++ 'Pubertal developmental failure in females' SubClassOf http://purl.obolibrary.org/obo/HP_0008197
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007237
+Label(s): dipetalonemiasis 
+- 'dipetalonemiasis' SubClassOf 'Rhabditida infectious disease'
+- 'dipetalonemiasis' SubClassOf 'parasitic skin disorder'
+- 'dipetalonemiasis' SubClassOf 'filariasis'
++ 'dipetalonemiasis' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.orpha.net/ORDO/Orphanet_100032
+Label(s): Hypocalcified amelogenesis imperfecta 
+- 'Hypocalcified amelogenesis imperfecta' SubClassOf 'Rare odontal or periodontal disorder'
++ 'Hypocalcified amelogenesis imperfecta' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013576
+Label(s): recurrent infections associated with rare immunoglobulin isotypes deficiency 
++ 'recurrent infections associated with rare immunoglobulin isotypes deficiency' SubClassOf 'predisposes towards' some 'infectious disease'
+
+Class: http://purl.obolibrary.org/obo/GO_0071953
+Label(s): elastic fiber 
+- 'elastic fiber' SubClassOf 'part_of' some 'extracellular matrix'
+
+Class: http://purl.obolibrary.org/obo/HP_0012664
+Label(s): Reduced left ventricular ejection fraction 
+- 'Reduced left ventricular ejection fraction' SubClassOf 'Abnormal cardiovascular system physiology'
++ 'Reduced left ventricular ejection fraction' SubClassOf http://purl.obolibrary.org/obo/HP_0030872
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010500
+Label(s): hypoxanthine measurement 
+- 'hypoxanthine measurement' SubClassOf 'purine measurement'
+- 'hypoxanthine measurement' SubClassOf 'is_about' some 'hypoxanthine'
++ 'hypoxanthine measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010455
+Label(s): adipic acid measurement 
+- 'adipic acid measurement' SubClassOf 'carboxylic acid measurement'
+- 'adipic acid measurement' SubClassOf 'lipid measurement'
+- 'adipic acid measurement' SubClassOf 'is_about' some 'adipic acid'
++ 'adipic acid measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011583
+Label(s): cerebral amyloid angiopathy, APP-related 
++ 'cerebral amyloid angiopathy, APP-related' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060190
+
+Class: http://purl.obolibrary.org/obo/MONDO_0971179
+Label(s): arterial tortuosity-bone fragility syndrome 
+- 'arterial tortuosity-bone fragility syndrome' SubClassOf 'genetic disorder'
++ 'arterial tortuosity-bone fragility syndrome' SubClassOf 'hereditary disorder of connective tissue'
++ 'arterial tortuosity-bone fragility syndrome' SubClassOf 'inherited cutis laxa'
++ 'arterial tortuosity-bone fragility syndrome' SubClassOf 'vascular disease'
++ 'arterial tortuosity-bone fragility syndrome' SubClassOf 'osteochondrodysplasia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100317
+Label(s): deficiency of adenosine deaminase 2 
+- 'deficiency of adenosine deaminase 2' SubClassOf 'hereditary disorder of connective tissue'
+- 'deficiency of adenosine deaminase 2' SubClassOf 'type 1 interferonopathy of childhood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007357
+Label(s): mansonelliasis 
++ 'mansonelliasis' SubClassOf 'Rhabditida infectious disease'
+
+Class: http://purl.obolibrary.org/obo/GO_0006541
+Label(s): glutamine metabolic process 
+- 'glutamine metabolic process' SubClassOf 'amino acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/HP_0002034
+Label(s): Abnormal rectum morphology 
++ 'Abnormal rectum morphology' SubClassOf http://purl.obolibrary.org/obo/HP_0012732
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001186
+Label(s): Sneddon syndrome 
+- 'Sneddon syndrome' SubClassOf 'hereditary skin disorder'
+- 'Sneddon syndrome' SubClassOf 'deficiency of adenosine deaminase 2'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019736
+Label(s): dense deposit disease 
+- 'dense deposit disease' SubClassOf 'primary membranoproliferative glomerulonephritis'
++ 'dense deposit disease' SubClassOf 'non-immunoglobulin-mediated membranoproliferative glomerulonephritis'
 
 ----------------------------------
 
@@ -2093,11 +925,10 @@ Label(s): nucleic acid hybridization
 
 @Classes deleted from this version
 
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008025
-Label(s): neuronopathy, distal hereditary motor, type 2A 
-+ 'neuronopathy, distal hereditary motor, type 2A' SubClassOf 'distal hereditary motor neuropathy type 2'
-
+Class: http://purl.obolibrary.org/obo/MONDO_0100317
+Label(s): deficiency of adenosine deaminase 2 
++ 'deficiency of adenosine deaminase 2' SubClassOf 'hereditary disorder of connective tissue'
++ 'deficiency of adenosine deaminase 2' SubClassOf 'type 1 interferonopathy of childhood'
 
 ----------------------------------
 4. Scope of the Ontology
