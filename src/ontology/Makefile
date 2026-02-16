@@ -34,7 +34,6 @@ EFOFIXER = ../../bin/efo-fixer.jar
 MIRRORDIR=./mirror
 HANCESTROGENERATED= ./build/efo-hancestro
 TMPDIR = tmp
-LABEL_DUP_EXPERIMENTAL ?= true
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
@@ -349,13 +348,8 @@ all_reports: $(BUILDDIR)/$(ONT).owl
 $(BUILDDIR)/label-synonym-data.tsv: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/label-synonym-dup-extract.sparql $@
 
-LABEL_DUP_ARGS = -o reports/label-synonym-duplicates.tsv
-ifeq ($(LABEL_DUP_EXPERIMENTAL),true)
-LABEL_DUP_ARGS += --experimental
-endif
-
 label_synonym_dup_check: $(BUILDDIR)/label-synonym-data.tsv
-	python3 ../scripts/detect_label_synonym_duplicates.py $< $(LABEL_DUP_ARGS)
+	python3 ../scripts/detect_label_synonym_duplicates.py $< -o reports/label-synonym-duplicates.tsv
 
 DIFF_REPORTS=efo.owl
 DIFF_REPORTS_FILES=$(patsubst %, qc/diff_%_latest_release.txt, $(DIFF_REPORTS))
