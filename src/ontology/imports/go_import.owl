@@ -7,6 +7,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://www.ebi.ac.uk/efo/imports/go_import.owl"/>
     
@@ -137,6 +138,30 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -199,8 +224,6 @@
         <obo:IAO_0000115>OBSOLETE. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27054</obo:IAO_0000233>
         <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
-        <oboInOwl:hasAlternativeId>GO:0019952</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0050876</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>reproductive physiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0000003</oboInOwl:id>
@@ -288,6 +311,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0000224">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: 4-N-(N-acetyl-D-glucosaminyl)-protein + H2O = N-acetyl-beta-D-glucosaminylamine + peptide L-aspartate. This reaction is the hydrolysis of an N4-(acetyl-beta-D-glucosaminyl)asparagine residue in which the N-acetyl-D-glucosamine residue may be further glycosylated, to yield a (substituted) N-acetyl-beta-D-glucosaminylamine and the peptide containing an aspartic residue.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>glycopeptidase activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>glycopeptide N-glycosidase activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:3.5.1.52</oboInOwl:hasDbXref>
@@ -304,6 +328,7 @@
         <oboInOwl:hasRelatedSynonym>peptide:N-glycanase</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0000224</oboInOwl:id>
         <rdfs:label>peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.5.1.52"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0000224"/>
@@ -1021,6 +1046,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003810">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: L-glutaminyl-[protein] + L-lysyl-[protein] = [protein]-L-lysyl-N(6)-5-L-glutamyl-[protein] + NH4+. This reaction is the formation of the N6-(L-isoglutamyl)-L-lysine isopeptide, resulting in cross-linking polypeptide chains; the gamma-carboxamide groups of peptidyl-glutamine residues act as acyl donors, and the 6-amino-groups of peptidyl-lysine residues act as acceptors, to give intra- and intermolecular N6-(5-glutamyl)lysine cross-links.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:2.3.2.13</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:2.3.2.13-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RESID:AA0124</oboInOwl:hasDbXref>
@@ -1040,6 +1066,8 @@
         <oboInOwl:hasRelatedSynonym>protein-glutamine:amine gamma-glutamyltransferase</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0003810</oboInOwl:id>
         <rdfs:label>protein-glutamine gamma-glutamyltransferase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.3.2.13"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/54816"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003810"/>
@@ -1152,6 +1180,7 @@
         <oboInOwl:consider rdf:resource="http://purl.obolibrary.org/obo/GO_0070523"/>
         <oboInOwl:consider rdf:resource="http://purl.obolibrary.org/obo/GO_0070524"/>
         <oboInOwl:hasBroadSynonym>beta-hydroxysteroid dehydrogenase</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-194023</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:11beta-hydroxysteroid_dehydrogenase</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>11beta-hydroxy steroid dehydrogenase</oboInOwl:hasRelatedSynonym>
@@ -1169,6 +1198,12 @@
         <owl:annotatedTarget>OBSOLETE. Catalysis of the reaction: an 11-beta-hydroxysteroid + NAD(P)+ = an 11-oxosteroid + NAD(P)H + H+.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:15761036</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003845"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-194023</owl:annotatedTarget>
+        <rdfs:label>HSD11B2,HSD11B1 dimer oxidise CORT to COR</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -1180,6 +1215,7 @@
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28802</obo:IAO_0000233>
         <oboInOwl:consider rdf:resource="http://purl.obolibrary.org/obo/GO_0034386"/>
         <oboInOwl:consider rdf:resource="http://purl.obolibrary.org/obo/GO_0034387"/>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-916855</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>4-aminobutanoate transaminase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>4-aminobutyrate aminotransferase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>4-aminobutyric acid aminotransferase activity</oboInOwl:hasExactSynonym>
@@ -1208,6 +1244,12 @@
         <owl:annotatedTarget>OBSOLETE. Catalysis of the reaction: 4-aminobutanoate + amino group acceptor = succinate semialdehyde + amino acid.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003867"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-916855</owl:annotatedTarget>
+        <rdfs:label>PXLP-K357-ABAT dimer:2Fe-2S transforms GABA to SUCCSA</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -1217,6 +1259,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of alpha-L-iduronosidic linkages in dermatan sulfate. Can also hydrolyze alpha-L-iduronosidic linkages in heparan sulfate.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28907</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.2.1.76</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:3.2.1.76-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1678716</oboInOwl:hasDbXref>
@@ -1230,6 +1273,7 @@
         <oboInOwl:hasRelatedSynonym>glycosaminoglycan alpha-L-iduronohydrolase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0003940</oboInOwl:id>
         <rdfs:label>L-iduronidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.76"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003940"/>
@@ -1242,13 +1286,13 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003940"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-1678716</owl:annotatedTarget>
-        <rdfs:label>IDUA cleaves iduronate from HS chain</rdfs:label>
+        <rdfs:label>IDUA hydrolyses Heparan sulfate chain(1)</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003940"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-1793186</owl:annotatedTarget>
-        <rdfs:label>IDUA hydrolyses the unsulfated alpha-L-iduronosidic link in DS</rdfs:label>
+        <rdfs:label>IDUA) hydrolyses the unsulfated alpha-L-iduronosidic link in DS</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003940"/>
@@ -1294,6 +1338,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003943">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of the 4-sulfate groups of the N-acetyl-D-galactosamine 4-sulfate units of chondroitin sulfate and dermatan sulfate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>chondroitinsulfatase</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:3.1.6.12</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:3.1.6.12-RXN</oboInOwl:hasDbXref>
@@ -1310,6 +1355,7 @@
         <oboInOwl:hasRelatedSynonym>acetylgalactosamine 4-sulfatase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0003943</oboInOwl:id>
         <rdfs:label>N-acetylgalactosamine-4-sulfatase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.1.6.12"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003943"/>
@@ -1381,6 +1427,8 @@
         <oboInOwl:hasRelatedSynonym>adenosine aminohydrolase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004000</oboInOwl:id>
         <rdfs:label>adenosine deaminase activity</rdfs:label>
+        <skos:broadMatch rdf:resource="http://purl.uniprot.org/enzyme/3.5.4.4"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/24408"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004000"/>
@@ -1411,6 +1459,7 @@
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27180</obo:IAO_0000233>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28144</obo:IAO_0000233>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/29544</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:ALDHDEHYDROG-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:16185</oboInOwl:hasDbXref>
@@ -1439,7 +1488,21 @@
         <oboInOwl:hasRelatedSynonym>propionaldehyde dehydrogenase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004029</oboInOwl:id>
         <rdfs:label>aldehyde dehydrogenase (NAD+) activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.2.1.3"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/16185"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-71723</owl:annotatedTarget>
+        <rdfs:label>acetaldehyde + NAD+ =&gt; acetate + NADH + H+ [mitochondrial]</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>CoA-independent aldehyde dehydrogenase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
@@ -1542,18 +1605,6 @@
         <owl:annotatedTarget>Reactome:R-HSA-71691</owl:annotatedTarget>
         <rdfs:label>acetaldehyde + NAD+ =&gt; acetate + NADH + H+ [cytosolic]</rdfs:label>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-71723</owl:annotatedTarget>
-        <rdfs:label>acetaldehyde + NAD+ =&gt; acetate + NADH + H+ [mitochondrial]</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>CoA-independent aldehyde dehydrogenase activity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -1562,6 +1613,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004046">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: an N-acyl-L-amino acid + H2O = a carboxylate + an L-amino acid.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.5.1.14</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:AMINOACYLASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:15565</oboInOwl:hasDbXref>
@@ -1585,6 +1637,8 @@
         <oboInOwl:hasRelatedSynonym>short acyl amidoacylase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004046</oboInOwl:id>
         <rdfs:label>aminoacylase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.5.1.14"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/15565"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004046"/>
@@ -1705,6 +1759,8 @@
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/29460</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.5.1.34</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:1.5.1.34-RXN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:17865</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:17869</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-71130</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>dihydropteridine reductase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
@@ -1722,6 +1778,10 @@
         <oboInOwl:hasRelatedSynonym>dihydropteridine reduction</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004155</oboInOwl:id>
         <rdfs:label>6,7-dihydropteridine reductase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/1.5.1.34-RXN"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.5.1.34"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/17865"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/17869"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004155"/>
@@ -1810,7 +1870,50 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of internal, alpha-peptide bonds in a polypeptide chain by a catalytic mechanism that involves a catalytic triad consisting of a serine nucleophile that is activated by a proton relay involving an acidic residue (e.g. aspartate or glutamate) and a basic residue (usually histidine).</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/20581</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.4.21.-</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.10</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.102</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.20</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.21</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.22</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.26</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.27</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.34</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.35</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.36</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.38</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.39</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.41</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.42</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.43</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.45</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.46</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.47</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.48</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.5</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.53</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.54</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.59</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.6</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.61</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.62</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.68</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.69</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.7</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.71</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.73</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.75</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.78</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.79</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.83</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.88</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.92</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.93</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.4.21.94</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-114697</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1181152</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-139893</oboInOwl:hasDbXref>
@@ -1987,27 +2090,60 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-9770187</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-977371</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-977615</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9816275</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9829030</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9829200</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9830805</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9830882</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9839367</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9911236</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9911383</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9912368</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9912371</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9913329</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9926936</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9926963</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9927009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9932162</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>blood coagulation factor activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>serine elastase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004252</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <rdfs:label>serine-type endopeptidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.-"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.1"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.10"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.102"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.20"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.21"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.22"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.26"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.27"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.34"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.35"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.36"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.38"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.39"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.4"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.41"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.42"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.43"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.45"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.46"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.47"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.48"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.5"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.53"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.54"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.59"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.6"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.61"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.62"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.68"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.69"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.7"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.71"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.73"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.75"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.78"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.79"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.83"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.88"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.9"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.92"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.93"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.21.94"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -2050,7 +2186,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-140696</owl:annotatedTarget>
-        <rdfs:label>factor V -&gt; factor Va + factor V activation peptide (thrombin catalyst)</rdfs:label>
+        <rdfs:label>factor V -&gt; factor Va + factor V activation peptide</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -2530,7 +2666,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-2022411</owl:annotatedTarget>
-        <rdfs:label>Cathepsin G hydrolyzes AGT(25-34) (Angiotensin-(1-10)) to AGT(25-32) (Angiotensin-(1-8))</rdfs:label>
+        <rdfs:label>Cathepsin G hydrolyzes Angiotensin-(1-10) to Angiotensin-(1-8)</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -3075,12 +3211,6 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9816275</owl:annotatedTarget>
-        <rdfs:label>CDH1 is proteolytically cleaved in Golgi</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9829030</owl:annotatedTarget>
         <rdfs:label>Nascent F signal peptide is cleaved at ER membrane</rdfs:label>
     </owl:Axiom>
@@ -3107,60 +3237,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9839367</owl:annotatedTarget>
         <rdfs:label>TGFBR3_mem cleavage by MMPs</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9911236</owl:annotatedTarget>
-        <rdfs:label>ELANE cleaves NOTCH2NLA</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9911383</owl:annotatedTarget>
-        <rdfs:label>LepB cleaves prepro-STa</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9912368</owl:annotatedTarget>
-        <rdfs:label>LepB cleaves pre-EltA</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9912371</owl:annotatedTarget>
-        <rdfs:label>LepB cleaves pre-EltB</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9913329</owl:annotatedTarget>
-        <rdfs:label>Autoproteolysis of DAG1 to alpha and beta chains</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9926936</owl:annotatedTarget>
-        <rdfs:label>EspC(54-1018) cleaves hemoglobin</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9926963</owl:annotatedTarget>
-        <rdfs:label>Hbp cis-autocleaves</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9927009</owl:annotatedTarget>
-        <rdfs:label>Hbp(53-1100) cleaves hemoglobin</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9932162</owl:annotatedTarget>
-        <rdfs:label>Removal of CDH1 signal peptide</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -3200,6 +3276,9 @@
         <oboInOwl:hasRelatedSynonym>lactosylceramidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004336</oboInOwl:id>
         <rdfs:label>galactosylceramidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/GALACTOSYLCERAMIDASE-RXN"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.46"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/14297"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004336"/>
@@ -3318,6 +3397,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of terminal (1-&gt;4)-linked alpha-D-glucose residues successively from non-reducing ends of the chains with release of beta-D-glucose.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28262</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>lysosomal alpha-glucosidase activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:3.2.1.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:3.2.1.3-RXN</oboInOwl:hasDbXref>
@@ -3332,6 +3412,7 @@
         <oboInOwl:id>GO:0004339</oboInOwl:id>
         <rdfs:comment>Note that this term is not a child of &apos;alpha-glucosidase activity ; GO:0090599&apos;, because in the reaction represented by GO:0004339 results in the release of beta-D-glucose, whereas in GO:0090599 alpha-D-glucose is released.</rdfs:comment>
         <rdfs:label>glucan 1,4-alpha-glucosidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.3"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004339"/>
@@ -3389,6 +3470,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004345">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: D-glucose 6-phosphate + NADP+ = D-glucono-1,5-lactone 6-phosphate + NADPH + H+.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.1.1.49</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:GLU6PDEHYDROG-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:15841</oboInOwl:hasDbXref>
@@ -3409,6 +3491,8 @@
         <oboInOwl:hasRelatedSynonym>Zwischenferment</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004345</oboInOwl:id>
         <rdfs:label>glucose-6-phosphate dehydrogenase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.1.1.49"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/15841"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004345"/>
@@ -3420,7 +3504,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004345"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-70377</owl:annotatedTarget>
-        <rdfs:label>G6PD multimers dehydrogenate G6P</rdfs:label>
+        <rdfs:label>alpha-D-glucose 6-phosphate + NADP+ =&gt; D-glucono-1,5-lactone 6-phosphate + NADPH + H+</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004345"/>
@@ -3454,6 +3538,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004346">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: D-glucopyranose 6-phosphate + H2O = D-glucose + phosphate. D-glucopyranose is also known as D-glucose 6-phosphate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.1.3.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R00303</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:RXN66-526</oboInOwl:hasDbXref>
@@ -3468,6 +3553,8 @@
         <oboInOwl:hasRelatedSynonym>glucose 6-phosphate phosphatase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004346</oboInOwl:id>
         <rdfs:label>glucose-6-phosphatase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.1.3.9"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/16689"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004346"/>
@@ -3549,6 +3636,9 @@
         <oboInOwl:hasRelatedSynonym>psychosine hydrolase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004348</oboInOwl:id>
         <rdfs:label>glucosylceramidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/GLUCOSYLCERAMIDASE-RXN"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.45"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/13269"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004348"/>
@@ -3660,6 +3750,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004357">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: L-cysteine + L-glutamate + ATP = L-gamma-glutamyl-L-cysteine + ADP + 2 H+ + phosphate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:6.3.2.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R00894</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:GLUTCYSLIG-RXN</oboInOwl:hasDbXref>
@@ -3673,6 +3764,8 @@
         <oboInOwl:hasRelatedSynonym>gamma-glutamylcysteinyl synthetase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004357</oboInOwl:id>
         <rdfs:label>glutamate-cysteine ligase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/6.3.2.2"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/13285"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004357"/>
@@ -3725,6 +3818,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004363">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: L-gamma-glutamyl-L-cysteine + ATP + glycine = ADP + glutathione + 2 H+ + phosphate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:6.3.2.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R00497</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:GLUTATHIONE-SYN-RXN</oboInOwl:hasDbXref>
@@ -3737,6 +3831,8 @@
         <oboInOwl:hasRelatedSynonym>glutathione synthetase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004363</oboInOwl:id>
         <rdfs:label>glutathione synthase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/6.3.2.3"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/13557"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004363"/>
@@ -3783,6 +3879,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004370">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: ATP + glycerol = sn-glycerol 3-phosphate + ADP + 2 H+.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:2.7.1.30</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R00847</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:GLYCEROL-KIN-RXN</oboInOwl:hasDbXref>
@@ -3797,6 +3894,8 @@
         <oboInOwl:hasRelatedSynonym>glycerol kinase (phosphorylating)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004370</oboInOwl:id>
         <rdfs:label>glycerol kinase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.7.1.30"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/21644"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004370"/>
@@ -3855,6 +3954,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004415">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the random hydrolysis of (1-&gt;4) linkages between N-acetyl-beta-D-glucosamine and D-glucuronate residues in hyaluronate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>chondroitinase activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>hyaluronidase activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:3.2.1.35</oboInOwl:hasDbXref>
@@ -3865,7 +3965,6 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-2318585</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5693356</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9036077</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9941055</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>hyaluronoglucosaminidase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>chondroitinase I activity</oboInOwl:hasRelatedSynonym>
@@ -3873,6 +3972,7 @@
         <oboInOwl:hasRelatedSynonym>hyaluronoglucosidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004415</oboInOwl:id>
         <rdfs:label>hyalurononglucosaminidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.35"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
@@ -3896,7 +3996,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-1793209</owl:annotatedTarget>
-        <rdfs:label>HYAL1-4 hydrolyze chondroitin chains</rdfs:label>
+        <rdfs:label>HYAL1 hydrolyses Chondroitin chains</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
@@ -3908,7 +4008,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-2160892</owl:annotatedTarget>
-        <rdfs:label>HYAL2 hydrolyses HA into 20kDa fragments</rdfs:label>
+        <rdfs:label>Hyaluronidase 2 (HYAL2) hydrolyses HA into 20kDa fragments</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
@@ -3920,19 +4020,13 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-5693356</owl:annotatedTarget>
-        <rdfs:label>CEMIP hydrolyzes HA</rdfs:label>
+        <rdfs:label>CEMIP hydrolyses HA</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9036077</owl:annotatedTarget>
         <rdfs:label>Defective HYAL1 does not hydrolyse (HA)50</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9941055</owl:annotatedTarget>
-        <rdfs:label>SPAM1 randomly cleaves HA</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004415"/>
@@ -3960,6 +4054,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004423">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of the 2-sulfate groups of the L-iduronate 2-sulfate units of dermatan sulfate, heparan sulfate and heparin.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>chondroitinsulfatase</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:3.1.6.13</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:3.1.6.13-RXN</oboInOwl:hasDbXref>
@@ -3983,6 +4078,7 @@
         <oboInOwl:hasRelatedSynonym>sulfoiduronate sulfohydrolase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004423</oboInOwl:id>
         <rdfs:label>iduronate-2-sulfatase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.1.6.13"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004423"/>
@@ -4120,6 +4216,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: a long-chain 2,3-saturated fatty acyl-CoA + H+ + oxidized [electron-transfer flavoprotein] = a long-chain (2E)-enoyl-CoA + reduced [electron-transfer flavoprotein]. A long-chain fatty acid has an aliphatic tail containing 13 to 22 carbons.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26445</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.3.8.8</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:LONG-CHAIN-ACYL-COA-DEHYDROGENASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:17721</oboInOwl:hasDbXref>
@@ -4131,6 +4228,8 @@
         <oboInOwl:id>GO:0004466</oboInOwl:id>
         <rdfs:comment>While there is not universal consensus on the lengths of short-, medium-, long- and very-long-chain fatty acids, the GO uses the definitions in ChEBI (see CHEBI:26666, CHEBI:59554, CHEBI:15904 and CHEBI:27283).</rdfs:comment>
         <rdfs:label>long-chain fatty acyl-CoA dehydrogenase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.3.8.8"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/17721"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004466"/>
@@ -4152,6 +4251,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004485">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: 3-methylbut-2-enoyl-CoA + ATP + bicarbonate = trans-3-methylglutaconyl-CoA + ADP + 2 H+ + phosphate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:6.4.1.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R04138</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:METHYLCROTONYL-COA-CARBOXYLASE-RXN</oboInOwl:hasDbXref>
@@ -4169,6 +4269,8 @@
         <oboInOwl:hasRelatedSynonym>methylcrotonyl-CoA carboxylase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004485</oboInOwl:id>
         <rdfs:label>methylcrotonoyl-CoA carboxylase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/6.4.1.4"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/13589"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004485"/>
@@ -4181,13 +4283,13 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004485"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-508308</owl:annotatedTarget>
-        <rdfs:label>beta-methylglutaconyl-CoA + ADP + orthophosphate &lt;=&gt; beta-methylcrotonyl-CoA + ATP + HCO3- (MCCA)</rdfs:label>
+        <rdfs:label>beta-methylglutaconyl-CoA + ADP + orthophosphate &lt;=&gt; beta-methylcrotonyl-CoA + ATP + CO2 (MCCA)</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004485"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-70773</owl:annotatedTarget>
-        <rdfs:label>beta-methylcrotonyl-CoA + ATP + HCO3- &lt;=&gt; beta-methylglutaconyl-CoA + ADP + orthophosphate + H2O (MCCA)</rdfs:label>
+        <rdfs:label>beta-methylcrotonyl-CoA + ATP + CO2 &lt;=&gt; beta-methylglutaconyl-CoA + ADP + orthophosphate + H2O [MCCA]</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004485"/>
@@ -4246,6 +4348,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: A C(21) steroid + [reduced NADPH--hemoprotein reductase] + O2 = a 21-hydroxy-C(21)-steroid + [oxidized NADPH--hemoprotein reductase] + H2O.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/29041</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.14.14.16</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:STEROID-21-MONOOXYGENASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:65612</oboInOwl:hasDbXref>
@@ -4258,6 +4361,8 @@
         <oboInOwl:hasRelatedSynonym>steroid,hydrogen-donor:oxygen oxidoreductase (21-hydroxylating)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004509</oboInOwl:id>
         <rdfs:label>steroid 21-monooxygenase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.14.14.16"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/65612"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004509"/>
@@ -4297,6 +4402,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004555">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: alpha,alpha-trehalose + H2O = 2 D-glucose.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.2.1.28</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:TREHALA-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:32675</oboInOwl:hasDbXref>
@@ -4305,6 +4411,8 @@
         <oboInOwl:hasRelatedSynonym>alpha,alpha-trehalose glucohydrolase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004555</oboInOwl:id>
         <rdfs:label>alpha,alpha-trehalase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.28"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/32675"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004555"/>
@@ -4337,6 +4445,8 @@
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/25227</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.2.1.22</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:ALPHAGALACTOSID-RXN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:21112</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:28663</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1605736</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9841189</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>melibiase activity</oboInOwl:hasExactSynonym>
@@ -4344,6 +4454,9 @@
         <oboInOwl:hasRelatedSynonym>alpha-D-galactosidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004557</oboInOwl:id>
         <rdfs:label>alpha-galactosidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.22"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/21112"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/28663"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004557"/>
@@ -4383,6 +4496,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004559">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of terminal, non-reducing alpha-D-mannose residues in alpha-D-mannosides.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.2.1.24</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:3.2.1.24-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-6799545</oboInOwl:hasDbXref>
@@ -4398,6 +4512,7 @@
         <oboInOwl:hasRelatedSynonym>exo-alpha-mannosidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004559</oboInOwl:id>
         <rdfs:label>alpha-mannosidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.24"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004559"/>
@@ -4473,6 +4588,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004561">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of terminal non-reducing N-acetyl-D-glucosamine residues in N-acetyl-alpha-D-glucosaminides.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.2.1.50</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:3.2.1.50-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1678742</oboInOwl:hasDbXref>
@@ -4488,6 +4604,7 @@
         <oboInOwl:hasRelatedSynonym>alpha-acetylglucosaminidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004561</oboInOwl:id>
         <rdfs:label>alpha-N-acetylglucosaminidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.50"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004561"/>
@@ -4564,6 +4681,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28183</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.2.1.52</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:3.2.1.52-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1605595</oboInOwl:hasDbXref>
@@ -4571,8 +4689,12 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-1638053</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-2105001</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-2162225</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-3656259</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-3662344</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9035976</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9035978</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9035982</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9035983</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9638075</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9638076</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9638078</oboInOwl:hasDbXref>
@@ -4593,6 +4715,7 @@
         <oboInOwl:hasRelatedSynonym>hexosaminidase A</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004563</oboInOwl:id>
         <rdfs:label>beta-N-acetylhexosaminidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.52"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
@@ -4616,7 +4739,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-1638053</owl:annotatedTarget>
-        <rdfs:label>HEXA cleaves the terminal GlcNAc from keratan sulfate</rdfs:label>
+        <rdfs:label>HEXA cleaves the terminal GalNAc from keratan sulfate</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
@@ -4628,7 +4751,19 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-2162225</owl:annotatedTarget>
-        <rdfs:label>HEXA cleaves the terminal GlcNAc from small HA fragments</rdfs:label>
+        <rdfs:label>HEXA cleaves the terminal GalNAc from small HA fragments</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-3656259</owl:annotatedTarget>
+        <rdfs:label>Defective HEXA does not cleave the terminal GalNAc from DS</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-3662344</owl:annotatedTarget>
+        <rdfs:label>Defective HEXB does not cleave the terminal GalNAc from DS</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
@@ -4639,8 +4774,20 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9035978</owl:annotatedTarget>
+        <rdfs:label>Defective HEXA does not cleave the terminal GalNAc from keratan sulfate</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9035982</owl:annotatedTarget>
         <rdfs:label>Defective HEXB does not cleave the terminal GalNAc from HA fragments</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9035983</owl:annotatedTarget>
+        <rdfs:label>Defective HEXB does not cleave the terminal GalNAc from keratan sulfate</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
@@ -4652,13 +4799,13 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9638076</owl:annotatedTarget>
-        <rdfs:label>HEXB cleaves the terminal GlcNAc from small HA fragments</rdfs:label>
+        <rdfs:label>HEXB cleaves the terminal GalNAc from small HA fragments</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9638078</owl:annotatedTarget>
-        <rdfs:label>HEXB cleaves the terminal GlcNAc from keratan sulfate</rdfs:label>
+        <rdfs:label>HEXB cleaves the terminal GalNAc from keratan sulfate</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004563"/>
@@ -4773,6 +4920,9 @@
         <oboInOwl:id>GO:0004565</oboInOwl:id>
         <rdfs:comment>Note that the inclusion of &apos;MetaCyc:BGALACT-PWY&apos; is exceptional: normally MetaCyc pathway entries are database references for biological process terms, not molecular function terms. An exception was made in this case because the MetaCyc entry &apos;BGALACT-PWY&apos; describes only one reaction, that catalyzed by beta-galactosidase.</rdfs:comment>
         <rdfs:label>beta-galactosidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/3.2.1.23-RXN"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.23"/>
+        <skos:relatedMatch rdf:resource="http://identifiers.org/metacyc.reaction/BGALACT-PWY"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004565"/>
@@ -4802,7 +4952,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004565"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-1793217</owl:annotatedTarget>
-        <rdfs:label>Unknown endo--galactosidase cleaves keratan chain</rdfs:label>
+        <rdfs:label>Keratan sulfate is cleaved from its proteoglycan by an unknown galactosidase</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004565"/>
@@ -4842,6 +4992,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004566">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: a beta-D-glucuronoside + H2O = an alcohol + D-glucuronate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30698</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.2.1.31</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:BETA-GLUCURONID-RXN</oboInOwl:hasDbXref>
@@ -4860,6 +5011,8 @@
         <oboInOwl:hasRelatedSynonym>ketodase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004566</oboInOwl:id>
         <rdfs:label>beta-glucuronidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.31"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/17633"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004566"/>
@@ -4877,7 +5030,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004566"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-2162226</owl:annotatedTarget>
-        <rdfs:label>GUSB tetramer hydrolyzes GlcA-1,3-GlcNAc</rdfs:label>
+        <rdfs:label>GUSB tetramer hydrolyses GlcA-1,3-GlcNAc</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004566"/>
@@ -4943,6 +5096,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: 2 glutathione + hydrogen peroxide = oxidized glutathione + 2 H2O.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/25498</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0016224</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>EC:1.11.1.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:GLUTATHIONE-PEROXIDASE-RXN</oboInOwl:hasDbXref>
@@ -4965,6 +5119,8 @@
         <oboInOwl:hasRelatedSynonym>selenium-glutathione peroxidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004602</oboInOwl:id>
         <rdfs:label>glutathione peroxidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.11.1.9"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/16833"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004602"/>
@@ -5065,6 +5221,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004689">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: 4 ATP + 2 phosphorylase b = 4 ADP + phosphorylase a.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0008606</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>EC:2.7.11.19</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:2.7.11.19-RXN</oboInOwl:hasDbXref>
@@ -5082,6 +5239,7 @@
         <oboInOwl:hasRelatedSynonym>phosphorylase kinase (phosphorylating) activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004689</oboInOwl:id>
         <rdfs:label>phosphorylase kinase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.7.11.19"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004689"/>
@@ -5157,6 +5315,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004737">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: a 2-oxo acid = an aldehyde + CO2.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:4.1.1.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:PYRUVATE-DECARBOXYLASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:11628</oboInOwl:hasDbXref>
@@ -5168,6 +5327,8 @@
         <oboInOwl:hasRelatedSynonym>pyruvic decarboxylase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004737</oboInOwl:id>
         <rdfs:label>pyruvate decarboxylase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/4.1.1.1"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/11628"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004737"/>
@@ -5241,6 +5402,11 @@
         <oboInOwl:id>GO:0004749</oboInOwl:id>
         <rdfs:comment>Note that this term has a MetaCyc pathway reference as the pathway only has a single step.</rdfs:comment>
         <rdfs:label>ribose phosphate diphosphokinase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/PRPPSYN-RXN"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.7.6.1"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/15609"/>
+        <skos:exactMatch rdf:resource="http://www.kegg.jp/entry/R01049"/>
+        <skos:relatedMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY0-662"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004749"/>
@@ -5252,13 +5418,13 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004749"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-111215</owl:annotatedTarget>
-        <rdfs:label>PRPS1 dimer pyrophosphorylates R5P using dATP</rdfs:label>
+        <rdfs:label>D-ribose 5-phosphate + 2&apos;-deoxyadenosine 5&apos;-triphosphate (dATP) =&gt; 5-Phospho-alpha-D-ribose 1-diphosphate (PRPP) + 2&apos;-deoxyadenosine 5&apos;-monophosphate</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004749"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-73580</owl:annotatedTarget>
-        <rdfs:label>PRPS dimers pyrophosphorylate R5P using ATP</rdfs:label>
+        <rdfs:label>D-ribose 5-phosphate + ATP =&gt; 5-phospho-alpha-D-ribose 1-diphosphate (PRPP) + adenosine 5&apos;-monophosphate</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004749"/>
@@ -5367,12 +5533,17 @@
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28011</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.1.1.153</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:SEPIAPTERIN-REDUCTASE-RXN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:18953</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:32627</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1475414</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1497869</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>7,8-dihydrobiopterin:NADP+ oxidoreductase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004757</oboInOwl:id>
         <rdfs:label>sepiapterin reductase (NADP+) activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.1.1.153"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/18953"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/32627"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004757"/>
@@ -5406,6 +5577,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004758">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: L-serine + H+ + palmitoyl-CoA = 3-dehydrosphinganine + CO2 + CoA.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>serine palmitoyltransferase</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:2.3.1.50</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R01281</oboInOwl:hasDbXref>
@@ -5417,6 +5589,8 @@
         <oboInOwl:hasRelatedSynonym>SPT</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004758</oboInOwl:id>
         <rdfs:label>serine C-palmitoyltransferase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.3.1.50"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/14761"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004758"/>
@@ -5451,6 +5625,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004773">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: 3-beta-hydroxyandrost-5-en-17-one 3-sulfate + H2O = 3-beta-hydroxyandrost-5-en-17-one + sulfate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.1.6.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:STERYL-SULFATASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:19873</oboInOwl:hasDbXref>
@@ -5470,6 +5645,8 @@
         <oboInOwl:hasRelatedSynonym>steryl-sulfate sulfohydrolase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0004773</oboInOwl:id>
         <rdfs:label>steryl-sulfatase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.1.6.2"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/19873"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004773"/>
@@ -5571,10 +5748,6 @@
         <oboInOwl:hasAlternativeId>GO:0038050</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0038051</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0038052</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-400143</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-8936849</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-8937169</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-8937191</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>RNA polymerase II transcription factor activity, ligand-activated sequence-specific DNA binding</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ligand-activated sequence-specific DNA binding RNA polymerase II transcription factor activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>1,25-(OH)2D3 receptor activity</oboInOwl:hasNarrowSynonym>
@@ -5608,30 +5781,6 @@
         <owl:annotatedTarget>A DNA-binding transcription factor activity regulated by binding to a ligand that modulates the transcription of specific gene sets transcribed by RNA polymerase II. Nuclear receptor ligands are usually lipid-based (such as a steroid hormone) and the binding of the ligand to its receptor often occurs in the cytosol, which leads to its translocation to the nucleus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:txnOH-2018</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:23457262</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004879"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-400143</owl:annotatedTarget>
-        <rdfs:label>Fatty acid ligands activate PPARA</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004879"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-8936849</owl:annotatedTarget>
-        <rdfs:label>AHR:2xHSP90:AIP:PTGES3 binds TCDD</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004879"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-8937169</owl:annotatedTarget>
-        <rdfs:label>AHR:TCDD:2xHSP90AB1:AIP:PTGES3 translocates from cytosol to nucleoplasm</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004879"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-8937191</owl:annotatedTarget>
-        <rdfs:label>AHR:TCDD:2xHSP90AB1:AIP:PTGES3 dissociates</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004879"/>
@@ -5858,6 +6007,7 @@
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005262</oboInOwl:id>
         <rdfs:label>calcium channel activity</rdfs:label>
+        <skos:broadMatch rdf:resource="http://rdf.rhea-db.org/29671"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005262"/>
@@ -5924,6 +6074,8 @@
         <obo:IAO_0000115>OBSOLETE. Enables the transfer of the hexose monosaccharide glucose from one side of a membrane to the other.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27326</obo:IAO_0000233>
         <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/GO_0055056"/>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-499981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5653873</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>glucose permease activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>glucose transmembrane transporter activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>lactose/glucose efflux transporter activity</oboInOwl:hasNarrowSynonym>
@@ -5941,6 +6093,18 @@
         <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:mtg_transport</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0815340729</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005355"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-499981</owl:annotatedTarget>
+        <rdfs:label>Transport of Extracellular Glucose to the Cytosol by GLUT1 and GLUT2</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005355"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5653873</owl:annotatedTarget>
+        <rdfs:label>SLC2A1 tetramer transports Glc from cytosol to Golgi lumen</rdfs:label>
     </owl:Axiom>
     
 
@@ -7366,6 +7530,9 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009058"/>
         <obo:IAO_0000115>The formation of glucose from noncarbohydrate precursors, such as pyruvate, amino acids and glycerol.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28953</obo:IAO_0000233>
+        <oboInOwl:hasDbXref>MetaCyc:GLUCONEO-PWY</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-6142</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY66-399</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-70263</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Gluconeogenesis</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>glucose biosynthesis</oboInOwl:hasExactSynonym>
@@ -7373,6 +7540,9 @@
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006094</oboInOwl:id>
         <rdfs:label>gluconeogenesis</rdfs:label>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/GLUCONEO-PWY"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-6142"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY66-399"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006094"/>
@@ -7448,6 +7618,15 @@
         <obo:IAO_0000115>A nearly universal metabolic pathway in which the acetyl group of acetyl coenzyme A is effectively oxidized to two CO2 and four pairs of electrons are transferred to coenzymes. The acetyl group combines with oxaloacetate to form citrate, which undergoes successive transformations to isocitrate, 2-oxoglutarate, succinyl-CoA, succinate, fumarate, malate, and oxaloacetate again, thus completing the cycle. In eukaryotes the tricarboxylic acid is confined to the mitochondria. See also glyoxylate cycle.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28429</obo:IAO_0000233>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28527</obo:IAO_0000233>
+        <oboInOwl:hasDbXref>MetaCyc:P105-PWY</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-5690</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-5913</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-6969</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-7254</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY66-398</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:REDCITCYC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:TCA</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:TCA-1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-71403</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Tricarboxylic_acid_cycle</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Krebs cycle</oboInOwl:hasExactSynonym>
@@ -7457,6 +7636,15 @@
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006099</oboInOwl:id>
         <rdfs:label>tricarboxylic acid cycle</rdfs:label>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/P105-PWY"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-5690"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-5913"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-6969"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-7254"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY66-398"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/REDCITCYC"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/TCA"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/TCA-1"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006099"/>
@@ -7939,7 +8127,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006541">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006082"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006520"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving glutamine, 2-amino-4-carbamoylbutanoic acid.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>glutamine metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -8037,7 +8224,7 @@
         <oboInOwl:hasExactSynonym>proline metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006560</oboInOwl:id>
-        <rdfs:label>proline metabolic process</rdfs:label>
+        <rdfs:label>L-proline metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006560"/>
@@ -8056,7 +8243,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006520"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009058"/>
-        <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of L-serine, the L-enantiomer of serine, i.e. (2S)-2-amino-3-hydroxypropanoic acid.</obo:IAO_0000115>
+        <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of L-serine.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>MetaCyc:SERSYN-PWY</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-977347</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>L-serine anabolism</oboInOwl:hasExactSynonym>
@@ -8066,13 +8253,13 @@
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006564</oboInOwl:id>
         <rdfs:label>L-serine biosynthetic process</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/SERSYN-PWY"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006564"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways resulting in the formation of L-serine, the L-enantiomer of serine, i.e. (2S)-2-amino-3-hydroxypropanoic acid.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:jsg</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>The chemical reactions and pathways resulting in the formation of L-serine.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>MetaCyc:SERSYN-PWY</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006564"/>
@@ -8137,6 +8324,11 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the breakdown of L-tyrosine, an aromatic amino acid, 2-amino-3-(4-hydroxyphenyl)propanoic acid.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30202</obo:IAO_0000233>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-5151</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-7514</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-8016</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY3O-4108</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:TYRFUMCAT-PWY</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-8963684</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>tyrosine breakdown</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>tyrosine catabolism</oboInOwl:hasExactSynonym>
@@ -8144,6 +8336,11 @@
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006572</oboInOwl:id>
         <rdfs:label>L-tyrosine catabolic process</rdfs:label>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-5151"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-7514"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-8016"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY3O-4108"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/TYRFUMCAT-PWY"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006572"/>
@@ -8657,7 +8854,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006768">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006082"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006790"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving biotin, cis-tetrahydro-2-oxothieno(3,4-d)imidazoline-4-valeric acid; the (+) enantiomer is very widely distributed in cells and serves as a carrier in a number of enzymatic beta-carboxylation reactions.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Reactome:R-HSA-196780</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Biotin</oboInOwl:hasDbXref>
@@ -10203,7 +10399,6 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-2473152</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-6790987</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9636560</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9913373</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0008080</oboInOwl:id>
         <rdfs:label>N-acetyltransferase activity</rdfs:label>
@@ -10237,12 +10432,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9636560</owl:annotatedTarget>
         <rdfs:label>Eis acetylates DUSP16</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008080"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9913373</owl:annotatedTarget>
-        <rdfs:label>AAC(6)-Ib acetylates ciprofloxacin</rdfs:label>
     </owl:Axiom>
     
 
@@ -10315,6 +10504,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008119">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: S-adenosyl-L-methionine + a thiopurine = S-adenosyl-L-homocysteine + a thiopurine S-methylether.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:2.1.1.67</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:THIOPURINE-S-METHYLTRANSFERASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-158609</oboInOwl:hasDbXref>
@@ -10329,6 +10519,7 @@
         <oboInOwl:hasRelatedSynonym>thiopurine methyltransferase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0008119</oboInOwl:id>
         <rdfs:label>thiopurine S-methyltransferase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.1.1.67"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008119"/>
@@ -10555,6 +10746,10 @@
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0008240</oboInOwl:id>
         <rdfs:label>tripeptidyl-peptidase activity</rdfs:label>
+        <skos:broadMatch rdf:resource="http://identifiers.org/metacyc.reaction/3.4.14.9-RXN"/>
+        <skos:broadMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.14.9"/>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/3.4.14.10-RXN"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.14.10"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008240"/>
@@ -10597,6 +10792,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008456">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the hydrolysis of terminal non-reducing N-acetyl-D-galactosamine residues in N-acetyl-alpha-D-galactosaminides.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.2.1.49</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:3.2.1.49-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:15085</oboInOwl:hasDbXref>
@@ -10609,6 +10805,8 @@
         <oboInOwl:hasRelatedSynonym>alpha-galactosidase B activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0008456</oboInOwl:id>
         <rdfs:label>alpha-N-acetylgalactosaminidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.2.1.49"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/15085"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008456"/>
@@ -10660,6 +10858,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008480">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: sarcosine + H2O + electron-transfer flavoprotein = glycine + formaldehyde + reduced electron-transfer flavoprotein.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.5.8.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R00611</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:SARCOSINE-DEHYDROGENASE-RXN</oboInOwl:hasDbXref>
@@ -10673,6 +10872,8 @@
         <oboInOwl:id>GO:0008480</oboInOwl:id>
         <rdfs:comment>Note that this was EC:1.5.99.1.</rdfs:comment>
         <rdfs:label>sarcosine dehydrogenase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.5.8.3"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/19793"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008480"/>
@@ -10731,6 +10932,11 @@
         <oboInOwl:id>GO:0008482</oboInOwl:id>
         <rdfs:comment>Note that this term has a MetaCyc pathway reference as the pathway only has a single step.</rdfs:comment>
         <rdfs:label>sulfite oxidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/SULFITE-OXIDASE-RXN"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.8.3.1"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/24600"/>
+        <skos:exactMatch rdf:resource="http://www.kegg.jp/entry/R00533"/>
+        <skos:relatedMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-5326"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008482"/>
@@ -10764,9 +10970,11 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Enables the transfer of folic acid (pteroylglutamic acid) from one side of a membrane to the other. Folic acid is widely distributed as a member of the vitamin B complex and is essential for the synthesis of purine and pyrimidines.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-200646</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-200652</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-200680</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-200720</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-200729</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>folate transmembrane transporter activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>folate transporter activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>vitamin B9 transporter activity</oboInOwl:hasExactSynonym>
@@ -10785,6 +10993,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008517"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-200646</owl:annotatedTarget>
+        <rdfs:label>Cytosolic folate export across the plasma membrane</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008517"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-200652</owl:annotatedTarget>
         <rdfs:label>SLC19A1 transports 5-methyl-THF from extracellular region to cytosol</rdfs:label>
     </owl:Axiom>
@@ -10799,6 +11013,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-200720</owl:annotatedTarget>
         <rdfs:label>SLC25A32 transports THF from mitochondrial matrix to cytosol</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008517"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-200729</owl:annotatedTarget>
+        <rdfs:label>SLC46A1 transports FOLA from extracellular region to cytosol</rdfs:label>
     </owl:Axiom>
     
 
@@ -11001,6 +11221,9 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the breakdown of L-methionine (2-amino-4-(methylthio)butanoic acid), a sulfur-containing, essential amino acid found in peptide linkage in proteins.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30202</obo:IAO_0000233>
+        <oboInOwl:hasDbXref>MetaCyc:METHIONINE-DEG1-PWY</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-5082</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-701</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UM-BBD_pathwayID:met</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>methionine breakdown</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>methionine catabolism</oboInOwl:hasExactSynonym>
@@ -11008,6 +11231,9 @@
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009087</oboInOwl:id>
         <rdfs:label>L-methionine catabolic process</rdfs:label>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/METHIONINE-DEG1-PWY"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-5082"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-701"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009087"/>
@@ -11968,7 +12194,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006520"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the breakdown of gamma-aminobutyric acid (GABA, 4-aminobutyrate), an amino acid which acts as a neurotransmitter in some organisms.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MetaCyc:4AMINOBUTMETAB-PWY</oboInOwl:hasDbXref>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/31361</obo:IAO_0000233>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-5022</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-6473</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-6535</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-6536</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:PWY-6537</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-916853</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>4-aminobutanoate catabolic process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>4-aminobutanoate catabolism</oboInOwl:hasExactSynonym>
@@ -11983,6 +12214,11 @@
         <oboInOwl:id>GO:0009450</oboInOwl:id>
         <rdfs:comment>See also the biological process term &apos;neurotransmitter catabolic process ; GO:0042135&apos;.</rdfs:comment>
         <rdfs:label>gamma-aminobutyric acid catabolic process</rdfs:label>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-5022"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-6473"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-6535"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-6536"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/metacyc.reaction/PWY-6537"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009450"/>
@@ -12689,6 +12925,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015068">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: L-arginine + glycine = L-ornithine + guanidinoacetate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:2.1.4.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:GLYCINE-AMIDINOTRANSFERASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:13201</oboInOwl:hasDbXref>
@@ -12700,6 +12937,8 @@
         <oboInOwl:hasRelatedSynonym>glycine transamidinase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0015068</oboInOwl:id>
         <rdfs:label>glycine amidinotransferase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.1.4.1"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/13201"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015068"/>
@@ -12843,6 +13082,7 @@
         <oboInOwl:hasBroadSynonym>amino acid transporter activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>Reactome:R-HSA-210439</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-212642</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-351963</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-351987</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-352029</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-352052</oboInOwl:hasDbXref>
@@ -12856,6 +13096,7 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-352174</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-352182</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-352191</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-352232</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-352347</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-352354</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-352364</oboInOwl:hasDbXref>
@@ -12879,6 +13120,7 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-5655702</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5659674</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5659734</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5659755</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5660694</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5660890</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5660910</oboInOwl:hasDbXref>
@@ -12911,6 +13153,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-212642</owl:annotatedTarget>
         <rdfs:label>L-Glutamine transport into neurons</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-351963</owl:annotatedTarget>
+        <rdfs:label>SLC6A18 transports Gly from extracellular region to cytosol</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
@@ -12989,6 +13237,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-352191</owl:annotatedTarget>
         <rdfs:label>SLC7A8-mediated uptake of neutral amino acids</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-352232</owl:annotatedTarget>
+        <rdfs:label>SLC7A5:SLC3A2 transports neutral amino acids from extracellular region to cytosol</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
@@ -13127,6 +13381,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-5659734</owl:annotatedTarget>
         <rdfs:label>Defective SLC6A19 does not cotransport neutral amino acids, Na+ from extracellular region to cytosol</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5659755</owl:annotatedTarget>
+        <rdfs:label>Defective SLC6A18 does not transport Gly from extracellular region to cytosol</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015171"/>
@@ -13710,6 +13970,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016250">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: N-sulfo-D-glucosamine + H2O = D-glucosamine + sulfate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.10.1.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:N-SULFOGLUCOSAMINE-SULFOHYDROLASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:17881</oboInOwl:hasDbXref>
@@ -13726,6 +13987,8 @@
         <oboInOwl:hasRelatedSynonym>sulphamidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0016250</oboInOwl:id>
         <rdfs:label>N-sulfoglucosamine sulfohydrolase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.10.1.1"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/17881"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016250"/>
@@ -13802,7 +14065,9 @@
         <oboInOwl:hasDbXref>EC:1.3.8.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R01178</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:RXN-13449</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:24004</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:47196</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UM-BBD_reactionID:r0013</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>short-chain acyl CoA dehydrogenase</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>short-chain-acyl-CoA dehydrogenase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>butanoyl-CoA dehydrogenase</oboInOwl:hasNarrowSynonym>
@@ -13811,6 +14076,12 @@
         <oboInOwl:id>GO:0016937</oboInOwl:id>
         <rdfs:comment>While there is not universal consensus on the lengths of short-, medium-, long- and very-long-chain fatty acids, the GO uses the definitions in ChEBI (see CHEBI:26666, CHEBI:59554, CHEBI:15904 and CHEBI:27283).</rdfs:comment>
         <rdfs:label>short-chain fatty acyl-CoA dehydrogenase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/RXN-13449"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.3.8.1"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/47196"/>
+        <skos:exactMatch rdf:resource="http://www.kegg.jp/entry/R01178"/>
+        <skos:narrowMatch rdf:resource="http://identifiers.org/umbbd.reaction/r0013"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/24004"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016937"/>
@@ -13863,6 +14134,9 @@
         <oboInOwl:id>GO:0017099</oboInOwl:id>
         <rdfs:comment>While there is not universal consensus on the lengths of short-, medium-, long- and very-long-chain fatty acids, the GO uses the definitions in ChEBI (see CHEBI:26666, CHEBI:59554, CHEBI:15904 and CHEBI:27283).</rdfs:comment>
         <rdfs:label>very-long-chain fatty acyl-CoA dehydrogenase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/RXN-13451"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.3.8.9"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/19181"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017099"/>
@@ -13914,6 +14188,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0017168">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: 5-oxo-L-proline + ATP + 2 H2O = L-glutamate + ADP + 2 H+ + phosphate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.5.2.9</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R00251</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:5-OXOPROLINASE-ATP-HYDROLYSING-RXN</oboInOwl:hasDbXref>
@@ -13936,6 +14211,8 @@
         <oboInOwl:hasRelatedSynonym>pyroglutamic hydrolase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0017168</oboInOwl:id>
         <rdfs:label>5-oxoprolinase (ATP-hydrolyzing) activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.5.2.9"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/10348"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017168"/>
@@ -14059,6 +14336,15 @@
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28107</obo:IAO_0000233>
         <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/GO_0004077"/>
         <oboInOwl:hasAlternativeId>GO:0000106</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-2993447</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-2993799</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-2993802</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-2993814</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-3323184</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-4167511</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9035987</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9035988</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9035990</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>biotin-apoprotein ligase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0018271</oboInOwl:id>
@@ -14072,6 +14358,60 @@
         <owl:annotatedTarget>OBSOLETE. Catalysis of the reaction: ATP + biotin + protein = AMP + diphosphate + biotin-protein.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-2993447</owl:annotatedTarget>
+        <rdfs:label>HLCS biotinylates 6x(PCCA:PCCB)</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-2993799</owl:annotatedTarget>
+        <rdfs:label>HLCS biotinylates 6xMCCC1:6xMCCC2</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-2993802</owl:annotatedTarget>
+        <rdfs:label>HLCS biotinylates PC:Mn2+</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-2993814</owl:annotatedTarget>
+        <rdfs:label>HLCS biotinylates ACACA:Mn2+</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-3323184</owl:annotatedTarget>
+        <rdfs:label>Defective HLCS does not biotinylate ACACA:Mn2+</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-4167511</owl:annotatedTarget>
+        <rdfs:label>HLCS biotinylates ACACB</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9035987</owl:annotatedTarget>
+        <rdfs:label>Defective HLCS does not biotinylate 6xMCCC1:6xMCCC2</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9035988</owl:annotatedTarget>
+        <rdfs:label>Defective HLCS does not biotinylate PC:Mn2+</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018271"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9035990</owl:annotatedTarget>
+        <rdfs:label>Defective HLCS does not biotinylate 6x(PCCA:PCCB)</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -14080,6 +14420,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0018549">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: methanethiol + O2 + H2O = formaldehyde + hydrogen sulfide + hydrogen peroxide.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.8.3.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:METHANETHIOL-OXIDASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:11812</oboInOwl:hasDbXref>
@@ -14092,6 +14433,8 @@
         <oboInOwl:hasRelatedSynonym>methylmercaptan oxidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0018549</oboInOwl:id>
         <rdfs:label>methanethiol oxidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.8.3.4"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/11812"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018549"/>
@@ -14507,7 +14850,9 @@
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27054</obo:IAO_0000233>
         <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:56:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0019952</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044702</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0050876</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Reproduction</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>single organism reproductive process</oboInOwl:hasRelatedSynonym>
@@ -15363,6 +15708,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030731">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: S-adenosyl-L-methionine + guanidinoacetate = S-adenosyl-L-homocysteine + creatine + H+.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:2.1.1.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R01883</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:GUANIDINOACETATE-N-METHYLTRANSFERASE-RXN</oboInOwl:hasDbXref>
@@ -15376,6 +15722,8 @@
         <oboInOwl:hasRelatedSynonym>methionine-guanidinoacetic transmethylase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0030731</oboInOwl:id>
         <rdfs:label>guanidinoacetate N-methyltransferase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.1.1.2"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/10656"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030731"/>
@@ -16258,6 +16606,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0033844">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the elimination of sulfate from the D-galactose 6-sulfate residues of porphyran, producing 3,6-anhydrogalactose residues.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:2.5.1.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:2.5.1.5-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
@@ -16267,6 +16616,7 @@
         <oboInOwl:hasRelatedSynonym>porphyran sulfatase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0033844</oboInOwl:id>
         <rdfs:label>galactose-6-sulfurylase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.5.1.5"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0033844"/>
@@ -17223,6 +17573,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0036374">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: glutathione + H2O = L-cysteinylglycine + L-glutamate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/31117</obo:IAO_0000233>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2013-05-07T09:58:07Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>EC:3.4.19.13</oboInOwl:hasDbXref>
@@ -17241,11 +17593,14 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-9026927</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9035966</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9753634</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>glutathione hydrolase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>gamma-glutamyltranspeptidase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>glutathionase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0036374</oboInOwl:id>
-        <rdfs:label>glutathione hydrolase activity</rdfs:label>
+        <rdfs:label>glutathione gamma-glutamate hydrolase</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.4.19.13"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/28807"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0036374"/>
@@ -17851,7 +18206,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042592">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115>Any biological process involved in the maintenance of an internal steady state.</obo:IAO_0000115>
+        <obo:IAO_0000115>Any biological process involved in the maintenance of an internal steady state. Homeostasis allows cells and organisms to maintain stable internal conditions despite varying external conditions.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/31175</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0032844</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0032845</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0032846</oboInOwl:hasAlternativeId>
@@ -17871,9 +18227,8 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0042592"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any biological process involved in the maintenance of an internal steady state.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0395825172</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>Any biological process involved in the maintenance of an internal steady state. Homeostasis allows cells and organisms to maintain stable internal conditions despite varying external conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:26265027</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18887,6 +19242,9 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044381 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044381">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008643"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1904659"/>
         <obo:IAO_0000115>The directed movement of the hexose monosaccharide glucose into a cell as a result of an insulin stimulus.</obo:IAO_0000115>
         <oboInOwl:created_by>jl</oboInOwl:created_by>
@@ -20260,12 +20618,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: NADP+ + testosterone = NADPH + H+ + androst-4-ene-3,17-dione.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28298</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>17-ketoreductase activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:1.1.1.64</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R01838</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:1.1.1.64-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:14981</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-193064</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Testosterone_17beta-dehydrogenase_(NADP+)</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>17beta-hydroxysteroid:NADP+ 17-oxidoreductase activity</oboInOwl:hasRelatedSynonym>
@@ -20274,6 +20632,9 @@
         <oboInOwl:hasRelatedSynonym>testosterone 17beta-dehydrogenase (NADP+)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0047045</oboInOwl:id>
         <rdfs:label>testosterone dehydrogenase (NADP+) activity</rdfs:label>
+        <skos:broadMatch rdf:resource="http://purl.uniprot.org/enzyme/1.1.1.51"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.1.1.64"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/14981"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047045"/>
@@ -20292,12 +20653,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>EC:1.1.1.64</owl:annotatedTarget>
         <oboInOwl:status>skos:exactMatch</oboInOwl:status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047045"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-193064</owl:annotatedTarget>
-        <rdfs:label>HSD17B3-like proteins reducde ANDST to TEST</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047045"/>
@@ -20325,6 +20680,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0047291">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: cytolipin-H + CMP-N-acetylneuraminate = alpha-N-acetylneuraminyl-2,3-beta-D-galactosyl-1,4-beta-D-glucosylceramide + CMP. Alpha-N-acetylneuraminyl-2,3-beta-D-galactosyl-1,4-beta-D-glucosylceramide is also known as GM3.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>CMP-acetylneuraminate-lactosylceramide-sialyltransferase</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>cytidine monophosphoacetylneuraminate-lactosylceramide sialyltransferase</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:2.4.3.9</oboInOwl:hasDbXref>
@@ -20336,6 +20692,8 @@
         <oboInOwl:hasRelatedSynonym>ganglioside GM3 synthase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0047291</oboInOwl:id>
         <rdfs:label>lactosylceramide alpha-2,3-sialyltransferase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/2.4.3.9"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/18417"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047291"/>
@@ -20383,10 +20741,13 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: (6S)-6beta-hydroxy-1,4,5,6-tetrahydronicotinamide adenine dinucleotide + ATP = ADP + H+ + NAD(P)H + phosphate.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28011</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>reduced nicotinamide adenine dinucleotide hydrate dehydratase activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:4.2.1.93</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R00129</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:4.2.1.93-RXN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:19017</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:32231</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-6806967</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>ATP-dependent H(4)NAD(P)OH dehydratase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ATP-dependent H4NAD(P)OH dehydratase activity</oboInOwl:hasExactSynonym>
@@ -20395,6 +20756,9 @@
         <oboInOwl:hasRelatedSynonym>(6S)-beta-6-hydroxy-1,4,5,6-tetrahydronicotinamide-adenine-dinucleotide hydro-lyase(ATP-hydrolysing; NADH-forming)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0047453</oboInOwl:id>
         <rdfs:label>ATP-dependent NAD(P)H-hydrate dehydratase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/4.2.1.93"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/19017"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/32231"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047453"/>
@@ -20435,6 +20799,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0047598">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: cholesterol + NADP+ = 7-dehydrocholesterol + H+ + NADPH.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>sterol Delta(7)-reductase activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>EC:1.3.1.21</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:RXN66-323</oboInOwl:hasDbXref>
@@ -20447,6 +20812,8 @@
         <oboInOwl:hasRelatedSynonym>sterol delta7-reductase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0047598</oboInOwl:id>
         <rdfs:label>7-dehydrocholesterol reductase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.3.1.21"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/23984"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047598"/>
@@ -20498,6 +20865,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0047708">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: biotin amide + H2O = biotin + NH3.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:3.5.1.12</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:BIOTINIDASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:13081</oboInOwl:hasDbXref>
@@ -20510,6 +20878,8 @@
         <oboInOwl:hasRelatedSynonym>biotin-amide amidohydrolase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0047708</oboInOwl:id>
         <rdfs:label>biotinidase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.5.1.12"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/13081"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047708"/>
@@ -20562,6 +20932,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0047865">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: N,N-dimethylglycine + electron-transfer flavoprotein + H2O = sarcosine + formaldehyde + reduced electron-transfer flavoprotein.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.5.8.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>KEGG_REACTION:R01565</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:DIMETHYLGLYCINE-DEHYDROGENASE-RXN</oboInOwl:hasDbXref>
@@ -20574,6 +20945,8 @@
         <oboInOwl:id>GO:0047865</oboInOwl:id>
         <rdfs:comment>Note that this was EC:1.5.99.2.</rdfs:comment>
         <rdfs:label>dimethylglycine dehydrogenase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.5.8.4"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/52856"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047865"/>
@@ -22515,6 +22888,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <obo:IAO_0000115>Catalysis of the reaction: H2S (hydrogen sulfide) + a quinone = S0 (sulfane sulfur) + a hydroquinone.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/23325</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30193</obo:IAO_0000233>
+        <oboInOwl:hasDbXref>EC:1.8.5.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:R17-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:30239</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1614665</oboInOwl:hasDbXref>
@@ -22524,6 +22899,8 @@
         <oboInOwl:id>GO:0070224</oboInOwl:id>
         <rdfs:comment>Note that EC:1.8.5.4 describes this reaction as bacterial-specific, but it has also been observed in eukaryotes (PMID:22852582, PMID:10224084).</rdfs:comment>
         <rdfs:label>sulfide:quinone oxidoreductase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/30239"/>
+        <skos:narrowMatch rdf:resource="http://purl.uniprot.org/enzyme/1.8.5.4"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0070224"/>
@@ -22593,10 +22970,15 @@
         <obo:IAO_0000115>Catalysis of the reaction: 3 O2 + 3 reduced [NADPH--hemoprotein reductase] + testosterone = 17beta-estradiol + formate + 4 H+ + 4 H2O + 3 oxidized [NADPH--hemoprotein reductase]. Also converts androst-4-ene-3,17-dione into estrone.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/28295</obo:IAO_0000233>
         <oboInOwl:hasDbXref>EC:1.14.14.14</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:38191</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:38195</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>estrogen synthetase activity</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0070330</oboInOwl:id>
         <rdfs:label>aromatase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.14.14.14"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/38191"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/38195"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0070330"/>
@@ -22712,6 +23094,8 @@
         <oboInOwl:hasRelatedSynonym>SAICAR-lyase (fumarate forming) activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0070626</oboInOwl:id>
         <rdfs:label>(S)-2-(5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido) succinate lyase (fumarate-forming) activity</rdfs:label>
+        <skos:broadMatch rdf:resource="http://purl.uniprot.org/enzyme/4.3.2.2"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/23920"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0070626"/>
@@ -22833,6 +23217,9 @@
         <oboInOwl:id>GO:0070991</oboInOwl:id>
         <rdfs:comment>While there is not universal consensus on the lengths of short-, medium-, long- and very-long-chain fatty acids, the GO uses the definitions in ChEBI (see CHEBI:26666, CHEBI:59554, CHEBI:15904 and CHEBI:27283).</rdfs:comment>
         <rdfs:label>medium-chain fatty acyl-CoA dehydrogenase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://identifiers.org/metacyc.reaction/RXN-11734"/>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.3.8.7"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/14477"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0070991"/>
@@ -23019,13 +23406,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071953">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0031012"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>An supramolecular fiber that consists of an insoluble core of polymerized tropoelastin monomers and a surrounding mantle of microfibrils. Elastic fibers provide elasticity and recoiling to tissues and organs, and maintain structural integrity against mechanical strain.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/31135</obo:IAO_0000233>
         <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-11T11:44:57Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>elastic fibre</oboInOwl:hasExactSynonym>
@@ -23039,7 +23421,8 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An supramolecular fiber that consists of an insoluble core of polymerized tropoelastin monomers and a surrounding mantle of microfibrils. Elastic fibers provide elasticity and recoiling to tissues and organs, and maintain structural integrity against mechanical strain.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:BHF</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:12082143</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:16893474</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:20236620</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -23746,6 +24129,8 @@
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0102175</oboInOwl:id>
         <rdfs:label>3-beta-hydroxysteroid dehydrogenase (NAD+)/C4-decarboxylase activity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/1.1.1.418"/>
+        <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/34775"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0102175"/>
