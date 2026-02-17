@@ -11,16 +11,17 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.85.0
-Date Released: 15th December 2025
-Class Count: 90,359
+Experimental Factor Ontology version 3.87.0
+Date Released: 16th February 2026
+Class Count: 90,548
 
 Summary:
 
-EFO 3.85.0 contains terms to cater for users, such as the GWAS Catalog, Open Targets, and more. There is now a dynamic import for FBBI, with the 'recorded image' branch imported into EFO.
-Number of classes changed: 206
-Number of classes added: 132
-Number of classes deleted: 3
+EFO 3.86.0 contains terms to cater for users, such as the GWAS Catalog, Open Targets, and more.
+
+Number of classes changed: 23
+Number of classes added: 177
+Number of classes deleted: 1 
  
 
 ----------------------------------
@@ -37,575 +38,764 @@ Number of classes deleted: 3
 
 @Classes new to this version
 
-Class: http://purl.obolibrary.org/obo/CHEBI_35674
-Label(s): antihypertensive agent 
-+ 'antihypertensive agent' SubClassOf 'cardiovascular drug'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000369
-Label(s): SPIM 
-+ 'SPIM' SubClassOf 'fluorescence microscopy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920053
-Label(s): response to GLP-1 receptor agonist 
-+ 'response to GLP-1 receptor agonist' SubClassOf 'response to xenobiotic stimulus'
-+ 'response to GLP-1 receptor agonist' SubClassOf 'has primary input' some 'glucagon-like peptide-1 receptor agonist'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920052
-Label(s): response to zonisamide 
-+ 'response to zonisamide' SubClassOf 'has primary input' some 'zonisamide'
-+ 'response to zonisamide' SubClassOf 'response to xenobiotic stimulus'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920051
-Label(s): response to mesalamine 
-+ 'response to mesalamine' SubClassOf 'response to xenobiotic stimulus'
-+ 'response to mesalamine' SubClassOf 'has primary input' some 'mesalamine'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920050
-Label(s): response to vemurafenib 
-+ 'response to vemurafenib' SubClassOf 'has primary input' some 'vemurafenib'
-+ 'response to vemurafenib' SubClassOf 'response to tyrosine kinase inhibitor'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920049
-Label(s): response to vandetanib 
-+ 'response to vandetanib' SubClassOf 'has primary input' some 'vandetanib'
-+ 'response to vandetanib' SubClassOf 'response to tyrosine kinase inhibitor'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920048
-Label(s): response to nintedanib 
-+ 'response to nintedanib' SubClassOf 'response to tyrosine kinase inhibitor'
-+ 'response to nintedanib' SubClassOf 'has primary input' some 'nintedanib'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920045
-Label(s): response to penicillin 
-+ 'response to penicillin' SubClassOf 'response to xenobiotic stimulus'
-+ 'response to penicillin' SubClassOf 'has primary input' some 'penicillin'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920042
-Label(s): immune deficient-predominant bronchiectasis 
-+ 'immune deficient-predominant bronchiectasis' SubClassOf 'bronchiectasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920041
-Label(s): heritable connective tissue disorder-associated bronchiectasis 
-+ 'heritable connective tissue disorder-associated bronchiectasis' SubClassOf 'bronchiectasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920040
-Label(s): ciliary dysfunction bronchiectasis 
-+ 'ciliary dysfunction bronchiectasis' SubClassOf 'bronchiectasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920039
-Label(s): CFTR dysfunction bronchiectasis 
-+ 'CFTR dysfunction bronchiectasis' SubClassOf 'bronchiectasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920038
-Label(s): paucigranulocytic bronchiectasis 
-+ 'paucigranulocytic bronchiectasis' SubClassOf 'bronchiectasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920037
-Label(s): mixed granulocytic bronchiectasis 
-+ 'mixed granulocytic bronchiectasis' SubClassOf 'bronchiectasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920036
-Label(s): eosinophilic bronchiectasis 
-+ 'eosinophilic bronchiectasis' SubClassOf 'bronchiectasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920035
-Label(s): neutrophilic bronchiectasis 
-+ 'neutrophilic bronchiectasis' SubClassOf 'bronchiectasis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920034
-Label(s): age at high-grade serous ovarian cancer diagnosis 
-+ 'age at high-grade serous ovarian cancer diagnosis' SubClassOf 'age at diagnosis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920033
-Label(s): concentration of small HDL particles measurement 
-+ 'concentration of small HDL particles measurement' SubClassOf 'lipoprotein level'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920032
-Label(s): concentration of medium HDL particles measurement 
-+ 'concentration of medium HDL particles measurement' SubClassOf 'lipoprotein level'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920031
-Label(s): concentration of very large HDL particles measurement 
-+ 'concentration of very large HDL particles measurement' SubClassOf 'lipoprotein level'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920030
-Label(s): concentration of very large VLDL particles measurement 
-+ 'concentration of very large VLDL particles measurement' SubClassOf 'lipoprotein level'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920027
-Label(s): cholesteryl esters in small HDL measurement 
-+ 'cholesteryl esters in small HDL measurement' SubClassOf 'is_about' some 'cholesteryl ester'
-+ 'cholesteryl esters in small HDL measurement' SubClassOf 'cholesteryl esters in HDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920024
-Label(s): cholesteryl esters in very large VLDL measurement 
-+ 'cholesteryl esters in very large VLDL measurement' SubClassOf 'cholesteryl esters in VLDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920022
-Label(s): cholesteryl esters in HDL measurement 
-+ 'cholesteryl esters in HDL measurement' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters in HDL measurement' SubClassOf 'esterified cholesterol measurement'
-+ 'cholesteryl esters in HDL measurement' EquivalentTo 'measurement' and ('characteristic of' some 
-('cholesteryl ester' and ('part_of' some 'high-density lipoprotein')))
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920021
-Label(s): cholesteryl esters in VLDL measurement 
-+ 'cholesteryl esters in VLDL measurement' SubClassOf 'esterified cholesterol measurement'
-+ 'cholesteryl esters in VLDL measurement' SubClassOf 'is_about' some 'cholesteryl ester'
-+ 'cholesteryl esters in VLDL measurement' EquivalentTo 'measurement' and ('characteristic of' some 
-('cholesteryl ester' and ('part_of' some 'very-low-density lipoprotein')))
-+ 'cholesteryl esters in VLDL measurement' SubClassOf 'cholesteryl ester measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920020
-Label(s): BMI-adjusted body adiposity index 
-+ 'BMI-adjusted body adiposity index' SubClassOf 'body weights and measures'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920017
-Label(s): visceral adiposity index 
-+ 'visceral adiposity index' SubClassOf 'body weights and measures'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920016
-Label(s): selenium deficiency 
-+ 'selenium deficiency' SubClassOf 'nutritional deficiency disease'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000603
-Label(s): fluorescence polarization microscopy 
-+ 'fluorescence polarization microscopy' SubClassOf 'fluorescence microscopy'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_39027
-Label(s): very-low-density lipoprotein 
-+ 'very-low-density lipoprotein' SubClassOf 'protein'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_39025
-Label(s): high-density lipoprotein 
-+ 'high-density lipoprotein' SubClassOf 'protein'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000367
-Label(s): FRET 
-+ 'FRET' SubClassOf 'fluorescence microscopy'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920023
-Label(s): cholesteryl esters in LDL measurement 
-+ 'cholesteryl esters in LDL measurement' SubClassOf 'esterified cholesterol measurement'
-+ 'cholesteryl esters in LDL measurement' EquivalentTo 'measurement' and ('characteristic of' some 
-('cholesteryl ester' and ('part_of' some 'low-density lipoprotein')))
-+ 'cholesteryl esters in LDL measurement' SubClassOf 'cholesteryl ester measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920025
-Label(s): cholesteryl esters in small VLDL measurement 
-+ 'cholesteryl esters in small VLDL measurement' SubClassOf 'total cholesterol in small VLDL'
-+ 'cholesteryl esters in small VLDL measurement' SubClassOf 'cholesteryl esters in VLDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920026
-Label(s): cholesteryl esters in medium HDL measurement 
-+ 'cholesteryl esters in medium HDL measurement' SubClassOf 'is_about' some 'cholesteryl ester'
-+ 'cholesteryl esters in medium HDL measurement' SubClassOf 'cholesteryl esters in HDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920028
-Label(s): cholesteryl esters in small LDL measurement 
-+ 'cholesteryl esters in small LDL measurement' SubClassOf 'cholesteryl esters in LDL measurement'
-+ 'cholesteryl esters in small LDL measurement' SubClassOf 'is_about' some 'cholesteryl ester'
-+ 'cholesteryl esters in small LDL measurement' SubClassOf 'total cholesterol in small LDL'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920029
-Label(s): cholesteryl esters in IDL measurement 
-+ 'cholesteryl esters in IDL measurement' SubClassOf 'lipid amount'
-+ 'cholesteryl esters in IDL measurement' SubClassOf 'is_about' some 'cholesteryl ester'
-+ 'cholesteryl esters in IDL measurement' SubClassOf 'total cholesterol in IDL'
-+ 'cholesteryl esters in IDL measurement' SubClassOf 'esterified cholesterol measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920043
-Label(s): functional assay in yeast 
-+ 'functional assay in yeast' SubClassOf 'assay'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920044
-Label(s): response to amphetamine 
-+ 'response to amphetamine' SubClassOf 'has primary input' some 'amphetamine'
-+ 'response to amphetamine' SubClassOf 'response to xenobiotic stimulus'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920046
-Label(s): response to tocilizumab 
-+ 'response to tocilizumab' SubClassOf 'response to xenobiotic stimulus'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920047
-Label(s): response to sunitinib 
-+ 'response to sunitinib' SubClassOf 'response to tyrosine kinase inhibitor'
-+ 'response to sunitinib' SubClassOf 'has primary input' some 'sunitinib'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920054
-Label(s): response to dipeptidyl peptidase-4 inhibitor 
-+ 'response to dipeptidyl peptidase-4 inhibitor' SubClassOf 'has primary input' some 'EC 3.4.14.5 (dipeptidyl-peptidase IV) inhibitor'
-+ 'response to dipeptidyl peptidase-4 inhibitor' SubClassOf 'response to xenobiotic stimulus'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00050000
-Label(s): focussed ion beam scanning electron microscopy (FIB-SEM) 
-+ 'focussed ion beam scanning electron microscopy (FIB-SEM)' SubClassOf 'back-scattered_electron imaging'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_37670
-Label(s): protease inhibitor 
-+ 'protease inhibitor' SubClassOf 'enzyme inhibitor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_1010181
-Label(s): SCN5A-related cardiac rhythm disorder 
-+ 'SCN5A-related cardiac rhythm disorder' SubClassOf 'cardiogenetic rhythm disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_1010180
-Label(s): cardiogenetic rhythm disorder 
-+ 'cardiogenetic rhythm disorder' SubClassOf 'cardiogenetic disease'
-+ 'cardiogenetic rhythm disorder' SubClassOf 'cardiac rhythm disease'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_7773
-Label(s): Ondansetron 
-+ 'Ondansetron' SubClassOf 'organic heterocyclic compound'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000246
-Label(s): fluorescence microscopy 
-+ 'fluorescence microscopy' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_231614
-Label(s): Nivolumab 
-+ 'Nivolumab' SubClassOf 'chemical entity'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_231601
-Label(s): trastuzumab 
-+ 'trastuzumab' SubClassOf 'chemical entity'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920018
-Label(s): BMI-adjusted visceral adiposity index 
-+ 'BMI-adjusted visceral adiposity index' SubClassOf 'body weights and measures'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0920019
-Label(s): body adiposity index 
-+ 'body adiposity index' SubClassOf 'body weights and measures'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_17334
-Label(s): penicillin 
-+ 'penicillin' SubClassOf 'beta-lactam'
-+ 'penicillin' SubClassOf 'carboxylic acid'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_85164
-Label(s): nintedanib 
-+ 'nintedanib' SubClassOf 'organic heterocyclic compound'
-+ 'nintedanib' SubClassOf 'carboxamide'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000258
-Label(s): transmission electron microscopy (TEM) 
-+ 'transmission electron microscopy (TEM)' SubClassOf 'electron microscopy'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_10023
-Label(s): voriconazole 
-+ 'voriconazole' SubClassOf 'organic heterocyclic compound'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_53213
-Label(s): diisocyanate 
-+ 'diisocyanate' SubClassOf 'chemical entity'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000243
-Label(s): bright-field microscopy 
-+ 'bright-field microscopy' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000245
-Label(s): differential interference contrast microscopy 
-+ 'differential interference contrast microscopy' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_49960
-Label(s): vandetanib 
-+ 'vandetanib' SubClassOf 'organic heterocyclic compound'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000381
-Label(s): EELS imaging 
-+ 'EELS imaging' SubClassOf 'electron microscopy'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_36044
-Label(s): antiviral drug 
-+ 'antiviral drug' SubClassOf 'drug'
-+ 'antiviral drug' SubClassOf 'antiviral agent'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_51373
-Label(s): GABA agonist 
-+ 'GABA agonist' SubClassOf 'drug'
-+ 'GABA agonist' SubClassOf 'biological role'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_6822
-Label(s): Methazolamide 
-+ 'Methazolamide' SubClassOf 'organic heterocyclic compound'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000617
-Label(s): evanescent wave microscopy 
-+ 'evanescent wave microscopy' SubClassOf 'fluorescence microscopy'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_84500
-Label(s): varenicline 
-+ 'varenicline' SubClassOf 'organic heterocyclic compound'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_133833
-Label(s): benznidazole 
-+ 'benznidazole' SubClassOf 'organic heterocyclic compound'
-+ 'benznidazole' SubClassOf 'carboxamide'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_71196
-Label(s): glucagon-like peptide-1 receptor agonist 
-+ 'glucagon-like peptide-1 receptor agonist' SubClassOf 'biological role'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_68612
-Label(s): EC 3.4.14.5 (dipeptidyl-peptidase IV) inhibitor 
-+ 'EC 3.4.14.5 (dipeptidyl-peptidase IV) inhibitor' SubClassOf 'enzyme inhibitor'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_47956
-Label(s): thiocarboxamide 
-+ 'thiocarboxamide' SubClassOf 'chemical entity'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_35442
-Label(s): antiparasitic agent 
-+ 'antiparasitic agent' SubClassOf 'drug'
-
-Class: http://purl.obolibrary.org/obo/GO_0010043
-Label(s): response to zinc ion 
-+ 'response to zinc ion' SubClassOf 'response to stimulus'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00001005
-Label(s): computed tomography 
-+ 'computed tomography' SubClassOf 'tomography'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00001004
-Label(s): tomography 
-+ 'tomography' SubClassOf 'recorded image'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00001003
-Label(s): X-ray tomography 
-+ 'X-ray tomography' SubClassOf 'tomography'
-+ 'X-ray tomography' SubClassOf 'X-ray radiography'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00001002
-Label(s): X-ray computed tomography 
-+ 'X-ray computed tomography' SubClassOf 'computed tomography'
-+ 'X-ray computed tomography' SubClassOf 'X-ray tomography'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00001001
-Label(s): X-ray radiography 
-+ 'X-ray radiography' SubClassOf 'radiography'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00001000
-Label(s): radiography 
-+ 'radiography' SubClassOf 'recorded image'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_35530
-Label(s): beta-adrenergic antagonist 
-+ 'beta-adrenergic antagonist' SubClassOf 'adrenergic antagonist'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000256
-Label(s): electron microscopy 
-+ 'electron microscopy' SubClassOf 'microscopy with lenses'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000370
-Label(s): CARS 
-+ 'CARS' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000373
-Label(s): back-scattered_electron imaging 
-+ 'back-scattered_electron imaging' SubClassOf 'scanning electron microscopy (SEM)'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_68481
-Label(s): mTOR inhibitor 
-+ 'mTOR inhibitor' SubClassOf 'protein kinase inhibitor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700309
-Label(s): spastic paraplegia 18b, autosomal recessive 
-+ 'spastic paraplegia 18b, autosomal recessive' SubClassOf 'hereditary spastic paraplegia 18'
-+ 'spastic paraplegia 18b, autosomal recessive' SubClassOf 'autosomal recessive disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700307
-Label(s): spastic paraplegia 30A, autosomal dominant 
-+ 'spastic paraplegia 30A, autosomal dominant' SubClassOf 'hereditary spastic paraplegia 30'
-+ 'spastic paraplegia 30A, autosomal dominant' SubClassOf 'autosomal dominant disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100042
-Label(s): cardiac conduction defect 
-+ 'cardiac conduction defect' SubClassOf 'cardiac rhythm disease'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_32246
-Label(s): tolvaptan 
-+ 'tolvaptan' SubClassOf 'chemical entity'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_9648
-Label(s): tramadol 
-+ 'tramadol' SubClassOf 'chemical entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700382
-Label(s): HMBS-related hepatic porphyria 
-+ 'HMBS-related hepatic porphyria' SubClassOf 'hepatic porphyria'
-+ 'HMBS-related hepatic porphyria' SubClassOf 'inherited porphyria'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000252
-Label(s): single-spot confocal microscopy 
-+ 'single-spot confocal microscopy' SubClassOf 'confocal microscopy'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_64857
-Label(s): cosmetic 
-+ 'cosmetic' SubClassOf 'application'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_9123
-Label(s): sertraline 
-+ 'sertraline' SubClassOf 'chemical entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700383
-Label(s): PPOX-related hepatic porphyria 
-+ 'PPOX-related hepatic porphyria' SubClassOf 'hepatic porphyria'
-+ 'PPOX-related hepatic porphyria' SubClassOf 'inherited porphyria'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_63637
-Label(s): vemurafenib 
-+ 'vemurafenib' SubClassOf 'organic heterocyclic compound'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_2679
-Label(s): amphetamine 
-+ 'amphetamine' SubClassOf 'chemical entity'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000623
-Label(s): intermediate voltage electron microacopy (IVEM) 
-+ 'intermediate voltage electron microacopy (IVEM)' SubClassOf 'transmission electron microscopy (TEM)'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000622
-Label(s): high-voltage electron microscopy (HVEM) 
-+ 'high-voltage electron microscopy (HVEM)' SubClassOf 'transmission electron microscopy (TEM)'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000616
-Label(s): evanescent wave scattering 
-+ 'evanescent wave scattering' SubClassOf 'dark-field microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000585
-Label(s): serial block face SEM (SBFSEM) 
-+ 'serial block face SEM (SBFSEM)' SubClassOf 'back-scattered_electron imaging'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000393
-Label(s): array-scan confocal microscopy 
-+ 'array-scan confocal microscopy' SubClassOf 'confocal microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000392
-Label(s): slit-scan confocal microscopy 
-+ 'slit-scan confocal microscopy' SubClassOf 'confocal microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000382
-Label(s): EDAX imaging 
-+ 'EDAX imaging' SubClassOf 'electron microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000380
-Label(s): scanning-transmission electron microscopy 
-+ 'scanning-transmission electron microscopy' SubClassOf 'electron microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000372
-Label(s): secondary_electron imaging 
-+ 'secondary_electron imaging' SubClassOf 'scanning electron microscopy (SEM)'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000371
-Label(s): OCT 
-+ 'OCT' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000368
-Label(s): FLIM 
-+ 'FLIM' SubClassOf 'fluorescence microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000365
-Label(s): FLIP 
-+ 'FLIP' SubClassOf 'fluorescence microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000351
-Label(s): orientation-independent polarization microscopy 
-+ 'orientation-independent polarization microscopy' SubClassOf 'polarization microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000349
-Label(s): ANSOM 
-+ 'ANSOM' SubClassOf 'nearfield scanning optical microscopy (ANSOM)'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000348
-Label(s): nearfield scanning optical microscopy (ANSOM) 
-+ 'nearfield scanning optical microscopy (ANSOM)' SubClassOf 'scanning probe microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000347
-Label(s): scanning tunneling microscopy 
-+ 'scanning tunneling microscopy' SubClassOf 'scanning probe microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000345
-Label(s): light microscopy 
-+ 'light microscopy' SubClassOf 'microscopy with lenses'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000344
-Label(s): scanning probe microscopy 
-+ 'scanning probe microscopy' SubClassOf 'microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000343
-Label(s): microscopy with lenses 
-+ 'microscopy with lenses' SubClassOf 'microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000366
-Label(s): FRAP 
-+ 'FRAP' SubClassOf 'FLIP'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000265
-Label(s): recorded image 
-+ 'recorded image' SubClassOf 'image'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000260
-Label(s): X-ray microscopy 
-+ 'X-ray microscopy' SubClassOf 'microscopy'
-+ 'X-ray microscopy' SubClassOf 'X-ray radiography'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000259
-Label(s): atomic force microscopy 
-+ 'atomic force microscopy' SubClassOf 'scanning probe microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000257
-Label(s): scanning electron microscopy (SEM) 
-+ 'scanning electron microscopy (SEM)' SubClassOf 'electron microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000255
-Label(s): multi-photon microscopy 
-+ 'multi-photon microscopy' SubClassOf 'fluorescence microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000254
-Label(s): two-photon laser scanning microscopy 
-+ 'two-photon laser scanning microscopy' SubClassOf 'multi-photon microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000253
-Label(s): spinning disk confocal microscopy 
-+ 'spinning disk confocal microscopy' SubClassOf 'confocal microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000251
-Label(s): confocal microscopy 
-+ 'confocal microscopy' SubClassOf 'fluorescence microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000249
-Label(s): time lapse microscopy 
-+ 'time lapse microscopy' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000248
-Label(s): polarization microscopy 
-+ 'polarization microscopy' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000247
-Label(s): phase contrast microscopy 
-+ 'phase contrast microscopy' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000244
-Label(s): dark-field microscopy 
-+ 'dark-field microscopy' SubClassOf 'light microscopy'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000241
-Label(s): microscopy 
-+ 'microscopy' SubClassOf 'recorded image'
-
-Class: http://purl.obolibrary.org/obo/FBbi_00000240
-Label(s): macroscopy 
-+ 'macroscopy' SubClassOf 'recorded image'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_51041
-Label(s): acamprosate 
-+ 'acamprosate' SubClassOf 'carboxamide'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_61016
-Label(s): angiotensin receptor antagonist 
-+ 'angiotensin receptor antagonist' SubClassOf 'biological role'
-+ 'angiotensin receptor antagonist' SubClassOf 'drug'
+Class: http://purl.obolibrary.org/obo/MONDO_0850340
+Label(s): supratentorial ependymoma 
++ 'supratentorial ependymoma' SubClassOf 'anaplastic ependymoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850339
+Label(s): posterior fossa ependymoma 
++ 'posterior fossa ependymoma' SubClassOf 'anaplastic ependymoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850335
+Label(s): IDH-wildtype glioblastoma 
++ 'IDH-wildtype glioblastoma' SubClassOf 'glioblastoma multiforme'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850332
+Label(s): IDH-mutant anaplastic astrocytoma 
++ 'IDH-mutant anaplastic astrocytoma' SubClassOf 'anaplastic astrocytoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0858959
+Label(s): polymorphous low grade neuroepithelial tumor of the young 
++ 'polymorphous low grade neuroepithelial tumor of the young' SubClassOf 'central nervous system organ benign neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0858944
+Label(s): myxoid glioneuronal tumor 
++ 'myxoid glioneuronal tumor' SubClassOf 'central nervous system organ benign neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003389
+Label(s): epithelial-myoepithelial carcinoma 
++ 'epithelial-myoepithelial carcinoma' SubClassOf 'carcinoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003325
+Label(s): nodular ganglioneuroblastoma 
++ 'nodular ganglioneuroblastoma' SubClassOf 'ganglioneuroblastoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850198
+Label(s): medulloblastoma non-WNT/non-SHH 
++ 'medulloblastoma non-WNT/non-SHH' SubClassOf 'medulloblastoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003096
+Label(s): deep hemangioma 
++ 'deep hemangioma' SubClassOf 'hemangioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003088
+Label(s): intramuscular hemangioma 
++ 'intramuscular hemangioma' SubClassOf 'deep hemangioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007385
+Label(s): idiopathic spontaneous coronary artery dissection 
++ 'idiopathic spontaneous coronary artery dissection' SubClassOf 'idiopathic disease'
++ 'idiopathic spontaneous coronary artery dissection' SubClassOf 'vascular disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007365
+Label(s): seizures, benign familial neonatal, 1 
++ 'seizures, benign familial neonatal, 1' SubClassOf 'benign neonatal seizures'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978301
+Label(s): neurodevelopmental disorder with dysmorphic facies, brain anomalies, and seizures 
++ 'neurodevelopmental disorder with dysmorphic facies, brain anomalies, and seizures' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007060
+Label(s): spermatogenic failure 6 
++ 'spermatogenic failure 6' SubClassOf 'azoospermia'
++ 'spermatogenic failure 6' SubClassOf 'male infertility due to globozoospermia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0958119
+Label(s): embryonal tumor with multilayered rosettes 
++ 'embryonal tumor with multilayered rosettes' SubClassOf 'central nervous system Ewing sarcoma/peripheral primitive neuroectodermal tumor'
+
+Class: http://purl.obolibrary.org/obo/HP_0006879
+Label(s): Pontocerebellar atrophy 
++ 'Pontocerebellar atrophy' SubClassOf 'Abnormal brainstem morphology'
++ 'Pontocerebellar atrophy' SubClassOf 'Cerebellar atrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010762
+Label(s): lymphoma, Hodgkin, Y-linked pseudoautosomal 
++ 'lymphoma, Hodgkin, Y-linked pseudoautosomal' SubClassOf 'Hodgkins lymphoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850101
+Label(s): spitzoid melanoma 
++ 'spitzoid melanoma' SubClassOf 'cutaneous melanoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850196
+Label(s): medulloblastoma WNT activated 
++ 'medulloblastoma WNT activated' SubClassOf 'medulloblastoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850197
+Label(s): medulloblastoma SHH activated 
++ 'medulloblastoma SHH activated' SubClassOf 'medulloblastoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978302
+Label(s): spermatogenic failure 100 
++ 'spermatogenic failure 100' SubClassOf 'azoospermia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014867
+Label(s): spinocerebellar ataxia 43 
++ 'spinocerebellar ataxia 43' SubClassOf 'autosomal dominant cerebellar ataxia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014866
+Label(s): Charcot-Marie-Tooth disease axonal type 2T 
++ 'Charcot-Marie-Tooth disease axonal type 2T' SubClassOf 'Charcot-Marie-Tooth disease type 2'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014614
+Label(s): congenital stationary night blindness 1G 
++ 'congenital stationary night blindness 1G' SubClassOf 'congenital nervous system disorder'
++ 'congenital stationary night blindness 1G' SubClassOf 'congenital stationary night blindness'
++ 'congenital stationary night blindness 1G' SubClassOf 'autosomal recessive disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014571
+Label(s): optic atrophy 9 
++ 'optic atrophy 9' SubClassOf 'ACO2-related optic atrophy with or without extraocular features'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014531
+Label(s): amyotrophic lateral sclerosis type 22 
++ 'amyotrophic lateral sclerosis type 22' SubClassOf 'familial amyotrophic lateral sclerosis'
+
+Class: http://purl.obolibrary.org/obo/HP_0033528
+Label(s): Abnormal cardiac output 
++ 'Abnormal cardiac output' SubClassOf 'Abnormality of blood circulation'
+
+Class: http://purl.obolibrary.org/obo/CHEBI_30813
+Label(s): decanoic acid 
++ 'decanoic acid' SubClassOf 'fatty acid'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979240
+Label(s): cataract, alopecia, oral mucosal disorder, and psoriasis-like syndrome 
++ 'cataract, alopecia, oral mucosal disorder, and psoriasis-like syndrome' SubClassOf 'genetic disorder'
++ 'cataract, alopecia, oral mucosal disorder, and psoriasis-like syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0850066
+Label(s): SAMD9L-associated autoinflammatory syndrome 
++ 'SAMD9L-associated autoinflammatory syndrome' SubClassOf 'autoinflammatory syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1010177
+Label(s): IKZF2-related combined immunodeficiency 
++ 'IKZF2-related combined immunodeficiency' SubClassOf 'combined immunodeficiency syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002787
+Label(s): adamantinous craniopharyngioma 
++ 'adamantinous craniopharyngioma' SubClassOf 'Craniopharyngioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978293
+Label(s): Houge-Janssens syndrome 4 
++ 'Houge-Janssens syndrome 4' SubClassOf 'Houge-Janssens syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978294
+Label(s): LSM7-related leukodystrophy and cerebellar atrophy 
++ 'LSM7-related leukodystrophy and cerebellar atrophy' SubClassOf 'hereditary neurological disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978295
+Label(s): craniofaciocardiohepatic syndrome 
++ 'craniofaciocardiohepatic syndrome' SubClassOf 'syndromic disease'
++ 'craniofaciocardiohepatic syndrome' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978296
+Label(s): FICUS syndrome 
++ 'FICUS syndrome' SubClassOf 'syndromic disease'
++ 'FICUS syndrome' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978299
+Label(s): maturity-onset diabetes of the young, type 12 
++ 'maturity-onset diabetes of the young, type 12' SubClassOf 'maturity-onset diabetes of the young'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978300
+Label(s): neurodevelopmental disorder with ataxia and brain abnormalities 
++ 'neurodevelopmental disorder with ataxia and brain abnormalities' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978303
+Label(s): Li-Takada-Miyake syndrome 
++ 'Li-Takada-Miyake syndrome' SubClassOf 'syndromic disease'
++ 'Li-Takada-Miyake syndrome' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002696
+Label(s): Sertoli cell tumor 
++ 'Sertoli cell tumor' SubClassOf 'sex cord-stromal tumor'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014107
+Label(s): hypogonadotropic hypogonadism 21 with or without anosmia 
++ 'hypogonadotropic hypogonadism 21 with or without anosmia' SubClassOf 'Kallmann syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014045
+Label(s): Cowden syndrome 3 
++ 'Cowden syndrome 3' SubClassOf 'Cowden disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859597
+Label(s): cns neuroblastoma with FOXR2 activation 
++ 'cns neuroblastoma with FOXR2 activation' SubClassOf 'cerebral neuroblastoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0957197
+Label(s): diffuse glioma, H3 G34 mutant 
++ 'diffuse glioma, H3 G34 mutant' SubClassOf 'glioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0003864
+Label(s): chronic lymphocytic leukemia/small lymphocytic lymphoma 
++ 'chronic lymphocytic leukemia/small lymphocytic lymphoma' SubClassOf 'chronic lymphocytic leukemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700076
+Label(s): glutaric acidemia IIc 
++ 'glutaric acidemia IIc' SubClassOf 'multiple acyl-CoA dehydrogenase deficiency'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060190
+Label(s): APP-related brain and vascular amyloidosis 
++ 'APP-related brain and vascular amyloidosis' SubClassOf 'cerebrovascular disorder'
++ 'APP-related brain and vascular amyloidosis' SubClassOf 'hereditary amyloidosis'
++ 'APP-related brain and vascular amyloidosis' SubClassOf 'inherited neurodegenerative disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100584
+Label(s): SNUPN-related muscular dystrophy with or without multi-system involvement 
++ 'SNUPN-related muscular dystrophy with or without multi-system involvement' SubClassOf 'congenital muscular dystrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013690
+Label(s): Pitt-Hopkins-like syndrome 2 
++ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'genetic disorder'
++ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'Pitt-Hopkins-like syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0800441
+Label(s): NKX2.5-related congenital, conduction and myopathic heart disease 
++ 'NKX2.5-related congenital, conduction and myopathic heart disease' SubClassOf 'familial cardiomyopathy'
++ 'NKX2.5-related congenital, conduction and myopathic heart disease' SubClassOf 'heart conduction disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0800464
+Label(s): SQSTM1-related multisystem proteinopathy 
++ 'SQSTM1-related multisystem proteinopathy' SubClassOf 'inborn errors of metabolism'
++ 'SQSTM1-related multisystem proteinopathy' SubClassOf 'proteostasis deficiencies'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013597
+Label(s): platelet-type bleeding disorder 14 
++ 'platelet-type bleeding disorder 14' SubClassOf 'inherited bleeding disorder, platelet-type'
++ 'platelet-type bleeding disorder 14' SubClassOf 'inherited blood coagulation disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013509
+Label(s): intellectual disability, autosomal dominant 6 
++ 'intellectual disability, autosomal dominant 6' SubClassOf 'GRIN2B-related complex neurodevelopmental disorder'
++ 'intellectual disability, autosomal dominant 6' SubClassOf 'intellectual disability, autosomal dominant'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013470
+Label(s): generalized epilepsy with febrile seizures plus, type 7 
++ 'generalized epilepsy with febrile seizures plus, type 7' SubClassOf 'generalized epilepsy with febrile seizures plus'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013253
+Label(s): breast-ovarian cancer, familial, susceptibility to, 3 
++ 'breast-ovarian cancer, familial, susceptibility to, 3' SubClassOf 'breast-ovarian cancer, familial, susceptibility to'
++ 'breast-ovarian cancer, familial, susceptibility to, 3' SubClassOf 'predisposes towards' some 'hereditary breast ovarian cancer syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060191
+Label(s): ciliopathy-IFT74 
++ 'ciliopathy-IFT74' SubClassOf 'ciliopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060185
+Label(s): systemic lupus erythematosus 18 
++ 'systemic lupus erythematosus 18' SubClassOf 'systemic lupus erythematosus'
++ 'systemic lupus erythematosus 18' SubClassOf 'hereditary disorder of connective tissue'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022988
+Label(s): Parkinson disease 6 
++ 'Parkinson disease 6' SubClassOf 'Parkinson disease'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022987
+Label(s): adiponectin deficiency 
++ 'adiponectin deficiency' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060179
+Label(s): RNU5B-1 related neurodevelopmental disorder with seizures and joint laxity 
++ 'RNU5B-1 related neurodevelopmental disorder with seizures and joint laxity' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013104
+Label(s): basal cell carcinoma, susceptibility to, 4 
++ 'basal cell carcinoma, susceptibility to, 4' SubClassOf 'basal cell carcinoma, susceptibility to'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978297
+Label(s): spermatogenic failure 99 
++ 'spermatogenic failure 99' SubClassOf 'azoospermia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979570
+Label(s): immunodeficiency 133 with ectodermal dysplasia with or without peripheral neuropathy 
++ 'immunodeficiency 133 with ectodermal dysplasia with or without peripheral neuropathy' SubClassOf 'immunodeficiency disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956990
+Label(s): supratentorial ependymoma, ZFTA fusion–positive 
++ 'supratentorial ependymoma, ZFTA fusion–positive' SubClassOf 'supratentorial ependymoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956964
+Label(s): medulloblastoma SHH activated and TP53 mutant 
++ 'medulloblastoma SHH activated and TP53 mutant' SubClassOf 'medulloblastoma SHH activated'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022984
+Label(s): bilateral breast cancer 
++ 'bilateral breast cancer' SubClassOf 'breast cancer'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0971094
+Label(s): cardiac anomalies-short stature-joint hypermobility-facial dysmorphism syndrome due to TAB2 mutation 
++ 'cardiac anomalies-short stature-joint hypermobility-facial dysmorphism syndrome due to TAB2 mutation' SubClassOf 'polyvalvular heart disease syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020813
+Label(s): benign testicular sertoli cell tumor 
++ 'benign testicular sertoli cell tumor' SubClassOf 'benign sertoli cell tumor'
++ 'benign testicular sertoli cell tumor' SubClassOf 'testicular sertoli cell tumor'
++ 'benign testicular sertoli cell tumor' SubClassOf 'benign neoplasm of testis'
+
+Class: http://purl.obolibrary.org/obo/HP_0012743
+Label(s): Abdominal obesity 
++ 'Abdominal obesity' SubClassOf 'Obesity'
+
+Class: http://purl.obolibrary.org/obo/HP_0012732
+Label(s): Anorectal anomaly 
++ 'Anorectal anomaly' SubClassOf 'Abnormal gastrointestinal tract morphology'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0000081
+Label(s): metanephros 
++ 'metanephros' SubClassOf 'kidney'
+
+Class: http://purl.obolibrary.org/obo/HP_0000973
+Label(s): Cutis laxa 
++ 'Cutis laxa' SubClassOf 'Abnormally lax or hyperextensible skin'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011233
+Label(s): Axenfeld-Rieger syndrome type 3 
++ 'Axenfeld-Rieger syndrome type 3' SubClassOf 'Axenfeld-Rieger syndrome'
++ 'Axenfeld-Rieger syndrome type 3' SubClassOf 'FOXC1-related anterior segment dysgenesis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0009433
+Label(s): hypoplastic left heart syndrome 1 
++ 'hypoplastic left heart syndrome 1' SubClassOf 'hypoplastic left heart syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979245
+Label(s): neurodevelopmental disorder with behavioral, ear, and skeletal abnormalities 
++ 'neurodevelopmental disorder with behavioral, ear, and skeletal abnormalities' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1040014
+Label(s): PPFIA3-related neurodevelopmental disorder 
++ 'PPFIA3-related neurodevelopmental disorder' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020809
+Label(s): benign sertoli cell tumor 
++ 'benign sertoli cell tumor' SubClassOf 'Sertoli cell tumor'
++ 'benign sertoli cell tumor' SubClassOf 'sex cord-stromal benign neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020808
+Label(s): testicular sertoli cell tumor 
++ 'testicular sertoli cell tumor' SubClassOf 'Sertoli cell tumor'
++ 'testicular sertoli cell tumor' SubClassOf 'testicular sex cord-stromal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020754
+Label(s): visceral myopathy 1 
++ 'visceral myopathy 1' SubClassOf 'familial visceral myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020697
+Label(s): lung epithelial-myoepithelial carcinoma 
++ 'lung epithelial-myoepithelial carcinoma' SubClassOf 'epithelial-myoepithelial carcinoma'
++ 'lung epithelial-myoepithelial carcinoma' EquivalentTo 'epithelial-myoepithelial carcinoma' and ('disease has location' some 'lung')
++ 'lung epithelial-myoepithelial carcinoma' SubClassOf 'lung carcinoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020694
+Label(s): salivary gland epithelial myoepithelial carcinoma 
++ 'salivary gland epithelial myoepithelial carcinoma' EquivalentTo 'epithelial-myoepithelial carcinoma' and ('disease has location' some 'saliva-secreting gland')
++ 'salivary gland epithelial myoepithelial carcinoma' SubClassOf 'salivary gland carcinoma'
++ 'salivary gland epithelial myoepithelial carcinoma' SubClassOf 'epithelial-myoepithelial carcinoma'
+
+Class: http://purl.obolibrary.org/obo/HP_0500015
+Label(s): Abnormal cardiac test 
++ 'Abnormal cardiac test' SubClassOf 'Abnormality of the cardiovascular system'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011151
+Label(s): exudative vitreoretinopathy 4 
++ 'exudative vitreoretinopathy 4' SubClassOf 'LRP5-related exudative vitreoretinopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013248
+Label(s): Fanconi anemia complementation group O 
++ 'Fanconi anemia complementation group O' SubClassOf 'Fanconi anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0024527
+Label(s): glomerulopathy with fibronectin deposits 1 
++ 'glomerulopathy with fibronectin deposits 1' SubClassOf 'fibronectin glomerulopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013356
+Label(s): vesicoureteral reflux 3 
++ 'vesicoureteral reflux 3' SubClassOf 'familial vesicoureteral reflux'
+
+Class: http://purl.obolibrary.org/obo/HP_0006480
+Label(s): Premature loss of teeth 
++ 'Premature loss of teeth' SubClassOf 'Abnormality of the dentition'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012760
+Label(s): epilepsy, idiopathic generalized, susceptibility to, 5 
++ 'epilepsy, idiopathic generalized, susceptibility to, 5' SubClassOf 'inherited disease susceptibility'
++ 'epilepsy, idiopathic generalized, susceptibility to, 5' SubClassOf 'predisposes towards' some 'generalised epilepsy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979883
+Label(s): cranioectodermal dysplasia 6 
++ 'cranioectodermal dysplasia 6' SubClassOf 'cranioectodermal dysplasia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979880
+Label(s): brain small vessel disease 5 with osteoporosis 
++ 'brain small vessel disease 5 with osteoporosis' SubClassOf 'familial porencephaly'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979876
+Label(s): Wilms tumor 7 
++ 'Wilms tumor 7' SubClassOf 'hereditary Wilms tumor'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979875
+Label(s): neurodevelopmental disorder with achalasia, polyneuropathy, and alacrima 
++ 'neurodevelopmental disorder with achalasia, polyneuropathy, and alacrima' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979872
+Label(s): developmental dysplasia of the hip 4 
++ 'developmental dysplasia of the hip 4' SubClassOf 'developmental dysplasia of the hip'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979865
+Label(s): Popov-Chang syndrome 
++ 'Popov-Chang syndrome' SubClassOf 'Neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0971171
+Label(s): muscular dystrophy, limb-girdle, autosomal recessive 29 
++ 'muscular dystrophy, limb-girdle, autosomal recessive 29' SubClassOf 'SNUPN-related muscular dystrophy with or without multi-system involvement'
++ 'muscular dystrophy, limb-girdle, autosomal recessive 29' SubClassOf 'autosomal recessive limb-girdle muscular dystrophy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022982
+Label(s): peak aortic velocity 
++ 'peak aortic velocity' SubClassOf 'heart function attribute'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022983
+Label(s): nucleated red blood cell count 
++ 'nucleated red blood cell count' SubClassOf 'nucleated cell count'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022985
+Label(s): neonatal encephalopathy 
++ 'neonatal encephalopathy' SubClassOf 'Encephalopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022986
+Label(s): rare venous malformation 
++ 'rare venous malformation' SubClassOf 'Venous malformation'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956965
+Label(s): medulloblastoma SHH activated and TP53 wild-type 
++ 'medulloblastoma SHH activated and TP53 wild-type' SubClassOf 'medulloblastoma SHH activated'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956966
+Label(s): medulloblastoma non-WNT/non-SHH group 3 
++ 'medulloblastoma non-WNT/non-SHH group 3' SubClassOf 'medulloblastoma non-WNT/non-SHH'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956967
+Label(s): medulloblastoma non-WNT/non-SHH group 4 
++ 'medulloblastoma non-WNT/non-SHH group 4' SubClassOf 'medulloblastoma non-WNT/non-SHH'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956992
+Label(s): posterior fossa group A ependymoma 
++ 'posterior fossa group A ependymoma' SubClassOf 'posterior fossa ependymoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956993
+Label(s): posterior fossa group B ependymoma 
++ 'posterior fossa group B ependymoma' SubClassOf 'posterior fossa ependymoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979575
+Label(s): intellectual developmental disorder, autosomal dominant 76 
++ 'intellectual developmental disorder, autosomal dominant 76' SubClassOf 'intellectual disability, autosomal dominant'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979574
+Label(s): retinitis pigmentosa 100 
++ 'retinitis pigmentosa 100' SubClassOf 'retinitis pigmentosa'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979573
+Label(s): cardiomyopathy, familial hypertrophic, 31 
++ 'cardiomyopathy, familial hypertrophic, 31' SubClassOf 'familial hypertrophic cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979572
+Label(s): spermatogenic failure 101 
++ 'spermatogenic failure 101' SubClassOf 'azoospermia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979571
+Label(s): exudative vitreoretinopathy 8 
++ 'exudative vitreoretinopathy 8' SubClassOf 'exudative vitreoretinopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012341
+Label(s): celiac disease, susceptibility to, 3 
++ 'celiac disease, susceptibility to, 3' SubClassOf 'inherited disease susceptibility'
++ 'celiac disease, susceptibility to, 3' SubClassOf 'predisposes towards' some 'celiac disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016686
+Label(s): diffuse astrocytoma 
++ 'diffuse astrocytoma' SubClassOf 'low-grade astrocytoma'
++ 'diffuse astrocytoma' SubClassOf 'grade II glioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0016682
+Label(s): giant cell glioblastoma 
++ 'giant cell glioblastoma' SubClassOf 'brain glioblastoma'
+
+Class: http://purl.obolibrary.org/obo/HP_0008197
+Label(s): Absence of pubertal development 
++ 'Absence of pubertal development' SubClassOf 'Abnormality of the endocrine system'
+
+Class: http://purl.obolibrary.org/obo/HP_0001905
+Label(s): Congenital thrombocytopenia 
++ 'Congenital thrombocytopenia' SubClassOf 'Thrombocytopenia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979246
+Label(s): Nil-Deshwar neurodevelopmental syndrome 
++ 'Nil-Deshwar neurodevelopmental syndrome' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979241
+Label(s): fanconi anemia, complementation group 10 
++ 'fanconi anemia, complementation group 10' SubClassOf 'Fanconi anemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979239
+Label(s): cardiomyopathy, dilated, 1QQ 
++ 'cardiomyopathy, dilated, 1QQ' SubClassOf 'familial dilated cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979238
+Label(s): developmental and epileptic encephalopathy 118 
++ 'developmental and epileptic encephalopathy 118' SubClassOf 'genetic developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979237
+Label(s): pulmonary hypertension, primary, 7 
++ 'pulmonary hypertension, primary, 7' SubClassOf 'heritable pulmonary arterial hypertension'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979236
+Label(s): cardiomyopathy, dilated, 2l 
++ 'cardiomyopathy, dilated, 2l' SubClassOf 'familial dilated cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979231
+Label(s): oocyte/zygote/embryo maturation arrest 23 
++ 'oocyte/zygote/embryo maturation arrest 23' SubClassOf 'inherited oocyte maturation defect'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979228
+Label(s): ectodermal dysplasia 17 with or without limb malformations 
++ 'ectodermal dysplasia 17 with or without limb malformations' SubClassOf 'ectodermal dysplasia syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979227
+Label(s): Guillouet-Gordon syndrome 
++ 'Guillouet-Gordon syndrome' SubClassOf 'genetic disorder'
++ 'Guillouet-Gordon syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100583
+Label(s): Jeune syndrome - GRK2-related 
++ 'Jeune syndrome - GRK2-related' SubClassOf 'Jeune syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100557
+Label(s): RBFOX2-related congenital heart disorder 
++ 'RBFOX2-related congenital heart disorder' SubClassOf 'cardiogenetic disease'
++ 'RBFOX2-related congenital heart disorder' SubClassOf 'congenital heart disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100539
+Label(s): hemiplegic migraine-developmental and epileptic encephalopathy spectrum 
++ 'hemiplegic migraine-developmental and epileptic encephalopathy spectrum' SubClassOf 'genetic developmental and epileptic encephalopathy'
++ 'hemiplegic migraine-developmental and epileptic encephalopathy spectrum' SubClassOf 'familial hemiplegic migraine'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100525
+Label(s): TCF7L2-related neurodevelopmental disorder 
++ 'TCF7L2-related neurodevelopmental disorder' SubClassOf 'Neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0004813
+Label(s): tuberculous pneumothorax 
++ 'tuberculous pneumothorax' SubClassOf 'pleural tuberculosis'
++ 'tuberculous pneumothorax' SubClassOf 'pneumothorax'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000379
+Label(s): malignant Sertoli-Leydig cell tumor 
++ 'malignant Sertoli-Leydig cell tumor' SubClassOf 'Sertoli-Leydig cell tumor'
++ 'malignant Sertoli-Leydig cell tumor' SubClassOf 'testicular carcinoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000378
+Label(s): malignant Sertoli cell tumor 
++ 'malignant Sertoli cell tumor' SubClassOf 'Sertoli cell tumor'
++ 'malignant Sertoli cell tumor' SubClassOf 'reproductive system cancer'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978291
+Label(s): retinitis pigmentosa 99 
++ 'retinitis pigmentosa 99' SubClassOf 'retinitis pigmentosa'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0978298
+Label(s): combined oxidative phosphorylation deficiency 60 
++ 'combined oxidative phosphorylation deficiency 60' SubClassOf 'combined oxidative phosphorylation deficiency'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700351
+Label(s): argyrophilic grain disease 
++ 'argyrophilic grain disease' SubClassOf 'tauopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100235
+Label(s): FOXC1-related anterior segment dysgenesis 
++ 'FOXC1-related anterior segment dysgenesis' SubClassOf 'iridogoniodysgenesis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0000213
+Label(s): autoimmune disease, multisystem, infantile-onset 
++ 'autoimmune disease, multisystem, infantile-onset' SubClassOf 'genetic disorder'
++ 'autoimmune disease, multisystem, infantile-onset' SubClassOf 'type II hypersensitivity reaction disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700273
+Label(s): RAD51C-related cancer predisposition 
++ 'RAD51C-related cancer predisposition' SubClassOf 'hereditary neoplastic syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0005731
+Label(s): obsolete dipetalonemiasis 
++ 'obsolete dipetalonemiasis' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0600014
+Label(s): alveolar capillary dysplasia without misalignment of pulmonary veins 
++ 'alveolar capillary dysplasia without misalignment of pulmonary veins' SubClassOf 'congenital pulmonary veins anomaly'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014505
+Label(s): developmental and epileptic encephalopathy, 27 
++ 'developmental and epileptic encephalopathy, 27' SubClassOf 'infantile spasms'
++ 'developmental and epileptic encephalopathy, 27' SubClassOf 'GRIN2B-related complex neurodevelopmental disorder'
++ 'developmental and epileptic encephalopathy, 27' SubClassOf 'genetic developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700348
+Label(s): BMPR1A-related juvenile polyposis syndrome 
++ 'BMPR1A-related juvenile polyposis syndrome' SubClassOf 'juvenile polyposis syndrome'
++ 'BMPR1A-related juvenile polyposis syndrome' SubClassOf 'autosomal dominant disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0700350
+Label(s): GRIN2B-related complex neurodevelopmental disorder 
++ 'GRIN2B-related complex neurodevelopmental disorder' SubClassOf 'GRIN-related complex neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1040008
+Label(s): CAMK2D-related neurodevelopmental disorder and dilated cardiomyopathy 
++ 'CAMK2D-related neurodevelopmental disorder and dilated cardiomyopathy' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859763
+Label(s): mosaic neurofibromatosis type 1 
++ 'mosaic neurofibromatosis type 1' SubClassOf 'neurofibromatosis/schwannomatosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0012497
+Label(s): congenital stationary night blindness autosomal dominant 3 
++ 'congenital stationary night blindness autosomal dominant 3' SubClassOf 'autosomal dominant disease'
++ 'congenital stationary night blindness autosomal dominant 3' SubClassOf 'congenital nervous system disorder'
++ 'congenital stationary night blindness autosomal dominant 3' SubClassOf 'congenital stationary night blindness'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859615
+Label(s): diffuse astrocytoma, MYB- or MYBL1-altered 
++ 'diffuse astrocytoma, MYB- or MYBL1-altered' SubClassOf 'diffuse astrocytoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859614
+Label(s): diffuse low-grade glioma, MAPK pathway–altered 
++ 'diffuse low-grade glioma, MAPK pathway–altered' SubClassOf 'low grade glioma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859592
+Label(s): IDH-mutant and 1p/19q-codeleted oligodendroglioma 
++ 'IDH-mutant and 1p/19q-codeleted oligodendroglioma' SubClassOf 'anaplastic oligodendroglioma'
+
+Class: http://purl.obolibrary.org/obo/HP_0003771
+Label(s): Pulp calcification 
++ 'Pulp calcification' SubClassOf 'Abnormality of the dentition'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859008
+Label(s): neurofibromatosis/schwannomatosis 
++ 'neurofibromatosis/schwannomatosis' SubClassOf 'hereditary neoplastic syndrome'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979229
+Label(s): congenital myopathy 26 
++ 'congenital myopathy 26' SubClassOf 'congenital myopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979232
+Label(s): oocyte/zygote/embryo maturation arrest 24 
++ 'oocyte/zygote/embryo maturation arrest 24' SubClassOf 'inherited oocyte maturation defect'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979233
+Label(s): immunodysregulation with variable immunodeficiency and autoimmunity 
++ 'immunodysregulation with variable immunodeficiency and autoimmunity' SubClassOf 'inborn error of immunity'
++ 'immunodysregulation with variable immunodeficiency and autoimmunity' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979234
+Label(s): ICHAD syndrome 
++ 'ICHAD syndrome' SubClassOf 'genetic disorder'
++ 'ICHAD syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979235
+Label(s): autoimmune disease, multisystem, infantile-onset, 5 
++ 'autoimmune disease, multisystem, infantile-onset, 5' SubClassOf 'autoimmune disease, multisystem, infantile-onset'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979243
+Label(s): cardiomyopathy, dilated, 2M 
++ 'cardiomyopathy, dilated, 2M' SubClassOf 'familial dilated cardiomyopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0035534
+Label(s): DONSON-related microcephaly-short stature-limb abnormalities spectrum 
++ 'DONSON-related microcephaly-short stature-limb abnormalities spectrum' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0002479
+Label(s): Sertoli-Leydig cell tumor 
++ 'Sertoli-Leydig cell tumor' SubClassOf 'testicular sex cord-stromal neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1060177
+Label(s): developmental and epileptic encephalopathy 119 
++ 'developmental and epileptic encephalopathy 119' SubClassOf 'genetic developmental and epileptic encephalopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0956995
+Label(s): astrocytoma, IDH-mutant, grade 3 
++ 'astrocytoma, IDH-mutant, grade 3' SubClassOf 'IDH-mutant anaplastic astrocytoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0010016
+Label(s): sclerosteosis 1 
++ 'sclerosteosis 1' SubClassOf 'sclerosteosis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018738
+Label(s): benign metanephric tumor 
++ 'benign metanephric tumor' SubClassOf 'disease has location' some 'metanephros'
++ 'benign metanephric tumor' EquivalentTo 'benign neoplasm' and ('disease has location' some 'metanephros')
++ 'benign metanephric tumor' SubClassOf 'kidney benign neoplasm'
+
+Class: http://purl.obolibrary.org/obo/HP_0030872
+Label(s): Abnormal cardiac ventricular function 
++ 'Abnormal cardiac ventricular function' SubClassOf 'Abnormal cardiovascular system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0030783
+Label(s): Increased circulating interleukin 6 concentration 
++ 'Increased circulating interleukin 6 concentration' SubClassOf 'Abnormality of immune system physiology'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979866
+Label(s): oculovertebral syndrome 
++ 'oculovertebral syndrome' SubClassOf 'genetic disorder'
++ 'oculovertebral syndrome' SubClassOf 'syndromic disease'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979871
+Label(s): Alsahan-Harris syndrome 
++ 'Alsahan-Harris syndrome' SubClassOf 'syndromic disease'
++ 'Alsahan-Harris syndrome' SubClassOf 'ciliopathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979873
+Label(s): brain small vessel disease 4 
++ 'brain small vessel disease 4' SubClassOf 'familial porencephaly'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014861
+Label(s): autoimmune disease, multisystem, infantile-onset, 2 
++ 'autoimmune disease, multisystem, infantile-onset, 2' SubClassOf 'autoimmune disease, multisystem, infantile-onset'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011413
+Label(s): cataract 9 multiple types 
++ 'cataract 9 multiple types' SubClassOf 'cataract'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0015795
+Label(s): undifferentiated embryonal sarcoma of the liver 
++ 'undifferentiated embryonal sarcoma of the liver' SubClassOf 'liver and intrahepatic bile duct neoplasm'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0979226
+Label(s): leukodystrophy, adult-onset, autosomal dominant, without amyloid angiopathy 
++ 'leukodystrophy, adult-onset, autosomal dominant, without amyloid angiopathy' SubClassOf 'leukodystrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_1040003
+Label(s): KCND2-related neurodevelopmental disorder with or without seizures 
++ 'KCND2-related neurodevelopmental disorder with or without seizures' SubClassOf 'Mendelian neurodevelopmental disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0034021
+Label(s): spondylodysplastic Ehlers-Danlos syndrome 
++ 'spondylodysplastic Ehlers-Danlos syndrome' SubClassOf 'Ehlers-Danlos syndrome'
++ 'spondylodysplastic Ehlers-Danlos syndrome' SubClassOf 'linkeropathy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011052
+Label(s): amelia cleft lip palate hydrocephalus iris coloboma 
++ 'amelia cleft lip palate hydrocephalus iris coloboma' SubClassOf 'syndromic disease'
++ 'amelia cleft lip palate hydrocephalus iris coloboma' SubClassOf 'genetic disorder'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007963
+Label(s): melanoma, cutaneous malignant, susceptibility to, 1 
++ 'melanoma, cutaneous malignant, susceptibility to, 1' SubClassOf 'susceptibility to familial cutaneous melanoma'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0018437
+Label(s): acute myeloid leukemia with NPM1 somatic mutations 
++ 'acute myeloid leukemia with NPM1 somatic mutations' SubClassOf 'acute myeloid leukemia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007932
+Label(s): age related macular degeneration 2 
++ 'age related macular degeneration 2' SubClassOf 'age-related macular degeneration'
 
 ----------------------------------
 
@@ -613,908 +803,121 @@ Label(s): angiotensin receptor antagonist
 
 @Classes modified from previous
 
-Class: http://www.ebi.ac.uk/efo/EFO_0600030
-Label(s): response to antiparasitic agent 
-+ 'response to antiparasitic agent' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_35442
-
-Class: http://www.ebi.ac.uk/efo/EFO_0600052
-Label(s): response to varenicline 
-+ 'response to varenicline' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_84500
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020064
-Label(s): diacylglycerol 36:5 measurement 
-- 'diacylglycerol 36:5 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020059
-Label(s): diacylglycerol 34:3 measurement 
-- 'diacylglycerol 34:3 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020058
-Label(s): diacylglycerol 34:0 measurement 
-- 'diacylglycerol 34:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020056
-Label(s): diacylglycerol 33:1 measurement 
-- 'diacylglycerol 33:1 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020054
-Label(s): diacylglycerol 32:0 measurement 
-- 'diacylglycerol 32:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020052
-Label(s): diacylglycerol 30:0 measurement 
-- 'diacylglycerol 30:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020008
-Label(s): campesterol measurement 
-- 'campesterol measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0600065
-Label(s): response to tolvaptan 
-+ 'response to tolvaptan' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_32246
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007240
-Label(s): progressive familial heart block, type 1A 
-- 'progressive familial heart block, type 1A' SubClassOf 'cardiac rhythm disease'
-+ 'progressive familial heart block, type 1A' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010181
-
-Class: http://purl.obolibrary.org/obo/MONDO_0958226
-Label(s): leukoencephalopathy, porphyria-related 
-+ 'leukoencephalopathy, porphyria-related' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700382
-
-Class: http://purl.obolibrary.org/obo/MONDO_0958224
-Label(s): encephalopathy, porphyria-related 
-+ 'encephalopathy, porphyria-related' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700382
-
-Class: http://purl.obolibrary.org/obo/CL_0000346
-Label(s): hair follicle dermal papilla cell 
-- 'hair follicle dermal papilla cell' SubClassOf 'multi fate stem cell'
-+ 'hair follicle dermal papilla cell' SubClassOf 'fibroblast of dermis'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010123
-Label(s): response to antiviral drug 
-+ 'response to antiviral drug' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_36044
-
-Class: http://purl.obolibrary.org/obo/OBA_1000965
-Label(s): sphingolipid level 
-+ 'sphingolipid level' SubClassOf 'protein measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004612
-Label(s): high density lipoprotein cholesterol measurement 
-- 'high density lipoprotein cholesterol measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004611
-Label(s): low density lipoprotein cholesterol measurement 
-- 'low density lipoprotein cholesterol measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0004530
-Label(s): triglyceride measurement 
-- 'triglyceride measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/HP_0030050
-Label(s): Narcolepsy 
-- 'Narcolepsy' SubClassOf 'Sleep disturbance'
-+ 'Narcolepsy' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020053
-Label(s): diacylglycerol 28:0 measurement 
-- 'diacylglycerol 28:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020062
-Label(s): diacylglycerol 36:3 measurement 
-- 'diacylglycerol 36:3 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020063
-Label(s): diacylglycerol 36:4 measurement 
-- 'diacylglycerol 36:4 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0600093
-Label(s): response to cosmetics 
-+ 'response to cosmetics' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_64857
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008417
-Label(s): susceptibility to common cold measurement 
-+ 'susceptibility to common cold measurement' SubClassOf 'infectious disease biomarker'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0008347
-Label(s): response to trastuzumab 
-+ 'response to trastuzumab' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_231601
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010352
-Label(s): diacylglycerol 34:1 measurement 
-- 'diacylglycerol 34:1 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020057
-Label(s): diacylglycerol 33:3 measurement 
-- 'diacylglycerol 33:3 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022251
-Label(s): cholesteryl esters to total lipids in medium HDL percentage  
-- 'cholesteryl esters to total lipids in medium HDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in medium HDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920026
-
-Class: http://purl.obolibrary.org/obo/OBA_VT0010046
-Label(s): fatty acid amount 
-+ 'fatty acid amount' SubClassOf 'protein measurement'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_35444
-Label(s): antinematodal drug 
-- 'antinematodal drug' SubClassOf 'drug'
-+ 'antinematodal drug' SubClassOf http://purl.obolibrary.org/obo/CHEBI_35442
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020862
-Label(s): response to verapamil 
-+ 'response to verapamil' SubClassOf 'has primary input' some 'verapamil'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001452
-Label(s): Yellow Nail Syndrome 
-- 'Yellow Nail Syndrome' SubClassOf 'primary lymphedema'
-+ 'Yellow Nail Syndrome' SubClassOf 'lymphatic malformation'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014482
-Label(s): intellectual disability, autosomal dominant 29 
-+ 'intellectual disability, autosomal dominant 29' SubClassOf 'complex neurodevelopmental disorder'
-+ 'intellectual disability, autosomal dominant 29' SubClassOf 'Mendelian neurodevelopmental disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020051
-Label(s): diacylglycerol 30:1 measurement 
-- 'diacylglycerol 30:1 measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001826
-Label(s): nasal cavity mucosa 
-- 'nasal cavity mucosa' SubClassOf 'tracheal mucosa'
-+ 'nasal cavity mucosa' SubClassOf 'mucosa'
-+ 'nasal cavity mucosa' SubClassOf 'part_of' some 'respiratory system'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019799
-Label(s): hepatoerythropoietic porphyria 
-- 'hepatoerythropoietic porphyria' SubClassOf 'Familial porphyria cutanea tarda'
-+ 'hepatoerythropoietic porphyria' SubClassOf 'UROD-related inherited porphyria'
-+ 'hepatoerythropoietic porphyria' SubClassOf 'porphyria cutanea tarda'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001629
-Label(s): carotid body 
-+ 'carotid body' SubClassOf 'part_of' some 'peripheral nervous system'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005195
-Label(s): response to cholinesterase inhibitor 
-+ 'response to cholinesterase inhibitor' SubClassOf 'has primary input' some 'EC 3.1.1.8 (cholinesterase) inhibitor'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020065
-Label(s): diacylglycerol 38:3 measurement 
-- 'diacylglycerol 38:3 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020066
-Label(s): diacylglycerol 38:4 measurement 
-- 'diacylglycerol 38:4 measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018054
-Label(s): familial atrial fibrillation 
-- 'familial atrial fibrillation' SubClassOf 'cardiogenetic disease'
-+ 'familial atrial fibrillation' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010180
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009748
-Label(s): response to ketamine 
-+ 'response to ketamine' SubClassOf 'has primary input' some 'ketamine'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005533
-Label(s): response to non-steroidal anti-inflammatory 
-+ 'response to non-steroidal anti-inflammatory' SubClassOf 'has primary input' some 'non-steroidal anti-inflammatory drug'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_28971
-Label(s): ampicillin 
-- 'ampicillin' SubClassOf 'beta-lactam'
-- 'ampicillin' SubClassOf 'carboxylic acid'
-+ 'ampicillin' SubClassOf http://purl.obolibrary.org/obo/CHEBI_17334
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011001
-Label(s): Brugada syndrome 1 
-+ 'Brugada syndrome 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010181
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008294
-Label(s): acute intermittent porphyria 
-- 'acute intermittent porphyria' SubClassOf 'inherited porphyria'
-- 'acute intermittent porphyria' SubClassOf 'hepatic porphyria'
-+ 'acute intermittent porphyria' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700382
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019415
-Label(s): fetal and neonatal alloimmune thrombocytopenia 
-+ 'fetal and neonatal alloimmune thrombocytopenia' SubClassOf 'genetic disorder'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_38068
-Label(s): antimalarial 
-- 'antimalarial' SubClassOf 'drug'
-+ 'antimalarial' SubClassOf http://purl.obolibrary.org/obo/CHEBI_35442
-
-Class: http://purl.obolibrary.org/obo/HP_0001655
-Label(s): Patent foramen ovale 
-- 'Patent foramen ovale' SubClassOf 'Abnormal cardiac atrium morphology'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003960
-Label(s): computed tomography 
-- 'computed tomography' SubClassOf 'measurement'
-+ 'computed tomography' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0003779
-Label(s): Hashimoto's thyroiditis 
-- 'Hashimoto's thyroiditis' SubClassOf 'genetic disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007931
-Label(s): non-HDL cholesterol:HDL cholesterol ratio 
-- 'non-HDL cholesterol:HDL cholesterol ratio' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007930
-Label(s): LDL cholesterol:HDL cholesterol ratio 
-- 'LDL cholesterol:HDL cholesterol ratio' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007760
-Label(s): eicosapentaenoic acid measurement 
-- 'eicosapentaenoic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0803366
-Label(s): response to nivolumab 
-+ 'response to nivolumab' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_231614
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007633
-Label(s): response to thioamide 
-+ 'response to thioamide' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_47956
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007630
-Label(s): glycerophospholipid measurement 
-- 'glycerophospholipid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0803356
-Label(s): 25-hydroxyvitamin D2 measurement 
-- '25-hydroxyvitamin D2 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021466
-Label(s): phosphatidylcholine 28:0 measurement 
-- 'phosphatidylcholine 28:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021475
-Label(s): phosphatidylcholine 38:7 measurement 
-- 'phosphatidylcholine 38:7 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021476
-Label(s): phosphatidylcholine 39:5 measurement 
-- 'phosphatidylcholine 39:5 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020067
-Label(s): diacylglycerol 38:5 measurement 
-- 'diacylglycerol 38:5 measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_18208
-Label(s): benzylpenicillin 
-- 'benzylpenicillin' SubClassOf 'carboxylic acid'
-- 'benzylpenicillin' SubClassOf 'beta-lactam'
-+ 'benzylpenicillin' SubClassOf http://purl.obolibrary.org/obo/CHEBI_17334
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007214
-Label(s): common cold 
-+ 'common cold' SubClassOf 'viral respiratory tract infection'
-+ 'common cold' SubClassOf 'digestive system infectious disorder'
-
-Class: http://purl.obolibrary.org/obo/OBA_1000964
-Label(s): Testosterone level 
-+ 'Testosterone level' SubClassOf 'protein measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013696
-Label(s): chromosome 2p16.3 deletion syndrome 
-- 'chromosome 2p16.3 deletion syndrome' SubClassOf 'hereditary neurological disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013690
-Label(s): Pitt-Hopkins-like syndrome 2 
-- 'Pitt-Hopkins-like syndrome 2' SubClassOf 'genetic disorder'
-- 'Pitt-Hopkins-like syndrome 2' SubClassOf 'Pitt-Hopkins-like syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013530
-Label(s): atrial fibrillation, familial, 10 
-+ 'atrial fibrillation, familial, 10' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010181
-
-Class: http://purl.obolibrary.org/obo/CHEBI_2676
-Label(s): amoxicillin 
-- 'amoxicillin' SubClassOf 'carboxylic acid'
-- 'amoxicillin' SubClassOf 'beta-lactam'
-+ 'amoxicillin' SubClassOf http://purl.obolibrary.org/obo/CHEBI_17334
-
-Class: http://purl.obolibrary.org/obo/OBA_1000968
-Label(s): vitamin D level 
-+ 'vitamin D level' SubClassOf 'protein measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005657
-Label(s): response to protease inhibitor 
-+ 'response to protease inhibitor' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_37670
-
-Class: http://purl.obolibrary.org/obo/UBERON_0000379
-Label(s): tracheal mucosa 
-+ 'tracheal mucosa' SubClassOf 'part_of' some 'trachea'
-+ 'tracheal mucosa' EquivalentTo 'mucosa' and ('part_of' some 'trachea')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010969
-Label(s): response to growth hormone 
-+ 'response to growth hormone' SubClassOf 'has primary input' some 'growth hormone'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_35457
-Label(s): EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor 
-- 'EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor' SubClassOf 'cardiovascular drug'
-+ 'EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor' SubClassOf http://purl.obolibrary.org/obo/CHEBI_35674
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010735
-Label(s): response to angiotensin receptor blocker 
-+ 'response to angiotensin receptor blocker' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_61016
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010733
-Label(s): polyunsaturated fatty acid measurement 
-- 'polyunsaturated fatty acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001497
-Label(s): cardiac conduction defect 
-- 'cardiac conduction defect' SubClassOf 'cardiac arrhythmia'
-+ 'cardiac conduction defect' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022259
-Label(s): cholesteryl esters to total lipids in very small VLDL percentage  
-- 'cholesteryl esters to total lipids in very small VLDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in very small VLDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920021
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022253
-Label(s): cholesteryl esters to total lipids in medium VLDL percentage  
-- 'cholesteryl esters to total lipids in medium VLDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in medium VLDL percentage ' SubClassOf 'cholesterol esters in medium VLDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022252
-Label(s): cholesteryl esters to total lipids in medium LDL percentage  
-- 'cholesteryl esters to total lipids in medium LDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in medium LDL percentage ' SubClassOf 'cholesterol esters in medium LDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022250
-Label(s): cholesteryl esters to total lipids in large VLDL percentage  
-- 'cholesteryl esters to total lipids in large VLDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in large VLDL percentage ' SubClassOf 'cholesterol esters in large VLDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022249
-Label(s): cholesteryl esters to total lipids in large LDL percentage  
-- 'cholesteryl esters to total lipids in large LDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in large LDL percentage ' SubClassOf 'cholesterol esters in large LDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022186
-Label(s): cholesterol esters in medium LDL measurement 
-- 'cholesterol esters in medium LDL measurement' SubClassOf 'esterified cholesterol measurement'
-+ 'cholesterol esters in medium LDL measurement' SubClassOf 'total cholesterol in medium LDL'
-+ 'cholesterol esters in medium LDL measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920023
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022182
-Label(s): cholesterol esters in medium VLDL measurement 
-- 'cholesterol esters in medium VLDL measurement' SubClassOf 'lipid amount'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022177
-Label(s): total cholesterol in large VLDL 
-- 'total cholesterol in large VLDL' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022171
-Label(s): total cholesterol in small VLDL 
-- 'total cholesterol in small VLDL' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022170
-Label(s): cholesterol esters in large VLDL measurement 
-- 'cholesterol esters in large VLDL measurement' SubClassOf 'lipid amount'
-- 'cholesterol esters in large VLDL measurement' SubClassOf 'is_about' some 'lipid'
-- 'cholesterol esters in large VLDL measurement' SubClassOf 'lipid measurement'
-+ 'cholesterol esters in large VLDL measurement' SubClassOf 'total cholesterol in large VLDL'
-+ 'cholesterol esters in large VLDL measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920021
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022165
-Label(s): cholesterol esters in large LDL measurement 
-- 'cholesterol esters in large LDL measurement' SubClassOf 'esterified cholesterol measurement'
-+ 'cholesterol esters in large LDL measurement' SubClassOf 'total cholesterol in large LDL'
-+ 'cholesterol esters in large LDL measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920023
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022159
-Label(s): cholesterol esters in large HDL measurement 
-- 'cholesterol esters in large HDL measurement' SubClassOf 'esterified cholesterol measurement'
-+ 'cholesterol esters in large HDL measurement' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920022
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022041
-Label(s): response to tramadol 
-+ 'response to tramadol' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_9648
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010389
-Label(s): phosphatidylcholine 40:6 measurement 
-- 'phosphatidylcholine 40:6 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010388
-Label(s): phosphatidylcholine 38:6 measurement 
-- 'phosphatidylcholine 38:6 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010387
-Label(s): phosphatidylcholine 38:5 measurement 
-- 'phosphatidylcholine 38:5 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010386
-Label(s): phosphatidylcholine 38:4 measurement 
-- 'phosphatidylcholine 38:4 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010385
-Label(s): phosphatidylcholine 38:3 measurement 
-- 'phosphatidylcholine 38:3 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010383
-Label(s): phosphatidylcholine 36:5 measurement 
-- 'phosphatidylcholine 36:5 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010382
-Label(s): phosphatidylcholine 36:4 measurement 
-- 'phosphatidylcholine 36:4 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010381
-Label(s): phosphatidylcholine 36:3 measurement 
-- 'phosphatidylcholine 36:3 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010379
-Label(s): phosphatidylcholine 36:1 measurement 
-- 'phosphatidylcholine 36:1 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010378
-Label(s): phosphatidylcholine 34:4 measurement 
-- 'phosphatidylcholine 34:4 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010377
-Label(s): phosphatidylcholine 34:3 measurement 
-- 'phosphatidylcholine 34:3 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010374
-Label(s): phosphatidylcholine 32:2 measurement 
-- 'phosphatidylcholine 32:2 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010373
-Label(s): phosphatidylcholine 32:1 measurement 
-- 'phosphatidylcholine 32:1 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010372
-Label(s): phosphatidylcholine 32:0 measurement 
-- 'phosphatidylcholine 32:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010355
-Label(s): diacylglycerol 36:2 measurement 
-- 'diacylglycerol 36:2 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010353
-Label(s): diacylglycerol 34:2 measurement 
-- 'diacylglycerol 34:2 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010351
-Label(s): cholesteryl ester measurement 
-- 'cholesteryl ester measurement' SubClassOf 'lipid measurement'
-+ 'cholesteryl ester measurement' EquivalentTo 'measurement' and ('characteristic of' some 'cholesteryl ester')
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010225
-Label(s): lysophosphatidylethanolamine measurement 
-- 'lysophosphatidylethanolamine measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010118
-Label(s): sphingomyelin measurement 
-- 'sphingomyelin measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010062
-Label(s): response to salmeterol 
-+ 'response to salmeterol' SubClassOf 'has primary input' some 'salmeterol'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010051
-Label(s): response to immunosuppressant 
-+ 'response to immunosuppressant' SubClassOf 'has primary input' some 'immunosuppressive agent'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010224
-Label(s): lysophosphatidylcholine measurement 
-- 'lysophosphatidylcholine measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006995
-Label(s): response to diisocyanate 
-+ 'response to diisocyanate' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_53213
-
-Class: http://purl.obolibrary.org/obo/HP_0100299
-Label(s): Muscle fiber inclusion bodies 
-+ 'Muscle fiber inclusion bodies' SubClassOf 'Abnormal cellular phenotype'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010375
-Label(s): phosphatidylcholine 34:1 measurement 
-- 'phosphatidylcholine 34:1 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010380
-Label(s): phosphatidylcholine 36:2 measurement 
-- 'phosphatidylcholine 36:2 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006811
-Label(s): linolenic acid measurement 
-- 'linolenic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006810
-Label(s): oleic acid measurement 
-- 'oleic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006809
-Label(s): docosapentaenoic acid measurement 
-- 'docosapentaenoic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006808
-Label(s): arachidonic acid measurement 
-- 'arachidonic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006807
-Label(s): linoleic acid measurement 
-- 'linoleic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010492
-Label(s): glycocholic acid measurement 
-- 'glycocholic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020754
-Label(s): visceral myopathy 1 
-- 'visceral myopathy 1' SubClassOf 'genetic disorder'
-- 'visceral myopathy 1' SubClassOf 'intestinal disease'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022040
-Label(s): response to voriconazole 
-+ 'response to voriconazole' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_10023
-
-Class: http://purl.obolibrary.org/obo/CHEBI_32497
-Label(s): thioacetamide 
-- 'thioacetamide' SubClassOf 'chemical entity'
-+ 'thioacetamide' SubClassOf http://purl.obolibrary.org/obo/CHEBI_47956
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022247
-Label(s): cholesteryl esters to total lipids in IDL percentage  
-- 'cholesteryl esters to total lipids in IDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in IDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920029
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022248
-Label(s): cholesteryl esters to total lipids in large HDL percentage  
-- 'cholesteryl esters to total lipids in large HDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in large HDL percentage ' SubClassOf 'cholesterol esters in large HDL measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022254
-Label(s): cholesteryl esters to total lipids in small HDL percentage  
-- 'cholesteryl esters to total lipids in small HDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in small HDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920027
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022255
-Label(s): cholesteryl esters to total lipids in small LDL percentage  
-- 'cholesteryl esters to total lipids in small LDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in small LDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920028
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022256
-Label(s): cholesteryl esters to total lipids in small VLDL percentage  
-- 'cholesteryl esters to total lipids in small VLDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in small VLDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920025
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022257
-Label(s): cholesteryl esters to total lipids in very large HDL percentage  
-- 'cholesteryl esters to total lipids in very large HDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in very large HDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920022
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022258
-Label(s): cholesteryl esters to total lipids in very large VLDL percentage  
-- 'cholesteryl esters to total lipids in very large VLDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in very large VLDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920024
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006506
-Label(s): hepatic lipid content measurement 
-- 'hepatic lipid content measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/OBA_1001011
-Label(s): phospholipid level 
-+ 'phospholipid level' SubClassOf 'protein measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009043
-Label(s): Familial porphyria cutanea tarda 
-- 'Familial porphyria cutanea tarda' SubClassOf 'UROD-related inherited porphyria'
-+ 'Familial porphyria cutanea tarda' SubClassOf 'UROD-related inherited porphyria'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010354
-Label(s): diacylglycerol 36:1 measurement 
-- 'diacylglycerol 36:1 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010376
-Label(s): phosphatidylcholine 34:2 measurement 
-- 'phosphatidylcholine 34:2 measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/HP_0002039
-Label(s): Anorexia 
-- 'Anorexia' SubClassOf 'Atypical behavior'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0006327
-Label(s): response to sertraline 
-+ 'response to sertraline' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_9123
-
-Class: http://purl.obolibrary.org/obo/MONDO_0001859
-Label(s): algoneurodystrophy 
-- 'algoneurodystrophy' SubClassOf 'complex regional pain syndrome'
-+ 'algoneurodystrophy' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0971149
-Label(s): spastic paraplegia 30b, autosomal recessive 
-- 'spastic paraplegia 30b, autosomal recessive' SubClassOf 'hereditary spastic paraplegia'
-+ 'spastic paraplegia 30b, autosomal recessive' SubClassOf 'autosomal recessive disease'
-+ 'spastic paraplegia 30b, autosomal recessive' SubClassOf 'hereditary spastic paraplegia 30'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0010384
-Label(s): phosphatidylcholine 38:2 measurement 
-- 'phosphatidylcholine 38:2 measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0016829
-Label(s): familial visceral myopathy 
-- 'familial visceral myopathy' SubClassOf 'visceral myopathy 1'
-+ 'familial visceral myopathy' SubClassOf 'genetic disorder'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022162
-Label(s): total cholesterol in medium VLDL 
-- 'total cholesterol in medium VLDL' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012341
-Label(s): celiac disease, susceptibility to, 3 
-- 'celiac disease, susceptibility to, 3' SubClassOf 'inherited disease susceptibility'
-- 'celiac disease, susceptibility to, 3' SubClassOf 'predisposes towards' some 'celiac disease'
-
-Class: http://purl.obolibrary.org/obo/OBA_1000995
-Label(s): retinol level 
-+ 'retinol level' SubClassOf 'protein measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021471
-Label(s): phosphatidylcholine 34:5 measurement 
-- 'phosphatidylcholine 34:5 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0022246
-Label(s): cholesteryl esters to total lipids in chylomicrons and extremely large VLDL percentage  
-- 'cholesteryl esters to total lipids in chylomicrons and extremely large VLDL percentage ' SubClassOf 'cholesteryl ester measurement'
-+ 'cholesteryl esters to total lipids in chylomicrons and extremely large VLDL percentage ' SubClassOf http://www.ebi.ac.uk/efo/EFO_0920021
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021896
-Label(s): response to rosuvastatin 
-+ 'response to rosuvastatin' SubClassOf 'has primary input' some 'rosuvastatin'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012061
-Label(s): familial sick sinus syndrome 
-- 'familial sick sinus syndrome' SubClassOf 'cardiogenetic disease'
-+ 'familial sick sinus syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010180
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000468
-Label(s): third-degree atrioventricular block 
-- 'third-degree atrioventricular block' SubClassOf 'cardiac rhythm disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000465
-Label(s): atrioventricular block 
-- 'atrioventricular block' SubClassOf 'cardiogenetic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000453
-Label(s): short QT syndrome 
-- 'short QT syndrome' SubClassOf 'cardiogenetic disease'
-+ 'short QT syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010180
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100234
-Label(s): paroxysmal familial ventricular fibrillation 
-+ 'paroxysmal familial ventricular fibrillation' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010180
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008848
-Label(s): atrioventricular dissociation 
-- 'atrioventricular dissociation' SubClassOf 'genetic disorder'
-+ 'atrioventricular dissociation' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100042
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021478
-Label(s): phosphatidylcholine 40:8 measurement 
-- 'phosphatidylcholine 40:8 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021477
-Label(s): phosphatidylcholine 40:7 measurement 
-- 'phosphatidylcholine 40:7 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021474
-Label(s): phosphatidylcholine 36:6 measurement 
-- 'phosphatidylcholine 36:6 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021473
-Label(s): phosphatidylcholine 36:0 measurement 
-- 'phosphatidylcholine 36:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021472
-Label(s): phosphatidylcholine 35:5 measurement 
-- 'phosphatidylcholine 35:5 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021470
-Label(s): phosphatidylcholine 33:2 measurement 
-- 'phosphatidylcholine 33:2 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021469
-Label(s): phosphatidylcholine 33:1 measurement 
-- 'phosphatidylcholine 33:1 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021468
-Label(s): phosphatidylcholine 33:0 measurement 
-- 'phosphatidylcholine 33:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021467
-Label(s): phosphatidylcholine 31:0 measurement 
-- 'phosphatidylcholine 31:0 measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0021424
-Label(s): response to sevoflurane 
-+ 'response to sevoflurane' SubClassOf 'has primary input' some 'sevoflurane'
-
-Class: http://purl.obolibrary.org/obo/CHEBI_5098
-Label(s): flucloxacillin 
-- 'flucloxacillin' SubClassOf 'carboxylic acid'
-- 'flucloxacillin' SubClassOf 'beta-lactam'
-+ 'flucloxacillin' SubClassOf http://purl.obolibrary.org/obo/CHEBI_17334
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007761
-Label(s): docosahexaenoic acid measurement 
-- 'docosahexaenoic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007766
-Label(s): response to beta blocker 
-+ 'response to beta blocker' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_35530
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007767
-Label(s): response to calcium channel blocker 
-+ 'response to calcium channel blocker' SubClassOf 'has primary input' some 'calcium channel blocker'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008297
-Label(s): variegate porphyria 
-- 'variegate porphyria' SubClassOf 'inherited porphyria'
-- 'variegate porphyria' SubClassOf 'hepatic porphyria'
-+ 'variegate porphyria' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700383
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007929
-Label(s): triglyceride:HDL cholesterol ratio 
-- 'triglyceride:HDL cholesterol ratio' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007974
-Label(s): vaccenic acid measurement 
-- 'vaccenic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007976
-Label(s): erucic acid measurement 
-- 'erucic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/OBA_2040178
-Label(s): level of diglyceride 
-+ 'level of diglyceride' SubClassOf 'protein measurement'
-
-Class: http://purl.obolibrary.org/obo/OBA_1000996
-Label(s): vitamin A level 
-+ 'vitamin A level' SubClassOf 'protein measurement'
-
-Class: http://purl.obolibrary.org/obo/OBA_1000994
-Label(s): Progesterone level 
-+ 'Progesterone level' SubClassOf 'protein measurement'
-
-Class: http://purl.obolibrary.org/obo/OBA_1000990
-Label(s): aldosterone level 
-+ 'aldosterone level' SubClassOf 'protein measurement'
-
-Class: http://purl.obolibrary.org/obo/OBA_1000973
-Label(s): sterol level 
-+ 'sterol level' SubClassOf 'protein measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_1001998
-Label(s): complex regional pain syndrome 
-- 'complex regional pain syndrome' SubClassOf 'chronic pain syndrome'
-+ 'complex regional pain syndrome' SubClassOf 'chronic pain syndrome'
-
-Class: http://purl.obolibrary.org/obo/HP_0002438
-Label(s): Cerebellar malformation 
-- 'Cerebellar malformation' SubClassOf 'Abnormal cerebellum morphology'
-+ 'Cerebellar malformation' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005417
-Label(s): response to mTOR inhibitor 
-+ 'response to mTOR inhibitor' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_68481
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005325
-Label(s): response to angiotensin-converting enzyme inhibitor 
-+ 'response to angiotensin-converting enzyme inhibitor' SubClassOf 'has primary input' some 'EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0803355
-Label(s): calcitriol measurement 
-- 'calcitriol measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005405
-Label(s): response to antihypertensive drug 
-+ 'response to antihypertensive drug' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_35674
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024562
-Label(s): sick sinus syndrome 1 
-+ 'sick sinus syndrome 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010181
-
-Class: http://purl.obolibrary.org/obo/HP_0003121
-Label(s): Limb joint contracture 
-- 'Limb joint contracture' SubClassOf 'Flexion contracture'
-+ 'Limb joint contracture' SubClassOf 'Abnormal skeletal muscle morphology'
-+ 'Limb joint contracture' SubClassOf 'Abnormal skeletal morphology'
-+ 'Limb joint contracture' SubClassOf 'Abnormality of connective tissue'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0005304
-Label(s): atrial conduction disease 
-- 'atrial conduction disease' SubClassOf 'cardiogenetic disease'
-+ 'atrial conduction disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010180
-
-Class: http://purl.obolibrary.org/obo/HP_0002350
-Label(s): Cerebellar cyst 
-- 'Cerebellar cyst' SubClassOf 'Cerebellar malformation'
-+ 'Cerebellar cyst' SubClassOf 'Abnormal cerebellum morphology'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0957788
-Label(s): spastic paraplegia 18a, autosomal dominant 
-- 'spastic paraplegia 18a, autosomal dominant' SubClassOf 'hereditary spastic paraplegia'
-+ 'spastic paraplegia 18a, autosomal dominant' SubClassOf 'hereditary spastic paraplegia 18'
-+ 'spastic paraplegia 18a, autosomal dominant' SubClassOf 'autosomal dominant complex spastic paraplegia'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008648
-Label(s): ventricular tachycardia, familial 
-- 'ventricular tachycardia, familial' SubClassOf 'cardiogenetic disease'
-+ 'ventricular tachycardia, familial' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010180
-
-Class: http://www.ebi.ac.uk/efo/EFO_0009170
-Label(s): response to tyrosine kinase inhibitor 
-+ 'response to tyrosine kinase inhibitor' SubClassOf 'has primary input' some 'tyrosine kinase inhibitor'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011377
-Label(s): long QT syndrome 3 
-+ 'long QT syndrome 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010181
-
-Class: http://purl.obolibrary.org/obo/MONDO_0011376
-Label(s): ventricular fibrillation, paroxysmal familial, type 1 
-- 'ventricular fibrillation, paroxysmal familial, type 1' SubClassOf 'cardiogenetic disease'
-+ 'ventricular fibrillation, paroxysmal familial, type 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010181
-
-Class: http://purl.obolibrary.org/obo/CHEBI_4885
-Label(s): ethionamide 
-+ 'ethionamide' SubClassOf http://purl.obolibrary.org/obo/CHEBI_47956
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020997
-Label(s): response to ondansetron 
-+ 'response to ondansetron' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_7773
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020996
-Label(s): response to methazolamide 
-+ 'response to methazolamide' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_6822
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020993
-Label(s): response to acamprosate 
-+ 'response to acamprosate' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_51041
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020976
-Label(s): response to steroid 
-+ 'response to steroid' SubClassOf 'has primary input' some 'steroid'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0020857
-Label(s): very low density lipoprotein cholesterol change measurement 
-- 'very low density lipoprotein cholesterol change measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0600022
-Label(s): response to gamma-aminobutyric acid receptor agonists 
-+ 'response to gamma-aminobutyric acid receptor agonists' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_51373
-
-Class: http://www.ebi.ac.uk/efo/EFO_0007973
-Label(s): palmitoleic acid measurement 
-- 'palmitoleic acid measurement' SubClassOf 'lipid measurement'
-
-Class: http://www.ebi.ac.uk/efo/EFO_0600031
-Label(s): response to benznidazole 
-+ 'response to benznidazole' SubClassOf 'has primary input' some http://purl.obolibrary.org/obo/CHEBI_133833
-
-Class: http://purl.obolibrary.org/obo/OBA_VT0001547
-Label(s): lipid amount 
-- 'lipid amount' SubClassOf 'protein measurement'
-+ 'lipid amount' SubClassOf 'lipid measurement'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0015263
-Label(s): Brugada syndrome 
-- 'Brugada syndrome' SubClassOf 'cardiogenetic disease'
-+ 'Brugada syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010180
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019490
-Label(s): progressive familial heart block 
-- 'progressive familial heart block' SubClassOf 'cardiogenetic disease'
-+ 'progressive familial heart block' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010180
+Class: http://www.orpha.net/ORDO/Orphanet_95430
+Label(s): Congenital tracheomalacia 
+- 'Congenital tracheomalacia' SubClassOf 'Rare otorhinolaryngological malformation'
+- 'Congenital tracheomalacia' SubClassOf 'Genetic respiratory or mediastinal malformation'
++ 'Congenital tracheomalacia' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0007088
+Label(s): Alzheimer disease type 1 
++ 'Alzheimer disease type 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060190
+
+Class: http://purl.obolibrary.org/obo/MONDO_0030462
+Label(s): Joubert syndrome 40 
++ 'Joubert syndrome 40' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060191
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014926
+Label(s): Bardet-Biedl syndrome 22 
++ 'Bardet-Biedl syndrome 22' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060191
+
+Class: http://www.orpha.net/ORDO/Orphanet_391677
+Label(s): Short stature-optic atrophy-Pelger-Huët anomaly syndrome 
+- 'Short stature-optic atrophy-Pelger-Huët anomaly syndrome' SubClassOf 'Genetic malformation syndrome with short stature'
++ 'Short stature-optic atrophy-Pelger-Huët anomaly syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0014306
+Label(s): vasculitis due to ADA2 deficiency 
+- 'vasculitis due to ADA2 deficiency' SubClassOf 'deficiency of adenosine deaminase 2'
++ 'vasculitis due to ADA2 deficiency' SubClassOf 'hereditary disorder of connective tissue'
++ 'vasculitis due to ADA2 deficiency' SubClassOf 'type 1 interferonopathy of childhood'
+
+Class: http://purl.obolibrary.org/obo/HP_0025168
+Label(s): Left ventricular diastolic dysfunction 
+- 'Left ventricular diastolic dysfunction' SubClassOf 'Abnormal cardiovascular system physiology'
++ 'Left ventricular diastolic dysfunction' SubClassOf http://purl.obolibrary.org/obo/HP_0030872
+
+Class: http://purl.obolibrary.org/obo/HP_0008647
+Label(s): Pubertal developmental failure in females 
+- 'Pubertal developmental failure in females' SubClassOf 'Abnormality of the endocrine system'
++ 'Pubertal developmental failure in females' SubClassOf http://purl.obolibrary.org/obo/HP_0008197
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007237
+Label(s): dipetalonemiasis 
+- 'dipetalonemiasis' SubClassOf 'Rhabditida infectious disease'
+- 'dipetalonemiasis' SubClassOf 'parasitic skin disorder'
+- 'dipetalonemiasis' SubClassOf 'filariasis'
++ 'dipetalonemiasis' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.orpha.net/ORDO/Orphanet_100032
+Label(s): Hypocalcified amelogenesis imperfecta 
+- 'Hypocalcified amelogenesis imperfecta' SubClassOf 'Rare odontal or periodontal disorder'
++ 'Hypocalcified amelogenesis imperfecta' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013576
+Label(s): recurrent infections associated with rare immunoglobulin isotypes deficiency 
++ 'recurrent infections associated with rare immunoglobulin isotypes deficiency' SubClassOf 'predisposes towards' some 'infectious disease'
+
+Class: http://purl.obolibrary.org/obo/GO_0071953
+Label(s): elastic fiber 
+- 'elastic fiber' SubClassOf 'part_of' some 'extracellular matrix'
+
+Class: http://purl.obolibrary.org/obo/HP_0012664
+Label(s): Reduced left ventricular ejection fraction 
+- 'Reduced left ventricular ejection fraction' SubClassOf 'Abnormal cardiovascular system physiology'
++ 'Reduced left ventricular ejection fraction' SubClassOf http://purl.obolibrary.org/obo/HP_0030872
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010500
+Label(s): hypoxanthine measurement 
+- 'hypoxanthine measurement' SubClassOf 'purine measurement'
+- 'hypoxanthine measurement' SubClassOf 'is_about' some 'hypoxanthine'
++ 'hypoxanthine measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010455
+Label(s): adipic acid measurement 
+- 'adipic acid measurement' SubClassOf 'carboxylic acid measurement'
+- 'adipic acid measurement' SubClassOf 'lipid measurement'
+- 'adipic acid measurement' SubClassOf 'is_about' some 'adipic acid'
++ 'adipic acid measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011583
+Label(s): cerebral amyloid angiopathy, APP-related 
++ 'cerebral amyloid angiopathy, APP-related' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060190
+
+Class: http://purl.obolibrary.org/obo/MONDO_0971179
+Label(s): arterial tortuosity-bone fragility syndrome 
+- 'arterial tortuosity-bone fragility syndrome' SubClassOf 'genetic disorder'
++ 'arterial tortuosity-bone fragility syndrome' SubClassOf 'hereditary disorder of connective tissue'
++ 'arterial tortuosity-bone fragility syndrome' SubClassOf 'inherited cutis laxa'
++ 'arterial tortuosity-bone fragility syndrome' SubClassOf 'vascular disease'
++ 'arterial tortuosity-bone fragility syndrome' SubClassOf 'osteochondrodysplasia'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100317
+Label(s): deficiency of adenosine deaminase 2 
+- 'deficiency of adenosine deaminase 2' SubClassOf 'hereditary disorder of connective tissue'
+- 'deficiency of adenosine deaminase 2' SubClassOf 'type 1 interferonopathy of childhood'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0007357
+Label(s): mansonelliasis 
++ 'mansonelliasis' SubClassOf 'Rhabditida infectious disease'
+
+Class: http://purl.obolibrary.org/obo/GO_0006541
+Label(s): glutamine metabolic process 
+- 'glutamine metabolic process' SubClassOf 'amino acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/HP_0002034
+Label(s): Abnormal rectum morphology 
++ 'Abnormal rectum morphology' SubClassOf http://purl.obolibrary.org/obo/HP_0012732
+
+Class: http://www.ebi.ac.uk/efo/EFO_1001186
+Label(s): Sneddon syndrome 
+- 'Sneddon syndrome' SubClassOf 'hereditary skin disorder'
+- 'Sneddon syndrome' SubClassOf 'deficiency of adenosine deaminase 2'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019736
+Label(s): dense deposit disease 
+- 'dense deposit disease' SubClassOf 'primary membranoproliferative glomerulonephritis'
++ 'dense deposit disease' SubClassOf 'non-immunoglobulin-mediated membranoproliferative glomerulonephritis'
 
 ----------------------------------
 
@@ -1522,22 +925,10 @@ Label(s): progressive familial heart block
 
 @Classes deleted from this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_0013690
-Label(s): Pitt-Hopkins-like syndrome 2 
-+ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'genetic disorder'
-+ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'Pitt-Hopkins-like syndrome'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020754
-Label(s): visceral myopathy 1 
-+ 'visceral myopathy 1' SubClassOf 'genetic disorder'
-+ 'visceral myopathy 1' SubClassOf 'intestinal disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012341
-Label(s): celiac disease, susceptibility to, 3 
-+ 'celiac disease, susceptibility to, 3' SubClassOf 'inherited disease susceptibility'
-+ 'celiac disease, susceptibility to, 3' SubClassOf 'predisposes towards' some 'celiac disease'
-
-
+Class: http://purl.obolibrary.org/obo/MONDO_0100317
+Label(s): deficiency of adenosine deaminase 2 
++ 'deficiency of adenosine deaminase 2' SubClassOf 'hereditary disorder of connective tissue'
++ 'deficiency of adenosine deaminase 2' SubClassOf 'type 1 interferonopathy of childhood'
 
 ----------------------------------
 4. Scope of the Ontology
