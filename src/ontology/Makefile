@@ -39,7 +39,7 @@ TMPDIR = tmp
 # ----------------------------------------
 
 all: all_imports all_gwas all_components release qc
-qc: sparql_test all_reports
+qc: sparql_test all_reports label_synonym_dup_check
 gh_actions: qc $(BUILDDIR)/$(ONT).owl
 
 # ----------------------------------------
@@ -340,7 +340,17 @@ REPORTS = basic-report class-count-by-prefix edges xrefs obsoletes synonyms obso
 REPORT_ARGS = $(foreach V,$(REPORTS),-s $(SPARQLDIR)/$V.sparql reports/$V.tsv)
 all_reports: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) query -f tsv -i $< $(REPORT_ARGS)
-	
+
+# ----------------------------------------
+# Label/synonym duplicate check
+# ----------------------------------------
+
+$(BUILDDIR)/label-synonym-data.tsv: $(BUILDDIR)/$(ONT).owl
+	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/label-synonym-dup-extract.sparql $@
+
+label_synonym_dup_check: $(BUILDDIR)/label-synonym-data.tsv
+	python3 ../scripts/detect_label_synonym_duplicates.py $< -o reports/label-synonym-duplicates.tsv
+
 DIFF_REPORTS=efo.owl
 DIFF_REPORTS_FILES=$(patsubst %, qc/diff_%_latest_release.txt, $(DIFF_REPORTS))
 ENTITY_DIFF_FILES=$(patsubst %, qc/diff_%_entities.txt, $(DIFF_REPORTS))
