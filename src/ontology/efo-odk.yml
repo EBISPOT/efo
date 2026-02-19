@@ -43,7 +43,10 @@ custom_makefile_header: |
   MONDOIDSWITCHER = ../../bin/mondo-id-switch.jar
 
 import_group:
-  use_base_merging: TRUE
+  # use_base_merging FALSE: EFO needs individual per-import files (efo-edit.owl
+  # declares 14 separate owl:imports). base_merging would produce a single
+  # merged_import.owl which doesn't match the edit file structure.
+  use_base_merging: FALSE
   slme_individuals: exclude
   annotation_properties:
     - rdfs:label
@@ -51,104 +54,58 @@ import_group:
     - oboInOwl:is_metadata_tag
     - OMO:0002000
   products:
+    # ---------------------------------------------------------------
+    # Seed terms: ODK uses imports/<id>_terms.txt as the curated seed
+    # for each import. EFO already maintains these files in imports/.
+    #
+    # Exclusion: Imports needing per-term exclusion (mondo, uberon, pr,
+    # hancestro) are overridden in efo.Makefile with a custom recipe
+    # that appends `robot remove -T iri_dependencies/<id>_exclude.txt`.
+    # ---------------------------------------------------------------
     - id: mondo
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/mondo/mondo-base.owl
-      base_iris:
-        - file: iri_dependencies/mondo_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/mondo_exclude.txt
     - id: uberon
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/uberon/uberon-base.owl
-      base_iris:
-        - file: iri_dependencies/uberon_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/uberon_exclude.txt
     - id: hp
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/hp/hp-base.owl
-      base_iris:
-        - file: iri_dependencies/hp_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/hp_exclude.txt
     - id: chebi
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/chebi/chebi-base.owl
       is_large: TRUE
-      base_iris:
-        - file: iri_dependencies/chebi_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/chebi_exclude.txt
     - id: pr
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/pr/pr-base.owl
       is_large: TRUE
-      base_iris:
-        - file: iri_dependencies/pr_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/pr_exclude.txt
     - id: ecto
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/ecto/ecto-base.owl
-      base_iris:
-        - file: iri_dependencies/ecto_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/ecto_exclude.txt
     - id: cl
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/cl/cl-base.owl
-      base_iris:
-        - file: iri_dependencies/cl_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/cl_exclude.txt
     - id: gsso
       make_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/gsso.owl
-      base_iris:
-        - file: iri_dependencies/gsso_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/gsso_exclude.txt
     - id: hancestro
       make_base: TRUE
       mirror_from: https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl
-      exclude_iris:
-        - file: iri_dependencies/hancestro_exclude.txt
     - id: fbbt
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/fbbt/fbbt-base.owl
-      base_iris:
-        - file: iri_dependencies/fbbt_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/fbbt_exclude.txt
     - id: obi
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/obi/obi-base.owl
-      base_iris:
-        - file: iri_dependencies/obi_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/obi_exclude.txt
     - id: oba
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/oba/oba-base.owl
-      base_iris:
-        - file: iri_dependencies/oba_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/oba_exclude.txt
     - id: fbbi
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/fbbi/fbbi-base.owl
-      base_iris:
-        - file: iri_dependencies/fbbi_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/fbbi_exclude.txt
     - id: go
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/go/go-base.owl
-      base_iris:
-        - file: iri_dependencies/go_terms.txt
-      exclude_iris:
-        - file: iri_dependencies/go_exclude.txt
 
 robot_java_args: '-Xmx16G'
 reasoner: HermiT

@@ -21,8 +21,25 @@ EFO_MASTER = https://raw.githubusercontent.com/EBISPOT/efo/master/src/ontology/e
 # Import Overrides
 # ----------------------------------------
 
-# PR import: needs rename step to remap PR terms to EFO/ChEBI equivalents
-# and remove excluded terms. This overrides the ODK-generated pr_import target.
+# Generic import override: adds an exclusion step for ALL imports.
+# This pattern rule overrides the ODK-generated one, appending
+# `robot remove -T iri_dependencies/<id>_exclude.txt` at the end.
+# Empty exclude files are a no-op (robot remove with an empty term file
+# removes nothing), so this works uniformly for all imports.
+#
+# NOTE: This pattern rule does NOT override ODK explicit targets generated
+# for is_large imports (chebi, pr). PR has its own explicit override below.
+# chebi's exclude file is empty so the ODK default target is fine.
+$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt iri_dependencies/%_exclude.txt
+	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/$*_terms_combined.txt \
+		--method BOT --copy-ontology-annotations true \
+		-O $(ONTBASE)/$@ \
+		remove -T iri_dependencies/$*_exclude.txt -o $@; fi
+.PRECIOUS: $(IMPORTDIR)/%_import.owl
+
+# PR import: needs an additional rename step to remap PR terms to EFO/ChEBI
+# equivalents. This explicit target overrides both ODK's is_large target
+# and the pattern rule above.
 $(IMPORTDIR)/pr_import.owl: $(MIRRORDIR)/pr.owl $(IMPORTDIR)/pr_terms_combined.txt iri_dependencies/pr_exclude.txt
 	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/pr_terms_combined.txt \
 		--method BOT --copy-ontology-annotations true \
@@ -30,6 +47,15 @@ $(IMPORTDIR)/pr_import.owl: $(MIRRORDIR)/pr.owl $(IMPORTDIR)/pr_terms_combined.t
 		rename --mappings pr_efo_map.tsv \
 		remove -T iri_dependencies/pr_exclude.txt -o $@; fi
 .PRECIOUS: $(IMPORTDIR)/pr_import.owl
+
+# ChEBI import: explicit override for is_large product (pattern rule above
+# does not override ODK explicit targets). Exclude file is currently empty.
+$(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms_combined.txt iri_dependencies/chebi_exclude.txt
+	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/chebi_terms_combined.txt \
+		--method BOT --copy-ontology-annotations true \
+		-O $(ONTBASE)/$@ \
+		remove -T iri_dependencies/chebi_exclude.txt -o $@; fi
+.PRECIOUS: $(IMPORTDIR)/chebi_import.owl
 
 # ----------------------------------------
 # Custom Mirrors (non-import data sources)
