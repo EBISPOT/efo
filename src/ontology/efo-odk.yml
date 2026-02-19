@@ -3,11 +3,16 @@ title: "Experimental Factor Ontology"
 github_org: EBISPOT
 git_main_branch: master
 repo: efo
+uribase: "http://www.ebi.ac.uk"
+license: "https://www.apache.org/licenses/LICENSE-2.0"
+description: "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog."
+ci:
+  - github_actions
 report_fail_on: ERROR
-#report_fail_on: None
+create_obo_metadata: FALSE
 use_dosdps: FALSE
-use_mappings: 
-use_edit_file_imports: 
+use_mappings: FALSE
+use_edit_file_imports: TRUE
 release_diff: TRUE
 workflows:
   - docs
@@ -15,16 +20,28 @@ export_formats:
   - owl
   - obo
   - json
-obo_format_options: --clean-obo 'simple merge-comments'
-namespaces: 
+obo_format_options: "--clean-obo 'simple merge-comments'"
+namespaces:
   - http://www.ebi.ac.uk/efo/EFO_
   - "http://www.ebi.ac.uk/efo/EFO#"
 primary_release: full
-release_artefacts: 
+release_artefacts:
   - base
   - full
 documentation:
   documentation_system: mkdocs
+custom_makefile_header: |
+  # EFO custom prefix variables
+  EFOPREFIX = "EFO: http://www.ebi.ac.uk/efo/EFO_"
+  EFO2PREFIX = "EFO2: http://www.ebi.ac.uk/efo/"
+  MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
+  UBERONPREFIX = "UBERON: http://purl.obolibrary.org/obo/UBERON_"
+  HPPREFIX = "HP: http://purl.obolibrary.org/obo/HP_"
+  CLPREFIX = "CL: http://purl.obolibrary.org/obo/CL_"
+  ECTOPREFIX = "ECTO: http://purl.obolibrary.org/obo/ECTO_"
+  BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
+  MONDOIDSWITCHER = ../../bin/mondo-id-switch.jar
+
 import_group:
   use_base_merging: TRUE
   slme_individuals: exclude
@@ -33,62 +50,65 @@ import_group:
     - IAO:0000115
     - oboInOwl:is_metadata_tag
     - OMO:0002000
-  #exclude_iri_patterns:
-  products: # need to check if we are using the base or full imports
+  products:
     - id: mondo
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/mondo/mondo-base.owl
       base_iris:
         - file: iri_dependencies/mondo_terms.txt
       exclude_iris:
         - file: iri_dependencies/mondo_exclude.txt
     - id: uberon
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/uberon/uberon-base.owl
       base_iris:
         - file: iri_dependencies/uberon_terms.txt
       exclude_iris:
         - file: iri_dependencies/uberon_exclude.txt
-    - id: hp 
+    - id: hp
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/hp/hp-base.owl
       base_iris:
         - file: iri_dependencies/hp_terms.txt
       exclude_iris:
         - file: iri_dependencies/hp_exclude.txt
-    #- id: mondo_owl
-      #mirror_from: http://purl.obolibrary.org/obo/mondo.owl
     - id: chebi
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/chebi/chebi-base.owl
+      is_large: TRUE
       base_iris:
         - file: iri_dependencies/chebi_terms.txt
       exclude_iris:
         - file: iri_dependencies/chebi_exclude.txt
     - id: pr
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/pr/pr-base.owl
+      is_large: TRUE
       base_iris:
         - file: iri_dependencies/pr_terms.txt
       exclude_iris:
         - file: iri_dependencies/pr_exclude.txt
     - id: ecto
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/ecto/ecto-base.owl
       base_iris:
         - file: iri_dependencies/ecto_terms.txt
       exclude_iris:
         - file: iri_dependencies/ecto_exclude.txt
     - id: cl
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/cl/cl-base.owl
       base_iris:
         - file: iri_dependencies/cl_terms.txt
       exclude_iris:
         - file: iri_dependencies/cl_exclude.txt
     - id: gsso
-      use_base: TRUE
+      make_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/gsso.owl
       base_iris:
         - file: iri_dependencies/gsso_terms.txt
       exclude_iris:
         - file: iri_dependencies/gsso_exclude.txt
-    - id: hpoa
-      mirror_from: https://data.monarchinitiative.org/ttl/hpoa.ttl
-      exclude_iris:
-        - file: iri_dependencies/hpoa_exclude.txt
     - id: hancestro
       make_base: TRUE
       mirror_from: https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl
@@ -96,58 +116,75 @@ import_group:
         - file: iri_dependencies/hancestro_exclude.txt
     - id: fbbt
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/fbbt/fbbt-base.owl
       base_iris:
         - file: iri_dependencies/fbbt_terms.txt
       exclude_iris:
         - file: iri_dependencies/fbbt_exclude.txt
     - id: obi
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/obi/obi-base.owl
       base_iris:
         - file: iri_dependencies/obi_terms.txt
       exclude_iris:
         - file: iri_dependencies/obi_exclude.txt
     - id: oba
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/oba/oba-base.owl
       base_iris:
         - file: iri_dependencies/oba_terms.txt
       exclude_iris:
         - file: iri_dependencies/oba_exclude.txt
     - id: fbbi
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/fbbi/fbbi-base.owl
       base_iris:
         - file: iri_dependencies/fbbi_terms.txt
       exclude_iris:
         - file: iri_dependencies/fbbi_exclude.txt
     - id: go
       use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/go/go-base.owl
       base_iris:
         - file: iri_dependencies/go_terms.txt
       exclude_iris:
         - file: iri_dependencies/go_exclude.txt
-pattern_pipelines_group:
-  products:
-    - id: clustering
-  matches:
-    - id: matches
+
 robot_java_args: '-Xmx16G'
 reasoner: HermiT
 allow_equivalents: asserted-only
+
 robot_report:
   release_reports: False
-  fail_on : ERROR
-  use_labels : False
-  custom_profile : False
+  fail_on: ERROR
+  use_labels: False
+  custom_profile: False
   use_base_iris: True
-  report_on :
+  report_on:
     - edit
-    - efo-full.owl
   sparql_test_on:
     - edit
-    - efo-full.owl
-  custom_sparql_checks :
-    - 
+  custom_sparql_checks:
+    - duplicate-label
+    - nolabels
+    - multiple-label
+    - no-webulous-uris
+    - no-urigen-uris
+    - no-www-uris
+    - no-dangling
+    - id-length
+    - deprecated
+    - obsolete-replaced-whitespace
+    - wrong_efo_purl
   custom_sparql_exports:
-    - 
+    - basic-report
+    - class-count-by-prefix
+    - edges
+    - xrefs
+    - obsoletes
+    - synonyms
+    - obsolete_gwas
+
 components:
   products:
     - filename: subclasses.owl
@@ -177,5 +214,8 @@ components:
     - filename: anatomagram_placenta.owl
       use_template: True
       templates:
-        - anatomagram_placenta.tsv 
-
+        - anatomagram_placenta.tsv
+    # Custom components built by efo.Makefile (declared here for catalog generation)
+    - filename: gwas_import.owl
+    - filename: mondo_efo_import.owl
+    - filename: efo_equivalent_class_axioms.owl
