@@ -247,6 +247,24 @@ feature_diff_md:
 	$(MAKE) IMP=false PAT=false reports/robot_reasoned_diff.md -B
 
 # ----------------------------------------
+# Label/Synonym Duplicate Check
+# ----------------------------------------
+# Detects duplicate lexical strings across rdfs:label and oboInOwl:hasExactSynonym.
+# Runs as a warning-only check (exits 0 even with duplicates).
+
+$(TMPDIR)/label-synonym-data.tsv: $(ONT)-full.owl
+	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/label-synonym-dup-extract.sparql $@
+
+.PHONY: label_synonym_dup_check
+label_synonym_dup_check: $(TMPDIR)/label-synonym-data.tsv
+	python3 ../scripts/detect_label_synonym_duplicates.py $< -o reports/label-synonym-duplicates.tsv
+
+# Add label_synonym_dup_check as a prerequisite of the ODK test target.
+# GNU Make allows multiple rules for the same target as long as at most one
+# has a recipe; this adds a prerequisite without replacing the generated recipe.
+test: label_synonym_dup_check
+
+# ----------------------------------------
 # Ad-hoc Utility Targets
 # ----------------------------------------
 
