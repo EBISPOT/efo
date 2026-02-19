@@ -5,28 +5,13 @@
 # Instead of typing "make TARGET", type "./run.sh make TARGET".
 # This will run the make workflow within a docker container.
 #
-# The assumption is that you are working in the src/ontology folder;
-# we therefore map the whole repo (../..) to a docker volume.
+# Place this file in the folder from which you want to use the docker container.
+# Note that the ODK will only be able to access files in that particular directory.
+# 
+# In your terminal, you first go to the directory that contains this wrapper
+# script - then you can run 'sh odk.sh robot --version' to see if it works.
+# For more experienced developers you can add the odk.sh file to you path and give it access
 #
-# See README-editors.md for more details.
+# To your entire user directory by adding '-v /Users/username/:/work'
 
-IMAGE=${IMAGE:-odkfull}
-ODK_JAVA_OPTS=-Xmx12G
-ODK_DEBUG=${ODK_DEBUG:-no}
-
-TIMECMD=
-if [ x$ODK_DEBUG = xyes ]; then
-    # If you wish to change the format string, take care of using
-    # non-breaking spaces (U+00A0) instead of normal spaces, to
-    # prevent the shell from tokenizing the format string.
-    echo "Running ${IMAGE} with ${ODK_JAVA_OPTS} of memory for ROBOT and Java-based pipeline steps."
-    TIMECMD="/usr/bin/time -f ### DEBUG STATS ###\nElapsed time: %E\nPeak memory: %M kb"
-fi
-
-docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS="$ODK_JAVA_OPTS" -e JAVA_OPTS="$ODK_JAVA_OPTS" --rm -ti obolibrary/$IMAGE $TIMECMD "$@"
-
-case "$@" in
-*update_repo*|*release*)
-    echo "Please remember to update your ODK image from time to time: https://oboacademy.github.io/obook/howto/odk-update/."
-    ;;
-esac
+docker run -e ROBOT_JAVA_ARGS='-Xmx25G' -e JAVA_OPTS='-Xmx25G' -v $PWD/:/work -w /work --rm -ti obolibrary/odkfull "$@"

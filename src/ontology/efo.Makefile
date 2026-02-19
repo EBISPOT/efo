@@ -27,12 +27,17 @@ EFO_MASTER = https://raw.githubusercontent.com/EBISPOT/efo/master/src/ontology/e
 # Empty exclude files are a no-op (robot remove with an empty term file
 # removes nothing), so this works uniformly for all imports.
 #
+# ODK v1.6 passes two --term-file args (curated + auto-seed) instead of
+# a combined file. We mirror that with $(T_IMPORTSEED).
+#
 # NOTE: This pattern rule does NOT override ODK explicit targets generated
 # for is_large imports (chebi, pr). PR has its own explicit override below.
 # chebi's exclude file is empty so the ODK default target is fine.
-$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt iri_dependencies/%_exclude.txt
-	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/$*_terms_combined.txt \
-		--method BOT --copy-ontology-annotations true \
+$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt $(IMPORTSEED) iri_dependencies/%_exclude.txt
+	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< \
+		--term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
+		--method BOT --copy-ontology-annotations true --force true \
+		--individuals exclude \
 		-O $(ONTBASE)/$@ \
 		remove -T iri_dependencies/$*_exclude.txt -o $@; fi
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
@@ -40,9 +45,11 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt 
 # PR import: needs an additional rename step to remap PR terms to EFO/ChEBI
 # equivalents. This explicit target overrides both ODK's is_large target
 # and the pattern rule above.
-$(IMPORTDIR)/pr_import.owl: $(MIRRORDIR)/pr.owl $(IMPORTDIR)/pr_terms_combined.txt iri_dependencies/pr_exclude.txt
-	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/pr_terms_combined.txt \
-		--method BOT --copy-ontology-annotations true \
+$(IMPORTDIR)/pr_import.owl: $(MIRRORDIR)/pr.owl $(IMPORTDIR)/pr_terms.txt $(IMPORTSEED) iri_dependencies/pr_exclude.txt
+	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< \
+		--term-file $(IMPORTDIR)/pr_terms.txt $(T_IMPORTSEED) \
+		--method BOT --copy-ontology-annotations true --force true \
+		--individuals exclude \
 		-O $(ONTBASE)/$@ \
 		rename --mappings pr_efo_map.tsv \
 		remove -T iri_dependencies/pr_exclude.txt -o $@; fi
@@ -50,9 +57,11 @@ $(IMPORTDIR)/pr_import.owl: $(MIRRORDIR)/pr.owl $(IMPORTDIR)/pr_terms_combined.t
 
 # ChEBI import: explicit override for is_large product (pattern rule above
 # does not override ODK explicit targets). Exclude file is currently empty.
-$(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms_combined.txt iri_dependencies/chebi_exclude.txt
-	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/chebi_terms_combined.txt \
-		--method BOT --copy-ontology-annotations true \
+$(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms.txt $(IMPORTSEED) iri_dependencies/chebi_exclude.txt
+	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< \
+		--term-file $(IMPORTDIR)/chebi_terms.txt $(T_IMPORTSEED) \
+		--method BOT --copy-ontology-annotations true --force true \
+		--individuals exclude \
 		-O $(ONTBASE)/$@ \
 		remove -T iri_dependencies/chebi_exclude.txt -o $@; fi
 .PRECIOUS: $(IMPORTDIR)/chebi_import.owl
