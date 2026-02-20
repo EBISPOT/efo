@@ -309,6 +309,13 @@ label_synonym_dup_check: $(TMPDIR)/label-synonym-data.tsv
 # has a recipe; this adds a prerequisite without replacing the generated recipe.
 test: label_synonym_dup_check
 
+# Fix for ODK v1.6: update_repo runs `odk.py update` which calls `robot odk:import`,
+# but the ODK ROBOT plugin (odk.jar) is not loaded unless ROBOT_PLUGINS_DIRECTORY
+# is populated. The Makefile exports ROBOT_PLUGINS_DIRECTORY=$(TMPDIR)/plugins and
+# all_robot_plugins copies odk.jar there, but update_repo doesn't declare it as a
+# prerequisite. Adding it here ensures the plugin is available before odk.py runs.
+update_repo: all_robot_plugins
+
 # ----------------------------------------
 # Ad-hoc Utility Targets
 # ----------------------------------------
