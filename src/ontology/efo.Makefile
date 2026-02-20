@@ -70,6 +70,16 @@ $(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms.t
 # Custom Mirrors (non-import data sources)
 # ----------------------------------------
 
+# MONDO base mirror: needed for imports/mondo_import.owl extraction.
+# Declared here (not in efo-odk.yaml) to prevent update_repo from adding
+# mondo_import.owl directly to efo-edit.owl (EFO routes MONDO through the
+# mondo_efo_import component built by mondo-id-switch.jar instead).
+$(MIRRORDIR)/mondo.owl:
+	if [ $(MIR) = true ]; then curl -L --retry 4 --max-time 200 \
+		http://purl.obolibrary.org/obo/mondo/mondo-base.owl -o $@.tmp.owl && \
+		mv $@.tmp.owl $@; fi
+.PRECIOUS: $(MIRRORDIR)/mondo.owl
+
 # Full MONDO OWL (not base) is needed for the disease-to-phenotype pipeline
 $(MIRRORDIR)/mondo-owl.owl:
 	if [ $(MIR) = true ]; then curl -L --retry 4 --max-time 200 \

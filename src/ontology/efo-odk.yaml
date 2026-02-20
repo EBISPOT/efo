@@ -58,13 +58,19 @@ import_group:
     # Seed terms: ODK uses imports/<id>_terms.txt as the curated seed
     # for each import. EFO already maintains these files in imports/.
     #
-    # Exclusion: Imports needing per-term exclusion (mondo, uberon, pr,
+    # Exclusion: Imports needing per-term exclusion (uberon, pr,
     # hancestro) are overridden in efo.Makefile with a custom recipe
     # that appends `robot remove -T iri_dependencies/<id>_exclude.txt`.
+    #
+    # NOTE: MONDO is intentionally excluded from this list.
+    # imports/mondo_import.owl is a build artifact for the
+    # mondo_efo_import component (via mondo-id-switch.jar), NOT a
+    # direct owl:import in efo-edit.owl. Declaring mondo here would
+    # cause update_repo to add mondo_import.owl to efo-edit.owl's
+    # owl:imports, which would duplicate content from mondo_efo_import.owl.
+    # The mondo mirror download and import extraction are handled by
+    # custom targets in efo.Makefile.
     # ---------------------------------------------------------------
-    - id: mondo
-      use_base: TRUE
-      mirror_from: http://purl.obolibrary.org/obo/mondo/mondo-base.owl
     - id: uberon
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/uberon/uberon-base.owl

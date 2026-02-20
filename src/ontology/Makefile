@@ -17,7 +17,7 @@ BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
 MONDOIDSWITCHER = ../../bin/mondo-id-switch.jar
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                a5747e6a52184b187191cd4c0231e416a9b951e8c19605dda6201c93cd13f13e
+CONFIG_HASH=                503a77fc0ff525e0a2abf0994149f6d7d2cdc5c6fcc57632720c5cbd0a93a609
 
 
 # ----------------------------------------
@@ -194,7 +194,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  mondo uberon hp chebi pr ecto cl gsso hancestro fbbt obi oba fbbi go
+IMPORTS =  uberon hp chebi pr ecto cl gsso hancestro fbbt obi oba fbbi go
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -587,13 +587,6 @@ endif # COMP=true
 # ----------------------------------------
 
 ifeq ($(MIR),true)
-
-
-## ONTOLOGY: mondo
-.PHONY: mirror-mondo
-.PRECIOUS: $(MIRRORDIR)/mondo.owl
-mirror-mondo: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.obolibrary.org/obo/mondo/mondo-base.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: uberon
