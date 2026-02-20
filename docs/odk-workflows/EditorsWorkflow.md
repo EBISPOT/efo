@@ -14,13 +14,14 @@ Workflow requirements:
 
 - git
 - github
+- docker
 - editing tool of choice, e.g. Protégé, your favourite text editor, etc
 
 #### 1. _Create issue_
 Ensure that there is a ticket on your issue tracker that describes the change you are about to make. While this seems optional, this is a very important part of the social contract of building an ontology - no change to the ontology should be performed without a good ticket, describing the motivation and nature of the intended change.
 
 #### 2. _Update main branch_ 
-In your local environment (e.g. your laptop), make sure you are on the `master` branch and ensure that you have all the upstream changes, for example:
+In your local environment (e.g. your laptop), make sure you are on the `main` (prev. `master`) branch and ensure that you have all the upstream changes, for example:
 
 ```
 git checkout master
@@ -58,10 +59,10 @@ Consider the following when making the edit.
 
 1. According to our development philosophy, the only places that should be manually edited are:
     - `src/ontology/efo-edit.owl`
-    - Any ROBOT templates you chose to use (the TSV or CSV files only)
-    - Any DOSDP data tables you chose to use (the TSV or CSV files, and potentially the associated patterns)
+    - Any ROBOT templates you chose to use (the TSV files only)
+    - Any DOSDP data tables you chose to use (the TSV files, and potentially the associated patterns)
     - components (anything in `src/ontology/components`), see [here](RepositoryFileStructure.md).
-2. Imports should not be edited (any edits will be flushed out with the next update). However, refreshing imports is a potentially breaking change - and is discussed [elsewhere](../Import_terms_from_another_ontology.md).
+2. Imports should not be edited (any edits will be flushed out with the next update). However, refreshing imports is a potentially breaking change - and is discussed [elsewhere](UpdateImports.md).
 3. Changes should usually be small. Adding or changing 1 term is great. Adding or changing 10 related terms is ok. Adding or changing 100 or more terms at once should be considered very carefully.
 
 #### 4. _Check the Git diff_
@@ -74,17 +75,18 @@ git status
 git diff
 ```
 #### 5. Quality control
+Now it's time to run your quality control checks. This can either happen locally ([5a](#5a-local-testing)) or through your continuous integration system ([7/5b](#75b-continuous-integration-testing)).
 
-You can run the ontology quality control (QC) checks manually with:
-
-```bash
-make qc
-```
-
-Alternatively, QC will run automatically when you execute:
+#### 5a. Local testing
+If you chose to run your test locally:
 
 ```
-make all
+sh run.sh make IMP=false test
+```
+This will run the whole set of configured ODK tests on including your change. If you have a complex DOSDP pattern pipeline you may want to add `PAT=false` to skip the potentially lengthy process of rebuilding the patterns.
+
+```
+sh run.sh make IMP=false PAT=false test
 ```
 
 #### 6. Pull request

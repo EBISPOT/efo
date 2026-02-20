@@ -1,9 +1,73 @@
+# ODK-managed rules, do not modify
+# If you need to add your own ignore rules, you may do so below
+# the "End ODK-managed rules" marker at the end of this file.
+.DS_Store
+semantic.cache
+bin/
+
 *.tmp
-build
+*.tmp.obo
+*.tmp.owl
+*.tmp.json
+*-relation-graph.tsv.gz
+.template.db
+
+.github/token.txt
+
+/efo.owl
+/efo.obo
+/efo.json
+/efo.db
+/efo-base.*
+/efo-basic.*
+/efo-full.*
+/efo-simple.*
+/efo-simple-non-classified.*
+/mappings/
+/patterns/
+/reports/
+/subsets/
+
 src/ontology/mirror
 src/ontology/mirror/*
-semantic.cache
-.DS_Store
+src/ontology/reports/*
+!src/ontology/reports/release-diff.md
+src/ontology/efo.owl
+src/ontology/efo.obo
+src/ontology/efo.json
+src/ontology/efo.db
+src/ontology/efo-base.*
+src/ontology/efo-basic.*
+src/ontology/efo-full.*
+src/ontology/efo-simple.*
+src/ontology/efo-simple-non-classified.*
+
+src/ontology/seed.txt
+src/ontology/dosdp-tools.log
+src/ontology/ed_definitions_merged.owl
+src/ontology/ontologyterms.txt
+src/ontology/simple_seed.txt
+src/ontology/patterns
+src/ontology/merged-efo-edit.owl
+src/ontology/efo-edit.properties
+
+src/ontology/target/
+src/ontology/tmp/*
+!src/ontology/tmp/.gitkeep
+!src/ontology/tmp/README.md
+
+src/ontology/run.sh.conf
+src/ontology/run.sh.env
+
+src/ontology/imports/*_terms_combined.txt
+
+src/patterns/data/**/*.ofn
+src/patterns/data/**/*.txt
+src/patterns/pattern_owl_seed.txt
+src/patterns/all_pattern_terms.txt
+
+# End of ODK-managed rules
+build
 .idea
 *~
 deprecated_modules
@@ -16,9 +80,7 @@ src/ontology/efo-full.json
 src/ontology/efo-base.owl
 
 # Legacy release artifacts
-src/ontology/efo.obo
 src/ontology/efo_full.obo
-src/ontology/efo.owl
 src/ontology/efo_inferred.owl
 src/ontology/efo_inferred_all.owl
 src/ontology/efo-obo.tmp.owl
@@ -31,7 +93,6 @@ efo-base.owl
 
 # ODK tmp directory
 src/ontology/tmp
-src/ontology/tmp/*
 src/ontology/.tmp
 
 # Generated imports (bot intermediates)
@@ -41,7 +102,6 @@ src/ontology/imports/mondo_remove.owl
 src/ontology/imports/OTAR_terms.txt
 
 # Generated term lists in imports/ (generated from iri_dependencies/)
-src/ontology/imports/*_terms_combined.txt
 src/ontology/uberon_terms.txt
 
 # QC outputs
@@ -89,7 +149,6 @@ src/ontology/cp-efo-edit.owl
 src/ontology/efo-edit-diff.txt
 src/ontology/efo-edit-fixed.owl
 src/ontology/efo-edit-tmp.owl
-src/ontology/efo-edit.properties
 src/ontology/master-efo-edit.owl
 src/ontology/mondo.owl
 src/ontology/efo_no_uberon.owl
