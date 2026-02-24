@@ -13,58 +13,105 @@
 # Custom Variables
 # ----------------------------------------
 
-# EFO uses version.txt for release versioning (not dates)
+# EFO uses version.txt for release versioning (not dates).
+# VERSION holds the bare version (e.g. 3.87.0) used for owl:versionInfo.
+# RELEASE_VERSION adds the "v" prefix (e.g. v3.87.0) used in version IRI paths.
 VERSION = $(shell cat version.txt)
+RELEASE_VERSION = v$(VERSION)
 EFO_MASTER = https://raw.githubusercontent.com/EBISPOT/efo/master/src/ontology/efo-edit.owl
+
+# Override the ODK-generated ANNOTATE_ONTOLOGY_VERSION to use RELEASE_VERSION
+# in version IRIs. This is a recursively-expanded variable, so it propagates
+# to all ODK targets that use $(ANNOTATE_ONTOLOGY_VERSION) or $(ANNOTATE_CONVERT_FILE).
+ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(RELEASE_VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 
 # ----------------------------------------
 # Import Overrides
 # ----------------------------------------
-
-# Generic import override: adds an exclusion step for ALL imports.
-# This pattern rule overrides the ODK-generated one, appending
-# `robot remove -T iri_dependencies/<id>_exclude.txt` at the end.
-# Empty exclude files are a no-op (robot remove with an empty term file
-# removes nothing), so this works uniformly for all imports.
+# Only imports with non-empty exclude files or additional processing steps
+# need explicit overrides here. All other imports use the ODK pattern rule.
 #
-# ODK v1.6 passes two --term-file args (curated + auto-seed) instead of
-# a combined file. We mirror that with $(T_IMPORTSEED).
+# Non-empty exclude files: uberon (15 terms), hancestro (10 terms),
+#   pr (5 terms), mondo (4138 terms).
+# Empty exclude files (no override needed): chebi, hp, ecto, cl, gsso,
+#   fbbt, obi, oba, fbbi, go.
 #
-# NOTE: This pattern rule does NOT override ODK explicit targets generated
-# for is_large imports (chebi, pr). PR has its own explicit override below.
-# chebi's exclude file is empty so the ODK default target is fine.
-$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt $(IMPORTSEED) iri_dependencies/%_exclude.txt
-	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< \
-		--term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
-		--method BOT --copy-ontology-annotations true --force true \
-		--individuals exclude \
-		-O $(ONTBASE)/$@ \
-		remove -T iri_dependencies/$*_exclude.txt -o $@; fi
-.PRECIOUS: $(IMPORTDIR)/%_import.owl
+# Each override replicates the full ODK v1.6 pipeline (odk:normalize,
+# extract, annotation-property filtering, repair) and appends the
+# exclude removal step. This ensures consistency with ODK-managed imports.
 
-# PR import: needs an additional rename step to remap PR terms to EFO/ChEBI
-# equivalents. This explicit target overrides both ODK's is_large target
-# and the pattern rule above.
-$(IMPORTDIR)/pr_import.owl: $(MIRRORDIR)/pr.owl $(IMPORTDIR)/pr_terms.txt $(IMPORTSEED) iri_dependencies/pr_exclude.txt
-	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< \
-		--term-file $(IMPORTDIR)/pr_terms.txt $(T_IMPORTSEED) \
-		--method BOT --copy-ontology-annotations true --force true \
-		--individuals exclude \
-		-O $(ONTBASE)/$@ \
+ifeq ($(IMP),true)
+
+# Uberon import: exclude step for non-EFO terms
+$(IMPORTDIR)/uberon_import.owl: $(MIRRORDIR)/uberon.owl $(IMPORTDIR)/uberon_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		odk:normalize --add-source true \
+		extract --term-file $(IMPORTDIR)/uberon_terms.txt $(T_IMPORTSEED) \
+			--force true --copy-ontology-annotations true \
+			--individuals exclude --method BOT \
+		remove $(foreach p,$(ANNOTATION_PROPERTIES),--term $(p)) \
+			--term-file $(IMPORTDIR)/uberon_terms.txt $(T_IMPORTSEED) \
+			--select complement --select annotation-properties \
+		odk:normalize --base-iri $(URIBASE) \
+			--subset-decls true --synonym-decls true \
+		repair --merge-axiom-annotations true \
+		remove -T iri_dependencies/uberon_exclude.txt \
+		$(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: $(IMPORTDIR)/uberon_import.owl
+
+# HANCESTRO import: exclude step for non-EFO terms
+$(IMPORTDIR)/hancestro_import.owl: $(MIRRORDIR)/hancestro.owl $(IMPORTDIR)/hancestro_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		odk:normalize --add-source true \
+		extract --term-file $(IMPORTDIR)/hancestro_terms.txt $(T_IMPORTSEED) \
+			--force true --copy-ontology-annotations true \
+			--individuals exclude --method BOT \
+		remove $(foreach p,$(ANNOTATION_PROPERTIES),--term $(p)) \
+			--term-file $(IMPORTDIR)/hancestro_terms.txt $(T_IMPORTSEED) \
+			--select complement --select annotation-properties \
+		odk:normalize --base-iri $(URIBASE) \
+			--subset-decls true --synonym-decls true \
+		repair --merge-axiom-annotations true \
+		remove -T iri_dependencies/hancestro_exclude.txt \
+		$(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: $(IMPORTDIR)/hancestro_import.owl
+
+# PR import: rename step (PR terms → EFO/ChEBI equivalents) + exclude.
+# This overrides ODK's is_large explicit target for PR.
+ifeq ($(IMP_LARGE),true)
+$(IMPORTDIR)/pr_import.owl: $(MIRRORDIR)/pr.owl $(IMPORTDIR)/pr_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		odk:normalize --add-source true \
+		extract --term-file $(IMPORTDIR)/pr_terms.txt $(T_IMPORTSEED) \
+			--force true --copy-ontology-annotations true \
+			--individuals exclude --method BOT \
+		remove $(foreach p,$(ANNOTATION_PROPERTIES),--term $(p)) \
+			--term-file $(IMPORTDIR)/pr_terms.txt $(T_IMPORTSEED) \
+			--select complement --select annotation-properties \
+		odk:normalize --base-iri $(URIBASE) \
+			--subset-decls true --synonym-decls true \
+		repair --merge-axiom-annotations true \
 		rename --mappings pr_efo_map.tsv \
-		remove -T iri_dependencies/pr_exclude.txt -o $@; fi
+		remove -T iri_dependencies/pr_exclude.txt \
+		$(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: $(IMPORTDIR)/pr_import.owl
+endif # IMP_LARGE=true
 
-# ChEBI import: explicit override for is_large product (pattern rule above
-# does not override ODK explicit targets). Exclude file is currently empty.
-$(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms.txt $(IMPORTSEED) iri_dependencies/chebi_exclude.txt
-	if [ $(IMP) = true ]; then $(ROBOT) extract -i $< \
-		--term-file $(IMPORTDIR)/chebi_terms.txt $(T_IMPORTSEED) \
+# MONDO intermediate import: not a direct import in efo-edit.owl.
+# Built from the custom mondo mirror, used as input to the
+# mondo_efo_import component (via mondo-id-switch.jar).
+# Simpler pipeline (no odk:normalize/repair) since this is an
+# intermediate artifact, not a final import module.
+$(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl $(IMPORTDIR)/mondo_terms.txt iri_dependencies/mondo_exclude.txt
+	$(ROBOT) extract -i $< \
+		--term-file $(IMPORTDIR)/mondo_terms.txt \
 		--method BOT --copy-ontology-annotations true --force true \
 		--individuals exclude \
 		-O $(ONTBASE)/$@ \
-		remove -T iri_dependencies/chebi_exclude.txt -o $@; fi
-.PRECIOUS: $(IMPORTDIR)/chebi_import.owl
+		remove -T iri_dependencies/mondo_exclude.txt -o $@
+.PRECIOUS: $(IMPORTDIR)/mondo_import.owl
+
+endif # IMP=true
 
 # ----------------------------------------
 # Custom Mirrors (non-import data sources)
@@ -214,41 +261,54 @@ nuclear_strike: $(SRC) foreign_axiom_diff
 # Release Overrides
 # ----------------------------------------
 # EFO uses version.txt-based version IRIs instead of ODK's date-based versions.
+# These overrides add $(OTHER_SRC) and $(IMPORT_FILES) as prerequisites (so
+# components and imports are built before the release), use the correct
+# ROBOT_RELEASE_IMPORT_MODE (which merges imports via catalog), and add the
+# relax/reduce steps that ODK normally includes.
 
-$(ONT)-full.owl: $(EDIT_PREPROCESSED)
-	$(ROBOT) merge --input $< \
-		reason --reasoner $(REASONER) -s true -m false \
-			--equivalent-classes-allowed $(EQUIV_ENTITIES_ALLOWED) \
+# Full: imports merged, reasoned, relaxed, reduced.
+$(ONT)-full.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
+	$(ROBOT_RELEASE_IMPORT_MODE) \
+		reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only \
+			--exclude-tautologies structural \
+		relax $(RELAX_OPTIONS) \
+		reduce -r $(REASONER) $(REDUCE_OPTIONS) \
 		annotate -a owl:versionInfo "$(VERSION)" \
 			-a rdfs:comment "$$(date +%Y-%m-%d)" \
 			-O $(ONTBASE)/$(ONT).owl \
-			-V $(ONTBASE)/releases/v$(VERSION)/$(ONT).owl \
-			--output $@
+			-V $(ONTBASE)/releases/$(RELEASE_VERSION)/$(ONT).owl \
+			--output $@.tmp.owl && mv $@.tmp.owl $@
 
-$(ONT)-full.obo: $(ONT)-full.owl
-	$(ROBOT) annotate -i $< \
-		--ontology-iri $(ONTBASE)/$(ONT).owl \
-		--version-iri $(ONTBASE)/releases/v$(VERSION)/$(ONT).owl \
-		convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@
-
+# Full JSON: re-annotate with canonical efo.owl IRI (not efo-full.json).
 $(ONT)-full.json: $(ONT)-full.owl
-	$(ROBOT) annotate -i $< \
-		--ontology-iri $(ONTBASE)/$(ONT).owl \
-		--version-iri $(ONTBASE)/releases/v$(VERSION)/$(ONT).owl \
-		convert -f json -o $@
+	$(ROBOT) annotate --input $< \
+		-O $(ONTBASE)/$(ONT).owl \
+		-V $(ONTBASE)/releases/$(RELEASE_VERSION)/$(ONT).owl \
+		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
 
-$(ONT)-base.owl: $(EDIT_PREPROCESSED)
-	$(ROBOT) remove --input $< \
-		--base-iri 'http://www.ebi.ac.uk/efo/EFO_' \
-		--base-iri 'http://www.ebi.ac.uk/efo/EFO#' \
-		--axioms external \
-		--preserve-structure false \
-		--trim false \
+# Base: external axioms removed, only EFO-namespace terms retained.
+$(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
+	$(ROBOT_RELEASE_IMPORT_MODE) \
+		reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only \
+			--exclude-tautologies structural --annotate-inferred-axioms false \
+		relax $(RELAX_OPTIONS) \
+		reduce -r $(REASONER) $(REDUCE_OPTIONS) \
+		remove --base-iri http://www.ebi.ac.uk/efo/EFO_ \
+			--base-iri "http://www.ebi.ac.uk/efo/EFO#" \
+			--axioms external --preserve-structure false --trim false \
 		annotate -a owl:versionInfo "$(VERSION)" \
 			-a rdfs:comment "$$(date +%Y-%m-%d)" \
+			--link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
 			-O $(ONTBASE)/$(ONT)-base.owl \
-			-V $(ONTBASE)/releases/v$(VERSION)/$(ONT)-base.owl \
-			--output $@
+			-V $(ONTBASE)/releases/$(RELEASE_VERSION)/$(ONT)-base.owl \
+			--output $@.tmp.owl && mv $@.tmp.owl $@
+
+# Main release product: fix ontology IRI (ODK uses URIBASE which is wrong for EFO).
+$(ONT).owl: $(ONT)-full.owl
+	$(ROBOT) annotate --input $< \
+		-O $(ONTBASE)/$(ONT).owl \
+		-V $(ONTBASE)/releases/$(RELEASE_VERSION)/$(ONT).owl \
+		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
 # ----------------------------------------
 # Feature Diff (branch vs master)
