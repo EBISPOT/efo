@@ -39,7 +39,7 @@ TMPDIR = tmp
 # ----------------------------------------
 
 all: all_imports all_gwas all_components release qc
-qc: sparql_test all_reports label_synonym_dup_check
+qc: sparql_test all_reports label_synonym_dup_check mondo_term_check
 gh_actions: qc $(BUILDDIR)/$(ONT).owl
 
 # ----------------------------------------
@@ -350,6 +350,13 @@ $(BUILDDIR)/label-synonym-data.tsv: $(BUILDDIR)/$(ONT).owl
 
 label_synonym_dup_check: $(BUILDDIR)/label-synonym-data.tsv
 	python3 ../scripts/detect_label_synonym_duplicates.py $< -o reports/label-synonym-duplicates.tsv
+
+# ----------------------------------------
+# Mondo obsolete term replacement check
+# ----------------------------------------
+
+mondo_term_check: $(BUILDDIR)/$(ONT).owl
+	python3 ../scripts/check_mondo_terms.py $< iri_dependencies/mondo_terms.txt -o reports/mondo-qc-warnings.tsv --update
 
 DIFF_REPORTS=efo.owl
 DIFF_REPORTS_FILES=$(patsubst %, qc/diff_%_latest_release.txt, $(DIFF_REPORTS))
