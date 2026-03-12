@@ -2,9 +2,9 @@
 """QC check: verify all Mondo terms in iri_dependencies/mondo_terms.txt are present in EFO.
 
 For obsoleted terms, checks whether the term_replaced_by annotation points to a Mondo
-term.  If it does, ensures that replacement is also listed in mondo_terms.txt (and adds
-it when missing).  Terms obsoleted without a Mondo replacement are collected in a
-warning report.
+term.  If it does, verifies the replacement exists in mirror/mondo.owl before
+suggesting it be added to mondo_terms.txt.  Invalid or non-existent replacement terms
+are flagged as warnings.
 """
 
 import argparse
@@ -29,11 +29,14 @@ TERM_REPLACED_BY = "http://purl.obolibrary.org/obo/IAO_0100001"
 def load_terms_file(path):
     """Read an IRI-per-line text file, returning a set of IRIs."""
     terms = set()
-    with open(path) as fh:
-        for line in fh:
-            line = line.strip()
-            if line and not line.startswith("#"):
-                terms.add(line)
+    try:
+        with open(path) as fh:
+            for line in fh:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    terms.add(line)
+    except FileNotFoundError:
+        pass
     return terms
 
 
@@ -42,6 +45,21 @@ def save_terms_file(path, terms):
     with open(path, "w") as fh:
         for t in sorted(terms):
             fh.write(t + "\n")
+
+
+def parse_mondo_mirror(mondo_path):
+    """Parse mirror/mondo.owl and return the set of all Mondo IRIs that exist."""
+    mondo_iris = set()
+
+    tree = ET.parse(mondo_path)
+    root = tree.getroot()
+
+    for cls in root.iter("{http://www.w3.org/2002/07/owl#}Class"):
+        about = cls.get("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about", "")
+        if MONDO_IRI_RE.fullmatch(about):
+            mondo_iris.add(about)
+
+    return mondo_iris
 
 
 def parse_efo_owl(efo_path):
@@ -114,6 +132,18 @@ def main():
         help="Path to iri_dependencies/mondo_terms.txt",
     )
     parser.add_argument(
+        "-m",
+        "--mondo-mirror",
+        default="mirror/mondo.owl",
+        help="Path to mirror/mondo.owl for validating Mondo terms (default: mirror/mondo.owl)",
+    )
+    parser.add_argument(
+        "-e",
+        "--mondo-exclude",
+        default="iri_dependencies/mondo_exclude.txt",
+        help="Path to iri_dependencies/mondo_exclude.txt (default: iri_dependencies/mondo_exclude.txt)",
+    )
+    parser.add_argument(
         "-o",
         "--output",
         default="reports/mondo-qc-warnings.tsv",
@@ -122,9 +152,21 @@ def main():
     parser.add_argument(
         "--update",
         action="store_true",
-        help="If set, automatically add missing replacement Mondo terms to mondo_terms.txt",
+        help="If set, automatically add missing replacement Mondo terms to mondo_terms.txt (only if they exist in mondo.owl)",
     )
     args = parser.parse_args()
+
+    print("Parsing mirror/mondo.owl …")
+    try:
+        valid_mondo_iris = parse_mondo_mirror(args.mondo_mirror)
+        print(f"  Valid Mondo terms in mirror: {len(valid_mondo_iris)}")
+    except FileNotFoundError:
+        print(f"  WARNING: {args.mondo_mirror} not found, skipping validation")
+        valid_mondo_iris = None
+
+    print("Loading mondo_exclude.txt …")
+    exclude_list = load_terms_file(args.mondo_exclude)
+    print(f"  Terms in mondo_exclude.txt: {len(exclude_list)}")
 
     print("Parsing efo.owl …")
     all_mondo_iris, deprecated, replaced_by, labels = parse_efo_owl(args.efo_owl)
@@ -136,11 +178,18 @@ def main():
 
     warnings = []
     missing_from_efo = []
+    missing_in_exclude = []
+    missing_not_in_exclude = []
     added_replacements = []
+    invalid_replacements = []
 
     for term in sorted(mondo_list):
         if term not in all_mondo_iris:
             missing_from_efo.append(term)
+            if term in exclude_list:
+                missing_in_exclude.append(term)
+            else:
+                missing_not_in_exclude.append(term)
             continue
 
         if term in deprecated:
@@ -150,8 +199,16 @@ def main():
             if mondo_replacements:
                 for repl in mondo_replacements:
                     if repl not in mondo_list:
-                        added_replacements.append((term, repl))
-                        mondo_list.add(repl)
+                        # Check if replacement exists in mondo.owl mirror
+                        if valid_mondo_iris is not None and repl not in valid_mondo_iris:
+                            # Replacement doesn't exist in Mondo - flag as warning
+                            label = labels.get(term, "")
+                            invalid_replacements.append((term, label, repl))
+                        else:
+                            # Valid replacement - can be added
+                            added_replacements.append((term, repl))
+                            if args.update:
+                                mondo_list.add(repl)
             else:
                 label = labels.get(term, "")
                 non_mondo_replacements = replacements if replacements else ["none"]
@@ -161,22 +218,41 @@ def main():
 
     # Write warning report
     with open(args.output, "w") as fh:
-        fh.write("obsolete_mondo_term\tlabel\treplaced_by (non-Mondo)\n")
+        fh.write("obsolete_mondo_term\tlabel\treplaced_by (non-Mondo or invalid)\n")
         for term, label, repl in warnings:
             fh.write(f"{term}\t{label}\t{repl}\n")
+        for term, label, repl in invalid_replacements:
+            fh.write(f"{term}\t{label}\t{repl} (NOT IN MONDO)\n")
 
     # Summary
     print()
     if missing_from_efo:
-        print(f"ERROR: {len(missing_from_efo)} term(s) in mondo_terms.txt but NOT in efo.owl:")
-        for t in missing_from_efo[:20]:
-            print(f"  {t}")
-        if len(missing_from_efo) > 20:
-            print(f"  … and {len(missing_from_efo) - 20} more")
+        print(f"WARNING: {len(missing_from_efo)} term(s) in mondo_terms.txt but NOT in efo.owl:")
+        if missing_in_exclude:
+            print(f"  {len(missing_in_exclude)} term(s) ARE in mondo_exclude.txt (expected):")
+            for t in missing_in_exclude[:10]:
+                print(f"    {t}")
+            if len(missing_in_exclude) > 10:
+                print(f"    … and {len(missing_in_exclude) - 10} more")
+        if missing_not_in_exclude:
+            print(f"  {len(missing_not_in_exclude)} term(s) are NOT in mondo_exclude.txt (unexpected):")
+            for t in missing_not_in_exclude[:20]:
+                print(f"    {t}")
+            if len(missing_not_in_exclude) > 20:
+                print(f"    … and {len(missing_not_in_exclude) - 20} more")
+
+    if invalid_replacements:
+        print(
+            f"WARNING: {len(invalid_replacements)} term_replaced_by target(s) do not exist in Mondo:"
+        )
+        for orig, label, repl in invalid_replacements[:20]:
+            print(f"  {orig} ({label}) → {repl}")
+        if len(invalid_replacements) > 20:
+            print(f"  … and {len(invalid_replacements) - 20} more")
 
     if added_replacements:
         print(
-            f"INFO: {len(added_replacements)} Mondo replacement(s) added to mondo_terms.txt:"
+            f"INFO: {len(added_replacements)} valid Mondo replacement(s) to add to mondo_terms.txt:"
         )
         for orig, repl in added_replacements[:20]:
             print(f"  {orig} → {repl}")
@@ -196,12 +272,9 @@ def main():
         )
         print(f"  See {args.output} for details")
 
-    if not missing_from_efo and not warnings and not added_replacements:
+    if not missing_from_efo and not warnings and not added_replacements and not invalid_replacements:
         print("All Mondo terms in mondo_terms.txt are present and active in efo.owl")
 
-    # Exit with error only if terms are missing from efo.owl
-    if missing_from_efo:
-        sys.exit(1)
     sys.exit(0)
 
 

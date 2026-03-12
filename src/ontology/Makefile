@@ -154,7 +154,7 @@ edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
 D2P_SOURCES=hpoa mondo-owl
 D2P_RAW=$(foreach V,$(D2P_SOURCES), components/d2p_$V.ttl)
 
-COMPONENTS=subclasses import_replaced_by mondo_efo_import anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
+COMPONENTS=subclasses import_replaced_by anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
 COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 FOREIGN_AXIOMS=hancestro uberon
 FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
@@ -169,8 +169,8 @@ components/d2p_%.ttl: mirror/%.owl
 components/import_replaced_by.owl: ../templates/import_replaced_by.csv
 	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/import_replaced_by.owl" -o $@
 
-components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
-	python3 ../scripts/rename_tsv_subset.py $^ $@
+#components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
+#	python3 ../scripts/rename_tsv_subset.py $^ $@
 
 # If you change the relation in the sparql query, make sure you add the new relation here as well.
 components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
@@ -194,14 +194,14 @@ components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl 
 		query --update $(SPARQLDIR)/remove-stray-classes.ru \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
-components/mondo_efo_mappings.template.tsv: components/mondo_efo_mappings.tsv
-	sed '1s/^/A oboInOwl:hasDbXref\tID\t\t\n/' $< | sed '1s/^/Mondo ID\tEFO id\tMondo Label\tEFO label\n/' | sed 's/http:\/\/purl.obolibrary.org\/obo\/MONDO_/MONDO:/g' > $@
+#components/mondo_efo_mappings.template.tsv: components/mondo_efo_mappings.tsv
+#	sed '1s/^/A oboInOwl:hasDbXref\tID\t\t\n/' $< | sed '1s/^/Mondo ID\tEFO id\tMondo Label\tEFO label\n/' | sed 's/http:\/\/purl.obolibrary.org\/obo\/MONDO_/MONDO:/g' > $@
 
-components/mondo_efo_mappings.owl: mirror/mondo.owl components/mondo_efo_mappings.template.tsv
-	$(ROBOT) --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" template --input $< --template components/mondo_efo_mappings.template.tsv -o $@
+#components/mondo_efo_mappings.owl: mirror/mondo.owl components/mondo_efo_mappings.template.tsv
+#	$(ROBOT) --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" template --input $< --template components/mondo_efo_mappings.template.tsv -o $@
 
-components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
-	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
+#components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
+#	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
 	$(ROBOT) -v merge -i $@ -i components/mondo_efo_mappings.owl \
 		annotate --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
 
@@ -356,7 +356,7 @@ label_synonym_dup_check: $(BUILDDIR)/label-synonym-data.tsv
 # ----------------------------------------
 
 mondo_term_check: $(BUILDDIR)/$(ONT).owl
-	python3 ../scripts/check_mondo_terms.py $< iri_dependencies/mondo_terms.txt -o reports/mondo-qc-warnings.tsv --update
+	python3 ../scripts/check_mondo_terms.py $< iri_dependencies/mondo_terms.txt -m mirror/mondo.owl -o reports/mondo-qc-warnings.tsv
 
 DIFF_REPORTS=efo.owl
 DIFF_REPORTS_FILES=$(patsubst %, qc/diff_%_latest_release.txt, $(DIFF_REPORTS))
