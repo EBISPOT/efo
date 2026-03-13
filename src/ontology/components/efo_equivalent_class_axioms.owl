@@ -8,7 +8,6 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(obo2:=<http://purl.obolibrary.org/obo#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
-
 Ontology(<http://www.ebi.ac.uk/efo/components/efo_equivalent_class_axioms.owl>
 
 Declaration(Class(obo:BFO_0000019))
@@ -92,13 +91,9 @@ Declaration(Class(obo:UBERON_0003124))
 Declaration(Class(obo:UBERON_0003499))
 Declaration(Class(obo:UBERON_0005396))
 Declaration(Class(obo:UBERON_0006558))
-Declaration(Class(efo:EFO_0000318))
 Declaration(Class(efo:EFO_0000324))
 Declaration(Class(efo:EFO_0000399))
-Declaration(Class(efo:EFO_0000512))
 Declaration(Class(efo:EFO_0000524))
-Declaration(Class(efo:EFO_0000565))
-Declaration(Class(efo:EFO_0000574))
 Declaration(Class(efo:EFO_0000635))
 Declaration(Class(efo:EFO_0000792))
 Declaration(Class(efo:EFO_0000949))
@@ -106,11 +101,7 @@ Declaration(Class(efo:EFO_0000989))
 Declaration(Class(efo:EFO_0000991))
 Declaration(Class(efo:EFO_0000992))
 Declaration(Class(efo:EFO_0000998))
-Declaration(Class(efo:EFO_0001071))
-Declaration(Class(efo:EFO_0001075))
 Declaration(Class(efo:EFO_0001369))
-Declaration(Class(efo:EFO_0001379))
-Declaration(Class(efo:EFO_0001421))
 Declaration(Class(efo:EFO_0001640))
 Declaration(Class(efo:EFO_0001641))
 Declaration(Class(efo:EFO_0001643))
@@ -135,32 +126,19 @@ Declaration(Class(efo:EFO_0002886))
 Declaration(Class(efo:EFO_0002887))
 Declaration(Class(efo:EFO_0002888))
 Declaration(Class(efo:EFO_0002891))
-Declaration(Class(efo:EFO_0002917))
 Declaration(Class(efo:EFO_0002934))
 Declaration(Class(efo:EFO_0002935))
 Declaration(Class(efo:EFO_0002936))
 Declaration(Class(efo:EFO_0002937))
 Declaration(Class(efo:EFO_0002940))
 Declaration(Class(efo:EFO_0003040))
-Declaration(Class(efo:EFO_0003086))
-Declaration(Class(efo:EFO_0003763))
-Declaration(Class(efo:EFO_0003777))
-Declaration(Class(efo:EFO_0003781))
-Declaration(Class(efo:EFO_0003782))
 Declaration(Class(efo:EFO_0003786))
 Declaration(Class(efo:EFO_0003787))
-Declaration(Class(efo:EFO_0003818))
-Declaration(Class(efo:EFO_0003832))
-Declaration(Class(efo:EFO_0003839))
 Declaration(Class(efo:EFO_0003858))
 Declaration(Class(efo:EFO_0003861))
-Declaration(Class(efo:EFO_0003900))
-Declaration(Class(efo:EFO_0003966))
-Declaration(Class(efo:EFO_0004260))
 Declaration(Class(efo:EFO_0004429))
 Declaration(Class(efo:EFO_0004905))
 Declaration(Class(efo:EFO_0005216))
-Declaration(Class(efo:EFO_0005596))
 Declaration(Class(efo:EFO_0005728))
 Declaration(Class(efo:EFO_0005730))
 Declaration(Class(efo:EFO_0005734))
@@ -170,26 +148,10 @@ Declaration(Class(efo:EFO_0005738))
 Declaration(Class(efo:EFO_0005740))
 Declaration(Class(efo:EFO_0005742))
 Declaration(Class(efo:EFO_0005752))
-Declaration(Class(efo:EFO_0005753))
-Declaration(Class(efo:EFO_0005754))
-Declaration(Class(efo:EFO_0005755))
-Declaration(Class(efo:EFO_0005771))
-Declaration(Class(efo:EFO_0005772))
-Declaration(Class(efo:EFO_0005775))
 Declaration(Class(efo:EFO_0005802))
-Declaration(Class(efo:EFO_0005804))
-Declaration(Class(efo:EFO_0005809))
-Declaration(Class(efo:EFO_0005815))
 Declaration(Class(efo:EFO_0005816))
-Declaration(Class(efo:EFO_0007352))
-Declaration(Class(efo:EFO_0007441))
-Declaration(Class(efo:EFO_0009002))
-Declaration(Class(efo:EFO_0009386))
-Declaration(Class(efo:EFO_0009387))
 Declaration(Class(efo:EFO_0009989))
 Declaration(Class(efo:EFO_0009990))
-Declaration(Class(efo:EFO_1000018))
-Declaration(Class(efo:EFO_1000627))
 Declaration(Class(efo:EFO_1001766))
 Declaration(ObjectProperty(obo2:has_role))
 Declaration(ObjectProperty(obo:BFO_0000050))
@@ -211,14 +173,6 @@ Declaration(ObjectProperty(efo:EFO_0000784))
 ############################
 #   Classes
 ############################
-
-# Class: efo:EFO_0000318 (cardiomyopathy)
-
-EquivalentClasses(efo:EFO_0000318 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0002349))
-
-# Class: efo:EFO_0000512 (reproductive system disease)
-
-EquivalentClasses(efo:EFO_0000512 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000990 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000990))))
 
 # Class: efo:EFO_0000524 (head and neck disorder)
 
@@ -244,14 +198,6 @@ EquivalentClasses(efo:EFO_0000998 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0
 # Class: efo:EFO_0001369 (vertebral column structure)
 
 EquivalentClasses(efo:EFO_0001369 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0001369))
-
-# Class: efo:EFO_0001379 (endocrine system disease)
-
-EquivalentClasses(efo:EFO_0001379 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000949 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000949))))
-
-# Class: efo:EFO_0001421 (liver disease)
-
-EquivalentClasses(efo:EFO_0001421 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002107 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002107))))
 
 # Class: efo:EFO_0001640 (B cell derived cell line)
 
@@ -365,41 +311,9 @@ EquivalentClasses(efo:EFO_0002940 ObjectSomeValuesFrom(obo:RO_0001000 ObjectInte
 
 EquivalentClasses(efo:EFO_0003040 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(efo:EFO_0000324 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(ObjectUnionOf(obo:UBERON_0000922 obo:UBERON_0002050) ObjectSomeValuesFrom(obo:BFO_0000050 obo:COB_0000022))))))
 
-# Class: efo:EFO_0003086 (kidney disease)
-
-EquivalentClasses(efo:EFO_0003086 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002113 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002113))))
-
-# Class: efo:EFO_0003763 (cerebrovascular disorder)
-
-EquivalentClasses(efo:EFO_0003763 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0003499))
-
-# Class: efo:EFO_0003777 (heart disease)
-
-EquivalentClasses(efo:EFO_0003777 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000948 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000948))))
-
-# Class: efo:EFO_0003781 (carotid artery disease)
-
-EquivalentClasses(efo:EFO_0003781 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0005396))
-
-# Class: efo:EFO_0003782 (motor neuron disease)
-
-EquivalentClasses(efo:EFO_0003782 ObjectSomeValuesFrom(efo:EFO_0000784 obo:CL_0000100))
-
 # Class: efo:EFO_0003786 (cytokine)
 
 EquivalentClasses(efo:EFO_0003786 ObjectSomeValuesFrom(obo2:has_role efo:EFO_0003787))
-
-# Class: efo:EFO_0003818 (lung disease)
-
-EquivalentClasses(efo:EFO_0003818 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002048 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002048) ObjectSomeValuesFrom(obo:RO_0001025 obo:UBERON_0002048))))
-
-# Class: efo:EFO_0003832 (gallbladder disease)
-
-EquivalentClasses(efo:EFO_0003832 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002110 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002110))))
-
-# Class: efo:EFO_0003839 (retinopathy)
-
-EquivalentClasses(efo:EFO_0003839 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000966))
 
 # Class: efo:EFO_0003858 (skeleton structure)
 
@@ -409,25 +323,9 @@ EquivalentClasses(efo:EFO_0003858 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERO
 
 EquivalentClasses(efo:EFO_0003861 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001264))
 
-# Class: efo:EFO_0003900 (ciliopathy)
-
-EquivalentClasses(efo:EFO_0003900 ObjectSomeValuesFrom(efo:EFO_0000784 obo:GO_0005929))
-
-# Class: efo:EFO_0003966 (eye disease)
-
-EquivalentClasses(efo:EFO_0003966 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000970 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000970))))
-
-# Class: efo:EFO_0004260 (bone disease)
-
-EquivalentClasses(efo:EFO_0004260 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001474))
-
 # Class: efo:EFO_0005216 (hepatoma cell line)
 
 EquivalentClasses(efo:EFO_0005216 ObjectSomeValuesFrom(obo:RO_0001000 ObjectIntersectionOf(obo:CL_0000182 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:UBERON_0002107 ObjectSomeValuesFrom(obo:BFO_0000050 obo:COB_0000022))))))
-
-# Class: efo:EFO_0005596 (vitamin metabolic disorder)
-
-EquivalentClasses(efo:EFO_0005596 ObjectSomeValuesFrom(obo:RO_0000056 ObjectIntersectionOf(obo:GO_0006766 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460))))
 
 # Class: efo:EFO_0005730 (endothelial cell derived cell line)
 
@@ -461,73 +359,12 @@ EquivalentClasses(efo:EFO_0005742 ObjectSomeValuesFrom(obo:RO_0001000 ObjectInte
 
 EquivalentClasses(efo:EFO_0005752 ObjectSomeValuesFrom(obo:BFO_0000066 obo:UBERON_0000970))
 
-# Class: efo:EFO_0005753 (ocular vascular disease)
-
-EquivalentClasses(efo:EFO_0005753 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0002203))
-
-# Class: efo:EFO_0005754 (parathyroid disease)
-
-EquivalentClasses(efo:EFO_0005754 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001132))
-
-# Class: efo:EFO_0005755 (rheumatic disease)
-
-EquivalentClasses(efo:EFO_0005755 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000982 obo:UBERON_0002384)))
-
-# Class: efo:EFO_0005771 (ovarian disease)
-
-EquivalentClasses(efo:EFO_0005771 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000992 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000992))))
-
-# Class: efo:EFO_0005772 (neurodegenerative disease)
-
-EquivalentClasses(efo:EFO_0005772 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:HP_0002180))))
-
-# Class: efo:EFO_0005775 (aortic disease)
-
-EquivalentClasses(efo:EFO_0005775 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000947))
-
 # Class: efo:EFO_0005802 (cartilage disease)
 
 EquivalentClasses(efo:EFO_0005802 ObjectSomeValuesFrom(efo:EFO_0000784 efo:EFO_0000949))
 
-# Class: efo:EFO_0005804 (polycythemia)
-
-EquivalentClasses(efo:EFO_0005804 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:PATO_0002002 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460) ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0001869) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000232))))
-
-# Class: efo:EFO_0005809 (type II hypersensitivity reaction disease)
-
-EquivalentClasses(efo:EFO_0005809 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0002445))))
-
-# Class: efo:EFO_0005815 (tauopathy)
-
-EquivalentClasses(efo:EFO_0005815 ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:OGMS_0000063 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PR_000010173))))
-
-# Class: efo:EFO_0007352 (lymphatic system disease)
-
-EquivalentClasses(efo:EFO_0007352 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0006558 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0006558))))
-
-# Class: efo:EFO_0007441 (placenta disease)
-
-EquivalentClasses(efo:EFO_0007441 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0001987 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001987))))
-
-# Class: efo:EFO_0009002 (splenic disease)
-
-EquivalentClasses(efo:EFO_0009002 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0002106 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002106))))
-
-# Class: efo:EFO_0009386 (central nervous system disease)
-
-EquivalentClasses(efo:EFO_0009386 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0001017 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001017))))
-
-# Class: efo:EFO_0009387 (peripheral nervous system disease)
-
-EquivalentClasses(efo:EFO_0009387 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectUnionOf(obo:UBERON_0000010 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000010))))
-
-# Class: efo:EFO_1000018 (bladder disease)
-
-EquivalentClasses(efo:EFO_1000018 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0001255))
-
 # Class: efo:EFO_1001766 (brain hypoxia)
 
 EquivalentClasses(efo:EFO_1001766 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0002180 obo:PATO_0000460) ObjectSomeValuesFrom(obo:RO_0002314 obo:UBERON_0000955))))
-
 
 )
