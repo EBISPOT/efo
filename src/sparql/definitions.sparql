@@ -1,0 +1,15 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT DISTINCT ?cls1 ?label (group_concat(?definition) as ?definitions)
+WHERE
+{
+  ?cls1 rdfs:label ?label ;
+  	a owl:Class ;
+    IAO:0000115 ?definition .
+  FILTER NOT EXISTS {?cls1 owl:deprecated "true"^^xsd:boolean} .
+  
+}
+GROUP BY ?cls1 ?label

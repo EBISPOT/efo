@@ -1,0 +1,638 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/definition_citation -->
+
+    <AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/definition_citation"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0005315 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0005315"/>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022867 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022867">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0005315"/>
+        <obo:IAO_0000115>A genetic manipulation of nucleic acid sequences by mutation, insertion or deletion of nucleotides, or by altering the expression of genes.</obo:IAO_0000115>
+        <rdfs:label>Genetic perturbation</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022868 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022868">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022867"/>
+        <obo:IAO_0000115>A genetic perturbation method that involves the manipulation of the host organism&apos;s genome.</obo:IAO_0000115>
+        <rdfs:label>Endogenous genetic perturbation method</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022869 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022869">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022867"/>
+        <obo:IAO_0000115>A genetic perturbation method that involves the introduction of foreign genetic material into a host organism, such as a library of synthetic sequences encoding variants of interest for a particular gene.</obo:IAO_0000115>
+        <rdfs:label>Exogenous genetic perturbation method</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022870 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022870">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022868"/>
+        <obo:IAO_0000115>A genetic perturbation method that involves the use of sequence-specific nucleases to induce double-strand breaks in the DNA, leading to the introduction of mutations.</obo:IAO_0000115>
+        <rdfs:label>Nuclease-based genetic perturbation</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022871 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022871">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022868"/>
+        <obo:IAO_0000115>A genetic perturbation method that involves the use of catalytically dead Cas9 (dCas9) to target specific DNA sequences without inducing double-strand breaks. dCas9 can be used for gene regulation, such as transcriptional activation or repression.</obo:IAO_0000115>
+        <rdfs:label>Catalytically dead Cas9-based genetic perturbation</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022872 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022872">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022868"/>
+        <obo:IAO_0000115>A technique for precise genome editing that, in most cases, relies on a RNA-guided Cas9(H840A) nickase fused to a reverse transcriptase and a prime editing guide RNA (pegRNA) that both specifies the target site and encodes the desired edit.</obo:IAO_0000115>
+        <rdfs:label>Prime editing</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A technique for precise genome editing that, in most cases, relies on a RNA-guided Cas9(H840A) nickase fused to a reverse transcriptase and a prime editing guide RNA (pegRNA) that both specifies the target site and encodes the desired edit.</annotatedTarget>
+        <efo:definition_citation>PMID:31634902</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022873 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022873">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022868"/>
+        <obo:IAO_0000115>A technique for the direct conversion of a specific DNA base into another at a targeted genomic locus. This technique uses a Cas nickase, or Cas fused to a deaminase, that makes the edit and a guide RNA that targets Cas to a specific locus. Cytosine base editors mediate a C to T change and adenine base editors mediate an A to G change.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C180577</oboInOwl:hasDbXref>
+        <rdfs:label>Base editing</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022874 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022874">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022871"/>
+        <obo:IAO_0000115>A negative regulation process that inhibits gene expression level</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>INO:0000085</oboInOwl:hasDbXref>
+        <rdfs:label>Targeted suppression of gene expression</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022875 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022875">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022871"/>
+        <obo:IAO_0000115>A positive regulation of gene expression process that up-regulates gene expression level</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>INO:0000094</oboInOwl:hasDbXref>
+        <rdfs:label>Targeted activation of gene expression</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022876 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022876">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022870"/>
+        <obo:IAO_0000115>A Streptococcus pyogenes Cas9 nuclease protein, a CRISPR-associated protein that can be programmed to target specific DNA sequences using a guide RNA. SpCas9 is commonly used in genome editing applications due to its high efficiency and specificity.</obo:IAO_0000115>
+        <rdfs:label>SpCas9</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022876"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A Streptococcus pyogenes Cas9 nuclease protein, a CRISPR-associated protein that can be programmed to target specific DNA sequences using a guide RNA. SpCas9 is commonly used in genome editing applications due to its high efficiency and specificity.</annotatedTarget>
+        <efo:definition_citation>PMID:29121460</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022877 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022877">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022870"/>
+        <obo:IAO_0000115>A Staphylococcus aureus Cas9 nuclease protein, a CRISPR-associated protein that can be programmed to target specific DNA sequences using a guide RNA. SaCas9 is smaller than SpCas9, which can be advantageous for certain applications, such as packaging into a viral vectors for in vivo delivery.</obo:IAO_0000115>
+        <rdfs:label>SaCas9</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022877"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A Staphylococcus aureus Cas9 nuclease protein, a CRISPR-associated protein that can be programmed to target specific DNA sequences using a guide RNA. SaCas9 is smaller than SpCas9, which can be advantageous for certain applications, such as packaging into a viral vectors for in vivo delivery.</annotatedTarget>
+        <efo:definition_citation>PMID:29121460</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022878 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022878">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022870"/>
+        <obo:IAO_0000115>Acidaminococcus sp. BV3L6-derived CRISPR-associated nuclease protein. Unlike Cas9, AsCas12 produces staggered cuts in the DNA, creating sticky overhangs. Additionally, AsCas12a utilizes a T-rich protospacer adjacent motif (PAM), unlike the G-rich PAM required by Cas9. AsCas12a has intrinsic RNase activity, allowing for the processing of its own crRNA, which enables multiplexed genome editing.</obo:IAO_0000115>
+        <rdfs:label>AsCas12a</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022878"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>Acidaminococcus sp. BV3L6-derived CRISPR-associated nuclease protein. Unlike Cas9, AsCas12 produces staggered cuts in the DNA, creating sticky overhangs. Additionally, AsCas12a utilizes a T-rich protospacer adjacent motif (PAM), unlike the G-rich PAM required by Cas9. AsCas12a has intrinsic RNase activity, allowing for the processing of its own crRNA, which enables multiplexed genome editing.</annotatedTarget>
+        <efo:definition_citation>PMID:26422227</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022879 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022879">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022870"/>
+        <obo:IAO_0000115>Lachnospiraceae bacterium-derived CRISPR-associated nuclease protein. Similar to other Cas12a orthologs, LbCas12a produces staggered cuts in the DNA and utilizes a T-rich protospacer adjacent motif (PAM), unlike the G-rich PAM required by Cas9. LbCas12a has intrinsic RNase activity, allowing for the processing of its own crRNA, which enables multiplexed genome editing. LbCas12a has increased activity at temperatures below 37°C compared to other Cas12a orthologs.</obo:IAO_0000115>
+        <rdfs:label>LbCas12a</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022879"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>Lachnospiraceae bacterium-derived CRISPR-associated nuclease protein. Similar to other Cas12a orthologs, LbCas12a produces staggered cuts in the DNA and utilizes a T-rich protospacer adjacent motif (PAM), unlike the G-rich PAM required by Cas9. LbCas12a has intrinsic RNase activity, allowing for the processing of its own crRNA, which enables multiplexed genome editing. LbCas12a has increased activity at temperatures below 37°C compared to other Cas12a orthologs.</annotatedTarget>
+        <efo:definition_citation>http://caspedia.org/wiki/LbCas12a.html</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022880 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022880">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022870"/>
+        <obo:IAO_0000115>Francisella novicida-derived CRISPR-associated nuclease protein. Similar to other Cas12a orthologs, FnCas12a produces staggered cuts in the DNA and utilizes a T-rich protospacer adjacent motif (PAM), unlike the G-rich PAM required by Cas9. FnCas12a has intrinsic RNase activity, allowing for the processing of its own crRNA, which enables multiplexed genome editing. FnCas12a uses shorter and more abundant PAM sequences compared to other Cas12a orthologs.</obo:IAO_0000115>
+        <rdfs:label>FnCas12a</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022880"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>Francisella novicida-derived CRISPR-associated nuclease protein. Similar to other Cas12a orthologs, FnCas12a produces staggered cuts in the DNA and utilizes a T-rich protospacer adjacent motif (PAM), unlike the G-rich PAM required by Cas9. FnCas12a has intrinsic RNase activity, allowing for the processing of its own crRNA, which enables multiplexed genome editing. FnCas12a uses shorter and more abundant PAM sequences compared to other Cas12a orthologs.</annotatedTarget>
+        <efo:definition_citation>PMID:33346706</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022881 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022881">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022870"/>
+        <obo:IAO_0000115>Moraxella bovoculi-derived CRISPR-associated nuclease protein. Similar to other Cas12a orthologs, MbCas12a produces staggered cuts in the DNA and utilizes a T-rich protospacer adjacent motif (PAM), unlike the G-rich PAM required by Cas9. MbCas12a has intrinsic RNase activity, allowing for the processing of its own crRNA, which enables multiplexed genome editing. In addition to the canonical TTTV PAM, MbCas12a equally well recognizes non-canonical C-containing PAMs, such as TCTA, TTCA, TCCA, CTTA, CCTA, and CCCA.</obo:IAO_0000115>
+        <rdfs:label>MbCas12a</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022881"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>Moraxella bovoculi-derived CRISPR-associated nuclease protein. Similar to other Cas12a orthologs, MbCas12a produces staggered cuts in the DNA and utilizes a T-rich protospacer adjacent motif (PAM), unlike the G-rich PAM required by Cas9. MbCas12a has intrinsic RNase activity, allowing for the processing of its own crRNA, which enables multiplexed genome editing. In addition to the canonical TTTV PAM, MbCas12a equally well recognizes non-canonical C-containing PAMs, such as TCTA, TTCA, TCCA, CTTA, CCTA, and CCCA.</annotatedTarget>
+        <efo:definition_citation>PMID:36400115</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022882 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022882">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022870"/>
+        <obo:IAO_0000115>Alicyclobacillus acidophilus-derived CRISPR-associated nuclease protein. AaCas12b is a Cas12b ortholog that utilizes a T-rich protospacer adjacent motif (PAM) and produces overhangs upon DNA cleavage, similar to Cas12a. AaCas12b demonstrates activity between 4°C and 100°C, with maximal activity between 31°C and 59°C.</obo:IAO_0000115>
+        <rdfs:label>AaCas12b</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022882"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>Alicyclobacillus acidophilus-derived CRISPR-associated nuclease protein. AaCas12b is a Cas12b ortholog that utilizes a T-rich protospacer adjacent motif (PAM) and produces overhangs upon DNA cleavage, similar to Cas12a. AaCas12b demonstrates activity between 4°C and 100°C, with maximal activity between 31°C and 59°C.</annotatedTarget>
+        <efo:definition_citation>PMID:30510770</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022883 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022883">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022870"/>
+        <obo:IAO_0000115>Ruminococcus flavefaciens-derived CRISPR-associated nuclease protein. RfxCas13d is a Cas13d ortholog that targets RNA rather than DNA. </obo:IAO_0000115>
+        <rdfs:label>RfxCas13d</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022883"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>Ruminococcus flavefaciens-derived CRISPR-associated nuclease protein. RfxCas13d is a Cas13d ortholog that targets RNA rather than DNA. </annotatedTarget>
+        <efo:definition_citation>PMID:29551272</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022884 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022884">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022873"/>
+        <obo:IAO_0000115>A genetic engineering technique that allows for the precise conversion of an A-T base pair to a G-C base pair in the genome. This technique uses a Cas9 nickase or catalytically impaired Cas9 fused to an evolved tRNA adenosine deaminase (TadA) enzyme that mediates the conversion of adenine to inosine, which is then trated as guanosine by the cellular DNA repair and replication machinery.</obo:IAO_0000115>
+        <rdfs:label>Adenine Base Editing</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022884"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A genetic engineering technique that allows for the precise conversion of an A-T base pair to a G-C base pair in the genome. This technique uses a Cas9 nickase or catalytically impaired Cas9 fused to an evolved tRNA adenosine deaminase (TadA) enzyme that mediates the conversion of adenine to inosine, which is then trated as guanosine by the cellular DNA repair and replication machinery.</annotatedTarget>
+        <efo:definition_citation>PMID:33462442</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022885 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022885">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022873"/>
+        <obo:IAO_0000115>A genetic engineering technique that allows for the precise conversion of a C-G base pair to a T-A base pair in the genome. This technique uses a Cas9 nickase or catalytically impaired Cas9 fused to a cytidine deaminase enzyme that mediates the conversion of cytosine to uracil, which is then converted into thymine by the cellular DNA repair and replication machinery.</obo:IAO_0000115>
+        <rdfs:label>Cytosine Base Editing</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022885"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A genetic engineering technique that allows for the precise conversion of a C-G base pair to a T-A base pair in the genome. This technique uses a Cas9 nickase or catalytically impaired Cas9 fused to a cytidine deaminase enzyme that mediates the conversion of cytosine to uracil, which is then converted into thymine by the cellular DNA repair and replication machinery.</annotatedTarget>
+        <efo:definition_citation>PMID:33462442</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022886 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022886">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <obo:IAO_0000115>A prime editing enzyme system that has a wild-type M-MLV reverse transcriptase fused to a Cas9(H840A) nickase through a flexible linker.</obo:IAO_0000115>
+        <rdfs:label>PE1</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022886"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A prime editing enzyme system that has a wild-type M-MLV reverse transcriptase fused to a Cas9(H840A) nickase through a flexible linker.</annotatedTarget>
+        <efo:definition_citation>PMID:31634902</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022887 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022887">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <obo:IAO_0000115>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker. The engineered reverse transcriptase domain contains D200N, L603W, T330P, T306K and W313F mutations, which improve the binding, processivity and thermostability of the enzyme, leading to an overall enhanced prime editing efficiency.</obo:IAO_0000115>
+        <rdfs:label>PE2</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022887"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker. The engineered reverse transcriptase domain contains D200N, L603W, T330P, T306K and W313F mutations, which improve the binding, processivity and thermostability of the enzyme, leading to an overall enhanced prime editing efficiency.</annotatedTarget>
+        <efo:definition_citation>PMID:31634902</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022888 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022888">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <obo:IAO_0000115>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker, akin to PE2. In the PE3 system, however, PE2 is combined with an additional sgRNA that promotes nicking of the non-edited strand, favouring it&apos;s preferential repair during the DNA repair process, which ultimately leads to a more efficient prime editing.</obo:IAO_0000115>
+        <rdfs:label>PE3</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022888"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker, akin to PE2. In the PE3 system, however, PE2 is combined with an additional sgRNA that promotes nicking of the non-edited strand, favouring it&apos;s preferential repair during the DNA repair process, which ultimately leads to a more efficient prime editing.</annotatedTarget>
+        <efo:definition_citation>PMID:31634902</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022889 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022889">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <obo:IAO_0000115>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker, akin to PE2. In the PE4 system, the PE2 system is co-delivered with a plasmid encoding a catalytically impaired MLH1 gene, leading to a transient DNA mismatch repair deficiency that enhances prime editing efficiency.</obo:IAO_0000115>
+        <rdfs:label>PE4</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022889"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker, akin to PE2. In the PE4 system, the PE2 system is co-delivered with a plasmid encoding a catalytically impaired MLH1 gene, leading to a transient DNA mismatch repair deficiency that enhances prime editing efficiency.</annotatedTarget>
+        <efo:definition_citation>PMID:34653350</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022890 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022890">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <obo:IAO_0000115>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker, combined with an additional sgRNA that promotes nicking of the non-edited strand, akin to PE3. In the PE5 system, the PE3 system is co-delivered with a plasmid encoding a catalytically impaired MLH1 gene, leading to a transient DNA mismatch repair deficiency that enhances prime editing efficiency.</obo:IAO_0000115>
+        <rdfs:label>PE5</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022890"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker, combined with an additional sgRNA that promotes nicking of the non-edited strand, akin to PE3. In the PE5 system, the PE3 system is co-delivered with a plasmid encoding a catalytically impaired MLH1 gene, leading to a transient DNA mismatch repair deficiency that enhances prime editing efficiency.</annotatedTarget>
+        <efo:definition_citation>PMID:34653350</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022891 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022891">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <obo:IAO_0000115>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase (RT) domain fused to a Cas9(H840A) nickase through a flexible linker, akin to PE2. PEmax system includes additional modifications aimed at improving the efficiency of prime editing, including the human codon-optimised version of the RT domain, a 34-aa linker containing a bipartite SV40 nuclear localisation signal (NLS), an additional C-terminal c-Myc NLS, and R221K N394K mutations in SpCas9, which further improve the prime editing efficiency.</obo:IAO_0000115>
+        <rdfs:label>PEmax</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022891"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase (RT) domain fused to a Cas9(H840A) nickase through a flexible linker, akin to PE2. PEmax system includes additional modifications aimed at improving the efficiency of prime editing, including the human codon-optimised version of the RT domain, a 34-aa linker containing a bipartite SV40 nuclear localisation signal (NLS), an additional C-terminal c-Myc NLS, and R221K N394K mutations in SpCas9, which further improve the prime editing efficiency.</annotatedTarget>
+        <efo:definition_citation>PMID:34653350</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022892 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022892">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <obo:IAO_0000115>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker, akin to PE2. Unlike the PE2 system, the twinPE system requires two different pegRNAs, which allow for the targeted replacement or excision of DNA sequences.</obo:IAO_0000115>
+        <rdfs:label>twinPE</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022892"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a Cas9(H840A) nickase through a flexible linker, akin to PE2. Unlike the PE2 system, the twinPE system requires two different pegRNAs, which allow for the targeted replacement or excision of DNA sequences.</annotatedTarget>
+        <efo:definition_citation>PMID:34887556</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022893 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022893">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022872"/>
+        <obo:IAO_0000115>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a SpCas9 nuclease instead of a SpCas9(H840A) nickase in PE2 system. The PE-nuclease system is designed to induce a double-strand break at the target site, which can improve the efficiency of editing in certain conditions but may also increase the occurrence of off-target effects.</obo:IAO_0000115>
+        <rdfs:label>PE-nuclease</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022893"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A prime editing enzyme system that has an engineered M-MLV reverse transcriptase domain fused to a SpCas9 nuclease instead of a SpCas9(H840A) nickase in PE2 system. The PE-nuclease system is designed to induce a double-strand break at the target site, which can improve the efficiency of editing in certain conditions but may also increase the occurrence of off-target effects.</annotatedTarget>
+        <efo:definition_citation>PMID:34534334</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022894 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022894">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022874"/>
+        <obo:IAO_0000115>A catalytically inactive (dead) version of the Cas9 nuclease protein. dCas9 is unable to cleave DNA but retains the ability to bind to specific DNA sequences determined by a guide RNA. Binding of dCas9:sgRNA complex to a target protein-coding or upstream promoter sequence can be used for gene repression without altering the DNA sequence.</obo:IAO_0000115>
+        <rdfs:label>dCas9</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022894"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A catalytically inactive (dead) version of the Cas9 nuclease protein. dCas9 is unable to cleave DNA but retains the ability to bind to specific DNA sequences determined by a guide RNA. Binding of dCas9:sgRNA complex to a target protein-coding or upstream promoter sequence can be used for gene repression without altering the DNA sequence.</annotatedTarget>
+        <efo:definition_citation>PMID:23452860</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022895 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022895">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022874"/>
+        <obo:IAO_0000115>A fusion protein that combines a catalytically inactive Cas9 (dCas9) with the Krüppel-associated box (KRAB) domain. The KRAB domain recruits chromatin-modifying transcriptional repressors, leading to more potent gene repression compared to dCas9 alone.</obo:IAO_0000115>
+        <rdfs:label>dCas9-KRAB</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022895"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A fusion protein that combines a catalytically inactive Cas9 (dCas9) with the Krüppel-associated box (KRAB) domain. The KRAB domain recruits chromatin-modifying transcriptional repressors, leading to more potent gene repression compared to dCas9 alone.</annotatedTarget>
+        <efo:definition_citation>PMID:23849981</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022896 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022896">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022875"/>
+        <obo:IAO_0000115>A fusion protein that combines a catalytically inactive Cas9 (dCas9) with four copies of the VP16 activation domain (VP64). By targeting dCas9-VP64 near the transcription starting site of the target gene using a guide RNA, the transcriptional activation of the target gene can be achieved.</obo:IAO_0000115>
+        <rdfs:label>dCas9-VP64</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022896"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A fusion protein that combines a catalytically inactive Cas9 (dCas9) with four copies of the VP16 activation domain (VP64). By targeting dCas9-VP64 near the transcription starting site of the target gene using a guide RNA, the transcriptional activation of the target gene can be achieved.</annotatedTarget>
+        <efo:definition_citation>PMID:35763517</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022897 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022897">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022875"/>
+        <obo:IAO_0000115>A gene activation system that consists of a dCas9-VP64 fusion protein, MS2–p65–HSF1 fusion of activational domains, and a modified sgRNA scaffold to recruit the activational domains to the target gene transcription starting site. By recruiting multiple activation factors, the synergistic activation mediator (SAM) system achieves robust transcriptional activation, exceeding the activation levels of dCas9-VP64 alone.</obo:IAO_0000115>
+        <rdfs:label>dCas9-SAM</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022897"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A gene activation system that consists of a dCas9-VP64 fusion protein, MS2–p65–HSF1 fusion of activational domains, and a modified sgRNA scaffold to recruit the activational domains to the target gene transcription starting site. By recruiting multiple activation factors, the synergistic activation mediator (SAM) system achieves robust transcriptional activation, exceeding the activation levels of dCas9-VP64 alone.</annotatedTarget>
+        <efo:definition_citation>PMID:25494202</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022898 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022898">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022875"/>
+        <obo:IAO_0000115>A gene activation system that consists of a dCas9 fused to a repeated GCN4 peptide tag array and an anti-GCN4 peptide single-chain variable fragment (scFv) antibody fused to a transcriptional activator, such as VP64. By recruiting multiple copies of the transcriptional activator to the target gene transcription starting site using a guide RNA, the SunTag system achieves robust transcriptional activation, exceeding the activation levels of dCas9-VP64 alone.</obo:IAO_0000115>
+        <rdfs:label>dCas9-Suntag</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022898"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A gene activation system that consists of a dCas9 fused to a repeated GCN4 peptide tag array and an anti-GCN4 peptide single-chain variable fragment (scFv) antibody fused to a transcriptional activator, such as VP64. By recruiting multiple copies of the transcriptional activator to the target gene transcription starting site using a guide RNA, the SunTag system achieves robust transcriptional activation, exceeding the activation levels of dCas9-VP64 alone.</annotatedTarget>
+        <efo:definition_citation>PMID:25307933</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022899 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022899">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022875"/>
+        <obo:IAO_0000115>A gene activation system that consists of a dCas9 fused to three transcriptional activation domains: VP64, p65, and Rta (VPR). By targeting dCas9-VPR near the transcription starting site of the target gene using a guide RNA, the transcriptional activation of the target gene can be achieved. The VPR system achieves higher levels of gene activation compared to dCas9-VP64. The advantage of the dCas9-VPR system is that it consists of a single fusion protein, which simplifies the experimental design, compared to the dCas9-SAM and dCas9-SunTag systems.</obo:IAO_0000115>
+        <rdfs:label>dCas9-VPR</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022899"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A gene activation system that consists of a dCas9 fused to three transcriptional activation domains: VP64, p65, and Rta (VPR). By targeting dCas9-VPR near the transcription starting site of the target gene using a guide RNA, the transcriptional activation of the target gene can be achieved. The VPR system achieves higher levels of gene activation compared to dCas9-VP64. The advantage of the dCas9-VPR system is that it consists of a single fusion protein, which simplifies the experimental design, compared to the dCas9-SAM and dCas9-SunTag systems.</annotatedTarget>
+        <efo:definition_citation>PMID:25730490</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022900 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022900">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022869"/>
+        <obo:IAO_0000115>A method for the synthesis of oligonucleotide libraries that introduces mutations biased towards a particular base (or set of bases) at specific positions in the oligonucleotide sequence. This technique can be used to generate diverse libraries of genetic variants with a relatively low level of randomisation for functional genomics studies.</obo:IAO_0000115>
+        <rdfs:label>doped oligo synthesis</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022900"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A method for the synthesis of oligonucleotide libraries that introduces mutations biased towards a particular base (or set of bases) at specific positions in the oligonucleotide sequence. This technique can be used to generate diverse libraries of genetic variants with a relatively low level of randomisation for functional genomics studies.</annotatedTarget>
+        <efo:definition_citation>https://deepblue.lib.umich.edu/bitstream/handle/2027.42/143751/cpnca03c.pdf?sequence=1/1000</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022901 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022901">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022869"/>
+        <obo:IAO_0000115>A method for the generation of random mutations in a DNA sequence during PCR amplification. Error-prone PCR is typically performed using reaction buffer conditions that reduce the fidelity of Taq DNA polymerase during DNA synthesis, leading to the introduction of random mutations in the amplified DNA fragment. The rate of mutations can be controlled by adjusting the number of PCR cycles and composition of the reaction buffer.</obo:IAO_0000115>
+        <rdfs:label>error-prone PCR</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022901"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A method for the generation of random mutations in a DNA sequence during PCR amplification. Error-prone PCR is typically performed using reaction buffer conditions that reduce the fidelity of Taq DNA polymerase during DNA synthesis, leading to the introduction of random mutations in the amplified DNA fragment. The rate of mutations can be controlled by adjusting the number of PCR cycles and composition of the reaction buffer.</annotatedTarget>
+        <efo:definition_citation>https://link.springer.com/protocol/10.1007/978-1-60761-652-8_7</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022902 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022902">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022869"/>
+        <obo:IAO_0000115>A method for the parallel synthesis of a large number of oligonucleotides on a solid support, such as a glass slide. Microarray synthesis uses photolithography or inkjet printing to selectively deprotect and initiate a stepwise addition of nucleotides to build up the desired oligonucleotide sequences. Microarray synthesis is commonly used for the high-throughput generation of oligonucleotide libraries for genetic perturbation studies.</obo:IAO_0000115>
+        <rdfs:label>microarray synthesis</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022902"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A method for the parallel synthesis of a large number of oligonucleotides on a solid support, such as a glass slide. Microarray synthesis uses photolithography or inkjet printing to selectively deprotect and initiate a stepwise addition of nucleotides to build up the desired oligonucleotide sequences. Microarray synthesis is commonly used for the high-throughput generation of oligonucleotide libraries for genetic perturbation studies.</annotatedTarget>
+        <efo:definition_citation>https://bitesizebio.com/7463/how-dna-microarrays-are-built/</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022903 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022903">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022869"/>
+        <obo:IAO_0000115>A saturation mutagenesis method in which a single-strand break (nick) is introduced in the double-stranded DNA plasmid template using a strand-specific nicking endonuclease. Following the nicking reaction, the nicked strand is degraded by an exonuclease III, generating a single-stranded DNA template. Mutagenic oligonucleotides containing the desired mutations are then annealed to the single-stranded template and extended by a high-fidelity DNA polymerase. The intact strand is then nicked and degraded, and a second primer is used to amplify the mutated plasmid. Nicking mutagenesis can be used to generate user-defined libraries of genetic variants for functional genomics studies.</obo:IAO_0000115>
+        <rdfs:label>nicking mutagenesis</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022903"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A saturation mutagenesis method in which a single-strand break (nick) is introduced in the double-stranded DNA plasmid template using a strand-specific nicking endonuclease. Following the nicking reaction, the nicked strand is degraded by an exonuclease III, generating a single-stranded DNA template. Mutagenic oligonucleotides containing the desired mutations are then annealed to the single-stranded template and extended by a high-fidelity DNA polymerase. The intact strand is then nicked and degraded, and a second primer is used to amplify the mutated plasmid. Nicking mutagenesis can be used to generate user-defined libraries of genetic variants for functional genomics studies.</annotatedTarget>
+        <efo:definition_citation>PMID:27723752</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022904 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022904">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022869"/>
+        <obo:IAO_0000115>A method for the generation of random mutations in a DNA sequence during PCR amplification. Oligo-directed mutagenic PCR relies on a degenerate primer that contains a mixture of nucleotides at specific positions of interest, leading to the introduction of random mutations at these positions in the amplified DNA fragment.</obo:IAO_0000115>
+        <rdfs:label>oligo-directed mutagenic PCR</rdfs:label>
+    </Class>
+    <Axiom>
+        <annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022904"/>
+        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <annotatedTarget>A method for the generation of random mutations in a DNA sequence during PCR amplification. Oligo-directed mutagenic PCR relies on a degenerate primer that contains a mixture of nucleotides at specific positions of interest, leading to the introduction of random mutations at these positions in the amplified DNA fragment.</annotatedTarget>
+        <efo:definition_citation>PMID:8443572</efo:definition_citation>
+    </Axiom>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/EFO_0022905 -->
+
+    <Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0022905">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0022869"/>
+        <obo:IAO_0000115>An induced mutation in which a specific base change is programmed into the sequence of a synthetic primer.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>OBI:0002619</oboInOwl:hasDbXref>
+        <rdfs:label>site-directed mutagenesis</rdfs:label>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
