@@ -39,7 +39,7 @@ TMPDIR = tmp
 # ----------------------------------------
 
 all: all_imports all_gwas all_components release qc
-qc: sparql_test all_reports label_synonym_dup_check
+qc: sparql_test all_reports label_synonym_dup_check check_mondo_obsoletes
 gh_actions: qc $(BUILDDIR)/$(ONT).owl
 
 # ----------------------------------------
@@ -75,7 +75,18 @@ imports/%_terms.txt: iri_dependencies/%_terms.txt iri_dependencies/efo-relations
 	cat $^ | sort | uniq > $@
 
 imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_exclude.txt $(SRC)
-	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/mondo_exclude.txt --term rdfs:comment -o $@
+	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ -o $@.tmp.owl
+	$(ROBOT) query -i $@.tmp.owl -q $(SPARQLDIR)/hgnc_terms.sparql $@.hgnc.tsv 2>/dev/null || true
+	@if [ -s $@.hgnc.tsv ]; then \
+		tail -n +2 $@.hgnc.tsv | sed 's/[<>]//g' | grep -v '^$$' > $@.hgnc.txt; \
+		if [ -s $@.hgnc.txt ]; then \
+			echo "Auto-excluding $$(wc -l < $@.hgnc.txt | tr -d ' ') HGNC terms from mondo import"; \
+			cat $@.hgnc.txt >> iri_dependencies/mondo_exclude.txt; \
+			sort -u -o iri_dependencies/mondo_exclude.txt iri_dependencies/mondo_exclude.txt; \
+		fi; \
+	fi
+	$(ROBOT) remove -i $@.tmp.owl -T iri_dependencies/mondo_exclude.txt --term rdfs:comment -o $@
+	rm -f $@.tmp.owl $@.hgnc.tsv $@.hgnc.txt
 .PRECIOUS: imports/mondo_import.owl
 	
 imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt iri_dependencies/hancestro_exclude.txt $(SRC)
@@ -154,7 +165,7 @@ edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
 D2P_SOURCES=hpoa mondo-owl
 D2P_RAW=$(foreach V,$(D2P_SOURCES), components/d2p_$V.ttl)
 
-COMPONENTS=subclasses import_replaced_by mondo_efo_import anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
+COMPONENTS=subclasses import_replaced_by anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
 COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 FOREIGN_AXIOMS=hancestro uberon
 FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
@@ -169,12 +180,13 @@ components/d2p_%.ttl: mirror/%.owl
 components/import_replaced_by.owl: ../templates/import_replaced_by.csv
 	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/import_replaced_by.owl" -o $@
 
-components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
-	python3 ../scripts/rename_tsv_subset.py $^ $@
+# mondo_efo_import pipeline — REMOVED in v3.88.0, replaced by direct mondo_import.owl
+#components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
+#	python3 ../scripts/rename_tsv_subset.py $^ $@
 
 # If you change the relation in the sparql query, make sure you add the new relation here as well.
 components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
-	$(ROBOT) query -i $< -q $(SPARQLDIR)/efo-diseases.sparql $@.efo.txt
+	$(ROBOT) merge --catalog catalog-v001.xml -i $< query -q $(SPARQLDIR)/efo-diseases.sparql $@.efo.txt
 	$(ROBOT) query -i components/disease_to_phenotype_merged.owl -q $(SPARQLDIR)/hp_terms.sparql $@.hp.txt
 	cat $@.efo.txt $@.hp.txt > $@ && rm $@.hp.txt $@.efo.txt
 	echo "http://purl.org/dc/elements/1.1/source" >> $@
@@ -187,23 +199,22 @@ components/disease_to_phenotype_merged.owl: $(D2P_RAW)
 	$(ROBOT) merge $(addprefix -i , $(D2P_RAW)) \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
-components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl  components/efo-rename.tsv components/legal_diseases.txt
+components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl components/legal_diseases.txt
 	$(ROBOT) merge -i $< \
-		rename --mappings components/efo-rename.tsv \
 		remove -T components/legal_diseases.txt --select complement --trim true \
 		query --update $(SPARQLDIR)/remove-stray-classes.ru \
 		annotate --ontology-iri "http://www.ebi.ac.uk/efo/$@" -o $@
 
-components/mondo_efo_mappings.template.tsv: components/mondo_efo_mappings.tsv
-	sed '1s/^/A oboInOwl:hasDbXref\tID\t\t\n/' $< | sed '1s/^/Mondo ID\tEFO id\tMondo Label\tEFO label\n/' | sed 's/http:\/\/purl.obolibrary.org\/obo\/MONDO_/MONDO:/g' > $@
+#components/mondo_efo_mappings.template.tsv: components/mondo_efo_mappings.tsv
+#	sed '1s/^/A oboInOwl:hasDbXref\tID\t\t\n/' $< | sed '1s/^/Mondo ID\tEFO id\tMondo Label\tEFO label\n/' | sed 's/http:\/\/purl.obolibrary.org\/obo\/MONDO_/MONDO:/g' > $@
 
-components/mondo_efo_mappings.owl: mirror/mondo.owl components/mondo_efo_mappings.template.tsv
-	$(ROBOT) --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" template --input $< --template components/mondo_efo_mappings.template.tsv -o $@
+#components/mondo_efo_mappings.owl: mirror/mondo.owl components/mondo_efo_mappings.template.tsv
+#	$(ROBOT) --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" template --input $< --template components/mondo_efo_mappings.template.tsv -o $@
 
-components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
-	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
-	$(ROBOT) -v merge -i $@ -i components/mondo_efo_mappings.owl \
-		annotate --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
+#components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv imports/mondo_import.owl components/mondo_efo_mappings.owl
+#	java -jar ../../bin/mondo-id-switch.jar components/mondo_efo_mappings.tsv imports/mondo_import.owl $@ &&\
+#	$(ROBOT) -v merge -i $@ -i components/mondo_efo_mappings.owl \
+#		annotate --ontology-iri http://www.ebi.ac.uk/efo/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
 
 components/efo_terms.txt: $(SRC) $(SPARQLDIR)/efo_terms.sparql
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/efo_terms.sparql $@.tmp &&\
@@ -350,6 +361,13 @@ $(BUILDDIR)/label-synonym-data.tsv: $(BUILDDIR)/$(ONT).owl
 
 label_synonym_dup_check: $(BUILDDIR)/label-synonym-data.tsv
 	python3 ../scripts/detect_label_synonym_duplicates.py $< -o reports/label-synonym-duplicates.tsv
+
+# ----------------------------------------
+# Mondo import obsolescence check
+# ----------------------------------------
+
+check_mondo_obsoletes: mirror/mondo.owl iri_dependencies/mondo_terms.txt
+	python3 ../scripts/check_mondo_import_obsoletes.py $< iri_dependencies/mondo_terms.txt -o reports/mondo_obsolete_import_check.tsv
 
 DIFF_REPORTS=efo.owl
 DIFF_REPORTS_FILES=$(patsubst %, qc/diff_%_latest_release.txt, $(DIFF_REPORTS))
