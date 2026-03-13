@@ -309,7 +309,7 @@ nuclear_strike: $(SRC) foreign_axiom_diff
 release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json $(BUILDDIR)/$(ONT)-base.owl
 	cp $^ $(RELEASEDIR)
 	
-$(BUILDDIR)/$(ONT).owl: $(SRC)
+$(BUILDDIR)/$(ONT).owl: $(SRC) imports/mondo_import.owl
 	$(ROBOT) merge -i $< \
 	reason -s true -m false -r hermit -v --equivalent-classes-allowed asserted-only \
 	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT).owl -o $@
