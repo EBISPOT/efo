@@ -26,6 +26,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Fetch Mondo mirror
+        run: |
+          mkdir -p src/ontology/mirror
+          curl -sL http://purl.obolibrary.org/obo/mondo/mondo-base.owl > src/ontology/mirror/mondo.owl
+
       - name: Run ontology QC checks
         env:
           DEFAULT_BRANCH: master
