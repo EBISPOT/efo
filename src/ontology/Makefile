@@ -465,7 +465,7 @@ remove-defs-no-genus: $(SRC)
 reports/report-%.tsv: $(SRC)
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/$*.sparql $@
 	
-trait_reports: reports/report-defs-without-genus.tsv reports/report-measurement-is-about.tsv reports/report-defs-without-genus-no-isabout.tsv
+trait_reports: reports/report-defs-without-genus.tsv reports/report-measurement-is-about.tsv reports/report-defs-without-genus-no-isabout.tsv reports/report-uniprot-efo-map.tsv
 
 	# ----------------------------------------
 	# GWAS trait tagging

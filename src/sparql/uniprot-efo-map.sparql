@@ -1,0 +1,18 @@
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?efo_term ?efo_label ?uniprot_id
+
+WHERE {
+  ?efo_term rdf:type owl:Class ;
+    rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
+    oio:hasDbXref ?uniprot_id .
+  OPTIONAL {
+    ?efo_term rdfs:label ?efo_label .
+  }
+  FILTER(isIRI(?efo_term))
+  FILTER(STRSTARTS(?uniprot_id, "uniprot:"))
+}
+ORDER BY ?uniprot_id ?efo_label
