@@ -8,7 +8,7 @@ SELECT DISTINCT ?term ?term_label ?uniprot_id
 
 WHERE {
   {
-    # Active measurement terms with direct UniProt xrefs
+    # Active measurement terms with direct uniprot: xrefs
     ?term rdf:type owl:Class ;
       rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
       oio:hasDbXref ?uniprot_id .
@@ -17,6 +17,17 @@ WHERE {
     }
     FILTER(isIRI(?term))
     FILTER(STRSTARTS(?uniprot_id, "uniprot:"))
+  } UNION {
+    # Active measurement terms with URL-style UniProt xrefs (e.g. https://www.uniprot.org/uniprotkb/P02647/entry)
+    ?term rdf:type owl:Class ;
+      rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
+      oio:hasDbXref ?raw_xref .
+    FILTER(isIRI(?term))
+    FILTER(REGEX(?raw_xref, "^https?://www\\.uniprot\\.org/(uniprot|uniprotkb)/([A-Z][A-Z0-9]+)"))
+    BIND(CONCAT("uniprot:", REPLACE(?raw_xref, "^https?://www\\.uniprot\\.org/(uniprot|uniprotkb)/([A-Z][A-Z0-9]+).*", "$2")) AS ?uniprot_id)
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
   } UNION {
     # Measurement terms with is_about -> protein -> direct UniProtKB xref on annotation axiom
     ?term rdf:type owl:Class ;
