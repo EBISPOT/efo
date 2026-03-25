@@ -2,17 +2,33 @@ prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix obo: <http://purl.obolibrary.org/obo/>
 
-SELECT DISTINCT ?efo_term ?efo_label ?uniprot_id
+SELECT DISTINCT ?term ?term_label ?uniprot_id
 
 WHERE {
-  ?efo_term rdf:type owl:Class ;
-    rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
-    oio:hasDbXref ?uniprot_id .
-  OPTIONAL {
-    ?efo_term rdfs:label ?efo_label .
+  {
+    # Active measurement terms with UniProt xrefs
+    ?term rdf:type owl:Class ;
+      rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
+      oio:hasDbXref ?uniprot_id .
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
+    FILTER(isIRI(?term))
+    FILTER(STRSTARTS(?uniprot_id, "uniprot:"))
+  } UNION {
+    # Obsolete EFO terms with UniProt xrefs replaced by OBA terms
+    ?obsolete rdf:type owl:Class ;
+      owl:deprecated true ;
+      oio:hasDbXref ?uniprot_id ;
+      obo:IAO_0100001 ?replacement_iri .
+    BIND(IRI(?replacement_iri) AS ?term)
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
+    FILTER(STRSTARTS(?uniprot_id, "uniprot:"))
+    FILTER(STRSTARTS(?replacement_iri, "http://purl.obolibrary.org/obo/OBA_"))
   }
-  FILTER(isIRI(?efo_term))
-  FILTER(STRSTARTS(?uniprot_id, "uniprot:"))
 }
-ORDER BY ?uniprot_id ?efo_label
+ORDER BY ?uniprot_id ?term_label
