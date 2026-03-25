@@ -1,0 +1,78 @@
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?term ?term_label ?uniprot_id
+
+WHERE {
+  {
+    # Active measurement terms with direct uniprot: xrefs
+    ?term rdf:type owl:Class ;
+      rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
+      oio:hasDbXref ?uniprot_id .
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
+    FILTER(isIRI(?term))
+    FILTER(STRSTARTS(?uniprot_id, "uniprot:"))
+  } UNION {
+    # Active measurement terms with URL-style UniProt xrefs (e.g. https://www.uniprot.org/uniprotkb/P02647/entry)
+    ?term rdf:type owl:Class ;
+      rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
+      oio:hasDbXref ?raw_xref .
+    FILTER(isIRI(?term))
+    FILTER(REGEX(?raw_xref, "^https?://www\\.uniprot\\.org/(uniprot|uniprotkb)/([A-Z][A-Z0-9]+)"))
+    BIND(CONCAT("uniprot:", REPLACE(?raw_xref, "^https?://www\\.uniprot\\.org/(uniprot|uniprotkb)/([A-Z][A-Z0-9]+).*", "$2")) AS ?uniprot_id)
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
+  } UNION {
+    # Measurement terms with is_about -> protein -> direct UniProtKB xref on annotation axiom
+    ?term rdf:type owl:Class ;
+      rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
+      rdfs:subClassOf [ owl:onProperty obo:IAO_0000136 ;
+                        owl:someValuesFrom ?protein ] .
+    ?axiom owl:annotatedSource ?protein ;
+           oio:hasDbXref ?raw_id .
+    FILTER(STRSTARTS(?raw_id, "UniProtKB:"))
+    BIND(CONCAT("uniprot:", REPLACE(?raw_id, "^UniProtKB:", "")) AS ?uniprot_id)
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
+    FILTER(isIRI(?term))
+  } UNION {
+    # Measurement terms with is_about -> species-neutral PR protein -> human subclass -> UniProtKB xref
+    ?term rdf:type owl:Class ;
+      rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
+      rdfs:subClassOf [ owl:onProperty obo:IAO_0000136 ;
+                        owl:someValuesFrom ?protein ] .
+    FILTER(isIRI(?protein))
+    FILTER(STRSTARTS(STR(?protein), "http://purl.obolibrary.org/obo/PR_"))
+    ?human_protein rdfs:subClassOf ?protein ;
+      rdfs:subClassOf [ owl:onProperty obo:RO_0002160 ;
+                        owl:someValuesFrom obo:NCBITaxon_9606 ] .
+    ?axiom owl:annotatedSource ?human_protein ;
+           oio:hasDbXref ?raw_id .
+    FILTER(STRSTARTS(?raw_id, "UniProtKB:"))
+    BIND(CONCAT("uniprot:", REPLACE(?raw_id, "^UniProtKB:", "")) AS ?uniprot_id)
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
+    FILTER(isIRI(?term))
+  } UNION {
+    # Obsolete EFO terms with UniProt xrefs replaced by OBA terms
+    ?obsolete rdf:type owl:Class ;
+      owl:deprecated true ;
+      oio:hasDbXref ?uniprot_id ;
+      obo:IAO_0100001 ?replacement_iri .
+    BIND(IRI(?replacement_iri) AS ?term)
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
+    FILTER(STRSTARTS(?uniprot_id, "uniprot:"))
+    FILTER(STRSTARTS(?replacement_iri, "http://purl.obolibrary.org/obo/OBA_"))
+  }
+}
+ORDER BY ?uniprot_id ?term_label
