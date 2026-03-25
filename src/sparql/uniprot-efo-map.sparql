@@ -18,7 +18,21 @@ WHERE {
     FILTER(isIRI(?term))
     FILTER(STRSTARTS(?uniprot_id, "uniprot:"))
   } UNION {
-    # Measurement terms with is_about -> PR protein -> human subclass -> UniProtKB xref
+    # Measurement terms with is_about -> protein -> direct UniProtKB xref on annotation axiom
+    ?term rdf:type owl:Class ;
+      rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
+      rdfs:subClassOf [ owl:onProperty obo:IAO_0000136 ;
+                        owl:someValuesFrom ?protein ] .
+    ?axiom owl:annotatedSource ?protein ;
+           oio:hasDbXref ?raw_id .
+    FILTER(STRSTARTS(?raw_id, "UniProtKB:"))
+    BIND(CONCAT("uniprot:", REPLACE(?raw_id, "^UniProtKB:", "")) AS ?uniprot_id)
+    OPTIONAL {
+      ?term rdfs:label ?term_label .
+    }
+    FILTER(isIRI(?term))
+  } UNION {
+    # Measurement terms with is_about -> species-neutral PR protein -> human subclass -> UniProtKB xref
     ?term rdf:type owl:Class ;
       rdfs:subClassOf+ <http://www.ebi.ac.uk/efo/EFO_0001444> ;
       rdfs:subClassOf [ owl:onProperty obo:IAO_0000136 ;
