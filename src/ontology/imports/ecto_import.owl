@@ -130,11 +130,11 @@
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
 
 A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cob.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
@@ -163,6 +163,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
         <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Part_of</rdfs:seeAlso>
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -178,14 +179,11 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">this fragility inheres in this vase</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this red color inheres in this apple</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">A dependent inheres in its bearer at all times for which the dependent exists.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cob.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <oboInOwl:hasDbXref>RO:0000052</oboInOwl:hasDbXref>
@@ -233,7 +231,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000530">
         <obo:IAO_0000115>An exposure to pesticide.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>exposure to pesticide</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pesticide exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to pesticide</rdfs:label>
     </owl:Class>
     
@@ -243,7 +241,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000724">
         <obo:IAO_0000115>An exposure to genotoxin.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>exposure to genotoxin</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>genotoxin exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to genotoxin</rdfs:label>
     </owl:Class>
     
@@ -253,7 +251,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000726">
         <obo:IAO_0000115>An exposure to allergen.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>exposure to allergen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>allergen exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to allergen</rdfs:label>
     </owl:Class>
     
@@ -303,7 +301,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000026">
         <obo:IAO_0000115>An exposure to alcohol.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>exposure to alcohol</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>alcohol exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to alcohol</rdfs:label>
     </owl:Class>
     
@@ -313,7 +311,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000033">
         <obo:IAO_0000115>An exposure to asbestos.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>exposure to asbestos</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>asbestos exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to asbestos</rdfs:label>
     </owl:Class>
     
@@ -323,7 +321,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000057">
         <obo:IAO_0000115>An exposure to bisphenol A.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>exposure to bisphenol A</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>bisphenol A exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to bisphenol A</rdfs:label>
     </owl:Class>
     
@@ -333,7 +331,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000078">
         <obo:IAO_0000115>An exposure to triclosan.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>exposure to triclosan</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>triclosan exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to triclosan</rdfs:label>
     </owl:Class>
     
@@ -343,7 +341,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000097">
         <obo:IAO_0000115>An exposure to radon molecular entity.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>exposure to radon molecular entity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>radon molecular entity exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to radon</rdfs:label>
     </owl:Class>
 </rdf:RDF>
