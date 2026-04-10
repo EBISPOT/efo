@@ -97,18 +97,25 @@ $(IMPORTDIR)/pr_import.owl: $(MIRRORDIR)/pr.owl $(IMPORTDIR)/pr_terms.txt $(IMPO
 .PRECIOUS: $(IMPORTDIR)/pr_import.owl
 endif # IMP_LARGE=true
 
-# MONDO intermediate import: not a direct import in efo-edit.owl.
-# Built from the custom mondo mirror, used as input to the
-# mondo_efo_import component (via mondo-id-switch.jar).
-# Simpler pipeline (no odk:normalize/repair) since this is an
-# intermediate artifact, not a final import module.
+# MONDO import: direct import replacing the old mondo_efo_import pipeline.
+# Includes HGNC auto-exclude logic to prevent HGNC terms from leaking in.
 $(IMPORTDIR)/mondo_import.owl: $(MIRRORDIR)/mondo.owl $(IMPORTDIR)/mondo_terms.txt iri_dependencies/mondo_exclude.txt
 	$(ROBOT) extract -i $< \
 		--term-file $(IMPORTDIR)/mondo_terms.txt \
 		--method BOT --copy-ontology-annotations true --force true \
 		--individuals exclude \
-		-O $(ONTBASE)/$@ \
-		remove -T iri_dependencies/mondo_exclude.txt -o $@
+		-O $(ONTBASE)/$@ -o $@.tmp.owl
+	$(ROBOT) query -i $@.tmp.owl -q $(SPARQLDIR)/hgnc_terms.sparql $@.hgnc.tsv 2>/dev/null || true
+	@if [ -s $@.hgnc.tsv ]; then \
+		tail -n +2 $@.hgnc.tsv | sed 's/[<>]//g' | grep -v '^$$' > $@.hgnc.txt; \
+		if [ -s $@.hgnc.txt ]; then \
+			echo "Auto-excluding $$(wc -l < $@.hgnc.txt | tr -d ' ') HGNC terms from mondo import"; \
+			cat $@.hgnc.txt >> iri_dependencies/mondo_exclude.txt; \
+			sort -u -o iri_dependencies/mondo_exclude.txt iri_dependencies/mondo_exclude.txt; \
+		fi; \
+	fi
+	$(ROBOT) remove -i $@.tmp.owl -T iri_dependencies/mondo_exclude.txt --term rdfs:comment -o $@
+	rm -f $@.tmp.owl $@.hgnc.tsv $@.hgnc.txt
 .PRECIOUS: $(IMPORTDIR)/mondo_import.owl
 
 endif # IMP=true
@@ -119,8 +126,8 @@ endif # IMP=true
 
 # MONDO base mirror: needed for imports/mondo_import.owl extraction.
 # Declared here (not in efo-odk.yaml) to prevent update_repo from adding
-# mondo_import.owl directly to efo-edit.owl (EFO routes MONDO through the
-# mondo_efo_import component built by mondo-id-switch.jar instead).
+# mondo_import.owl directly to efo-edit.owl. The mondo mirror download
+# and import extraction are handled by custom targets here instead.
 $(MIRRORDIR)/mondo.owl:
 	if [ $(MIR) = true ]; then curl -L --retry 4 --max-time 200 \
 		http://purl.obolibrary.org/obo/mondo/mondo-base.owl -o $@.tmp.owl && \
@@ -141,29 +148,6 @@ $(MIRRORDIR)/hpoa.owl:
 		mv $@.tmp.owl $@; fi
 
 # ----------------------------------------
-# MONDO-EFO Import Component
-# ----------------------------------------
-
-# This pipeline:
-# 1. Generates a ROBOT template with MONDO-to-EFO xref mappings
-# 2. Runs mondo-id-switch.jar to remap MONDO IDs to EFO IDs in the import
-# 3. Merges the xref annotations with the remapped import
-
-components/mondo_efo_mappings.template.tsv: components/mondo_efo_mappings.tsv
-	sed '1s/^/A oboInOwl:hasDbXref\tID\t\t\n/' $< | \
-		sed '1s/^/Mondo ID\tEFO id\tMondo Label\tEFO label\n/' | \
-		sed 's/http:\/\/purl.obolibrary.org\/obo\/MONDO_/MONDO:/g' > $@
-
-components/mondo_efo_mappings.owl: $(MIRRORDIR)/mondo.owl components/mondo_efo_mappings.template.tsv
-	$(ROBOT) --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" \
-		template --input $< --template components/mondo_efo_mappings.template.tsv -o $@
-
-components/mondo_efo_import.owl: components/mondo_efo_mappings.tsv $(IMPORTDIR)/mondo_import.owl components/mondo_efo_mappings.owl
-	java -jar $(MONDOIDSWITCHER) components/mondo_efo_mappings.tsv $(IMPORTDIR)/mondo_import.owl $@ && \
-	$(ROBOT) -v merge -i $@ -i components/mondo_efo_mappings.owl \
-		annotate --ontology-iri $(ONTBASE)/components/mondo_efo_import.owl -o $@.ofn && mv $@.ofn $@
-
-# ----------------------------------------
 # Disease-to-Phenotype Component
 # ----------------------------------------
 
@@ -177,23 +161,16 @@ components/disease_to_phenotype_merged.owl: $(D2P_RAW)
 	$(ROBOT) merge $(addprefix -i , $(D2P_RAW)) \
 		annotate --ontology-iri "$(ONTBASE)/$@" -o $@
 
-components/disease_to_phenotype_merged_signature.tsv: components/disease_to_phenotype_merged.owl
-	$(ROBOT) query -i $< -q $(SPARQLDIR)/terms.sparql $@
-
-components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
-	python3 ../scripts/rename_tsv_subset.py $^ $@
-
 # If you change the relation in the sparql query, make sure you add the new relation here as well.
 components/legal_diseases.txt: $(SRC) components/disease_to_phenotype_merged.owl
-	$(ROBOT) query -i $< -q $(SPARQLDIR)/efo-diseases.sparql $@.efo.txt
+	$(ROBOT) merge --catalog catalog-v001.xml -i $< query -q $(SPARQLDIR)/efo-diseases.sparql $@.efo.txt
 	$(ROBOT) query -i components/disease_to_phenotype_merged.owl -q $(SPARQLDIR)/hp_terms.sparql $@.hp.txt
 	cat $@.efo.txt $@.hp.txt > $@ && rm $@.hp.txt $@.efo.txt
 	echo "http://purl.org/dc/elements/1.1/source" >> $@
 	echo "http://www.w3.org/2004/02/skos/core#related" >> $@
 
-components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl components/efo-rename.tsv components/legal_diseases.txt
+components/disease_to_phenotype.owl: components/disease_to_phenotype_merged.owl components/legal_diseases.txt
 	$(ROBOT) merge -i $< \
-		rename --mappings components/efo-rename.tsv \
 		remove -T components/legal_diseases.txt --select complement --trim true \
 		query --update $(SPARQLDIR)/remove-stray-classes.ru \
 		annotate --ontology-iri "$(ONTBASE)/$@" -o $@
@@ -369,6 +346,16 @@ label_synonym_dup_check: $(TMPDIR)/label-synonym-data.tsv
 # has a recipe; this adds a prerequisite without replacing the generated recipe.
 test: label_synonym_dup_check
 
+# ----------------------------------------
+# Mondo Import Obsolescence Check
+# ----------------------------------------
+
+.PHONY: check_mondo_obsoletes
+check_mondo_obsoletes: $(MIRRORDIR)/mondo.owl iri_dependencies/mondo_terms.txt
+	python3 ../scripts/check_mondo_import_obsoletes.py $< iri_dependencies/mondo_terms.txt -o reports/mondo_obsolete_import_check.tsv
+
+test: check_mondo_obsoletes
+
 # Fix for ODK v1.6: update_repo runs `odk.py update` which calls `robot odk:import`,
 # but the ODK ROBOT plugin (odk.jar) is not loaded unless ROBOT_PLUGINS_DIRECTORY
 # is populated. The Makefile exports ROBOT_PLUGINS_DIRECTORY=$(TMPDIR)/plugins and
@@ -397,7 +384,10 @@ remove-defs-no-genus: $(SRC)
 reports/report-%.tsv: $(SRC)
 	$(ROBOT) query --input $< --select $(SPARQLDIR)/$*.sparql $@
 
-trait_reports: reports/report-defs-without-genus.tsv reports/report-measurement-is-about.tsv reports/report-defs-without-genus-no-isabout.tsv
+reports/report-uniprot-efo-map.tsv: $(SRC)
+	$(ROBOT) query --use-graphs true --catalog catalog-v001.xml --input $< --select $(SPARQLDIR)/uniprot-efo-map.sparql $@
+
+trait_reports: reports/report-defs-without-genus.tsv reports/report-measurement-is-about.tsv reports/report-defs-without-genus-no-isabout.tsv reports/report-uniprot-efo-map.tsv
 
 # ----------------------------------------
 # Ontology extraction pipeline

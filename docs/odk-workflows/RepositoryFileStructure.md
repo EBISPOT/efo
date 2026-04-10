@@ -17,6 +17,7 @@ These are the current imports in EFO
 | Import | URL | Type |
 | ------ | --- | ---- |
 | uberon | http://purl.obolibrary.org/obo/uberon/uberon-base.owl | slme |
+| mondo | http://purl.obolibrary.org/obo/mondo/mondo-base.owl | slme |
 | hp | http://purl.obolibrary.org/obo/hp/hp-base.owl | slme |
 | chebi | http://purl.obolibrary.org/obo/chebi/chebi-base.owl | slme |
 | pr | http://purl.obolibrary.org/obo/pr/pr-base.owl | slme |
@@ -48,5 +49,4 @@ These are the components in EFO
 | anatomagram_liver.owl | None |
 | anatomagram_placenta.owl | None |
 | gwas_import.owl | None |
-| mondo_efo_import.owl | None |
 | efo_equivalent_class_axioms.owl | None |

@@ -14,10 +14,9 @@ HPPREFIX = "HP: http://purl.obolibrary.org/obo/HP_"
 CLPREFIX = "CL: http://purl.obolibrary.org/obo/CL_"
 ECTOPREFIX = "ECTO: http://purl.obolibrary.org/obo/ECTO_"
 BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
-MONDOIDSWITCHER = ../../bin/mondo-id-switch.jar
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                503a77fc0ff525e0a2abf0994149f6d7d2cdc5c6fcc57632720c5cbd0a93a609
+CONFIG_HASH=                809f2cfebde6363ab08cb6b6a6d99d53f08b80dfb47dd4cdc68aafd0502f9223
 
 
 # ----------------------------------------
@@ -64,7 +63,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(COMPONENTSDIR)/subclasses.owl $(COMPONENTSDIR)/import_replaced_by.owl $(COMPONENTSDIR)/anatomagram_lung.owl $(COMPONENTSDIR)/anatomagram_kidney.owl $(COMPONENTSDIR)/anatomagram_pancreas.owl $(COMPONENTSDIR)/anatomagram_liver.owl $(COMPONENTSDIR)/anatomagram_placenta.owl $(COMPONENTSDIR)/gwas_import.owl $(COMPONENTSDIR)/mondo_efo_import.owl $(COMPONENTSDIR)/efo_equivalent_class_axioms.owl 
+OTHER_SRC =                 $(COMPONENTSDIR)/subclasses.owl $(COMPONENTSDIR)/import_replaced_by.owl $(COMPONENTSDIR)/anatomagram_lung.owl $(COMPONENTSDIR)/anatomagram_kidney.owl $(COMPONENTSDIR)/anatomagram_pancreas.owl $(COMPONENTSDIR)/anatomagram_liver.owl $(COMPONENTSDIR)/anatomagram_placenta.owl $(COMPONENTSDIR)/gwas_import.owl $(COMPONENTSDIR)/efo_equivalent_class_axioms.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -194,7 +193,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  uberon hp chebi pr ecto cl gsso hancestro fbbt obi oba fbbi go
+IMPORTS =  uberon mondo hp chebi pr ecto cl gsso hancestro fbbt obi oba fbbi go
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -503,7 +502,6 @@ recreate-components:
 		--assume-new=$(TMPDIR)/stamp-component-anatomagram_liver.owl \
 		--assume-new=$(TMPDIR)/stamp-component-anatomagram_placenta.owl \
 		--assume-new=$(TMPDIR)/stamp-component-gwas_import.owl \
-		--assume-new=$(TMPDIR)/stamp-component-mondo_efo_import.owl \
 		--assume-new=$(TMPDIR)/stamp-component-efo_equivalent_class_axioms.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
 
@@ -517,7 +515,6 @@ no-mirror-recreate-components:
 		--assume-new=$(TMPDIR)/stamp-component-anatomagram_liver.owl \
 		--assume-new=$(TMPDIR)/stamp-component-anatomagram_placenta.owl \
 		--assume-new=$(TMPDIR)/stamp-component-gwas_import.owl \
-		--assume-new=$(TMPDIR)/stamp-component-mondo_efo_import.owl \
 		--assume-new=$(TMPDIR)/stamp-component-efo_equivalent_class_axioms.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
 
@@ -594,6 +591,13 @@ ifeq ($(MIR),true)
 .PRECIOUS: $(MIRRORDIR)/uberon.owl
 mirror-uberon: | $(TMPDIR)
 	$(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/uberon-base.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: mondo
+.PHONY: mirror-mondo
+.PRECIOUS: $(MIRRORDIR)/mondo.owl
+mirror-mondo: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.obolibrary.org/obo/mondo/mondo-base.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: hp
