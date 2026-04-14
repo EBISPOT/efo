@@ -43,10 +43,5 @@ These are the components in EFO
 | -------- | --- |
 | subclasses.owl | None |
 | import_replaced_by.owl | None |
-| anatomagram_lung.owl | None |
-| anatomagram_kidney.owl | None |
-| anatomagram_pancreas.owl | None |
-| anatomagram_liver.owl | None |
-| anatomagram_placenta.owl | None |
 | gwas_import.owl | None |
 | efo_equivalent_class_axioms.owl | None |

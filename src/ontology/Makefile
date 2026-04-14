@@ -16,7 +16,7 @@ ECTOPREFIX = "ECTO: http://purl.obolibrary.org/obo/ECTO_"
 BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                809f2cfebde6363ab08cb6b6a6d99d53f08b80dfb47dd4cdc68aafd0502f9223
+CONFIG_HASH=                7ce0085d18a685210abcd65490cc3fa5e1a6aff20345f31ed62242ea66858774
 
 
 # ----------------------------------------
@@ -63,7 +63,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(COMPONENTSDIR)/subclasses.owl $(COMPONENTSDIR)/import_replaced_by.owl $(COMPONENTSDIR)/anatomagram_lung.owl $(COMPONENTSDIR)/anatomagram_kidney.owl $(COMPONENTSDIR)/anatomagram_pancreas.owl $(COMPONENTSDIR)/anatomagram_liver.owl $(COMPONENTSDIR)/anatomagram_placenta.owl $(COMPONENTSDIR)/gwas_import.owl $(COMPONENTSDIR)/efo_equivalent_class_axioms.owl 
+OTHER_SRC =                 $(COMPONENTSDIR)/subclasses.owl $(COMPONENTSDIR)/import_replaced_by.owl $(COMPONENTSDIR)/gwas_import.owl $(COMPONENTSDIR)/efo_equivalent_class_axioms.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -496,11 +496,6 @@ all_components: $(OTHER_SRC)
 recreate-components:
 	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-subclasses.owl \
 		--assume-new=$(TMPDIR)/stamp-component-import_replaced_by.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_lung.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_kidney.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_pancreas.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_liver.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_placenta.owl \
 		--assume-new=$(TMPDIR)/stamp-component-gwas_import.owl \
 		--assume-new=$(TMPDIR)/stamp-component-efo_equivalent_class_axioms.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
@@ -509,11 +504,6 @@ recreate-components:
 no-mirror-recreate-components:
 	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-subclasses.owl \
 		--assume-new=$(TMPDIR)/stamp-component-import_replaced_by.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_lung.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_kidney.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_pancreas.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_liver.owl \
-		--assume-new=$(TMPDIR)/stamp-component-anatomagram_placenta.owl \
 		--assume-new=$(TMPDIR)/stamp-component-gwas_import.owl \
 		--assume-new=$(TMPDIR)/stamp-component-efo_equivalent_class_axioms.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
@@ -547,36 +537,6 @@ $(COMPONENTSDIR)/import_replaced_by.owl: $(TEMPLATEDIR)/import_replaced_by.csv $
 		 --template $(TEMPLATEDIR)/import_replaced_by.csv \
 		 $(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: $(COMPONENTSDIR)/import_replaced_by.owl
-
-$(COMPONENTSDIR)/anatomagram_lung.owl: $(TEMPLATEDIR)/anatomagram_lung.tsv $(TMPDIR)/stamp-component-anatomagram_lung.owl
-	$(ROBOT) template  \
-		 --template $(TEMPLATEDIR)/anatomagram_lung.tsv \
-		 $(ANNOTATE_CONVERT_FILE)
-.PRECIOUS: $(COMPONENTSDIR)/anatomagram_lung.owl
-
-$(COMPONENTSDIR)/anatomagram_kidney.owl: $(TEMPLATEDIR)/anatomagram_kidney.tsv $(TMPDIR)/stamp-component-anatomagram_kidney.owl
-	$(ROBOT) template  \
-		 --template $(TEMPLATEDIR)/anatomagram_kidney.tsv \
-		 $(ANNOTATE_CONVERT_FILE)
-.PRECIOUS: $(COMPONENTSDIR)/anatomagram_kidney.owl
-
-$(COMPONENTSDIR)/anatomagram_pancreas.owl: $(TEMPLATEDIR)/anatomagram_pancreas.tsv $(TMPDIR)/stamp-component-anatomagram_pancreas.owl
-	$(ROBOT) template  \
-		 --template $(TEMPLATEDIR)/anatomagram_pancreas.tsv \
-		 $(ANNOTATE_CONVERT_FILE)
-.PRECIOUS: $(COMPONENTSDIR)/anatomagram_pancreas.owl
-
-$(COMPONENTSDIR)/anatomagram_liver.owl: $(TEMPLATEDIR)/anatomagram_liver.tsv $(TMPDIR)/stamp-component-anatomagram_liver.owl
-	$(ROBOT) template  \
-		 --template $(TEMPLATEDIR)/anatomagram_liver.tsv \
-		 $(ANNOTATE_CONVERT_FILE)
-.PRECIOUS: $(COMPONENTSDIR)/anatomagram_liver.owl
-
-$(COMPONENTSDIR)/anatomagram_placenta.owl: $(TEMPLATEDIR)/anatomagram_placenta.tsv $(TMPDIR)/stamp-component-anatomagram_placenta.owl
-	$(ROBOT) template  \
-		 --template $(TEMPLATEDIR)/anatomagram_placenta.tsv \
-		 $(ANNOTATE_CONVERT_FILE)
-.PRECIOUS: $(COMPONENTSDIR)/anatomagram_placenta.owl
 
 endif # COMP=true
 # ----------------------------------------
