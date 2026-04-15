@@ -145,7 +145,9 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
+        <rdfs:label>part of</rdfs:label>
         <rdfs:label xml:lang="en">part of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1013,6 +1015,19 @@ http://svitsrv25.epfl.ch/R-doc/library/qvalue.html</obo:IAO_0000119>
         <obo:IAO_0000117>IEDB</obo:IAO_0000117>
         <obo:IAO_0000119>IEDB</obo:IAO_0000119>
         <rdfs:label>immunoprecipitation assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002174">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <obo:IAO_0000111>immunocytochemistry</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An immuno staining assay in which samples of intact cells are examined that have had most, if not all, of their surrounding extracellular matrix removed</obo:IAO_0000115>
+        <obo:IAO_0000117>Bjoern Peters</obo:IAO_0000117>
+        <rdfs:label>immunocytochemistry</rdfs:label>
     </owl:Class>
     
 
