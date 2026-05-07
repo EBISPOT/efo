@@ -55,6 +55,7 @@ Declaration(Class(obo:PO_0025034))
 Declaration(Class(obo:PR_000010173))
 Declaration(Class(obo:UBERON_0000010))
 Declaration(Class(obo:UBERON_0000033))
+Declaration(Class(obo:UBERON_0000061))
 Declaration(Class(obo:UBERON_0000178))
 Declaration(Class(obo:UBERON_0000922))
 Declaration(Class(obo:UBERON_0000947))
@@ -225,10 +226,6 @@ EquivalentClasses(obo:MONDO_0005039 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectU
 EquivalentClasses(efo:EFO_0000524 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000033))
 EquivalentClasses(efo:EFO_0000524 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000974))
 
-# Class: efo:EFO_0000792 (craniofacial tissue)
-
-EquivalentClasses(efo:EFO_0000792 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000792))
-
 # Class: efo:EFO_0000989 (root structure)
 
 EquivalentClasses(efo:EFO_0000989 ObjectSomeValuesFrom(obo:BFO_0000050 efo:EFO_0000989))
@@ -283,7 +280,7 @@ EquivalentClasses(efo:EFO_0001955 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERO
 
 # Class: efo:EFO_0001958 (joint component)
 
-EquivalentClasses(efo:EFO_0001958 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000982))
+EquivalentClasses(efo:EFO_0001958 ObjectIntersectionOf(obo:UBERON_0000061 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000982)))
 
 # Class: efo:EFO_0001983 (leaf component)
 
@@ -291,7 +288,7 @@ EquivalentClasses(efo:EFO_0001983 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PO_00
 
 # Class: efo:EFO_0001986 (lung structure)
 
-EquivalentClasses(efo:EFO_0001986 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002048))
+EquivalentClasses(efo:EFO_0001986 ObjectIntersectionOf(obo:UBERON_0000061 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002048)))
 
 # Class: efo:EFO_0002009 (fibroblast derived cell line)
 
@@ -400,10 +397,6 @@ EquivalentClasses(obo:MONDO_0005281 ObjectSomeValuesFrom(efo:EFO_0000784 ObjectU
 # Class: obo:MONDO_0005283 (retinopathy)
 
 EquivalentClasses(obo:MONDO_0005283 ObjectSomeValuesFrom(efo:EFO_0000784 obo:UBERON_0000966))
-
-# Class: efo:EFO_0003858 (skeleton structure)
-
-EquivalentClasses(efo:EFO_0003858 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001434))
 
 # Class: efo:EFO_0003861 (pancreactic component)
 
