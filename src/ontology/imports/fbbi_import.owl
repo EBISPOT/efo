@@ -7,6 +7,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://www.ebi.ac.uk/efo/imports/fbbi_import.owl"/>
     
@@ -32,6 +33,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
@@ -68,6 +75,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
     
 
 
@@ -134,7 +147,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000240">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000265"/>
-        <obo:IAO_0000115>methods for imaging objects large enough to be observed by the unaided eye</obo:IAO_0000115>
+        <obo:IAO_0000115>Methods for imaging objects large enough to be observed by the unaided eye</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000240</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
@@ -147,7 +160,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000241">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000265"/>
-        <obo:IAO_0000115>methods for forming images of objects too small to be observed with the unaided eye</obo:IAO_0000115>
+        <obo:IAO_0000115>Methods for forming images of objects too small to be observed with the unaided eye</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000241</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
@@ -172,7 +185,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000244">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <obo:IAO_0000115>imaging with rejection of the unscattered illumination (removal of the zero order component of the diffracted wave)</obo:IAO_0000115>
+        <obo:IAO_0000115>Imaging with rejection of the unscattered illumination (removal of the zero order component of the diffracted wave)</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000244</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
@@ -221,10 +234,19 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000248">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
+        <obo:IAO_0000115>A form of light microscopy that uses polarized light. Such form can be used to image samples that exibit optical anisotropy.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>anisotropy/polarization microscopy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>polarized light microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000248</oboInOwl:id>
         <rdfs:label>polarization microscopy</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000248"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A form of light microscopy that uses polarized light. Such form can be used to image samples that exibit optical anisotropy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:23901032</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -312,7 +334,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000257">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000256"/>
-        <obo:IAO_0000115>image is formed by scanning the surface of the specimen with a beam of electrons in a raster pattern</obo:IAO_0000115>
+        <obo:IAO_0000115>Image is formed by scanning the surface of the specimen with a beam of electrons in a raster pattern</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000257</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
@@ -326,9 +348,16 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000258">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000256"/>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>TEM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbi:00000258</oboInOwl:id>
-        <rdfs:label>transmission electron microscopy (TEM)</rdfs:label>
+        <rdfs:label>transmission electron microscopy</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000258"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>TEM</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
     
 
 
@@ -336,7 +365,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000259">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000344"/>
-        <obo:IAO_0000115>the scanning probe is maintained at a fixed distance above the surface e of the specimen by van der Waals forces</obo:IAO_0000115>
+        <obo:IAO_0000115>The scanning probe is maintained at a fixed distance above the surface e of the specimen by van der Waals forces</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000259</oboInOwl:id>
         <rdfs:label>atomic force microscopy</rdfs:label>
@@ -360,7 +389,7 @@
     <!-- http://purl.obolibrary.org/obo/FBbi_00000265 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000265">
-        <obo:IAO_0000115>methods and devices used for capturing an image of a real object; distinct from images created by artwork</obo:IAO_0000115>
+        <obo:IAO_0000115>Methods and devices used for capturing an image of a real object; distinct from images created by artwork</obo:IAO_0000115>
         <obo:IAO_0000589>image recording method</obo:IAO_0000589>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-09T09:57:38Z</oboInOwl:creation_date>
@@ -389,7 +418,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000344">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000241"/>
-        <obo:IAO_0000115>imaging by means of a physical probe that passes over the sample</obo:IAO_0000115>
+        <obo:IAO_0000115>Imaging by means of a physical probe that passes over the sample</obo:IAO_0000115>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-09T04:04:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
@@ -519,12 +548,27 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000368">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
+        <obo:IAO_0000115>A fluorescence microscopy method in which the image contrast is derived from the fluorescence lifetime at each point in a two-dimensional image and not the local concentration and/or intensity of the fluorophore.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6095-8718"/>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-11T10:09:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>FLIM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000368</oboInOwl:id>
-        <rdfs:label>FLIM</rdfs:label>
+        <rdfs:label>fluorescence lifetime imaging microscopy</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000368"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fluorescence microscopy method in which the image contrast is derived from the fluorescence lifetime at each point in a two-dimensional image and not the local concentration and/or intensity of the fluorophore.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:1519759</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000368"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>FLIM</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
     
 
 
@@ -532,13 +576,29 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000369">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <obo:IAO_0000115>single (or selective) plane illumination.</obo:IAO_0000115>
+        <obo:IAO_0000115>A fluorescence microscopy method where the sample is illuminated from the side in a well-defined volume around the focal plane of the detection optics.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0001-6178-2884"/>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-11T10:09:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>SPIM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>light-sheet fluorescence microscopy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>light-sheet microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000369</oboInOwl:id>
-        <rdfs:label>SPIM</rdfs:label>
+        <rdfs:label>selective plane illumination fluorescence microscopy</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000369"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fluorescence microscopy method where the sample is illuminated from the side in a well-defined volume around the focal plane of the detection optics.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:19465594</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000369"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>SPIM</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
     
 
 
@@ -546,13 +606,27 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000370">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <obo:IAO_0000115>coherent Raman anti-Stokes microscopy</obo:IAO_0000115>
+        <obo:IAO_0000115>A form of microscopy that can detect molecularly specific contrasts based on the vibrational spectra of the sample molecules, by producing and detecting Raman-scattered photons.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6095-8718"/>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-11T10:13:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>CARS microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000370</oboInOwl:id>
-        <rdfs:label>CARS</rdfs:label>
+        <rdfs:label>coherent Raman anti-Stokes microscopy</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000370"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A form of microscopy that can detect molecularly specific contrasts based on the vibrational spectra of the sample molecules, by producing and detecting Raman-scattered photons.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1002/cphc.200700202</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000370"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>CARS microscopy</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
     
 
 
@@ -560,7 +634,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000371">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <obo:IAO_0000115>optical coherence tomography; an interferometric method of imaging using back-scattered photons (elastic scattering)</obo:IAO_0000115>
+        <obo:IAO_0000115>Optical coherence tomography; an interferometric method of imaging using back-scattered photons (elastic scattering)</obo:IAO_0000115>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-11T10:32:19Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
@@ -574,7 +648,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000372">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000257"/>
-        <obo:IAO_0000115>image created using the electrons generated by ionization of a sample due to inelastic scattering of the primary beam of radiation</obo:IAO_0000115>
+        <obo:IAO_0000115>Image created using the electrons generated by ionization of a sample due to inelastic scattering of the primary beam of radiation</obo:IAO_0000115>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-12T08:34:44Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
@@ -588,7 +662,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000373">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000257"/>
-        <obo:IAO_0000115>imaged formed using electrons undergoing elastic scattering at very high angles, with emission of characteristic X-rays</obo:IAO_0000115>
+        <obo:IAO_0000115>Imaged formed using electrons undergoing elastic scattering at very high angles, with emission of characteristic X-rays</obo:IAO_0000115>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-12T08:40:37Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
@@ -643,7 +717,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000392">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000251"/>
-        <obo:IAO_0000115>illumination and detection via a thin slit</obo:IAO_0000115>
+        <obo:IAO_0000115>Illumination and detection via a thin slit</obo:IAO_0000115>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-12T10:32:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
@@ -691,12 +765,29 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000603">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000248"/>
+        <obo:IAO_0000115>A mode of microscopy that detects the rotational motion of fluorophores.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6095-8718"/>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-04T01:28:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>FAIM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fluorescence anisotropy imaging</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000603</oboInOwl:id>
         <rdfs:label>fluorescence polarization microscopy</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000603"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A mode of microscopy that detects the rotational motion of fluorophores.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:2317548</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000603"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>FAIM</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
     
 
 
@@ -749,7 +840,7 @@
         <oboInOwl:creation_date>2011-05-23T10:53:45Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000623</oboInOwl:id>
-        <rdfs:label>intermediate voltage electron microacopy (IVEM)</rdfs:label>
+        <rdfs:label>intermediate voltage electron microscopy (IVEM)</rdfs:label>
     </owl:Class>
     
 
