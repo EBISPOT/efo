@@ -74,7 +74,7 @@ if [ -n "$TAG_IN_IMAGE" ]; then
 fi
 ODK_TAG=${ODK_TAG:-latest}
 
-ODK_JAVA_OPTS=${ODK_JAVA_OPTS:--Xmx16G}
+ODK_JAVA_OPTS=${ODK_JAVA_OPTS:--Xmx20G}
 
 ODK_DEBUG=${ODK_DEBUG:-no}
 

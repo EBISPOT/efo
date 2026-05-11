@@ -107,15 +107,15 @@ import_group:
       use_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/go/go-base.owl
 
-robot_java_args: '-Xmx16G'
-reasoner: HermiT
+robot_java_args: '-Xmx20G'
+reasoner: ELK
 allow_equivalents: asserted-only
 
 robot_report:
   release_reports: False
   fail_on: ERROR
   use_labels: False
-  custom_profile: False
+  custom_profile: True
   use_base_iris: True
   report_on:
     - edit

@@ -16,7 +16,7 @@ ECTOPREFIX = "ECTO: http://purl.obolibrary.org/obo/ECTO_"
 BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                7ce0085d18a685210abcd65490cc3fa5e1a6aff20345f31ed62242ea66858774
+CONFIG_HASH=                bf11f474d23c03cfa40d5f8900a100f4acb52ff59551fa43a34f8df7834dc952
 
 
 # ----------------------------------------
@@ -33,7 +33,7 @@ SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
 CATALOG=                    catalog-v001.xml
 ROBOT=                      robot --catalog $(CATALOG)
-REASONER=                   HermiT
+REASONER=                   ELK
 OWLTOOLS =                  owltools --use-catalog
 RELEASEDIR=                 ../..
 DOCSDIR=                    ../../docs
@@ -48,9 +48,10 @@ UPDATEREPODIR=              target
 SPARQLDIR =                 ../sparql
 EXTENDED_PREFIX_MAP=        $(TMPDIR)/obo.epm.json
 COMPONENTSDIR =             components
+ROBOT_PROFILE =             profile.txt
 REPORT_FAIL_ON =            ERROR
 REPORT_LABEL =              
-REPORT_PROFILE_OPTS =       
+REPORT_PROFILE_OPTS =       --profile $(ROBOT_PROFILE)
 OBO_FORMAT_OPTIONS =        --clean-obo 'simple merge-comments'
 SPARQL_VALIDATION_CHECKS =  duplicate-label nolabels multiple-label no-webulous-uris no-urigen-uris no-www-uris no-dangling id-length deprecated obsolete-replaced-whitespace wrong_efo_purl 
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms obsolete_gwas 
@@ -284,9 +285,13 @@ $(REPORTDIR)/$(SRC)-obo-report.tsv: $(SRCMERGED) | $(REPORTDIR)
 $(REPORTDIR)/%-obo-report.tsv: % | $(REPORTDIR)
 	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri http://www.ebi.ac.uk/efo/EFO_ --base-iri http://www.ebi.ac.uk/efo/EFO# --print 5 -o $@
 
-check_for_robot_updates:
-	echo "You are not using a custom profile, so you are getting the joy of the latest ROBOT report!"
-
+check_for_robot_updates:	
+	@cut -f2 "/tools/templates/src/ontology/profile.txt" | sort > $(TMPDIR)/sorted_tsv2.txt
+	@cut -f2 "$(ROBOT_PROFILE)" | sort > $(TMPDIR)/sorted_tsv1.txt
+	@comm -23 $(TMPDIR)/sorted_tsv2.txt $(TMPDIR)/sorted_tsv1.txt > $(TMPDIR)/missing.txt
+	@echo "Missing tests:"
+	@cat $(TMPDIR)/missing.txt
+	@rm $(TMPDIR)/sorted_tsv1.txt $(TMPDIR)/sorted_tsv2.txt $(TMPDIR)/missing.txt $(TMPDIR)/report_profile_robot.txt
 
 # ----------------------------------------
 # Release assets
