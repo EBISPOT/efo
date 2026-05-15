@@ -25,7 +25,7 @@ jobs:
         run: |
           cd src/ontology
           mkdir -p mirror
-          curl -L http://purl.obolibrary.org/obo/mondo/mondo-base.owl > mirror/mondo.owl
+          curl -L https://github.com/monarch-initiative/mondo/releases/latest/download/mondo-base.owl > mirror/mondo.owl
           make imports/mondo_import.owl
 
       - name: Allocate definitive IDs
