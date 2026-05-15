@@ -18,8 +18,6 @@ jobs:
       ROBOT_PLUGINS_DIRECTORY: /odk/resources/robot/plugins
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ID_ALLOCATION_TOKEN }}
 
       - name: Prepare MONDO import
         run: |
