@@ -454,9 +454,9 @@ feature_diff_md:
 .PHONY: allocate-definitive-ids
 allocate-definitive-ids: $(SRC)
 	$(ROBOT) kgcl:mint -i $(SRC) \
-		           --temp-id-prefix http://www.ebi.ac.uk/efo/EFO_099 \
-		           --id-range-name Automation \
-		 convert -f owl --check false -o $(SRC)
+		--temp-id-prefix http://www.ebi.ac.uk/efo/EFO_099 \
+		--id-range-name Automation \
+		convert -f owl --check false -o $(SRC)
 
 # ----------------------------------------
 # Adhoc queries
