@@ -14,10 +14,19 @@ jobs:
   assign_ids:
     runs-on: ubuntu-latest
     container: obolibrary/odkfull:v1.6
+    env:
+      ROBOT_PLUGINS_DIRECTORY: /odk/resources/robot/plugins
     steps:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.ID_ALLOCATION_TOKEN }}
+
+      - name: Prepare MONDO import
+        run: |
+          cd src/ontology
+          mkdir -p mirror
+          curl -L http://purl.obolibrary.org/obo/mondo/mondo-base.owl > mirror/mondo.owl
+          make imports/mondo_import.owl
 
       - name: Allocate definitive IDs
         run: |
