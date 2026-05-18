@@ -11,17 +11,17 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.89.0
-Date Released: 15th April 2026
-Class Count: 93,301
+Experimental Factor Ontology version 3.90.0
+Date Released: 18th May 2026
+Class Count: 93,359
 
 Summary:
 
-EFO 3.89.0 contains terms to cater for users, such as the GWAS Catalog, Open Targets, and more.
+EFO 3.90.0 contains terms to cater for users, such as the GWAS Catalog, Open Targets, and more.
 
-Number of classes changed: 130
-Number of classes added: 33
-Number of classes deleted: 0
+Number of classes changed: 95
+Number of classes added: 60
+Number of classes deleted: 3
  
 
 ----------------------------------
@@ -38,164 +38,270 @@ Number of classes deleted: 0
 
 @Classes new to this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_1010194
-Label(s): KY-related neuromyopathy 
-+ 'KY-related neuromyopathy' SubClassOf 'hereditary neuromuscular disease'
+Class: http://purl.obolibrary.org/obo/CHEBI_27365
+Label(s): zinc ion 
++ 'zinc ion' SubClassOf 'monoatomic ion'
 
-Class: http://purl.obolibrary.org/obo/MONDO_1010193
-Label(s): TNNT2-related cardiomyopathy 
-+ 'TNNT2-related cardiomyopathy' SubClassOf 'cardiogenetic disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0979242
+Label(s): short-rib thoracic dysplasia 22 without polydactyly 
++ 'short-rib thoracic dysplasia 22 without polydactyly' SubClassOf 'Jeune syndrome'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0980999
-Label(s): fibromuscular dysplasia of the coronary arteries 
-+ 'fibromuscular dysplasia of the coronary arteries' SubClassOf 'coronary artery disorder'
-+ 'fibromuscular dysplasia of the coronary arteries' SubClassOf 'fibromuscular dysplasia'
-+ 'fibromuscular dysplasia of the coronary arteries' SubClassOf 'cardiogenetic disease'
-+ 'fibromuscular dysplasia of the coronary arteries' EquivalentTo 'fibromuscular dysplasia' and ('disease has location' some 'coronary artery')
+Class: http://www.ebi.ac.uk/efo/EFO_0920076
+Label(s): lipofection 
++ 'lipofection' SubClassOf 'non-viral transfection method'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0980998
-Label(s): fibromuscular dysplasia of the renal arteries 
-+ 'fibromuscular dysplasia of the renal arteries' SubClassOf 'aortic disorder'
-+ 'fibromuscular dysplasia of the renal arteries' EquivalentTo 'fibromuscular dysplasia' and ('disease has location' some 'renal artery')
-+ 'fibromuscular dysplasia of the renal arteries' SubClassOf 'fibromuscular dysplasia'
-+ 'fibromuscular dysplasia of the renal arteries' SubClassOf 'disease has location' some 'renal artery'
+Class: http://purl.obolibrary.org/obo/MONDO_0700328
+Label(s): podocytopathy 
++ 'podocytopathy' SubClassOf 'glomerular disorder'
++ 'podocytopathy' SubClassOf 'disease has location' some 'podocyte on CELLxGENE CellGuide'
++ 'podocytopathy' EquivalentTo 'glomerular disorder' and ('disease has location' some 'podocyte on CELLxGENE CellGuide')
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700325
-Label(s): Parkes Weber syndrome 
-+ 'Parkes Weber syndrome' SubClassOf 'congenital vascular malformation'
+Class: http://purl.obolibrary.org/obo/OBA_2100004
+Label(s): renal medulla volume 
++ 'renal medulla volume' SubClassOf 'inheres in part of' some 'renal system'
++ 'renal medulla volume' SubClassOf 'anatomical structure size'
++ 'renal medulla volume' SubClassOf 'part_of' some 'kidney size trait'
++ 'renal medulla volume' SubClassOf 'inheres in part of' some 'kidney'
++ 'renal medulla volume' SubClassOf 'part_of' some 'kidney volume'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700324
-Label(s): SMAD6-related disease 
-+ 'SMAD6-related disease' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/MONDO_1013729
+Label(s): epithelial neoplasm, non-human animal 
++ 'epithelial neoplasm, non-human animal' SubClassOf 'neoplasm, non-human animal'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0980747
-Label(s): brain small vessel disease 2B, autosomal recessive 
-+ 'brain small vessel disease 2B, autosomal recessive' SubClassOf 'autosomal recessive disease'
-+ 'brain small vessel disease 2B, autosomal recessive' SubClassOf 'familial porencephaly'
+Class: http://purl.obolibrary.org/obo/MONDO_1013647
+Label(s): encephalomyelitis, non-human animal 
++ 'encephalomyelitis, non-human animal' SubClassOf 'inflammatory disease, non-human animal'
++ 'encephalomyelitis, non-human animal' SubClassOf 'central nervous system disorder, non-human animal'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920061
-Label(s): perimenopausal 
-+ 'perimenopausal' SubClassOf 'adult'
+Class: http://purl.obolibrary.org/obo/MONDO_1013573
+Label(s): encephalitis, non-human animal 
++ 'encephalitis, non-human animal' SubClassOf 'encephalomyelitis, non-human animal'
++ 'encephalitis, non-human animal' SubClassOf 'brain disorder, non-human animal'
++ 'encephalitis, non-human animal' SubClassOf 'acute disease, non-human animal'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100641
-Label(s): chemotherapy-induced neuropathy 
-+ 'chemotherapy-induced neuropathy' SubClassOf 'peripheral neuropathy'
+Class: http://purl.obolibrary.org/obo/MONDO_1013508
+Label(s): viral encephalitis, non-human animal 
++ 'viral encephalitis, non-human animal' SubClassOf 'viral infectious disease, non-human animal'
++ 'viral encephalitis, non-human animal' SubClassOf 'encephalitis, non-human animal'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100640
-Label(s): chronic idiopathic neuropathy 
-+ 'chronic idiopathic neuropathy' SubClassOf 'peripheral neuropathy'
-+ 'chronic idiopathic neuropathy' SubClassOf 'idiopathic disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0920075
+Label(s): nucleofection 
++ 'nucleofection' SubClassOf 'non-viral transfection method'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100639
-Label(s): vasculitic neuropathy 
-+ 'vasculitic neuropathy' SubClassOf 'disease arises from feature' some 'vasculitis'
-+ 'vasculitic neuropathy' EquivalentTo 'peripheral neuropathy' and ('disease arises from feature' some 'vasculitis')
-+ 'vasculitic neuropathy' SubClassOf 'peripheral neuropathy'
+Class: http://www.ebi.ac.uk/efo/EFO_0920081
+Label(s): nucleic acid integration state 
++ 'nucleic acid integration state' SubClassOf 'transfection'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100637
-Label(s): drug-induced myopathy 
-+ 'drug-induced myopathy' SubClassOf 'myopathy'
+Class: http://www.ebi.ac.uk/efo/EFO_0920082
+Label(s): random locus integration 
++ 'random locus integration' SubClassOf 'nucleic acid integration state'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100633
-Label(s): toxic polyneuropathy 
-+ 'toxic polyneuropathy' SubClassOf 'polyneuropathy'
+Class: http://www.ebi.ac.uk/efo/EFO_0920091
+Label(s): response to obinutuzumab 
++ 'response to obinutuzumab' SubClassOf 'response to xenobiotic stimulus'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0019084
-Label(s): radiation proctitis 
-+ 'radiation proctitis' SubClassOf 'radiation-induced disorder'
-+ 'radiation proctitis' SubClassOf 'proctitis'
+Class: http://www.ebi.ac.uk/efo/EFO_0920094
+Label(s): imaging protocol 
++ 'imaging protocol' SubClassOf 'protocol'
 
-Class: http://purl.obolibrary.org/obo/MONDO_1060214
-Label(s): SYCE1-related gametogenic failure 
-+ 'SYCE1-related gametogenic failure' SubClassOf 'infertility disorder'
-+ 'SYCE1-related gametogenic failure' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/MONDO_1013242
+Label(s): central nervous system disorder, non-human animal 
++ 'central nervous system disorder, non-human animal' SubClassOf 'nervous system disorder, non-human animal'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770011
-Label(s): disease by molecular mechanism 
-+ 'disease by molecular mechanism' SubClassOf 'disease by developmental or physiological process'
+Class: http://purl.obolibrary.org/obo/MONDO_1013017
+Label(s): brain disorder, non-human animal 
++ 'brain disorder, non-human animal' SubClassOf 'central nervous system disorder, non-human animal'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770010
-Label(s): disease of primarily extrinsic mechanism 
-+ 'disease of primarily extrinsic mechanism' SubClassOf 'disease by etiologic mechanism'
+Class: http://purl.obolibrary.org/obo/OBA_2090004
+Label(s): carotid artery intima-media region thickness 
++ 'carotid artery intima-media region thickness' SubClassOf 'thickness'
++ 'carotid artery intima-media region thickness' SubClassOf 'anatomical structure size'
++ 'carotid artery intima-media region thickness' SubClassOf 'carotid artery segment morphology'
++ 'carotid artery intima-media region thickness' SubClassOf 'part_of' some 'carotid artery thickness'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770009
-Label(s): disease of genetic or genomic mechanism 
-+ 'disease of genetic or genomic mechanism' SubClassOf 'disease by etiologic mechanism'
+Class: http://purl.obolibrary.org/obo/OBA_VT0001321
+Label(s): pupil size trait 
++ 'pupil size trait' SubClassOf 'eye morphology trait'
++ 'pupil size trait' SubClassOf 'inheres in part of' some 'head'
++ 'pupil size trait' SubClassOf 'anatomical entity morphology'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770008
-Label(s): disease by etiologic mechanism 
-+ 'disease by etiologic mechanism' SubClassOf 'disease'
-+ 'disease by etiologic mechanism' SubClassOf 'in taxon' some 'Homo sapiens'
+Class: http://purl.obolibrary.org/obo/CHEBI_46662
+Label(s): mineral 
++ 'mineral' SubClassOf 'chemical entity'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770007
-Label(s): disease by developmental or physiological process 
-+ 'disease by developmental or physiological process' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'disease by developmental or physiological process' SubClassOf 'disease'
+Class: http://purl.obolibrary.org/obo/MONDO_1060223
+Label(s): RNU12-related minor spliceopathy disorder 
++ 'RNU12-related minor spliceopathy disorder' SubClassOf 'hereditary disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770006
-Label(s): disease by body system or component 
-+ 'disease by body system or component' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'disease by body system or component' SubClassOf 'disease'
+Class: http://purl.obolibrary.org/obo/OBA_2100005
+Label(s): renal sinus volume 
++ 'renal sinus volume' SubClassOf 'part_of' some 'kidney volume'
++ 'renal sinus volume' SubClassOf 'inheres in part of' some 'kidney'
++ 'renal sinus volume' SubClassOf 'anatomical entity morphology'
++ 'renal sinus volume' SubClassOf 'inheres in part of' some 'renal system'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100635
-Label(s): radiation-induced neuropathy 
-+ 'radiation-induced neuropathy' SubClassOf 'radiation-induced disorder'
-+ 'radiation-induced neuropathy' SubClassOf 'peripheral neuropathy'
+Class: http://purl.obolibrary.org/obo/OBA_2100003
+Label(s): cortex of kidney volume 
++ 'cortex of kidney volume' SubClassOf 'anatomical structure size'
++ 'cortex of kidney volume' SubClassOf 'part_of' some 'kidney size trait'
++ 'cortex of kidney volume' SubClassOf 'inheres in part of' some 'renal system'
++ 'cortex of kidney volume' SubClassOf 'inheres in part of' some 'kidney'
++ 'cortex of kidney volume' SubClassOf 'part_of' some 'kidney volume'
 
-Class: http://purl.obolibrary.org/obo/MONDO_1060211
-Label(s): NR5A1-related sex development disorder 
-+ 'NR5A1-related sex development disorder' SubClassOf 'hereditary disease'
-+ 'NR5A1-related sex development disorder' SubClassOf 'reproductive system disorder'
+Class: http://purl.obolibrary.org/obo/OBA_2100002
+Label(s): urine zinc amount 
++ 'urine zinc amount' SubClassOf 'urine molecular composition'
 
-Class: http://purl.obolibrary.org/obo/MONDO_1060212
-Label(s): CRYAB-related myofibrillar myopathy-cataract-cardiomyopathy spectrum disorder 
-+ 'CRYAB-related myofibrillar myopathy-cataract-cardiomyopathy spectrum disorder' SubClassOf 'hereditary disease'
-+ 'CRYAB-related myofibrillar myopathy-cataract-cardiomyopathy spectrum disorder' SubClassOf 'syndromic disease'
+Class: http://purl.obolibrary.org/obo/UBERON_1200002
+Label(s): carotid artery intima-media region 
++ 'carotid artery intima-media region' SubClassOf 'part_of' some 'carotid artery segment'
++ 'carotid artery intima-media region' SubClassOf 'division of carotid artery'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920063
-Label(s): TeloHAEC 
-+ 'TeloHAEC' SubClassOf 'Homo sapiens cell line'
-+ 'TeloHAEC' SubClassOf 'endothelial cell derived cell line'
-+ 'TeloHAEC' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'Homo sapiens')))))
+Class: http://purl.obolibrary.org/obo/MONDO_7770014
+Label(s): disease by etiologic mechanism, non-human animal 
++ 'disease by etiologic mechanism, non-human animal' SubClassOf 'non-human animal disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920062
-Label(s): phenotyping 
-+ 'phenotyping' SubClassOf 'experimental process'
+Class: http://purl.obolibrary.org/obo/MONDO_7770013
+Label(s): disease by developmental or physiological process, non-human animal 
++ 'disease by developmental or physiological process, non-human animal' SubClassOf 'non-human animal disease'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920060
-Label(s): premenopausal 
-+ 'premenopausal' SubClassOf 'adult'
+Class: http://purl.obolibrary.org/obo/MONDO_7770012
+Label(s): disease by body system or component, non-human animal 
++ 'disease by body system or component, non-human animal' SubClassOf 'non-human animal disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0800443
-Label(s): DEAF1-associated neurodevelopmental disorder 
-+ 'DEAF1-associated neurodevelopmental disorder' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'DEAF1-associated neurodevelopmental disorder' SubClassOf 'complex neurodevelopmental disorder'
+Class: http://purl.obolibrary.org/obo/MONDO_1060216
+Label(s): TSEN2-related neurodevelopmental disorder with or without thrombotic microangiopathy 
++ 'TSEN2-related neurodevelopmental disorder with or without thrombotic microangiopathy' SubClassOf 'Mendelian neurodevelopmental disorder'
++ 'TSEN2-related neurodevelopmental disorder with or without thrombotic microangiopathy' SubClassOf 'syndromic disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0023124
-Label(s): Dursun syndrome 
-+ 'Dursun syndrome' SubClassOf 'hereditary disease'
-+ 'Dursun syndrome' SubClassOf 'syndromic disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0920100
+Label(s): sample ID 
++ 'sample ID' SubClassOf 'information entity'
 
-Class: http://purl.obolibrary.org/obo/OBI_0002174
-Label(s): immunocytochemistry 
-+ 'immunocytochemistry' SubClassOf 'assay'
+Class: http://www.ebi.ac.uk/efo/EFO_0920096
+Label(s): permeabilization time 
++ 'permeabilization time' SubClassOf 'measurement'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700321
-Label(s): CACNA1C-related disorder 
-+ 'CACNA1C-related disorder' SubClassOf 'hereditary disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0920095
+Label(s): fixation protocol 
++ 'fixation protocol' SubClassOf 'protocol'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700323
-Label(s): systemic lupus erythematosus related to C4A 
-+ 'systemic lupus erythematosus related to C4A' SubClassOf 'systemic lupus erythematosus'
+Class: http://www.ebi.ac.uk/efo/EFO_0920093
+Label(s): response to rituximab 
++ 'response to rituximab' SubClassOf 'response to xenobiotic stimulus'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0980764
-Label(s): scoliosis, isolated, susceptibility to 
-+ 'scoliosis, isolated, susceptibility to' SubClassOf 'inherited disease susceptibility'
-+ 'scoliosis, isolated, susceptibility to' SubClassOf 'predisposes towards' some 'scoliosis'
-+ 'scoliosis, isolated, susceptibility to' EquivalentTo 'inherited disease susceptibility' and ('predisposes towards' some 'scoliosis')
+Class: http://www.ebi.ac.uk/efo/EFO_0920092
+Label(s): response to ofatumumab 
++ 'response to ofatumumab' SubClassOf 'response to xenobiotic stimulus'
 
+Class: http://www.ebi.ac.uk/efo/EFO_0920090
+Label(s): anatomical region 
++ 'anatomical region' SubClassOf 'organism part'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920089
+Label(s): 10x Flex Apex 
++ '10x Flex Apex' SubClassOf '10x gene expression flex'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920088
+Label(s): 10x GEM-X Flex v1 
++ '10x GEM-X Flex v1' SubClassOf '10x gene expression flex v1'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920087
+Label(s): 10x Next GEM Flex v1 
++ '10x Next GEM Flex v1' SubClassOf '10x gene expression flex v1'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920086
+Label(s): 10x gene expression flex v1 
++ '10x gene expression flex v1' SubClassOf '10x gene expression flex'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920085
+Label(s): not-integrative transgene expression 
++ 'not-integrative transgene expression' SubClassOf 'nucleic acid integration state'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920084
+Label(s): native locus replacement 
++ 'native locus replacement' SubClassOf 'nucleic acid integration state'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920080
+Label(s): sonoporation 
++ 'sonoporation' SubClassOf 'non-viral transfection method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920079
+Label(s): optical transfection 
++ 'optical transfection' SubClassOf 'non-viral transfection method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920078
+Label(s): microinjection 
++ 'microinjection' SubClassOf 'non-viral transfection method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920077
+Label(s): nanoparticle-based transfection 
++ 'nanoparticle-based transfection' SubClassOf 'non-viral transfection method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920074
+Label(s): electroporation 
++ 'electroporation' SubClassOf 'non-viral transfection method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920073
+Label(s): non-viral transfection method 
++ 'non-viral transfection method' SubClassOf 'nucleic acid delivery method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920072
+Label(s): herpes virus transduction 
++ 'herpes virus transduction' SubClassOf 'transient viral transduction method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920071
+Label(s): adeno-associated virus transduction 
++ 'adeno-associated virus transduction' SubClassOf 'transient viral transduction method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920070
+Label(s): adenovirus transduction 
++ 'adenovirus transduction' SubClassOf 'transient viral transduction method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920069
+Label(s): transient viral transduction method 
++ 'transient viral transduction method' SubClassOf 'viral transduction method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920068
+Label(s): retrovirus transduction 
++ 'retrovirus transduction' SubClassOf 'stable viral transduction method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920067
+Label(s): lentivirus transduction 
++ 'lentivirus transduction' SubClassOf 'stable viral transduction method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920066
+Label(s): stable viral transduction method 
++ 'stable viral transduction method' SubClassOf 'viral transduction method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920065
+Label(s): viral transduction method 
++ 'viral transduction method' SubClassOf 'nucleic acid delivery method'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920064
+Label(s): nucleic acid delivery method 
++ 'nucleic acid delivery method' SubClassOf 'transfection'
+
+Class: http://purl.obolibrary.org/obo/MONDO_7770016
+Label(s): disease of primarily extrinsic mechanism, non-human animal 
++ 'disease of primarily extrinsic mechanism, non-human animal' SubClassOf 'disease by etiologic mechanism, non-human animal'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0920083
+Label(s): targeted locus integration 
++ 'targeted locus integration' SubClassOf 'nucleic acid integration state'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0006171
+Label(s): renal sinus 
++ 'renal sinus' SubClassOf 'anatomical entity'
++ 'renal sinus' SubClassOf 'part_of' some 'kidney'
+
+Class: http://purl.obolibrary.org/obo/OBI_0002197
+Label(s): tissue section thickness 
++ 'tissue section thickness' SubClassOf 'measurement'
+
+Class: http://purl.obolibrary.org/obo/OBA_2100001
+Label(s): vertebra mineral amount 
++ 'vertebra mineral amount' SubClassOf 'bone mineral amount'
 
 
 ----------------------------------
@@ -204,661 +310,483 @@ Label(s): scoliosis, isolated, susceptibility to
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006645
-Label(s): alcoholic polyneuropathy 
-- 'alcoholic polyneuropathy' SubClassOf 'polyneuropathy'
-+ 'alcoholic polyneuropathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100633
+Class: http://purl.obolibrary.org/obo/OBA_2081815
+Label(s): level of UDP-glucuronosyltransferase 2A1 (human) in cerebrospinal fluid
+- 'level of UDP-glucuronosyltransferase 2A1 (human) in cerebrospinal fluid' SubClassOf 'anatomical entity attribute'
+- 'level of UDP-glucuronosyltransferase 2A1 (human) in cerebrospinal fluid' SubClassOf 'amount'
++ 'level of UDP-glucuronosyltransferase 2A1 (human) in cerebrospinal fluid' SubClassOf 'protein amount'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006619
-Label(s): viral exanthem 
-+ 'viral exanthem' SubClassOf 'skin disorder caused by infection'
-+ 'viral exanthem' SubClassOf 'primary viral infectious disease'
+Class: http://purl.obolibrary.org/obo/UBERON_0001033
+Label(s): gustatory system 
+- 'gustatory system' SubClassOf 'craniofacial tissue'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006544
-Label(s): erythema infectiosum 
-- 'erythema infectiosum' SubClassOf 'skin disorder caused by infection'
-- 'erythema infectiosum' SubClassOf 'viral infectious disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0802663
+Label(s): interleukin-9 measurement 
+- 'interleukin-9 measurement' SubClassOf 'is_about' some 'interleukin-9'
+- 'interleukin-9 measurement' SubClassOf 'protein measurement'
++ 'interleukin-9 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006402
-Label(s): salivary gland basal cell adenocarcinoma 
-- 'salivary gland basal cell adenocarcinoma' SubClassOf 'salivary gland squamous cell carcinoma'
-+ 'salivary gland basal cell adenocarcinoma' SubClassOf 'salivary gland carcinoma'
+Class: http://www.ebi.ac.uk/efo/EFO_0802655
+Label(s): interleukin-13 measurement 
+- 'interleukin-13 measurement' SubClassOf 'protein measurement'
+- 'interleukin-13 measurement' SubClassOf 'is_about' some 'interleukin-13'
++ 'interleukin-13 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012130
-Label(s): myofibrillar myopathy 2 
-+ 'myofibrillar myopathy 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060212
+Class: http://www.ebi.ac.uk/efo/EFO_0802654
+Label(s): interleukin-12 measurement 
+- 'interleukin-12 measurement' SubClassOf 'protein measurement'
++ 'interleukin-12 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032756
-Label(s): long QT syndrome 8 
-+ 'long QT syndrome 8' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700321
+Class: http://www.ebi.ac.uk/efo/EFO_0802432
+Label(s): CUB domain-containing protein 1 measurement 
+- 'CUB domain-containing protein 1 measurement' SubClassOf 'is_about' some 'CUB domain-containing protein 1'
+- 'CUB domain-containing protein 1 measurement' SubClassOf 'protein measurement'
++ 'CUB domain-containing protein 1 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006132
-Label(s): cervical adenoid basal carcinoma 
-- 'cervical adenoid basal carcinoma' SubClassOf 'cervical squamous cell carcinoma'
-+ 'cervical adenoid basal carcinoma' SubClassOf 'cervical carcinoma'
+Class: http://purl.obolibrary.org/obo/UBERON_0001997
+Label(s): olfactory epithelium 
+- 'olfactory epithelium' SubClassOf 'craniofacial tissue'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0043839
-Label(s): ulcer disease 
-- 'ulcer disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'ulcer disease' SubClassOf 'disease'
-+ 'ulcer disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
+Class: http://purl.obolibrary.org/obo/CHEBI_37585
+Label(s): sodium dihydrogenphosphate 
++ 'sodium dihydrogenphosphate' SubClassOf http://purl.obolibrary.org/obo/CHEBI_46662
 
-Class: http://purl.obolibrary.org/obo/UBERON_0005777
-Label(s): glomerular basement membrane 
-- 'glomerular basement membrane' SubClassOf 'anatomical structure'
-+ 'glomerular basement membrane' SubClassOf 'anatomical entity'
+Class: http://purl.obolibrary.org/obo/MONDO_0006835
+Label(s): lipoid nephrosis 
++ 'lipoid nephrosis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700328
 
-Class: http://purl.obolibrary.org/obo/MONDO_0043543
-Label(s): iatrogenic disease 
-- 'iatrogenic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'iatrogenic disease' SubClassOf 'disease'
-+ 'iatrogenic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
+Class: http://purl.obolibrary.org/obo/UBERON_0005020
+Label(s): mucosa of tongue 
+- 'mucosa of tongue' SubClassOf 'craniofacial tissue'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012559
-Label(s): primary immunodeficiency syndrome due to p14 deficiency 
-- 'primary immunodeficiency syndrome due to p14 deficiency' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0700104
+Label(s): respiratory system disorder, non-human animal 
+- 'respiratory system disorder, non-human animal' SubClassOf 'non-human animal disease'
++ 'respiratory system disorder, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770012
 
-Class: http://purl.obolibrary.org/obo/MONDO_0043459
-Label(s): radiation-induced disorder 
-- 'radiation-induced disorder' SubClassOf 'disease'
-- 'radiation-induced disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'radiation-induced disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
+Class: http://purl.obolibrary.org/obo/MONDO_0700101
+Label(s): carcinoma, non-human animal 
++ 'carcinoma, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_1013729
 
-Class: http://purl.obolibrary.org/obo/MONDO_0979865
-Label(s): Popov-Chang syndrome 
-- 'Popov-Chang syndrome' SubClassOf 'neurodevelopmental disorder'
-+ 'Popov-Chang syndrome' SubClassOf 'Mendelian neurodevelopmental disorder'
+Class: http://purl.obolibrary.org/obo/OBA_1000992
+Label(s): Follicle stimulating hormone level 
+- 'Follicle stimulating hormone level' SubClassOf 'protein measurement'
+- 'Follicle stimulating hormone level' SubClassOf 'anatomical entity attribute'
+- 'Follicle stimulating hormone level' SubClassOf 'amount'
++ 'Follicle stimulating hormone level' SubClassOf 'protein amount'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005087
-Label(s): respiratory system disorder 
-- 'respiratory system disorder' SubClassOf 'disease'
-- 'respiratory system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'respiratory system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://purl.obolibrary.org/obo/MONDO_0700049
+Label(s): infectious disease, non-human animal 
+- 'infectious disease, non-human animal' SubClassOf 'non-human animal disease'
++ 'infectious disease, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770016
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012742
-Label(s): Brugada syndrome 3 
-+ 'Brugada syndrome 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700321
+Class: http://www.ebi.ac.uk/efo/EFO_0802662
+Label(s): interleukin-7 measurement 
+- 'interleukin-7 measurement' SubClassOf 'protein measurement'
+- 'interleukin-7 measurement' SubClassOf 'is_about' some 'interleukin-7'
++ 'interleukin-7 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012825
-Label(s): extraskeletal myxoid chondrosarcoma 
-+ 'extraskeletal myxoid chondrosarcoma' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/UBERON_0005870
+Label(s): olfactory pit 
+- 'olfactory pit' SubClassOf 'craniofacial tissue'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012883
-Label(s): acute promyelocytic leukemia 
-- 'acute promyelocytic leukemia' SubClassOf 'acute myeloid leukemia'
-+ 'acute promyelocytic leukemia' SubClassOf 'inherited acute myeloid leukemia'
+Class: http://purl.obolibrary.org/obo/MONDO_0005676
+Label(s): borna disease 
+- 'borna disease' SubClassOf 'inflammatory disease, non-human animal'
+- 'borna disease' SubClassOf 'acute disease, non-human animal'
+- 'borna disease' SubClassOf 'nervous system disorder, non-human animal'
+- 'borna disease' SubClassOf 'viral infectious disease, non-human animal'
++ 'borna disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_1013508
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700044
-Label(s): TUBB2A-related tubulinopathy 
-- 'TUBB2A-related tubulinopathy' SubClassOf 'tubulinopathy'
-- 'TUBB2A-related tubulinopathy' SubClassOf 'complex neurodevelopmental disorder with motor features'
-- 'TUBB2A-related tubulinopathy' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'TUBB2A-related tubulinopathy' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/UBERON_0000004
+Label(s): nose 
+- 'nose' SubClassOf 'craniofacial tissue'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700007
-Label(s): idiopathic disease 
-- 'idiopathic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'idiopathic disease' SubClassOf 'disease'
-+ 'idiopathic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770008
+Class: http://purl.obolibrary.org/obo/MONDO_0005376
+Label(s): membranous glomerulonephritis 
++ 'membranous glomerulonephritis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700328
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700003
-Label(s): obstetric disorder 
-- 'obstetric disorder' SubClassOf 'disease'
-- 'obstetric disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'obstetric disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
+Class: http://www.ebi.ac.uk/efo/EFO_0801730
+Label(s): interleukin-5 receptor subunit alpha measurement 
+- 'interleukin-5 receptor subunit alpha measurement' SubClassOf 'protein measurement'
+- 'interleukin-5 receptor subunit alpha measurement' SubClassOf 'is_about' some 'interleukin-5 receptor subunit alpha'
++ 'interleukin-5 receptor subunit alpha measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0011961
-Label(s): hereditary sensory and autonomic neuropathy type 1B 
-- 'hereditary sensory and autonomic neuropathy type 1B' SubClassOf 'hereditary sensory and autonomic neuropathy type 1'
-+ 'hereditary sensory and autonomic neuropathy type 1B' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://www.ebi.ac.uk/efo/EFO_0801729
+Label(s): interleukin-5 measurement 
+- 'interleukin-5 measurement' SubClassOf 'is_about' some 'interleukin-5'
+- 'interleukin-5 measurement' SubClassOf 'protein measurement'
++ 'interleukin-5 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032572
-Label(s): cardiac, facial, and digital anomalies with developmental delay 
-+ 'cardiac, facial, and digital anomalies with developmental delay' SubClassOf 'syndromic disease'
+Class: http://www.ebi.ac.uk/efo/EFO_0801726
+Label(s): interleukin-25 measurement 
+- 'interleukin-25 measurement' SubClassOf 'protein measurement'
+- 'interleukin-25 measurement' SubClassOf 'is_about' some 'interleukin-25'
++ 'interleukin-25 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006858
-Label(s): mouth disorder 
-- 'mouth disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'mouth disorder' SubClassOf 'disease'
-+ 'mouth disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://www.ebi.ac.uk/efo/EFO_0801725
+Label(s): interleukin-23 receptor measurement 
+- 'interleukin-23 receptor measurement' SubClassOf 'is_about' some 'interleukin-23 receptor'
+- 'interleukin-23 receptor measurement' SubClassOf 'protein measurement'
++ 'interleukin-23 receptor measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/FBbi_00000603
-Label(s): fluorescence polarization microscopy 
-+ 'fluorescence polarization microscopy' SubClassOf 'polarization microscopy'
+Class: http://www.ebi.ac.uk/efo/EFO_0801723
+Label(s): interleukin-2 measurement 
+- 'interleukin-2 measurement' SubClassOf 'protein measurement'
+- 'interleukin-2 measurement' SubClassOf 'is_about' some 'interleukin-2'
++ 'interleukin-2 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0011671
-Label(s): Huntington disease-like 2 
-- 'Huntington disease-like 2' SubClassOf 'neuroacanthocytosis'
-+ 'Huntington disease-like 2' SubClassOf 'inherited neurodegenerative disorder'
+Class: http://www.ebi.ac.uk/efo/EFO_0801722
+Label(s): interleukin-19 measurement 
+- 'interleukin-19 measurement' SubClassOf 'protein measurement'
+- 'interleukin-19 measurement' SubClassOf 'is_about' some 'interleukin-19'
++ 'interleukin-19 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005574
-Label(s): tauopathy 
-+ 'tauopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
+Class: http://www.ebi.ac.uk/efo/EFO_0801720
+Label(s): interleukin-17 receptor D measurement 
+- 'interleukin-17 receptor D measurement' SubClassOf 'protein measurement'
+- 'interleukin-17 receptor D measurement' SubClassOf 'is_about' some 'interleukin-17 receptor D'
++ 'interleukin-17 receptor D measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005570
-Label(s): hematologic disorder 
-- 'hematologic disorder' SubClassOf 'disease'
-- 'hematologic disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'hematologic disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://www.ebi.ac.uk/efo/EFO_0801719
+Label(s): interleukin-17 receptor B measurement 
+- 'interleukin-17 receptor B measurement' SubClassOf 'is_about' some 'interleukin-17 receptor B'
+- 'interleukin-17 receptor B measurement' SubClassOf 'protein measurement'
++ 'interleukin-17 receptor B measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0044720
-Label(s): cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome 
-+ 'cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome' SubClassOf 'hereditary sensory and autonomic neuropathy type 1'
+Class: http://www.ebi.ac.uk/efo/EFO_0801718
+Label(s): interleukin-17 receptor A measurement 
+- 'interleukin-17 receptor A measurement' SubClassOf 'protein measurement'
+- 'interleukin-17 receptor A measurement' SubClassOf 'is_about' some 'interleukin-17 receptor A'
++ 'interleukin-17 receptor A measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0011236
-Label(s): hyperinsulinism due to glucokinase deficiency 
-- 'hyperinsulinism due to glucokinase deficiency' SubClassOf 'diazoxide-sensitive diffuse hyperinsulinism'
-+ 'hyperinsulinism due to glucokinase deficiency' SubClassOf 'congenital isolated hyperinsulinism'
+Class: http://www.ebi.ac.uk/efo/EFO_0801717
+Label(s): interleukin-16 measurement 
+- 'interleukin-16 measurement' SubClassOf 'protein measurement'
++ 'interleukin-16 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005308
-Label(s): ciliopathy 
-+ 'ciliopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
+Class: http://www.ebi.ac.uk/efo/EFO_0801714
+Label(s): interleukin-1 receptor-like 2 measurement 
+- 'interleukin-1 receptor-like 2 measurement' SubClassOf 'is_about' some 'interleukin-1 receptor-like 2'
+- 'interleukin-1 receptor-like 2 measurement' SubClassOf 'protein measurement'
++ 'interleukin-1 receptor-like 2 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0002081
-Label(s): musculoskeletal system disorder 
-- 'musculoskeletal system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'musculoskeletal system disorder' SubClassOf 'disease'
-+ 'musculoskeletal system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://www.ebi.ac.uk/efo/EFO_0801713
+Label(s): interleukin-1 receptor-like 1 measurement 
+- 'interleukin-1 receptor-like 1 measurement' SubClassOf 'is_about' some 'interleukin-1 receptor-like 1'
+- 'interleukin-1 receptor-like 1 measurement' SubClassOf 'protein measurement'
++ 'interleukin-1 receptor-like 1 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005151
-Label(s): endocrine system disorder 
-- 'endocrine system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'endocrine system disorder' SubClassOf 'disease'
-+ 'endocrine system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://www.ebi.ac.uk/efo/EFO_0801711
+Label(s): interleukin-1 receptor accessory protein measurement 
+- 'interleukin-1 receptor accessory protein measurement' SubClassOf 'protein measurement'
+- 'interleukin-1 receptor accessory protein measurement' SubClassOf 'is_about' some 'interleukin-1 receptor accessory protein'
++ 'interleukin-1 receptor accessory protein measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005137
-Label(s): nutritional disorder 
-- 'nutritional disorder' SubClassOf 'disease'
-- 'nutritional disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'nutritional disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770008
+Class: http://purl.obolibrary.org/obo/OBA_2043233
+Label(s): level of regenerating islet-derived protein 3-gamma in blood serum 
+- 'level of regenerating islet-derived protein 3-gamma in blood serum' SubClassOf 'hematopoietic system quality'
+- 'level of regenerating islet-derived protein 3-gamma in blood serum' SubClassOf 'part_of' some 'body fluid attribute'
+- 'level of regenerating islet-derived protein 3-gamma in blood serum' SubClassOf 'amount'
++ 'level of regenerating islet-derived protein 3-gamma in blood serum' SubClassOf 'serum protein amount'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005039
-Label(s): reproductive system disorder 
-- 'reproductive system disorder' SubClassOf 'disease'
-- 'reproductive system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'reproductive system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://purl.obolibrary.org/obo/CHEBI_32599
+Label(s): magnesium sulfate 
+- 'magnesium sulfate' SubClassOf 'chemical entity'
++ 'magnesium sulfate' SubClassOf http://purl.obolibrary.org/obo/CHEBI_46662
 
-Class: http://purl.obolibrary.org/obo/MONDO_0013065
-Label(s): premature ovarian failure 7 
-+ 'premature ovarian failure 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060211
+Class: http://purl.obolibrary.org/obo/CHEBI_32588
+Label(s): potassium chloride 
++ 'potassium chloride' SubClassOf http://purl.obolibrary.org/obo/CHEBI_46662
 
-Class: http://purl.obolibrary.org/obo/MONDO_0013066
-Label(s): 46,XY sex reversal 3 
-+ '46,XY sex reversal 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060211
+Class: http://purl.obolibrary.org/obo/UBERON_0004770
+Label(s): articular system 
+- 'articular system' SubClassOf 'skeleton structure'
++ 'articular system' SubClassOf 'anatomical entity'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0013411
-Label(s): cataract 16 multiple types 
-+ 'cataract 16 multiple types' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060212
+Class: http://purl.obolibrary.org/obo/UBERON_0001647
+Label(s): facial nerve 
+- 'facial nerve' SubClassOf 'craniofacial tissue'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0013504
-Label(s): spermatogenic failure 8 
-+ 'spermatogenic failure 8' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060211
+Class: http://www.ebi.ac.uk/efo/EFO_0001986
+Label(s): lung structure 
+- 'lung structure' EquivalentTo 'part_of' some 'lung'
++ 'lung structure' EquivalentTo 'anatomical structure' and ('part_of' some 'lung')
 
-Class: http://purl.obolibrary.org/obo/MONDO_0013773
-Label(s): porencephaly 2 
-+ 'porencephaly 2' SubClassOf 'autosomal dominant disease'
+Class: http://purl.obolibrary.org/obo/UBERON_0004288
+Label(s): skeleton 
+- 'skeleton' SubClassOf 'skeleton structure'
++ 'skeleton' SubClassOf 'anatomical entity'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0004367
-Label(s): Descemet's membrane 
-- 'Descemet's membrane' SubClassOf 'anatomical structure'
-+ 'Descemet's membrane' SubClassOf 'anatomical entity'
+Class: http://www.ebi.ac.uk/efo/EFO_0020508
+Label(s): interleukin-7 receptor subunit alpha measurement 
+- 'interleukin-7 receptor subunit alpha measurement' SubClassOf 'is_about' some 'interleukin-7 receptor subunit alpha'
+- 'interleukin-7 receptor subunit alpha measurement' SubClassOf 'protein measurement'
++ 'interleukin-7 receptor subunit alpha measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0859188
-Label(s): neurodevelopmental disorder with seizures and brain abnormalities 
-- 'neurodevelopmental disorder with seizures and brain abnormalities' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'neurodevelopmental disorder with seizures and brain abnormalities' SubClassOf 'neurodevelopmental disorder'
+Class: http://purl.obolibrary.org/obo/CHEBI_63039
+Label(s): caesium chloride 
++ 'caesium chloride' SubClassOf http://purl.obolibrary.org/obo/CHEBI_46662
 
-Class: http://purl.obolibrary.org/obo/MONDO_0021179
-Label(s): proteostasis deficiencies 
-+ 'proteostasis deficiencies' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
+Class: http://purl.obolibrary.org/obo/CL_0002553
+Label(s): fibroblast of lung 
+- 'fibroblast of lung' SubClassOf 'lung structure'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0021166
-Label(s): inflammatory disease 
-- 'inflammatory disease' SubClassOf 'disease'
-- 'inflammatory disease' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'inflammatory disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021147
-Label(s): disorder of development or morphogenesis 
-- 'disorder of development or morphogenesis' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'disorder of development or morphogenesis' SubClassOf 'disease'
-+ 'disorder of development or morphogenesis' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009319
-Label(s): pantothenate kinase-associated neurodegeneration 
-- 'pantothenate kinase-associated neurodegeneration' SubClassOf 'disorder of phospholipids, sphingolipids and fatty acids biosynthesis'
-- 'pantothenate kinase-associated neurodegeneration' SubClassOf 'neuroacanthocytosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000030
-Label(s): familial sleep-related hypermotor epilepsy 
-- 'familial sleep-related hypermotor epilepsy' SubClassOf 'familial partial epilepsy'
-+ 'familial sleep-related hypermotor epilepsy' SubClassOf 'familial partial epilepsy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002935
-Label(s): penis basal cell carcinoma 
-- 'penis basal cell carcinoma' SubClassOf 'squamous cell carcinoma of penis'
-+ 'penis basal cell carcinoma' SubClassOf 'penile carcinoma'
-
-Class: http://purl.obolibrary.org/obo/GO_0006541
-Label(s): glutamine metabolic process 
-+ 'glutamine metabolic process' SubClassOf 'amino acid metabolic process'
-
-Class: http://purl.obolibrary.org/obo/GO_0006547
-Label(s): L-histidine metabolic process 
-- 'L-histidine metabolic process' SubClassOf 'amino acid metabolic process'
-- 'L-histidine metabolic process' SubClassOf 'organic acid metabolic process'
-+ 'L-histidine metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014073
-Label(s): dilated cardiomyopathy 1II 
-+ 'dilated cardiomyopathy 1II' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060212
-
-Class: http://purl.obolibrary.org/obo/UBERON_0006763
-Label(s): epithelium of conjunctiva 
-- 'epithelium of conjunctiva' SubClassOf 'part_of' some 'eye'
-
-Class: http://purl.obolibrary.org/obo/GO_0009279
-Label(s): cell outer membrane 
-- 'cell outer membrane' SubClassOf 'part_of' some 'external encapsulating structure'
-+ 'cell outer membrane' SubClassOf 'external encapsulating structure'
+Class: http://purl.obolibrary.org/obo/CL_0002092
+Label(s): bone marrow cell 
+- 'bone marrow cell' SubClassOf 'skeleton structure'
 
 Class: http://purl.obolibrary.org/obo/CL_0002063
 Label(s): pulmonary alveolar type 2 cell 
-- 'pulmonary alveolar type 2 cell' SubClassOf 'secretory cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0002038
-Label(s): T follicular helper cell 
-+ 'T follicular helper cell' SubClassOf 'helper T cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004995
-Label(s): cardiovascular disorder 
-- 'cardiovascular disorder' SubClassOf 'disease'
-- 'cardiovascular disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'cardiovascular disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010434
-Label(s): synovial sarcoma 
-+ 'synovial sarcoma' SubClassOf 'hereditary disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019303
-Label(s): premature aging syndrome 
-- 'premature aging syndrome' SubClassOf 'disease'
-- 'premature aging syndrome' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'premature aging syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004392
-Label(s): intracranial extraskeletal myxoid chondrosarcoma 
-+ 'intracranial extraskeletal myxoid chondrosarcoma' SubClassOf 'hereditary neurological disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002025
-Label(s): psychiatric disorder 
-- 'psychiatric disorder' SubClassOf 'disease'
-- 'psychiatric disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'psychiatric disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100366
-Label(s): occupational disorder 
-- 'occupational disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'occupational disorder' SubClassOf 'disease'
-+ 'occupational disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002083
-Label(s): Richter syndrome 
-- 'Richter syndrome' SubClassOf 'disease arises from feature' some 'B-cell chronic lymphocytic leukemia'
-- 'Richter syndrome' SubClassOf 'neoplastic syndrome'
-- 'Richter syndrome' SubClassOf 'secondary neoplasm'
-+ 'Richter syndrome' SubClassOf 'disease arises from feature' some 'chronic lymphocytic leukemia/small lymphocytic lymphoma'
-+ 'Richter syndrome' SubClassOf 'secondary neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100183
-Label(s): radioulnar synostosis, nonsyndromic, susceptibility to 
-+ 'radioulnar synostosis, nonsyndromic, susceptibility to' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700324
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020300
-Label(s): autosomal dominant nocturnal frontal lobe epilepsy 
-- 'autosomal dominant nocturnal frontal lobe epilepsy' SubClassOf 'familial partial epilepsy'
-- 'autosomal dominant nocturnal frontal lobe epilepsy' SubClassOf 'frontal lobe epilepsy'
-+ 'autosomal dominant nocturnal frontal lobe epilepsy' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100086
-Label(s): perinatal disease 
-- 'perinatal disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'perinatal disease' SubClassOf 'disease'
-+ 'perinatal disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100081
-Label(s): sleep disorder 
-- 'sleep disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'sleep disorder' SubClassOf 'disease'
-+ 'sleep disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021669
-Label(s): post-infectious disorder 
-- 'post-infectious disorder' SubClassOf 'disease'
-- 'post-infectious disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'post-infectious disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020840
-Label(s): pulmonary alveolar proteinosis with hypogammaglobulinemia 
-+ 'pulmonary alveolar proteinosis with hypogammaglobulinemia' SubClassOf 'respiratory system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0035661
-Label(s): TRAF7-associated heart defect-digital anomalies-facial dysmorphism-motor and speech delay syndrome 
-- 'TRAF7-associated heart defect-digital anomalies-facial dysmorphism-motor and speech delay syndrome' SubClassOf 'syndromic disease'
-+ 'TRAF7-associated heart defect-digital anomalies-facial dysmorphism-motor and speech delay syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014952
-Label(s): intellectual disability-epilepsy-extrapyramidal syndrome 
-- 'intellectual disability-epilepsy-extrapyramidal syndrome' SubClassOf 'hereditary disease'
-+ 'intellectual disability-epilepsy-extrapyramidal syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0800443
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014922
-Label(s): myofibrillar myopathy 7 
-+ 'myofibrillar myopathy 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010194
-+ 'myofibrillar myopathy 7' SubClassOf 'congenital nervous system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008695
-Label(s): chorea-acanthocytosis 
-- 'chorea-acanthocytosis' SubClassOf 'neuroacanthocytosis'
-+ 'chorea-acanthocytosis' SubClassOf 'neuroacanthocytosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014847
-Label(s): spermatogenic failure 15 
-+ 'spermatogenic failure 15' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060214
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014844
-Label(s): premature ovarian failure 12 
-+ 'premature ovarian failure 12' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060214
-
-Class: http://purl.obolibrary.org/obo/MONDO_1060174
-Label(s): systemic lupus erythematosus related to C1QA 
-- 'systemic lupus erythematosus related to C1QA' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0035660
-Label(s): GNAO1-related developmental delay-seizures-movement disorder spectrum 
-- 'GNAO1-related developmental delay-seizures-movement disorder spectrum' SubClassOf 'hereditary disease'
-+ 'GNAO1-related developmental delay-seizures-movement disorder spectrum' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014355
-Label(s): cardiomyopathy, dilated, with wooly hair, keratoderma, and tooth agenesis 
-- 'cardiomyopathy, dilated, with wooly hair, keratoderma, and tooth agenesis' SubClassOf 'arrhythmogenic cardiomyopathy with wooly hair and keratoderma'
-+ 'cardiomyopathy, dilated, with wooly hair, keratoderma, and tooth agenesis' SubClassOf 'hereditary skin disorder'
-+ 'cardiomyopathy, dilated, with wooly hair, keratoderma, and tooth agenesis' SubClassOf 'disease has major feature' some 'Dilated cardiomyopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014337
-Label(s): complex cortical dysplasia with other brain malformations 5 
-+ 'complex cortical dysplasia with other brain malformations 5' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'complex cortical dysplasia with other brain malformations 5' SubClassOf 'complex neurodevelopmental disorder with motor features'
-+ 'complex cortical dysplasia with other brain malformations 5' SubClassOf 'tubulinopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0029000
-Label(s): poisoning 
-- 'poisoning' SubClassOf 'disease'
-- 'poisoning' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'poisoning' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013690
-Label(s): Pitt-Hopkins-like syndrome 2 
-+ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'congenital nervous system disorder'
-+ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'Mendelian neurodevelopmental disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014002
-Label(s): autosomal dominant nocturnal frontal lobe epilepsy 5 
-- 'autosomal dominant nocturnal frontal lobe epilepsy 5' SubClassOf 'autosomal dominant nocturnal frontal lobe epilepsy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005066
-Label(s): metabolic disease 
-- 'metabolic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'metabolic disease' SubClassOf 'disease'
-+ 'metabolic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019040
-Label(s): chromosomal disorder 
-- 'chromosomal disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'chromosomal disorder' SubClassOf 'disease'
-+ 'chromosomal disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770009
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019119
-Label(s): muscular channelopathy 
-+ 'muscular channelopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004335
-Label(s): digestive system disorder 
-- 'digestive system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'digestive system disorder' SubClassOf 'disease'
-+ 'digestive system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018945
-Label(s): McLeod neuroacanthocytosis syndrome 
-- 'McLeod neuroacanthocytosis syndrome' SubClassOf 'neuroacanthocytosis'
-+ 'McLeod neuroacanthocytosis syndrome' SubClassOf 'neuroacanthocytosis'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001772
-Label(s): corneal epithelium 
-- 'corneal epithelium' SubClassOf 'part_of' some 'eye'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003847
-Label(s): hereditary disease 
-- 'hereditary disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'hereditary disease' SubClassOf 'disease'
-+ 'hereditary disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770009
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003749
-Label(s): esophageal disorder 
-- 'esophageal disorder' SubClassOf 'digestive system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010979
-Label(s): Timothy syndrome 
-+ 'Timothy syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700321
-
-Class: http://purl.obolibrary.org/obo/MONDO_0045024
-Label(s): cancer or benign tumor 
-- 'cancer or benign tumor' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'cancer or benign tumor' SubClassOf 'disease'
-+ 'cancer or benign tumor' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770008
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024322
-Label(s): disorder of glycosylation 
-- 'disorder of glycosylation' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'disorder of glycosylation' SubClassOf 'disease'
-+ 'disorder of glycosylation' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021060
-Label(s): RASopathy 
-+ 'RASopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
-
-Class: http://purl.obolibrary.org/obo/MONDO_0034820
-Label(s): cleft lip and palate-craniofacial dysmorphism-congenital heart defect-hearing loss syndrome 
-- 'cleft lip and palate-craniofacial dysmorphism-congenital heart defect-hearing loss syndrome' SubClassOf 'syndromic disease'
-+ 'cleft lip and palate-craniofacial dysmorphism-congenital heart defect-hearing loss syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_1060185
-Label(s): systemic lupus erythematosus 18 
-- 'systemic lupus erythematosus 18' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007915
-Label(s): systemic lupus erythematosus 
-+ 'systemic lupus erythematosus' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0859286
-Label(s): neurodevelopmental disorder with hypotonia, language delay, and skeletal defects with or without seizures 
-+ 'neurodevelopmental disorder with hypotonia, language delay, and skeletal defects with or without seizures' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700321
-
-Class: http://purl.obolibrary.org/obo/MONDO_0976127
-Label(s): Muggenthaler-Chowdhury-Chioza syndrome 
-+ 'Muggenthaler-Chowdhury-Chioza syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0859083
-Label(s): systemic lupus erythematosus 17 
-- 'systemic lupus erythematosus 17' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024458
-Label(s): disorder of visual system 
-- 'disorder of visual system' SubClassOf 'disease'
-- 'disorder of visual system' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'disorder of visual system' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005046
-Label(s): immune system disorder 
-- 'immune system disorder' SubClassOf 'disease'
-- 'immune system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'immune system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005071
-Label(s): nervous system disorder 
-- 'nervous system disorder' SubClassOf 'disease'
-- 'nervous system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'nervous system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044991
-Label(s): upper digestive tract disorder 
-- 'upper digestive tract disorder' SubClassOf 'disease'
-- 'upper digestive tract disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'upper digestive tract disorder' SubClassOf 'digestive system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044970
-Label(s): mitochondrial disease 
-- 'mitochondrial disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'mitochondrial disease' SubClassOf 'disease'
-+ 'mitochondrial disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003900
-Label(s): connective tissue disorder 
-- 'connective tissue disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'connective tissue disorder' SubClassOf 'disease'
-+ 'connective tissue disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024623
-Label(s): otorhinolaryngologic disease 
-- 'otorhinolaryngologic disease' SubClassOf 'disease'
-- 'otorhinolaryngologic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'otorhinolaryngologic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005341
-Label(s): skin basal cell carcinoma 
-- 'skin basal cell carcinoma' SubClassOf 'skin squamous cell carcinoma'
-+ 'skin basal cell carcinoma' SubClassOf 'skin carcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700220
-Label(s): disease related to transplantation 
-- 'disease related to transplantation' SubClassOf 'disease'
-- 'disease related to transplantation' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'disease related to transplantation' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002943
-Label(s): external ear basal cell carcinoma 
-- 'external ear basal cell carcinoma' SubClassOf 'external ear squamous cell carcinoma'
-+ 'external ear basal cell carcinoma' SubClassOf 'external ear carcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002936
-Label(s): scrotum basal cell carcinoma 
-- 'scrotum basal cell carcinoma' SubClassOf 'scrotum squamous cell carcinoma'
-+ 'scrotum basal cell carcinoma' SubClassOf 'scrotal carcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044315
-Label(s): craniosynostosis 7 
-+ 'craniosynostosis 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700324
-
-Class: http://purl.obolibrary.org/obo/UBERON_0008904
-Label(s): neuromast 
-- 'neuromast' SubClassOf 'sense organ'
-+ 'neuromast' SubClassOf 'part_of' some 'anatomical system'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013743
-Label(s): autosomal systemic lupus erythematosus type 16 
-- 'autosomal systemic lupus erythematosus type 16' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002657
-Label(s): breast disorder 
-- 'breast disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'breast disorder' SubClassOf 'disease'
-+ 'breast disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0023243
-Label(s): glass-chapman-hockley syndrome 
-- 'glass-chapman-hockley syndrome' SubClassOf 'autosomal dominant disease'
-- 'glass-chapman-hockley syndrome' SubClassOf 'craniosynostosis'
-+ 'glass-chapman-hockley syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002955
-Label(s): vulva basal cell carcinoma 
-- 'vulva basal cell carcinoma' SubClassOf 'vulvar squamous cell carcinoma'
-+ 'vulva basal cell carcinoma' SubClassOf 'vulvar carcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005550
-Label(s): infectious disease 
-- 'infectious disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'infectious disease' SubClassOf 'disease'
-+ 'infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002409
-Label(s): auditory system disorder 
-- 'auditory system disorder' SubClassOf 'disease'
-- 'auditory system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'auditory system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/CL_0000312
-Label(s): keratinocyte 
-- 'keratinocyte' SubClassOf 'squamous epithelial cell'
-+ 'keratinocyte' SubClassOf 'epithelial cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002254
-Label(s): syndromic disease 
-- 'syndromic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'syndromic disease' SubClassOf 'disease'
-+ 'syndromic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013902
-Label(s): aortic valve disease 2 
-+ 'aortic valve disease 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700324
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002118
-Label(s): urinary system disorder 
-- 'urinary system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'urinary system disorder' SubClassOf 'disease'
-+ 'urinary system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002051
-Label(s): integumentary system disorder 
-- 'integumentary system disorder' SubClassOf 'disease'
-- 'integumentary system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'integumentary system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002022
-Label(s): disorder of orbital region 
-- 'disorder of orbital region' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'disorder of orbital region' SubClassOf 'disease'
-+ 'disorder of orbital region' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001985
-Label(s): corneal endothelium 
-- 'corneal endothelium' SubClassOf 'part_of' some 'eye'
-
-Class: http://purl.obolibrary.org/obo/MONDO_1060176
-Label(s): systemic lupus erythematosus related to C1S 
-- 'systemic lupus erythematosus related to C1S' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0033838
-Label(s): radiation-induced plexopathy 
-- 'radiation-induced plexopathy' SubClassOf 'radiation-induced disorder'
-+ 'radiation-induced plexopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100635
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012900
-Label(s): cardiomyopathy, familial restrictive, 3 
-+ 'cardiomyopathy, familial restrictive, 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010193
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007266
-Label(s): hypertrophic cardiomyopathy 2 
-+ 'hypertrophic cardiomyopathy 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010193
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008419
-Label(s): scoliosis, isolated, susceptibility to, 1 
-- 'scoliosis, isolated, susceptibility to, 1' SubClassOf 'inherited disease susceptibility'
-+ 'scoliosis, isolated, susceptibility to, 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0980764
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014357
-Label(s): intellectual disability, autosomal dominant 24 
-+ 'intellectual disability, autosomal dominant 24' SubClassOf http://purl.obolibrary.org/obo/MONDO_0800443
+- 'pulmonary alveolar type 2 cell' SubClassOf 'lung structure'
+
+Class: http://purl.obolibrary.org/obo/CL_0002062
+Label(s): pulmonary alveolar type 1 cell on CELLxGENE CellGuide pulmonary alveolar type 1 cell 
+- 'pulmonary alveolar type 1 cell' SubClassOf 'lung structure'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019838
+Label(s): adenohypophysitis 
+- 'adenohypophysitis' SubClassOf 'primary hypophysitis'
++ 'adenohypophysitis' SubClassOf 'hypophysitis'
+
+Class: http://purl.obolibrary.org/obo/CHEBI_3312
+Label(s): calcium dichloride 
++ 'calcium dichloride' SubClassOf http://purl.obolibrary.org/obo/CHEBI_46662
+
+Class: http://purl.obolibrary.org/obo/CHEBI_46661
+Label(s): asbestos 
+- 'asbestos' SubClassOf 'chemical entity'
++ 'asbestos' SubClassOf http://purl.obolibrary.org/obo/CHEBI_46662
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019228
+Label(s): inborn disorder of histidine metabolism 
+- 'inborn disorder of histidine metabolism' SubClassOf 'disorder of organic acid metabolism'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100313
+Label(s): focal segmental glomerulosclerosis 
++ 'focal segmental glomerulosclerosis' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700328
+
+Class: http://www.ebi.ac.uk/efo/EFO_0800406
+Label(s): 1-palmitoyl-2-palmitoleoyl-GPC(16:0/16:1) measurement 
+- '1-palmitoyl-2-palmitoleoyl-GPC(16:0/16:1) measurement' SubClassOf 'metabolite measurement'
++ '1-palmitoyl-2-palmitoleoyl-GPC(16:0/16:1) measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0021984
+Label(s): [pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1; mitochondrial measurement 
+- '[pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1; mitochondrial measurement' SubClassOf 'protein measurement'
++ '[pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1; mitochondrial measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0021977
+Label(s): alcohol dehydrogenase [NADP(+)] measurement 
+- 'alcohol dehydrogenase [NADP(+)] measurement' SubClassOf 'protein measurement'
+- 'alcohol dehydrogenase [NADP(+)] measurement' SubClassOf 'is_about' some 'aldo-keto reductase family 1 member A1'
++ 'alcohol dehydrogenase [NADP(+)] measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/OBA_1001009
+Label(s): Luteinizing hormone level 
+- 'Luteinizing hormone level' SubClassOf 'anatomical entity attribute'
+- 'Luteinizing hormone level' SubClassOf 'protein measurement'
+- 'Luteinizing hormone level' SubClassOf 'amount'
++ 'Luteinizing hormone level' SubClassOf 'protein amount'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0957382
+Label(s): multiple mitochondrial dysfunctions syndrome 7 
++ 'multiple mitochondrial dysfunctions syndrome 7' SubClassOf 'glycine encephalopathy'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0000792
+Label(s): craniofacial tissue 
+- 'craniofacial tissue' EquivalentTo 'part_of' some 'craniofacial tissue'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0001958
+Label(s): joint component 
+- 'joint component' EquivalentTo 'part_of' some 'skeletal joint'
++ 'joint component' EquivalentTo 'anatomical structure' and ('part_of' some 'skeletal joint')
+
+Class: http://purl.obolibrary.org/obo/MONDO_0029144
+Label(s): extraoral halitosis due to methanethiol oxidase deficiency 
+- 'extraoral halitosis due to methanethiol oxidase deficiency' SubClassOf 'hereditary disease'
++ 'extraoral halitosis due to methanethiol oxidase deficiency' SubClassOf 'autosomal recessive disease'
++ 'extraoral halitosis due to methanethiol oxidase deficiency' SubClassOf 'inborn disorder of methionine cycle and sulfur amino acid metabolism'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0021049
+Label(s): eicosapentaenoate EPA; 20:5n3 measurement 
+- 'eicosapentaenoate EPA; 20:5n3 measurement' SubClassOf 'metabolite measurement'
++ 'eicosapentaenoate EPA; 20:5n3 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007119
+Label(s): neck of femur 
+- 'neck of femur' SubClassOf 'skeleton structure'
++ 'neck of femur' SubClassOf 'anatomical entity'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0011287
+Label(s): craniosynostosis-anal anomalies-porokeratosis syndrome 
++ 'craniosynostosis-anal anomalies-porokeratosis syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060223
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001759
+Label(s): vagus nerve 
+- 'vagus nerve' SubClassOf 'craniofacial tissue'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010668
+Label(s): lung capillary endothelial cell 
+- 'lung capillary endothelial cell' SubClassOf 'lung structure'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010622
+Label(s): kallikrein‐6 measurement 
+- 'kallikrein‐6 measurement' SubClassOf 'blood protein amount'
++ 'kallikrein‐6 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010621
+Label(s): stromelysin‐2 measurement 
+- 'stromelysin‐2 measurement' SubClassOf 'blood protein amount'
++ 'stromelysin‐2 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0010618
+Label(s): pappalysin‐1 measurement 
+- 'pappalysin‐1 measurement' SubClassOf 'blood protein amount'
++ 'pappalysin‐1 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/UBERON_0007250
+Label(s): lingual tonsil 
+- 'lingual tonsil' SubClassOf 'craniofacial tissue'
+
+Class: http://purl.obolibrary.org/obo/CHEBI_6636
+Label(s): magnesium dichloride 
+- 'magnesium dichloride' SubClassOf 'chemical entity'
++ 'magnesium dichloride' SubClassOf http://purl.obolibrary.org/obo/CHEBI_46662
+
+Class: http://www.ebi.ac.uk/efo/EFO_0801721
+Label(s): interleukin-18 receptor 1 measurement 
+- 'interleukin-18 receptor 1 measurement' SubClassOf 'is_about' some 'interleukin-18 receptor 1'
+- 'interleukin-18 receptor 1 measurement' SubClassOf 'protein measurement'
++ 'interleukin-18 receptor 1 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022150
+Label(s): phospholipids in very small VLDL measurement 
+- 'phospholipids in very small VLDL measurement' SubClassOf 'lipid amount'
++ 'phospholipids in very small VLDL measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/UBERON_0002255
+Label(s): vomeronasal organ 
+- 'vomeronasal organ' SubClassOf 'craniofacial tissue'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859360
+Label(s): spinocerebellar ataxia, autosomal recessive 33 
++ 'spinocerebellar ataxia, autosomal recessive 33' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060223
+
+Class: http://www.ebi.ac.uk/efo/EFO_0020313
+Label(s): d-dimer measurement 
+- 'd-dimer measurement' SubClassOf 'protein measurement'
++ 'd-dimer measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0020237
+Label(s): casein kinase II 2-alpha':2-beta heterotetramer measurement 
+- 'casein kinase II 2-alpha':2-beta heterotetramer measurement' SubClassOf 'protein measurement'
++ 'casein kinase II 2-alpha':2-beta heterotetramer measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_1011354
+Label(s): reproductive system disorder, non-human animal 
+- 'reproductive system disorder, non-human animal' SubClassOf 'non-human animal disease'
++ 'reproductive system disorder, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770012
+
+Class: http://purl.obolibrary.org/obo/MONDO_1011336
+Label(s): nervous system disorder, non-human animal 
+- 'nervous system disorder, non-human animal' SubClassOf 'non-human animal disease'
++ 'nervous system disorder, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770012
+
+Class: http://purl.obolibrary.org/obo/MONDO_1011327
+Label(s): inflammatory disease, non-human animal 
+- 'inflammatory disease, non-human animal' SubClassOf 'non-human animal disease'
++ 'inflammatory disease, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770013
+
+Class: http://purl.obolibrary.org/obo/MONDO_1011319
+Label(s): hematologic disorder, non-human animal 
+- 'hematologic disorder, non-human animal' SubClassOf 'non-human animal disease'
++ 'hematologic disorder, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770012
+
+Class: http://purl.obolibrary.org/obo/MONDO_1011317
+Label(s): endocrine system disorder, non-human animal 
+- 'endocrine system disorder, non-human animal' SubClassOf 'non-human animal disease'
++ 'endocrine system disorder, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770012
+
+Class: http://purl.obolibrary.org/obo/MONDO_1011313
+Label(s): disorder of development or morphogenesis, non-human animal 
+- 'disorder of development or morphogenesis, non-human animal' SubClassOf 'non-human animal disease'
++ 'disorder of development or morphogenesis, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770013
+
+Class: http://www.ebi.ac.uk/efo/EFO_0008191
+Label(s): interleukin 8 measurement 
+- 'interleukin 8 measurement' SubClassOf 'blood protein amount'
+- 'interleukin 8 measurement' SubClassOf 'is_about' some 'interleukin-8'
++ 'interleukin 8 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_1011305
+Label(s): cancer or benign tumor, non-human animal 
+- 'cancer or benign tumor, non-human animal' SubClassOf 'non-human animal disease'
++ 'cancer or benign tumor, non-human animal' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770014
+
+Class: http://www.ebi.ac.uk/efo/EFO_0003858
+Label(s): skeleton structure 
+- 'skeleton structure' EquivalentTo 'part_of' some 'skeletal system'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0801716
+Label(s): interleukin-15 receptor subunit alpha measurement 
+- 'interleukin-15 receptor subunit alpha measurement' SubClassOf 'protein measurement'
+- 'interleukin-15 receptor subunit alpha measurement' SubClassOf 'is_about' some 'interleukin-15 receptor subunit alpha'
++ 'interleukin-15 receptor subunit alpha measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0801727
+Label(s): interleukin-27 receptor subunit alpha measurement 
+- 'interleukin-27 receptor subunit alpha measurement' SubClassOf 'protein measurement'
+- 'interleukin-27 receptor subunit alpha measurement' SubClassOf 'is_about' some 'interleukin-27 receptor subunit alpha'
++ 'interleukin-27 receptor subunit alpha measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0801731
+Label(s): interleukin-6 receptor subunit alpha measurement 
+- 'interleukin-6 receptor subunit alpha measurement' SubClassOf 'is_about' some 'interleukin-6 receptor subunit alpha'
+- 'interleukin-6 receptor subunit alpha measurement' SubClassOf 'protein measurement'
++ 'interleukin-6 receptor subunit alpha measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0020488
+Label(s): interleukin-10 measurement 
+- 'interleukin-10 measurement' SubClassOf 'protein measurement'
+- 'interleukin-10 measurement' SubClassOf 'is_about' some 'interleukin-10'
++ 'interleukin-10 measurement' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0008549
+Label(s): thoracic dysostosis, isolated 
+- 'thoracic dysostosis, isolated' SubClassOf 'hereditary disease'
++ 'thoracic dysostosis, isolated' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001825
+Label(s): paranasal sinus 
+- 'paranasal sinus' SubClassOf 'skeleton structure'
++ 'paranasal sinus' SubClassOf 'anatomical entity'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001723
+Label(s): tongue 
+- 'tongue' SubClassOf 'craniofacial tissue'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001706
+Label(s): nasal septum 
+- 'nasal septum' SubClassOf 'craniofacial tissue'
++ 'nasal septum' SubClassOf 'anatomical structure'
+
+Class: http://purl.obolibrary.org/obo/OBA_2044443
+Label(s): level of putative uncharacterized protein TXNRD3NB in blood serum 
+- 'level of putative uncharacterized protein TXNRD3NB in blood serum' SubClassOf 'part_of' some 'body fluid attribute'
+- 'level of putative uncharacterized protein TXNRD3NB in blood serum' SubClassOf 'amount'
+- 'level of putative uncharacterized protein TXNRD3NB in blood serum' SubClassOf 'hematopoietic system quality'
++ 'level of putative uncharacterized protein TXNRD3NB in blood serum' SubClassOf 'serum protein amount'
+
+Class: http://purl.obolibrary.org/obo/OBA_2059278
+Label(s): level of thioredoxin reductase 3 (human) in cerebrospinal fluid
+- 'level of thioredoxin reductase 3 (human) in cerebrospinal fluid' SubClassOf 'amount'
+- 'level of thioredoxin reductase 3 (human) in cerebrospinal fluid' SubClassOf 'anatomical entity attribute'
++ 'level of thioredoxin reductase 3 (human) in cerebrospinal fluid' SubClassOf 'protein amount'
+
+Class: http://purl.obolibrary.org/obo/UBERON_0001649
+Label(s): glossopharyngeal nerve 
+- 'glossopharyngeal nerve' SubClassOf 'craniofacial tissue'
 
 ----------------------------------
 
@@ -866,7 +794,24 @@ Label(s): intellectual disability, autosomal dominant 24
 
 @Classes deleted from this version
 
+Class: http://purl.obolibrary.org/obo/MONDO_0019835
+Label(s): primary hypophysitis 
++ 'primary hypophysitis' SubClassOf 'autoimmune disorder of central nervous system'
++ 'primary hypophysitis' SubClassOf 'acquired pituitary hormone deficiency'
++ 'primary hypophysitis' SubClassOf 'autoimmune disorder of endocrine system'
++ 'primary hypophysitis' SubClassOf 'hypophysitis'
 
+Class: http://purl.obolibrary.org/obo/PR_000013872
+Label(s): obsolete regenerating islet-derived protein 3-gamma 
++ 'obsolete regenerating islet-derived protein 3-gamma' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/OBA_2058599
+Label(s): level of obsolete putative T-complex protein 10A homolog (human) in cerebrospinal fluid 
+- 'level of obsolete putative T-complex protein 10A homolog (human) in cerebrospinal fluid' SubClassOf 'inheres in part of' some 'cerebrospinal fluid'
+- 'level of obsolete putative T-complex protein 10A homolog (human) in cerebrospinal fluid' SubClassOf 'amount'
+- 'level of obsolete putative T-complex protein 10A homolog (human) in cerebrospinal fluid' SubClassOf 'anatomical entity attribute'
+- 'level of obsolete putative T-complex protein 10A homolog (human) in cerebrospinal fluid' SubClassOf 'part_of' some 'body fluid attribute'
++ 'level of obsolete putative T-complex protein 10A homolog (human) in cerebrospinal fluid' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
 ----------------------------------
 4. Scope of the Ontology
