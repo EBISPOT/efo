@@ -7,9 +7,6 @@ on:
       - 'src/ontology/efo-edit.owl'
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   assign_ids:
     runs-on: ubuntu-latest
@@ -17,7 +14,11 @@ jobs:
     env:
       ROBOT_PLUGINS_DIRECTORY: /odk/resources/robot/plugins
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Prepare MONDO import
         run: |
@@ -32,13 +33,8 @@ jobs:
           make allocate-definitive-ids
 
       - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/ontology/efo-edit.owl
-          if git diff --cached --quiet; then
-            echo "No temporary IDs to replace."
-            exit 0
-          fi
-          git commit -m "Replace temporary EFO IDs by definitive IDs."
-          git push
+        uses: actions-js/push@v1.5
+        with:
+          github_token: ${{ secrets.EFO_ID_ALLOCATION_TOKEN }}
+          message: "Replace temporary IDs by definitive IDs."
+          branch: ${{ github.ref }}
