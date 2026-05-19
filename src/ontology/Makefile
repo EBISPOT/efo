@@ -16,7 +16,7 @@ ECTOPREFIX = "ECTO: http://purl.obolibrary.org/obo/ECTO_"
 BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                bf11f474d23c03cfa40d5f8900a100f4acb52ff59551fa43a34f8df7834dc952
+CONFIG_HASH=                aa1f030e31c716bec7b3fd13b495ff27ba2dbb9fb322e57ecd4bba576738005a
 
 
 # ----------------------------------------
@@ -577,7 +577,7 @@ mirror-hp: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 ifeq ($(IMP_LARGE),true)
 mirror-chebi: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.obolibrary.org/obo/chebi/chebi-base.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I http://purl.obolibrary.org/obo/chebi/chebi.owl --base-iri http://purl.obolibrary.org/obo/CHEBI  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 endif
 
 
@@ -586,7 +586,7 @@ endif
 .PRECIOUS: $(MIRRORDIR)/pr.owl
 ifeq ($(IMP_LARGE),true)
 mirror-pr: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.obolibrary.org/obo/pr/pr-base.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I http://purl.obolibrary.org/obo/pr.owl --base-iri http://purl.obolibrary.org/obo/PR  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 endif
 
 

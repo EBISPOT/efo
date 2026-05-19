@@ -19,8 +19,8 @@ These are the current imports in EFO
 | uberon | http://purl.obolibrary.org/obo/uberon/uberon-base.owl | slme |
 | mondo | http://purl.obolibrary.org/obo/mondo/mondo-base.owl | slme |
 | hp | http://purl.obolibrary.org/obo/hp/hp-base.owl | slme |
-| chebi | http://purl.obolibrary.org/obo/chebi/chebi-base.owl | slme |
-| pr | http://purl.obolibrary.org/obo/pr/pr-base.owl | slme |
+| chebi | http://purl.obolibrary.org/obo/chebi/chebi.owl | slme |
+| pr | http://purl.obolibrary.org/obo/pr.owl | slme |
 | ecto | http://purl.obolibrary.org/obo/ecto/ecto-base.owl | slme |
 | cl | http://purl.obolibrary.org/obo/cl/cl-base.owl | slme |
 | gsso | http://purl.obolibrary.org/obo/gsso.owl | slme |

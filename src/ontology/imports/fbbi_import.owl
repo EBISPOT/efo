@@ -1,958 +1,1212 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.ebi.ac.uk/efo/imports/fbbi_import.owl#"
-     xml:base="http://www.ebi.ac.uk/efo/imports/fbbi_import.owl"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://www.ebi.ac.uk/efo/imports/fbbi_import.owl"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label xml:lang="en">part of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
-        <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
-        <rdfs:label xml:lang="en">characteristic of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000240 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000240">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000265"/>
-        <obo:IAO_0000115>Methods for imaging objects large enough to be observed by the unaided eye</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000240</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>macroscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000241 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000241">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000265"/>
-        <obo:IAO_0000115>Methods for forming images of objects too small to be observed with the unaided eye</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000241</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000243 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000243">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000243</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>bright-field microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000244 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000244">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <obo:IAO_0000115>Imaging with rejection of the unscattered illumination (removal of the zero order component of the diffracted wave)</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000244</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>dark-field microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000245 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000245">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>DIC</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Nomarski</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00000245</oboInOwl:id>
-        <rdfs:label>differential interference contrast microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000246 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000246">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000246</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>fluorescence microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000247 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000247">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000247</oboInOwl:id>
-        <rdfs:label>phase contrast microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000248 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000248">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <obo:IAO_0000115>A form of light microscopy that uses polarized light. Such form can be used to image samples that exibit optical anisotropy.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>anisotropy/polarization microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>polarized light microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000248</oboInOwl:id>
-        <rdfs:label>polarization microscopy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000248"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A form of light microscopy that uses polarized light. Such form can be used to image samples that exibit optical anisotropy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:23901032</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000249 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000249">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000249</oboInOwl:id>
-        <rdfs:label>time lapse microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000251 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000251">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000251</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>confocal microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000252 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000252">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000251"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000252</oboInOwl:id>
-        <rdfs:label>single-spot confocal microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000253 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000253">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000251"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000253</oboInOwl:id>
-        <rdfs:label>spinning disk confocal microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000254 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000254">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000255"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000254</oboInOwl:id>
-        <rdfs:label>two-photon laser scanning microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000255 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000255">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000255</oboInOwl:id>
-        <rdfs:label>multi-photon microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000256 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000256">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000343"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>mode of electron microscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00000256</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>electron microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000257 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000257">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000256"/>
-        <obo:IAO_0000115>Image is formed by scanning the surface of the specimen with a beam of electrons in a raster pattern</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000257</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>scanning electron microscopy (SEM)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000258 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000258">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000256"/>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>TEM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00000258</oboInOwl:id>
-        <rdfs:label>transmission electron microscopy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000258"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>TEM</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000259 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000259">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000344"/>
-        <obo:IAO_0000115>The scanning probe is maintained at a fixed distance above the surface e of the specimen by van der Waals forces</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000259</oboInOwl:id>
-        <rdfs:label>atomic force microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000260 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000260">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000241"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001001"/>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/X-ray_microscope</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000260</oboInOwl:id>
-        <rdfs:label>X-ray microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000265 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000265">
-        <obo:IAO_0000115>Methods and devices used for capturing an image of a real object; distinct from images created by artwork</obo:IAO_0000115>
-        <obo:IAO_0000589>image recording method</obo:IAO_0000589>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-09T09:57:38Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>photograph</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00000265</oboInOwl:id>
-        <rdfs:label>recorded image</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000343 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000343">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000241"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-09T04:04:04Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000343</oboInOwl:id>
-        <rdfs:label>microscopy with lenses</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000344 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000344">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000241"/>
-        <obo:IAO_0000115>Imaging by means of a physical probe that passes over the sample</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-09T04:04:04Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000344</oboInOwl:id>
-        <rdfs:label>scanning probe microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000345 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000345">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000343"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-09T04:18:03Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>mode of light microscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00000345</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>light microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000347 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000347">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000344"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-09T10:19:35Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000347</oboInOwl:id>
-        <rdfs:label>scanning tunneling microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000348 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000348">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000344"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-09T10:19:35Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000348</oboInOwl:id>
-        <rdfs:label>nearfield scanning optical microscopy (ANSOM)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000349 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000349">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000348"/>
-        <obo:IAO_0000115>Aperture-less NSOM.</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-09T10:20:01Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000349</oboInOwl:id>
-        <rdfs:label>ANSOM</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000351 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000351">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000248"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-09T10:25:08Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000351</oboInOwl:id>
-        <rdfs:label>orientation-independent polarization microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000365 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000365">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <obo:IAO_0000115>Fluorescence loss in photobleaching; a method of determining whether two populations of fluorophore are in diffusive communication with one another by observing the decrease in brightness of one population when the other population is subjected to continuous photobleaching.</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-11T10:09:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000365</oboInOwl:id>
-        <rdfs:label>FLIP</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000366 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000366">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000365"/>
-        <obo:IAO_0000115>Fluorescence loss in photobleaching; a method of determining the rate and extent of exchange between a localized population of fluorophore and a non-localized diffusible pool, by observing the rate of recovery of brightness of the localized population after photobleaching.</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-11T10:09:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000366</oboInOwl:id>
-        <rdfs:label>FRAP</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000366"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Fluorescence loss in photobleaching; a method of determining the rate and extent of exchange between a localized population of fluorophore and a non-localized diffusible pool, by observing the rate of recovery of brightness of the localized population after photobleaching.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>XX:-new-dbxref-</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000367 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000367">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <obo:IAO_0000115>Fluorescence (or Forster) resonance energy transfer; a method of estimating the distance between two fluorophores by measuring the extent of non-radiative energy transfer between the two. Experimentally, this involves selective excitation of one while observing emission from the other.</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-11T10:09:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000367</oboInOwl:id>
-        <rdfs:label>FRET</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000368 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000368">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <obo:IAO_0000115>A fluorescence microscopy method in which the image contrast is derived from the fluorescence lifetime at each point in a two-dimensional image and not the local concentration and/or intensity of the fluorophore.</obo:IAO_0000115>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6095-8718"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-11T10:09:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>FLIM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000368</oboInOwl:id>
-        <rdfs:label>fluorescence lifetime imaging microscopy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000368"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A fluorescence microscopy method in which the image contrast is derived from the fluorescence lifetime at each point in a two-dimensional image and not the local concentration and/or intensity of the fluorophore.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:1519759</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000368"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>FLIM</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000369 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000369">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <obo:IAO_0000115>A fluorescence microscopy method where the sample is illuminated from the side in a well-defined volume around the focal plane of the detection optics.</obo:IAO_0000115>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0001-6178-2884"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-11T10:09:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>SPIM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>light-sheet fluorescence microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>light-sheet microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000369</oboInOwl:id>
-        <rdfs:label>selective plane illumination fluorescence microscopy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000369"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A fluorescence microscopy method where the sample is illuminated from the side in a well-defined volume around the focal plane of the detection optics.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:19465594</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000369"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>SPIM</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000370 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000370">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <obo:IAO_0000115>A form of microscopy that can detect molecularly specific contrasts based on the vibrational spectra of the sample molecules, by producing and detecting Raman-scattered photons.</obo:IAO_0000115>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6095-8718"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-11T10:13:20Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>CARS microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000370</oboInOwl:id>
-        <rdfs:label>coherent Raman anti-Stokes microscopy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000370"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A form of microscopy that can detect molecularly specific contrasts based on the vibrational spectra of the sample molecules, by producing and detecting Raman-scattered photons.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1002/cphc.200700202</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000370"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>CARS microscopy</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000371 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000371">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000345"/>
-        <obo:IAO_0000115>Optical coherence tomography; an interferometric method of imaging using back-scattered photons (elastic scattering)</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-11T10:32:19Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000371</oboInOwl:id>
-        <rdfs:label>OCT</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000372 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000372">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000257"/>
-        <obo:IAO_0000115>Image created using the electrons generated by ionization of a sample due to inelastic scattering of the primary beam of radiation</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-12T08:34:44Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000372</oboInOwl:id>
-        <rdfs:label>secondary_electron imaging</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000373 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000373">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000257"/>
-        <obo:IAO_0000115>Imaged formed using electrons undergoing elastic scattering at very high angles, with emission of characteristic X-rays</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-12T08:40:37Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000373</oboInOwl:id>
-        <rdfs:label>back-scattered_electron imaging</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000380 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000380">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000256"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-12T09:12:36Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000380</oboInOwl:id>
-        <rdfs:label>scanning-transmission electron microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000381 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000381">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000256"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-12T09:16:40Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>EFTEM energy filtered TEM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>ESI  electron spectroscopic imaging</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00000381</oboInOwl:id>
-        <rdfs:label>EELS imaging</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000382 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000382">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000256"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-12T09:16:40Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000382</oboInOwl:id>
-        <rdfs:label>EDAX imaging</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000392 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000392">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000251"/>
-        <obo:IAO_0000115>Illumination and detection via a thin slit</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-12T10:32:36Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000392</oboInOwl:id>
-        <rdfs:label>slit-scan confocal microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000393 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000393">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000251"/>
-        <obo:IAO_0000115>Fixed array of sources focused to an array of spots that is swept over the specimen in raster fashion</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-12T10:35:43Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000393</oboInOwl:id>
-        <rdfs:label>array-scan confocal microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000585 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000585">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000373"/>
-        <obo:IAO_0000115>A method of reconstructing 3D structure by combining serial sectioning with scanning EM.</obo:IAO_0000115>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-09-02T05:10:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000585</oboInOwl:id>
-        <rdfs:label>serial block face SEM (SBFSEM)</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000585"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A method of reconstructing 3D structure by combining serial sectioning with scanning EM.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:15514700</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000603 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000603">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000248"/>
-        <obo:IAO_0000115>A mode of microscopy that detects the rotational motion of fluorophores.</obo:IAO_0000115>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6095-8718"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-09-04T01:28:20Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>FAIM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fluorescence anisotropy imaging</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000603</oboInOwl:id>
-        <rdfs:label>fluorescence polarization microscopy</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000603"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A mode of microscopy that detects the rotational motion of fluorophores.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:2317548</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000603"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>FAIM</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000616 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000616">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000244"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-05-23T10:09:41Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>FTIR  frustrated total internal reflection</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00000616</oboInOwl:id>
-        <rdfs:label>evanescent wave scattering</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000617 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000617">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000246"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-05-23T10:10:58Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>total internal reflection fluorescence  TIRF</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00000617</oboInOwl:id>
-        <rdfs:label>evanescent wave microscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000622 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000622">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000258"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-05-23T10:53:45Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000622</oboInOwl:id>
-        <rdfs:label>high-voltage electron microscopy (HVEM)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00000623 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000623">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000258"/>
-        <oboInOwl:created_by>jm</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-05-23T10:53:45Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00000623</oboInOwl:id>
-        <rdfs:label>intermediate voltage electron microscopy (IVEM)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00001000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00001000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000265"/>
-        <obo:IAO_0000115>An imaging technique that uses high energy electromagnetic radiation, typically X-rays, as a source of illumination.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00001000</oboInOwl:id>
-        <rdfs:label>radiography</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001000"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An imaging technique that uses high energy electromagnetic radiation, typically X-rays, as a source of illumination.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/w/index.php?title=Radiography&amp;oldid=606628211</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00001001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00001001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001000"/>
-        <obo:IAO_0000115>Radiography using X-rays</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>X-radiography</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>X-ray</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00001001</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>X-ray radiography</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00001002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00001002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001003"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001005"/>
-        <oboInOwl:hasDbXref>MeSH:D014057</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/X-ray_computed_tomography</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>CAT scan</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>CT scan</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>X-ray CT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>computed axial tomography</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>FBbi:00001002</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod"/>
-        <rdfs:label>X-ray computed tomography</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00001003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00001003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001001"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001004"/>
-        <obo:IAO_0000115>Tomography using X-ray illumination.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00001003</oboInOwl:id>
-        <rdfs:label>X-ray tomography</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00001004 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00001004">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000265"/>
-        <obo:IAO_0000115>An imaging technique that creates virtual sections through the use of any kind of penetrating wave.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00001004</oboInOwl:id>
-        <rdfs:label>tomography</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00001005 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00001005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001004"/>
-        <obo:IAO_0000115>Tomography in which virtual sections are taken from multiple angles and the results are processed via tomographic reconstruction software to produce 2 or 3D images.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00001005</oboInOwl:id>
-        <rdfs:label>computed tomography</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/FBbi_00050000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00050000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000373"/>
-        <obo:IAO_0000115>A method of reconstructing 3D structure by combining focussed ion beam milling to remove sucessive layers from a sample block with scanning EM to image the exposed surface between each milling step.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>FIB-SEM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>FBbi:00050000</oboInOwl:id>
-        <rdfs:label>focussed ion beam scanning electron microscopy (FIB-SEM)</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00050000"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A method of reconstructing 3D structure by combining focussed ion beam milling to remove sucessive layers from a sample block with scanning EM to image the exposed surface between each milling step.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:22119321</oboInOwl:hasDbXref>
-    </owl:Axiom>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
-
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/fbbi_import.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/fbbi_import.owl>
+<http://www.ebi.ac.uk/efo/releases/v3.89.0/imports/fbbi_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/fbbi/releases/2026-03-30/fbbi-base.owl>)
+Annotation(owl:versionInfo "3.89.0")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000031>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000222>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000240>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000241>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000243>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000244>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000245>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000246>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000247>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000248>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000249>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000251>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000252>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000253>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000254>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000255>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000256>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000257>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000258>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000259>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000260>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000265>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000268>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000269>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000270>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000271>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000272>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000273>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000277>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000278>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000284>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000285>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000286>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000287>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000288>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000289>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000290>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000292>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000294>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000306>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000307>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000308>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000309>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000310>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000311>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000312>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000313>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000316>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000319>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000321>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000322>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000326>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000341>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000342>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000343>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000344>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000345>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000347>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000348>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000349>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000350>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000351>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000352>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000364>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000365>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000366>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000367>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000368>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000369>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000370>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000371>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000372>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000373>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000380>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000381>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000382>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000383>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000384>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000391>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000392>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000393>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000394>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000395>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000585>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000589>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000590>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000603>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000605>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000616>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000617>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000622>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00000623>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00001000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00001001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00001002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00001003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00001004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00001005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00001006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00050000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_00100013>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbi_root_00000000>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/FBbi_00000346>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000589>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0003000>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/date>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#creation_date>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#default-namespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#inSubset>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/OMO_0003000> (<http://purl.obolibrary.org/obo/OMO_0003000>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/OMO_0003000> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod> (<http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/FBbi_00000346> (makes_use_of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000346> "The child is an essential component of the parent device, or plays an essential role in performance of the parent function.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000346> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000346> "2010-03-09T09:32:04Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000346> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000346> "FBbi:00000346")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000346> "makes_use_of")
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/FBbi_00000346>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000001> (sample preparation method)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000001> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000001> "FBbi:00000001")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000001> "sample preparation method")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000001> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000031> (visualization method)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000031> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000031> "FBbi:00000031")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000031> "visualization method")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000031> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000222> (imaging method)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000222> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000222> "FBbi:00000222")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000222> "imaging method")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000222> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000240> (macroscopy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000240> "Methods for imaging objects large enough to be observed by the unaided eye")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000240> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000240> "FBbi:00000240")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000240> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000240> "macroscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000240> <http://purl.obolibrary.org/obo/FBbi_00000265>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000241> (microscopy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000241> "Methods for forming images of objects too small to be observed with the unaided eye")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000241> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000241> "FBbi:00000241")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000241> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000241> "microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000241> <http://purl.obolibrary.org/obo/FBbi_00000265>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000243> (bright-field microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000243> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000243> "FBbi:00000243")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000243> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000243> "bright-field microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000243> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000277>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000306>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000308>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000243> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000243> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000277>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000243> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000306>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000243> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000308>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000244> (dark-field microscopy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000244> "Imaging with rejection of the unscattered illumination (removal of the zero order component of the diffracted wave)")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000244> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000244> "FBbi:00000244")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000244> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000244> "dark-field microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000292>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000310>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000244> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000244> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000292>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000244> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000310>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000245> (differential interference contrast microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000245> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000245> "DIC")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000245> "Nomarski")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000245> "FBbi:00000245")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000245> "differential interference contrast microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000245> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000312>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000326>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000350>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000352>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000245> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000312>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000326>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000350>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000245> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000352>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000246> (fluorescence microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000246> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000246> "FBbi:00000246")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000246> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000246> "fluorescence microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000246> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000316>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000341>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000246> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000246> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000316>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000247> (phase contrast microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000247> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000247> "FBbi:00000247")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000247> "phase contrast microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000247> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000290>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000311>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000247> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000247> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000290>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000247> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000311>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000248> (polarization microscopy)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:23901032") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000248> "A form of light microscopy that uses polarized light. Such form can be used to image samples that exibit optical anisotropy.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000248> "anisotropy/polarization microscopy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000248> "polarized light microscopy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000248> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000248> "FBbi:00000248")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000248> "polarization microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000248> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000313>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000350>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000352>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000248> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000248> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000313>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000248> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000350>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000248> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000352>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000249> (time lapse microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000249> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000249> "FBbi:00000249")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000249> "time lapse microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000249> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000251> (confocal microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000251> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000251> "FBbi:00000251")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000251> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000251> "confocal microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000251> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000278>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000307>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000316>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000251> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000251> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000278>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000251> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000307>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000252> (single-spot confocal microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000252> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000252> "FBbi:00000252")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000252> "single-spot confocal microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000252> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000251> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000286>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000394>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000252> <http://purl.obolibrary.org/obo/FBbi_00000251>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000252> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000286>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000252> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000394>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000253> (spinning disk confocal microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000253> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000253> "FBbi:00000253")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000253> "spinning disk confocal microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000253> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000251> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000288>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000294>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000307>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000253> <http://purl.obolibrary.org/obo/FBbi_00000251>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000253> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000288>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000253> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000294>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000254> (two-photon laser scanning microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000254> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000254> "FBbi:00000254")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000254> "two-photon laser scanning microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000254> <http://purl.obolibrary.org/obo/FBbi_00000255>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000255> (multi-photon microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000255> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000255> "FBbi:00000255")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000255> "multi-photon microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000255> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000278>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000284>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000316>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000255> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000255> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000278>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000255> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000284>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000256> (electron microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000256> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000256> "mode of electron microscopy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000256> "FBbi:00000256")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000256> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000256> "electron microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000256> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000343> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000273>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000256> <http://purl.obolibrary.org/obo/FBbi_00000343>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000256> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000273>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000257> (scanning electron microscopy (SEM))
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000257> "Image is formed by scanning the surface of the specimen with a beam of electrons in a raster pattern")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000257> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000257> "FBbi:00000257")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000257> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000257> "scanning electron microscopy (SEM)")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000257> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000256> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000278>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000257> <http://purl.obolibrary.org/obo/FBbi_00000256>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000257> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000278>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000258> (transmission electron microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000258> "image")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/OMO_0003000>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000258> "TEM")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000258> "FBbi:00000258")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000258> "transmission electron microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000258> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000256> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000277>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000306>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000258> <http://purl.obolibrary.org/obo/FBbi_00000256>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000258> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000277>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000258> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000306>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000259> (atomic force microscopy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000259> "The scanning probe is maintained at a fixed distance above the surface e of the specimen by van der Waals forces")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000259> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000259> "FBbi:00000259")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000259> "atomic force microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000259> <http://purl.obolibrary.org/obo/FBbi_00000344>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000260> (X-ray microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbi_00000260> "http://en.wikipedia.org/wiki/X-ray_microscope")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000260> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000260> "FBbi:00000260")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000260> "X-ray microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000260> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000241> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000342>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000260> <http://purl.obolibrary.org/obo/FBbi_00000241>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000260> <http://purl.obolibrary.org/obo/FBbi_00001001>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000265> (recorded image)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000265> "Methods and devices used for capturing an image of a real object; distinct from images created by artwork")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000589> <http://purl.obolibrary.org/obo/FBbi_00000265> "image recording method")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000265> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000265> "2010-03-09T09:57:38Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000265> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000265> "photograph")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000265> "FBbi:00000265")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000265> "recorded image")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000265> <http://purl.obolibrary.org/obo/FBbi_00000222>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000268> (illumination method)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000268> "Sources and methods for illumination")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000268> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000268> "2010-03-09T10:38:14Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000268> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000268> "FBbi:00000268")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000268> "illumination method")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000268> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000269> (detection method)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000269> "Media and devices employed for recording the alterations in the illumination that result from its interaction with the sample")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000269> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000269> "2010-03-09T10:38:14Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000269> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000269> "FBbi:00000269")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000269> "detection method")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000269> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000270> (imaged parameter)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000270> "The physical property of the specimen that leads to the modifications of the illumination that are recorded in the image.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000270> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000270> "2010-03-09T10:38:14Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000270> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000270> "FBbi:00000270")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000270> "imaged parameter")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000270> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000271> (contrast-enhancing method)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000271> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000271> "2010-03-09T10:38:14Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000271> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000271> "FBbi:00000271")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000271> "contrast-enhancing method")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000271> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000272> (illumination by photons)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000272> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000272> "2010-03-09T10:46:27Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000272> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000272> "FBbi:00000272")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000272> "illumination by photons")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000272> <http://purl.obolibrary.org/obo/FBbi_00000268>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000273> (illumination by electrons)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000273> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000273> "2010-03-09T10:46:27Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000273> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000273> "FBbi:00000273")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000273> "illumination by electrons")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000273> <http://purl.obolibrary.org/obo/FBbi_00000268>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000277> (widefield illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000277> "Illumination that covers the entire field of view of the image-forming lens")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000277> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000277> "2010-03-09T10:50:41Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000277> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000277> "FBbi:00000277")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000277> "widefield illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000277> <http://purl.obolibrary.org/obo/FBbi_00000268>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000278> (narrowfield illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000278> "Illumination restricted to a small portion of the field of view of the imaging lens; often one or more diffraction limited spots")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000278> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000278> "2010-03-09T10:50:41Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000278> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000278> "FBbi:00000278")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000278> "narrowfield illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000278> <http://purl.obolibrary.org/obo/FBbi_00000268>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000284> (pulsed illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000284> "Illumination that varies with time; often achieved with pulsed lasers for the purpose of generating very-high peak illumination power")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000284> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000284> "2010-03-09T10:50:41Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000284> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000284> "FBbi:00000284")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000284> "pulsed illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000284> <http://purl.obolibrary.org/obo/FBbi_00000268>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000285> (oblique illumination)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000285> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000285> "2010-03-09T10:50:41Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000285> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000285> "FBbi:00000285")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000285> "oblique illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000285> <http://purl.obolibrary.org/obo/FBbi_00000268>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000286> (single point scanning)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000286> "Illumination by a single spot of light that is scanned across the field of view")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000286> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000286> "2010-03-09T10:51:29Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000286> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000286> "FBbi:00000286")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000286> "single point scanning")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000286> <http://purl.obolibrary.org/obo/FBbi_00000278>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000287> (multiple point scanning)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000287> "Illumination by multiple points of light simultaneously")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000287> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000287> "2010-03-09T10:51:29Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000287> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000287> "FBbi:00000287")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000287> "multiple point scanning")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000287> <http://purl.obolibrary.org/obo/FBbi_00000278>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000288> (spinning disk scanning)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000288> "Scanning by multiple points of light arising from pinholes in a spinning disk that is illuminated by a widefield source")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000288> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000288> "2010-03-09T10:52:38Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000288> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000288> "FBbi:00000288")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000288> "spinning disk scanning")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000288> <http://purl.obolibrary.org/obo/FBbi_00000287>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000289> (array scanning)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000289> "Multiple points of illumination generated by a fixed array of sources.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000289> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000289> "2010-03-09T10:52:38Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000289> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000289> "FBbi:00000289")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000289> "array scanning")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000289> <http://purl.obolibrary.org/obo/FBbi_00000287>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000290> (hollow-cone illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000290> "Illumination parallel or at small angles to the optical axis is attenuated or blocked by a stop")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000290> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000290> "2010-03-09T11:04:14Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000290> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000290> "FBbi:00000290")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000290> "hollow-cone illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000290> <http://purl.obolibrary.org/obo/FBbi_00000285>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000292> (darkfield illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000292> "Illumination restricted to angles that exceed the acceptance angle of the image-forming lens")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000292> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000292> "2010-03-09T11:04:41Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000292> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000292> "FBbi:00000292")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000292> "darkfield illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000292> <http://purl.obolibrary.org/obo/FBbi_00000290>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000294> (charge coupled device (CCD))
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000294> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000294> "2010-03-09T11:33:49Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000294> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000294> "FBbi:00000294")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000294> "charge coupled device (CCD)")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000294> <http://purl.obolibrary.org/obo/FBbi_00000395>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000306> (wide-field detection)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000306> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000306> "2010-03-09T12:45:35Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000306> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000306> "FBbi:00000306")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000306> "wide-field detection")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000306> <http://purl.obolibrary.org/obo/FBbi_00000269>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000307> (narrow-field detection)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000307> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000307> "2010-03-09T12:45:35Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000307> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000307> "FBbi:00000307")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000307> "narrow-field detection")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000307> <http://purl.obolibrary.org/obo/FBbi_00000269>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000308> (absorption of illumination)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000308> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000308> "2010-03-09T03:11:47Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000308> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000308> "FBbi:00000308")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000308> "absorption of illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000308> <http://purl.obolibrary.org/obo/FBbi_00000270>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000309> (inelastic scattering)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "doi:10.1351/goldbook.I03025") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000309> "A form of particle scattering in which the energy of the scattered particle is different from that of the incident particle (contrary to elastic scattering, where the energy remains the same).")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00000309> <https://orcid.org/0000-0002-6095-8718>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000309> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000309> "2010-03-09T03:11:47Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000309> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000309> "FBbi:00000309")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000309> "inelastic scattering")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000309> <http://purl.obolibrary.org/obo/FBbi_00000270>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000310> (elastic scattering)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000310> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000310> "2010-03-09T03:11:47Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000310> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000310> "FBbi:00000310")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000310> "elastic scattering")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000310> <http://purl.obolibrary.org/obo/FBbi_00000270>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000311> (refractive index)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000311> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000311> "2010-03-09T03:11:47Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000311> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000311> "FBbi:00000311")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000311> "refractive index")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000311> <http://purl.obolibrary.org/obo/FBbi_00000270>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000312> (optical path length gradient)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000312> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000312> "2010-03-09T03:11:47Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000312> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000312> "FBbi:00000312")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000312> "optical path length gradient")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000312> <http://purl.obolibrary.org/obo/FBbi_00000270>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000313> (retardance)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000313> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000313> "2010-03-09T03:11:47Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000313> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000313> "FBbi:00000313")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000313> "retardance")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000313> <http://purl.obolibrary.org/obo/FBbi_00000270>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000316> (fluorescence emission)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000316> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000316> "2010-03-09T03:11:47Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000316> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000316> "FBbi:00000316")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000316> "fluorescence emission")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000316> <http://purl.obolibrary.org/obo/FBbi_00000270>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000319> (chemical composition)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000319> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000319> "2010-03-09T03:11:47Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000319> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000319> "FBbi:00000319")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000319> "chemical composition")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000319> <http://purl.obolibrary.org/obo/FBbi_00000270>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000321> (resolution-enhancing method)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000321> "Methods for increasing the resolution beyond the classical Abbe diffraction limit")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000321> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000321> "2010-03-09T03:12:34Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000321> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000321> "FBbi:00000321")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000321> "resolution-enhancing method")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000321> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000322> (optical method)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000589> <http://purl.obolibrary.org/obo/FBbi_00000322> "optical contrast enhancing method")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000322> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000322> "2010-03-09T03:14:53Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000322> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000322> "FBbi:00000322")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000322> "optical method")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000322> <http://purl.obolibrary.org/obo/FBbi_00000271>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000326> (Wollaston prism)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000326> "A birefringent optical element typically used to split polarized illumination into two sets of parallel but displaced rays")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000326> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000326> "2010-03-09T03:20:14Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000326> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000326> "FBbi:00000326")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000326> "Wollaston prism")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000326> <http://purl.obolibrary.org/obo/FBbi_00000322>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000341> (UV/visible/IR illumination)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000341> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000341> "2010-03-09T03:51:49Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000341> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000341> "FBbi:00000341")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000341> "UV/visible/IR illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000341> <http://purl.obolibrary.org/obo/FBbi_00000272>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000342> (X-ray illumination)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000342> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000342> "2010-03-09T03:51:49Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000342> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000342> "FBbi:00000342")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000342> "X-ray illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000342> <http://purl.obolibrary.org/obo/FBbi_00001006>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000343> (microscopy with lenses)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000343> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000343> "2010-03-09T04:04:04Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000343> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000343> "FBbi:00000343")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000343> "microscopy with lenses")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000343> <http://purl.obolibrary.org/obo/FBbi_00000241>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000344> (scanning probe microscopy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000344> "Imaging by means of a physical probe that passes over the sample")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000344> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000344> "2010-03-09T04:04:04Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000344> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000344> "FBbi:00000344")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000344> "scanning probe microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000344> <http://purl.obolibrary.org/obo/FBbi_00000241>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000345> (light microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000345> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000345> "2010-03-09T04:18:03Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000345> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000345> "mode of light microscopy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000345> "FBbi:00000345")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00000345> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000345> "light microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000343> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000341>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000345> <http://purl.obolibrary.org/obo/FBbi_00000343>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000341>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000347> (scanning tunneling microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000347> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000347> "2010-03-09T10:19:35Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000347> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000347> "FBbi:00000347")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000347> "scanning tunneling microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000347> <http://purl.obolibrary.org/obo/FBbi_00000344>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000348> (nearfield scanning optical microscopy (ANSOM))
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000348> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000348> "2010-03-09T10:19:35Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000348> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000348> "FBbi:00000348")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000348> "nearfield scanning optical microscopy (ANSOM)")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000348> <http://purl.obolibrary.org/obo/FBbi_00000344>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000349> (ANSOM)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000349> "Aperture-less NSOM.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000349> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000349> "2010-03-09T10:20:01Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000349> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000349> "FBbi:00000349")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000349> "ANSOM")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000349> <http://purl.obolibrary.org/obo/FBbi_00000348>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000350> (polarized light illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000350> "An illumination method in which the sample is illuminated by light waves of only one polarization, instead of a mix of waves of various polarizations.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00000350> <https://orcid.org/0000-0002-6095-8718>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000350> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000350> "2010-03-09T10:23:41Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000350> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000350> "FBbi:00000350")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000350> "polarized light illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000350> <http://purl.obolibrary.org/obo/FBbi_00000272>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000351> (orientation-independent polarization microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000351> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000351> "2010-03-09T10:25:08Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000351> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000351> "FBbi:00000351")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000351> "orientation-independent polarization microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000351> <http://purl.obolibrary.org/obo/FBbi_00000248>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000352> (polarization-sensitive detection)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000352> "A detection method that only detects light that has a specific polarization.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00000352> <https://orcid.org/0000-0002-6095-8718>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000352> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000352> "2010-03-09T10:27:11Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000352> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000352> "FBbi:00000352")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000352> "polarization-sensitive detection")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000352> <http://purl.obolibrary.org/obo/FBbi_00000269>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000364> (light-sheet illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000364> "Illumination in the form of a thin sheet of light directed perpendicular to the optic axis")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000364> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000364> "2010-03-11T10:06:20Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000364> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000364> "FBbi:00000364")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000364> "light-sheet illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000364> <http://purl.obolibrary.org/obo/FBbi_00000285>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000365> (FLIP)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000365> "Fluorescence loss in photobleaching; a method of determining whether two populations of fluorophore are in diffusive communication with one another by observing the decrease in brightness of one population when the other population is subjected to continuous photobleaching.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000365> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000365> "2010-03-11T10:09:33Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000365> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000365> "FBbi:00000365")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000365> "FLIP")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000365> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000246> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000384>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000365> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000365> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000384>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000366> (FRAP)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "XX:-new-dbxref-") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000366> "Fluorescence loss in photobleaching; a method of determining the rate and extent of exchange between a localized population of fluorophore and a non-localized diffusible pool, by observing the rate of recovery of brightness of the localized population after photobleaching.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000366> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000366> "2010-03-11T10:09:33Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000366> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000366> "FBbi:00000366")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000366> "FRAP")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000366> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000246> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000278>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000384>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000366> <http://purl.obolibrary.org/obo/FBbi_00000365>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000366> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000278>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000367> (FRET)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000367> "Fluorescence (or Forster) resonance energy transfer; a method of estimating the distance between two fluorophores by measuring the extent of non-radiative energy transfer between the two. Experimentally, this involves selective excitation of one while observing emission from the other.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000367> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000367> "2010-03-11T10:09:33Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000367> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000367> "FBbi:00000367")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000367> "FRET")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000367> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000368> (fluorescence lifetime imaging microscopy)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:1519759") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000368> "A fluorescence microscopy method in which the image contrast is derived from the fluorescence lifetime at each point in a two-dimensional image and not the local concentration and/or intensity of the fluorophore.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00000368> <https://orcid.org/0000-0002-6095-8718>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000368> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000368> "2010-03-11T10:09:33Z")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/OMO_0003000>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000368> "FLIM")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000368> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000368> "FBbi:00000368")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000368> "fluorescence lifetime imaging microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000368> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000246> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000605>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000368> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000368> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000605>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000369> (selective plane illumination fluorescence microscopy)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:19465594") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000369> "A fluorescence microscopy method where the sample is illuminated from the side in a well-defined volume around the focal plane of the detection optics.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00000369> <https://orcid.org/0000-0001-6178-2884>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000369> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000369> "2010-03-11T10:09:33Z")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/OMO_0003000>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000369> "SPIM")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000369> "light-sheet fluorescence microscopy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000369> "light-sheet microscopy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000369> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000369> "FBbi:00000369")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000369> "selective plane illumination fluorescence microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000369> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000246> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000364>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000369> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000369> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000364>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000370> (coherent Raman anti-Stokes microscopy)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "doi:10.1002/cphc.200700202") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000370> "A form of microscopy that can detect molecularly specific contrasts based on the vibrational spectra of the sample molecules, by producing and detecting Raman-scattered photons.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00000370> <https://orcid.org/0000-0002-6095-8718>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000370> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000370> "2010-03-11T10:13:20Z")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/OMO_0003000>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000370> "CARS microscopy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000370> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000370> "FBbi:00000370")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000370> "coherent Raman anti-Stokes microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000370> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000345> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000319>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000589>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000370> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000370> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000319>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000370> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000589>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000371> (OCT)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000371> "Optical coherence tomography; an interferometric method of imaging using back-scattered photons (elastic scattering)")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000371> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000371> "2010-03-11T10:32:19Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000371> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000371> "FBbi:00000371")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000371> "OCT")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000371> <http://purl.obolibrary.org/obo/FBbi_00000345>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000372> (secondary_electron imaging)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000372> "Image created using the electrons generated by ionization of a sample due to inelastic scattering of the primary beam of radiation")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000372> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000372> "2010-03-12T08:34:44Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000372> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000372> "FBbi:00000372")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000372> "secondary_electron imaging")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000372> <http://purl.obolibrary.org/obo/FBbi_00000257>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000373> (back-scattered_electron imaging)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000373> "Imaged formed using electrons undergoing elastic scattering at very high angles, with emission of characteristic X-rays")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000373> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000373> "2010-03-12T08:40:37Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000373> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000373> "FBbi:00000373")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000373> "back-scattered_electron imaging")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000373> <http://purl.obolibrary.org/obo/FBbi_00000257>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000380> (scanning-transmission electron microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000380> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000380> "2010-03-12T09:12:36Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000380> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000380> "FBbi:00000380")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000380> "scanning-transmission electron microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000380> <http://purl.obolibrary.org/obo/FBbi_00000256>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000381> (EELS imaging)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000381> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000381> "2010-03-12T09:16:40Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000381> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000381> "EFTEM energy filtered TEM")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000381> "ESI  electron spectroscopic imaging")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000381> "FBbi:00000381")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000381> "EELS imaging")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000381> <http://purl.obolibrary.org/obo/FBbi_00000256>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000382> (EDAX imaging)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000382> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000382> "2010-03-12T09:16:40Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000382> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000382> "FBbi:00000382")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000382> "EDAX imaging")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000382> <http://purl.obolibrary.org/obo/FBbi_00000256>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000383> (specimen_modifying_illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000383> "Illumination used for the purpose of inducing some observable change in the specimen during the course of an imaging session. This illumination may or may not be the same as the illumination used for imaging. Typically used in conjunction with live-cell imaging")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000383> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000383> "2010-03-12T09:32:53Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000383> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000383> "FBbi:00000383")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000383> "specimen_modifying_illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000383> <http://purl.obolibrary.org/obo/FBbi_00000268>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000384> (photo-bleaching illumination)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000384> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000384> "2010-03-12T10:06:46Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000384> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000384> "FBbi:00000384")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000384> "photo-bleaching illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000384> <http://purl.obolibrary.org/obo/FBbi_00000383>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000391> (slit-scanning illumination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000391> "Illumination in the shape of a thin line that is swept over the field of view")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000391> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000391> "2010-03-12T10:31:26Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000391> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000391> "FBbi:00000391")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000391> "slit-scanning illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000391> <http://purl.obolibrary.org/obo/FBbi_00000278>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000392> (slit-scan confocal microscopy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000392> "Illumination and detection via a thin slit")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000392> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000392> "2010-03-12T10:32:36Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000392> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000392> "FBbi:00000392")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000392> "slit-scan confocal microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000392> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000251> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000391>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000392> <http://purl.obolibrary.org/obo/FBbi_00000251>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000392> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000391>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000393> (array-scan confocal microscopy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000393> "Fixed array of sources focused to an array of spots that is swept over the specimen in raster fashion")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000393> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000393> "2010-03-12T10:35:43Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000393> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000393> "FBbi:00000393")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000393> "array-scan confocal microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00000393> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000251> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000289>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000294>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000393> <http://purl.obolibrary.org/obo/FBbi_00000251>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000393> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000289>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000393> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000294>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000394> (spot detector)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000394> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000394> "2010-03-12T10:39:24Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000394> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000394> "FBbi:00000394")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000394> "spot detector")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000394> <http://purl.obolibrary.org/obo/FBbi_00000269>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000395> (area detector)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000395> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000395> "2010-03-12T10:39:24Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000395> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000395> "FBbi:00000395")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000395> "area detector")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000395> <http://purl.obolibrary.org/obo/FBbi_00000269>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000585> (serial block face SEM (SBFSEM))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:15514700") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000585> "A method of reconstructing 3D structure by combining serial sectioning with scanning EM.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000585> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000585> "2010-09-02T05:10:33Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000585> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000585> "FBbi:00000585")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000585> "serial block face SEM (SBFSEM)")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000585> <http://purl.obolibrary.org/obo/FBbi_00000373>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000589> (Raman scattering)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "doi:10.1002/0470845767") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000589> "The inelastic scattering of photons caused by interaction with matter.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00000589> <https://orcid.org/0000-0002-6095-8718>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000589> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000589> "2010-09-03T08:43:42Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000589> "Raman effect")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000589> "inelastic scattering of photons")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000589> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000589> "FBbi:00000589")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000589> "Raman scattering")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000589> <http://purl.obolibrary.org/obo/FBbi_00000309>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000590> (source of contrast)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000590> "The source of the variation in the imaged parameter across the field of view.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000590> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000590> "2010-09-03T08:53:13Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000590> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000590> "FBbi:00000590")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000590> "source of contrast")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000590> <http://purl.obolibrary.org/obo/FBbi_root_00000000>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000603> (fluorescence polarization microscopy)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:2317548") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00000603> "A mode of microscopy that detects the rotational motion of fluorophores.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00000603> <https://orcid.org/0000-0002-6095-8718>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000603> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000603> "2010-09-04T01:28:20Z")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/OMO_0003000>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000603> "FAIM")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00000603> "fluorescence anisotropy imaging")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000603> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000603> "FBbi:00000603")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000603> "fluorescence polarization microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000603> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000603> <http://purl.obolibrary.org/obo/FBbi_00000248>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000605> (differences in fluorescence lifetime)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000605> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000605> "2010-09-04T01:35:37Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000605> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000605> "FBbi:00000605")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000605> "differences in fluorescence lifetime")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000605> <http://purl.obolibrary.org/obo/FBbi_00000590>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000616> (evanescent wave scattering)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000616> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000616> "2011-05-23T10:09:41Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000616> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000616> "FTIR  frustrated total internal reflection")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000616> "FBbi:00000616")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000616> "evanescent wave scattering")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000616> <http://purl.obolibrary.org/obo/FBbi_00000244>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000617> (evanescent wave microscopy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000617> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000617> "2011-05-23T10:10:58Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000617> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00000617> "total internal reflection fluorescence  TIRF")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000617> "FBbi:00000617")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000617> "evanescent wave microscopy")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000617> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000622> (high-voltage electron microscopy (HVEM))
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000622> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000622> "2011-05-23T10:53:45Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000622> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000622> "FBbi:00000622")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000622> "high-voltage electron microscopy (HVEM)")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000622> <http://purl.obolibrary.org/obo/FBbi_00000258>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00000623> (intermediate voltage electron microscopy (IVEM))
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/FBbi_00000623> "jm")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/FBbi_00000623> "2011-05-23T10:53:45Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00000623> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00000623> "FBbi:00000623")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00000623> "intermediate voltage electron microscopy (IVEM)")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00000623> <http://purl.obolibrary.org/obo/FBbi_00000258>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00001000> (radiography)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://en.wikipedia.org/w/index.php?title=Radiography&oldid=606628211") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00001000> "An imaging technique that uses high energy electromagnetic radiation, typically X-rays, as a source of illumination.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00001000> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00001000> "FBbi:00001000")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00001000> "radiography")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00001000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000265> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00001006>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001000> <http://purl.obolibrary.org/obo/FBbi_00000265>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00001006>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00001001> (X-ray radiography)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00001001> "Radiography using X-rays")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00001001> "X-radiography")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00001001> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00001001> "X-ray")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00001001> "FBbi:00001001")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00001001> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00001001> "X-ray radiography")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00001001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000265> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000342>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001001> <http://purl.obolibrary.org/obo/FBbi_00001000>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000342>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00001002> (X-ray computed tomography)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbi_00001002> "MeSH:D014057")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbi_00001002> "http://en.wikipedia.org/wiki/X-ray_computed_tomography")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00001002> "CAT scan")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00001002> "CT scan")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00001002> "X-ray CT")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00001002> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbi_00001002> "computed axial tomography")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00001002> "FBbi:00001002")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbi_00001002> <http://purl.obolibrary.org/obo/fbbi#PhenoImageShare_ImagingMethod>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00001002> "X-ray computed tomography")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00001002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00001005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000342>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001002> <http://purl.obolibrary.org/obo/FBbi_00001003>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001002> <http://purl.obolibrary.org/obo/FBbi_00001005>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00001003> (X-ray tomography)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00001003> "Tomography using X-ray illumination.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00001003> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00001003> "FBbi:00001003")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00001003> "X-ray tomography")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00001003> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00001004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000342>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001003> <http://purl.obolibrary.org/obo/FBbi_00001001>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001003> <http://purl.obolibrary.org/obo/FBbi_00001004>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00001004> (tomography)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00001004> "An imaging technique that creates virtual sections through the use of any kind of penetrating wave.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00001004> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00001004> "FBbi:00001004")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00001004> "tomography")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001004> <http://purl.obolibrary.org/obo/FBbi_00000265>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00001005> (computed tomography)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00001005> "Tomography in which virtual sections are taken from multiple angles and the results are processed via tomographic reconstruction software to produce 2 or 3D images.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00001005> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00001005> "FBbi:00001005")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00001005> "computed tomography")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001005> <http://purl.obolibrary.org/obo/FBbi_00001004>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00001006> (x-ray/gamma ray illumination)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00001006> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00001006> "FBbi:00001006")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00001006> "x-ray/gamma ray illumination")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00001006> <http://purl.obolibrary.org/obo/FBbi_00000272>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00050000> (focussed ion beam scanning electron microscopy (FIB-SEM))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:22119321") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00050000> "A method of reconstructing 3D structure by combining focussed ion beam milling to remove sucessive layers from a sample block with scanning EM to image the exposed surface between each milling step.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbi_00050000> "FIB-SEM")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_00050000> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_00050000> "FBbi:00050000")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00050000> "focussed ion beam scanning electron microscopy (FIB-SEM)")
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00050000> <http://purl.obolibrary.org/obo/FBbi_00000373>)
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_00100013> (wide-field fluorescence microscopy)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbi_00100013> "A mode of fluorescence microscopy where the entire observed field is illuminated.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbi_00100013> <https://orcid.org/0000-0002-6095-8718>)
+AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbi_00100013> "2026-02-11T16:22:44Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_00100013> "wide-field fluorescence microscopy")
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbi_00100013> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbi_00000246> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000277>)))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00100013> <http://purl.obolibrary.org/obo/FBbi_00000246>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbi_00100013> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBbi_00000346> <http://purl.obolibrary.org/obo/FBbi_00000277>))
+
+# Class: <http://purl.obolibrary.org/obo/FBbi_root_00000000> (method involved in biological imaging)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbi_root_00000000> "image")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbi_root_00000000> "FBbi_root:00000000")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbi_root_00000000> "method involved in biological imaging")
+
+
+DisjointClasses(<http://purl.obolibrary.org/obo/FBbi_00000001> <http://purl.obolibrary.org/obo/FBbi_00000031> <http://purl.obolibrary.org/obo/FBbi_00000222> <http://purl.obolibrary.org/obo/FBbi_00000268> <http://purl.obolibrary.org/obo/FBbi_00000269>)
+DisjointClasses(<http://purl.obolibrary.org/obo/FBbi_00000001> <http://purl.obolibrary.org/obo/FBbi_00000031> <http://purl.obolibrary.org/obo/FBbi_00000222> <http://purl.obolibrary.org/obo/FBbi_00000268> <http://purl.obolibrary.org/obo/FBbi_00000269> <http://purl.obolibrary.org/obo/FBbi_00000270> <http://purl.obolibrary.org/obo/FBbi_00000271> <http://purl.obolibrary.org/obo/FBbi_00000321> <http://purl.obolibrary.org/obo/FBbi_00000590>)
+)
