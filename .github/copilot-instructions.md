@@ -171,8 +171,9 @@ If you need the full, unabridged procedure, consult `docs/Import_terms_from_anot
 ## OBO Guidelines
 - Term ID format: EFO_NNNNNNN (7-digit number)
 - Handling New Term Requests (NTRs):
-  - New terms start  EFO_092xxxx
-  - Do `grep EFO_092 src/ontology/efo-edit.owl` to check for clashes
+  - New terms start  EFO_099xxxx (temporary IDs)
+  - Do `grep EFO_099 src/ontology/efo-edit.owl` to check for clashes
+  - Definitive IDs are allocated later from the Automation range
 - Each term requires: id, name, definition with references
 - Never guess EFO IDs, or ontology term IDs, use search tools above to determine actual term
 - Never guess PMIDs for references, do a web search if needed
@@ -421,7 +422,7 @@ Step 3b: If no imports → Skip to Step 4
 Step 4: Call @EFO-ontologist
   Task: Add new term to efo-edit.owl
   Provide: Complete specification from Steps 1-3
-  Include: ID (EFO_092xxxx), label, definition with xrefs, parent(s), synonyms
+  Include: ID (EFO_099xxxx temporary ID), label, definition with xrefs, parent(s), synonyms
 ```
 
 #### Pattern 2: Import-Only Request
@@ -607,15 +608,15 @@ grep -i "MONDO:0004822" src/ontology/efo-edit.owl
 # Result: Already imported, no action needed
 
 # Step 6: Generate term IDs
-grep "EFO_092" src/ontology/efo-edit.owl | tail -n 1
-# Result: Last ID is EFO_0920123, use 0920124-0920127
+grep "EFO_099" src/ontology/efo-edit.owl | tail -n 1
+# Result: Last temporary ID is EFO_0990123, use 0990124-0990127
 
 # Step 7: Delegate OWL editing
 @EFO-ontologist add 4 new terms:
-  EFO_0920124 neutrophilic bronchiectasis
-  EFO_0920125 eosinophilic bronchiectasis  
-  EFO_0920126 mixed granulocytic bronchiectasis
-  EFO_0920127 paucigranulocytic bronchiectasis
+  EFO_0990124 neutrophilic bronchiectasis
+  EFO_0990125 eosinophilic bronchiectasis  
+  EFO_0990126 mixed granulocytic bronchiectasis
+  EFO_0990127 paucigranulocytic bronchiectasis
 [provide full specifications from curator INCLUDING:
  - Definitions with 2+ embedded PMIDs
  - Synonyms with type annotations (exact/related/narrow/broad)

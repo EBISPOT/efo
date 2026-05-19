@@ -1,0 +1,40 @@
+name: Allocate definitive EFO IDs
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'src/ontology/efo-edit.owl'
+  workflow_dispatch:
+
+jobs:
+  assign_ids:
+    runs-on: ubuntu-latest
+    container: obolibrary/odkfull:v1.6
+    env:
+      ROBOT_PLUGINS_DIRECTORY: /odk/resources/robot/plugins
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Prepare MONDO import
+        run: |
+          cd src/ontology
+          mkdir -p mirror
+          curl -fL -o mirror/mondo.owl https://github.com/monarch-initiative/mondo/releases/latest/download/mondo-base.owl
+          make imports/mondo_import.owl
+
+      - name: Allocate definitive IDs
+        run: |
+          cd src/ontology
+          make allocate-definitive-ids
+
+      - name: Commit and push changes
+        uses: actions-js/push@v1.5
+        with:
+          github_token: ${{ secrets.EFO_ID_ALLOCATION_TOKEN }}
+          message: "Replace temporary IDs by definitive IDs."
+          branch: ${{ github.ref }}

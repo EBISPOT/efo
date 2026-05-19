@@ -392,6 +392,15 @@ T_IMPORTSEED = --term-file $(IMPORTSEED)
 
 ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 oboInOwl:is_metadata_tag OMO:0002000 
 
+# Allocating definitive IDs
+# ----------------------------------------
+.PHONY: allocate-definitive-ids
+allocate-definitive-ids: $(SRC)
+	$(ROBOT) kgcl:mint -i $(SRC) \
+		--temp-id-prefix http://www.ebi.ac.uk/efo/EFO_099 \
+		--id-range-name Automation \
+		convert -f owl --check false -o $(SRC)
+
 # ----------------------------------------
 # Import modules
 # ----------------------------------------

@@ -72,7 +72,7 @@ User: "Add term: ATAC-seq"
 5. copilot-instructions: "Call ontologist to integrate"
    ↓
 6. Ontologist: Integration
-   - Generate EFO_0920XXX
+   - Generate EFO_0990XXX temporary ID
    - Create OWL/XML entry
    - Add SubClassOf OBI:0002039
    - Normalize
@@ -157,7 +157,7 @@ Done (no EFO integration, user submits to OBA)
 - **Limitations**: No research, no imports, no orchestration
 - **Says**: 
   - "Adding term to efo-edit.owl..."
-  - "Generating EFO_0920XXX..."
+  - "Generating EFO_0990XXX temporary ID..."
   - "Running normalization..."
   - "Creating PR..."
 
