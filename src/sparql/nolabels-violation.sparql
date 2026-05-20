@@ -8,5 +8,6 @@ SELECT ?cls WHERE {
 	FILTER NOT EXISTS {?cls rdfs:label ?lab}
 	FILTER NOT EXISTS {?cls replaced_by: ?replCls}
         FILTER (!isBlank(?cls))
+        FILTER (STRSTARTS(STR(?cls), "http://www.ebi.ac.uk/efo/"))
 }
 ORDER BY ?cls

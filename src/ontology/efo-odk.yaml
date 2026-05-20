@@ -1,0 +1,157 @@
+id: efo
+title: "Experimental Factor Ontology"
+github_org: EBISPOT
+git_main_branch: master
+repo: efo
+uribase: "http://www.ebi.ac.uk"
+license: "https://www.apache.org/licenses/LICENSE-2.0"
+description: "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog."
+ci:
+  - github_actions
+report_fail_on: ERROR
+create_obo_metadata: FALSE
+use_dosdps: FALSE
+use_mappings: FALSE
+use_edit_file_imports: TRUE
+release_diff: TRUE
+workflows:
+  - docs
+export_formats:
+  - owl
+  - obo
+  - json
+obo_format_options: "--clean-obo 'simple merge-comments'"
+namespaces:
+  - http://www.ebi.ac.uk/efo/EFO_
+  - "http://www.ebi.ac.uk/efo/EFO#"
+primary_release: full
+release_artefacts:
+  - base
+  - full
+documentation:
+  documentation_system: mkdocs
+custom_makefile_header: |
+  # EFO custom prefix variables
+  EFOPREFIX = "EFO: http://www.ebi.ac.uk/efo/EFO_"
+  EFO2PREFIX = "EFO2: http://www.ebi.ac.uk/efo/"
+  MONDOPREFIX = "MONDO: http://purl.obolibrary.org/obo/MONDO_"
+  UBERONPREFIX = "UBERON: http://purl.obolibrary.org/obo/UBERON_"
+  HPPREFIX = "HP: http://purl.obolibrary.org/obo/HP_"
+  CLPREFIX = "CL: http://purl.obolibrary.org/obo/CL_"
+  ECTOPREFIX = "ECTO: http://purl.obolibrary.org/obo/ECTO_"
+  BFOPREFIX = "BFO: http://purl.obolibrary.org/obo/BFO_"
+
+import_group:
+  # use_base_merging FALSE: EFO needs individual per-import files (efo-edit.owl
+  # declares 14 separate owl:imports). base_merging would produce a single
+  # merged_import.owl which doesn't match the edit file structure.
+  use_base_merging: FALSE
+  slme_individuals: exclude
+  annotation_properties:
+    - rdfs:label
+    - IAO:0000115
+    - oboInOwl:is_metadata_tag
+    - OMO:0002000
+  products:
+    # ---------------------------------------------------------------
+    # Seed terms: ODK uses imports/<id>_terms.txt as the curated seed
+    # for each import. EFO already maintains these files in imports/.
+    #
+    # Exclusion: Imports needing per-term exclusion (uberon, pr,
+    # hancestro) are overridden in efo.Makefile with a custom recipe
+    # that appends `robot remove -T iri_dependencies/<id>_exclude.txt`.
+    #
+    # ---------------------------------------------------------------
+    - id: uberon
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/uberon/uberon-base.owl
+    - id: mondo
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/mondo/mondo-base.owl
+    - id: hp
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/hp/hp-base.owl
+    - id: chebi
+      make_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/chebi/chebi.owl
+      is_large: TRUE
+    - id: pr
+      make_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/pr.owl
+      is_large: TRUE
+    - id: ecto
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/ecto/ecto-base.owl
+    - id: cl
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/cl/cl-base.owl
+    - id: gsso
+      make_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/gsso.owl
+    - id: hancestro
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl
+    - id: fbbt
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/fbbt/fbbt-base.owl
+    - id: obi
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/obi/obi-base.owl
+    - id: oba
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/oba/oba-base.owl
+    - id: fbbi
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/fbbi/fbbi-base.owl
+    - id: go
+      use_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/go/go-base.owl
+
+robot_java_args: '-Xmx20G'
+reasoner: ELK
+allow_equivalents: asserted-only
+
+robot_report:
+  release_reports: False
+  fail_on: ERROR
+  use_labels: False
+  custom_profile: True
+  use_base_iris: True
+  report_on:
+    - edit
+  sparql_test_on:
+    - edit
+  custom_sparql_checks:
+    - duplicate-label
+    - nolabels
+    - multiple-label
+    - no-webulous-uris
+    - no-urigen-uris
+    - no-www-uris
+    - no-dangling
+    - id-length
+    - deprecated
+    - obsolete-replaced-whitespace
+    - wrong_efo_purl
+  custom_sparql_exports:
+    - basic-report
+    - class-count-by-prefix
+    - edges
+    - xrefs
+    - obsoletes
+    - synonyms
+    - obsolete_gwas
+
+components:
+  products:
+    - filename: subclasses.owl
+      use_template: True
+      templates:
+        - subclasses.csv
+    - filename: import_replaced_by.owl
+      use_template: True
+      templates:
+        - import_replaced_by.csv
+    # Custom components built by efo.Makefile (declared here for catalog generation)
+    - filename: gwas_import.owl
+    - filename: efo_equivalent_class_axioms.owl
