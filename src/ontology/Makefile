@@ -401,6 +401,15 @@ allocate-definitive-ids: $(SRC)
 		--id-range-name Automation \
 		convert -f owl --check false -o $(SRC)
 
+# Allocating definitive IDs
+# ----------------------------------------
+.PHONY: allocate-definitive-ids
+allocate-definitive-ids: $(SRC)
+	$(ROBOT) kgcl:mint -i $(SRC) \
+		--temp-id-prefix http://www.ebi.ac.uk/efo/EFO_099 \
+		--id-range-name Automation \
+		convert -f owl --check false -o $(SRC)
+
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
