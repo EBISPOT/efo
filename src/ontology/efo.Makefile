@@ -26,6 +26,27 @@ EFO_MASTER = https://raw.githubusercontent.com/EBISPOT/efo/master/src/ontology/e
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(RELEASE_VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 
 # ----------------------------------------
+# Component Overrides
+# ----------------------------------------
+
+# ODK's generated template rule does not pass EFO's custom prefix map to ROBOT.
+# Keep the historical subclasses template behavior while reusing the prefix
+# variables generated from efo-odk.yaml's custom_makefile_header.
+$(COMPONENTSDIR)/subclasses.owl: $(TEMPLATEDIR)/subclasses.csv $(TMPDIR)/stamp-component-subclasses.owl
+	$(ROBOT) template \
+		--template $< \
+		--prefix $(MONDOPREFIX) \
+		--prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" \
+		--prefix $(EFOPREFIX) \
+		--prefix $(UBERONPREFIX) \
+		--prefix $(HPPREFIX) \
+		--prefix $(ECTOPREFIX) \
+		--prefix $(CLPREFIX) \
+		--prefix $(BFOPREFIX) \
+		$(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: $(COMPONENTSDIR)/subclasses.owl
+
+# ----------------------------------------
 # Import Overrides
 # ----------------------------------------
 # Only imports with non-empty exclude files or additional processing steps
