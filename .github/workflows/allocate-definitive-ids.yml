@@ -30,7 +30,7 @@ jobs:
       - name: Allocate definitive IDs
         run: |
           cd src/ontology
-          make allocate-definitive-ids
+          make allocate-definitive-ids ROBOT=robot
 
       - name: Commit and push changes
         uses: actions-js/push@v1.5
