@@ -30,7 +30,7 @@ jobs:
       - name: Allocate definitive IDs
         run: |
           cd src/ontology
-          make allocate-definitive-ids
+          make allocate-definitive-ids "ROBOT=java -cp ../../bin/robot.jar:tmp/plugins/kgcl.jar org.obolibrary.robot.CommandManager"
 
       - name: Commit and push changes
         uses: actions-js/push@v1.5
