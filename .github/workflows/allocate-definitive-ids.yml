@@ -11,8 +11,11 @@ jobs:
   assign_ids:
     runs-on: ubuntu-latest
     container: obolibrary/odkfull:v1.6
+    # The ODK image ships ROBOT plugins (including kgcl) under
+    # /tools/robot-plugins. Point ROBOT there so `kgcl:mint` is available
+    # (this is the same location uberon's ODK Makefile installs plugins from).
     env:
-      ROBOT_PLUGINS_DIRECTORY: /odk/resources/robot/plugins
+      ROBOT_PLUGINS_DIRECTORY: /tools/robot-plugins
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -20,6 +23,9 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
+      # mondo_import.owl is gitignored (regenerated from the MONDO release),
+      # so it must be built before efo-edit.owl can resolve its imports.
+      # All other import modules are committed and resolved via catalog-v001.xml.
       - name: Prepare MONDO import
         run: |
           cd src/ontology
@@ -30,7 +36,12 @@ jobs:
       - name: Allocate definitive IDs
         run: |
           cd src/ontology
-          make allocate-definitive-ids "ROBOT=java -cp ../../bin/robot.jar:tmp/plugins/kgcl.jar org.obolibrary.robot.CommandManager"
+          echo "Available ROBOT plugins:" && ls -1 "$ROBOT_PLUGINS_DIRECTORY"
+          # Use the ODK system `robot` wrapper, which supports plugins and
+          # picks up kgcl from ROBOT_PLUGINS_DIRECTORY. The previous override
+          # (java -cp ... org.obolibrary.robot.CommandManager) was broken:
+          # CommandManager has no static main, so the JVM never started ROBOT.
+          make allocate-definitive-ids ROBOT="robot --catalog catalog-v001.xml"
 
       - name: Commit and push changes
         uses: actions-js/push@v1.5
