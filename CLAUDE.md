@@ -31,7 +31,7 @@ When given a ticket (via `/efo-ticket N` or "handle issue #N"):
 1. **Read the ticket.** `gh issue view N`. Read linked issues if referenced. Look for PMIDs/DOIs in title and body — if present, they must be read during curation.
 2. **Triage** using the Routing table below. Decide: simple edit, new term, import, or obsoletion.
 3. **Pre-creation OLS check (new terms only).** Search OLS yourself (or via the curator) to confirm the concept isn't already in an ontology we import from. If it is → it's an import, not a new EFO term.
-4. **Create the branch.** `git checkout -b issue-N` (if a PR/branch for this issue already exists, check it out and continue instead).
+4. **Create the branch from an up-to-date `master`.** Refresh first, then branch directly off the latest remote master: `git fetch origin master && git checkout -b issue-N origin/master`. This guarantees the branch is never based on stale or unrelated work. Ensure the working tree is clean before branching. (If a PR/branch for this issue already exists, check it out and continue instead — rebasing onto the latest `origin/master` if it has fallen behind.)
 5. **Dispatch subagents in sequence** per the routing decision. Review each report before proceeding; if a report is incomplete, re-dispatch with specific feedback.
 6. **Verify** (see Verification gate below).
 7. **Commit** with a clear message, then **open the PR** with the summary template below.
