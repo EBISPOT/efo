@@ -11,7 +11,12 @@ Work through these steps, tracking them with a todo list:
 1. **Read the ticket.** Run `gh issue view $1`. Read any linked issues. Extract every PMID/DOI in the title or body — they must be read during curation.
 2. **Triage** using the Routing table in `CLAUDE.md`. State your plan (which subagents, in what order) before acting.
 3. **OLS pre-check** (new terms): confirm the concept isn't already in an imported ontology. If it is, treat it as an import.
-4. **Create the branch:** `git checkout -b issue-$1`. If a branch/PR for this issue already exists, check it out and continue instead of starting over.
+4. **Create the branch from an up-to-date `master`.** Always start the issue branch from the latest `origin/master` so it never builds on stale or unrelated work:
+   ```bash
+   git fetch origin master
+   git checkout -b issue-$1 origin/master   # branches directly from fresh remote master
+   ```
+   Branching from `origin/master` guarantees freshness regardless of your current branch or local state. If you keep a local `master`, fast-forward it too: `git checkout master && git merge --ff-only origin/master`. Ensure the working tree is clean first (`git status`) — commit or stash unrelated changes before branching. If a branch/PR for this issue already exists, check it out and continue instead of starting over (rebase it onto the latest `origin/master` if it has fallen behind).
 5. **Dispatch the specialist subagents in sequence** via the Task tool, using the handoff template from `CLAUDE.md`:
    - `efo-curator` for research/validation (new terms, or definitions needing citations)
    - `efo-importer` for ANY external term (never import yourself)
