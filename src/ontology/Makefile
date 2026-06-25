@@ -449,6 +449,15 @@ feature_diff_md:
 	make IMP=false PAT=false reports/robot_diff.md -B
 	make IMP=false PAT=false reports/robot_reasoned_diff.md -B
 
+# Allocating definitive IDs
+# ----------------------------------------
+.PHONY: allocate-definitive-ids
+allocate-definitive-ids: $(SRC)
+	$(ROBOT) kgcl:mint -i $(SRC) \
+		--temp-id-prefix http://www.ebi.ac.uk/efo/EFO_099 \
+		--id-range-name Automation \
+		convert -f owl --check false -o $(SRC)
+
 # ----------------------------------------
 # Adhoc queries
 # ----------------------------------------

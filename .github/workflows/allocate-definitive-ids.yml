@@ -1,0 +1,72 @@
+name: Allocate definitive EFO IDs
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'src/ontology/efo-edit.owl'
+  workflow_dispatch:
+
+jobs:
+  assign_ids:
+    runs-on: ubuntu-latest
+    container: obolibrary/odkfull:v1.6
+    # The ODK image ships ROBOT plugins (including kgcl) under
+    # /tools/robot-plugins. Point ROBOT there so `kgcl:mint` is available
+    # (this is the same location uberon's ODK Makefile installs plugins from).
+    env:
+      ROBOT_PLUGINS_DIRECTORY: /tools/robot-plugins
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      # Only do anything if there are temporary IDs to allocate. This is
+      # essential: `robot convert` re-serialises efo-edit.owl's anonymous
+      # rdf:Description blocks in a non-deterministic order, so an
+      # unconditional run would rewrite (and commit) the file on every run,
+      # and that commit would re-trigger this workflow -> infinite loop.
+      # Guarding on temp IDs means a real allocation triggers at most one
+      # trailing no-op run, which then stops.
+      - name: Check for temporary IDs
+        id: check
+        run: |
+          if grep -q 'EFO_099' src/ontology/efo-edit.owl; then
+            echo "Temporary EFO_099 IDs found; will allocate."
+            echo "has_temp=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No temporary EFO_099 IDs; nothing to allocate."
+            echo "has_temp=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # mondo_import.owl is gitignored (regenerated from the MONDO release),
+      # so it must be built before efo-edit.owl can resolve its imports.
+      # All other import modules are committed and resolved via catalog-v001.xml.
+      - name: Prepare MONDO import
+        if: steps.check.outputs.has_temp == 'true'
+        run: |
+          cd src/ontology
+          mkdir -p mirror
+          curl -fL -o mirror/mondo.owl https://github.com/monarch-initiative/mondo/releases/latest/download/mondo-base.owl
+          make imports/mondo_import.owl
+
+      - name: Allocate definitive IDs
+        if: steps.check.outputs.has_temp == 'true'
+        run: |
+          cd src/ontology
+          echo "Available ROBOT plugins:" && ls -1 "$ROBOT_PLUGINS_DIRECTORY"
+          # Use the ODK system `robot` wrapper, which supports plugins and
+          # picks up kgcl from ROBOT_PLUGINS_DIRECTORY. The previous override
+          # (java -cp ... org.obolibrary.robot.CommandManager) was broken:
+          # CommandManager has no static main, so the JVM never started ROBOT.
+          make allocate-definitive-ids ROBOT="robot --catalog catalog-v001.xml"
+
+      - name: Commit and push changes
+        if: steps.check.outputs.has_temp == 'true'
+        uses: actions-js/push@v1.5
+        with:
+          github_token: ${{ secrets.EFO_ID_ALLOCATION_TOKEN }}
+          message: "Replace temporary IDs by definitive IDs."
+          branch: ${{ github.ref }}

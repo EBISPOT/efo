@@ -11,16 +11,16 @@
      \/__/         \/__/         \/__/    
 
 EFO - Release Notes
-Experimental Factor Ontology version 3.89.0
-Date Released: 15th April 2026
-Class Count: 93,301
+Experimental Factor Ontology version 3.91.0
+Date Released: 15th June 2026
+Class Count: 93,396
 
 Summary:
 
-EFO 3.89.0 contains terms to cater for users, such as the GWAS Catalog, Open Targets, and more.
+EFO 3.91.0 contains terms to cater for users, such as the GWAS Catalog, Open Targets, and more.
 
-Number of classes changed: 130
-Number of classes added: 33
+Number of classes changed: 70
+Number of classes added: 37
 Number of classes deleted: 0
  
 
@@ -38,164 +38,321 @@ Number of classes deleted: 0
 
 @Classes new to this version
 
-Class: http://purl.obolibrary.org/obo/MONDO_1010194
-Label(s): KY-related neuromyopathy 
-+ 'KY-related neuromyopathy' SubClassOf 'hereditary neuromuscular disease'
+Class: http://purl.obolibrary.org/obo/GO_0009081
+Label(s): branched-chain amino acid metabolic process 
+- 'branched-chain amino acid metabolic process' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_1010193
-Label(s): TNNT2-related cardiomyopathy 
-+ 'TNNT2-related cardiomyopathy' SubClassOf 'cardiogenetic disease'
+Class: http://purl.obolibrary.org/obo/GO_0033490
+Label(s): cholesterol biosynthetic process via lathosterol 
+- 'cholesterol biosynthetic process via lathosterol' SubClassOf 'Cholesterol biosynthesis'
++ 'cholesterol biosynthetic process via lathosterol' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0980999
-Label(s): fibromuscular dysplasia of the coronary arteries 
-+ 'fibromuscular dysplasia of the coronary arteries' SubClassOf 'coronary artery disorder'
-+ 'fibromuscular dysplasia of the coronary arteries' SubClassOf 'fibromuscular dysplasia'
-+ 'fibromuscular dysplasia of the coronary arteries' SubClassOf 'cardiogenetic disease'
-+ 'fibromuscular dysplasia of the coronary arteries' EquivalentTo 'fibromuscular dysplasia' and ('disease has location' some 'coronary artery')
+Class: http://purl.obolibrary.org/obo/GO_0006768
+Label(s): Biotin transport and metabolism biotin metabolic process 
+- 'Biotin transport and metabolism' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0980998
-Label(s): fibromuscular dysplasia of the renal arteries 
-+ 'fibromuscular dysplasia of the renal arteries' SubClassOf 'aortic disorder'
-+ 'fibromuscular dysplasia of the renal arteries' EquivalentTo 'fibromuscular dysplasia' and ('disease has location' some 'renal artery')
-+ 'fibromuscular dysplasia of the renal arteries' SubClassOf 'fibromuscular dysplasia'
-+ 'fibromuscular dysplasia of the renal arteries' SubClassOf 'disease has location' some 'renal artery'
+Class: http://purl.obolibrary.org/obo/GO_0006699
+Label(s): bile acid biosynthetic process Synthesis of bile acids and bile salts 
+- 'Synthesis of bile acids and bile salts' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700325
-Label(s): Parkes Weber syndrome 
-+ 'Parkes Weber syndrome' SubClassOf 'congenital vascular malformation'
+Class: http://purl.obolibrary.org/obo/GO_0006600
+Label(s): creatine metabolic process Creatine metabolism 
+- 'creatine metabolic process' SubClassOf 'organic acid metabolic process'
++ 'creatine metabolic process' SubClassOf 'Metabolism'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700324
-Label(s): SMAD6-related disease 
-+ 'SMAD6-related disease' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/GO_0006591
+Label(s): ornithine metabolic process 
+- 'ornithine metabolic process' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0980747
-Label(s): brain small vessel disease 2B, autosomal recessive 
-+ 'brain small vessel disease 2B, autosomal recessive' SubClassOf 'autosomal recessive disease'
-+ 'brain small vessel disease 2B, autosomal recessive' SubClassOf 'familial porencephaly'
+Class: http://purl.obolibrary.org/obo/GO_0006573
+Label(s): valine metabolic process 
+- 'valine metabolic process' SubClassOf 'branched-chain amino acid metabolic process'
++ 'valine metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920061
-Label(s): perimenopausal 
-+ 'perimenopausal' SubClassOf 'adult'
+Class: http://purl.obolibrary.org/obo/GO_0006572
+Label(s): L-tyrosine catabolic process Tyrosine catabolism 
+- 'Tyrosine catabolism' SubClassOf 'tyrosine metabolic process'
++ 'Tyrosine catabolism' SubClassOf 'amino acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100641
-Label(s): chemotherapy-induced neuropathy 
-+ 'chemotherapy-induced neuropathy' SubClassOf 'peripheral neuropathy'
+Class: http://purl.obolibrary.org/obo/GO_0006568
+Label(s): L-tryptophan metabolic process 
+- 'L-tryptophan metabolic process' SubClassOf 'amino acid metabolic process'
+- 'L-tryptophan metabolic process' SubClassOf 'organic acid metabolic process'
++ 'L-tryptophan metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100640
-Label(s): chronic idiopathic neuropathy 
-+ 'chronic idiopathic neuropathy' SubClassOf 'peripheral neuropathy'
-+ 'chronic idiopathic neuropathy' SubClassOf 'idiopathic disease'
+Class: http://purl.obolibrary.org/obo/GO_0006560
+Label(s): L-proline metabolic process 
+- 'L-proline metabolic process' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100639
-Label(s): vasculitic neuropathy 
-+ 'vasculitic neuropathy' SubClassOf 'disease arises from feature' some 'vasculitis'
-+ 'vasculitic neuropathy' EquivalentTo 'peripheral neuropathy' and ('disease arises from feature' some 'vasculitis')
-+ 'vasculitic neuropathy' SubClassOf 'peripheral neuropathy'
+Class: http://purl.obolibrary.org/obo/MONDO_0014866
+Label(s): Charcot-Marie-Tooth disease axonal type 2T 
+- 'Charcot-Marie-Tooth disease axonal type 2T' SubClassOf 'Charcot-Marie-Tooth disease type 2'
++ 'Charcot-Marie-Tooth disease axonal type 2T' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100637
-Label(s): drug-induced myopathy 
-+ 'drug-induced myopathy' SubClassOf 'myopathy'
+Class: http://purl.obolibrary.org/obo/GO_0006090
+Label(s): pyruvate metabolic process 
+- 'pyruvate metabolic process' SubClassOf 'organic acid metabolic process'
++ 'pyruvate metabolic process' SubClassOf 'Metabolism'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100633
-Label(s): toxic polyneuropathy 
-+ 'toxic polyneuropathy' SubClassOf 'polyneuropathy'
+Class: http://purl.obolibrary.org/obo/GO_0006082
+Label(s): organic acid metabolic process 
+- 'organic acid metabolic process' SubClassOf 'Metabolism'
++ 'organic acid metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0019084
-Label(s): radiation proctitis 
-+ 'radiation proctitis' SubClassOf 'radiation-induced disorder'
-+ 'radiation proctitis' SubClassOf 'proctitis'
+Class: http://purl.obolibrary.org/obo/HP_0100512
+Label(s): Decreased circulating vitamin D concentration 
+- 'Decreased circulating vitamin D concentration' SubClassOf 'Abnormality of vitamin metabolism'
++ 'Decreased circulating vitamin D concentration' SubClassOf 'Abnormality of metabolism/homeostasis'
 
-Class: http://purl.obolibrary.org/obo/MONDO_1060214
-Label(s): SYCE1-related gametogenic failure 
-+ 'SYCE1-related gametogenic failure' SubClassOf 'infertility disorder'
-+ 'SYCE1-related gametogenic failure' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/GO_0015939
+Label(s): Vitamin B5 (pantothenate) metabolism pantothenate metabolic process 
+- 'Vitamin B5 (pantothenate) metabolism' SubClassOf 'organic acid metabolic process'
++ 'Vitamin B5 (pantothenate) metabolism' SubClassOf 'Metabolism'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770011
-Label(s): disease by molecular mechanism 
-+ 'disease by molecular mechanism' SubClassOf 'disease by developmental or physiological process'
+Class: http://purl.obolibrary.org/obo/GO_0043400
+Label(s): cortisol secretion 
+- 'cortisol secretion' SubClassOf 'part_of' some 'endocrine process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770010
-Label(s): disease of primarily extrinsic mechanism 
-+ 'disease of primarily extrinsic mechanism' SubClassOf 'disease by etiologic mechanism'
+Class: http://purl.obolibrary.org/obo/HP_0004338
+Label(s): Abnormal circulating aromatic amino acid concentration 
++ 'Abnormal circulating aromatic amino acid concentration' SubClassOf 'Abnormal circulating nitrogen compound concentration'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770009
-Label(s): disease of genetic or genomic mechanism 
-+ 'disease of genetic or genomic mechanism' SubClassOf 'disease by etiologic mechanism'
+Class: http://purl.obolibrary.org/obo/HP_0100504
+Label(s): Decreased circulating vitamin B2 concentration 
+- 'Decreased circulating vitamin B2 concentration' SubClassOf 'Abnormality of vitamin metabolism'
++ 'Decreased circulating vitamin B2 concentration' SubClassOf 'Abnormality of metabolism/homeostasis'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770008
-Label(s): disease by etiologic mechanism 
-+ 'disease by etiologic mechanism' SubClassOf 'disease'
-+ 'disease by etiologic mechanism' SubClassOf 'in taxon' some 'Homo sapiens'
+Class: http://purl.obolibrary.org/obo/MONDO_0017385
+Label(s): malignant migrating partial seizures of infancy 
++ 'malignant migrating partial seizures of infancy' SubClassOf 'neonatal/infantile-onset epilepsy syndrome with developmental and epileptic encephalopathy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770007
-Label(s): disease by developmental or physiological process 
-+ 'disease by developmental or physiological process' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'disease by developmental or physiological process' SubClassOf 'disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0044640
+Label(s): Charcot-Marie-Tooth disease type 2T 
+- 'Charcot-Marie-Tooth disease type 2T' SubClassOf 'Charcot-Marie-Tooth disease type 2'
++ 'Charcot-Marie-Tooth disease type 2T' SubClassOf 'Charcot-Marie-Tooth disease type 2'
 
-Class: http://purl.obolibrary.org/obo/MONDO_7770006
-Label(s): disease by body system or component 
-+ 'disease by body system or component' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'disease by body system or component' SubClassOf 'disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0005719
+Label(s): Coronavinae infectious disease 
+- 'Coronavinae infectious disease' SubClassOf 'viral infectious disease'
++ 'Coronavinae infectious disease' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0100635
-Label(s): radiation-induced neuropathy 
-+ 'radiation-induced neuropathy' SubClassOf 'radiation-induced disorder'
-+ 'radiation-induced neuropathy' SubClassOf 'peripheral neuropathy'
+Class: http://purl.obolibrary.org/obo/HP_0010894
+Label(s): Abnormal circulating serine family amino acid concentration 
++ 'Abnormal circulating serine family amino acid concentration' SubClassOf 'Abnormal circulating nitrogen compound concentration'
 
-Class: http://purl.obolibrary.org/obo/MONDO_1060211
-Label(s): NR5A1-related sex development disorder 
-+ 'NR5A1-related sex development disorder' SubClassOf 'hereditary disease'
-+ 'NR5A1-related sex development disorder' SubClassOf 'reproductive system disorder'
+Class: http://purl.obolibrary.org/obo/GO_0032274
+Label(s): gonadotropin secretion 
+- 'gonadotropin secretion' SubClassOf 'part_of' some 'endocrine process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_1060212
-Label(s): CRYAB-related myofibrillar myopathy-cataract-cardiomyopathy spectrum disorder 
-+ 'CRYAB-related myofibrillar myopathy-cataract-cardiomyopathy spectrum disorder' SubClassOf 'hereditary disease'
-+ 'CRYAB-related myofibrillar myopathy-cataract-cardiomyopathy spectrum disorder' SubClassOf 'syndromic disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0957874
+Label(s): neuronopathy, distal hereditary motor, autosomal recessive 9 
+- 'neuronopathy, distal hereditary motor, autosomal recessive 9' SubClassOf 'neuronopathy, distal hereditary motor, autosomal recessive'
++ 'neuronopathy, distal hereditary motor, autosomal recessive 9' SubClassOf 'primary coenzyme Q10 deficiency 8'
++ 'neuronopathy, distal hereditary motor, autosomal recessive 9' SubClassOf 'neuronopathy, distal hereditary motor, autosomal recessive'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920063
-Label(s): TeloHAEC 
-+ 'TeloHAEC' SubClassOf 'Homo sapiens cell line'
-+ 'TeloHAEC' SubClassOf 'endothelial cell derived cell line'
-+ 'TeloHAEC' SubClassOf 'cultured cell' and ('derives_from' some 
-('cell type' and ('part_of' some 
-('organism part' and ('part_of' some 'Homo sapiens')))))
+Class: http://purl.obolibrary.org/obo/HP_0011511
+Label(s): Macular schisis 
+- 'Macular schisis' SubClassOf 'Abnormal macular morphology'
++ 'Macular schisis' SubClassOf 'Abnormal retinal morphology'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920062
-Label(s): phenotyping 
-+ 'phenotyping' SubClassOf 'experimental process'
+Class: http://purl.obolibrary.org/obo/HP_0002912
+Label(s): Methylmalonic acidemia 
+- 'Methylmalonic acidemia' SubClassOf 'Abnormality of vitamin metabolism'
 
-Class: http://www.ebi.ac.uk/efo/EFO_0920060
-Label(s): premenopausal 
-+ 'premenopausal' SubClassOf 'adult'
+Class: http://purl.obolibrary.org/obo/MONDO_0000079
+Label(s): nephrolithiasis/osteoporosis, hypophosphatemic 
++ 'nephrolithiasis/osteoporosis, hypophosphatemic' SubClassOf 'hereditary disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0800443
-Label(s): DEAF1-associated neurodevelopmental disorder 
-+ 'DEAF1-associated neurodevelopmental disorder' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'DEAF1-associated neurodevelopmental disorder' SubClassOf 'complex neurodevelopmental disorder'
+Class: http://purl.obolibrary.org/obo/HP_0002160
+Label(s): Hyperhomocystinemia 
++ 'Hyperhomocystinemia' SubClassOf 'Abnormal circulating nitrogen compound concentration'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0023124
-Label(s): Dursun syndrome 
-+ 'Dursun syndrome' SubClassOf 'hereditary disease'
-+ 'Dursun syndrome' SubClassOf 'syndromic disease'
+Class: http://purl.obolibrary.org/obo/GO_0006506
+Label(s): Synthesis of glycosylphosphatidylinositol (GPI) GPI anchor biosynthetic process 
+- 'Synthesis of glycosylphosphatidylinositol (GPI)' SubClassOf 'phosphate-containing compound metabolic process'
 
-Class: http://purl.obolibrary.org/obo/OBI_0002174
-Label(s): immunocytochemistry 
-+ 'immunocytochemistry' SubClassOf 'assay'
+Class: http://purl.obolibrary.org/obo/GO_0006541
+Label(s): L-glutamine metabolic process 
+- 'L-glutamine metabolic process' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700321
-Label(s): CACNA1C-related disorder 
-+ 'CACNA1C-related disorder' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/GO_0006558
+Label(s): L-phenylalanine metabolic process Phenylalanine metabolism 
+- 'Phenylalanine metabolism' SubClassOf 'amino acid metabolic process'
+- 'Phenylalanine metabolism' SubClassOf 'organic acid metabolic process'
++ 'Phenylalanine metabolism' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700323
-Label(s): systemic lupus erythematosus related to C4A 
-+ 'systemic lupus erythematosus related to C4A' SubClassOf 'systemic lupus erythematosus'
+Class: http://purl.obolibrary.org/obo/GO_0006570
+Label(s): tyrosine metabolic process 
+- 'tyrosine metabolic process' SubClassOf 'amino acid metabolic process'
+- 'tyrosine metabolic process' SubClassOf 'organic acid metabolic process'
++ 'tyrosine metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0980764
-Label(s): scoliosis, isolated, susceptibility to 
-+ 'scoliosis, isolated, susceptibility to' SubClassOf 'inherited disease susceptibility'
-+ 'scoliosis, isolated, susceptibility to' SubClassOf 'predisposes towards' some 'scoliosis'
-+ 'scoliosis, isolated, susceptibility to' EquivalentTo 'inherited disease susceptibility' and ('predisposes towards' some 'scoliosis')
+Class: http://purl.obolibrary.org/obo/GO_0009450
+Label(s): GABA catabolic process Degradation of GABA 
+- 'Degradation of GABA' SubClassOf 'organic acid metabolic process'
 
+Class: http://purl.obolibrary.org/obo/GO_0006631
+Label(s): fatty acid metabolic process Intracellular metabolism of fatty acids regulates insulin secretion Fatty acid metabolism Fatty acids 
+- 'Fatty acid metabolism' SubClassOf 'organic acid metabolic process'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0700001
+Label(s): PhenoCycler-Fusion 
+- 'PhenoCycler-Fusion' SubClassOf 'spatial proteomics'
++ 'PhenoCycler-Fusion' SubClassOf http://www.ebi.ac.uk/efo/EFO_0022989
+
+Class: http://purl.obolibrary.org/obo/GO_0006753
+Label(s): nucleoside phosphate metabolic process 
+- 'nucleoside phosphate metabolic process' SubClassOf 'phosphate-containing compound metabolic process'
+
+Class: http://purl.obolibrary.org/obo/GO_0000096
+Label(s): Sulfur amino acid metabolism sulfur amino acid metabolic process 
+- 'sulfur amino acid metabolic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/GO_0046952
+Label(s): ketone body catabolic process Utilization of Ketone Bodies 
+- 'Utilization of Ketone Bodies' SubClassOf 'generation of precursor metabolites and energy'
+
+Class: http://purl.obolibrary.org/obo/HP_0100502
+Label(s): Decreased circulating vitamin B12 concentration 
+- 'Decreased circulating vitamin B12 concentration' SubClassOf 'Abnormality of vitamin metabolism'
++ 'Decreased circulating vitamin B12 concentration' SubClassOf 'Abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019409
+Label(s): idiopathic juvenile osteoporosis 
+- 'idiopathic juvenile osteoporosis' SubClassOf 'hereditary disorder of connective tissue'
+
+Class: http://purl.obolibrary.org/obo/GO_0046655
+Label(s): folic acid metabolic process Metabolism of folate and pterines 
+- 'Metabolism of folate and pterines' SubClassOf 'organic acid metabolic process'
++ 'Metabolism of folate and pterines' SubClassOf 'Metabolism'
+
+Class: http://purl.obolibrary.org/obo/GO_0019853
+Label(s): L-ascorbic acid biosynthetic process 
+- 'L-ascorbic acid biosynthetic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/HP_0012388
+Label(s): Acute bronchitis 
++ 'Acute bronchitis' SubClassOf 'Abnormality of immune system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0012052
+Label(s): Low serum calcitriol 
+- 'Low serum calcitriol' SubClassOf 'Abnormality of vitamin metabolism'
++ 'Low serum calcitriol' SubClassOf 'Abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0012025
+Label(s): Abnormal circulating ornithine concentration 
++ 'Abnormal circulating ornithine concentration' SubClassOf 'Abnormal circulating nitrogen compound concentration'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100025
+Label(s): epilepsy of infancy with migrating focal seizures 
+- 'epilepsy of infancy with migrating focal seizures' SubClassOf 'neonatal/infantile-onset epilepsy syndrome with developmental and epileptic encephalopathy'
++ 'epilepsy of infancy with migrating focal seizures' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020500
+Label(s): Marburg hemorrhagic fever 
+- 'Marburg hemorrhagic fever' SubClassOf 'Filoviridae infectious disease'
+
+Class: http://purl.obolibrary.org/obo/GO_0035932
+Label(s): aldosterone secretion 
+- 'aldosterone secretion' SubClassOf 'part_of' some 'endocrine process'
+
+Class: http://purl.obolibrary.org/obo/GO_0035898
+Label(s): parathyroid hormone secretion 
+- 'parathyroid hormone secretion' SubClassOf 'part_of' some 'endocrine process'
+
+Class: http://purl.obolibrary.org/obo/GO_0006544
+Label(s): glycine metabolic process 
+- 'glycine metabolic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/CL_0000501
+Label(s): granulosa cell on CELLxGENE CellGuide granulosa cell 
++ 'granulosa cell' SubClassOf 'epithelial cell'
+
+Class: http://purl.obolibrary.org/obo/GO_0006796
+Label(s): phosphate-containing compound metabolic process 
+- 'phosphate-containing compound metabolic process' SubClassOf 'phosphorus metabolic process'
++ 'phosphate-containing compound metabolic process' SubClassOf 'Metabolism'
+
+Class: http://purl.obolibrary.org/obo/GO_0008614
+Label(s): pyridoxine metabolic process 
+- 'pyridoxine metabolic process' SubClassOf 'Metabolism'
++ 'pyridoxine metabolic process' SubClassOf 'vitamin metabolic process'
+
+Class: http://purl.obolibrary.org/obo/HP_0001082
+Label(s): Cholecystitis 
++ 'Cholecystitis' SubClassOf 'Abnormality of immune system physiology'
++ 'Cholecystitis' SubClassOf 'Functional abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0005298
+Label(s): osteoporosis 
+- 'osteoporosis' SubClassOf 'osteogenesis imperfecta and a reduction of bone mineral density.'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013996
+Label(s): focal facial dermal dysplasia type II 
+- 'focal facial dermal dysplasia type II' SubClassOf 'focal facial dermal dysplasia type III'
++ 'focal facial dermal dysplasia type II' SubClassOf 'focal facial dermal dysplasia'
+
+Class: http://purl.obolibrary.org/obo/HP_0010910
+Label(s): Hypervalinemia 
++ 'Hypervalinemia' SubClassOf 'Abnormal circulating nitrogen compound concentration'
+
+Class: http://purl.obolibrary.org/obo/GO_0051458
+Label(s): corticotropin secretion 
+- 'corticotropin secretion' SubClassOf 'part_of' some 'endocrine process'
+
+Class: http://purl.obolibrary.org/obo/HP_0011950
+Label(s): Bronchiolitis 
+- 'Bronchiolitis' SubClassOf 'Recurrent respiratory infections'
++ 'Bronchiolitis' SubClassOf 'Respiratory tract infection'
++ 'Bronchiolitis' SubClassOf 'Abnormality of immune system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011015
+Label(s): Abnormal blood glucose concentration 
++ 'Abnormal blood glucose concentration' SubClassOf 'Abnormal circulating carbohydrate concentration'
+
+Class: http://purl.obolibrary.org/obo/GO_0006564
+Label(s): L-serine biosynthetic process 
+- 'L-serine biosynthetic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859244
+Label(s): phosphoribosylaminoimidazole carboxylase deficiency 
+- 'phosphoribosylaminoimidazole carboxylase deficiency' SubClassOf 'hereditary disease'
++ 'phosphoribosylaminoimidazole carboxylase deficiency' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022440
+Label(s): KGN cell 
++ 'KGN cell' SubClassOf 'epithelial cell derived cell line'
+
+Class: http://purl.obolibrary.org/obo/HP_0000230
+Label(s): Gingivitis 
++ 'Gingivitis' SubClassOf 'Abnormality of immune system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0009098
+Label(s): Chronic oral candidiasis 
++ 'Chronic oral candidiasis' SubClassOf 'Abnormality of the mouth'
++ 'Chronic oral candidiasis' SubClassOf 'Opportunistic infection'
+
+Class: http://purl.obolibrary.org/obo/HP_0007754
+Label(s): Macular dystrophy 
++ 'Macular dystrophy' SubClassOf 'Retinal dystrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0017790
+Label(s): gastric adenocarcinoma and proximal polyposis of the stomach 
+- 'gastric adenocarcinoma and proximal polyposis of the stomach' SubClassOf 'polyposis'
++ 'gastric adenocarcinoma and proximal polyposis of the stomach' SubClassOf 'polyposis'
+
+Class: http://purl.obolibrary.org/obo/HP_0010911
+Label(s): Hyperleucinemia 
++ 'Hyperleucinemia' SubClassOf 'Abnormal circulating nitrogen compound concentration'
+
+Class: http://purl.obolibrary.org/obo/HP_0100501
+Label(s): Recurrent bronchiolitis 
+- 'Recurrent bronchiolitis' SubClassOf 'Recurrent bronchitis'
++ 'Recurrent bronchiolitis' SubClassOf 'Bronchiolitis'
+
+Class: http://purl.obolibrary.org/obo/GO_0019693
+Label(s): ribose phosphate metabolic process 
+- 'ribose phosphate metabolic process' SubClassOf 'phosphate-containing compound metabolic process'
 
 
 ----------------------------------
@@ -204,668 +361,327 @@ Label(s): scoliosis, isolated, susceptibility to
 
 @Classes modified from previous
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006645
-Label(s): alcoholic polyneuropathy 
-- 'alcoholic polyneuropathy' SubClassOf 'polyneuropathy'
-+ 'alcoholic polyneuropathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100633
+Class: http://purl.obolibrary.org/obo/GO_0009081
+Label(s): branched-chain amino acid metabolic process 
+- 'branched-chain amino acid metabolic process' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006619
-Label(s): viral exanthem 
-+ 'viral exanthem' SubClassOf 'skin disorder caused by infection'
-+ 'viral exanthem' SubClassOf 'primary viral infectious disease'
+Class: http://purl.obolibrary.org/obo/GO_0033490
+Label(s): cholesterol biosynthetic process via lathosterol 
+- 'cholesterol biosynthetic process via lathosterol' SubClassOf 'Cholesterol biosynthesis'
++ 'cholesterol biosynthetic process via lathosterol' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006544
-Label(s): erythema infectiosum 
-- 'erythema infectiosum' SubClassOf 'skin disorder caused by infection'
-- 'erythema infectiosum' SubClassOf 'viral infectious disease'
+Class: http://purl.obolibrary.org/obo/GO_0006768
+Label(s): Biotin transport and metabolism biotin metabolic process 
+- 'Biotin transport and metabolism' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006402
-Label(s): salivary gland basal cell adenocarcinoma 
-- 'salivary gland basal cell adenocarcinoma' SubClassOf 'salivary gland squamous cell carcinoma'
-+ 'salivary gland basal cell adenocarcinoma' SubClassOf 'salivary gland carcinoma'
+Class: http://purl.obolibrary.org/obo/GO_0006699
+Label(s): bile acid biosynthetic process Synthesis of bile acids and bile salts 
+- 'Synthesis of bile acids and bile salts' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012130
-Label(s): myofibrillar myopathy 2 
-+ 'myofibrillar myopathy 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060212
+Class: http://purl.obolibrary.org/obo/GO_0006600
+Label(s): creatine metabolic process Creatine metabolism 
+- 'creatine metabolic process' SubClassOf 'organic acid metabolic process'
++ 'creatine metabolic process' SubClassOf 'Metabolism'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032756
-Label(s): long QT syndrome 8 
-+ 'long QT syndrome 8' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700321
+Class: http://purl.obolibrary.org/obo/GO_0006591
+Label(s): ornithine metabolic process 
+- 'ornithine metabolic process' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006132
-Label(s): cervical adenoid basal carcinoma 
-- 'cervical adenoid basal carcinoma' SubClassOf 'cervical squamous cell carcinoma'
-+ 'cervical adenoid basal carcinoma' SubClassOf 'cervical carcinoma'
+Class: http://purl.obolibrary.org/obo/GO_0006573
+Label(s): valine metabolic process 
+- 'valine metabolic process' SubClassOf 'branched-chain amino acid metabolic process'
++ 'valine metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0043839
-Label(s): ulcer disease 
-- 'ulcer disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'ulcer disease' SubClassOf 'disease'
-+ 'ulcer disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
+Class: http://purl.obolibrary.org/obo/GO_0006572
+Label(s): L-tyrosine catabolic process Tyrosine catabolism 
+- 'Tyrosine catabolism' SubClassOf 'tyrosine metabolic process'
++ 'Tyrosine catabolism' SubClassOf 'amino acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/UBERON_0005777
-Label(s): glomerular basement membrane 
-- 'glomerular basement membrane' SubClassOf 'anatomical structure'
-+ 'glomerular basement membrane' SubClassOf 'anatomical entity'
+Class: http://purl.obolibrary.org/obo/GO_0006568
+Label(s): L-tryptophan metabolic process 
+- 'L-tryptophan metabolic process' SubClassOf 'amino acid metabolic process'
+- 'L-tryptophan metabolic process' SubClassOf 'organic acid metabolic process'
++ 'L-tryptophan metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0043543
-Label(s): iatrogenic disease 
-- 'iatrogenic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'iatrogenic disease' SubClassOf 'disease'
-+ 'iatrogenic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
+Class: http://purl.obolibrary.org/obo/GO_0006560
+Label(s): L-proline metabolic process 
+- 'L-proline metabolic process' SubClassOf 'organic acid metabolic process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012559
-Label(s): primary immunodeficiency syndrome due to p14 deficiency 
-- 'primary immunodeficiency syndrome due to p14 deficiency' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/MONDO_0014866
+Label(s): Charcot-Marie-Tooth disease axonal type 2T 
+- 'Charcot-Marie-Tooth disease axonal type 2T' SubClassOf 'Charcot-Marie-Tooth disease type 2'
++ 'Charcot-Marie-Tooth disease axonal type 2T' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0043459
-Label(s): radiation-induced disorder 
-- 'radiation-induced disorder' SubClassOf 'disease'
-- 'radiation-induced disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'radiation-induced disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
+Class: http://purl.obolibrary.org/obo/GO_0006090
+Label(s): pyruvate metabolic process 
+- 'pyruvate metabolic process' SubClassOf 'organic acid metabolic process'
++ 'pyruvate metabolic process' SubClassOf 'Metabolism'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0979865
-Label(s): Popov-Chang syndrome 
-- 'Popov-Chang syndrome' SubClassOf 'neurodevelopmental disorder'
-+ 'Popov-Chang syndrome' SubClassOf 'Mendelian neurodevelopmental disorder'
+Class: http://purl.obolibrary.org/obo/GO_0006082
+Label(s): organic acid metabolic process 
+- 'organic acid metabolic process' SubClassOf 'Metabolism'
++ 'organic acid metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005087
-Label(s): respiratory system disorder 
-- 'respiratory system disorder' SubClassOf 'disease'
-- 'respiratory system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'respiratory system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://purl.obolibrary.org/obo/HP_0100512
+Label(s): Decreased circulating vitamin D concentration 
+- 'Decreased circulating vitamin D concentration' SubClassOf 'Abnormality of vitamin metabolism'
++ 'Decreased circulating vitamin D concentration' SubClassOf 'Abnormality of metabolism/homeostasis'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012742
-Label(s): Brugada syndrome 3 
-+ 'Brugada syndrome 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700321
+Class: http://purl.obolibrary.org/obo/GO_0015939
+Label(s): Vitamin B5 (pantothenate) metabolism pantothenate metabolic process 
+- 'Vitamin B5 (pantothenate) metabolism' SubClassOf 'organic acid metabolic process'
++ 'Vitamin B5 (pantothenate) metabolism' SubClassOf 'Metabolism'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012825
-Label(s): extraskeletal myxoid chondrosarcoma 
-+ 'extraskeletal myxoid chondrosarcoma' SubClassOf 'hereditary disease'
+Class: http://purl.obolibrary.org/obo/GO_0043400
+Label(s): cortisol secretion 
+- 'cortisol secretion' SubClassOf 'part_of' some 'endocrine process'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0012883
-Label(s): acute promyelocytic leukemia 
-- 'acute promyelocytic leukemia' SubClassOf 'acute myeloid leukemia'
-+ 'acute promyelocytic leukemia' SubClassOf 'inherited acute myeloid leukemia'
+Class: http://purl.obolibrary.org/obo/HP_0004338
+Label(s): Abnormal circulating aromatic amino acid concentration 
++ 'Abnormal circulating aromatic amino acid concentration' SubClassOf 'Abnormal circulating nitrogen compound concentration'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700044
-Label(s): TUBB2A-related tubulinopathy 
-- 'TUBB2A-related tubulinopathy' SubClassOf 'tubulinopathy'
-- 'TUBB2A-related tubulinopathy' SubClassOf 'complex neurodevelopmental disorder with motor features'
-- 'TUBB2A-related tubulinopathy' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'TUBB2A-related tubulinopathy' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/HP_0100504
+Label(s): Decreased circulating vitamin B2 concentration 
+- 'Decreased circulating vitamin B2 concentration' SubClassOf 'Abnormality of vitamin metabolism'
++ 'Decreased circulating vitamin B2 concentration' SubClassOf 'Abnormality of metabolism/homeostasis'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700007
-Label(s): idiopathic disease 
-- 'idiopathic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'idiopathic disease' SubClassOf 'disease'
-+ 'idiopathic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770008
+Class: http://purl.obolibrary.org/obo/MONDO_0017385
+Label(s): malignant migrating partial seizures of infancy 
++ 'malignant migrating partial seizures of infancy' SubClassOf 'neonatal/infantile-onset epilepsy syndrome with developmental and epileptic encephalopathy'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0700003
-Label(s): obstetric disorder 
-- 'obstetric disorder' SubClassOf 'disease'
-- 'obstetric disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'obstetric disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
+Class: http://purl.obolibrary.org/obo/MONDO_0044640
+Label(s): Charcot-Marie-Tooth disease type 2T 
+- 'Charcot-Marie-Tooth disease type 2T' SubClassOf 'Charcot-Marie-Tooth disease type 2'
++ 'Charcot-Marie-Tooth disease type 2T' SubClassOf 'Charcot-Marie-Tooth disease type 2'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0011961
-Label(s): hereditary sensory and autonomic neuropathy type 1B 
-- 'hereditary sensory and autonomic neuropathy type 1B' SubClassOf 'hereditary sensory and autonomic neuropathy type 1'
-+ 'hereditary sensory and autonomic neuropathy type 1B' SubClassOf http://www.w3.org/2002/07/owl#Thing
+Class: http://purl.obolibrary.org/obo/MONDO_0005719
+Label(s): Coronavinae infectious disease 
+- 'Coronavinae infectious disease' SubClassOf 'viral infectious disease'
++ 'Coronavinae infectious disease' SubClassOf http://www.w3.org/2002/07/owl#Thing
 
-Class: http://purl.obolibrary.org/obo/MONDO_0032572
-Label(s): cardiac, facial, and digital anomalies with developmental delay 
-+ 'cardiac, facial, and digital anomalies with developmental delay' SubClassOf 'syndromic disease'
+Class: http://purl.obolibrary.org/obo/HP_0010894
+Label(s): Abnormal circulating serine family amino acid concentration 
++ 'Abnormal circulating serine family amino acid concentration' SubClassOf 'Abnormal circulating nitrogen compound concentration'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0006858
-Label(s): mouth disorder 
-- 'mouth disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'mouth disorder' SubClassOf 'disease'
-+ 'mouth disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://purl.obolibrary.org/obo/GO_0032274
+Label(s): gonadotropin secretion 
+- 'gonadotropin secretion' SubClassOf 'part_of' some 'endocrine process'
 
-Class: http://purl.obolibrary.org/obo/FBbi_00000603
-Label(s): fluorescence polarization microscopy 
-+ 'fluorescence polarization microscopy' SubClassOf 'polarization microscopy'
+Class: http://purl.obolibrary.org/obo/MONDO_0957874
+Label(s): neuronopathy, distal hereditary motor, autosomal recessive 9 
+- 'neuronopathy, distal hereditary motor, autosomal recessive 9' SubClassOf 'neuronopathy, distal hereditary motor, autosomal recessive'
++ 'neuronopathy, distal hereditary motor, autosomal recessive 9' SubClassOf 'primary coenzyme Q10 deficiency 8'
++ 'neuronopathy, distal hereditary motor, autosomal recessive 9' SubClassOf 'neuronopathy, distal hereditary motor, autosomal recessive'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0011671
-Label(s): Huntington disease-like 2 
-- 'Huntington disease-like 2' SubClassOf 'neuroacanthocytosis'
-+ 'Huntington disease-like 2' SubClassOf 'inherited neurodegenerative disorder'
+Class: http://purl.obolibrary.org/obo/HP_0011511
+Label(s): Macular schisis 
+- 'Macular schisis' SubClassOf 'Abnormal macular morphology'
++ 'Macular schisis' SubClassOf 'Abnormal retinal morphology'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005574
-Label(s): tauopathy 
-+ 'tauopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
+Class: http://purl.obolibrary.org/obo/HP_0002912
+Label(s): Methylmalonic acidemia 
+- 'Methylmalonic acidemia' SubClassOf 'Abnormality of vitamin metabolism'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0005570
-Label(s): hematologic disorder 
-- 'hematologic disorder' SubClassOf 'disease'
-- 'hematologic disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'hematologic disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
+Class: http://purl.obolibrary.org/obo/MONDO_0000079
+Label(s): nephrolithiasis/osteoporosis, hypophosphatemic 
++ 'nephrolithiasis/osteoporosis, hypophosphatemic' SubClassOf 'hereditary disease'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0044720
-Label(s): cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome 
-+ 'cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome' SubClassOf 'hereditary sensory and autonomic neuropathy type 1'
+Class: http://purl.obolibrary.org/obo/HP_0002160
+Label(s): Hyperhomocystinemia 
++ 'Hyperhomocystinemia' SubClassOf 'Abnormal circulating nitrogen compound concentration'
 
-Class: http://purl.obolibrary.org/obo/MONDO_0011236
-Label(s): hyperinsulinism due to glucokinase deficiency 
-- 'hyperinsulinism due to glucokinase deficiency' SubClassOf 'diazoxide-sensitive diffuse hyperinsulinism'
-+ 'hyperinsulinism due to glucokinase deficiency' SubClassOf 'congenital isolated hyperinsulinism'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005308
-Label(s): ciliopathy 
-+ 'ciliopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002081
-Label(s): musculoskeletal system disorder 
-- 'musculoskeletal system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'musculoskeletal system disorder' SubClassOf 'disease'
-+ 'musculoskeletal system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005151
-Label(s): endocrine system disorder 
-- 'endocrine system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'endocrine system disorder' SubClassOf 'disease'
-+ 'endocrine system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005137
-Label(s): nutritional disorder 
-- 'nutritional disorder' SubClassOf 'disease'
-- 'nutritional disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'nutritional disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770008
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005039
-Label(s): reproductive system disorder 
-- 'reproductive system disorder' SubClassOf 'disease'
-- 'reproductive system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'reproductive system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013065
-Label(s): premature ovarian failure 7 
-+ 'premature ovarian failure 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060211
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013066
-Label(s): 46,XY sex reversal 3 
-+ '46,XY sex reversal 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060211
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013411
-Label(s): cataract 16 multiple types 
-+ 'cataract 16 multiple types' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060212
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013504
-Label(s): spermatogenic failure 8 
-+ 'spermatogenic failure 8' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060211
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013773
-Label(s): porencephaly 2 
-+ 'porencephaly 2' SubClassOf 'autosomal dominant disease'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0004367
-Label(s): Descemet's membrane 
-- 'Descemet's membrane' SubClassOf 'anatomical structure'
-+ 'Descemet's membrane' SubClassOf 'anatomical entity'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0859188
-Label(s): neurodevelopmental disorder with seizures and brain abnormalities 
-- 'neurodevelopmental disorder with seizures and brain abnormalities' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'neurodevelopmental disorder with seizures and brain abnormalities' SubClassOf 'neurodevelopmental disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021179
-Label(s): proteostasis deficiencies 
-+ 'proteostasis deficiencies' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021166
-Label(s): inflammatory disease 
-- 'inflammatory disease' SubClassOf 'disease'
-- 'inflammatory disease' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'inflammatory disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021147
-Label(s): disorder of development or morphogenesis 
-- 'disorder of development or morphogenesis' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'disorder of development or morphogenesis' SubClassOf 'disease'
-+ 'disorder of development or morphogenesis' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0009319
-Label(s): pantothenate kinase-associated neurodegeneration 
-- 'pantothenate kinase-associated neurodegeneration' SubClassOf 'disorder of phospholipids, sphingolipids and fatty acids biosynthesis'
-- 'pantothenate kinase-associated neurodegeneration' SubClassOf 'neuroacanthocytosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0000030
-Label(s): familial sleep-related hypermotor epilepsy 
-- 'familial sleep-related hypermotor epilepsy' SubClassOf 'familial partial epilepsy'
-+ 'familial sleep-related hypermotor epilepsy' SubClassOf 'familial partial epilepsy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002935
-Label(s): penis basal cell carcinoma 
-- 'penis basal cell carcinoma' SubClassOf 'squamous cell carcinoma of penis'
-+ 'penis basal cell carcinoma' SubClassOf 'penile carcinoma'
+Class: http://purl.obolibrary.org/obo/GO_0006506
+Label(s): Synthesis of glycosylphosphatidylinositol (GPI) GPI anchor biosynthetic process 
+- 'Synthesis of glycosylphosphatidylinositol (GPI)' SubClassOf 'phosphate-containing compound metabolic process'
 
 Class: http://purl.obolibrary.org/obo/GO_0006541
-Label(s): glutamine metabolic process 
-+ 'glutamine metabolic process' SubClassOf 'amino acid metabolic process'
-
-Class: http://purl.obolibrary.org/obo/GO_0006547
-Label(s): L-histidine metabolic process 
-- 'L-histidine metabolic process' SubClassOf 'amino acid metabolic process'
-- 'L-histidine metabolic process' SubClassOf 'organic acid metabolic process'
-+ 'L-histidine metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014073
-Label(s): dilated cardiomyopathy 1II 
-+ 'dilated cardiomyopathy 1II' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060212
-
-Class: http://purl.obolibrary.org/obo/UBERON_0006763
-Label(s): epithelium of conjunctiva 
-- 'epithelium of conjunctiva' SubClassOf 'part_of' some 'eye'
-
-Class: http://purl.obolibrary.org/obo/GO_0009279
-Label(s): cell outer membrane 
-- 'cell outer membrane' SubClassOf 'part_of' some 'external encapsulating structure'
-+ 'cell outer membrane' SubClassOf 'external encapsulating structure'
-
-Class: http://purl.obolibrary.org/obo/CL_0002063
-Label(s): pulmonary alveolar type 2 cell 
-- 'pulmonary alveolar type 2 cell' SubClassOf 'secretory cell'
-
-Class: http://purl.obolibrary.org/obo/CL_0002038
-Label(s): T follicular helper cell 
-+ 'T follicular helper cell' SubClassOf 'helper T cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004995
-Label(s): cardiovascular disorder 
-- 'cardiovascular disorder' SubClassOf 'disease'
-- 'cardiovascular disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'cardiovascular disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010434
-Label(s): synovial sarcoma 
-+ 'synovial sarcoma' SubClassOf 'hereditary disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019303
-Label(s): premature aging syndrome 
-- 'premature aging syndrome' SubClassOf 'disease'
-- 'premature aging syndrome' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'premature aging syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004392
-Label(s): intracranial extraskeletal myxoid chondrosarcoma 
-+ 'intracranial extraskeletal myxoid chondrosarcoma' SubClassOf 'hereditary neurological disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002025
-Label(s): psychiatric disorder 
-- 'psychiatric disorder' SubClassOf 'disease'
-- 'psychiatric disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'psychiatric disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100366
-Label(s): occupational disorder 
-- 'occupational disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'occupational disorder' SubClassOf 'disease'
-+ 'occupational disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002083
-Label(s): Richter syndrome 
-- 'Richter syndrome' SubClassOf 'disease arises from feature' some 'B-cell chronic lymphocytic leukemia'
-- 'Richter syndrome' SubClassOf 'neoplastic syndrome'
-- 'Richter syndrome' SubClassOf 'secondary neoplasm'
-+ 'Richter syndrome' SubClassOf 'disease arises from feature' some 'chronic lymphocytic leukemia/small lymphocytic lymphoma'
-+ 'Richter syndrome' SubClassOf 'secondary neoplasm'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100183
-Label(s): radioulnar synostosis, nonsyndromic, susceptibility to 
-+ 'radioulnar synostosis, nonsyndromic, susceptibility to' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700324
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020300
-Label(s): autosomal dominant nocturnal frontal lobe epilepsy 
-- 'autosomal dominant nocturnal frontal lobe epilepsy' SubClassOf 'familial partial epilepsy'
-- 'autosomal dominant nocturnal frontal lobe epilepsy' SubClassOf 'frontal lobe epilepsy'
-+ 'autosomal dominant nocturnal frontal lobe epilepsy' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100086
-Label(s): perinatal disease 
-- 'perinatal disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'perinatal disease' SubClassOf 'disease'
-+ 'perinatal disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100081
-Label(s): sleep disorder 
-- 'sleep disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'sleep disorder' SubClassOf 'disease'
-+ 'sleep disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021669
-Label(s): post-infectious disorder 
-- 'post-infectious disorder' SubClassOf 'disease'
-- 'post-infectious disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'post-infectious disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0020840
-Label(s): pulmonary alveolar proteinosis with hypogammaglobulinemia 
-+ 'pulmonary alveolar proteinosis with hypogammaglobulinemia' SubClassOf 'respiratory system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0035661
-Label(s): TRAF7-associated heart defect-digital anomalies-facial dysmorphism-motor and speech delay syndrome 
-- 'TRAF7-associated heart defect-digital anomalies-facial dysmorphism-motor and speech delay syndrome' SubClassOf 'syndromic disease'
-+ 'TRAF7-associated heart defect-digital anomalies-facial dysmorphism-motor and speech delay syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014952
-Label(s): intellectual disability-epilepsy-extrapyramidal syndrome 
-- 'intellectual disability-epilepsy-extrapyramidal syndrome' SubClassOf 'hereditary disease'
-+ 'intellectual disability-epilepsy-extrapyramidal syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0800443
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014922
-Label(s): myofibrillar myopathy 7 
-+ 'myofibrillar myopathy 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010194
-+ 'myofibrillar myopathy 7' SubClassOf 'congenital nervous system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008695
-Label(s): chorea-acanthocytosis 
-- 'chorea-acanthocytosis' SubClassOf 'neuroacanthocytosis'
-+ 'chorea-acanthocytosis' SubClassOf 'neuroacanthocytosis'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014847
-Label(s): spermatogenic failure 15 
-+ 'spermatogenic failure 15' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060214
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014844
-Label(s): premature ovarian failure 12 
-+ 'premature ovarian failure 12' SubClassOf http://purl.obolibrary.org/obo/MONDO_1060214
-
-Class: http://purl.obolibrary.org/obo/MONDO_1060174
-Label(s): systemic lupus erythematosus related to C1QA 
-- 'systemic lupus erythematosus related to C1QA' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0035660
-Label(s): GNAO1-related developmental delay-seizures-movement disorder spectrum 
-- 'GNAO1-related developmental delay-seizures-movement disorder spectrum' SubClassOf 'hereditary disease'
-+ 'GNAO1-related developmental delay-seizures-movement disorder spectrum' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014355
-Label(s): cardiomyopathy, dilated, with wooly hair, keratoderma, and tooth agenesis 
-- 'cardiomyopathy, dilated, with wooly hair, keratoderma, and tooth agenesis' SubClassOf 'arrhythmogenic cardiomyopathy with wooly hair and keratoderma'
-+ 'cardiomyopathy, dilated, with wooly hair, keratoderma, and tooth agenesis' SubClassOf 'hereditary skin disorder'
-+ 'cardiomyopathy, dilated, with wooly hair, keratoderma, and tooth agenesis' SubClassOf 'disease has major feature' some 'Dilated cardiomyopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014337
-Label(s): complex cortical dysplasia with other brain malformations 5 
-+ 'complex cortical dysplasia with other brain malformations 5' SubClassOf 'Mendelian neurodevelopmental disorder'
-+ 'complex cortical dysplasia with other brain malformations 5' SubClassOf 'complex neurodevelopmental disorder with motor features'
-+ 'complex cortical dysplasia with other brain malformations 5' SubClassOf 'tubulinopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0029000
-Label(s): poisoning 
-- 'poisoning' SubClassOf 'disease'
-- 'poisoning' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'poisoning' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013690
-Label(s): Pitt-Hopkins-like syndrome 2 
-+ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'congenital nervous system disorder'
-+ 'Pitt-Hopkins-like syndrome 2' SubClassOf 'Mendelian neurodevelopmental disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014002
-Label(s): autosomal dominant nocturnal frontal lobe epilepsy 5 
-- 'autosomal dominant nocturnal frontal lobe epilepsy 5' SubClassOf 'autosomal dominant nocturnal frontal lobe epilepsy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005066
-Label(s): metabolic disease 
-- 'metabolic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'metabolic disease' SubClassOf 'disease'
-+ 'metabolic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019040
-Label(s): chromosomal disorder 
-- 'chromosomal disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'chromosomal disorder' SubClassOf 'disease'
-+ 'chromosomal disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770009
-
-Class: http://purl.obolibrary.org/obo/MONDO_0019119
-Label(s): muscular channelopathy 
-+ 'muscular channelopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
-
-Class: http://purl.obolibrary.org/obo/MONDO_0004335
-Label(s): digestive system disorder 
-- 'digestive system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'digestive system disorder' SubClassOf 'disease'
-+ 'digestive system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0018945
-Label(s): McLeod neuroacanthocytosis syndrome 
-- 'McLeod neuroacanthocytosis syndrome' SubClassOf 'neuroacanthocytosis'
-+ 'McLeod neuroacanthocytosis syndrome' SubClassOf 'neuroacanthocytosis'
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001772
-Label(s): corneal epithelium 
-- 'corneal epithelium' SubClassOf 'part_of' some 'eye'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003847
-Label(s): hereditary disease 
-- 'hereditary disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'hereditary disease' SubClassOf 'disease'
-+ 'hereditary disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770009
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003749
-Label(s): esophageal disorder 
-- 'esophageal disorder' SubClassOf 'digestive system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0010979
-Label(s): Timothy syndrome 
-+ 'Timothy syndrome' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700321
-
-Class: http://purl.obolibrary.org/obo/MONDO_0045024
-Label(s): cancer or benign tumor 
-- 'cancer or benign tumor' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'cancer or benign tumor' SubClassOf 'disease'
-+ 'cancer or benign tumor' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770008
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024322
-Label(s): disorder of glycosylation 
-- 'disorder of glycosylation' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'disorder of glycosylation' SubClassOf 'disease'
-+ 'disorder of glycosylation' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0021060
-Label(s): RASopathy 
-+ 'RASopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770011
-
-Class: http://purl.obolibrary.org/obo/MONDO_0034820
-Label(s): cleft lip and palate-craniofacial dysmorphism-congenital heart defect-hearing loss syndrome 
-- 'cleft lip and palate-craniofacial dysmorphism-congenital heart defect-hearing loss syndrome' SubClassOf 'syndromic disease'
-+ 'cleft lip and palate-craniofacial dysmorphism-congenital heart defect-hearing loss syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_1060185
-Label(s): systemic lupus erythematosus 18 
-- 'systemic lupus erythematosus 18' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007915
-Label(s): systemic lupus erythematosus 
-+ 'systemic lupus erythematosus' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0859286
-Label(s): neurodevelopmental disorder with hypotonia, language delay, and skeletal defects with or without seizures 
-+ 'neurodevelopmental disorder with hypotonia, language delay, and skeletal defects with or without seizures' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700321
-
-Class: http://purl.obolibrary.org/obo/MONDO_0976127
-Label(s): Muggenthaler-Chowdhury-Chioza syndrome 
-+ 'Muggenthaler-Chowdhury-Chioza syndrome' SubClassOf 'syndromic disease'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0859083
-Label(s): systemic lupus erythematosus 17 
-- 'systemic lupus erythematosus 17' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024458
-Label(s): disorder of visual system 
-- 'disorder of visual system' SubClassOf 'disease'
-- 'disorder of visual system' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'disorder of visual system' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005046
-Label(s): immune system disorder 
-- 'immune system disorder' SubClassOf 'disease'
-- 'immune system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'immune system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005071
-Label(s): nervous system disorder 
-- 'nervous system disorder' SubClassOf 'disease'
-- 'nervous system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'nervous system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044991
-Label(s): upper digestive tract disorder 
-- 'upper digestive tract disorder' SubClassOf 'disease'
-- 'upper digestive tract disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'upper digestive tract disorder' SubClassOf 'digestive system disorder'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044970
-Label(s): mitochondrial disease 
-- 'mitochondrial disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'mitochondrial disease' SubClassOf 'disease'
-+ 'mitochondrial disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770007
-
-Class: http://purl.obolibrary.org/obo/MONDO_0003900
-Label(s): connective tissue disorder 
-- 'connective tissue disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'connective tissue disorder' SubClassOf 'disease'
-+ 'connective tissue disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0024623
-Label(s): otorhinolaryngologic disease 
-- 'otorhinolaryngologic disease' SubClassOf 'disease'
-- 'otorhinolaryngologic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'otorhinolaryngologic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005341
-Label(s): skin basal cell carcinoma 
-- 'skin basal cell carcinoma' SubClassOf 'skin squamous cell carcinoma'
-+ 'skin basal cell carcinoma' SubClassOf 'skin carcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0700220
-Label(s): disease related to transplantation 
-- 'disease related to transplantation' SubClassOf 'disease'
-- 'disease related to transplantation' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'disease related to transplantation' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002943
-Label(s): external ear basal cell carcinoma 
-- 'external ear basal cell carcinoma' SubClassOf 'external ear squamous cell carcinoma'
-+ 'external ear basal cell carcinoma' SubClassOf 'external ear carcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002936
-Label(s): scrotum basal cell carcinoma 
-- 'scrotum basal cell carcinoma' SubClassOf 'scrotum squamous cell carcinoma'
-+ 'scrotum basal cell carcinoma' SubClassOf 'scrotal carcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0044315
-Label(s): craniosynostosis 7 
-+ 'craniosynostosis 7' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700324
-
-Class: http://purl.obolibrary.org/obo/UBERON_0008904
-Label(s): neuromast 
-- 'neuromast' SubClassOf 'sense organ'
-+ 'neuromast' SubClassOf 'part_of' some 'anatomical system'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013743
-Label(s): autosomal systemic lupus erythematosus type 16 
-- 'autosomal systemic lupus erythematosus type 16' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002657
-Label(s): breast disorder 
-- 'breast disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'breast disorder' SubClassOf 'disease'
-+ 'breast disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0023243
-Label(s): glass-chapman-hockley syndrome 
-- 'glass-chapman-hockley syndrome' SubClassOf 'autosomal dominant disease'
-- 'glass-chapman-hockley syndrome' SubClassOf 'craniosynostosis'
-+ 'glass-chapman-hockley syndrome' SubClassOf http://www.w3.org/2002/07/owl#Thing
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002955
-Label(s): vulva basal cell carcinoma 
-- 'vulva basal cell carcinoma' SubClassOf 'vulvar squamous cell carcinoma'
-+ 'vulva basal cell carcinoma' SubClassOf 'vulvar carcinoma'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0005550
-Label(s): infectious disease 
-- 'infectious disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'infectious disease' SubClassOf 'disease'
-+ 'infectious disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770010
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002409
-Label(s): auditory system disorder 
-- 'auditory system disorder' SubClassOf 'disease'
-- 'auditory system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'auditory system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/CL_0000312
-Label(s): keratinocyte 
-- 'keratinocyte' SubClassOf 'squamous epithelial cell'
-+ 'keratinocyte' SubClassOf 'epithelial cell'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002254
-Label(s): syndromic disease 
-- 'syndromic disease' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'syndromic disease' SubClassOf 'disease'
-+ 'syndromic disease' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0013902
-Label(s): aortic valve disease 2 
-+ 'aortic valve disease 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_0700324
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002118
-Label(s): urinary system disorder 
-- 'urinary system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'urinary system disorder' SubClassOf 'disease'
-+ 'urinary system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002051
-Label(s): integumentary system disorder 
-- 'integumentary system disorder' SubClassOf 'disease'
-- 'integumentary system disorder' SubClassOf 'in taxon' some 'Homo sapiens'
-+ 'integumentary system disorder' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/MONDO_0002022
-Label(s): disorder of orbital region 
-- 'disorder of orbital region' SubClassOf 'in taxon' some 'Homo sapiens'
-- 'disorder of orbital region' SubClassOf 'disease'
-+ 'disorder of orbital region' SubClassOf http://purl.obolibrary.org/obo/MONDO_7770006
-
-Class: http://purl.obolibrary.org/obo/UBERON_0001985
-Label(s): corneal endothelium 
-- 'corneal endothelium' SubClassOf 'part_of' some 'eye'
-
-Class: http://purl.obolibrary.org/obo/MONDO_1060176
-Label(s): systemic lupus erythematosus related to C1S 
-- 'systemic lupus erythematosus related to C1S' SubClassOf 'hereditary disorder of connective tissue'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0033838
-Label(s): radiation-induced plexopathy 
-- 'radiation-induced plexopathy' SubClassOf 'radiation-induced disorder'
-+ 'radiation-induced plexopathy' SubClassOf http://purl.obolibrary.org/obo/MONDO_0100635
-
-Class: http://purl.obolibrary.org/obo/MONDO_0012900
-Label(s): cardiomyopathy, familial restrictive, 3 
-+ 'cardiomyopathy, familial restrictive, 3' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010193
-
-Class: http://purl.obolibrary.org/obo/MONDO_0007266
-Label(s): hypertrophic cardiomyopathy 2 
-+ 'hypertrophic cardiomyopathy 2' SubClassOf http://purl.obolibrary.org/obo/MONDO_1010193
-
-Class: http://purl.obolibrary.org/obo/MONDO_0008419
-Label(s): scoliosis, isolated, susceptibility to, 1 
-- 'scoliosis, isolated, susceptibility to, 1' SubClassOf 'inherited disease susceptibility'
-+ 'scoliosis, isolated, susceptibility to, 1' SubClassOf http://purl.obolibrary.org/obo/MONDO_0980764
-
-Class: http://purl.obolibrary.org/obo/MONDO_0014357
-Label(s): intellectual disability, autosomal dominant 24 
-+ 'intellectual disability, autosomal dominant 24' SubClassOf http://purl.obolibrary.org/obo/MONDO_0800443
+Label(s): L-glutamine metabolic process 
+- 'L-glutamine metabolic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/GO_0006558
+Label(s): L-phenylalanine metabolic process Phenylalanine metabolism 
+- 'Phenylalanine metabolism' SubClassOf 'amino acid metabolic process'
+- 'Phenylalanine metabolism' SubClassOf 'organic acid metabolic process'
++ 'Phenylalanine metabolism' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/GO_0006570
+Label(s): tyrosine metabolic process 
+- 'tyrosine metabolic process' SubClassOf 'amino acid metabolic process'
+- 'tyrosine metabolic process' SubClassOf 'organic acid metabolic process'
++ 'tyrosine metabolic process' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/GO_0009450
+Label(s): GABA catabolic process Degradation of GABA 
+- 'Degradation of GABA' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/GO_0006631
+Label(s): fatty acid metabolic process Intracellular metabolism of fatty acids regulates insulin secretion Fatty acid metabolism Fatty acids 
+- 'Fatty acid metabolism' SubClassOf 'organic acid metabolic process'
+
+Class: http://www.ebi.ac.uk/efo/EFO_0700001
+Label(s): PhenoCycler-Fusion 
+- 'PhenoCycler-Fusion' SubClassOf 'spatial proteomics'
++ 'PhenoCycler-Fusion' SubClassOf http://www.ebi.ac.uk/efo/EFO_0022989
+
+Class: http://purl.obolibrary.org/obo/GO_0006753
+Label(s): nucleoside phosphate metabolic process 
+- 'nucleoside phosphate metabolic process' SubClassOf 'phosphate-containing compound metabolic process'
+
+Class: http://purl.obolibrary.org/obo/GO_0000096
+Label(s): Sulfur amino acid metabolism sulfur amino acid metabolic process 
+- 'sulfur amino acid metabolic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/GO_0046952
+Label(s): ketone body catabolic process Utilization of Ketone Bodies 
+- 'Utilization of Ketone Bodies' SubClassOf 'generation of precursor metabolites and energy'
+
+Class: http://purl.obolibrary.org/obo/HP_0100502
+Label(s): Decreased circulating vitamin B12 concentration 
+- 'Decreased circulating vitamin B12 concentration' SubClassOf 'Abnormality of vitamin metabolism'
++ 'Decreased circulating vitamin B12 concentration' SubClassOf 'Abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019409
+Label(s): idiopathic juvenile osteoporosis 
+- 'idiopathic juvenile osteoporosis' SubClassOf 'hereditary disorder of connective tissue'
+
+Class: http://purl.obolibrary.org/obo/GO_0046655
+Label(s): folic acid metabolic process Metabolism of folate and pterines 
+- 'Metabolism of folate and pterines' SubClassOf 'organic acid metabolic process'
++ 'Metabolism of folate and pterines' SubClassOf 'Metabolism'
+
+Class: http://purl.obolibrary.org/obo/GO_0019853
+Label(s): L-ascorbic acid biosynthetic process 
+- 'L-ascorbic acid biosynthetic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/HP_0012388
+Label(s): Acute bronchitis 
++ 'Acute bronchitis' SubClassOf 'Abnormality of immune system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0012052
+Label(s): Low serum calcitriol 
+- 'Low serum calcitriol' SubClassOf 'Abnormality of vitamin metabolism'
++ 'Low serum calcitriol' SubClassOf 'Abnormality of metabolism/homeostasis'
+
+Class: http://purl.obolibrary.org/obo/HP_0012025
+Label(s): Abnormal circulating ornithine concentration 
++ 'Abnormal circulating ornithine concentration' SubClassOf 'Abnormal circulating nitrogen compound concentration'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0100025
+Label(s): epilepsy of infancy with migrating focal seizures 
+- 'epilepsy of infancy with migrating focal seizures' SubClassOf 'neonatal/infantile-onset epilepsy syndrome with developmental and epileptic encephalopathy'
++ 'epilepsy of infancy with migrating focal seizures' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://purl.obolibrary.org/obo/MONDO_0020500
+Label(s): Marburg hemorrhagic fever 
+- 'Marburg hemorrhagic fever' SubClassOf 'Filoviridae infectious disease'
+
+Class: http://purl.obolibrary.org/obo/GO_0035932
+Label(s): aldosterone secretion 
+- 'aldosterone secretion' SubClassOf 'part_of' some 'endocrine process'
+
+Class: http://purl.obolibrary.org/obo/GO_0035898
+Label(s): parathyroid hormone secretion 
+- 'parathyroid hormone secretion' SubClassOf 'part_of' some 'endocrine process'
+
+Class: http://purl.obolibrary.org/obo/GO_0006544
+Label(s): glycine metabolic process 
+- 'glycine metabolic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/CL_0000501
+Label(s): granulosa cell on CELLxGENE CellGuide granulosa cell 
++ 'granulosa cell' SubClassOf 'epithelial cell'
+
+Class: http://purl.obolibrary.org/obo/GO_0006796
+Label(s): phosphate-containing compound metabolic process 
+- 'phosphate-containing compound metabolic process' SubClassOf 'phosphorus metabolic process'
++ 'phosphate-containing compound metabolic process' SubClassOf 'Metabolism'
+
+Class: http://purl.obolibrary.org/obo/GO_0008614
+Label(s): pyridoxine metabolic process 
+- 'pyridoxine metabolic process' SubClassOf 'Metabolism'
++ 'pyridoxine metabolic process' SubClassOf 'vitamin metabolic process'
+
+Class: http://purl.obolibrary.org/obo/HP_0001082
+Label(s): Cholecystitis 
++ 'Cholecystitis' SubClassOf 'Abnormality of immune system physiology'
++ 'Cholecystitis' SubClassOf 'Functional abnormality of the gastrointestinal tract'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0005298
+Label(s): osteoporosis 
+- 'osteoporosis' SubClassOf 'osteogenesis imperfecta and a reduction of bone mineral density.'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0013996
+Label(s): focal facial dermal dysplasia type II 
+- 'focal facial dermal dysplasia type II' SubClassOf 'focal facial dermal dysplasia type III'
++ 'focal facial dermal dysplasia type II' SubClassOf 'focal facial dermal dysplasia'
+
+Class: http://purl.obolibrary.org/obo/HP_0010910
+Label(s): Hypervalinemia 
++ 'Hypervalinemia' SubClassOf 'Abnormal circulating nitrogen compound concentration'
+
+Class: http://purl.obolibrary.org/obo/GO_0051458
+Label(s): corticotropin secretion 
+- 'corticotropin secretion' SubClassOf 'part_of' some 'endocrine process'
+
+Class: http://purl.obolibrary.org/obo/HP_0011950
+Label(s): Bronchiolitis 
+- 'Bronchiolitis' SubClassOf 'Recurrent respiratory infections'
++ 'Bronchiolitis' SubClassOf 'Respiratory tract infection'
++ 'Bronchiolitis' SubClassOf 'Abnormality of immune system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0011015
+Label(s): Abnormal blood glucose concentration 
++ 'Abnormal blood glucose concentration' SubClassOf 'Abnormal circulating carbohydrate concentration'
+
+Class: http://purl.obolibrary.org/obo/GO_0006564
+Label(s): L-serine biosynthetic process 
+- 'L-serine biosynthetic process' SubClassOf 'organic acid metabolic process'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0859244
+Label(s): phosphoribosylaminoimidazole carboxylase deficiency 
+- 'phosphoribosylaminoimidazole carboxylase deficiency' SubClassOf 'hereditary disease'
++ 'phosphoribosylaminoimidazole carboxylase deficiency' SubClassOf http://www.w3.org/2002/07/owl#Thing
+
+Class: http://www.ebi.ac.uk/efo/EFO_0022440
+Label(s): KGN cell 
++ 'KGN cell' SubClassOf 'epithelial cell derived cell line'
+
+Class: http://purl.obolibrary.org/obo/HP_0000230
+Label(s): Gingivitis 
++ 'Gingivitis' SubClassOf 'Abnormality of immune system physiology'
+
+Class: http://purl.obolibrary.org/obo/HP_0009098
+Label(s): Chronic oral candidiasis 
++ 'Chronic oral candidiasis' SubClassOf 'Abnormality of the mouth'
++ 'Chronic oral candidiasis' SubClassOf 'Opportunistic infection'
+
+Class: http://purl.obolibrary.org/obo/HP_0007754
+Label(s): Macular dystrophy 
++ 'Macular dystrophy' SubClassOf 'Retinal dystrophy'
+
+Class: http://purl.obolibrary.org/obo/MONDO_0017790
+Label(s): gastric adenocarcinoma and proximal polyposis of the stomach 
+- 'gastric adenocarcinoma and proximal polyposis of the stomach' SubClassOf 'polyposis'
++ 'gastric adenocarcinoma and proximal polyposis of the stomach' SubClassOf 'polyposis'
+
+Class: http://purl.obolibrary.org/obo/HP_0010911
+Label(s): Hyperleucinemia 
++ 'Hyperleucinemia' SubClassOf 'Abnormal circulating nitrogen compound concentration'
+
+Class: http://purl.obolibrary.org/obo/HP_0100501
+Label(s): Recurrent bronchiolitis 
+- 'Recurrent bronchiolitis' SubClassOf 'Recurrent bronchitis'
++ 'Recurrent bronchiolitis' SubClassOf 'Bronchiolitis'
+
+Class: http://purl.obolibrary.org/obo/GO_0019693
+Label(s): ribose phosphate metabolic process 
+- 'ribose phosphate metabolic process' SubClassOf 'phosphate-containing compound metabolic process'
 
 ----------------------------------
 
 3. Obsolete Classes in EFO
 
 @Classes deleted from this version
-
 
 
 ----------------------------------
