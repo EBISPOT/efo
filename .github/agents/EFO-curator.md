@@ -80,10 +80,11 @@ If parent term is suggested:
 2. Verify the parent is appropriate for the domain
 3. Check if the parent exists in EFO or needs to be imported
 
-If synonyms are provided:
+If synonyms are provided (or discovered during research):
 1. Verify each synonym appears in the literature
 2. Note which papers use which synonyms
 3. Distinguish exact synonyms from related terms
+4. **Record the source (PMID/DOI, or external-ontology ID) of every synonym.** Synonyms get a `hasDbXref` provenance just like definitions do, so EFO-ontologist needs the source from you for each one. If a synonym has no traceable source, say so — never invent one.
 
 ### Step 3: Cross-Reference Validation
 

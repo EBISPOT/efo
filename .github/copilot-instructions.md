@@ -367,14 +367,15 @@ This section describes how to coordinate work across the three specialized EFO a
   - **Exact synonyms** → Mark as `hasExactSynonym`
   - **Broader terms** → Mark as `hasBroadSynonym`
 - EFO-curator should provide this categorization in the curation report
-- Example format:
+- EFO-curator should ALSO record the **source** of each synonym (the PMID/DOI where it appears, or the external-ontology ID it was taken from). Synonyms carry a `hasDbXref` provenance just like definitions do, so the source must be passed to EFO-ontologist. If a synonym has no traceable source, say so — never invent one.
+- Example format (note the source on every synonym):
   ```
   Synonyms:
-  - 5-aminosalicylic acid (hasExactSynonym)
-  - 5-ASA (hasRelatedSynonym - abbreviation)
-  - mesalazine (hasExactSynonym)
-  - Asacol (hasNarrowSynonym - brand name)
-  - Pentasa (hasNarrowSynonym - brand name)
+  - 5-aminosalicylic acid (hasExactSynonym) — PMID:12345678
+  - 5-ASA (hasRelatedSynonym - abbreviation) — PMID:12345678
+  - mesalazine (hasExactSynonym) — PMID:23456789
+  - Asacol (hasNarrowSynonym - brand name) — PMID:23456789
+  - Pentasa (hasNarrowSynonym - brand name) — PMID:23456789
   ```
 
 #### EFO-importer  
@@ -502,7 +503,7 @@ Dependencies: None, proceed with analysis
 Before requesting @EFO-ontologist to edit `src/ontology/efo-edit.owl` for **any new term**, the following must be present:
 
 **Required from @EFO-curator:**
-- Curator output attached: definitions, **minimum 2 PMIDs/DOIs**, synonyms **with type categorization** (exact/related/narrow/broad), suggested parent(s), and confidence assessment
+- Curator output attached: definitions, **minimum 2 PMIDs/DOIs**, synonyms **with type categorization** (exact/related/narrow/broad) **and a source (PMID/DOI or external-ontology ID) for each**, suggested parent(s), and confidence assessment
 - OR explicit curator sign-off: `@EFO-curator: SIGN-OFF`
 
 **Required from @EFO-importer (if applicable):**
@@ -512,7 +513,7 @@ Before requesting @EFO-ontologist to edit `src/ontology/efo-edit.owl` for **any 
 - Label
 - Textual definition with **minimum 2 PMIDs embedded as xrefs**
 - Parent term(s) - **VERIFIED as non-obsolete**
-- Synonyms (if any) - **WITH type categorization** (exact/related/narrow/broad)
+- Synonyms (if any) - **WITH type categorization** (exact/related/narrow/broad) **and a source for each** (PMID/DOI or external-ontology ID), to be added as a `hasDbXref` provenance axiom
 - Logical definitions and relationships (if applicable)
 
 **EFO-ontologist MUST verify these preconditions.** If any are missing, refuse to proceed and respond with:
