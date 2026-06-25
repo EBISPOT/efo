@@ -197,6 +197,25 @@ When adding synonyms, use the correct annotation property based on curator categ
 - **Exact synonyms** → `hasExactSynonym`
 - **Broader terms** → `hasBroadSynonym`
 
+**Synonym provenance (xref) — REQUIRED, just like definitions**:
+
+Every synonym for which @EFO-curator supplied a source must carry a `hasDbXref` recording where it came from (the PMID/DOI, or the external-ontology ID it was lifted from). Encode it as a reified `owl:Axiom` on the synonym assertion, using the `annotatedProperty` that matches the synonym's type. The `annotatedTarget` text must match the synonym string exactly. This mirrors the NCBITaxon synonyms already present in `efo-edit.owl` (e.g. NCBITaxon:1076).
+
+```xml
+<!-- the bare synonym assertion on the class -->
+<oboInOwl:hasRelatedSynonym>5-ASA</oboInOwl:hasRelatedSynonym>
+
+<!-- its provenance, as a sibling owl:Axiom -->
+<owl:Axiom>
+    <owl:annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_XXXXXXX"/>
+    <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    <owl:annotatedTarget>5-ASA</owl:annotatedTarget>
+    <oboInOwl:hasDbXref>PMID:12345678</oboInOwl:hasDbXref>
+</owl:Axiom>
+```
+
+If the curator could not supply a source for a synonym, keep the bare synonym assertion (no axiom) and flag it for the PR — never invent an xref.
+
 #### 2. Definition with Embedded PMIDs
 
 **MINIMUM 2 PMID REFERENCES REQUIRED for all new terms**
@@ -392,6 +411,8 @@ Types of synonyms in EFO:
 - `oboInOwl:hasNarrowSynonym`: Synonym is more specific
 - `oboInOwl:hasBroadSynonym`: Synonym is more general
 - `oboInOwl:hasRelatedSynonym`: Related but not equivalent
+
+Each synonym with a known source must also carry a `hasDbXref` provenance via a reified `owl:Axiom` (see "Synonym provenance (xref)" above).
 
 ### Version Management
 

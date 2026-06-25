@@ -91,7 +91,7 @@ These are the rules you and the subagents must never violate. Deep technical det
 - **≥2 PMID references**, embedded as nested `<oboInOwl:hasDbXref>` inside the `obo:IAO_0000115` definition (see `efo-ontologist` spec for the exact XML). Prefer PMID over DOI. Never guess a PMID — web-search if needed.
 - Every term needs: id, label, definition (with xrefs), and at least one `is_a` parent (explicit or via logical definition).
 - New terms use **temporary IDs `EFO_099xxxx`**. Check for clashes: `grep EFO_099 src/ontology/efo-edit.owl`. Definitive IDs are allocated later by automation.
-- Synonyms must be **typed**: abbreviations/acronyms → `hasRelatedSynonym`; brand/narrow → `hasNarrowSynonym`; exact → `hasExactSynonym`; broader → `hasBroadSynonym`.
+- Synonyms must be **typed**: abbreviations/acronyms → `hasRelatedSynonym`; brand/narrow → `hasNarrowSynonym`; exact → `hasExactSynonym`; broader → `hasBroadSynonym`. Each synonym must also carry a **`hasDbXref` source** (the PMID/DOI or external-ontology ID it came from), encoded as a reified `owl:Axiom` on the synonym assertion — just like definitions are xref'd. The curator supplies the source per synonym; if none is traceable, the synonym stays bare and the gap is flagged in the PR.
 - Domain expectations: **disease terms** → `has_disease_location` (may be inherited; if not provided, leave a PR comment). **Measurement terms** → `is_about` the measured entity/process (same rule). Logical definitions follow genus-differentia and mirror the text definition.
 
 ### Imports (always delegated to `efo-importer`)

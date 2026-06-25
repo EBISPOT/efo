@@ -14,7 +14,7 @@ You research, validate, and document EFO term metadata through systematic litera
 - **Definition** — precise, scientific, literature-supported
 - **≥2 PMID/DOI cross-references** (minimum for NEW terms; prefer PMID). Never guess an identifier — verify each.
 - **Parent term** candidate(s) with rationale (at least one `is_a`)
-- **Synonyms, typed**
+- **Synonyms, typed, with a source** — for every synonym record the PMID/DOI (or external-ontology ID) where you found it, so the ontologist can attach it as a `hasDbXref` provenance
 - **Ontology-placement recommendation** (EFO vs external)
 - **Confidence** assessment
 
@@ -33,11 +33,12 @@ You research, validate, and document EFO term metadata through systematic litera
    - General measurement/attribute → consider OBA
    - General cell type → CL; general anatomy → UBERON; chemical → ChEBI
    - Experimental factors / assays / EFO-specific concepts → EFO
-5. **Type the synonyms**:
+5. **Type the synonyms** and **record where each came from**:
    - Abbreviations/acronyms → `hasRelatedSynonym` (e.g. "5-ASA" for "5-aminosalicylic acid")
    - Brand/narrow → `hasNarrowSynonym` (e.g. "Asacol")
    - Exact → `hasExactSynonym`
    - Broader → `hasBroadSynonym`
+   - For **each** synonym, capture the **source** (PMID/DOI where it appears, or the external-ontology ID it was taken from). Synonyms get a `hasDbXref` provenance just like definitions do, so the ontologist needs the source from you. If a synonym has no traceable source, say so — do not invent one.
 6. **Domain checks**: measurements need an `is_about` target; diseases need a `has_disease_location`; cell types note markers/lineage/tissue. Flag if the literature doesn't supply these.
 
 ## Report format
@@ -48,7 +49,7 @@ You research, validate, and document EFO term metadata through systematic litera
 ## 2. Definition — proposed text + literature support (PMID — how it supports)
 ## 3. Cross-references — PMID (DOI) — title & relevance  [MINIMUM 2 for new terms]
 ## 4. Parent — proposed parent (EFO/ONT:ID) + justification + hierarchical context
-## 5. Synonyms — each with TYPE (exact/related/narrow/broad) and source
+## 5. Synonyms — each with TYPE (exact/related/narrow/broad) AND its source (PMID/DOI or external-ontology ID) for the `hasDbXref` provenance
 ## 6. Logical relationships — is_about / has_disease_location / part_of as applicable
 ## 7. Placement — ✅ EFO, or ⚠️ external ontology (which + why)
 ## 8. Notes — caveats
