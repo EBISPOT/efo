@@ -209,6 +209,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <!-- http://purl.obolibrary.org/obo/ECTO_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_8000000"/>
         <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to radiation.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>radiation exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to radiation</rdfs:label>
@@ -287,9 +288,30 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECTO_7000068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_7000068">
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to particulate environmental material.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>particulate environmental material exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label>exposure to particulate matter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_8000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_8000000">
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to environmental system process.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>environmental system process exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label>exposure to environmental process</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECTO_8000036 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_8000036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_8000000"/>
         <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to air pollution.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>air pollution exposure</oboInOwl:hasExactSynonym>
         <rdfs:label>exposure to air pollution</rdfs:label>
