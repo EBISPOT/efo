@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ &mdash; Experimental Factor Ontology (EFO)</title>
+  <meta name="description" content="Frequently asked questions about the Experimental Factor Ontology (EFO): what it is, how to use it, how to download it, and how to contribute.">
+  <link rel="stylesheet" href="css/efo.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">EFO <span>Experimental Factor Ontology</span></a>
+    <nav aria-label="Site navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://www.ebi.ac.uk/ols4/ontologies/efo" target="_blank" rel="noopener">Browse EFO</a></li>
+        <li><a href="submit.html">Submit Term</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <h1 class="page-title">Frequently Asked Questions</h1>
+
+  <!-- Table of contents -->
+  <nav class="faq-toc" aria-label="FAQ contents">
+    <h3>Jump to a question</h3>
+    <div class="faq-toc-group">
+      <h4>Introduction</h4>
+      <ul>
+        <li><a href="#whatisefo">What is EFO?</a></li>
+        <li><a href="#queryingefo">How can I query EFO?</a></li>
+        <li><a href="#whatisefousedfor">What is EFO used for?</a></li>
+        <li><a href="#importingintoefo">Which ontologies does EFO combine?</a></li>
+        <li><a href="#howareontologiescombined">How are ontologies combined?</a></li>
+        <li><a href="#crossref">Does EFO cross-reference other ontologies?</a></li>
+        <li><a href="#efostructure">How is EFO structured?</a></li>
+        <li><a href="#efoediting">How is EFO edited?</a></li>
+        <li><a href="#efoupdate">How often is EFO updated?</a></li>
+        <li><a href="#efoqc">How is EFO quality controlled?</a></li>
+        <li><a href="#efocite">How should I cite EFO?</a></li>
+      </ul>
+    </div>
+    <div class="faq-toc-group">
+      <h4>Technical</h4>
+      <ul>
+        <li><a href="#efochanges">How do I track changes between versions?</a></li>
+        <li><a href="#efodownload">How can I download EFO?</a></li>
+        <li><a href="#ontologyeditor">What is Protégé?</a></li>
+        <li><a href="#owl">What is OWL?</a></li>
+        <li><a href="#owltoobo">Can I convert between OWL and OBO?</a></li>
+        <li><a href="#more">Where can I learn more about ontologies?</a></li>
+      </ul>
+    </div>
+    <div class="faq-toc-group">
+      <h4>Contributing</h4>
+      <ul>
+        <li><a href="#addatermtoefo">How do I add a term to EFO?</a></li>
+        <li><a href="#ontologytools">Can I use your ontology tools?</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Introduction ─────────────────────────── -->
+  <h2>Introduction</h2>
+
+  <div class="faq-item" id="whatisefo">
+    <h3 class="faq-q">What is EFO?</h3>
+    <div class="faq-a">
+      <p>
+        The Experimental Factor Ontology (EFO) provides a systematic description of many data elements
+        available in EBI databases and for external projects such as the
+        <a href="https://www.ebi.ac.uk/gwas/" target="_blank" rel="noopener">NHGRI-EBI GWAS Catalog</a>.
+        It combines parts of several biological ontologies, such as anatomy, disease, and chemical compounds.
+        The scope of EFO is to support the annotation, analysis, and visualization of data handled by
+        multiple teams at the EBI. We also add terms for external users when requested.
+      </p>
+      <p>
+        New to ontologies? See the
+        <a href="http://ontogenesis.knowledgeblog.org/66" target="_blank" rel="noopener">5-minute introduction</a>
+        or a <a href="http://jamesmaloneebi.blogspot.co.uk/2012/06/common-ontology-questions-1-what-is-it.html" target="_blank" rel="noopener">related blog post by James Malone</a>.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="queryingefo">
+    <h3 class="faq-q">How can I query EFO?</h3>
+    <div class="faq-a">
+      <p>
+        Use the <a href="https://www.ebi.ac.uk/ols4/ontologies/efo" target="_blank" rel="noopener">Ontology Lookup Service (OLS4)</a>
+        or <a href="https://bioportal.bioontology.org/ontologies/EFO" target="_blank" rel="noopener">BioPortal</a>;
+        both offer a web interface to browse and search EFO and other ontologies.
+        You can also use the search box on the <a href="index.html">EFO homepage</a>.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="whatisefousedfor">
+    <h3 class="faq-q">What is EFO used for?</h3>
+    <div class="faq-a">
+      <p>
+        EFO is primarily used to annotate biomedical data in EBI databases:
+        the <a href="https://www.ebi.ac.uk/biosamples/" target="_blank" rel="noopener">BioSamples database</a>,
+        the <a href="https://www.ebi.ac.uk/gxa" target="_blank" rel="noopener">Expression Atlas</a>,
+        <a href="https://www.ebi.ac.uk/arrayexpress" target="_blank" rel="noopener">ArrayExpress</a>,
+        and the <a href="https://www.ebi.ac.uk/gwas/" target="_blank" rel="noopener">GWAS Catalog</a>.
+        It is also the core ontology for <a href="https://www.opentargets.org" target="_blank" rel="noopener">Open Targets</a>.
+      </p>
+      <p>
+        The ontology enables query expansion: for example, an ArrayExpress search for <strong>cancer</strong>
+        can automatically include all subclasses of cancer in EFO, not just exact string matches.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="importingintoefo">
+    <h3 class="faq-q">Which ontologies does EFO combine, and why?</h3>
+    <div class="faq-a">
+      <p>
+        EFO combines terms from a subset of ontologies that are well-designed, actively maintained,
+        have definitions, and provide suitable coverage. These include:
+      </p>
+      <ul>
+        <li><a href="https://www.ebi.ac.uk/chebi/" target="_blank" rel="noopener">ChEBI</a> &mdash; chemical compounds and their roles</li>
+        <li><a href="http://www.geneontology.org/" target="_blank" rel="noopener">Gene Ontology</a> &mdash; cellular component and biological process terms</li>
+        <li><a href="http://obi-ontology.org/" target="_blank" rel="noopener">Ontology for Biomedical Investigation (OBI)</a> &mdash; experimental design and protocols</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/taxonomy/" target="_blank" rel="noopener">NCBI Taxonomy</a> &mdash; species and strains</li>
+        <li><a href="http://www.obofoundry.org/ontology/uberon.html" target="_blank" rel="noopener">UBERON</a> &mdash; anatomy</li>
+        <li><a href="http://www.ifomis.org/bfo/" target="_blank" rel="noopener">Basic Formal Ontology (BFO)</a> &mdash; upper-level terms (small subset)</li>
+        <li><a href="http://www.obofoundry.org/ontology/uo.html" target="_blank" rel="noopener">Units Ontology</a> &mdash; SI and combinatorial units</li>
+      </ul>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="howareontologiescombined">
+    <h3 class="faq-q">How are ontologies combined in EFO?</h3>
+    <div class="faq-a">
+      <p>
+        Ontologies are combined by importing relevant classes from external ontologies into EFO.
+        When a class is imported, the original identifier (URI) is retained.
+        When a term is needed in EFO and is in scope but not yet in one of our common import ontologies,
+        we request it from the source ontology and import it once it becomes available.
+      </p>
+      <p>
+        <strong>Example:</strong> <em>response to antipsychotic drug</em> was needed to annotate GWAS data.
+        Gene Ontology had the term <em>response to drug</em>, so we asked GO to add a new child term,
+        and once added we imported it into EFO.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="crossref">
+    <h3 class="faq-q">Does EFO cross-reference other ontologies?</h3>
+    <div class="faq-a">
+      <p>
+        Yes. As well as importing terms directly, EFO cross-references external ontologies to aid data integration.
+        For example, the <a href="https://www.ebi.ac.uk/pride/" target="_blank" rel="noopener">PRIDE database</a>
+        uses the <a href="http://www.brenda-enzymes.info/" target="_blank" rel="noopener">Brenda Tissue Ontology</a>
+        while BioSamples uses EFO. EFO and Brenda terms are mapped using the <em>definition citation</em>
+        annotation property, so a query of BioSamples via EFO can also surface data in PRIDE.
+      </p>
+      <p>
+        Mappings are done lexically and validated by an expert: exact string matches between class labels
+        and synonyms from EFO and a target ontology are checked, then the external class ID is added as an annotation.
+        Synonyms may also be imported, but conservatively — a synonym such as <em>cortex</em> can refer to different
+        structures (brain, kidney) and must be reviewed carefully.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="efostructure">
+    <h3 class="faq-q">How is EFO structured?</h3>
+    <div class="faq-a">
+      <p>EFO has three kinds of classes:</p>
+      <ul>
+        <li>
+          <strong>Top-level</strong> classes sit at the root of the hierarchy and define the axes of classification
+          (Process, Information, Materials, Properties of materials, Site), helping place new terms consistently.
+        </li>
+        <li>
+          <strong>Imported</strong> classes come from external ontologies; their original URIs are kept.
+          Definitions may be lightly edited to remove ontology jargon that would confuse biologist users.
+        </li>
+        <li>
+          <strong>Native</strong> classes exist only in EFO — for example, cell lines that are out of scope for the
+          Cell Line Ontology but are needed to annotate EBI data.
+        </li>
+      </ul>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="efoediting">
+    <h3 class="faq-q">How is EFO edited?</h3>
+    <div class="faq-a">
+      <p>
+        EFO may be edited manually or programmatically. Manual edits are done using
+        <a href="https://protege.stanford.edu/" target="_blank" rel="noopener">Protégé</a>,
+        a widely used ontology authoring tool. Programmatic edits are made using the
+        <a href="https://owlcs.github.io/owlapi/" target="_blank" rel="noopener">OWL-API</a>
+        for systematic changes. EFO source files are version-controlled on
+        <a href="https://github.com/EBISPOT/efo" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="efoupdate">
+    <h3 class="faq-q">How often is EFO updated?</h3>
+    <div class="faq-a">
+      <p>
+        EFO is released on the 15th of each month (or the next weekday). A monthly release schedule
+        allows us to incorporate terms requested by external users and our curators and to map these
+        terms to our databases. You can sign up for release emails via the
+        <a href="https://listserver.ebi.ac.uk/mailman/listinfo/efo-users" target="_blank" rel="noopener">EFO mailing list</a>
+        or read the <a href="https://raw.githubusercontent.com/EBISPOT/efo/master/ExFactor%20Ontology%20release%20notes.txt" target="_blank" rel="noopener">latest Release Notes</a>.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="efoqc">
+    <h3 class="faq-q">How is EFO quality controlled?</h3>
+    <div class="faq-a">
+      <p>
+        EFO runs on a continuous integration pipeline that checks for errors after every edit:
+        missing labels, malformed URIs, invalid namespaces, trailing whitespace, and duplicated labels or synonyms.
+        EFO is also reviewed regularly at each monthly release by the development team, and periodically by external experts.
+        If you find an error, please email the
+        <a href="mailto:efo-users@ebi.ac.uk">EFO user list</a>
+        or open an <a href="https://github.com/EBISPOT/efo/issues/new" target="_blank" rel="noopener">issue on GitHub</a>.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="efocite">
+    <h3 class="faq-q">How should I cite EFO?</h3>
+    <div class="faq-a">
+      <p>
+        Please cite:
+        <a href="https://doi.org/10.1093/bioinformatics/btq099" target="_blank" rel="noopener">
+          Malone J, Holloway E, Adamusiak T, Kapushesky M, Zheng J, Kolesnikov N, Zhukova A, Brazma A,
+          Parkinson H. Modeling sample variables with an Experimental Factor Ontology.
+          Bioinformatics. 2010 Apr 15;26(8):1112&ndash;8.
+        </a>
+        (PubMed PMID: 20200009; PMC: PMC2853691.)
+      </p>
+      <p>This paper is available under open access from the Bioinformatics Journal.</p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <!-- ── Technical ─────────────────────────────── -->
+  <h2>Technical Questions</h2>
+
+  <div class="faq-item" id="efochanges">
+    <h3 class="faq-q">How do I track changes between EFO versions?</h3>
+    <div class="faq-a">
+      <p>
+        You can compare any two EFO versions by diffing the OWL or OBO files directly from
+        <a href="https://github.com/EBISPOT/efo/releases" target="_blank" rel="noopener">GitHub Releases</a>.
+        The <a href="https://raw.githubusercontent.com/EBISPOT/efo/master/ExFactor%20Ontology%20release%20notes.txt" target="_blank" rel="noopener">release notes</a>
+        also include a human-readable summary of changes for each monthly release.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="efodownload">
+    <h3 class="faq-q">How can I download EFO?</h3>
+    <div class="faq-a">
+      <p>
+        EFO is available as an
+        <a href="https://github.com/EBISPOT/efo/releases/download/current/efo.owl" download="efo.owl">OWL format file</a>
+        and as an <a href="https://github.com/EBISPOT/efo/releases/download/current/efo.obo" download="efo.obo">OBO format file</a>
+        (converted from OWL). Both are available from our
+        <a href="https://github.com/EBISPOT/efo" target="_blank" rel="noopener">GitHub repository</a>.
+        OWL files can be opened in <a href="https://protege.stanford.edu/" target="_blank" rel="noopener">Protégé</a>;
+        OBO files can be opened in Protégé or OBO-Edit.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="ontologyeditor">
+    <h3 class="faq-q">How do I look at OWL files, and what is Protégé?</h3>
+    <div class="faq-a">
+      <p>
+        <a href="https://protege.stanford.edu/" target="_blank" rel="noopener">Protégé</a> is a free, open-source ontology
+        browser and editor developed at Stanford. To open EFO in Protégé, download and install Protégé and the
+        latest EFO OWL file from our <a href="https://github.com/EBISPOT/efo" target="_blank" rel="noopener">GitHub repository</a>.
+        Protégé has a steep learning curve; if you simply want to explore or search EFO, use
+        <a href="https://www.ebi.ac.uk/ols4/ontologies/efo" target="_blank" rel="noopener">OLS4</a> or BioPortal instead.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="owl">
+    <h3 class="faq-q">What is OWL?</h3>
+    <div class="faq-a">
+      <p>
+        OWL is the Web Ontology Language &mdash; both a format and a formal language used to represent ontologies.
+        It can be read and written by Protégé and processed programmatically via the
+        <a href="https://owlcs.github.io/owlapi/" target="_blank" rel="noopener">OWL-API</a>.
+        OBO format is an alternative language and format developed by the Gene Ontology project.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="owltoobo">
+    <h3 class="faq-q">Can I convert between OWL and OBO?</h3>
+    <div class="faq-a">
+      <p>
+        Yes. OBO-to-OWL conversion generally works well. OWL-to-OBO can be lossy; we use the
+        <a href="https://github.com/INCATools/ontology-development-kit" target="_blank" rel="noopener">Ontology Development Kit (ODK)</a>
+        to produce the OBO version of EFO distributed with each release.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="more">
+    <h3 class="faq-q">Where can I learn more about ontologies?</h3>
+    <div class="faq-a">
+      <p>
+        <a href="http://ontogenesis.knowledgeblog.org/" target="_blank" rel="noopener">Ontogenesis</a>
+        has accessible vignettes on ontologies.
+        Bioontologies are regularly presented at the
+        <a href="https://icbo.cgrb.oregonstate.edu/" target="_blank" rel="noopener">ICBO conference</a>
+        and the ISMB BioOntologies SIG.
+        James Malone (an EFO developer) also wrote a blog:
+        <a href="http://jamesmaloneebi.blogspot.co.uk/" target="_blank" rel="noopener">jamesmaloneebi.blogspot.co.uk</a>.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <!-- ── Contributing ───────────────────────────── -->
+  <h2>Contributing</h2>
+
+  <div class="faq-item" id="addatermtoefo">
+    <h3 class="faq-q">How do I add a term to EFO?</h3>
+    <div class="faq-a">
+      <p>
+        Use our <a href="https://github.com/EBISPOT/efo/issues/new" target="_blank" rel="noopener">GitHub issue tracker</a>
+        to request new terms (our older SourceForge and JIRA trackers are no longer used).
+        All requests are assigned to a developer and scheduled for a release.
+        For terms that are also of interest to community reference ontologies such as
+        <a href="https://www.geneontology.org/" target="_blank" rel="noopener">Gene Ontology</a>
+        or <a href="https://www.ebi.ac.uk/chebi" target="_blank" rel="noopener">ChEBI</a>,
+        we often submit to those ontologies first and then import into EFO.
+      </p>
+      <p>See also our <a href="submit.html">Submit Term page</a> for more detail.</p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="faq-item" id="ontologytools">
+    <h3 class="faq-q">Can I use your ontology tools?</h3>
+    <div class="faq-a">
+      <p>
+        Yes. Many of the tools we use to build EFO are publicly available, including tools for building,
+        validating, and comparing ontologies. See the
+        <a href="https://www.ebi.ac.uk/spot/ontology/" target="_blank" rel="noopener">SPOT tools page</a>
+        for an overview, including
+        <a href="https://www.ebi.ac.uk/spot/oxo/" target="_blank" rel="noopener">OxO</a>,
+        <a href="https://www.ebi.ac.uk/spot/zooma/" target="_blank" rel="noopener">Zooma</a>, and
+        <a href="https://www.ebi.ac.uk/spot/ontostring/" target="_blank" rel="noopener">OntoString</a>.
+        To browse EFO we recommend <a href="https://www.ebi.ac.uk/ols4/ontologies/efo" target="_blank" rel="noopener">OLS4</a>.
+      </p>
+      <a href="#top" class="back-to-top">&#8593; Back to top</a>
+    </div>
+  </div>
+
+  <div class="related-links">
+    <h3>Related Resources</h3>
+    <ul>
+      <li><a href="about.html">Citing EFO</a></li>
+      <li><a href="https://www.opentargets.org" target="_blank" rel="noopener">Open Targets</a></li>
+      <li><a href="https://www.ebi.ac.uk/gxa" target="_blank" rel="noopener">Gene Expression Atlas</a></li>
+      <li><a href="https://www.ebi.ac.uk/arrayexpress" target="_blank" rel="noopener">ArrayExpress</a></li>
+      <li><a href="https://github.com/EBISPOT/efo" target="_blank" rel="noopener">EFO on GitHub</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>&copy; EMBL-EBI &mdash; EFO is released under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">Apache 2.0 licence</a></span>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="https://www.ebi.ac.uk/about/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>
+      <a href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website" target="_blank" rel="noopener">Privacy</a>
+      <a href="https://github.com/EBISPOT/efo" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
