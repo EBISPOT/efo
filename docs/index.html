@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experimental Factor Ontology (EFO)</title>
+  <meta name="description" content="The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases and for projects such as the GWAS Catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, and Cell Ontology.">
+  <link rel="stylesheet" href="css/efo.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">EFO <span>Experimental Factor Ontology</span></a>
+    <nav aria-label="Site navigation">
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="https://www.ebi.ac.uk/ols4/ontologies/efo" target="_blank" rel="noopener">Browse EFO</a></li>
+        <li><a href="submit.html">Submit Term</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>The <abbr title="Experimental Factor Ontology">EFO</abbr></h1>
+      <p>
+        A systematic description of many experimental variables available in EBI databases,
+        and for projects such as the <a href="https://www.ebi.ac.uk/gwas/" style="color:rgba(255,255,255,0.9);text-decoration:underline;">GWAS Catalog</a>.
+        EFO combines parts of several biological ontologies — UBERON anatomy, ChEBI chemical compounds,
+        Cell Ontology, and more — to support annotation, analysis, and visualization of biomedical data.
+      </p>
+    </div>
+    <div class="hero-search">
+      <form action="https://www.ebi.ac.uk/ols4/search" method="get" target="_blank" rel="noopener" aria-label="Search EFO">
+        <input type="text" name="q" placeholder="Search EFO&hellip;" aria-label="Search EFO terms">
+        <input type="hidden" name="ontology" value="efo">
+        <button type="submit">Search</button>
+      </form>
+      <p class="search-examples">
+        Examples:
+        <a href="https://www.ebi.ac.uk/ols4/search?q=cancer&amp;ontology=efo" target="_blank" rel="noopener">cancer</a>,
+        <a href="https://www.ebi.ac.uk/ols4/search?q=HeLa&amp;ontology=efo" target="_blank" rel="noopener">HeLa</a>,
+        <a href="https://www.ebi.ac.uk/ols4/search?q=Li-Fraumeni+syndrome&amp;ontology=efo" target="_blank" rel="noopener">Li-Fraumeni syndrome</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <section aria-labelledby="overview-heading">
+    <h2 id="overview-heading">Representing experimental variables with EFO</h2>
+    <p>
+      The <strong>Experimental Factor Ontology</strong> (EFO) is developed by the EMBL-EBI
+      <a href="https://www.ebi.ac.uk/about/spot-team">Samples, Phenotypes and Ontologies Team (SPOT)</a>.
+      Its scope is to support the annotation, analysis and visualization of data handled by many groups at the EBI,
+      and to serve as the core ontology for <a href="https://www.opentargets.org">Open Targets</a>.
+      We also add terms for external users when requested.
+    </p>
+    <p>
+      New to ontologies?
+      Read a <a href="http://drjamesmalone.blogspot.co.uk/2012/06/common-ontology-questions-1-what-is-it.html">blog post by James Malone on what ontologies are for</a>,
+      or see our <a href="faq.html">FAQ</a>.
+    </p>
+  </section>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-icon">&#128269;</span>
+      <h3><a href="https://www.ebi.ac.uk/ols4/ontologies/efo" target="_blank" rel="noopener">Browse</a></h3>
+      <p>
+        Browse and search EFO with EMBL-EBI's
+        <a href="https://www.ebi.ac.uk/ols4/ontologies/efo" target="_blank" rel="noopener">Ontology Lookup Service (OLS4)</a>
+        or the <a href="https://bioportal.bioontology.org/ontologies/EFO" target="_blank" rel="noopener">NCBO BioPortal</a>.
+        The EFO source ontology is on <a href="https://github.com/EBISPOT/efo" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </div>
+    <div class="card">
+      <span class="card-icon">&#128229;</span>
+      <h3><a href="submit.html">Submit a Term</a></h3>
+      <p>
+        Submit new terms or report issues via our
+        <a href="https://github.com/EBISPOT/efo/issues/new" target="_blank" rel="noopener">GitHub issue tracker</a>,
+        or email <a href="mailto:efo-users@ebi.ac.uk">efo-users@ebi.ac.uk</a>.
+        For monthly release announcements, join the
+        <a href="https://listserver.ebi.ac.uk/mailman/listinfo/efo-users" target="_blank" rel="noopener">efo-users mailing list</a>.
+      </p>
+    </div>
+    <div class="card">
+      <span class="card-icon">&#11015;&#65039;</span>
+      <h3><a href="https://github.com/EBISPOT/efo/releases/download/current/efo.owl" download="efo.owl">Download</a></h3>
+      <p>
+        Download the <a href="https://github.com/EBISPOT/efo/releases/download/current/efo.owl" download="efo.owl">latest EFO release in OWL format</a>
+        or the <a href="https://github.com/EBISPOT/efo/releases/download/current/efo.obo" download="efo.obo">OBO format version</a>.
+        Read the <a href="https://raw.githubusercontent.com/EBISPOT/efo/master/ExFactor%20Ontology%20release%20notes.txt" target="_blank" rel="noopener">Release Notes</a>.
+        Previous releases are also available, e.g.
+        <a href="https://www.ebi.ac.uk/efo/releases/v3.14.0/efo.owl">v3.14.0</a>.
+      </p>
+    </div>
+    <div class="card">
+      <span class="card-icon">&#10067;</span>
+      <h3><a href="faq.html">FAQ</a></h3>
+      <p>
+        Read <a href="about.html">about EFO</a> or see the
+        <a href="faq.html">Frequently Asked Questions</a> for information on EFO's structure,
+        how it's updated, how to cite it, and more.
+      </p>
+    </div>
+    <div class="card">
+      <span class="card-icon">&#128295;</span>
+      <h3><a href="https://www.ebi.ac.uk/spot/ontology/" target="_blank" rel="noopener">Tools</a></h3>
+      <p>
+        We provide tools supporting EFO development and use, including
+        <a href="https://www.ebi.ac.uk/spot/oxo/" target="_blank" rel="noopener">OxO</a> (ontology cross-referencing),
+        <a href="https://www.ebi.ac.uk/spot/zooma/" target="_blank" rel="noopener">Zooma</a> (annotation mapping), and
+        <a href="https://www.ebi.ac.uk/spot/ontostring/" target="_blank" rel="noopener">OntoString</a>.
+      </p>
+    </div>
+    <div class="card">
+      <span class="card-icon">&#128140;</span>
+      <h3>Contact</h3>
+      <p>
+        Email the <a href="mailto:efo-users@ebi.ac.uk">EFO user list</a> with any questions or comments.
+        EFO is released under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">Apache 2.0</a> license,
+        subject to EMBL-EBI's <a href="https://www.ebi.ac.uk/about/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="related-links">
+    <h3>Related Resources</h3>
+    <ul>
+      <li><a href="about.html">Citing EFO</a></li>
+      <li><a href="https://www.opentargets.org" target="_blank" rel="noopener">Open Targets</a></li>
+      <li><a href="https://platform.opentargets.org" target="_blank" rel="noopener">Open Targets Platform</a></li>
+      <li><a href="https://www.ebi.ac.uk/gxa" target="_blank" rel="noopener">Gene Expression Atlas</a></li>
+      <li><a href="https://www.ebi.ac.uk/arrayexpress" target="_blank" rel="noopener">ArrayExpress</a></li>
+      <li><a href="https://www.ebi.ac.uk/gwas/" target="_blank" rel="noopener">GWAS Catalog</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>&copy; EMBL-EBI &mdash; EFO is released under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">Apache 2.0 licence</a></span>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="https://www.ebi.ac.uk/about/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>
+      <a href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website" target="_blank" rel="noopener">Privacy</a>
+      <a href="https://github.com/EBISPOT/efo" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
