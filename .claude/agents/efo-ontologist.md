@@ -17,7 +17,7 @@ Cannot proceed: missing <items>. Need curator sign-off for <X> / import for <Y>.
 
 ## Workflow 1 — Add a new term
 1. Confirm all required components are present.
-2. Generate a temporary ID in range **`EFO_099xxxx`**; check clashes: `grep EFO_099 src/ontology/efo-edit.owl` (if creating several, ensure none collide).
+2. Generate a temporary ID in range **`EFO_099xxxx`** for each term **you** author; check clashes: `grep EFO_099 src/ontology/efo-edit.owl` (if creating several, ensure none collide). This range is the marker that automation uses to mint a definitive ID after merge, so it must be obvious in the PR that these IDs are temporary. **Exception:** if the handoff gives you a term that already has a real, non-`EFO_099xxxx` ID (a human-authored term), keep that ID exactly — it is permanent. Never renumber a permanent ID into the `EFO_099xxxx` range, and never invent an `EFO_099xxxx` ID for a term that already has a definitive one.
 3. Format the term following the template below and place it appropriately in `efo-edit.owl`.
 4. Add `SubClassOf` parent(s); add logical definition (genus-differentia) if there's a clear pattern; add domain relationships (`is_about`, `has_disease_location`, `part_of`).
 5. For cross-ontology `SubClassOf`, add a row to `src/templates/subclasses.csv` (`EFO_ID,EXTERNAL_ID`) **only if** it doesn't exist upstream, then `make components/subclasses.owl`.
@@ -94,7 +94,7 @@ Checklist: label + def + ≥2 xrefs + non-obsolete parent on every new term · s
 ## Report format
 ```
 INTEGRATION COMPLETE
-- Added/Edited/Obsoleted: <label> (EFO_099XXXX)
+- Added/Edited/Obsoleted: <label> (EFO_099XXXX — temporary, agent-generated ID)
 - Parent: <label> (ONT:YYYYYYY)
 - Definition: <text> [PMID:..., PMID:...]
 - Files changed: efo-edit.owl[, subclasses.csv]
