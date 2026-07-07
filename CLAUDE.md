@@ -90,7 +90,8 @@ These are the rules you and the subagents must never violate. Deep technical det
 ### New terms
 - **≥2 PMID references**, embedded as nested `<oboInOwl:hasDbXref>` inside the `obo:IAO_0000115` definition (see `efo-ontologist` spec for the exact XML). Prefer PMID over DOI. Never guess a PMID — web-search if needed.
 - Every term needs: id, label, definition (with xrefs), and at least one `is_a` parent (explicit or via logical definition).
-- New terms use **temporary IDs `EFO_099xxxx`**. Check for clashes: `grep EFO_099 src/ontology/efo-edit.owl`. Definitive IDs are allocated later by automation.
+- New terms **authored by an agent** use **temporary IDs `EFO_099xxxx`**. Check for clashes: `grep EFO_099 src/ontology/efo-edit.owl`. Definitive IDs are minted automatically after merge to `master` (`.github/workflows/allocate-definitive-ids.yml`, which replaces every `EFO_099xxxx` ID). The `EFO_099xxxx` range **is** the marker of a temporary, agent-generated ID.
+- **A manually-authored term keeps its ID permanently — even when an agent opens the PR.** If the user (or you, at their instruction) created a term with a real, non-`EFO_099xxxx` ID, that ID is definitive: never relabel it "temporary" and never renumber it into the `EFO_099xxxx` range. Temporary-vs-permanent is decided purely by whether the ID is in the `EFO_099xxxx` range, not by who opened the PR.
 - Synonyms must be **typed**: abbreviations/acronyms → `hasRelatedSynonym`; brand/narrow → `hasNarrowSynonym`; exact → `hasExactSynonym`; broader → `hasBroadSynonym`. Each synonym must also carry a **`hasDbXref` source** (the PMID/DOI or external-ontology ID it came from), encoded as a reified `owl:Axiom` on the synonym assertion — just like definitions are xref'd. The curator supplies the source per synonym; if none is traceable, the synonym stays bare and the gap is flagged in the PR.
 - Domain expectations: **disease terms** → `has_disease_location` (may be inherited; if not provided, leave a PR comment). **Measurement terms** → `is_about` the measured entity/process (same rule). Logical definitions follow genus-differentia and mirror the text definition.
 
@@ -142,10 +143,12 @@ gh pr create --title "<title>" --body "$(cat <<'EOF'
 ## Summary
 <what was done and why>
 
+> ⚠️ **Temporary IDs:** every `EFO_099xxxx` ID below is a placeholder for an **agent-generated** term. It is replaced with a definitive EFO ID by automation after this PR merges to `master` — do not treat these numbers as stable. (Any non-`EFO_099xxxx` ID in the table is a permanent, manually-assigned ID and stays as-is.)
+
 ## Changes
-| Action | Term | EFO ID | Parent | Source ontology |
-|--------|------|--------|--------|-----------------|
-| Added | neutrophilic bronchiectasis | EFO_0990124 | bronchiectasis (MONDO:0004822) | — |
+| Action | Term | EFO ID | Temp? | Parent | Source ontology |
+|--------|------|--------|-------|--------|-----------------|
+| Added | neutrophilic bronchiectasis | EFO_0990124 | ⚠️ temporary | bronchiectasis (MONDO:0004822) | — |
 
 ## References
 - PMID:30215383 — <relevance>
@@ -155,6 +158,7 @@ gh pr create --title "<title>" --body "$(cat <<'EOF'
 - [x] Parents verified non-obsolete
 - [x] ≥2 PMIDs per new term, synonyms typed
 - [x] `make normalize_src` clean; `robot reason` OK
+- [x] Temporary `EFO_099xxxx` IDs flagged as such (omit the callout/column only if the PR adds no agent-generated terms)
 
 ## Notes / open questions
 <anything the reviewer should weigh in on — e.g. missing has_disease_location>
