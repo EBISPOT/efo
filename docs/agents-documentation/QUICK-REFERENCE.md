@@ -36,6 +36,22 @@
 - **Agents are specialists** - narrow, well-defined responsibilities
 - **Clear boundaries** - no overlapping decision-making
 
+## PR Review (read-only, all platforms)
+
+Reviewing changes is separate from creating them. A **read-only** reviewer checks
+a PR or the current branch against the canonical checklist
+`docs/agents-documentation/efo-pr-review-checklist.md` and returns a structured
+report — it never edits, commits, pushes, or posts.
+
+| Platform | How to invoke |
+|----------|---------------|
+| Claude Code | run the `efo-pr-review` skill (optionally with a PR number) |
+| GitHub Copilot | `@EFO-pr-reviewer review PR #1234` (or the current branch) |
+| Codex CLI | "follow `docs/agents-documentation/efo-pr-review-codex.md` to review PR #1234" |
+
+All three point at the same checklist, so they stay in sync. Publishing a review
+to the PR (`gh pr comment`) is a separate, explicit step.
+
 ## Decision Matrix: What Happens When?
 
 | User Request | Instructions Route | Curator Called? | Importer Called? | Ontologist Called? |

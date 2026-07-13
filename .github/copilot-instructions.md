@@ -399,6 +399,15 @@ This section describes how to coordinate work across the three specialized EFO a
 - OWL/XML formatting patterns
 - Logical definition templates
 
+#### EFO-pr-reviewer
+**Purpose**: Read-only, advisory review of an EFO pull request or branch diff
+**Calls when**: You want a structured review of proposed changes to `efo-edit.owl` before merge — hierarchy/parents, definitions, ≥2 PMIDs, synonym typing, obsoletion safety, temporary `EFO_099xxxx` ID handling, repo conventions
+**Inputs to provide**: a PR number, or "the current branch"
+**Outputs expected**: a structured markdown report (severity-tagged findings + REQUEST CHANGES / APPROVE recommendation)
+**Never**: edits files, commits, pushes, or posts to GitHub — publishing a review is a separate, explicit human step (`gh pr comment`). This is a local advisory review, not the CI gate.
+
+The review substance lives in the **canonical checklist** `docs/agents-documentation/efo-pr-review-checklist.md`, which the Copilot agent (`.github/agents/EFO-pr-reviewer.md`), the Claude subagent (`.claude/agents/efo-pr-reviewer.md`), and the Codex prompt (`docs/agents-documentation/efo-pr-review-codex.md`) all reference so they never drift.
+
 ### Common Workflow Patterns
 
 #### Pattern 1: New Term Request (NTR) with PMID

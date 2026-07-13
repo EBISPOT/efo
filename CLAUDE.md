@@ -188,4 +188,6 @@ EOF
 - `docs/agents-documentation/` — system overview, quick reference, and `CLAUDE-CODE-SETUP.md`
 - `docs/odk-workflows/` — ODK / editor workflows
 
+**Reviewing a PR:** run the `efo-pr-review` skill to get a read-only, advisory review of a PR or the current branch (it dispatches the `efo-pr-reviewer` subagent). All review rules live in the canonical checklist `docs/agents-documentation/efo-pr-review-checklist.md`, shared with the Copilot and Codex reviewers.
+
 When deep technical detail conflicts, the subagent specs in `.claude/agents/` and the docs above are authoritative; this file governs **orchestration, routing, and the ticket→PR workflow**.
