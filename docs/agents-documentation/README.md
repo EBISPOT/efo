@@ -113,6 +113,26 @@ This directory contains the specifications for three specialized agents that wor
 - Dependency file management
 - Import generation
 
+## PR Review (read-only, on-demand)
+
+Separate from the three curation agents, a **read-only PR reviewer** ships with
+the repo so any contributor gets EFO PR review out of the box, on whichever agent
+platform they use. It reviews a pull request or the current branch against a
+single **canonical checklist** — `docs/agents-documentation/efo-pr-review-checklist.md`
+— and returns a structured report (severity-tagged findings + a REQUEST CHANGES /
+APPROVE recommendation). It never edits, commits, pushes, or posts; publishing the
+review to a PR is a separate, explicit human step.
+
+| Platform | Invocation | Wrapper file(s) |
+|----------|-----------|-----------------|
+| Claude Code | `efo-pr-review` skill → dispatches `efo-pr-reviewer` subagent | `.claude/skills/efo-pr-review/SKILL.md`, `.claude/agents/efo-pr-reviewer.md` |
+| GitHub Copilot | invoke `@EFO-pr-reviewer` | `.github/agents/EFO-pr-reviewer.md` |
+| Codex CLI | follow `docs/agents-documentation/efo-pr-review-codex.md` (pointed to from `AGENTS.md`) | `AGENTS.md`, `docs/agents-documentation/efo-pr-review-codex.md` |
+
+All three wrappers **reference** the canonical checklist rather than restating the
+rules, so they cannot drift out of sync — edit the checklist to change review
+behavior everywhere.
+
 ## Workflow Orchestration
 
 **Location**: `.github/copilot-instructions.md`
