@@ -132,12 +132,6 @@
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#status -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#status"/>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
@@ -1047,7 +1041,6 @@
         <oboInOwl:hasDbXref>RHEA:54816</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-140851</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-6810894</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9921091</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>TGase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fibrinoligase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>transglutaminase activity</oboInOwl:hasExactSynonym>
@@ -1081,12 +1074,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-6810894</owl:annotatedTarget>
         <rdfs:label>Envoplakin, periplakin, involucrin, SPR binding mediated by TGM1 crosslinking</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003810"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9921091</owl:annotatedTarget>
-        <rdfs:label>IIb3:fibrin multimer -&gt;IIb3:fibrin multimer, crosslinked + NH4+</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003810"/>
@@ -1492,9 +1479,6 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-6813749</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-71691</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-71723</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9970035</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9971429</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9971446</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UM-BBD_reactionID:r0003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UM-BBD_reactionID:r0023</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>UM-BBD_reactionID:r0605</oboInOwl:hasDbXref>
@@ -1547,30 +1531,6 @@
         <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/81191"/>
         <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/81419"/>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9970035</owl:annotatedTarget>
-        <rdfs:label>Unknown ALDH oxidizes methylimidazolealdehyde</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9971429</owl:annotatedTarget>
-        <rdfs:label>Unknown ALDH oxidizes 10-oxo-DECA</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9971446</owl:annotatedTarget>
-        <rdfs:label>Unknown ALDH oxidizes 3-AAPNAL</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>CoA-independent aldehyde dehydrogenase activity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
@@ -1679,6 +1639,12 @@
         <owl:annotatedTarget>Reactome:R-HSA-71723</owl:annotatedTarget>
         <rdfs:label>acetaldehyde + NAD+ =&gt; acetate + NADH + H+ [mitochondrial]</rdfs:label>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004029"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>CoA-independent aldehyde dehydrogenase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:1.2.1.3</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -1691,6 +1657,7 @@
         <oboInOwl:hasDbXref>EC:3.5.1.14</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MetaCyc:AMINOACYLASE-RXN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:15565</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:28598</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:36855</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:47124</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:49796</oboInOwl:hasDbXref>
@@ -1754,6 +1721,7 @@
         <rdfs:label>aminoacylase activity</rdfs:label>
         <skos:exactMatch rdf:resource="http://purl.uniprot.org/enzyme/3.5.1.14"/>
         <skos:exactMatch rdf:resource="http://rdf.rhea-db.org/15565"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/28598"/>
         <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/36855"/>
         <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/47124"/>
         <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/49796"/>
@@ -2081,7 +2049,10 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-140664</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-140696</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-140700</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-140736</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-140769</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-140777</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-140823</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-140840</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-140870</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-141026</oboInOwl:hasDbXref>
@@ -2094,6 +2065,7 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-158137</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-158164</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-158300</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-158311</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-158313</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-158333</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-158419</oboInOwl:hasDbXref>
@@ -2227,15 +2199,12 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-9033530</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9653249</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9655046</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9655840</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9655850</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9662786</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9666383</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9668253</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9668365</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9670874</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9673223</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9678434</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9686710</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9686731</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9694287</oboInOwl:hasDbXref>
@@ -2246,24 +2215,16 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-9710106</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9710263</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-976743</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9769737</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9769949</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9770187</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-977371</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-977615</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9816275</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9822513</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9822514</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9822522</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9829030</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9829200</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9830805</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9830882</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9839367</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9855735</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9857814</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9909046</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9909048</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9911236</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9911383</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9912368</oboInOwl:hasDbXref>
@@ -2284,17 +2245,7 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-9926936</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9926963</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9927009</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9929051</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9929060</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9930440</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9930452</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9930790</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9930792</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9932162</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9936430</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9936467</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9936906</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9938539</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9947496</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>blood coagulation factor activity</oboInOwl:hasRelatedSynonym>
@@ -2398,8 +2349,26 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-140736</owl:annotatedTarget>
+        <rdfs:label>factor X -&gt; factor Xa + factor X activation peptide (TF:F7a catalyst)</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-140769</owl:annotatedTarget>
         <rdfs:label>factor VII -&gt; factor VIIa</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-140777</owl:annotatedTarget>
+        <rdfs:label>factor X -&gt; factor Xa + factor X activation peptide (TF:F7 catalyst)</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-140823</owl:annotatedTarget>
+        <rdfs:label>factor IX -&gt; factor IXa + factor IX activation peptide (TF:F7a catalyst)</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -2411,7 +2380,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-140870</owl:annotatedTarget>
-        <rdfs:label>thrombin:antithrombin III:heparan sulfate -&gt; thrombin:cleaved antithrombin III:heparan sulfate</rdfs:label>
+        <rdfs:label>thrombin:antithrombin III:heparin -&gt; thrombin:cleaved antithrombin III:heparin</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -2472,6 +2441,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-158300</owl:annotatedTarget>
         <rdfs:label>factor XI:platelet glycoprotein (GP) Ib:IX:V complex -&gt; factor XIa:platelet glycoprotein (GP) Ib:IX:V complex (XIIa catalyst)</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-158311</owl:annotatedTarget>
+        <rdfs:label>kallikrein:kininogen:C1q binding protein tetramer -&gt; kallikrein + activated kininogen:C1q binding protein tetramer + bradykinin</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -3274,18 +3249,6 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9655840</owl:annotatedTarget>
-        <rdfs:label>FXIIa is cleaved to -FXIIa</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9655850</owl:annotatedTarget>
-        <rdfs:label>prekallikrein:kininogen:C1QBP, C1QBP:KRT1, PLAUR:KRT1-&gt; kallikrein:kininogen:C1QBP, C1QBP:KRT1, PLAUR:KRT1 (FXIIa catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9662786</owl:annotatedTarget>
         <rdfs:label>FURIN cleaves ADAM17</rdfs:label>
     </owl:Axiom>
@@ -3318,12 +3281,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9673223</owl:annotatedTarget>
         <rdfs:label>FIX(29-461) variant is not activated (factor XIa catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9678434</owl:annotatedTarget>
-        <rdfs:label>factor X -&gt; factor Xa + factor X activation peptide (emicizumab:FIXa catalyst)</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -3388,12 +3345,6 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9769737</owl:annotatedTarget>
-        <rdfs:label>factor V -&gt; factor Va intermediate + factor V activation peptide (FXa catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9769949</owl:annotatedTarget>
         <rdfs:label>FURIN Mediated SARS-CoV-2 Spike Protein Cleavage</rdfs:label>
     </owl:Axiom>
@@ -3424,24 +3375,6 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9822513</owl:annotatedTarget>
-        <rdfs:label>TF:FVII+FX -&gt; TF:FVII:FXa + FX activation peptide (TF:F7 catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9822514</owl:annotatedTarget>
-        <rdfs:label>TF:FVIIa+FX -&gt; TF:FVIIa:FXa + FX activation peptide (TF:F7a catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9822522</owl:annotatedTarget>
-        <rdfs:label>factor VIII -&gt; factor VIIIa + factor VIII B chain+ factor VIII A3 acidic polypeptide +VWF multimer (TF:FVIIa:FXa catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9829030</owl:annotatedTarget>
         <rdfs:label>Nascent F signal peptide is cleaved at ER membrane</rdfs:label>
     </owl:Axiom>
@@ -3468,30 +3401,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9839367</owl:annotatedTarget>
         <rdfs:label>TGFBR3_mem cleavage by MMPs</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9855735</owl:annotatedTarget>
-        <rdfs:label>factor XII:polyanionic activator -&gt; factor XIIa + polyanionic activator (autocatalysis)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9857814</owl:annotatedTarget>
-        <rdfs:label>prekallikrein:kininogen:cell surface receptor:factor XII -&gt; factor XIIa + prekallikrein:kininogen:cell surface receptor (FXII autocatalysis on the cell surface)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9909046</owl:annotatedTarget>
-        <rdfs:label>kallikrein:kininogen:cell surface receptor:factor XII -&gt; kallikrein:kininogen:cell surface receptor + factor XIIa (kallikrein catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9909048</owl:annotatedTarget>
-        <rdfs:label>prekallikrein:kininogen:cell surface receptor:factor XII -&gt; kallikrein:kininogen:cell surface receptor:factor XII (FXII catalyst)</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -3616,68 +3525,8 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9929051</owl:annotatedTarget>
-        <rdfs:label>TF:FVIIa+FIX -&gt; TF:FVIIa:FIXa + FIX activation peptide (TF:F7a catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9929060</owl:annotatedTarget>
-        <rdfs:label>TF:FVII:FXa -&gt;TF:FVIIa:FXa (FXa catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9930440</owl:annotatedTarget>
-        <rdfs:label>F5 R334T, I387T is not cleaved by activated protein C</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9930452</owl:annotatedTarget>
-        <rdfs:label>F5 R534Q, A540V is not cleaved by activated protein C</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9930790</owl:annotatedTarget>
-        <rdfs:label>factor V -&gt; factor Va intermediate + factor V activation peptide (thrombin catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9930792</owl:annotatedTarget>
-        <rdfs:label>factor Va intermediate  -&gt; factor Va</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9932162</owl:annotatedTarget>
         <rdfs:label>Removal of CDH1 signal peptide</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9936430</owl:annotatedTarget>
-        <rdfs:label>factor XI:kininogen:GPIb:IX:V complex -&gt; factor XIa:kininogen:GPIb:IX:V complex (XIIa catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9936467</owl:annotatedTarget>
-        <rdfs:label>factor IX -&gt; factor IXa + factor IX activation peptide (kallikrein catalyst)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9936906</owl:annotatedTarget>
-        <rdfs:label>factor XII:-amyloid:Zn2+-&gt; factor XIIa + -amyloid:Zn2+ (autocatalysis)</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9938539</owl:annotatedTarget>
-        <rdfs:label>kallikrein:kininogen:cell surface receptor -&gt; kallikrein + cleaved kininogen:cell surface receptor + bradykinin</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004252"/>
@@ -10430,6 +10279,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0007417 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007417">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048731"/>
         <obo:IAO_0000115>The process whose specific outcome is the progression of the central nervous system over time, from its formation to the mature structure. The central nervous system is the core nervous system that serves an integrating and coordinating function. In vertebrates it consists of the brain and spinal cord. In those invertebrates with a central nervous system it typically consists of a brain, cerebral ganglia and a nerve cord.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Neural_development</oboInOwl:hasDbXref>
@@ -10942,7 +10792,6 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-6790987</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9636560</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9913373</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-9971629</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0008080</oboInOwl:id>
         <rdfs:label>N-acetyltransferase activity</rdfs:label>
@@ -10982,12 +10831,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-9913373</owl:annotatedTarget>
         <rdfs:label>AAC(6)-Ib acetylates ciprofloxacin</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008080"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-9971629</owl:annotatedTarget>
-        <rdfs:label>Unknown NAT N-acetylates kynurenine</rdfs:label>
     </owl:Axiom>
     
 
@@ -21111,12 +20954,6 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047045"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>EC:1.1.1.64</owl:annotatedTarget>
-        <oboInOwl:status>skos:exactMatch</oboInOwl:status>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047045"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-193064</owl:annotatedTarget>
         <rdfs:label>HSD17B3-like proteins reducde ANDST to TEST</rdfs:label>
     </owl:Axiom>
@@ -22705,6 +22542,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0060037 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0060037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048731"/>
         <obo:IAO_0000115>The process whose specific outcome is the progression of the pharyngeal system over time, from its formation to the mature structure. The pharyngeal system is a transient embryonic complex that is specific to vertebrates. It comprises the pharyngeal arches, bulges of tissues of mesoderm and neural crest derivation through which pass nerves and pharyngeal arch arteries. The arches are separated internally by pharyngeal pouches, evaginations of foregut endoderm, and externally by pharyngeal clefts, invaginations of surface ectoderm. The development of the system ends when the structure it contributes to are forming: the thymus, thyroid, parathyroids, maxilla, mandible, aortic arch, cardiac outflow tract, external and middle ear.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -23933,6 +23771,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0072359 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0072359">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048731"/>
         <obo:IAO_0000115>The process whose specific outcome is the progression of the circulatory system over time, from its formation to the mature structure. The circulatory system is the organ system that passes nutrients (such as amino acids and electrolytes), gases, hormones, blood cells, etc. to and from cells in the body to help fight diseases and help stabilize body temperature and pH to maintain homeostasis.</obo:IAO_0000115>
         <oboInOwl:created_by>mah</oboInOwl:created_by>

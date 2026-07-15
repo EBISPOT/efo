@@ -745,18 +745,32 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000585">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000373"/>
-        <obo:IAO_0000115>A method of reconstructing 3D structure by combining serial sectioning with scanning EM.</obo:IAO_0000115>
+        <obo:IAO_0000115>A method of reconstructing 3D structure by combining in-situ serial sectioning with scanning EM.</obo:IAO_0000115>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-02T05:10:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>SBF-SEM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000585</oboInOwl:id>
-        <rdfs:label>serial block face SEM (SBFSEM)</rdfs:label>
+        <rdfs:comment>This term does not encompass methods where the in-situ milling is performed using a focused ion beam (FIB-SEM). We follow the nomenclature of Peddie et al. (2022), in which SBF-SEM and FIB-SEM are considered as two unrelated methods.</rdfs:comment>
+        <rdfs:label>serial block face scanning electron microscopy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000585"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A method of reconstructing 3D structure by combining serial sectioning with scanning EM.</owl:annotatedTarget>
+        <owl:annotatedTarget>A method of reconstructing 3D structure by combining in-situ serial sectioning with scanning EM.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:15514700</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000585"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>SBF-SEM</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000585"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>This term does not encompass methods where the in-situ milling is performed using a focused ion beam (FIB-SEM). We follow the nomenclature of Peddie et al. (2022), in which SBF-SEM and FIB-SEM are considered as two unrelated methods.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1038/s43586-022-00131-9</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -940,15 +954,22 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000373"/>
         <obo:IAO_0000115>A method of reconstructing 3D structure by combining focussed ion beam milling to remove sucessive layers from a sample block with scanning EM to image the exposed surface between each milling step.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>FIB-SEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>focussed ion beam scanning electron microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00050000</oboInOwl:id>
-        <rdfs:label>focussed ion beam scanning electron microscopy (FIB-SEM)</rdfs:label>
+        <rdfs:label>focused ion beam scanning electron microscopy</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00050000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A method of reconstructing 3D structure by combining focussed ion beam milling to remove sucessive layers from a sample block with scanning EM to image the exposed surface between each milling step.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:22119321</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00050000"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>FIB-SEM</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
     </owl:Axiom>
 </rdf:RDF>
 
