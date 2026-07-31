@@ -99,42 +99,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label xml:lang="en">part of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
-        <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
-        <rdfs:label xml:lang="en">characteristic of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -745,32 +709,18 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbi_00000585">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000373"/>
-        <obo:IAO_0000115>A method of reconstructing 3D structure by combining in-situ serial sectioning with scanning EM.</obo:IAO_0000115>
+        <obo:IAO_0000115>A method of reconstructing 3D structure by combining serial sectioning with scanning EM.</obo:IAO_0000115>
         <oboInOwl:created_by>jm</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-02T05:10:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>SBF-SEM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00000585</oboInOwl:id>
-        <rdfs:comment>This term does not encompass methods where the in-situ milling is performed using a focused ion beam (FIB-SEM). We follow the nomenclature of Peddie et al. (2022), in which SBF-SEM and FIB-SEM are considered as two unrelated methods.</rdfs:comment>
-        <rdfs:label>serial block face scanning electron microscopy</rdfs:label>
+        <rdfs:label>serial block face SEM (SBFSEM)</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000585"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A method of reconstructing 3D structure by combining in-situ serial sectioning with scanning EM.</owl:annotatedTarget>
+        <owl:annotatedTarget>A method of reconstructing 3D structure by combining serial sectioning with scanning EM.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:15514700</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000585"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>SBF-SEM</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000585"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <owl:annotatedTarget>This term does not encompass methods where the in-situ milling is performed using a focused ion beam (FIB-SEM). We follow the nomenclature of Peddie et al. (2022), in which SBF-SEM and FIB-SEM are considered as two unrelated methods.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s43586-022-00131-9</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -954,22 +904,15 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000373"/>
         <obo:IAO_0000115>A method of reconstructing 3D structure by combining focussed ion beam milling to remove sucessive layers from a sample block with scanning EM to image the exposed surface between each milling step.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>FIB-SEM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>focussed ion beam scanning electron microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>image</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbi:00050000</oboInOwl:id>
-        <rdfs:label>focused ion beam scanning electron microscopy</rdfs:label>
+        <rdfs:label>focussed ion beam scanning electron microscopy (FIB-SEM)</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00050000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A method of reconstructing 3D structure by combining focussed ion beam milling to remove sucessive layers from a sample block with scanning EM to image the exposed surface between each milling step.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:22119321</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbi_00050000"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>FIB-SEM</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/OMO_0003000"/>
     </owl:Axiom>
 </rdf:RDF>
 

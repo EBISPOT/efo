@@ -74,6 +74,35 @@ normalize_src: $(SRC)
 imports/%_terms.txt: iri_dependencies/%_terms.txt iri_dependencies/efo-relations.txt
 	cat $^ | sort | uniq > $@
 
+# --- Recover OBA relation fillers ----------------------------------------------
+# OBA measurement terms reference fillers (proteins, anatomy, biological processes...)
+# in other ontologies. For those relations to survive import (see the oba_import rule's
+# --trim false below), each filler must itself be imported so it resolves to a labelled
+# class instead of a bare IRI. `make refresh_oba_fillers` harvests every external IRI the
+# imported OBA terms reference and records it in the matching iri_dependencies/<ont>_terms.txt
+# (the curated source), so the filler is pulled in through its own ontology import.
+#
+# This is a MAINTAINER step, run when the OBA import set or mirror changes - its output is
+# committed as source. It is deliberately NOT part of all_imports, so normal builds stay
+# deterministic and never rewrite tracked source files.
+build/oba_relation_fillers.txt: imports/oba_bot.owl
+	@mkdir -p build
+	$(ROBOT) query -i $< -q $(SPARQLDIR)/terms.sparql $@.tsv
+	tail -n +2 $@.tsv | tr -d '<>' | grep -oE 'http://purl.obolibrary.org/obo/[A-Z]+_[0-9]+' | sort -u > $@
+	rm -f $@.tsv
+
+refresh_oba_fillers: build/oba_relation_fillers.txt
+	@for ont in $(IMPORTS); do \
+	  [ "$$ont" = oba ] && continue; \
+	  grep "obo/$$(echo $$ont | tr a-z A-Z)_" $< > build/_fill 2>/dev/null || true; \
+	  if [ -s build/_fill ]; then \
+	    cat iri_dependencies/$${ont}_terms.txt build/_fill | sort -u > build/_merged; \
+	    mv build/_merged iri_dependencies/$${ont}_terms.txt; \
+	    echo "  $$ont: iri_dependencies now has $$(wc -l < iri_dependencies/$${ont}_terms.txt | tr -d ' ') IRIs (+$$(wc -l < build/_fill | tr -d ' ') fillers)"; \
+	  fi; \
+	done; \
+	rm -f build/_fill build/_merged
+
 imports/mondo_import.owl: mirror/mondo.owl imports/mondo_terms.txt iri_dependencies/mondo_exclude.txt $(SRC)
 	$(ROBOT) extract -i $< -T imports/mondo_terms.txt --method BOT -O $(BASE)/$@ -o $@.tmp.owl
 	$(ROBOT) query -i $@.tmp.owl -q $(SPARQLDIR)/hgnc_terms.sparql $@.hgnc.tsv 2>/dev/null || true
@@ -93,8 +122,14 @@ imports/hancestro_import.owl: mirror/hancestro.owl imports/hancestro_terms.txt i
 	$(ROBOT) extract -i $< -T imports/hancestro_terms.txt --method BOT -O $(BASE)/$@ remove -T iri_dependencies/hancestro_exclude.txt -o $@
 .PRECIOUS: imports/hancestro_import.owl
 	
+# --trim false keeps the OBA terms' relation axioms (part_of, characteristic_of, ...)
+# even when the filler is not an OBA term. The fillers land here as bare stubs, but each
+# resolves to a full term at merge time because it is pulled through its own ontology
+# import (see the oba_relation_fillers injection in the %_terms.txt rule below).
 imports/oba_import.owl: imports/oba_bot.owl imports/oba_terms.txt $(SRC)
-	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim true --signature true -O $(BASE)/$@ -o $@
+	$(ROBOT) filter -i $< --term-file imports/oba_terms.txt --term RO:0000052 --select "annotations ontology anonymous self" --trim false --signature true -O $(BASE)/$@ -o $@.tmp.owl
+	$(ROBOT) query -i $@.tmp.owl --update $(SPARQLDIR)/strip_nonoba_annotations.ru -o $@
+	rm -f $@.tmp.owl
 .PRECIOUS: imports/%_import.owl
 
 # Change the parent of imported PR terms to "protein" (ChEBI:36080) to match existing EFO terms, rather than PR:000000001
