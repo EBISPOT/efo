@@ -31,8 +31,23 @@ jobs:
           mkdir -p src/ontology/mirror
           curl -sL http://purl.obolibrary.org/obo/mondo/mondo-base.owl > src/ontology/mirror/mondo.owl
 
+      # oba_import.owl and pr_import.owl are gitignored (too large for GitHub,
+      # same as mondo_import.owl above) and regenerated from these mirrors by
+      # the imports/%_import.owl Makefile rules.
+      - name: Fetch OBA mirror
+        run: |
+          mkdir -p src/ontology/mirror
+          curl -sL http://purl.obolibrary.org/obo/oba.owl > src/ontology/mirror/oba.owl
+
+      - name: Fetch PR mirror
+        run: |
+          mkdir -p src/ontology/mirror
+          curl -sL http://purl.obolibrary.org/obo/pr.owl > src/ontology/mirror/pr.owl
+
       - name: Run ontology QC checks
         env:
           DEFAULT_BRANCH: master
-        run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' ROBOT_JAVA_ARGS=-Xmx6g gh_actions
+        # PR's mirror is ~1GB; parsing it needs the JAXP entity-size limits raised
+        # (default 100,000 rejects it as a billion-laughs risk) alongside the heap size.
+        run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' ROBOT_JAVA_ARGS="-Xmx6g -Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0" gh_actions
 

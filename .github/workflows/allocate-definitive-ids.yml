@@ -41,8 +41,9 @@ jobs:
             echo "has_temp=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # mondo_import.owl is gitignored (regenerated from the MONDO release),
-      # so it must be built before efo-edit.owl can resolve its imports.
+      # mondo_import.owl, oba_import.owl and pr_import.owl are gitignored
+      # (too large for GitHub, regenerated from their upstream releases),
+      # so they must be built before efo-edit.owl can resolve its imports.
       # All other import modules are committed and resolved via catalog-v001.xml.
       - name: Prepare MONDO import
         if: steps.check.outputs.has_temp == 'true'
@@ -51,6 +52,17 @@ jobs:
           mkdir -p mirror
           curl -fL -o mirror/mondo.owl https://github.com/monarch-initiative/mondo/releases/latest/download/mondo-base.owl
           make imports/mondo_import.owl
+
+      # PR's mirror is ~1GB; raise the JAXP entity-size limits (default 100,000
+      # rejects it as a billion-laughs risk) alongside OBA/PR extraction.
+      - name: Prepare OBA and PR imports
+        if: steps.check.outputs.has_temp == 'true'
+        run: |
+          cd src/ontology
+          mkdir -p mirror
+          curl -fL -o mirror/oba.owl http://purl.obolibrary.org/obo/oba.owl
+          curl -fL -o mirror/pr.owl http://purl.obolibrary.org/obo/pr.owl
+          make imports/oba_import.owl imports/pr_import.owl ROBOT_JAVA_ARGS="-Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0"
 
       - name: Allocate definitive IDs
         if: steps.check.outputs.has_temp == 'true'
