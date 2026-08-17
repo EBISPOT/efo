@@ -48,12 +48,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002175 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002175"/>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
@@ -1699,6 +1693,9 @@
         <oboInOwl:hasDbXref>RHEA:81115</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:81119</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>RHEA:81123</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:86755</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:86759</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:86767</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5433074</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5579081</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9638046</oboInOwl:hasDbXref>
@@ -1763,6 +1760,9 @@
         <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/81115"/>
         <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/81119"/>
         <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/81123"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/86755"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/86759"/>
+        <skos:narrowMatch rdf:resource="http://rdf.rhea-db.org/86767"/>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004046"/>
@@ -9183,6 +9183,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0006754 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006754">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009142"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009152"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009206"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046034"/>
@@ -9570,7 +9571,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006909">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <obo:IAO_0000115>A vesicle-mediated transport process that results in the engulfment of external particulate material by phagocytes and their delivery to the lysosome. The particles are initially contained within phagocytic vacuoles (phagosomes), which then fuse with primary lysosomes to effect digestion of the particles.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/24907</obo:IAO_0000233>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9664417</oboInOwl:hasDbXref>
@@ -10357,7 +10357,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The process whose specific outcome is the progression of the heart over time, from its formation to the mature structure. The heart is a hollow, muscular organ, which, by contracting rhythmically, keeps up the circulation of the blood.</obo:IAO_0000115>
-        <obo:RO_0002175 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7227"/>
         <oboInOwl:hasAlternativeId>GO:0007511</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Heart_development</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>dorsal vessel development</oboInOwl:hasNarrowSynonym>
@@ -11860,7 +11859,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0009141 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009141">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006753"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006793"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving a nucleoside triphosphate, a compound consisting of a nucleobase linked to a deoxyribose or ribose sugar esterified with triphosphate on the sugar.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>nucleoside triphosphate metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -11880,8 +11879,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0009142 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009058"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009141"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901293"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of a nucleoside triphosphate, a compound consisting of a nucleobase linked to a deoxyribose or ribose sugar esterified with triphosphate on the sugar.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>nucleoside triphosphate anabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>nucleoside triphosphate biosynthesis</oboInOwl:hasExactSynonym>
@@ -11904,7 +11903,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0009144 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009144">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009141"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006753"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving purine nucleoside triphosphate, a compound consisting of a purine base linked to a ribose or deoxyribose sugar esterified with triphosphate on the sugar.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>purine nucleoside triphosphate metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -11924,8 +11923,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0009145 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009145">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009142"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009144"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901293"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of purine nucleoside triphosphate, a compound consisting of a purine base linked to a ribose or deoxyribose sugar esterified with triphosphate on the sugar.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>purine nucleoside triphosphate anabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>purine nucleoside triphosphate biosynthesis</oboInOwl:hasExactSynonym>
@@ -12164,7 +12163,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0009201 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009201">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009142"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901293"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of a ribonucleoside triphosphate, a compound consisting of a nucleobase linked to a ribose sugar esterified with triphosphate on the sugar.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>ribonucleoside triphosphate anabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ribonucleoside triphosphate biosynthesis</oboInOwl:hasExactSynonym>
@@ -20512,6 +20511,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0046034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0046034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009141"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009150"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009205"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving ATP, adenosine triphosphate, a universally important coenzyme and enzyme regulator.</obo:IAO_0000115>
