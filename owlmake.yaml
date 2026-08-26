@@ -554,7 +554,7 @@ refresh_groups:
   - src/ontology/mirror/ecto.owl
   - src/ontology/mirror/gsso.owl
   - src/ontology/mirror/fbbi.owl
-  - src/ontology/mirror/hpoa.owl
+  - src/ontology/mirror/phenotype.hpoa
   - src/ontology/mirror/mondo-owl.owl
   default: keep
 - name: imports
@@ -1785,26 +1785,23 @@ prerequisites:
   - op: convert
     format: ofn
     output: src/ontology/efo-edit.owl
-- target: src/ontology/mirror/hpoa.owl
+- target: src/ontology/mirror/phenotype.hpoa
   steps:
   - op: fetch
-    url: https://data.monarchinitiative.org/ttl/hpoa.ttl
-    dst: src/ontology/mirror/hpoa.owl
+    url: http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa
+    dst: src/ontology/mirror/phenotype.hpoa
 - target: src/ontology/mirror/mondo-owl.owl
   steps:
   - op: fetch
     url: http://purl.obolibrary.org/obo/mondo.owl
     dst: src/ontology/mirror/mondo-owl.owl
 - target: src/ontology/components/d2p_hpoa.ttl
-  input: src/ontology/mirror/hpoa.owl
   needs:
-  - src/ontology/mirror/hpoa.owl
+  - src/ontology/mirror/phenotype.hpoa
+  - src/scripts/hpoa_to_d2p.py
   steps:
-  - op: query
-    selects:
-    - query: src/sparql/d2p-hpoa.ru
-      output: src/ontology/components/d2p_hpoa.ttl
-    format: ttl
+  - op: shell
+    command: python3 src/scripts/hpoa_to_d2p.py src/ontology/mirror/phenotype.hpoa -o src/ontology/components/d2p_hpoa.ttl
 - target: src/ontology/components/d2p_mondo-owl.ttl
   input: src/ontology/mirror/mondo-owl.owl
   needs:
