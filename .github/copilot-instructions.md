@@ -8,11 +8,14 @@ This includes instructions for editing the efo ontology.
 
 ## Querying ontology
 
-- Use grep/rg to find terms, but be aware that in RDF/XML files like efo-edit.owl, axioms may span multiple lines.
+- Use `om ogrep` to look a term up: it prints the matching term and every axiom that refers to it, as OBO stanzas, so an axiom that spans many lines of RDF/XML comes back whole.
+  - `om ogrep EFO:0007045 -i src/ontology/efo-edit.owl` - the term and everything that mentions it
+  - `om ogrep ATAC-seq -i src/ontology/efo-edit.owl` - the same, found by label or synonym
+  - `om ogrep EFO:0007045 --self-only -i src/ontology/efo-edit.owl` - just that term's own stanza
+  - add `-f ofn` when OBO cannot express the axioms you need to see
+- Use grep/rg for text questions, but be aware that in RDF/XML files like efo-edit.owl, axioms may span multiple lines, so you will see fragments.
   - `grep -i ATAC-seq src/ontology/efo-edit.owl` - all axioms that mention ATAC-seq
   - `grep '<rdfs:label.*ATAC-seq' src/ontology/efo-edit.owl` - all label axioms that mention ATAC-seq
-- All mentions of an ID
-  - `obo-grep.pl -r 'EFO_:_0007045' src/ontology/efo-edit.owl`
 
 ## Before making edits
 - Read the request carefully and make a plan, especially if there is nuance
@@ -25,8 +28,7 @@ This includes instructions for editing the efo ontology.
 - When you are finished editing the efo-edit.owl file, please normalize by running:
 
 ```bash
-cd src/ontology #If you are not in the ontology folder
-make normalize_src
+om make normalize_src
 ```
 
 - For any edition that does not involve obsoleting terms, there is no need to add a 'term tracker item' pointing to the GitHub issue
@@ -114,50 +116,52 @@ The instructions below are for understanding the import process.
   - Edit files in `src/ontology/iri_dependencies/` (e.g. `mondo_terms.txt`, `cl_terms.txt`).
   - Each line must be the full IRI of the term to import.
   - DO NOT edit anything in `src/ontology/imports/` (these are generated).
-./get_mirrors.sh
-```
 
-- Regenerate a single import (from `src/ontology`):
+- Refresh the mirror and regenerate a single import (mirror sources are
+  recorded in `owlmake.yaml`):
 
 ```bash
-cd src/ontology
-make imports/[ontology]_import.owl -B
-# example: make imports/uberon_import.owl
+om make imports/[ontology]_import.owl --rebuild mirrors,imports
+# example: om make imports/uberon_import.owl --rebuild mirrors,imports
 ```
+
+  The `--rebuild` flags are required: mirrors and imports are refresh groups
+  kept by default, and a kept target is reused even when named explicitly
+  (`-B` does not override a kept group). Only the mirror and import in the
+  requested target's closure are rebuilt.
 
 - Regenerate all imports (if needed):
 
 ```bash
-make all_imports -B
+om make all_imports --rebuild mirrors,imports
 ```
 
-- What the make target does:
+- What the target does:
   - Reads `iri_dependencies/[ontology]_terms.txt`, resolves IRIs using mirrors and writes a generated `.owl` into `src/ontology/imports/` and a backup copy of the term list.
 
 - Fix dangling imported terms (no asserted parent):
   1. Add a row to `src/templates/subclasses.csv` with `ID_OF_IMPORTED_TERM,ID_OF_PARENT_TERM_IN_EFO`.
   2. Rebuild the component:
 ```bash
-cd src/ontology
-make components/subclasses.owl
+om make components/subclasses.owl
 ```
 
 Notes:
-- Always run `./get_mirrors.sh` before `make` when updating imports.
+- Always regenerate imports with `--rebuild mirrors,imports` so the mirror is refreshed with them — a kept mirror is reused otherwise, and a stale mirror silently produces a stale import.
 - Do not edit generated `.owl` files directly. Make changes in the `iri_dependencies/` text files or `src/templates/subclasses.csv` as appropriate.
 
 **REMINDER: The above workflow is for reference only. Always delegate actual import operations to @EFO-importer.**
 
 ### Minimal verification checklist (for @EFO-importer)
 - Confirm the IRI you add is valid (correct prefix and IRI syntax).
-- Verify the term exists in the local mirror (or OLS) after `./get_mirrors.sh`.
+- Verify the term exists in the local mirror (or OLS) after refreshing the mirrors.
 - When adding subclass assertions, ensure the parent exists in EFO or its imports and that the relationship is not already present upstream.
 
 ### Potential pitfalls (for @EFO-importer)
-- Stale mirrors: forgetting `./get_mirrors.sh` causes unresolvable IRIs. Mitigation: always run mirrors update and include it in PR description when imports change.
+- Stale mirrors: skipping the mirror refresh causes unresolvable IRIs. Mitigation: always run mirrors update and include it in PR description when imports change.
 - Editing generated files: modifying files under `src/ontology/imports/` will be overwritten and is discouraged. Mitigation: only edit `src/ontology/iri_dependencies/*.txt` or `src/templates/subclasses.csv`.
-- Missing parent relationships: imported terms can become dangling. Mitigation: prefer using `subclasses.csv` to assert parentage and run `make components/subclasses.owl`.
-- Caching/build issues: use `-B` to force rebuild when results look stale.
+- Missing parent relationships: imported terms can become dangling. Mitigation: prefer using `subclasses.csv` to assert parentage and run `om make components/subclasses.owl`.
+- Caching/build issues: use `-B` to force a rebuild when results look stale. `-B` does not override the kept mirrors/imports groups — use `--rebuild mirrors,imports` for those.
 - Incorrect subclass assertions: do not add subclass axioms for relationships that already exist in the source ontology or in EFO imports; check source OWL first.
 
 If you need the full, unabridged procedure, consult `docs/Import_terms_from_another_ontology.md` (this file must remain authoritative).
@@ -202,8 +206,8 @@ If you need the full, unabridged procedure, consult `docs/Import_terms_from_anot
 
 ## TROUBLESHOOTING
 
-- If your obo file has syntax errors, you can use `robot convert -vvv` to see full trace
-- Use `robot reason` to validate
+- If your obo file has syntax errors, you can use `om convert -vvv` to see full trace
+- Use `om reason` to validate
 
 ## How to Obsolete a Term in EFO
 ### Overview
@@ -251,8 +255,7 @@ obsolete terms should have no logical axioms (e.g. SubClassOf, EquivalentClasses
       - Rebuild the 'sublasses.owl' component:
 
 ```bash
-cd src/ontology #If you are not in the ontology folder
-make components/subclasses.owl      
+om make components/subclasses.owl
 ```
 
 5. Commit changes
@@ -453,7 +456,7 @@ Step 2: If dangling term → Call @EFO-ontologist
 
 ```
 Step 1: Verify replacement term exists
-  Check: Use grep/obo-grep.pl in efo-edit.owl
+  Check: `om ogrep EFO:YYYYYYY -i src/ontology/efo-edit.owl` (or grep) in efo-edit.owl
   If missing: Follow Pattern 1 or 2 to add it first
   
 Step 2: Call @EFO-ontologist

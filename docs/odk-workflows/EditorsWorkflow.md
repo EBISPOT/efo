@@ -78,13 +78,13 @@ git diff
 You can run the ontology quality control (QC) checks manually with:
 
 ```bash
-make qc
+om make qc
 ```
 
 Alternatively, QC will run automatically when you execute:
 
-```
-make all
+```bash
+om
 ```
 
 #### 6. Pull request

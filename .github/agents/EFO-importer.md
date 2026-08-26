@@ -91,26 +91,20 @@ Once validated, add the full IRI to the appropriate file in `src/ontology/iri_de
 
 Continue with mirror update and import regeneration:
 
-1. Update the specific ontology mirror. The complete list of mirrors can be found in `./get_mirrors.sh`. For example, to update the OBA mirror:
+1. Refresh the mirror and regenerate the specific import in one command. Mirror
+   sources are recorded in the plan (`owlmake.yaml`), so no URL needs looking up:
    ```bash
-   cd src/ontology
-   mkdir -p mirror
-   curl -L http://purl.obolibrary.org/obo/oba.owl > mirror/oba.owl
+   om make imports/[ontology]_import.owl --rebuild mirrors,imports
    ```
-   IMPORTANT: always check the correct url in `./get_mirrors.sh` before running the command.
+   Example: `om make imports/cl_import.owl --rebuild mirrors,imports`
 
-2. Regenerate the specific import (force rebuild):
-   ```bash
-   make imports/[ontology]_import.owl -B
-   ```
-   Example: `make imports/cl_import.owl -B`
+   The `--rebuild` flags are required: mirrors and imports are refresh groups
+   the plan keeps by default, and a kept target is reused even when named
+   explicitly (`-B` does not override a kept group). Only the mirror and import
+   in the requested target's closure are rebuilt. To refresh every mirror and
+   import at once, use `om make all_imports --rebuild mirrors,imports`.
 
-3. **Special case for MONDO**: If importing MONDO terms, also rebuild the component:
-   ```bash
-   make components/mondo_efo_import.owl -B
-   ```
-
-4. Verify the import was successful by checking that the term appears in the generated import file
+2. Verify the import was successful by checking that the term appears in the generated import file
 
 ## Best Practices
 
@@ -159,9 +153,8 @@ Continue with mirror update and import regeneration:
 3. Fetches CL:1000348 to validate
 4. Confirms: "club cell - A cell located in the epithelium of the respiratory bronchioles..."
 5. Adds `http://purl.obolibrary.org/obo/CL_1000348` to `src/ontology/iri_dependencies/cl_terms.txt`
-6. Runs `./get_mirrors.sh`
-7. Runs `make imports/cl_import.owl -B`
-8. Reports success: "✓ Successfully imported CL:1000348 (club cell) and regenerated cl_import.owl"
+6. Runs `om make imports/cl_import.owl --rebuild mirrors,imports`
+7. Reports success: "✓ Successfully imported CL:1000348 (club cell) and regenerated cl_import.owl"
 
 ## Limitations
 

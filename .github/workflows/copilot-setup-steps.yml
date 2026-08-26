@@ -1,7 +1,7 @@
 name: "Copilot Setup Steps"
 
-# Automatically run the setup steps when they are changed to allow for easy validation, and
-# allow manual testing through the repository's "Actions" tab
+# Runs automatically when this file changes, so the setup can be validated, and
+# on demand from the repository's "Actions" tab.
 on:
   workflow_dispatch:
   push:
@@ -12,71 +12,37 @@ on:
       - .github/workflows/copilot-setup-steps.yml
 
 jobs:
-  # The job MUST be called `copilot-setup-steps` or it will not be picked up by Copilot.
+  # The job MUST be called `copilot-setup-steps` or Copilot will not pick it up.
   copilot-setup-steps:
     runs-on: ubuntu-latest
 
-    # Set the permissions to the lowest permissions possible needed for your steps.
-    # Copilot will be given its own token for its operations.
-    permissions:
-      # If you want to clone the repository as part of your setup steps, for example to install dependencies, you'll need the `contents: read` permission. If you don't clone the repository in your setup steps, Copilot will do this for you automatically after the steps complete.
-      contents: read
+    # No permissions are needed: the repository is checked out by Copilot after
+    # these steps, and the only download is a public release asset.
+    permissions: {}
 
-    # You can define any steps you want, and they will run before the agent starts.
-    # If you do not check out your code, Copilot will do this for you.
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      # owlmake is a single static binary and is the whole ontology toolchain: it
+      # provides `robot`'s command surface natively, so there is no JDK, no
+      # robot.jar and no ODK image to install. The runner's preinstalled python3
+      # covers the repo's own scripts (they import stdlib only).
+      - name: Install owlmake
+        # Same latest line as the CI images (see qc.yml) and the README's editor
+        # install — one owlmake version everywhere, never mixed;
+        # owlmake.yaml's min_owlmake_version is the floor.
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          curl -fsSL https://github.com/EBISPOT/owlmake/releases/latest/download/om-linux-amd64 \
+            -o "$HOME/.local/bin/om"
+          chmod +x "$HOME/.local/bin/om"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          "$HOME/.local/bin/om" --version
 
-    - name: Create tools directory
-      run: mkdir -p ${{ github.workspace }}/tools
-      shell: bash
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
 
-    - name: Cache ROBOT JAR files
-      uses: actions/cache@v4
-      with:
-        path: ~/.jar-cache
-        key: ${{ runner.os }}-robot-v1.9.7
-        restore-keys: ${{ runner.os }}-robot-
-
-    - name: Download ROBOT JAR if not cached
-      run: |
-        mkdir -p ~/.jar-cache
-        if [ ! -f ~/.jar-cache/robot.jar ]; then
-          curl -L https://github.com/ontodev/robot/releases/download/v1.9.7/robot.jar -o ~/.jar-cache/robot.jar
-        fi
-      shell: bash
-    
-    - name: Setup ROBOT tools
-      run: |
-        cp ~/.jar-cache/robot.jar ${{ github.workspace }}/tools/robot.jar
-        curl -L https://raw.githubusercontent.com/ontodev/robot/v1.9.7/bin/robot -o ${{ github.workspace }}/tools/robot
-        chmod +x ${{ github.workspace }}/tools/robot
-        ${{ github.workspace }}/tools/robot --help
-      shell: bash
-
-    - name: Add tools to PATH
-      run: |
-        echo "${{ github.workspace }}/tools" >> $GITHUB_PATH
-        ls -alt ${{ github.workspace }}
-        ls -alt ${{ github.workspace }}/tools
-      shell: bash
-
-    - name: Add obo-scripts to PATH
-      run: |
-        git clone https://github.com/cmungall/obo-scripts.git ${{ github.workspace }}/tools/obo-scripts
-        echo "${{ github.workspace }}/tools/obo-scripts" >> $GITHUB_PATH
-      shell: bash
-      
-    - name: Install uv
-      uses: astral-sh/setup-uv@v5
-      with:
-        prune-cache: false
-
-    - name: Install Python tools
-      run: |
-        uv venv
-        source .venv/bin/activate
-        uv pip install aurelian jinja2-cli "wrapt>=1.17.2"
-      shell: bash
-      
+      # `aurelian fulltext PMID:nnn` is how the agent reads a publication. Installed
+      # as a uv TOOL, not into a venv: a tool lands on `$HOME/.local/bin`, which is
+      # already on PATH above, so it is still there when the agent runs. (A venv
+      # activated inside a setup step is gone by the next one.)
+      - name: Install aurelian
+        run: uv tool install aurelian

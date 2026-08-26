@@ -25,7 +25,7 @@ work from a copy of the rules here — apply the checklist.
   comment`, reactions). Producing the review and publishing it are separate; the
   human decides whether to publish.
 - Only run **read-only** shell commands: `git diff`, `git log`, `gh pr diff/view`,
-  `grep`/`rg`, `obo-grep.pl`, `robot query/reason` (if available), `cat`/`sed`/
+  `grep`/`rg`, `om ogrep/query/reason` (if available), `cat`/`sed`/
   `head`/`tail`, `ls`, `find`, `aurelian`.
 - The output **is** the review report. Do not ask follow-up questions mid-review;
   note missing information as an assumption or limitation.
@@ -45,7 +45,7 @@ work from a copy of the rules here — apply the checklist.
    checklist (hierarchy/parents, definitions & ≥2 PMIDs, synonym typing + source
    xrefs, obsoletion safety, temporary `EFO_099xxxx` ID handling,
    conventions/metadata, build/config regressions). Inspect terms with the
-   grep/`obo-grep.pl`/`robot` techniques the checklist describes. Verify PMIDs
+   grep/`om ogrep/query/reason` techniques the checklist describes. Verify PMIDs
    where possible; flag what you cannot verify rather than asserting it is wrong.
 4. **Return the report** in the exact format the checklist specifies — the
    `## EFO PR Review — …` block with the tick-box checklist, severity-tagged

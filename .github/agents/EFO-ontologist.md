@@ -94,7 +94,7 @@ This agent should be called when you need to:
 6. Add logical definitions if applicable (genus-differentia)
 7. Add domain-specific relationships (part_of, is_about, has_disease_location, etc.)
 8. Check if subclasses.csv entries needed for cross-ontology relationships
-9. Run: make normalize_src
+9. Run: om make normalize_src
 10. Verify no errors
 11. Commit with descriptive message
 ```
@@ -116,7 +116,7 @@ This agent should be called when you need to:
 2. Make requested changes following OWL/XML patterns
 3. Update metadata (dc:date, obo:IAO_0000117 if significant change)
 4. Verify relationships are valid
-5. Run: make normalize_src
+5. Run: om make normalize_src
 6. Verify no errors
 7. Commit with descriptive message
 ```
@@ -142,8 +142,8 @@ This agent should be called when you need to:
    - Check src/templates/subclasses.csv
 4. Replace references with replacement term
 5. If subclasses.csv modified:
-   - Run: make components/subclasses.owl
-6. Run: make normalize_src
+   - Run: om make components/subclasses.owl
+6. Run: om make normalize_src
 7. Commit: "Obsoleted EFO_XXXXXXX; replaced with [term]"
 ```
 
@@ -158,9 +158,9 @@ This agent should be called when you need to:
 1. Verify imported term exists in imports/[ontology]_import.owl
 2. Add relationship using subclasses.csv:
    - Add row: EFO_ID,EXTERNAL_ID
-3. Run: make components/subclasses.owl
+3. Run: om make components/subclasses.owl
 4. Verify relationship was added
-5. Run: make normalize_src
+5. Run: om make normalize_src
 6. Commit with clear message
 ```
 
@@ -333,8 +333,7 @@ When linking terms from different ontologies (e.g., EFO term → OBA parent):
    ```
 4. Rebuild component:
    ```bash
-   cd src/ontology
-   make components/subclasses.owl
+   om make components/subclasses.owl
    ```
 
 ### Normalization and Validation
@@ -342,14 +341,13 @@ When linking terms from different ontologies (e.g., EFO term → OBA parent):
 After any edit:
 
 ```bash
-cd src/ontology
-make normalize_src
+om make normalize_src
 ```
 
 To check for errors:
 ```bash
-robot convert -vvv -i efo-edit.owl -o /dev/null
-robot reason -i efo-edit.owl -r ELK
+om convert -vvv -i src/ontology/efo-edit.owl -o /dev/null
+om reason -i src/ontology/efo-edit.owl -r ELK
 ```
 
 ## Domain-Specific Requirements
@@ -392,7 +390,7 @@ Before adding a new term, check for duplicates:
 grep -i "<rdfs:label.*TERM_NAME" src/ontology/efo-edit.owl
 
 # Search by pattern across ontology
-obo-grep.pl -r 'pattern' src/ontology/efo-edit.owl
+om ogrep 'pattern' -i src/ontology/efo-edit.owl
 ```
 
 ### Finding Parent Terms
@@ -477,7 +475,7 @@ Before committing, verify:
 
 ### If normalization fails:
 - Check OWL/XML syntax carefully
-- Use `robot convert -vvv` to see detailed errors
+- Use `om convert -vvv` to see detailed errors
 - Verify all IRIs are properly formatted
 
 ### If relationship validation fails:
@@ -522,4 +520,3 @@ OBSOLETION COMPLETE
 
 Ready for review.
 ```
-

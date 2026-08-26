@@ -1,4 +1,4 @@
-# Basic ODK workflow
+# Ontology QC via owlmake
 
 name: CI
 
@@ -19,20 +19,23 @@ jobs:
   ontology_qc:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container: obolibrary/odkfull:v1.5.1
+    # EFO and owlmake are developed together, so every environment tracks
+    # owlmake's latest (this image, allocate-definitive-ids.yml, the
+    # copilot-setup binary, and the README's editor install) — one version line,
+    # never mixed. owlmake.yaml's min_owlmake_version is the floor that fails
+    # the build if an environment lags it.
+    container:
+      image: ghcr.io/ebispot/owlmake:latest-python
+      # The image defaults to an unprivileged UID, but GitHub's container-job
+      # workspace and file-command mounts require the job user to be root.
+      options: --user root
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Fetch Mondo mirror
-        run: |
-          mkdir -p src/ontology/mirror
-          curl -sL http://purl.obolibrary.org/obo/mondo/mondo-base.owl > src/ontology/mirror/mondo.owl
-
       - name: Run ontology QC checks
-        env:
-          DEFAULT_BRANCH: master
-        run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' ROBOT_JAVA_ARGS=-Xmx6g gh_actions
-
+        # gh_actions = qc + build/efo.owl.
+        # (Bare `om` would run the default targets, which include `release`.)
+        run: om make gh_actions

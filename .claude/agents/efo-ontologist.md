@@ -20,8 +20,8 @@ Cannot proceed: missing <items>. Need curator sign-off for <X> / import for <Y>.
 2. Generate a temporary ID in range **`EFO_099xxxx`** for each term **you** author; check clashes: `grep EFO_099 src/ontology/efo-edit.owl` (if creating several, ensure none collide). This range is the marker that automation uses to mint a definitive ID after merge, so it must be obvious in the PR that these IDs are temporary. **Exception:** if the handoff gives you a term that already has a real, non-`EFO_099xxxx` ID (a human-authored term), keep that ID exactly — it is permanent. Never renumber a permanent ID into the `EFO_099xxxx` range, and never invent an `EFO_099xxxx` ID for a term that already has a definitive one.
 3. Format the term following the template below and place it appropriately in `efo-edit.owl`.
 4. Add `SubClassOf` parent(s); add logical definition (genus-differentia) if there's a clear pattern; add domain relationships (`is_about`, `has_disease_location`, `part_of`).
-5. For cross-ontology `SubClassOf`, add a row to `src/templates/subclasses.csv` (`EFO_ID,EXTERNAL_ID`) **only if** it doesn't exist upstream, then `make components/subclasses.owl`.
-6. `make normalize_src`; verify; report.
+5. For cross-ontology `SubClassOf`, add a row to `src/templates/subclasses.csv` (`EFO_ID,EXTERNAL_ID`) **only if** it doesn't exist upstream, then `om make components/subclasses.owl`.
+6. `om make normalize_src`; verify; report.
 
 ### Term template
 ```xml
@@ -74,20 +74,19 @@ If the curator could not supply a source for a synonym, leave the bare synonym a
 Common properties: `is_about` `IAO_0000136` · `has_disease_location` `RO_0004026` · `part_of` `BFO_0000050`. The text definition must mirror the logical definition.
 
 ## Workflow 2 — Edit existing term
-Locate by ID/label, change label/def/synonyms/relationships following patterns, update `dc:date` (and `IAO_0000117` for significant changes), verify relationships valid, `make normalize_src`.
+Locate by ID/label, change label/def/synonyms/relationships following patterns, update `dc:date` (and `IAO_0000117` for significant changes), verify relationships valid, `om make normalize_src`.
 
 ## Workflow 3 — Obsolete a term
 1. Locate the term.
 2. Prefix label with `obsolete_`; set `owl:deprecated=true`; add `efo:obsoleted_in_version` (next minor version — read line 14 of `ExFactor Ontology release notes.txt`, e.g. 3.91.0 → 3.92; only when newly obsoleting); add `efo:reason_for_obsolescence`; add `obo:IAO_0100001` (term replaced by) if there's a replacement. Remove all logical axioms from the obsolete term.
-3. Replace every reference to the obsolete IRI elsewhere in `efo-edit.owl` with the replacement, and in the "Type (is-a)" column of `subclasses.csv`. If `subclasses.csv` changed → `make components/subclasses.owl`.
-4. `make normalize_src`.
+3. Replace every reference to the obsolete IRI elsewhere in `efo-edit.owl` with the replacement, and in the "Type (is-a)" column of `subclasses.csv`. If `subclasses.csv` changed → `om make components/subclasses.owl`.
+4. `om make normalize_src`.
 
 ## Verify before reporting
 ```bash
-cd src/ontology
-make normalize_src
-robot convert -vvv -i efo-edit.owl -o /dev/null   # if syntax looks off
-robot reason -i efo-edit.owl -r ELK               # catch unsatisfiable classes
+om make normalize_src
+om convert -vvv -i src/ontology/efo-edit.owl -o /dev/null   # if syntax looks off
+om reason -i src/ontology/efo-edit.owl -r ELK               # catch unsatisfiable classes
 ```
 Checklist: label + def + ≥2 xrefs + non-obsolete parent on every new term · synonyms with a known source carry a `hasDbXref` provenance axiom · logical def mirrors text · no deprecated parents · cross-ontology links in `subclasses.csv` only when needed · normalization clean.
 
@@ -98,7 +97,7 @@ INTEGRATION COMPLETE
 - Parent: <label> (ONT:YYYYYYY)
 - Definition: <text> [PMID:..., PMID:...]
 - Files changed: efo-edit.owl[, subclasses.csv]
-- normalize_src: clean · robot reason: OK
+- normalize_src: clean · om reason: OK
 - Flags for PR: <e.g. missing has_disease_location — note for reviewer>
 ```
 Report flags (e.g. a measurement with no clear `is_about`, or a disease missing `has_disease_location`) rather than guessing — the orchestrator will surface them in the PR. Do not commit or push.
