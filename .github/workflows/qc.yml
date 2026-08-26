@@ -19,10 +19,13 @@ jobs:
   ontology_qc:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    # Pinned to a minor so a new owlmake major/minor is adopted deliberately;
-    # owlmake.yaml's min_owlmake_version states the floor this must satisfy.
+    # EFO and owlmake are developed together, so every environment tracks
+    # owlmake's latest (this image, allocate-definitive-ids.yml, the
+    # copilot-setup binary, and the README's editor install) — one version line,
+    # never mixed. owlmake.yaml's min_owlmake_version is the floor that fails
+    # the build if an environment lags it.
     container:
-      image: ghcr.io/ebispot/owlmake:0.2-python
+      image: ghcr.io/ebispot/owlmake:latest-python
       # The image defaults to an unprivileged UID, but GitHub's container-job
       # workspace and file-command mounts require the job user to be root.
       options: --user root
