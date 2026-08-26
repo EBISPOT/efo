@@ -23,14 +23,17 @@ Run the commands below from the repository root.
    src/ontology/iri_dependencies/uberon_terms.txt
    ```
 
-2. Force owlmake to refresh that import and its mirror:
+2. Refresh the mirror, then force owlmake to rebuild the import from it:
 
    ```bash
+   om make mirror/uberon.owl -B
    om make imports/uberon_import.owl -B
    ```
 
-   Replace `uberon` with the required import ID. The `-B` flag rebuilds the
-   target and its prerequisites, including the mirror named by the plan.
+   Replace `uberon` with the required import ID. The mirror step is required:
+   mirrors sit in the plan's `mirrors` refresh group and are kept by default,
+   so `-B` on the import target alone reuses whatever mirror is already on
+   disk (downloading it only if absent) — it does not re-fetch upstream.
 
 3. Verify that the requested term is present:
 
@@ -72,6 +75,7 @@ because it includes axioms required to preserve the extracted module.
 MONDO follows the same workflow as the other imports:
 
 ```bash
+om make mirror/mondo.owl -B
 om make imports/mondo_import.owl -B
 ```
 

@@ -37,7 +37,7 @@ imports:
         filename: src/ontology/imports/mondo_import.owl.hgnc.txt
       then:
       - op: shell
-        command: echo "Auto-excluding $(wc -l < imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
+        command: echo "Auto-excluding $(wc -l < src/ontology/imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
       - op: append
         src:
         - src/ontology/imports/mondo_import.owl.hgnc.txt
@@ -486,6 +486,11 @@ default_targets:
 - qc
 phony:
 - allocate-definitive-ids
+- dump_chebi
+- dump_cl
+- dump_fbbt
+- dump_hp
+- dump_obi
 - feature_diff
 - feature_diff_md
 transient_targets:
@@ -549,6 +554,8 @@ refresh_groups:
   - src/ontology/mirror/ecto.owl
   - src/ontology/mirror/gsso.owl
   - src/ontology/mirror/fbbi.owl
+  - src/ontology/mirror/hpoa.owl
+  - src/ontology/mirror/mondo-owl.owl
   default: keep
 - name: imports
   flag: IMP
@@ -633,7 +640,7 @@ prerequisites:
         filename: src/ontology/imports/mondo_import.owl.hgnc.txt
       then:
       - op: shell
-        command: echo "Auto-excluding $(wc -l < imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
+        command: echo "Auto-excluding $(wc -l < src/ontology/imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
       - op: append
         src:
         - src/ontology/imports/mondo_import.owl.hgnc.txt
@@ -1408,15 +1415,386 @@ prerequisites:
   - op: convert
     format: ofn
     output: src/ontology/build/efo-edit-functional.owl
-- target: src/ontology/build/fbbt-self-xref.txt
+- target: src/ontology/build/filtered-chebi-mirror.owl
+  input: src/ontology/mirror/chebi.owl
+  needs:
+  - src/ontology/mirror/chebi.owl
+  - src/ontology/iri_dependencies/chebi_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/chebi_terms.txt
+    trim: false
+- target: src/ontology/build/efo-edit-without-chebi.owl
   input: src/ontology/efo-edit.owl
   needs:
   - src/ontology/efo-edit.owl
+  - src/ontology/build/filtered-chebi-mirror.owl
+  steps:
+  - op: remove-terms
+    selects:
+    - imports
+    trim: false
+  - op: unmerge
+    second_input: src/ontology/build/filtered-chebi-mirror.owl
+- target: src/ontology/build/remaining-chebi.ofn
+  input: src/ontology/build/efo-edit-without-chebi.owl
+  needs:
+  - src/ontology/build/efo-edit-without-chebi.owl
+  - src/ontology/iri_dependencies/chebi_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/chebi_terms.txt
+    trim: false
+- target: src/ontology/build/preserve-axioms-chebi.ttl
+  input: src/ontology/build/remaining-chebi.ofn
+  needs:
+  - src/ontology/build/remaining-chebi.ofn
+  - src/sparql/preserve_chebi_axioms.sparql
   steps:
   - op: query
+    constructs:
+    - query: src/sparql/preserve_chebi_axioms.sparql
+      output: src/ontology/build/preserve-axioms-chebi.ttl
+- target: src/ontology/build/preserve-axioms-chebi.owl
+  input: src/ontology/build/preserve-axioms-chebi.ttl
+  needs:
+  - src/ontology/build/preserve-axioms-chebi.ttl
+  steps:
+  - op: convert
+    format: owl
+- target: dump_chebi
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/preserve-axioms-chebi.owl
+  steps:
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/chebi_terms.txt
+    axioms:
+    - annotation
+    trim: true
+    preserve_structure: false
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/chebi_terms.txt
+    trim: false
+    preserve_structure: false
+  - op: merge
+    inputs:
+    - src/ontology/build/preserve-axioms-chebi.owl
+    collapse_import_closure: false
+  - op: convert
+    format: ofn
+    output: src/ontology/efo-edit.owl
+- target: src/ontology/build/filtered-cl-mirror.owl
+  input: src/ontology/mirror/cl.owl
+  needs:
+  - src/ontology/mirror/cl.owl
+  - src/ontology/iri_dependencies/cl_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/cl_terms.txt
+    trim: false
+- target: src/ontology/build/efo-edit-without-cl.owl
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/filtered-cl-mirror.owl
+  steps:
+  - op: remove-terms
     selects:
-    - query: src/sparql/remove-self-xrefs.sparql
-      output: src/ontology/build/fbbt-self-xref.txt
+    - imports
+    trim: false
+  - op: unmerge
+    second_input: src/ontology/build/filtered-cl-mirror.owl
+- target: src/ontology/build/remaining-cl.ofn
+  input: src/ontology/build/efo-edit-without-cl.owl
+  needs:
+  - src/ontology/build/efo-edit-without-cl.owl
+  - src/ontology/iri_dependencies/cl_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/cl_terms.txt
+    trim: false
+- target: src/ontology/build/preserve-axioms-cl.ttl
+  input: src/ontology/build/remaining-cl.ofn
+  needs:
+  - src/ontology/build/remaining-cl.ofn
+  - src/sparql/preserve_cl_axioms.sparql
+  steps:
+  - op: query
+    constructs:
+    - query: src/sparql/preserve_cl_axioms.sparql
+      output: src/ontology/build/preserve-axioms-cl.ttl
+- target: src/ontology/build/preserve-axioms-cl.owl
+  input: src/ontology/build/preserve-axioms-cl.ttl
+  needs:
+  - src/ontology/build/preserve-axioms-cl.ttl
+  steps:
+  - op: convert
+    format: owl
+- target: dump_cl
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/preserve-axioms-cl.owl
+  steps:
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/cl_terms.txt
+    axioms:
+    - annotation
+    trim: true
+    preserve_structure: false
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/cl_terms.txt
+    trim: false
+    preserve_structure: false
+  - op: merge
+    inputs:
+    - src/ontology/build/preserve-axioms-cl.owl
+    collapse_import_closure: false
+  - op: convert
+    format: ofn
+    output: src/ontology/efo-edit.owl
+- target: src/ontology/build/filtered-fbbt-mirror.owl
+  input: src/ontology/mirror/fbbt.owl
+  needs:
+  - src/ontology/mirror/fbbt.owl
+  - src/ontology/iri_dependencies/fbbt_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/fbbt_terms.txt
+    trim: false
+- target: src/ontology/build/efo-edit-without-fbbt.owl
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/filtered-fbbt-mirror.owl
+  steps:
+  - op: remove-terms
+    selects:
+    - imports
+    trim: false
+  - op: unmerge
+    second_input: src/ontology/build/filtered-fbbt-mirror.owl
+- target: src/ontology/build/remaining-fbbt.ofn
+  input: src/ontology/build/efo-edit-without-fbbt.owl
+  needs:
+  - src/ontology/build/efo-edit-without-fbbt.owl
+  - src/ontology/iri_dependencies/fbbt_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/fbbt_terms.txt
+    trim: false
+- target: src/ontology/build/preserve-axioms-fbbt.ttl
+  input: src/ontology/build/remaining-fbbt.ofn
+  needs:
+  - src/ontology/build/remaining-fbbt.ofn
+  - src/sparql/preserve_fbbt_axioms.sparql
+  steps:
+  - op: query
+    constructs:
+    - query: src/sparql/preserve_fbbt_axioms.sparql
+      output: src/ontology/build/preserve-axioms-fbbt.ttl
+- target: src/ontology/build/preserve-axioms-fbbt.owl
+  input: src/ontology/build/preserve-axioms-fbbt.ttl
+  needs:
+  - src/ontology/build/preserve-axioms-fbbt.ttl
+  steps:
+  - op: convert
+    format: owl
+- target: dump_fbbt
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/preserve-axioms-fbbt.owl
+  steps:
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/fbbt_terms.txt
+    axioms:
+    - annotation
+    trim: true
+    preserve_structure: false
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/fbbt_terms.txt
+    trim: false
+    preserve_structure: false
+  - op: merge
+    inputs:
+    - src/ontology/build/preserve-axioms-fbbt.owl
+    collapse_import_closure: false
+  - op: convert
+    format: ofn
+    output: src/ontology/efo-edit.owl
+- target: src/ontology/build/filtered-hp-mirror.owl
+  input: src/ontology/mirror/hp.owl
+  needs:
+  - src/ontology/mirror/hp.owl
+  - src/ontology/iri_dependencies/hp_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/hp_terms.txt
+    trim: false
+- target: src/ontology/build/efo-edit-without-hp.owl
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/filtered-hp-mirror.owl
+  steps:
+  - op: remove-terms
+    selects:
+    - imports
+    trim: false
+  - op: unmerge
+    second_input: src/ontology/build/filtered-hp-mirror.owl
+- target: src/ontology/build/remaining-hp.ofn
+  input: src/ontology/build/efo-edit-without-hp.owl
+  needs:
+  - src/ontology/build/efo-edit-without-hp.owl
+  - src/ontology/iri_dependencies/hp_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/hp_terms.txt
+    trim: false
+- target: src/ontology/build/preserve-axioms-hp.ttl
+  input: src/ontology/build/remaining-hp.ofn
+  needs:
+  - src/ontology/build/remaining-hp.ofn
+  - src/sparql/preserve_hp_axioms.sparql
+  steps:
+  - op: query
+    constructs:
+    - query: src/sparql/preserve_hp_axioms.sparql
+      output: src/ontology/build/preserve-axioms-hp.ttl
+- target: src/ontology/build/preserve-axioms-hp.owl
+  input: src/ontology/build/preserve-axioms-hp.ttl
+  needs:
+  - src/ontology/build/preserve-axioms-hp.ttl
+  steps:
+  - op: convert
+    format: owl
+- target: dump_hp
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/preserve-axioms-hp.owl
+  steps:
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/hp_terms.txt
+    axioms:
+    - annotation
+    trim: true
+    preserve_structure: false
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/hp_terms.txt
+    trim: false
+    preserve_structure: false
+  - op: merge
+    inputs:
+    - src/ontology/build/preserve-axioms-hp.owl
+    collapse_import_closure: false
+  - op: convert
+    format: ofn
+    output: src/ontology/efo-edit.owl
+- target: src/ontology/build/filtered-obi-mirror.owl
+  input: src/ontology/mirror/obi.owl
+  needs:
+  - src/ontology/mirror/obi.owl
+  - src/ontology/iri_dependencies/obi_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/obi_terms.txt
+    trim: false
+- target: src/ontology/build/efo-edit-without-obi.owl
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/filtered-obi-mirror.owl
+  steps:
+  - op: remove-terms
+    selects:
+    - imports
+    trim: false
+  - op: unmerge
+    second_input: src/ontology/build/filtered-obi-mirror.owl
+- target: src/ontology/build/remaining-obi.ofn
+  input: src/ontology/build/efo-edit-without-obi.owl
+  needs:
+  - src/ontology/build/efo-edit-without-obi.owl
+  - src/ontology/iri_dependencies/obi_terms.txt
+  steps:
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/obi_terms.txt
+    trim: false
+- target: src/ontology/build/preserve-axioms-obi.ttl
+  input: src/ontology/build/remaining-obi.ofn
+  needs:
+  - src/ontology/build/remaining-obi.ofn
+  - src/sparql/preserve_obi_axioms.sparql
+  steps:
+  - op: query
+    constructs:
+    - query: src/sparql/preserve_obi_axioms.sparql
+      output: src/ontology/build/preserve-axioms-obi.ttl
+- target: src/ontology/build/preserve-axioms-obi.owl
+  input: src/ontology/build/preserve-axioms-obi.ttl
+  needs:
+  - src/ontology/build/preserve-axioms-obi.ttl
+  steps:
+  - op: convert
+    format: owl
+- target: dump_obi
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  - src/ontology/build/preserve-axioms-obi.owl
+  steps:
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/obi_terms.txt
+    axioms:
+    - annotation
+    trim: true
+    preserve_structure: false
+  - op: remove-terms
+    term_files:
+    - src/ontology/iri_dependencies/obi_terms.txt
+    trim: false
+    preserve_structure: false
+  - op: merge
+    inputs:
+    - src/ontology/build/preserve-axioms-obi.owl
+    collapse_import_closure: false
+  - op: convert
+    format: ofn
+    output: src/ontology/efo-edit.owl
+- target: src/ontology/mirror/hpoa.owl
+  steps:
+  - op: fetch
+    url: https://data.monarchinitiative.org/ttl/hpoa.ttl
+    dst: src/ontology/mirror/hpoa.owl
+- target: src/ontology/mirror/mondo-owl.owl
+  steps:
+  - op: fetch
+    url: http://purl.obolibrary.org/obo/mondo.owl
+    dst: src/ontology/mirror/mondo-owl.owl
 - target: src/ontology/components/d2p_hpoa.ttl
   input: src/ontology/mirror/hpoa.owl
   needs:
@@ -1813,17 +2191,6 @@ prerequisites:
     src:
     - src/ontology/efo-edit.owl.ofn
     dst: src/ontology/efo-edit.owl
-- target: remove-fbbt-self-xref
-  input: src/ontology/efo-edit.owl
-  needs:
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: query
-    updates:
-    - src/sparql/remove-fbbt-xrefs.ru
-  - op: convert
-    format: ofn
-    output: src/ontology/efo-edit.owl
 - target: src/ontology/reports/report-uniprot-efo-map.tsv
   input: src/ontology/efo-edit.owl
   needs:
