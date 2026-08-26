@@ -41,11 +41,16 @@ Pick the likely source ontology, then search OLS:
 - **Never** edit generated files under `src/ontology/imports/`.
 
 ### 4. Regenerate the import
-From the repo root (`om` locates `src/ontology` itself):
+From the repo root (`om` locates `src/ontology` itself), refresh the mirror
+first, then rebuild the import:
 ```bash
+om make mirror/<ontology>.owl -B          # e.g. om make mirror/cl.owl -B
 om make imports/<ontology>_import.owl -B  # e.g. om make imports/cl_import.owl -B
 ```
-`-B` refreshes the plan-named mirror prerequisite as well as the import.
+The mirror step is required: mirrors are in the plan's `mirrors` refresh group
+(kept by default), so `-B` on the import target reuses the mirror already on
+disk — it does not re-download it. A stale mirror silently produces a stale
+import.
 Verify the term now appears in the generated import file.
 
 ## Reporting back

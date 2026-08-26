@@ -42,7 +42,7 @@ jobs:
       - name: Allocate definitive IDs
         if: steps.check.outputs.has_temp == 'true'
         run: |
-          om allocate-definitive-ids
+          om make allocate-definitive-ids
 
       - name: Commit and push changes
         if: steps.check.outputs.has_temp == 'true'
