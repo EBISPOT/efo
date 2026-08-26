@@ -37,7 +37,7 @@ imports:
         filename: src/ontology/imports/mondo_import.owl.hgnc.txt
       then:
       - op: shell
-        command: echo "Auto-excluding $(wc -l < src/ontology/imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
+        command: echo "Auto-excluding $(wc -l < imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
       - op: append
         src:
         - src/ontology/imports/mondo_import.owl.hgnc.txt
@@ -640,7 +640,7 @@ prerequisites:
         filename: src/ontology/imports/mondo_import.owl.hgnc.txt
       then:
       - op: shell
-        command: echo "Auto-excluding $(wc -l < src/ontology/imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
+        command: echo "Auto-excluding $(wc -l < imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
       - op: append
         src:
         - src/ontology/imports/mondo_import.owl.hgnc.txt
