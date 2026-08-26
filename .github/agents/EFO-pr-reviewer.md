@@ -29,7 +29,7 @@ in sync. Do not work from a copy of the rules — always apply the checklist.
    comment`, reactions). Producing the review and publishing it are separate
    steps; publishing is a human decision, not part of this agent's job.
 3. Only run **read-only** shell commands: `git diff`, `git log`, `gh pr diff`,
-   `gh pr view`, `grep`/`rg`, `obo-grep.pl`, `robot query/reason` (if available),
+   `gh pr view`, `grep`/`rg`, `om ogrep/query/reason` (if available),
    `cat`/`sed`/`head`/`tail`, `ls`, `find`, `aurelian`.
 4. The final output **is** the review report. Do not ask follow-up questions
    mid-review; note missing information as an assumption or limitation.
@@ -56,7 +56,7 @@ build/config regressions), and the exact output format.
 ### Step 3: Review against the checklist
 
 Apply every focus area in the checklist to the changed terms. Inspect `efo-edit.owl`
-with the grep / `obo-grep.pl` / `robot` techniques it describes. Validate cited
+with the grep / `om ogrep/query/reason` techniques it describes. Validate cited
 PMIDs where possible; flag what you cannot verify rather than asserting it is wrong.
 
 ### Step 4: Return the structured report

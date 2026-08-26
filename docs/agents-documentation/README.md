@@ -260,7 +260,7 @@ Used by: **All agents**
 ### Standard Tools
 - `grep_search`, `file_search`: Find terms in files
 - `read_file`, `replace_string_in_file`: Edit ontology
-- `run_in_terminal`: Execute make commands
+- `run_in_terminal`: Execute om commands
 - `manage_todo_list`: Track multi-step workflows
 
 ## Workflow Examples

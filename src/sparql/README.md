@@ -5,16 +5,16 @@ query language for RDF. This directory contains useful SPARQL queries
 for perfoming over the ontology.
 
 SPARQL can be executed on a triplestore or directly on any OWL
-file. The queries here are all executed on either efo-edit.obo or
+file. The queries here are all executed on either `efo-edit.owl` or
 downstream products in the [ontology](../ontology/) folder. We use
-`robot` as this allows easy execution over any Obo-format or OWL file.
+`om query` because it executes SPARQL directly over OBO- or OWL-format files.
 
 We break the queries into 3 categories:
 
 ## Constraint Violation checks
 
 These are all named `*violation.sparql`. A subset of these are
-configured to be executed via travis. If these return any results,
+configured to be executed by EFO's QC targets. If these return any results,
 then the build will fail.
 
 Consult the individual sparql files to see the intent of the check

@@ -20,7 +20,7 @@ This is a multi-agent system. **You are the orchestrator** — the only one who 
 
 - **Subagents cannot call other subagents.** All routing and sequencing is your job. Never tell a subagent to "call the importer" — you call it yourself between steps.
 - **Subagents are stateless and return one final message.** Pass them complete context up front (see Handoff template below). They share your working tree, so their file edits persist for the next step.
-- **Only you touch git.** Subagents edit files and run `make`/`robot`; **you** create the branch, commit, and open the PR. Do not ask subagents to commit or push.
+- **Only you touch git.** Subagents edit files and run `om`; **you** create the branch, commit, and open the PR. Do not ask subagents to commit or push.
 
 ---
 
@@ -97,9 +97,9 @@ These are the rules you and the subagents must never violate. Deep technical det
 
 ### Imports (always delegated to `efo-importer`)
 - Edit only `src/ontology/iri_dependencies/*.txt` (full IRI per line). **Never** edit generated files in `src/ontology/imports/`.
-- Always run `./get_mirrors.sh` (or update the specific mirror) before regenerating: `make imports/<ontology>_import.owl -B`. MONDO also needs `make components/mondo_efo_import.owl -B`.
+- Refresh the relevant mirror before regenerating (`om make mirror/<ontology>.owl -B`), then run `om make imports/<ontology>_import.owl`. To refresh the full set, run `om make --rebuild mirrors all_imports -B`.
 - **Do not add RO terms** to `efo-relations.txt` unless the user explicitly asks.
-- Cross-ontology `SubClassOf` (e.g. EFO ⊑ OBA) goes in `src/templates/subclasses.csv` **only if** the axiom doesn't already exist upstream, then `make components/subclasses.owl`. Always import the term first.
+- Cross-ontology `SubClassOf` (e.g. EFO ⊑ OBA) goes in `src/templates/subclasses.csv` **only if** the axiom doesn't already exist upstream, then `om make components/subclasses.owl`. Always import the term first.
 
 ### Obsoletion
 - Prefix label with `obsolete_`, set `owl:deprecated=true`, add `efo:obsoleted_in_version` (next minor version from line 14 of `ExFactor Ontology release notes.txt`, e.g. 3.91.0 → 3.92), add `efo:reason_for_obsolescence`, and `obo:IAO_0100001` (term replaced by) if there's a replacement.
@@ -115,18 +115,18 @@ These are the rules you and the subagents must never violate. Deep technical det
 
 ## Verification gate (before you commit)
 
-Run from `src/ontology`:
+Run from the repo root (`om` finds `src/ontology` itself):
 
 ```bash
-make normalize_src                              # always, after any edit
-robot convert -vvv -i efo-edit.owl -o /dev/null # syntax check if anything looks off
-robot reason -i efo-edit.owl -r ELK             # validate, catches unsatisfiable classes
+om make normalize_src                                 # always, after any edit
+om convert -vvv -i src/ontology/efo-edit.owl -o /dev/null   # syntax check if anything looks off
+om reason -i src/ontology/efo-edit.owl -r ELK               # validate, catches unsatisfiable classes
 ```
 
 Confirm the checklist before claiming done:
 - [ ] New terms: ≥2 PMIDs in definition, typed synonyms, non-obsolete parent
 - [ ] Imports done via `efo-importer`; no hand-edited files under `imports/`
-- [ ] `make normalize_src` ran clean; `robot reason` has no unsatisfiable classes
+- [ ] `om make normalize_src` ran clean; `om reason` has no unsatisfiable classes
 - [ ] Issue number referenced; PR summary written
 
 Report failures honestly with their output — never claim success you haven't verified.
@@ -157,7 +157,7 @@ gh pr create --title "<title>" --body "$(cat <<'EOF'
 - [x] OLS pre-check: not already in an imported ontology
 - [x] Parents verified non-obsolete
 - [x] ≥2 PMIDs per new term, synonyms typed
-- [x] `make normalize_src` clean; `robot reason` OK
+- [x] `om make normalize_src` clean; `om reason` OK
 - [x] Temporary `EFO_099xxxx` IDs flagged as such (omit the callout/column only if the PR adds no agent-generated terms)
 
 ## Notes / open questions
@@ -176,10 +176,16 @@ EOF
 
 ## Querying the ontology
 
-- `efo-edit.owl` is RDF/XML — axioms span multiple lines, so grep carefully:
+- **`om ogrep`** is the term-level query: it prints the matching term *and every
+  axiom that refers to it*, as OBO stanzas, so a multi-line RDF/XML axiom comes
+  back whole.
+  - `om ogrep EFO:0007045 -i src/ontology/efo-edit.owl` — the term and its referrers
+  - `om ogrep ATAC-seq -i src/ontology/efo-edit.owl` — same, found by label or synonym
+  - `--self-only` for just the term's own stanza; `-f ofn` for the lossless view
+- Raw `grep` still works for text questions, but `efo-edit.owl` is RDF/XML and
+  axioms span multiple lines, so it shows you fragments:
   - `grep -i ATAC-seq src/ontology/efo-edit.owl` — all mentions
   - `grep '<rdfs:label.*ATAC-seq' src/ontology/efo-edit.owl` — label axioms
-  - `obo-grep.pl -r 'EFO_:_0007045' src/ontology/efo-edit.owl` — all mentions of an ID
 - Publications: `aurelian fulltext PMID:nnn` (DOI/URL also work) fetches full text.
 
 ## Reference docs (shared with the Copilot setup, authoritative for detail)

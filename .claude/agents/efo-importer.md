@@ -41,13 +41,11 @@ Pick the likely source ontology, then search OLS:
 - **Never** edit generated files under `src/ontology/imports/`.
 
 ### 4. Regenerate the import
-From `src/ontology`:
+From the repo root (`om` locates `src/ontology` itself):
 ```bash
-./get_mirrors.sh                       # or update just the one mirror — check the URL in get_mirrors.sh first
-make imports/<ontology>_import.owl -B  # e.g. make imports/cl_import.owl -B
-# MONDO also needs:
-make components/mondo_efo_import.owl -B
+om make imports/<ontology>_import.owl -B  # e.g. om make imports/cl_import.owl -B
 ```
+`-B` refreshes the plan-named mirror prerequisite as well as the import.
 Verify the term now appears in the generated import file.
 
 ## Reporting back

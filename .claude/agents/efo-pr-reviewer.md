@@ -29,7 +29,7 @@ reviewers so they cannot drift.
   comment`, reactions). Producing the review and publishing it are separate — the
   agent that dispatched you decides whether to publish.
 - Only run **read-only** shell commands (`git diff`, `git log`, `gh pr diff/view`,
-  `grep`/`rg`, `obo-grep.pl`, `robot query/reason`, `cat`/`sed -n`/`head`/`tail`,
+  `grep`/`rg`, `om ogrep/query/reason`, `cat`/`sed -n`/`head`/`tail`,
   `ls`, `find`, `aurelian`).
 - Your **final message is the review report**. Do not ask follow-up questions; if
   information is missing, note it as an assumption or limitation in the report.
@@ -46,7 +46,7 @@ following the "Getting the diff" section of the checklist.
    `docs/agents-documentation/efo-pr-review-checklist.md`.
 2. **Get the diff** for the target (see the checklist's "Getting the diff").
 3. **Review** `src/ontology/efo-edit.owl` changes against every focus area in the
-   checklist, inspecting terms with the grep/`obo-grep.pl`/`robot` techniques it
+   checklist, inspecting terms with the grep/`om ogrep/query/reason` techniques it
    describes. Verify PMIDs with `aurelian`/WebSearch where you can; flag what you
    cannot verify rather than asserting it is wrong.
 4. **Return the report** in the exact format the checklist specifies — the

@@ -1,184 +1,127 @@
 # Refreshing Imports in EFO
 
-This document describes how to refresh imported ontology terms in the Experimental Factor Ontology (EFO). The import system ensures that external terms (e.g., from UBERON, MONDO, CL) are correctly maintained and safely integrated into the EFO ontology.
+This document describes how to refresh terms imported from external ontologies
+such as UBERON, MONDO, and CL. EFO's import pipelines and mirror sources are
+recorded in `owlmake.yaml` and are executed by [owlmake](https://github.com/EBISPOT/owlmake).
+Run the commands below from the repository root.
 
-## Folder Structure Overview
+## Files to edit
 
-- `src/ontology/imports/`  
-  **Do not edit this folder directly.** This folder is automatically generated and contains:
-  - `.owl` import files (e.g., `uberon_import.owl`)
-  - Copies of the imported term lists as a safeguard against term disappearance
+- `src/ontology/iri_dependencies/` contains the curated term lists. Each
+  ontology has a plain-text file such as `mondo_terms.txt`,
+  `uberon_terms.txt`, or `cl_terms.txt`. Put one full term IRI on each line.
+- `src/ontology/imports/` contains generated OWL modules and backup copies of
+  the term lists. **Never edit files in this directory by hand.**
+- `src/ontology/mirror/` contains local source-ontology mirrors. Mirror URLs
+  come from `owlmake.yaml`; they do not need to be copied into commands.
 
-- `src/ontology/iri_dependencies/`  
-  **This is where you should make changes.** This folder contains plain-text files, each corresponding to an imported ontology. Each file contains a list of IRIs to be imported:
-  - `mondo_terms.txt`
-  - `uberon_terms.txt`
-  - `cl_terms.txt`
-  - etc.
+## Refresh one import
 
-Each line in these files should contain one full IRI of a term to be imported.
+1. Edit the relevant dependency file, for example:
 
-## Step-by-Step: How to Refresh Imports
-
-### 1. Update Ontology Mirrors
-
-Before updating the imports, ensure that the local ontology mirrors are up to date. These mirrors are used to resolve IRIs when generating import files.
-
-```bash
-./get_mirrors.sh
-```
-
-This script will download or update local copies of external ontologies used in the import process.
-
-### 2. Edit the Term Lists (if needed)
-
-To add or remove imported terms:
-
-1. Navigate to:
-   ```bash
-   src/ontology/iri_dependencies/
+   ```text
+   src/ontology/iri_dependencies/uberon_terms.txt
    ```
-2. Open the relevant file (e.g., `uberon_terms.txt`) in a text editor.
-3. Add or remove full IRIs of the terms you want to import, one per line.
 
-**Note:** Do not edit anything in the `src/ontology/imports/` directory manually. All edits must go through the IRI dependency files.
+2. Force owlmake to refresh that import and its mirror:
 
-### 3. Run the Import for a Specific Ontology
+   ```bash
+   om make imports/uberon_import.owl -B
+   ```
 
-To regenerate the import file for a single ontology, run:
+   Replace `uberon` with the required import ID. The `-B` flag rebuilds the
+   target and its prerequisites, including the mirror named by the plan.
 
-```bash
-cd src/ontology
-make imports/[ontology]_import.owl
-```
+3. Verify that the requested term is present:
 
-For example, to update UBERON:
+   ```bash
+   om ogrep UBERON:0000948 -i src/ontology/imports/uberon_import.owl
+   ```
 
-```bash
-make imports/uberon_import.owl
-```
+4. Review the generated changes with `git diff`. A normal import refresh may
+   update both the OWL module and its backup term list.
 
-If you encounter issues (e.g., caching, stale builds), you can force the rebuild:
+## Refresh all imports
 
-```bash
-make imports/uberon_import.owl -B
-```
-
-### 4. Refresh All Imports (Optional)
-
-To regenerate all import files at once:
+To refresh every mirror and regenerate every import module:
 
 ```bash
-cd src/ontology
-make all_imports -B
+om make --rebuild mirrors all_imports -B
 ```
 
-## What Happens When You Run `make`
+This is more expensive than rebuilding one import and should be used only when
+the full import set needs refreshing.
 
-Running `make imports/[ontology]_import.owl` will:
+## What the import target does
 
-1. Read the list of IRIs from `iri_dependencies/[ontology]_terms.txt`
-2. Resolve those IRIs using the updated mirrors
-3. Generate:
-   - An `.owl` file in `src/ontology/imports/` (e.g., `uberon_import.owl`)
-   - A backup copy of the term list in `src/ontology/imports/` for safety
+For `imports/<ontology>_import.owl`, owlmake:
 
-This system ensures reproducibility, traceability, and prevents accidental loss of imported terms.
+1. reads `src/ontology/iri_dependencies/<ontology>_terms.txt` and any shared
+   seed lists declared by the plan;
+2. obtains the source ontology from the corresponding mirror target;
+3. extracts the configured locality module and applies any import-specific
+   cleanup steps;
+4. writes `src/ontology/imports/<ontology>_import.owl`; and
+5. writes the backup term list under `src/ontology/imports/`.
 
-## Notes and Best Practices
+The generated import may contain more entities than the explicit seed list
+because it includes axioms required to preserve the extracted module.
 
-- Always run `./get_mirrors.sh` before running `make`, especially if terms may have changed upstream.
-- Only edit the `.txt` files in `src/ontology/iri_dependencies/`.
-- Do not directly modify any `.owl` files or `.txt` backups in the `imports` folder.
-- Use `-B` with `make` if the system appears not to be updating the files.
-- Review changes using `git diff` to ensure that the intended terms were updated.
+## MONDO imports
 
-### Example Workflow
+MONDO follows the same workflow as the other imports:
 
 ```bash
-# Step 1: Update local mirrors
-./get_mirrors.sh
-
-# Step 2: Edit IRIs (if needed)
-nano src/ontology/iri_dependencies/uberon_terms.txt #Or use a text editor such as VSC
-
-# Step 3: Run the import
-cd src/ontology
-make uberon_import.owl
+om make imports/mondo_import.owl -B
 ```
 
-To update all imports:
+The MONDO pipeline also detects referenced HGNC terms and adds them to
+`src/ontology/iri_dependencies/mondo_exclude.txt` before writing the final
+module. `mondo_import.owl` is gitignored because it is large; owlmake builds it
+automatically when a requested target needs it and it is absent.
 
-```bash
-cd src/ontology
-make all_imports -B
-```
+There is no separate `mondo_efo_import.owl` rebuild step. The release build
+consumes `imports/mondo_import.owl` directly.
 
-## Importing terms from Mondo
+## Fixing dangling imported terms
 
-If you update MONDO terms, regenerating the raw import alone is not enough. EFO uses the consolidated component mondo_efo_import.owl, so after rebuilding the MONDO import you must also rebuild that component.
+An imported term can appear directly below `owl:Thing` when its source parent
+is outside the extracted module. First check the source ontology: do not add a
+local assertion when the intended relationship already exists upstream and can
+be preserved by importing the required parent.
 
-Example:
+When EFO genuinely needs a cross-ontology parent assertion:
 
-```bash
-cd src/ontology
+1. Ensure both terms have already been imported.
+2. Add a row to `src/templates/subclasses.csv`:
 
-# regenerate the MONDO import (force rebuild if needed)
-make imports/mondo_import.owl -B
+   ```text
+   ID_OF_IMPORTED_TERM,ID_OF_PARENT_TERM
+   ```
 
-# then regenerate the EFO component that EFO actually imports
-make components/mondo_efo_import.owl -B
-```
+   For example:
 
-Always run the second command to ensure newly imported MONDO terms appear in EFO.
+   ```text
+   MONDO:0042489,BFO:0000019
+   ```
 
-## Fixing Dangling Imported Terms
+3. Rebuild the generated component:
 
-Sometimes, after importing a term, it may appear as a "dangling class"—that is, attached only to `owl:Thing` with no asserted superclass. This typically happens when the imported term does not include a parent in the original ontology, or when ROBOT's import process prunes axioms not explicitly included.
+   ```bash
+   om make components/subclasses.owl
+   ```
 
-This can lead to quality control (QC) failures or unwanted structural issues in the ontology.
+4. Verify the resulting assertion and run the relevant QC target.
 
-### Solution: Use `subclasses.csv` to Assert Parentage
+Do not repair dangling terms by editing an import OWL file in Protégé or a text
+editor; generated imports will be overwritten on the next refresh.
 
-To manually assert a parent class for an imported term, use the `subclasses.csv` template file located in:
+## Troubleshooting
 
-```
-src/templates/subclasses.csv
-```
-
-This file allows you to declare subclass relationships between imported terms and existing EFO terms.
-
-#### Instructions
-
-1. Open `src/templates/subclasses.csv`.
-
-2. Add a new row with the following format:
-
-```
-ID_OF_IMPORTED_TERM,ID_OF_PARENT_TERM_IN_EFO
-```
-
-For example:
-
-```
-MONDO:0042489,BFO:0000019
-```
-
-3. Save the file.
-
-4. Rebuild the ontology:
-
-```bash
-cd src/ontology #If you are not in the ontology folder
-make components/subclasses.owl      
-```
-
-This will ensure the imported term is attached to the correct location in the EFO hierarchy and prevent it from hanging under `owl:Thing`.
-
-### Summary
-
-- Dangling terms occur when ROBOT excludes axioms linking to a parent class.
-- To fix this, use `subclasses.csv` to manually define the parent.
-- Avoid editing OWL files directly in Protege or the imports folder.
-- Always use the templating system to ensure consistency and reproducibility.
-
+- Use `-B` when a target or one of its inputs has changed but timestamps would
+  otherwise allow reuse.
+- Use `om make --list-targets` to confirm the exact target name.
+- Use `om ogrep <CURIE-or-label> -i <file>` to inspect a term and axioms that
+  refer to it.
+- Use `om convert -vvv` for detailed parser errors and `om reason` for ontology
+  validation.

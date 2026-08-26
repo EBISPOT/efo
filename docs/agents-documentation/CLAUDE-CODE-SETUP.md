@@ -32,7 +32,7 @@ Claude Code subagents behave differently, and the design reflects that:
 
 - **Subagents can't call each other.** All routing and sequencing lives in the orchestrator (`CLAUDE.md` / the command). The Copilot `handoffs:` blocks are replaced by the orchestrator dispatching each subagent in turn.
 - **Subagents are stateless** and return a single report. The orchestrator passes full context up front (handoff template in `CLAUDE.md`). Subagents share the working tree, so their file edits persist for the next step.
-- **Only the orchestrator touches git.** Subagents edit files, run `make`, and run `robot`; the orchestrator creates the branch, commits, and opens the PR. (In the Copilot setup the ontologist did its own commits.)
+- **Only the orchestrator touches git.** Subagents edit files and run `om`; the orchestrator creates the branch, commits, and opens the PR. (In the Copilot setup the ontologist did its own commits.)
 - **Tool scoping** is enforced via each subagent's `tools:` frontmatter — the curator is read-only (no Edit/Write), the importer/ontologist can edit but not commit.
 
 ## MCP servers
@@ -45,8 +45,8 @@ Tool names appear as `mcp__OLS-MCP__*` and `mcp__artl-mcp__*`. Approve the serve
 
 ## Running in the cloud (later)
 
-Today this runs in local Claude Code. `.github/workflows/copilot-setup-steps.yml` documents the environment EFO needs (ROBOT, obo-scripts, `uv`, aurelian) and remains the reference. To run Claude Code as a GitHub-triggered cloud agent, add a workflow using the official Claude Code GitHub Action that:
-1. Reproduces those setup steps (ROBOT + obo-scripts on PATH, `uv` venv with `aurelian jinja2-cli`),
+Today this runs in local Claude Code. `.github/workflows/copilot-setup-steps.yml` documents the environment EFO needs (owlmake, `uv`, and aurelian) and remains the reference. To run Claude Code as a GitHub-triggered cloud agent, add a workflow using the official Claude Code GitHub Action that:
+1. Reproduces those setup steps (`om` on `PATH`, plus aurelian installed as a `uv` tool),
 2. Provides an `ANTHROPIC_API_KEY` secret,
 3. Invokes the equivalent of `/efo-ticket <number>` on issue assignment.
 

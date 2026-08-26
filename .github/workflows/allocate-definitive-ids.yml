@@ -10,12 +10,11 @@ on:
 jobs:
   assign_ids:
     runs-on: ubuntu-latest
-    container: obolibrary/odkfull:v1.6
-    # The ODK image ships ROBOT plugins (including kgcl) under
-    # /tools/robot-plugins. Point ROBOT there so `kgcl:mint` is available
-    # (this is the same location uberon's ODK Makefile installs plugins from).
-    env:
-      ROBOT_PLUGINS_DIRECTORY: /tools/robot-plugins
+    container:
+      image: ghcr.io/ebispot/owlmake:0.2-python
+      # The image defaults to an unprivileged UID, but GitHub's container-job
+      # workspace and file-command mounts require the job user to be root.
+      options: --user root
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -23,13 +22,12 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      # Only do anything if there are temporary IDs to allocate. This is
-      # essential: `robot convert` re-serialises efo-edit.owl's anonymous
-      # rdf:Description blocks in a non-deterministic order, so an
-      # unconditional run would rewrite (and commit) the file on every run,
-      # and that commit would re-trigger this workflow -> infinite loop.
-      # Guarding on temp IDs means a real allocation triggers at most one
-      # trailing no-op run, which then stops.
+      # Only do anything if there are temporary IDs to allocate. ROBOT 1.9.7
+      # cycles the edit file's anonymous rdf:Description blocks between byte
+      # orders on repeated conversions, so an unconditional run could commit and
+      # retrigger forever. owlmake >=0.2.2 canonicalises those blocks to a fixed
+      # byte order, but the guard still avoids rewriting the edit file on pushes
+      # that have nothing to allocate.
       - name: Check for temporary IDs
         id: check
         run: |
@@ -41,27 +39,10 @@ jobs:
             echo "has_temp=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # mondo_import.owl is gitignored (regenerated from the MONDO release),
-      # so it must be built before efo-edit.owl can resolve its imports.
-      # All other import modules are committed and resolved via catalog-v001.xml.
-      - name: Prepare MONDO import
-        if: steps.check.outputs.has_temp == 'true'
-        run: |
-          cd src/ontology
-          mkdir -p mirror
-          curl -fL -o mirror/mondo.owl https://github.com/monarch-initiative/mondo/releases/latest/download/mondo-base.owl
-          make imports/mondo_import.owl
-
       - name: Allocate definitive IDs
         if: steps.check.outputs.has_temp == 'true'
         run: |
-          cd src/ontology
-          echo "Available ROBOT plugins:" && ls -1 "$ROBOT_PLUGINS_DIRECTORY"
-          # Use the ODK system `robot` wrapper, which supports plugins and
-          # picks up kgcl from ROBOT_PLUGINS_DIRECTORY. The previous override
-          # (java -cp ... org.obolibrary.robot.CommandManager) was broken:
-          # CommandManager has no static main, so the JVM never started ROBOT.
-          make allocate-definitive-ids ROBOT="robot --catalog catalog-v001.xml"
+          om allocate-definitive-ids
 
       - name: Commit and push changes
         if: steps.check.outputs.has_temp == 'true'

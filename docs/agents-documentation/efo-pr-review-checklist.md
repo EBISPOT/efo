@@ -18,7 +18,7 @@ This checklist is **EFO-specific**: the edit file is always the OWL/XML file
   `gh pr comment`, `gh issue comment`, reactions). Publishing a review is a
   separate, explicit step the human/driver controls — not part of producing it.
 - Only run read-only shell commands: `git diff`, `git log`, `gh pr diff/view`,
-  `grep`/`rg`, `obo-grep.pl`, `robot query/reason` (if on PATH), `cat`/`sed -n`/
+  `grep`/`rg`, `om ogrep/query/reason` (if on PATH), `cat`/`sed -n`/
   `head`/`tail`, `ls`, `find`, `aurelian` lookups.
 - The output is a **structured report** (format below). If information is
   missing, note it as an assumption or limitation — do not guess and do not ask
@@ -42,12 +42,12 @@ This checklist is **EFO-specific**: the edit file is always the OWL/XML file
 `efo-edit.owl` is RDF/XML — axioms span multiple lines, so grep carefully:
 
 - Read the diff hunks directly; added/removed axioms are visible in the patch.
-- All mentions of an ID: `obo-grep.pl -r 'EFO_:_0007045' src/ontology/efo-edit.owl`
-  (or a narrow `rg`/`grep` fallback if `obo-grep.pl` is not on PATH).
+- All mentions of an ID: `om ogrep EFO:0007045 -i src/ontology/efo-edit.owl`
+  (`--self-only` for just that term's own stanza).
 - Label axioms: `grep '<rdfs:label.*ATAC-seq' src/ontology/efo-edit.owl`.
-- If ROBOT is on PATH, pull a class's full axioms with
-  `robot extract --method MIREOT --input src/ontology/efo-edit.owl --term <IRI>
-  --output -`. Do **not** require ROBOT — fall back to `rg` for the IRI, its
+- Pull a class's full axioms with
+  `om extract --method MIREOT --input src/ontology/efo-edit.owl --term <IRI>
+  --output -`. If owlmake is unavailable, fall back to `rg` for the IRI, its
   `rdfs:label`, and annotations.
 - Publications: `aurelian fulltext PMID:nnn` fetches full text for verification.
 
@@ -125,10 +125,10 @@ OWL construct reference: definition = `obo:IAO_0000115`; xref =
   asks).
 
 ### 7. Build & config regressions
-- If the diff should have been normalized, confirm it looks like `make
-  normalize_src` was run (consistent formatting) and no unsatisfiable classes were
-  introduced (`robot reason -i efo-edit.owl -r ELK`, if runnable). Flag if the
-  diff looks un-normalized.
+- If the diff should have been normalized, confirm it looks like `om make
+  normalize_src` was run (consistent formatting) and no unsatisfiable classes
+  were introduced (`om reason -i src/ontology/efo-edit.owl -r ELK`, if
+  runnable). Flag if the diff looks un-normalized.
 - When the diff touches `.github/` or `.claude/`, check for CI, auth, permissions,
   or workflow regressions.
 
