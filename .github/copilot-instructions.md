@@ -117,24 +117,23 @@ The instructions below are for understanding the import process.
   - Each line must be the full IRI of the term to import.
   - DO NOT edit anything in `src/ontology/imports/` (these are generated).
 
-- Refresh the mirrors (sources are recorded in `owlmake.yaml`):
+- Refresh the mirror and regenerate a single import (mirror sources are
+  recorded in `owlmake.yaml`):
 
 ```bash
-om make mirror/uberon.owl -B
-# To refresh every mirror and import: om make --rebuild mirrors all_imports -B
+om make imports/[ontology]_import.owl --rebuild mirrors,imports
+# example: om make imports/uberon_import.owl --rebuild mirrors,imports
 ```
 
-- Regenerate a single import:
-
-```bash
-om make imports/[ontology]_import.owl
-# example: om make imports/uberon_import.owl
-```
+  The `--rebuild` flags are required: mirrors and imports are refresh groups
+  kept by default, and a kept target is reused even when named explicitly
+  (`-B` does not override a kept group). Only the mirror and import in the
+  requested target's closure are rebuilt.
 
 - Regenerate all imports (if needed):
 
 ```bash
-om make all_imports -B
+om make all_imports --rebuild mirrors,imports
 ```
 
 - What the target does:
@@ -148,7 +147,7 @@ om make components/subclasses.owl
 ```
 
 Notes:
-- Always refresh the relevant mirror (`om make mirror/<ontology>.owl -B`) before regenerating an import.
+- Always regenerate imports with `--rebuild mirrors,imports` so the mirror is refreshed with them — a kept mirror is reused otherwise, and a stale mirror silently produces a stale import.
 - Do not edit generated `.owl` files directly. Make changes in the `iri_dependencies/` text files or `src/templates/subclasses.csv` as appropriate.
 
 **REMINDER: The above workflow is for reference only. Always delegate actual import operations to @EFO-importer.**
@@ -162,7 +161,7 @@ Notes:
 - Stale mirrors: skipping the mirror refresh causes unresolvable IRIs. Mitigation: always run mirrors update and include it in PR description when imports change.
 - Editing generated files: modifying files under `src/ontology/imports/` will be overwritten and is discouraged. Mitigation: only edit `src/ontology/iri_dependencies/*.txt` or `src/templates/subclasses.csv`.
 - Missing parent relationships: imported terms can become dangling. Mitigation: prefer using `subclasses.csv` to assert parentage and run `om make components/subclasses.owl`.
-- Caching/build issues: use `-B` to force rebuild when results look stale.
+- Caching/build issues: use `-B` to force a rebuild when results look stale. `-B` does not override the kept mirrors/imports groups — use `--rebuild mirrors,imports` for those.
 - Incorrect subclass assertions: do not add subclass axioms for relationships that already exist in the source ontology or in EFO imports; check source OWL first.
 
 If you need the full, unabridged procedure, consult `docs/Import_terms_from_another_ontology.md` (this file must remain authoritative).
