@@ -11,7 +11,9 @@ jobs:
   assign_ids:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ebispot/owlmake:0.2-python
+      # Same latest line as qc.yml — see the note there; never mix versions
+      # between the owlmake environments.
+      image: ghcr.io/ebispot/owlmake:latest-python
       # The image defaults to an unprivileged UID, but GitHub's container-job
       # workspace and file-command mounts require the job user to be root.
       options: --user root

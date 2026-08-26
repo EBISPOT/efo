@@ -26,11 +26,12 @@ jobs:
       # robot.jar and no ODK image to install. The runner's preinstalled python3
       # covers the repo's own scripts (they import stdlib only).
       - name: Install owlmake
-        # Pinned to the release satisfying owlmake.yaml's min_owlmake_version,
-        # matching the deliberately-pinned image tag in qc.yml — bump both together.
+        # Same latest line as the CI images (see qc.yml) and the README's editor
+        # install — one owlmake version everywhere, never mixed;
+        # owlmake.yaml's min_owlmake_version is the floor.
         run: |
           mkdir -p "$HOME/.local/bin"
-          curl -fsSL https://github.com/EBISPOT/owlmake/releases/download/v0.2.2/om-linux-amd64 \
+          curl -fsSL https://github.com/EBISPOT/owlmake/releases/latest/download/om-linux-amd64 \
             -o "$HOME/.local/bin/om"
           chmod +x "$HOME/.local/bin/om"
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
