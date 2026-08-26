@@ -23,17 +23,18 @@ Run the commands below from the repository root.
    src/ontology/iri_dependencies/uberon_terms.txt
    ```
 
-2. Refresh the mirror, then force owlmake to rebuild the import from it:
+2. Refresh the mirror and rebuild the import from it:
 
    ```bash
-   om make mirror/uberon.owl -B
-   om make imports/uberon_import.owl -B
+   om make imports/uberon_import.owl --rebuild mirrors,imports
    ```
 
-   Replace `uberon` with the required import ID. The mirror step is required:
-   mirrors sit in the plan's `mirrors` refresh group and are kept by default,
-   so `-B` on the import target alone reuses whatever mirror is already on
-   disk (downloading it only if absent) — it does not re-fetch upstream.
+   Replace `uberon` with the required import ID. The `--rebuild` flags are
+   required: mirrors and imports sit in refresh groups the plan keeps by
+   default, and a kept target is reused even when named explicitly (`-B` does
+   not override a kept group — it only forces targets whose rules are in
+   play). `--rebuild mirrors,imports` puts both groups' rules back in play and
+   rebuilds only the mirror and import in the requested target's closure.
 
 3. Verify that the requested term is present:
 
@@ -49,7 +50,7 @@ Run the commands below from the repository root.
 To refresh every mirror and regenerate every import module:
 
 ```bash
-om make --rebuild mirrors all_imports -B
+om make all_imports --rebuild mirrors,imports
 ```
 
 This is more expensive than rebuilding one import and should be used only when
@@ -75,8 +76,7 @@ because it includes axioms required to preserve the extracted module.
 MONDO follows the same workflow as the other imports:
 
 ```bash
-om make mirror/mondo.owl -B
-om make imports/mondo_import.owl -B
+om make imports/mondo_import.owl --rebuild mirrors,imports
 ```
 
 The MONDO pipeline also detects referenced HGNC terms and adds them to
@@ -123,7 +123,8 @@ editor; generated imports will be overwritten on the next refresh.
 ## Troubleshooting
 
 - Use `-B` when a target or one of its inputs has changed but timestamps would
-  otherwise allow reuse.
+  otherwise allow reuse. `-B` does not override the kept mirrors/imports
+  groups — use `--rebuild mirrors,imports` for those.
 - Use `om make --list-targets` to confirm the exact target name.
 - Use `om ogrep <CURIE-or-label> -i <file>` to inspect a term and axioms that
   refer to it.
