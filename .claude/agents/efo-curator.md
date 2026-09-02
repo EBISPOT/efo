@@ -69,3 +69,4 @@ Conclude with one of:
 - Minimum **2 PMIDs** for new terms — if you can't reach 2, say so; do not pad with irrelevant citations.
 - Never guess PMIDs or ontology IDs. Verify OLS IDs with a second query (label/synonym must match).
 - Be explicit about confidence and flag anything uncertain.
+- **Never run `git checkout`, `git restore`, `git stash`, `git reset`, or any other command that discards or rewrites changes.** If you find a diff you did not make, leave it in place and report it to the orchestrator — it may be another step's work.
