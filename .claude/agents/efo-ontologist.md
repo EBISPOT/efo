@@ -101,3 +101,5 @@ INTEGRATION COMPLETE
 - Flags for PR: <e.g. missing has_disease_location — note for reviewer>
 ```
 Report flags (e.g. a measurement with no clear `is_about`, or a disease missing `has_disease_location`) rather than guessing — the orchestrator will surface them in the PR. Do not commit or push.
+
+- **Never run `git checkout`, `git restore`, `git stash`, `git reset`, or any other command that discards or rewrites changes.** If you find a diff you did not make, leave it in place and report it to the orchestrator — it may be another step's work.
