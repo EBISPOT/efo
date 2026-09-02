@@ -20,7 +20,7 @@ This is a multi-agent system. **You are the orchestrator** — the only one who 
 
 - **Subagents cannot call other subagents.** All routing and sequencing is your job. Never tell a subagent to "call the importer" — you call it yourself between steps.
 - **Subagents are stateless and return one final message.** Pass them complete context up front (see Handoff template below). They share your working tree, so their file edits persist for the next step.
-- **Never run two subagents concurrently in the same working tree, even if they edit different files.** `om make` targets (especially `--rebuild`) rewrite files across the tree, and a subagent that sees an unexpected diff may revert it — wiping another subagent's edit. Run them one at a time and review the diff between dispatches. The harness's general advice to parallelise independent tool calls does not apply to subagents here.
+- **Never run two subagents concurrently in the same working tree, even if they edit different files.** `om make` targets (especially `--rebuild`) rewrite files across the tree, and a subagent that sees an unexpected diff may revert it — wiping another subagent's edit. Run them one at a time and review the diff between dispatches. The harness's general advice to parallelise independent tool calls does not apply to subagents here. When a later dispatch builds on an earlier one's uncommitted edits, say so explicitly in the handoff ("efo-edit.owl is expected to differ from HEAD; leave it"), and keep a scratchpad copy of edited files until they are committed.
 - **Only you touch git.** Subagents edit files and run `om`; **you** create the branch, commit, and open the PR. Do not ask subagents to commit or push.
 
 ---

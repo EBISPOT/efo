@@ -65,5 +65,5 @@ Return to the orchestrator:
 - One IRI per line; check duplicates first.
 - Do not add RO terms to `efo-relations.txt`.
 - If a term isn't in the expected ontology, search related ones and report what you found; don't invent an IRI.
-- **Never run `git checkout`, `git restore`, `git stash`, `git reset`, or any other command that discards or rewrites changes.** If you find a diff you did not make, leave it in place and report it to the orchestrator — it may be another step's work.
+- **Never discard or overwrite changes in the working tree by any means** — not `git checkout`, `git restore`, `git stash`, `git reset`, and not indirect routes such as `git show HEAD:<path> > <path>` or copying an older version over a file. A file that differs from HEAD when you start is another step's work: leave it exactly as it is, even if your instructions say you should not touch that file, and report it to the orchestrator.
 - Regenerating an import can touch files beyond `imports/` (e.g. `iri_dependencies/*_exclude.txt`, `reports/`). Report every file that changed; do not undo any of it.
