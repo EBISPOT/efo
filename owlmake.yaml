@@ -120,6 +120,29 @@ imports:
     base_iris: []
     mirror_type: null
     is_large: false
+- id: po
+  source: http://purl.obolibrary.org/obo/po.owl
+  output: src/ontology/imports/po_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/po_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: query
+    updates:
+    - src/sparql/po-import-unique-labels.ru
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/po_import.owl
+  product:
+    id: po
+    mirror_from: http://purl.obolibrary.org/obo/po.owl
+    make_base: false
+    use_base: false
+    base_iris: []
+    mirror_type: null
+    is_large: false
 - id: hp
   source: http://purl.obolibrary.org/obo/hp.owl
   output: src/ontology/imports/hp_import.owl
@@ -518,6 +541,7 @@ native_targets:
 - mirror-oba
 - mirror-obi
 - mirror-pr
+- mirror-po
 - mirror-uberon
 - src/ontology/mirror/chebi.owl
 - src/ontology/mirror/cl.owl
@@ -532,6 +556,7 @@ native_targets:
 - src/ontology/mirror/oba.owl
 - src/ontology/mirror/obi.owl
 - src/ontology/mirror/pr.owl
+- src/ontology/mirror/po.owl
 - src/ontology/mirror/uberon.owl
 edit_file: src/ontology/efo-edit.owl
 catalog_file: src/ontology/catalog-v001.xml
@@ -550,6 +575,7 @@ refresh_groups:
   - src/ontology/mirror/oba.owl
   - src/ontology/mirror/chebi.owl
   - src/ontology/mirror/pr.owl
+  - src/ontology/mirror/po.owl
   - src/ontology/mirror/go.owl
   - src/ontology/mirror/ecto.owl
   - src/ontology/mirror/gsso.owl
@@ -570,6 +596,7 @@ refresh_groups:
   - src/ontology/imports/oba_import.owl
   - src/ontology/imports/chebi_import.owl
   - src/ontology/imports/pr_import.owl
+  - src/ontology/imports/po_import.owl
   - src/ontology/imports/go_import.owl
   - src/ontology/imports/ecto_import.owl
   - src/ontology/imports/gsso_import.owl
@@ -691,6 +718,14 @@ prerequisites:
     copy_ontology_annotations: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/uberon_bot.owl
+- target: src/ontology/imports/po_terms.txt
+  input: src/ontology/iri_dependencies/po_terms.txt
+  needs:
+  - src/ontology/iri_dependencies/po_terms.txt
+  - src/ontology/iri_dependencies/efo-relations.txt
+  steps:
+  - op: shell
+    command: cat src/ontology/iri_dependencies/po_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/po_terms.txt
 - target: src/ontology/imports/hp_terms.txt
   input: src/ontology/iri_dependencies/hp_terms.txt
   needs:
@@ -927,6 +962,24 @@ prerequisites:
   - op: remove-terms
     term_files:
     - src/ontology/iri_dependencies/hancestro_exclude.txt
+- target: src/ontology/imports/po_import.owl
+  input: src/ontology/mirror/po.owl
+  needs:
+  - src/ontology/mirror/po.owl
+  - src/ontology/imports/po_terms.txt
+  - src/sparql/po-import-unique-labels.ru
+  - src/ontology/efo-edit.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/imports/po_terms.txt
+    copy_ontology_annotations: false
+  - op: query
+    updates:
+    - src/sparql/po-import-unique-labels.ru
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/po_import.owl
 - target: src/ontology/imports/uberon_import.owl
   input: src/ontology/imports/uberon_bot.owl
   needs:
@@ -1139,6 +1192,7 @@ prerequisites:
   - src/ontology/imports/oba_import.owl
   - src/ontology/imports/chebi_import.owl
   - src/ontology/imports/pr_import.owl
+  - src/ontology/imports/po_import.owl
   - src/ontology/imports/go_import.owl
   - src/ontology/imports/ecto_import.owl
   - src/ontology/imports/gsso_import.owl
@@ -1153,6 +1207,7 @@ prerequisites:
   - src/ontology/imports/oba_terms.txt
   - src/ontology/imports/chebi_terms.txt
   - src/ontology/imports/pr_terms.txt
+  - src/ontology/imports/po_terms.txt
   - src/ontology/imports/go_terms.txt
   - src/ontology/imports/ecto_terms.txt
   - src/ontology/imports/gsso_terms.txt
