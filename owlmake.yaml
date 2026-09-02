@@ -3,7 +3,7 @@ id: efo
 version: 3.93.0
 version_file: src/ontology/version.txt
 ontology_iri: http://purl.obolibrary.org/obo/efo.owl
-reasoner: ELK
+reasoner: hermit
 imports:
 - id: mondo
   source: http://purl.obolibrary.org/obo/mondo/mondo-base.owl
@@ -1321,10 +1321,29 @@ prerequisites:
   steps:
   - op: shell
     command: python3 src/scripts/check_mondo_import_obsoletes.py src/ontology/mirror/mondo.owl src/ontology/iri_dependencies/mondo_terms.txt -o src/ontology/reports/mondo_obsolete_import_check.tsv
+- target: report_test
+  input: src/ontology/efo-edit.owl
+  needs:
+  - src/ontology/efo-edit.owl
+  steps:
+  - op: owlmake-cli
+    command: report
+    args:
+    - -i
+    - src/ontology/efo-edit.owl
+    - -p
+    - src/ontology/profile.txt
+    - --base-iri
+    - http://www.ebi.ac.uk/efo/EFO_
+    - --print
+    - '10'
+    - -o
+    - src/ontology/reports/efo-edit-report.tsv
 - target: qc
   input: sparql_test
   needs:
   - sparql_test
+  - report_test
   - all_reports
   - label_synonym_dup_check
   - check_mondo_obsoletes
@@ -2275,6 +2294,7 @@ prerequisites:
     inputs:
     - src/ontology/tmp/efo-master-reasoned.owl
   - op: reason
+    reasoner: hermit
   - op: round-trip
     output: src/ontology/tmp/efo-master-reasoned.owl.owl
   - op: move-file
@@ -2288,6 +2308,7 @@ prerequisites:
     inputs:
     - src/ontology/efo-edit.owl
   - op: reason
+    reasoner: hermit
   - op: round-trip
     output: src/ontology/tmp/efo-branch-reasoned.owl.owl
   - op: move-file
