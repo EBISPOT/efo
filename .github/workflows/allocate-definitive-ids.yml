@@ -56,10 +56,25 @@ jobs:
         run: |
           om make allocate-definitive-ids
 
+      # Pushed inline rather than via actions-js/push: that action's entrypoint
+      # spawns `bash`, which the owlmake image does not ship (every other step
+      # here runs under `sh`). Checkout used persist-credentials: false, so the
+      # token is supplied on the push URL. Only efo-edit.owl is staged — the
+      # regenerated MONDO import and mirror are gitignored, and staging the one
+      # file we changed keeps build artifacts out of the commit.
       - name: Commit and push changes
         if: steps.check.outputs.has_temp == 'true'
-        uses: actions-js/push@v1.5
-        with:
-          github_token: ${{ secrets.EFO_ID_ALLOCATION_TOKEN }}
-          message: "Replace temporary IDs by definitive IDs."
-          branch: ${{ github.ref }}
+        env:
+          GH_TOKEN: ${{ secrets.EFO_ID_ALLOCATION_TOKEN }}
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/ontology/efo-edit.owl
+          if git diff --cached --quiet; then
+            echo "Allocation produced no change to efo-edit.owl; nothing to push."
+            exit 0
+          fi
+          git commit -m "Replace temporary IDs by definitive IDs."
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            "HEAD:${GITHUB_REF}"
