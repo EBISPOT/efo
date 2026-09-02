@@ -1,0 +1,19 @@
+# An entity must not carry an oboInOwl:hasDbXref to itself (EBISPOT/efo#752).
+# Matches both the CURIE form (EFO:0000768 on EFO_0000768, Orphanet:84132 on
+# ORDO/Orphanet_84132, GO:0007610 on obo/GO_0007610) and the full-IRI form.
+#
+# Scope: every owl:Class, plus any entity in the EFO namespace. Imported
+# UBERON/OBA modules still carry legacy self-xrefs on a handful of RO/BFO
+# object properties (e.g. RO:0002353 on RO_0002353); those are upstream's and
+# reappear on every import refresh, so foreign properties are deliberately
+# excluded here. efo-edit.owl itself carries none since #752 was fixed.
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?entity ?xref WHERE {
+  ?entity oio:hasDbXref ?xref .
+  FILTER(isIRI(?entity))
+  FILTER(EXISTS { ?entity a owl:Class } || STRSTARTS(STR(?entity), "http://www.ebi.ac.uk/efo/"))
+  BIND(REPLACE(REPLACE(STR(?entity), "^(http://www.ebi.ac.uk/efo/|http://purl.obolibrary.org/obo/|http://www.orpha.net/ORDO/)", ""), "_", ":") AS ?curie)
+  FILTER(LCASE(STR(?xref)) = LCASE(?curie) || LCASE(STR(?xref)) = LCASE(STR(?entity)))
+}
