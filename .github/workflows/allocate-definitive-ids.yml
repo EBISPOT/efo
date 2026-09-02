@@ -41,6 +41,16 @@ jobs:
             echo "has_temp=false" >> "$GITHUB_OUTPUT"
           fi
 
+      # mondo_import.owl is gitignored (~150 MB, past GitHub's file size limit)
+      # and regenerated from the MONDO release, so it must be built before
+      # efo-edit.owl can resolve its imports — owlmake parses the edit file
+      # through catalog-v001.xml and fails outright if the module is missing.
+      # All other import modules are committed.
+      - name: Prepare MONDO import
+        if: steps.check.outputs.has_temp == 'true'
+        run: |
+          om make imports/mondo_import.owl --rebuild mirrors,imports
+
       - name: Allocate definitive IDs
         if: steps.check.outputs.has_temp == 'true'
         run: |
