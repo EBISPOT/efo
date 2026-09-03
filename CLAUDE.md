@@ -36,7 +36,7 @@ When given a ticket (via `/efo-ticket N` or "handle issue #N"):
 5. **Dispatch subagents in sequence** per the routing decision. Review each report before proceeding; if a report is incomplete, re-dispatch with specific feedback.
 6. **Verify** (see Verification gate below).
 7. **Commit** with a clear message, then **open the PR** with the summary template below.
-8. **Report back** to the user: what was done, the PR link, and any open questions/comments left on the PR.
+8. **Report back** to the user: what was done, the PR link, and any open questions/comments left on the PR — written in the style set out under *Talking to the user* below.
 
 If at any point you are **not confident how to proceed**, stop and ask a clarifying question — comment on the issue with `gh issue comment` and/or ask the user. Do not guess.
 
@@ -175,6 +175,34 @@ EOF
 - Always work on a branch (`issue-N`), never commit directly to `master`.
 - Don't commit the `tools/` directory.
 - Use clear commit messages that say what changed and why.
+
+---
+
+## Talking to the user — status updates, answers, orientation
+
+The PR template above is for GitHub. Everything you say **directly to the user** — a status update, an answer to a question, a "where are we" after a long stretch, an explanation of a decision — follows the rules below instead. The reader is a maintainer who knows the ontology but has not watched you work, does not carry issue numbers in their head, and may be reading on a phone.
+
+**Name things by what they are, never by number.** An issue or PR number is a lookup key, not a name. Write "the switch to the fast reasoner", not "#2793"; "the anatomy-assertions PR", not "PR 2806". Numbers, IDs, branch names and file paths go in a small reference table at the very end of the message and nowhere else — and only when the reader may actually want to look something up.
+
+**Explain in terms of the ontology, not the tooling.** Say what a change means for EFO's content and its consumers, with one concrete example: "EFO used to say things like 'kidney glomerulus is part of the kidney' on its own copies of anatomy terms. Those statements are gone, because the anatomy ontologies already say most of them." Not "removed 112 part_of axioms from the anatomogram components". Mention `om` targets, flags, file names or axiom syntax only when the reader has to go there themselves.
+
+**Use biological examples.** When you illustrate what a change or a rule does, pick a real term and a real relation from the ontology — a disease and where it occurs, a cell type and its tissue, an assay and what it measures — never placeholders like "X is a Y" or "class A under class B". A curator can check "asthma has_disease_location lung" against what they know in a second; they cannot check an abstract one at all. This applies to explanations of reasoning, imports and QC rules just as much as to term edits.
+
+**Group by state, not by time.** Order the message: finished, still open, what you undid, smaller follow-ups waiting, the single next step. The reader wants to know where things stand, not the order you did them in.
+
+**Each item is a bold lead-in plus one or two plain sentences.** The bold words name the thing in the reader's language; the sentences say what it is, why it matters, and who is affected. No paragraphs inside bullets, no nested lists, no headers in a message under about five hundred words, no code in prose.
+
+**Impact in words; counts only when they change what the reader does.** "Expression Atlas loses about forty relations that upstream does not state, and they have the list" tells the reader the effect and that it is handled. Exact counts, axiom lists and timings belong in the PR or the issue, not in the message.
+
+**Own what you undid.** If you opened something and then closed it, or changed course, say so in one sentence, say why, and say what was kept. Do not bury it in the middle of a list or dress it up.
+
+**If the user says they are confused, start over from what things are.** Do not repeat the same message with more detail or more numbers. Re-describe each item by its content and purpose, as if introducing it for the first time.
+
+The difference in one line:
+
+> ✗ #2807 closed unmerged; the PATO/taxslim imports fold into #2801 per #2803.
+>
+> ✓ I added PATO and the taxonomy as separate imports on the current layout, then we agreed that work belongs inside the new-layout change, so I closed the separate pull request. Nothing was lost.
 
 ---
 
