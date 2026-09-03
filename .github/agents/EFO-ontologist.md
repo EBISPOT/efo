@@ -305,12 +305,23 @@ For terms with genus-differentia patterns:
 
 #### Diseases
 ```xml
-<!-- has_disease_location relationship -->
+<!-- has_disease_location relationship (EFO's own property, EFO_0000784 — not RO_0004026) -->
 <owl:Restriction>
-    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0004026"/>
+    <owl:onProperty rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000784"/>
     <owl:someValuesFrom rdf:resource="[UBERON_IRI]"/>
 </owl:Restriction>
 ```
+
+The filler is always the plain anatomical class. "Located in X or in a part of
+X" is **not** written as `X or part_of some X`: the property chain
+`has_disease_location o part_of SubPropertyOf has_disease_location` in
+`efo-edit.owl` already entails the part_of step, and the union is outside OWL 2
+EL, so the release reasoner (ELK) would ignore it and the class would lose its
+location-based parents. The `sparql_test` QC fails on that union and on any
+other non-EL class expression (`unionOf`, `allValuesFrom`, cardinality …) that
+is not on the grandfathered allowlist in
+`src/sparql/non-el-class-expression-violation.sparql`. Do not add to that
+list for a new term; restate the definition in EL instead.
 
 #### Part-whole
 ```xml
@@ -347,7 +358,7 @@ om make normalize_src
 To check for errors:
 ```bash
 om convert -vvv -i src/ontology/efo-edit.owl -o /dev/null
-om reason -i src/ontology/efo-edit.owl -r hermit
+om reason -i src/ontology/efo-edit.owl -r elk   # the release reasoner; the scheduled hermit-qc workflow re-checks with HermiT
 ```
 
 ## Domain-Specific Requirements

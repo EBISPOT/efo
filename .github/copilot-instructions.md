@@ -300,6 +300,7 @@ om make components/subclasses.owl
 - **Disease terms** should have a `has_disease_location` relationship to an appropriate anatomical entity.  
   - This relationship may be inherited from a parent or ancestor term; explicit addition is not required if inherited.  
   - If the issue is not providing this relationship, **make a comment in the PR**.  
+  - Use EFO's own property `EFO_0000784` with the plain anatomical class as filler: write "located in X or in a part of X" as `has_disease_location some X`, never as `X or part_of some X`. The property chain `has_disease_location o part_of ⊑ has_disease_location` in `efo-edit.owl` entails the part_of step, and unions are outside OWL 2 EL, so the release reasoner (ELK) would ignore them; `sparql_test` fails on that union and on any other non-EL class expression not grandfathered in `src/sparql/non-el-class-expression-violation.sparql`.
 - **Measurement terms** should have an `is_about` relationship to the entity or process being measured  
   (e.g., `sleep measurement` → `is_about` some `sleep`).  
   - If the issue is not providing this relationship, **make a comment in the PR**. 
