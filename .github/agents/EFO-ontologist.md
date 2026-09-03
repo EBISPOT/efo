@@ -347,7 +347,7 @@ om make normalize_src
 To check for errors:
 ```bash
 om convert -vvv -i src/ontology/efo-edit.owl -o /dev/null
-om reason -i src/ontology/efo-edit.owl -r ELK
+om reason -i src/ontology/efo-edit.owl -r hermit
 ```
 
 ## Domain-Specific Requirements
