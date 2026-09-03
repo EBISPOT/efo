@@ -63,7 +63,7 @@ imports:
     make_base: false
     use_base: false
     base_iris: []
-    mirror_type: null
+    mirror_type: custom
     is_large: false
 - id: hancestro
   source: https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl
@@ -86,7 +86,7 @@ imports:
     make_base: false
     use_base: false
     base_iris: []
-    mirror_type: null
+    mirror_type: custom
     is_large: false
 - id: uberon
   source: http://purl.obolibrary.org/obo/uberon.owl
@@ -109,15 +109,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/uberon_import.owl
   product:
     id: uberon
     mirror_from: http://purl.obolibrary.org/obo/uberon.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/UBERON_
     mirror_type: null
     is_large: false
 - id: po
@@ -141,7 +142,7 @@ imports:
     make_base: false
     use_base: false
     base_iris: []
-    mirror_type: null
+    mirror_type: custom
     is_large: false
 - id: hp
   source: http://purl.obolibrary.org/obo/hp.owl
@@ -164,15 +165,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/hp_import.owl
   product:
     id: hp
     mirror_from: http://purl.obolibrary.org/obo/hp.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/HP_
     mirror_type: null
     is_large: false
 - id: cl
@@ -196,15 +198,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/cl_import.owl
   product:
     id: cl
     mirror_from: http://purl.obolibrary.org/obo/cl.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/CL_
     mirror_type: null
     is_large: false
 - id: fbbt
@@ -228,15 +231,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/fbbt_import.owl
   product:
     id: fbbt
     mirror_from: http://purl.obolibrary.org/obo/fbbt.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/FBbt_
     mirror_type: null
     is_large: false
 - id: obi
@@ -260,15 +264,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/obi_import.owl
   product:
     id: obi
     mirror_from: http://purl.obolibrary.org/obo/obi.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/OBI_
     mirror_type: null
     is_large: false
 - id: oba
@@ -294,15 +299,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/oba_import.owl
   product:
     id: oba
     mirror_from: http://purl.obolibrary.org/obo/oba.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/OBA_
     mirror_type: null
     is_large: false
 - id: chebi
@@ -326,20 +332,21 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/chebi_import.owl
   product:
     id: chebi
     mirror_from: http://purl.obolibrary.org/obo/chebi.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/CHEBI_
     mirror_type: null
     is_large: false
 - id: pr
   source: http://purl.obolibrary.org/obo/pr.owl
-  output: src/ontology/imports/pr_import.owl
+  output: src/ontology/imports/pr_import.owl.gz
   steps:
   - op: extract
     method: BOT
@@ -361,7 +368,7 @@ imports:
     make_base: false
     use_base: false
     base_iris: []
-    mirror_type: null
+    mirror_type: custom
     is_large: false
 - id: go
   source: http://purl.obolibrary.org/obo/go.owl
@@ -384,15 +391,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/go_import.owl
   product:
     id: go
     mirror_from: http://purl.obolibrary.org/obo/go.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/GO_
     mirror_type: null
     is_large: false
 - id: ecto
@@ -416,15 +424,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/ecto_import.owl
   product:
     id: ecto
     mirror_from: http://purl.obolibrary.org/obo/ecto.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/ECTO_
     mirror_type: null
     is_large: false
 - id: gsso
@@ -448,15 +457,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/gsso_import.owl
   product:
     id: gsso
     mirror_from: http://purl.obolibrary.org/obo/gsso.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/GSSO_
     mirror_type: null
     is_large: false
 - id: fbbi
@@ -480,15 +490,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/fbbi_import.owl
   product:
     id: fbbi
     mirror_from: http://purl.obolibrary.org/obo/fbbi.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/FBbi_
     mirror_type: null
     is_large: false
 components:
@@ -558,6 +569,13 @@ native_targets:
 - src/ontology/mirror/pr.owl
 - src/ontology/mirror/uberon.owl
 - src/ontology/mirror/po.owl
+use_base_merging: true
+merged_import: src/ontology/imports/merged_import.owl.gz
+merged_import_iri: http://www.ebi.ac.uk/efo/imports/merged_import.owl
+exclude_iri_patterns:
+- http://purl.obolibrary.org/obo/OBA_VT0002200
+- http://purl.obolibrary.org/obo/CL_0002480
+- http://purl.obolibrary.org/obo/OBA_VT0002262
 edit_file: src/ontology/efo-edit.owl
 catalog_file: src/ontology/catalog-v001.xml
 emulate_robot_version: 1.9.7
@@ -586,21 +604,7 @@ refresh_groups:
 - name: imports
   flag: IMP
   targets:
-  - src/ontology/imports/mondo_import.owl
-  - src/ontology/imports/hancestro_import.owl
-  - src/ontology/imports/uberon_import.owl
-  - src/ontology/imports/po_import.owl
-  - src/ontology/imports/hp_import.owl
-  - src/ontology/imports/cl_import.owl
-  - src/ontology/imports/fbbt_import.owl
-  - src/ontology/imports/obi_import.owl
-  - src/ontology/imports/oba_import.owl
-  - src/ontology/imports/chebi_import.owl
-  - src/ontology/imports/pr_import.owl
-  - src/ontology/imports/go_import.owl
-  - src/ontology/imports/ecto_import.owl
-  - src/ontology/imports/gsso_import.owl
-  - src/ontology/imports/fbbi_import.owl
+  - src/ontology/imports/merged_import.owl.gz
   - check_mondo_obsoletes
   - src/ontology/components/d2p_hpoa.ttl
   - src/ontology/components/d2p_mondo-owl.ttl
@@ -612,23 +616,9 @@ variables:
   SRC: src/ontology/efo-edit.owl
 prerequisites:
 - target: all_imports
-  input: src/ontology/imports/mondo_import.owl
+  input: src/ontology/imports/merged_import.owl.gz
   needs:
-  - src/ontology/imports/mondo_import.owl
-  - src/ontology/imports/hancestro_import.owl
-  - src/ontology/imports/uberon_import.owl
-  - src/ontology/imports/po_import.owl
-  - src/ontology/imports/hp_import.owl
-  - src/ontology/imports/cl_import.owl
-  - src/ontology/imports/fbbt_import.owl
-  - src/ontology/imports/obi_import.owl
-  - src/ontology/imports/oba_import.owl
-  - src/ontology/imports/chebi_import.owl
-  - src/ontology/imports/pr_import.owl
-  - src/ontology/imports/go_import.owl
-  - src/ontology/imports/ecto_import.owl
-  - src/ontology/imports/gsso_import.owl
-  - src/ontology/imports/fbbi_import.owl
+  - src/ontology/imports/merged_import.owl.gz
   steps: []
 - target: src/ontology/components/gwas_template.owl
   input: src/ontology/efo-edit.owl
@@ -912,7 +902,7 @@ prerequisites:
   input: src/ontology/efo-edit.owl
   needs:
   - src/ontology/efo-edit.owl
-  - src/ontology/imports/mondo_import.owl
+  - src/ontology/imports/merged_import.owl.gz
   steps:
   - op: mint
     temp_id_prefix: http://www.ebi.ac.uk/efo/EFO_099
@@ -1896,7 +1886,7 @@ artefacts:
   input: src/ontology/efo-edit.owl
   needs:
   - src/ontology/efo-edit.owl
-  - src/ontology/imports/mondo_import.owl
+  - src/ontology/imports/merged_import.owl.gz
   steps:
   - op: merge
     inputs:
