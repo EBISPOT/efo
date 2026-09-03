@@ -127,7 +127,7 @@ OWL construct reference: definition = `obo:IAO_0000115`; xref =
 ### 7. Build & config regressions
 - If the diff should have been normalized, confirm it looks like `om make
   normalize_src` was run (consistent formatting) and no unsatisfiable classes
-  were introduced (`om reason -i src/ontology/efo-edit.owl -r ELK`, if
+  were introduced (`om reason -i src/ontology/efo-edit.owl -r hermit`, if
   runnable). Flag if the diff looks un-normalized.
 - When the diff touches `.github/` or `.claude/`, check for CI, auth, permissions,
   or workflow regressions.

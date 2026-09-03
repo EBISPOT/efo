@@ -22,7 +22,7 @@ Work through these steps, tracking them with a todo list:
    - `efo-importer` for ANY external term (never import yourself)
    - `efo-ontologist` to edit `efo-edit.owl`
    Review each report; re-dispatch with specific feedback if incomplete. Enforce: ≥2 PMIDs per new term, typed synonyms, non-obsolete verified parents.
-6. **Verify** from the repository root: `om make normalize_src`, and `om reason -i src/ontology/efo-edit.owl -r ELK`. Fix or report failures honestly.
+6. **Verify** from the repository root: `om make normalize_src`, and `om reason -i src/ontology/efo-edit.owl -r hermit`. Fix or report failures honestly.
 7. **Commit & open the PR** yourself (subagents never touch git):
    - `git add -A && git commit -m "<action>: <desc> (refs #$1)"`
    - `git push -u origin issue-$1`
