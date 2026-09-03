@@ -574,17 +574,6 @@ refresh_groups:
   - src/ontology/imports/ecto_import.owl
   - src/ontology/imports/gsso_import.owl
   - src/ontology/imports/fbbi_import.owl
-  - src/ontology/imports/uberon_bot.owl
-  - src/ontology/imports/hp_bot.owl
-  - src/ontology/imports/cl_bot.owl
-  - src/ontology/imports/fbbt_bot.owl
-  - src/ontology/imports/obi_bot.owl
-  - src/ontology/imports/oba_bot.owl
-  - src/ontology/imports/chebi_bot.owl
-  - src/ontology/imports/go_bot.owl
-  - src/ontology/imports/ecto_bot.owl
-  - src/ontology/imports/gsso_bot.owl
-  - src/ontology/imports/fbbi_bot.owl
   - check_mondo_obsoletes
   - src/ontology/components/d2p_hpoa.ttl
   - src/ontology/components/d2p_mondo-owl.ttl
@@ -603,65 +592,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/mondo_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/mondo_terms.txt
-- target: src/ontology/imports/mondo_import.owl
-  input: src/ontology/mirror/mondo.owl
-  needs:
-  - src/ontology/mirror/mondo.owl
-  - src/ontology/imports/mondo_terms.txt
-  - src/ontology/iri_dependencies/mondo_exclude.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/mondo_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/mondo_import.owl
-  - op: round-trip
-    output: src/ontology/imports/mondo_import.owl.tmp.owl
-  - op: boundary
-    input: src/ontology/imports/mondo_import.owl.tmp.owl
-  - op: query
-    selects:
-    - query: src/sparql/hgnc_terms.sparql
-      output: src/ontology/imports/mondo_import.owl.hgnc.tsv
-    may_fail: true
-  - op: branch
-    if:
-      condition: file_non_empty
-      filename: src/ontology/imports/mondo_import.owl.hgnc.tsv
-    then:
-    - op: shell
-      command: tail -n +2 src/ontology/imports/mondo_import.owl.hgnc.tsv | sed 's/[<>]//g' | grep -v '^$' > src/ontology/imports/mondo_import.owl.hgnc.txt
-    - op: branch
-      if:
-        condition: file_non_empty
-        filename: src/ontology/imports/mondo_import.owl.hgnc.txt
-      then:
-      - op: shell
-        command: echo "Auto-excluding $(wc -l < imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
-      - op: append
-        src:
-        - src/ontology/imports/mondo_import.owl.hgnc.txt
-        dst: src/ontology/iri_dependencies/mondo_exclude.txt
-      - op: sort
-        input: src/ontology/iri_dependencies/mondo_exclude.txt
-        output: src/ontology/iri_dependencies/mondo_exclude.txt
-        unique: true
-  - op: boundary
-    input: src/ontology/imports/mondo_import.owl.tmp.owl
-  - op: remove-terms
-    terms:
-    - rdfs:comment
-    term_files:
-    - src/ontology/iri_dependencies/mondo_exclude.txt
-  - op: remove-file
-    paths:
-    - src/ontology/imports/mondo_import.owl.tmp.owl
-    - src/ontology/imports/mondo_import.owl.hgnc.tsv
-    - src/ontology/imports/mondo_import.owl.hgnc.txt
-    force: true
 - target: src/ontology/imports/hancestro_terms.txt
   input: src/ontology/iri_dependencies/hancestro_terms.txt
   needs:
@@ -678,19 +608,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/uberon_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/uberon_terms.txt
-- target: src/ontology/imports/uberon_bot.owl
-  input: src/ontology/mirror/uberon.owl
-  needs:
-  - src/ontology/mirror/uberon.owl
-  - src/ontology/imports/uberon_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/uberon_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/uberon_bot.owl
 - target: src/ontology/imports/hp_terms.txt
   input: src/ontology/iri_dependencies/hp_terms.txt
   needs:
@@ -699,19 +616,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/hp_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/hp_terms.txt
-- target: src/ontology/imports/hp_bot.owl
-  input: src/ontology/mirror/hp.owl
-  needs:
-  - src/ontology/mirror/hp.owl
-  - src/ontology/imports/hp_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/hp_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/hp_bot.owl
 - target: src/ontology/imports/cl_terms.txt
   input: src/ontology/iri_dependencies/cl_terms.txt
   needs:
@@ -720,19 +624,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/cl_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/cl_terms.txt
-- target: src/ontology/imports/cl_bot.owl
-  input: src/ontology/mirror/cl.owl
-  needs:
-  - src/ontology/mirror/cl.owl
-  - src/ontology/imports/cl_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/cl_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/cl_bot.owl
 - target: src/ontology/imports/fbbt_terms.txt
   input: src/ontology/iri_dependencies/fbbt_terms.txt
   needs:
@@ -741,19 +632,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/fbbt_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/fbbt_terms.txt
-- target: src/ontology/imports/fbbt_bot.owl
-  input: src/ontology/mirror/fbbt.owl
-  needs:
-  - src/ontology/mirror/fbbt.owl
-  - src/ontology/imports/fbbt_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/fbbt_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/fbbt_bot.owl
 - target: src/ontology/imports/obi_terms.txt
   input: src/ontology/iri_dependencies/obi_terms.txt
   needs:
@@ -762,19 +640,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/obi_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/obi_terms.txt
-- target: src/ontology/imports/obi_bot.owl
-  input: src/ontology/mirror/obi.owl
-  needs:
-  - src/ontology/mirror/obi.owl
-  - src/ontology/imports/obi_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/obi_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/obi_bot.owl
 - target: src/ontology/imports/oba_terms.txt
   input: src/ontology/iri_dependencies/oba_terms.txt
   needs:
@@ -783,19 +648,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/oba_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/oba_terms.txt
-- target: src/ontology/imports/oba_bot.owl
-  input: src/ontology/mirror/oba.owl
-  needs:
-  - src/ontology/mirror/oba.owl
-  - src/ontology/imports/oba_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/oba_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/oba_bot.owl
 - target: src/ontology/imports/chebi_terms.txt
   input: src/ontology/iri_dependencies/chebi_terms.txt
   needs:
@@ -804,19 +656,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/chebi_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/chebi_terms.txt
-- target: src/ontology/imports/chebi_bot.owl
-  input: src/ontology/mirror/chebi.owl
-  needs:
-  - src/ontology/mirror/chebi.owl
-  - src/ontology/imports/chebi_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/chebi_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/chebi_bot.owl
 - target: src/ontology/imports/pr_terms.txt
   input: src/ontology/iri_dependencies/pr_terms.txt
   needs:
@@ -833,19 +672,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/go_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/go_terms.txt
-- target: src/ontology/imports/go_bot.owl
-  input: src/ontology/mirror/go.owl
-  needs:
-  - src/ontology/mirror/go.owl
-  - src/ontology/imports/go_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/go_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/go_bot.owl
 - target: src/ontology/imports/ecto_terms.txt
   input: src/ontology/iri_dependencies/ecto_terms.txt
   needs:
@@ -854,19 +680,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/ecto_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/ecto_terms.txt
-- target: src/ontology/imports/ecto_bot.owl
-  input: src/ontology/mirror/ecto.owl
-  needs:
-  - src/ontology/mirror/ecto.owl
-  - src/ontology/imports/ecto_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/ecto_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/ecto_bot.owl
 - target: src/ontology/imports/gsso_terms.txt
   input: src/ontology/iri_dependencies/gsso_terms.txt
   needs:
@@ -875,19 +688,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/gsso_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/gsso_terms.txt
-- target: src/ontology/imports/gsso_bot.owl
-  input: src/ontology/mirror/gsso.owl
-  needs:
-  - src/ontology/mirror/gsso.owl
-  - src/ontology/imports/gsso_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/gsso_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/gsso_bot.owl
 - target: src/ontology/imports/fbbi_terms.txt
   input: src/ontology/iri_dependencies/fbbi_terms.txt
   needs:
@@ -896,236 +696,6 @@ prerequisites:
   steps:
   - op: shell
     command: cat src/ontology/iri_dependencies/fbbi_terms.txt src/ontology/iri_dependencies/efo-relations.txt | sort | uniq > src/ontology/imports/fbbi_terms.txt
-- target: src/ontology/imports/fbbi_bot.owl
-  input: src/ontology/mirror/fbbi.owl
-  needs:
-  - src/ontology/mirror/fbbi.owl
-  - src/ontology/imports/fbbi_terms.txt
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/fbbi_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/fbbi_bot.owl
-- target: src/ontology/imports/hancestro_import.owl
-  input: src/ontology/mirror/hancestro.owl
-  needs:
-  - src/ontology/mirror/hancestro.owl
-  - src/ontology/imports/hancestro_terms.txt
-  - src/ontology/iri_dependencies/hancestro_exclude.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/hancestro_terms.txt
-    copy_ontology_annotations: false
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/hancestro_import.owl
-  - op: remove-terms
-    term_files:
-    - src/ontology/iri_dependencies/hancestro_exclude.txt
-- target: src/ontology/imports/uberon_import.owl
-  input: src/ontology/imports/uberon_bot.owl
-  needs:
-  - src/ontology/imports/uberon_bot.owl
-  - src/ontology/imports/uberon_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/uberon_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/uberon_import.owl
-- target: src/ontology/imports/hp_import.owl
-  input: src/ontology/imports/hp_bot.owl
-  needs:
-  - src/ontology/imports/hp_bot.owl
-  - src/ontology/imports/hp_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/hp_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/hp_import.owl
-- target: src/ontology/imports/cl_import.owl
-  input: src/ontology/imports/cl_bot.owl
-  needs:
-  - src/ontology/imports/cl_bot.owl
-  - src/ontology/imports/cl_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/cl_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/cl_import.owl
-- target: src/ontology/imports/fbbt_import.owl
-  input: src/ontology/imports/fbbt_bot.owl
-  needs:
-  - src/ontology/imports/fbbt_bot.owl
-  - src/ontology/imports/fbbt_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/fbbt_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/fbbt_import.owl
-- target: src/ontology/imports/obi_import.owl
-  input: src/ontology/imports/obi_bot.owl
-  needs:
-  - src/ontology/imports/obi_bot.owl
-  - src/ontology/imports/obi_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/obi_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/obi_import.owl
-- target: src/ontology/imports/oba_import.owl
-  input: src/ontology/imports/oba_bot.owl
-  needs:
-  - src/ontology/imports/oba_bot.owl
-  - src/ontology/imports/oba_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    terms:
-    - RO:0000052
-    term_files:
-    - src/ontology/imports/oba_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/oba_import.owl
-- target: src/ontology/imports/chebi_import.owl
-  input: src/ontology/imports/chebi_bot.owl
-  needs:
-  - src/ontology/imports/chebi_bot.owl
-  - src/ontology/imports/chebi_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/chebi_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/chebi_import.owl
-- target: src/ontology/imports/pr_import.owl
-  input: src/ontology/mirror/pr.owl
-  needs:
-  - src/ontology/mirror/pr.owl
-  - src/ontology/imports/pr_terms.txt
-  - src/ontology/iri_dependencies/pr_exclude.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: extract
-    method: BOT
-    term_files:
-    - src/ontology/imports/pr_terms.txt
-    copy_ontology_annotations: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/pr_import.owl
-  - op: rename-terms
-    mappings: src/ontology/pr_efo_map.tsv
-    allow_missing: false
-  - op: remove-terms
-    term_files:
-    - src/ontology/iri_dependencies/pr_exclude.txt
-- target: src/ontology/imports/go_import.owl
-  input: src/ontology/imports/go_bot.owl
-  needs:
-  - src/ontology/imports/go_bot.owl
-  - src/ontology/imports/go_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/go_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/go_import.owl
-- target: src/ontology/imports/ecto_import.owl
-  input: src/ontology/imports/ecto_bot.owl
-  needs:
-  - src/ontology/imports/ecto_bot.owl
-  - src/ontology/imports/ecto_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/ecto_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/ecto_import.owl
-- target: src/ontology/imports/gsso_import.owl
-  input: src/ontology/imports/gsso_bot.owl
-  needs:
-  - src/ontology/imports/gsso_bot.owl
-  - src/ontology/imports/gsso_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/gsso_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/gsso_import.owl
-- target: src/ontology/imports/fbbi_import.owl
-  input: src/ontology/imports/fbbi_bot.owl
-  needs:
-  - src/ontology/imports/fbbi_bot.owl
-  - src/ontology/imports/fbbi_terms.txt
-  - src/ontology/efo-edit.owl
-  steps:
-  - op: filter
-    term_files:
-    - src/ontology/imports/fbbi_terms.txt
-    selects:
-    - annotations ontology anonymous self
-    signature: true
-    trim: true
-  - op: annotate
-    ontology_iri: http://www.ebi.ac.uk/efo/imports/fbbi_import.owl
 - target: all_imports
   input: src/ontology/imports/mondo_import.owl
   needs:
@@ -2157,10 +1727,18 @@ prerequisites:
     format: ofn
     output: src/ontology/efo-edit.owl
 - target: src/ontology/qc/uberon_consider_terms.txt
-  input: src/ontology/imports/uberon_bot.owl
+  input: src/ontology/mirror/uberon.owl
   needs:
-  - src/ontology/imports/uberon_bot.owl
+  - src/ontology/mirror/uberon.owl
+  - src/ontology/iri_dependencies/uberon_terms.txt
+  - src/ontology/iri_dependencies/efo-relations.txt
   steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/uberon_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
   - op: query
     selects:
     - query: src/sparql/uberon_terms.sparql
