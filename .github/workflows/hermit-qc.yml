@@ -1,0 +1,52 @@
+# Scheduled full-DL check of the release. The release itself is reasoned with
+# ELK (see `reasoner:` in owlmake.yaml); this job rebuilds it with HermiT and
+# reports two things ELK cannot: unsatisfiable classes caused by axioms outside
+# OWL 2 EL, and subsumptions that only HermiT entails (from unions and other
+# non-EL constructs). The edge lists are the review queue for asserting or
+# remodelling those entailments (EBISPOT/efo#2792).
+name: HermiT QC
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'   # Mondays 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  hermit_qc:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ebispot/owlmake:latest-python
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the release with ELK (the committed configuration)
+        run: |
+          om make build/efo.owl
+          mv src/ontology/build/efo.owl /tmp/efo_elk.owl
+
+      - name: Build the release with HermiT
+        run: |
+          cp owlmake.yaml /tmp/owlmake.yaml.orig
+          sed -i -E 's/^(\s*)reasoner: elk$/\1reasoner: hermit/' owlmake.yaml
+          grep -n 'reasoner:' owlmake.yaml
+          set +e
+          om make build/efo.owl 2>&1 | tee /tmp/hermit_build.log
+          status=${PIPESTATUS[0]}
+          set -e
+          cp /tmp/owlmake.yaml.orig owlmake.yaml
+          if [ "$status" -ne 0 ] || grep -qi 'unsatisfiable' /tmp/hermit_build.log; then
+            echo '::error::HermiT found unsatisfiable classes or the build failed — see the log above'
+            exit 1
+          fi
+          mv src/ontology/build/efo.owl /tmp/efo_hermit.owl
+
+      - name: Compare the HermiT and ELK hierarchies
+        run: |
+          mkdir -p hermit-qc
+          python3 src/scripts/reasoner_hierarchy_diff.py /tmp/efo_hermit.owl /tmp/efo_elk.owl --out-dir hermit-qc | tee hermit-qc/summary.txt
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hermit-qc
+          path: hermit-qc/

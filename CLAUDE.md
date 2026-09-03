@@ -123,7 +123,7 @@ Run from the repo root (`om` finds `src/ontology` itself):
 ```bash
 om make normalize_src                                 # always, after any edit
 om convert -vvv -i src/ontology/efo-edit.owl -o /dev/null   # syntax check if anything looks off
-om reason -i src/ontology/efo-edit.owl -r hermit            # validate, catches unsatisfiable classes (HermiT — what the release build uses; ELK misses non-EL axioms)
+om reason -i src/ontology/efo-edit.owl -r elk               # validate, catches unsatisfiable classes (ELK — what the release build uses; the scheduled `hermit-qc` workflow re-checks with HermiT for the non-EL axioms ELK ignores)
 ```
 
 Confirm the checklist before claiming done:

@@ -86,7 +86,7 @@ Locate by ID/label, change label/def/synonyms/relationships following patterns, 
 ```bash
 om make normalize_src
 om convert -vvv -i src/ontology/efo-edit.owl -o /dev/null   # if syntax looks off
-om reason -i src/ontology/efo-edit.owl -r hermit            # catch unsatisfiable classes (HermiT — what the release build uses; ELK misses non-EL axioms)
+om reason -i src/ontology/efo-edit.owl -r elk               # catch unsatisfiable classes (ELK — what the release build uses; the scheduled `hermit-qc` workflow re-checks with HermiT for the non-EL axioms ELK ignores)
 ```
 Checklist: label + def + ≥2 xrefs + non-obsolete parent on every new term · synonyms with a known source carry a `hasDbXref` provenance axiom · logical def mirrors text · no deprecated parents · cross-ontology links in `subclasses.csv` only when needed · normalization clean.
 
