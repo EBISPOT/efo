@@ -8,7 +8,7 @@ After editing `src/ontology/efo-edit.owl`, normalize and reason over it:
 
 ```bash
 om make normalize_src
-om reason -i src/ontology/efo-edit.owl -r ELK
+om reason -i src/ontology/efo-edit.owl -r hermit
 ```
 
 Run the ontology quality checks with:

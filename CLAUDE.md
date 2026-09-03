@@ -99,6 +99,7 @@ These are the rules you and the subagents must never violate. Deep technical det
 
 ### Imports (always delegated to `efo-importer`)
 - Edit only `src/ontology/iri_dependencies/*.txt` (full IRI per line). **Never** edit generated files in `src/ontology/imports/`.
+- Each import's pipeline is defined once, in the `imports:` entry for that ontology in `owlmake.yaml` (extract, filter, annotate); there are no separate per-module targets, so that entry is the only place to change how a module is built.
 - Regenerate an import with `om make imports/<ontology>_import.owl --rebuild mirrors,imports` — the `--rebuild` flags refresh the plan-named mirror along with the import (both groups are kept by default; `-B` alone does not override a kept group). To refresh the full set, run `om make all_imports --rebuild mirrors,imports`.
 - **Do not add RO terms** to `efo-relations.txt` unless the user explicitly asks.
 - Cross-ontology `SubClassOf` (e.g. EFO ⊑ OBA) goes in `src/templates/subclasses.csv` **only if** the axiom doesn't already exist upstream, then `om make components/subclasses.owl`. Always import the term first.

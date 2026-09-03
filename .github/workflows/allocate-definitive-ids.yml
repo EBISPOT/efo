@@ -18,11 +18,14 @@ jobs:
       # workspace and file-command mounts require the job user to be root.
       options: --user root
     steps:
+      # Shallow: nothing here reads history. The guard greps the working tree,
+      # mint rewrites it, and the push adds one commit on top of HEAD. A full
+      # fetch of this repository takes ~5 minutes of a ~7 minute job.
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-          fetch-depth: 0
+          fetch-depth: 1
 
       # Only do anything if there are temporary IDs to allocate. ROBOT 1.9.7
       # cycles the edit file's anonymous rdf:Description blocks between byte
@@ -45,6 +48,19 @@ jobs:
         if: steps.check.outputs.has_temp == 'true'
         run: |
           om make allocate-definitive-ids
+
+      # The runner creates the workspace outside the container and bind-mounts it
+      # in, so it belongs to the host runner's uid while these steps run as root.
+      # git refuses a repository owned by another user, and the push action's
+      # first command (`git config http.sslVerify false`) dies with `fatal: not
+      # in a git directory` — after the IDs have been minted, so the allocation
+      # is lost. `actions/checkout` marks the directory safe only in a temporary
+      # global config that does not outlive its own step, so mark it again here.
+      # System-wide rather than global: it then holds whatever HOME the push
+      # action runs with.
+      - name: Trust the checkout directory
+        if: steps.check.outputs.has_temp == 'true'
+        run: git config --system --add safe.directory "$GITHUB_WORKSPACE"
 
       - name: Commit and push changes
         if: steps.check.outputs.has_temp == 'true'
