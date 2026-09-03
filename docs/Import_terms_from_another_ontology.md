@@ -10,8 +10,8 @@ Run the commands below from the repository root.
 - `src/ontology/iri_dependencies/` contains the curated term lists. Each
   ontology has a plain-text file such as `mondo_terms.txt`,
   `uberon_terms.txt`, or `cl_terms.txt`. Put one full term IRI on each line.
-- `src/ontology/imports/` contains generated OWL modules and backup copies of
-  the term lists. **Never edit files in this directory by hand.**
+- `src/ontology/imports/` contains the generated OWL modules. **Never edit
+  files in this directory by hand.**
 - `src/ontology/mirror/` contains local source-ontology mirrors. Mirror URLs
   come from `owlmake.yaml`; they do not need to be copied into commands.
 
