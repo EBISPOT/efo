@@ -18,11 +18,14 @@ jobs:
       # workspace and file-command mounts require the job user to be root.
       options: --user root
     steps:
+      # Shallow: nothing here reads history. The guard greps the working tree,
+      # mint rewrites it, and the push adds one commit on top of HEAD. A full
+      # fetch of this repository takes ~5 minutes of a ~7 minute job.
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-          fetch-depth: 0
+          fetch-depth: 1
 
       # Only do anything if there are temporary IDs to allocate. ROBOT 1.9.7
       # cycles the edit file's anonymous rdf:Description blocks between byte
