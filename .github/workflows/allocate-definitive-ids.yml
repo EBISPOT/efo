@@ -46,10 +46,17 @@ jobs:
         run: |
           om make allocate-definitive-ids
 
+      # Plain git in `sh`: the owlmake image is Alpine with git but no bash, and
+      # `actions-js/push` starts with `bash start.sh`, which fails with ENOENT
+      # inside a container job on this image. Only the edit file is added — the
+      # MONDO module and mirror the allocation built are gitignored.
       - name: Commit and push changes
         if: steps.check.outputs.has_temp == 'true'
-        uses: actions-js/push@v1.5
-        with:
-          github_token: ${{ secrets.EFO_ID_ALLOCATION_TOKEN }}
-          message: "Replace temporary IDs by definitive IDs."
-          branch: ${{ github.ref }}
+        env:
+          TOKEN: ${{ secrets.EFO_ID_ALLOCATION_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/ontology/efo-edit.owl
+          git commit -m "Replace temporary IDs by definitive IDs."
+          git push "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
