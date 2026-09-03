@@ -46,6 +46,19 @@ jobs:
         run: |
           om make allocate-definitive-ids
 
+      # The runner creates the workspace outside the container and bind-mounts it
+      # in, so it belongs to the host runner's uid while these steps run as root.
+      # git refuses a repository owned by another user, and the push action's
+      # first command (`git config http.sslVerify false`) dies with `fatal: not
+      # in a git directory` — after the IDs have been minted, so the allocation
+      # is lost. `actions/checkout` marks the directory safe only in a temporary
+      # global config that does not outlive its own step, so mark it again here.
+      # System-wide rather than global: it then holds whatever HOME the push
+      # action runs with.
+      - name: Trust the checkout directory
+        if: steps.check.outputs.has_temp == 'true'
+        run: git config --system --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Commit and push changes
         if: steps.check.outputs.has_temp == 'true'
         uses: actions-js/push@v1.5
