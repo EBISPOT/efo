@@ -15,11 +15,27 @@ jobs:
   hermit_qc:
     runs-on: ubuntu-latest
     container:
+      # Same latest line as qc.yml — see the note there; never mix versions
+      # between the owlmake environments.
       image: ghcr.io/ebispot/owlmake:latest-python
+      # The image defaults to an unprivileged UID, but GitHub's container-job
+      # workspace and file-command mounts require the job user to be root.
+      options: --user root
+    defaults:
+      run:
+        # The HermiT step relies on `set +e` and PIPESTATUS, which are bash
+        # features; GitHub falls back to sh when bash is not on the PATH, so
+        # say so explicitly rather than depending on the image (bash was only
+        # added to it in owlmake 0.2.4).
+        shell: bash
     steps:
       - uses: actions/checkout@v4
 
       - name: Build the release with ELK (the committed configuration)
+        # `mv`, not `cp`: `om make` only rebuilds a target whose output is
+        # missing or older than its prerequisites, and switching the reasoner
+        # in owlmake.yaml changes neither. Moving the ELK output away is what
+        # makes the next step actually run HermiT.
         run: |
           om make build/efo.owl
           mv src/ontology/build/efo.owl /tmp/efo_elk.owl

@@ -748,6 +748,26 @@ prerequisites:
     - src/sparql/has-disease-location-union-violation.sparql
     - -O
     - src/ontology/reports
+  # Non-EL class expressions are checked on the files EFO authors, not on the
+  # merged release: imported ontologies carry their own non-EL axioms.
+  - op: owlmake-cli
+    command: verify
+    args:
+    - -i
+    - src/ontology/efo-edit.owl
+    - --queries
+    - src/sparql/non-el-class-expression-violation.sparql
+    - -O
+    - src/ontology/reports
+  - op: owlmake-cli
+    command: verify
+    args:
+    - -i
+    - src/ontology/components/efo_equivalent_class_axioms.owl
+    - --queries
+    - src/sparql/non-el-class-expression-violation.sparql
+    - -O
+    - src/ontology/reports/components
 - target: all_reports
   input: src/ontology/build/efo.owl
   needs:
