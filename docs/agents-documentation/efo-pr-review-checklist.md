@@ -117,6 +117,14 @@ OWL construct reference: definition = `obo:IAO_0000115`; xref =
 - **Disease terms** → `has_disease_location` (may be inherited from a parent; if
   absent, flag it as a note for the author rather than a hard failure).
 - **Measurement terms** → `is_about` the measured entity/process (same rule).
+- **Logical definitions stay inside OWL 2 EL** (the release reasons with ELK).
+  Flag any new `unionOf`, `complementOf`, `allValuesFrom`, cardinality or
+  `oneOf` in a class expression — especially the retired
+  `has_disease_location some (X or part_of some X)` shape, which is now written
+  `has_disease_location some X` (property `EFO_0000784`; the property chain
+  entails the part_of step). Flag a PR that adds a class to the allowlist in
+  `src/sparql/non-el-class-expression-violation.sparql` instead of restating
+  the definition in EL; removing lines from that list is the desired direction.
 - **Imports** are never hand-edited under `src/ontology/imports/`; external terms
   come via `src/ontology/iri_dependencies/*.txt` + regeneration. Cross-ontology
   `SubClassOf` lives in `src/templates/subclasses.csv`. Flag hand-edited
@@ -127,7 +135,7 @@ OWL construct reference: definition = `obo:IAO_0000115`; xref =
 ### 7. Build & config regressions
 - If the diff should have been normalized, confirm it looks like `om make
   normalize_src` was run (consistent formatting) and no unsatisfiable classes
-  were introduced (`om reason -i src/ontology/efo-edit.owl -r hermit`, if
+  were introduced (`om reason -i src/ontology/efo-edit.owl -r elk`, the release reasoner, if
   runnable). Flag if the diff looks un-normalized.
 - When the diff touches `.github/` or `.claude/`, check for CI, auth, permissions,
   or workflow regressions.

@@ -1,0 +1,193 @@
+# Violation: a class carries a non-EL class expression and is not on the
+# allowlist below.
+#
+# The release is reasoned with ELK (OWL 2 EL). Class expressions outside EL
+# (unionOf, complementOf, allValuesFrom, cardinality, oneOf, disjointUnionOf)
+# are silently ignored during classification, so any parent that depends on
+# them is missing from the release. The classes listed below already carry
+# such expressions (mostly cell-line "derives_from" groupings and measurement
+# unions, see EBISPOT/efo#2792) and are grandfathered until they are
+# remodelled. Anything else is a violation.
+#
+# Maintaining the allowlist:
+#   - remodel a class into EL and remove its line (the list is the work queue);
+#   - never add a line without a documented reason in the PR: the correct fix
+#     for a new term is to avoid the construct, e.g. write
+#     has_disease_location some X rather than (X or part_of some X).
+#
+# Run against efo-edit.owl and components/efo_equivalent_class_axioms.owl (the
+# files EFO authors), not the merged release, whose imported ontologies carry
+# their own non-EL axioms that are not EFO's to change.
+
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix efo: <http://www.ebi.ac.uk/efo/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?cls ?label ?construct
+WHERE {
+  {
+    { ?node owl:unionOf ?x . BIND("unionOf" AS ?construct) }
+    UNION { ?node owl:complementOf ?x . BIND("complementOf" AS ?construct) }
+    UNION { ?node owl:allValuesFrom ?x . BIND("allValuesFrom" AS ?construct) }
+    UNION { ?node owl:oneOf ?x . BIND("oneOf" AS ?construct) }
+    UNION { ?node owl:disjointUnionOf ?x . BIND("disjointUnionOf" AS ?construct) }
+    UNION {
+      ?node ?cardinalityProperty ?x .
+      FILTER (?cardinalityProperty IN (owl:cardinality, owl:minCardinality, owl:maxCardinality,
+                                       owl:qualifiedCardinality, owl:minQualifiedCardinality,
+                                       owl:maxQualifiedCardinality))
+      BIND("cardinality" AS ?construct)
+    }
+
+    # The named class whose axiom contains the expression. The second path only
+    # walks class-expression structure, so it does not pass through another
+    # named class and report its subclasses too.
+    ?cls (rdfs:subClassOf|owl:equivalentClass|owl:disjointWith|owl:disjointUnionOf) ?expression .
+    ?expression (owl:intersectionOf|owl:unionOf|owl:complementOf|rdf:first|rdf:rest|owl:someValuesFrom|owl:allValuesFrom|owl:onClass)* ?node .
+    FILTER (isIRI(?cls))
+    OPTIONAL { ?cls rdfs:label ?label }
+  }
+  MINUS {
+    VALUES ?cls {
+    obo:BTO_0001093    # WEHI-231 cell [unionOf; efo-edit]
+    obo:BTO_0001948    # JURKAT E-6.1 cell [unionOf; efo-edit]
+    obo:BTO_0002279    # J-774 cell [unionOf; efo-edit]
+    obo:BTO_0002599    # RBA-2 cell [unionOf; efo-edit]
+    obo:BTO_0004264    # INC-2 cell [unionOf; efo-edit]
+    obo:CHEBI_114785   #  [unionOf; efo-edit]
+    obo:CHEBI_16236    #  [unionOf; efo-edit]
+    obo:CHEBI_18243    #  [unionOf; efo-edit]
+    obo:CHEBI_28088    #  [unionOf; efo-edit]
+    obo:CHEBI_28201    #  [unionOf; efo-edit]
+    obo:CHEBI_28262    #  [unionOf; efo-edit]
+    obo:CHEBI_31638    #  [unionOf; efo-edit]
+    obo:CHEBI_31746    #  [unionOf; efo-edit]
+    obo:CHEBI_41879    #  [unionOf; efo-edit]
+    obo:CHEBI_42638    #  [unionOf; efo-edit]
+    obo:CHEBI_44185    #  [unionOf; efo-edit]
+    obo:CHEBI_45783    #  [unionOf; efo-edit]
+    obo:CHEBI_45951    #  [unionOf; efo-edit]
+    obo:CHEBI_49668    #  [unionOf; efo-edit]
+    obo:CHEBI_64212    #  [unionOf; efo-edit]
+    obo:CHEBI_7565     #  [unionOf; efo-edit]
+    obo:CHEBI_7719     #  [unionOf; efo-edit]
+    obo:CHEBI_8069     #  [unionOf; efo-edit]
+    obo:CHEBI_8435     #  [unionOf; efo-edit]
+    obo:CHEBI_8772     #  [unionOf; efo-edit]
+    obo:CHEBI_9168     #  [unionOf; efo-edit]
+    obo:CHEBI_9352     #  [unionOf; efo-edit]
+    obo:CHEBI_9753     #  [unionOf; efo-edit]
+    obo:CL_0000115     #  [unionOf; efo-edit]
+    obo:CL_0000540     #  [unionOf; efo-edit]
+    obo:CL_0000586     #  [unionOf; efo-edit]
+    efo:EFO_0000266    # aortic stenosis [allValuesFrom; efo-edit]
+    efo:EFO_0001640    # B cell derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0001641    # epithelial cell derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0002009    # fibroblast derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0002394    # ovarian cancer cell lines [unionOf; efo-edit+component]
+    efo:EFO_0002835    # MRC5 [unionOf; efo-edit]
+    efo:EFO_0002886    # stem cell derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0002887    # mouse cell line [unionOf; efo-edit+component]
+    efo:EFO_0002888    # Homo sapiens cell line [unionOf; efo-edit+component]
+    efo:EFO_0002935    # Drosophila melanogaster cell line [unionOf; efo-edit+component]
+    efo:EFO_0002936    # rat cell line [unionOf; efo-edit+component]
+    efo:EFO_0002937    # lymphoma or leukaemia cell line [unionOf; efo-edit+component]
+    efo:EFO_0002940    # zebrafish cell line [unionOf; efo-edit+component]
+    efo:EFO_0002955    # reproductive system cell [unionOf; efo-edit]
+    efo:EFO_0002956    # musculo-skeletal system cell [unionOf; efo-edit]
+    efo:EFO_0002963    # nervous system cell [unionOf; efo-edit]
+    efo:EFO_0003040    # embryonic cell line [unionOf; efo-edit+component]
+    efo:EFO_0003141    # LK-2 [unionOf; efo-edit]
+    efo:EFO_0003747    # amplicon sequencing [unionOf; efo-edit]
+    efo:EFO_0004298    # cardiovascular measurement [unionOf; efo-edit]
+    efo:EFO_0004309    # platelet count [unionOf; efo-edit]
+    efo:EFO_0004348    # hematocrit [unionOf; efo-edit]
+    efo:EFO_0004458    # C-reactive protein measurement [unionOf; efo-edit]
+    efo:EFO_0004501    # HOMA-IR [unionOf; efo-edit]
+    efo:EFO_0004503    # hematological measurement [unionOf; efo-edit]
+    efo:EFO_0004512    # bone measurement [unionOf; efo-edit]
+    efo:EFO_0004527    # mean corpuscular hemoglobin [unionOf; efo-edit]
+    efo:EFO_0004528    # mean corpuscular hemoglobin concentration [unionOf; efo-edit]
+    efo:EFO_0004532    # serum gamma-glutamyl transferase measurement [unionOf; efo-edit]
+    efo:EFO_0004533    # alkaline phosphatase measurement [unionOf; efo-edit]
+    efo:EFO_0004534    # creatine kinase measurement [unionOf; efo-edit]
+    efo:EFO_0004578    # homocysteine measurement [unionOf; efo-edit]
+    efo:EFO_0004614    # apolipoprotein A 1 measurement [unionOf; efo-edit]
+    efo:EFO_0004640    # haptoglobin measurement [unionOf; efo-edit]
+    efo:EFO_0004730    # hormone measurement [unionOf; efo-edit]
+    efo:EFO_0004761    # uric acid measurement [unionOf; efo-edit]
+    efo:EFO_0004808    # L lactate dehydrogenase measurement [unionOf; efo-edit]
+    efo:EFO_0004811    # interleukin-8 measurement [unionOf; efo-edit]
+    efo:EFO_0004833    # neutrophil count [unionOf; efo-edit]
+    efo:EFO_0004842    # eosinophil count [unionOf; efo-edit]
+    efo:EFO_0004861    # phosphorus measurement [unionOf; efo-edit]
+    efo:EFO_0004869    # YKL40 measurement [unionOf; efo-edit]
+    efo:EFO_0004915    # vaspin measurement [unionOf; efo-edit]
+    efo:EFO_0004990    # J1 [unionOf; efo-edit]
+    efo:EFO_0005054    # QRS complex [unionOf; efo-edit]
+    efo:EFO_0005057    # myoglobin measurement [unionOf; efo-edit]
+    efo:EFO_0005091    # monocyte count [unionOf; efo-edit]
+    efo:EFO_0005105    # lipid or lipoprotein measurement [unionOf; efo-edit]
+    efo:EFO_0005127    # cancer biomarker measurement [unionOf; efo-edit]
+    efo:EFO_0005187    # C-peptide measurement [unionOf; efo-edit]
+    efo:EFO_0005197    # beta-2 microglobulin measurement [unionOf; efo-edit]
+    efo:EFO_0005206    # oligoclonal band measurement [unionOf; efo-edit]
+    efo:EFO_0005536    # nitric oxide exhalation measurement [unionOf; efo-edit]
+    efo:EFO_0005728    # bronchial epithelial cell derived cell line [unionOf; efo-edit]
+    efo:EFO_0005730    # endothelial cell derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0005731    # cardiac myocyte cell derived cell line [unionOf; efo-edit]
+    efo:EFO_0005734    # muscle cell derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0005735    # smooth muscle cell derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0005736    # bronchial smooth muscle cell derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0005738    # ESC derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0005740    # iPSC derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0005742    # lung fibroblast derived cell line [unionOf; efo-edit+component]
+    efo:EFO_0005757    # vaginal inflammation [unionOf; efo-edit]
+    efo:EFO_0005767    # rheumatoid factor measurement [unionOf; efo-edit]
+    efo:EFO_0005857    # mouse embryo stage [allValuesFrom; efo-edit]
+    efo:EFO_0005859    # Drosophila embryo stage [allValuesFrom; efo-edit]
+    efo:EFO_0005878    # vitamin deficiency [unionOf; efo-edit]
+    efo:EFO_0006348    # pulmonary artery-aorta diameter ratio measurement [unionOf; efo-edit]
+    efo:EFO_0006507    # nicotine glucuronidation measurement [unionOf; efo-edit]
+    efo:EFO_0006515    # angiotensin-converting enzyme measurement [unionOf; efo-edit]
+    efo:EFO_0006523    # symmetrical dimethylarginine measurement [unionOf; efo-edit]
+    efo:EFO_0006797    # neurofibrillary tangles measurement [unionOf; efo-edit]
+    efo:EFO_0006886    # pancreaticobiliary malunion [unionOf; efo-edit]
+    efo:EFO_0008037    # BMI-adjusted fasting blood insulin measurement [unionOf; efo-edit]
+    efo:EFO_0009262    # nicotine dependence symptom count [unionOf; efo-edit]
+    efo:EFO_0009263    # nicotine withdrawal symptom count [unionOf; efo-edit]
+    efo:EFO_0020865    # aortic measurement@en [unionOf; efo-edit]
+    efo:EFO_0022499    # M426@en [unionOf; efo-edit]
+    efo:EFO_0022500    # P493-6@en [unionOf; efo-edit]
+    efo:EFO_0022501    # MINO@en [unionOf; efo-edit]
+    efo:EFO_0022517    # NK-92@en [unionOf; efo-edit]
+    efo:EFO_0022518    # CH7C17@en [unionOf; efo-edit]
+    efo:EFO_0022519    # GM847@en [unionOf; efo-edit]
+    efo:EFO_0022524    # EUFA1341@en [unionOf; efo-edit]
+    efo:EFO_0022525    # Hana3A@en [unionOf; efo-edit]
+    efo:EFO_0022528    # HEK-293A@en [unionOf; efo-edit]
+    efo:EFO_0022530    # HEK-293HR1@en [unionOf; efo-edit]
+    efo:EFO_0022549    # MRC-5V1@en [unionOf; efo-edit]
+    efo:EFO_0022553    # Plat-E@en [unionOf; efo-edit]
+    efo:EFO_0022556    # TIG-3@en [unionOf; efo-edit]
+    efo:EFO_0022562    # HEK-293-EBNA@en [unionOf; efo-edit]
+    efo:EFO_0022563    # HEK-293ET@en [unionOf; efo-edit]
+    efo:EFO_0022564    # HEK-293F@en [unionOf; efo-edit]
+    efo:EFO_0022587    # HKB-11@en [unionOf; efo-edit]
+    efo:EFO_0803350    # intact parathyroid hormone measurement [unionOf; efo-edit]
+    efo:EFO_0803382    # perivascular space measurement@en [unionOf; efo-edit]
+    efo:EFO_0900003    # abdominal age [unionOf; efo-edit]
+    efo:EFO_1000653    # sarcopenia [unionOf; efo-edit]
+    efo:EFO_1001271    # Atrophic Vaginitis [unionOf; efo-edit]
+    efo:EFO_1001891    # gastrointestinal mucositis [unionOf; efo-edit]
+    efo:EFO_1001898    # mucositis [unionOf; efo-edit]
+    efo:EFO_1001904    # oral mucositis [unionOf; efo-edit]
+    efo:EFO_1001914    # radiation-induced gastrointestinal mucositis [unionOf; efo-edit]
+    obo:MONDO_0005275  #  [unionOf; component]
+    obo:MONDO_0005554  #  [unionOf; component]
+    }
+  }
+}
+ORDER BY ?cls

@@ -1,0 +1,48 @@
+# Violation: the "X or part_of some X" workaround under has_disease_location.
+#
+# Since #2792 the property chain
+#   has_disease_location o part_of SubPropertyOf has_disease_location
+# is asserted in efo-edit.owl, so "located in X or in a part of X" is written
+# simply as
+#   has_disease_location some X
+# and the reasoner fills in the part_of step. The old form
+#   has_disease_location some (X or part_of some X)
+# is a non-EL union that ELK silently ignores, which drops the class's
+# location-based parents from the release. This query reports every
+# has_disease_location restriction whose filler is a union containing a
+# nested restriction (the workaround shape) so the pattern cannot creep back.
+#
+# Not reported: unions of two or more *named* locations (e.g. rheumatic
+# disorder), which are a different, tracked non-EL problem; and the one
+# grandfathered instance, lung disease (MONDO_0005275), whose filler is
+# "lung or part_of some lung or located_in some lung" and needs a located_in
+# chain before it can be collapsed. Remove that exception when it is fixed.
+# Any row is a violation.
+
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix efo: <http://www.ebi.ac.uk/efo/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?cls ?label ?nestedProperty ?nestedFiller
+WHERE {
+  ?restriction a owl:Restriction ;
+      owl:onProperty efo:EFO_0000784 ;
+      owl:someValuesFrom ?filler .
+  ?filler owl:unionOf ?operands .
+  ?operands rdf:rest*/rdf:first ?operand .
+  ?operand a owl:Restriction ;
+      owl:onProperty ?nestedProperty .
+  OPTIONAL { ?operand owl:someValuesFrom ?nestedFiller }
+
+  # The named class whose axiom contains the restriction. The second path
+  # only walks class-expression structure, so it cannot pass through another
+  # named class and report its subclasses as well.
+  ?cls (rdfs:subClassOf|owl:equivalentClass) ?expression .
+  ?expression (owl:intersectionOf|owl:unionOf|rdf:first|rdf:rest|owl:someValuesFrom)* ?restriction .
+  FILTER (isIRI(?cls))
+  FILTER (?cls != obo:MONDO_0005275)
+  OPTIONAL { ?cls rdfs:label ?label }
+}
+ORDER BY ?cls

@@ -3,7 +3,7 @@ id: efo
 version: 3.93.0
 version_file: src/ontology/version.txt
 ontology_iri: http://purl.obolibrary.org/obo/efo.owl
-reasoner: hermit
+reasoner: elk
 imports:
 - id: mondo
   source: http://purl.obolibrary.org/obo/mondo/mondo-base.owl
@@ -745,8 +745,29 @@ prerequisites:
     - src/sparql/obsolete-replaced-whitespace-violation.sparql
     - src/sparql/wrong_efo_purl-violation.sparql
     - src/sparql/self-xref-violation.sparql
+    - src/sparql/has-disease-location-union-violation.sparql
     - -O
     - src/ontology/reports
+  # Non-EL class expressions are checked on the files EFO authors, not on the
+  # merged release: imported ontologies carry their own non-EL axioms.
+  - op: owlmake-cli
+    command: verify
+    args:
+    - -i
+    - src/ontology/efo-edit.owl
+    - --queries
+    - src/sparql/non-el-class-expression-violation.sparql
+    - -O
+    - src/ontology/reports
+  - op: owlmake-cli
+    command: verify
+    args:
+    - -i
+    - src/ontology/components/efo_equivalent_class_axioms.owl
+    - --queries
+    - src/sparql/non-el-class-expression-violation.sparql
+    - -O
+    - src/ontology/reports/components
 - target: all_reports
   input: src/ontology/build/efo.owl
   needs:
@@ -1778,7 +1799,7 @@ prerequisites:
     inputs:
     - src/ontology/tmp/efo-master-reasoned.owl
   - op: reason
-    reasoner: hermit
+    reasoner: elk
   - op: round-trip
     output: src/ontology/tmp/efo-master-reasoned.owl.owl
   - op: move-file
@@ -1792,7 +1813,7 @@ prerequisites:
     inputs:
     - src/ontology/efo-edit.owl
   - op: reason
-    reasoner: hermit
+    reasoner: elk
   - op: round-trip
     output: src/ontology/tmp/efo-branch-reasoned.owl.owl
   - op: move-file
@@ -1881,7 +1902,7 @@ artefacts:
     inputs:
     - src/ontology/efo-edit.owl
   - op: reason
-    reasoner: hermit
+    reasoner: elk
     equivalent_classes_allowed: asserted-only
     remove_redundant_subclass_axioms: true
     create_new_ontology_with_annotations: false

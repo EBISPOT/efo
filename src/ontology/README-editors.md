@@ -4,11 +4,13 @@ EFO's ontology build is defined by the repository-root `owlmake.yaml`. The old
 ODK/Makefile and EFO2-to-EFO3 migration instructions are no longer applicable.
 Run build commands from the repository root.
 
-After editing `src/ontology/efo-edit.owl`, normalize and reason over it:
+After editing `src/ontology/efo-edit.owl`, normalize and reason over it (ELK is
+the release reasoner; the scheduled `hermit-qc` workflow re-checks the release
+with HermiT for the non-EL axioms ELK ignores):
 
 ```bash
 om make normalize_src
-om reason -i src/ontology/efo-edit.owl -r hermit
+om reason -i src/ontology/efo-edit.owl -r elk
 ```
 
 Run the ontology quality checks with:

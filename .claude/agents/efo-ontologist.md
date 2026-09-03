@@ -71,7 +71,9 @@ If the curator could not supply a source for a synonym, leave the bare synonym a
     </owl:Restriction>
 </owl:intersectionOf></owl:Class></owl:equivalentClass>
 ```
-Common properties: `is_about` `IAO_0000136` · `has_disease_location` `RO_0004026` · `part_of` `BFO_0000050`. The text definition must mirror the logical definition.
+Common properties: `is_about` `IAO_0000136` · `has_disease_location` `EFO_0000784` (EFO's own property; `RO_0004026` is MONDO's and is not used in `efo-edit.owl`) · `part_of` `BFO_0000050`. The text definition must mirror the logical definition.
+
+**Stay inside OWL 2 EL.** The release is reasoned with ELK, which silently ignores `unionOf`, `complementOf`, `allValuesFrom`, cardinality and `oneOf`; a class defined with them loses the parents that depend on them. In particular write "located in X or in a part of X" as plain `has_disease_location some X` — never `X or part_of some X` — because the chain `has_disease_location o part_of ⊑ has_disease_location` in `efo-edit.owl` already covers the part_of step. `sparql_test` fails on that union and on any non-EL class expression not already grandfathered in `src/sparql/non-el-class-expression-violation.sparql`; do not extend that allowlist for a new term, restate the definition in EL.
 
 ## Workflow 2 — Edit existing term
 Locate by ID/label, change label/def/synonyms/relationships following patterns, update `dc:date` (and `IAO_0000117` for significant changes), verify relationships valid, `om make normalize_src`.
@@ -86,7 +88,7 @@ Locate by ID/label, change label/def/synonyms/relationships following patterns, 
 ```bash
 om make normalize_src
 om convert -vvv -i src/ontology/efo-edit.owl -o /dev/null   # if syntax looks off
-om reason -i src/ontology/efo-edit.owl -r hermit            # catch unsatisfiable classes (HermiT — what the release build uses; ELK misses non-EL axioms)
+om reason -i src/ontology/efo-edit.owl -r elk               # catch unsatisfiable classes (ELK — what the release build uses; the scheduled `hermit-qc` workflow re-checks with HermiT for the non-EL axioms ELK ignores)
 ```
 Checklist: label + def + ≥2 xrefs + non-obsolete parent on every new term · synonyms with a known source carry a `hasDbXref` provenance axiom · logical def mirrors text · no deprecated parents · cross-ontology links in `subclasses.csv` only when needed · normalization clean.
 
