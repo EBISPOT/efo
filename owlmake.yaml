@@ -120,6 +120,29 @@ imports:
     base_iris: []
     mirror_type: null
     is_large: false
+- id: po
+  source: http://purl.obolibrary.org/obo/po.owl
+  output: src/ontology/imports/po_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/po_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: query
+    updates:
+    - src/sparql/po-import-unique-labels.ru
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/po_import.owl
+  product:
+    id: po
+    mirror_from: http://purl.obolibrary.org/obo/po.owl
+    make_base: false
+    use_base: false
+    base_iris: []
+    mirror_type: null
+    is_large: false
 - id: hp
   source: http://purl.obolibrary.org/obo/hp.owl
   output: src/ontology/imports/hp_import.owl
@@ -519,6 +542,7 @@ native_targets:
 - mirror-obi
 - mirror-pr
 - mirror-uberon
+- mirror-po
 - src/ontology/mirror/chebi.owl
 - src/ontology/mirror/cl.owl
 - src/ontology/mirror/ecto.owl
@@ -533,6 +557,7 @@ native_targets:
 - src/ontology/mirror/obi.owl
 - src/ontology/mirror/pr.owl
 - src/ontology/mirror/uberon.owl
+- src/ontology/mirror/po.owl
 edit_file: src/ontology/efo-edit.owl
 catalog_file: src/ontology/catalog-v001.xml
 emulate_robot_version: 1.9.7
@@ -543,6 +568,7 @@ refresh_groups:
   - src/ontology/mirror/mondo.owl
   - src/ontology/mirror/hancestro.owl
   - src/ontology/mirror/uberon.owl
+  - src/ontology/mirror/po.owl
   - src/ontology/mirror/hp.owl
   - src/ontology/mirror/cl.owl
   - src/ontology/mirror/fbbt.owl
@@ -563,6 +589,7 @@ refresh_groups:
   - src/ontology/imports/mondo_import.owl
   - src/ontology/imports/hancestro_import.owl
   - src/ontology/imports/uberon_import.owl
+  - src/ontology/imports/po_import.owl
   - src/ontology/imports/hp_import.owl
   - src/ontology/imports/cl_import.owl
   - src/ontology/imports/fbbt_import.owl
@@ -590,6 +617,7 @@ prerequisites:
   - src/ontology/imports/mondo_import.owl
   - src/ontology/imports/hancestro_import.owl
   - src/ontology/imports/uberon_import.owl
+  - src/ontology/imports/po_import.owl
   - src/ontology/imports/hp_import.owl
   - src/ontology/imports/cl_import.owl
   - src/ontology/imports/fbbt_import.owl
@@ -1492,6 +1520,7 @@ prerequisites:
   input: src/ontology/mirror/uberon.owl
   needs:
   - src/ontology/mirror/uberon.owl
+  - src/ontology/mirror/po.owl
   - src/sparql/uberon_terms.sparql
   steps:
   - op: query
@@ -1605,6 +1634,7 @@ prerequisites:
   input: src/ontology/mirror/uberon.owl
   needs:
   - src/ontology/mirror/uberon.owl
+  - src/ontology/mirror/po.owl
   - src/ontology/iri_dependencies/uberon_terms.txt
   - src/ontology/iri_dependencies/efo-relations.txt
   steps:
