@@ -1,0 +1,109 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/other-o.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/other-o.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/other-o.owl>
+
+Declaration(Class(<http://dbpedia.org/resource/Oceania>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GAZ_00000013>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/fbbt#larval_OF>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_biological_anomaly>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_clinical_situation>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_clinical_subtype>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_clinical_syndrome>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_etiological_subtype>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_histopathological_subtype>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_inheritance_inconsistent>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_malformation_syndrome>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_morphological_anomaly>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#ordo_subtype_of_a_disorder>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#otar>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#major_organ>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/fbbt#larval_OF> (<http://purl.obolibrary.org/obo/fbbt#larval_OF>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/fbbt#larval_OF> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_biological_anomaly> (<http://purl.obolibrary.org/obo/mondo#ordo_biological_anomaly>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_biological_anomaly> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_clinical_situation> (<http://purl.obolibrary.org/obo/mondo#ordo_clinical_situation>)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/mondo#ordo_clinical_situation> "particular clinical situation in a disease or syndrome")
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_clinical_situation> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_clinical_subtype> (<http://purl.obolibrary.org/obo/mondo#ordo_clinical_subtype>)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/mondo#ordo_clinical_subtype> "clinical subtype")
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_clinical_syndrome> (<http://purl.obolibrary.org/obo/mondo#ordo_clinical_syndrome>)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/mondo#ordo_clinical_syndrome> "clinical syndrome")
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_clinical_syndrome> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_etiological_subtype> (<http://purl.obolibrary.org/obo/mondo#ordo_etiological_subtype>)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/mondo#ordo_etiological_subtype> "etiological subtype")
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_etiological_subtype> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders> (<http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders>)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders> "group of disorders")
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_group_of_disorders> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_histopathological_subtype> (<http://purl.obolibrary.org/obo/mondo#ordo_histopathological_subtype>)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/mondo#ordo_histopathological_subtype> "histopathological subtype")
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_histopathological_subtype> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_inheritance_inconsistent> (<http://purl.obolibrary.org/obo/mondo#ordo_inheritance_inconsistent>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_inheritance_inconsistent> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_malformation_syndrome> (<http://purl.obolibrary.org/obo/mondo#ordo_malformation_syndrome>)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/mondo#ordo_malformation_syndrome> "malformation syndrome")
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_malformation_syndrome> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_morphological_anomaly> (<http://purl.obolibrary.org/obo/mondo#ordo_morphological_anomaly>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_morphological_anomaly> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#ordo_subtype_of_a_disorder> (<http://purl.obolibrary.org/obo/mondo#ordo_subtype_of_a_disorder>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#ordo_subtype_of_a_disorder> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#otar> (<http://purl.obolibrary.org/obo/mondo#otar>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#otar> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/uberon/core#major_organ> (<http://purl.obolibrary.org/obo/uberon/core#major_organ>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/uberon/core#major_organ> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://dbpedia.org/resource/Oceania> (Oceania)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://dbpedia.org/resource/Oceania> "GAZ:00000468")
+AnnotationAssertion(rdfs:label <http://dbpedia.org/resource/Oceania> "Oceania")
+SubClassOf(<http://dbpedia.org/resource/Oceania> <http://purl.obolibrary.org/obo/GAZ_00000013>)
+
+
+)

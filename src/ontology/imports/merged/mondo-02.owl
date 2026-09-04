@@ -1,0 +1,49 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/mondo-02.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/mondo-02.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/mondo-02.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0002876>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0003612>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0005636>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0200000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0036262>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004026>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#inSubset>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#source>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/MONDO_0200000> (uterine ligament adenosarcoma)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C102570") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MONDO_0200000> "An extremely rare adenosarcoma that arises from the uterine ligament.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#source> "MONDO:GARD") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MONDO_0200000> "GARD:0026287")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#source> "MONDO:equivalentTo") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MONDO_0200000> "NCIT:C102570")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MONDO_0200000> "adenosarcoma of uterine ligament")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MONDO:patterns/location") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MONDO_0200000> "uterine ligament adenosarcoma")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MONDO_0200000> "MONDO:0200000")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#source> "GARD:0026287") Annotation(<http://www.geneontology.org/formats/oboInOwl#source> "MONDO:GARD") <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/MONDO_0200000> <http://purl.obolibrary.org/obo/mondo#gard_rare>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/MONDO_0200000> <http://purl.obolibrary.org/obo/mondo#rare>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MONDO_0200000> "uterine ligament adenosarcoma")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/MONDO_0200000> <http://purl.obolibrary.org/obo/NCIT_C102570>)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MONDO_0200000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/MONDO_0005636> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004026> <http://purl.obolibrary.org/obo/UBERON_0036262>)))
+SubClassOf(<http://purl.obolibrary.org/obo/MONDO_0200000> <http://purl.obolibrary.org/obo/MONDO_0002876>)
+SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#source> "NCIT:C102570") <http://purl.obolibrary.org/obo/MONDO_0200000> <http://purl.obolibrary.org/obo/MONDO_0003612>)
+
+
+)

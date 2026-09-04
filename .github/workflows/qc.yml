@@ -38,4 +38,10 @@ jobs:
       - name: Run ontology QC checks
         # gh_actions = qc + build/efo.owl.
         # (Bare `om` would run the default targets, which include `release`.)
+        # The 4.0.0 release is ~140k classes / 500 MB of RDF/XML; owlmake's
+        # memory watchdog defaults to aborting when free RAM drops below
+        # 6 GiB, a desktop margin that the verify step's parse of the release
+        # crosses on the 16 GB runner without being anywhere near an OOM.
+        env:
+          OWLMAKE_MEM_FLOOR_GIB: 2
         run: om make gh_actions
