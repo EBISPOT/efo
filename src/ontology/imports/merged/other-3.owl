@@ -1,0 +1,49 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/other-3.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/other-3.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/other-3.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+Declaration(Class(<http://purl.obolibrary.org/obo/SO_0001217>))
+Declaration(Class(<http://www.ncbi.nlm.nih.gov/gene/390928>))
+Declaration(Class(<http://www.ncbi.nlm.nih.gov/gene/392490>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002160>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.ncbi.nlm.nih.gov/gene/390928> (PAPL (human))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://www.ncbi.nlm.nih.gov/gene/390928> "A protein coding gene PAPL in human.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://www.ncbi.nlm.nih.gov/gene/390928> "gene")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://www.ncbi.nlm.nih.gov/gene/390928> "NCBIGene:390928")
+AnnotationAssertion(rdfs:comment <http://www.ncbi.nlm.nih.gov/gene/390928> "Category=external.")
+AnnotationAssertion(rdfs:label <http://www.ncbi.nlm.nih.gov/gene/390928> "PAPL (human)")
+SubClassOf(<http://www.ncbi.nlm.nih.gov/gene/390928> <http://purl.obolibrary.org/obo/SO_0001217>)
+SubClassOf(<http://www.ncbi.nlm.nih.gov/gene/390928> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+
+# Class: <http://www.ncbi.nlm.nih.gov/gene/392490> (FLJ44635 (human))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://www.ncbi.nlm.nih.gov/gene/392490> "A protein coding gene FLJ44635 in human.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://www.ncbi.nlm.nih.gov/gene/392490> "gene")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://www.ncbi.nlm.nih.gov/gene/392490> "NCBIGene:392490")
+AnnotationAssertion(rdfs:comment <http://www.ncbi.nlm.nih.gov/gene/392490> "Category=external.")
+AnnotationAssertion(rdfs:label <http://www.ncbi.nlm.nih.gov/gene/392490> "FLJ44635 (human)")
+SubClassOf(<http://www.ncbi.nlm.nih.gov/gene/392490> <http://purl.obolibrary.org/obo/SO_0001217>)
+SubClassOf(<http://www.ncbi.nlm.nih.gov/gene/392490> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+
+
+)

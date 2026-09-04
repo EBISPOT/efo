@@ -13,4 +13,24 @@ SELECT ?cls1 ?cls2 ?label WHERE
   FILTER (!isBlank(?cls2)) .
   FILTER NOT EXISTS {?cls1 owl:deprecated "true"^^xsd:boolean} .
   
+  # Allowlist: cross-ontology homonyms that are distinct concepts, or EFO copies of
+  # PATO qualities awaiting curation (EBISPOT/efo#2804). Both orders are listed so
+  # the pair is exempt whichever way it is bound.
+  FILTER NOT EXISTS {
+    VALUES (?a ?b) {
+      (<http://www.ebi.ac.uk/efo/EFO_0001696> <http://purl.obolibrary.org/obo/PATO_0001323>)   # area
+      (<http://www.ebi.ac.uk/efo/EFO_0000433> <http://purl.obolibrary.org/obo/PATO_0001309>)   # duration
+      (<http://www.ebi.ac.uk/efo/EFO_0010246> <http://purl.obolibrary.org/obo/PATO_0000427>)   # recurrent
+      (<http://www.ebi.ac.uk/efo/EFO_0001695> <http://purl.obolibrary.org/obo/PATO_0000117>)   # size
+      (<http://www.ebi.ac.uk/efo/EFO_0005135> <http://purl.obolibrary.org/obo/PATO_0001034>)   # strain (organism strain vs mechanical strain)
+      (<http://www.ebi.ac.uk/efo/EFO_0001702> <http://purl.obolibrary.org/obo/PATO_0000146>)   # temperature
+      (<http://www.ebi.ac.uk/efo/EFO_0000721> <http://purl.obolibrary.org/obo/PATO_0000165>)   # time
+      (<http://www.ebi.ac.uk/efo/EFO_0001715> <http://purl.obolibrary.org/obo/PATO_0000918>)   # volume
+      (<http://purl.obolibrary.org/obo/BFO_0000019> <http://purl.obolibrary.org/obo/PATO_0000001>)   # quality (BFO vs PATO root)
+      (<http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/PATO_0001414>)   # catalytic activity (GO function vs PATO quality)
+      (<http://purl.obolibrary.org/obo/EO_0007337> <http://purl.obolibrary.org/obo/NCBITaxon_6231>)   # Nematoda (plant environment vs taxon)
+      (<http://purl.obolibrary.org/obo/PO_0009005> <http://purl.obolibrary.org/obo/NCBITaxon_1>)   # root (plant organ vs taxonomy root)
+    }
+    FILTER ((?cls1 = ?a && ?cls2 = ?b) || (?cls1 = ?b && ?cls2 = ?a))
+  }
 }
