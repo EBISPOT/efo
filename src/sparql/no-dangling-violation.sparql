@@ -11,7 +11,8 @@ WHERE
   FILTER EXISTS {?cls1 rdfs:subClassOf ?cls3 } .
   FILTER NOT EXISTS {?cls1 owl:deprecated "true"^^xsd:boolean} .
   # EFO's root, and the roots of imported ontologies that have no parent in EFO
-  # (BFO entity, GO molecular_function, OGMS disease course, ExO, NBO, MPATH, HP, SO):
+  # (BFO entity, GO molecular_function, OGMS disease course, ExO, NBO, MPATH, HP, SO
+  # sequence_attribute and sequence_collection):
   # expected roots, shown in OLS only behind the all-roots toggle (IAO:0000700).
   FILTER (?cls1 NOT IN (
     <http://www.ebi.ac.uk/efo/EFO_0000001>,
@@ -24,6 +25,7 @@ WHERE
     <http://purl.obolibrary.org/obo/NBO_0000243>,
     <http://purl.obolibrary.org/obo/MPATH_1000>,
     <http://purl.obolibrary.org/obo/HP_0032443>,
-    <http://purl.obolibrary.org/obo/SO_0000400>
+    <http://purl.obolibrary.org/obo/SO_0000400>,
+    <http://purl.obolibrary.org/obo/SO_0001260>
   ))
   }

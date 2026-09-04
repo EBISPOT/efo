@@ -17,53 +17,13 @@ imports:
     copy_ontology_annotations: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/mondo_import.owl
-  - op: round-trip
-    output: src/ontology/imports/mondo_import.owl.tmp.owl
-  - op: query
-    selects:
-    - query: src/sparql/hgnc_terms.sparql
-      output: src/ontology/imports/mondo_import.owl.hgnc.tsv
-    may_fail: true
-  - op: branch
-    if:
-      condition: file_non_empty
-      filename: src/ontology/imports/mondo_import.owl.hgnc.tsv
-    then:
-    - op: shell
-      command: tail -n +2 src/ontology/imports/mondo_import.owl.hgnc.tsv | sed 's/[<>]//g' | grep -v '^$' > src/ontology/imports/mondo_import.owl.hgnc.txt
-    - op: branch
-      if:
-        condition: file_non_empty
-        filename: src/ontology/imports/mondo_import.owl.hgnc.txt
-      then:
-      - op: shell
-        command: echo "Auto-excluding $(wc -l < imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
-      - op: append
-        src:
-        - src/ontology/imports/mondo_import.owl.hgnc.txt
-        dst: src/ontology/iri_dependencies/mondo_exclude.txt
-      - op: sort
-        input: src/ontology/iri_dependencies/mondo_exclude.txt
-        output: src/ontology/iri_dependencies/mondo_exclude.txt
-        unique: true
-  - op: remove-terms
-    terms:
-    - rdfs:comment
-    term_files:
-    - src/ontology/iri_dependencies/mondo_exclude.txt
-  - op: remove-file
-    paths:
-    - src/ontology/imports/mondo_import.owl.tmp.owl
-    - src/ontology/imports/mondo_import.owl.hgnc.tsv
-    - src/ontology/imports/mondo_import.owl.hgnc.txt
-    force: true
   product:
     id: mondo
     mirror_from: http://purl.obolibrary.org/obo/mondo/mondo-base.owl
     make_base: false
     use_base: false
     base_iris: []
-    mirror_type: custom
+    mirror_type: null
     is_large: false
 - id: hancestro
   source: https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl
@@ -897,7 +857,6 @@ transient_targets:
 - src/ontology/imports/exo_bot.owl
 - src/ontology/imports/swisslipids_bot.owl
 - src/ontology/imports/hp_bot.owl
-- src/ontology/imports/mondo_import.owl.tmp.owl
 - src/ontology/imports/obi_bot.owl
 native_targets:
 - mirror-chebi
@@ -971,7 +930,50 @@ exclude_iri_patterns:
 - http://purl.org/linguistics/gold/*
 - http://www.geneontology.org/formats/oboInOwl#ObsoleteClass
 - http://purl.obolibrary.org/obo/RO_0002577
+- http://identifiers.org/hgnc/*
+- http://purl.obolibrary.org/obo/CHR_*
+- http://purl.obolibrary.org/obo/MAXO_*
+- http://purl.obolibrary.org/obo/MF_*
+- http://purl.obolibrary.org/obo/MFOMD_*
 - http://purl.obolibrary.org/obo/MONDO_0001384
+- http://purl.obolibrary.org/obo/MONDO_0000249
+- http://purl.obolibrary.org/obo/MONDO_0000746
+- http://purl.obolibrary.org/obo/MONDO_0000888
+- http://purl.obolibrary.org/obo/MONDO_0001071
+- http://purl.obolibrary.org/obo/MONDO_0001150
+- http://purl.obolibrary.org/obo/MONDO_0001273
+- http://purl.obolibrary.org/obo/MONDO_0001411
+- http://purl.obolibrary.org/obo/MONDO_0001609
+- http://purl.obolibrary.org/obo/MONDO_0002049
+- http://purl.obolibrary.org/obo/MONDO_0002155
+- http://purl.obolibrary.org/obo/MONDO_0002251
+- http://purl.obolibrary.org/obo/MONDO_0002267
+- http://purl.obolibrary.org/obo/MONDO_0002442
+- http://purl.obolibrary.org/obo/MONDO_0002637
+- http://purl.obolibrary.org/obo/MONDO_0002770
+- http://purl.obolibrary.org/obo/MONDO_0002803
+- http://purl.obolibrary.org/obo/MONDO_0003432
+- http://purl.obolibrary.org/obo/MONDO_0003634
+- http://purl.obolibrary.org/obo/MONDO_0003664
+- http://purl.obolibrary.org/obo/MONDO_0003785
+- http://purl.obolibrary.org/obo/MONDO_0004747
+- http://purl.obolibrary.org/obo/MONDO_0006788
+- http://purl.obolibrary.org/obo/MONDO_0006872
+- http://purl.obolibrary.org/obo/MONDO_0009369
+- http://purl.obolibrary.org/obo/MONDO_0011827
+- http://purl.obolibrary.org/obo/MONDO_0015610
+- http://purl.obolibrary.org/obo/MONDO_0015790
+- http://purl.obolibrary.org/obo/MONDO_0016225
+- http://purl.obolibrary.org/obo/MONDO_0017142
+- http://purl.obolibrary.org/obo/MONDO_0018381
+- http://purl.obolibrary.org/obo/MONDO_0019590
+- http://purl.obolibrary.org/obo/MONDO_0020186
+- http://purl.obolibrary.org/obo/MONDO_0020579
+- http://purl.obolibrary.org/obo/MONDO_0024238
+- http://purl.obolibrary.org/obo/MONDO_0024288
+- http://purl.obolibrary.org/obo/MONDO_0024583
+- http://purl.obolibrary.org/obo/MONDO_0054868
+- http://purl.obolibrary.org/obo/MONDO_0700096
 - http://purl.obolibrary.org/obo/PR_000011380
 edit_file: src/ontology/efo-edit.owl
 catalog_file: src/ontology/catalog-v001.xml
