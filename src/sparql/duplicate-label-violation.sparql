@@ -12,5 +12,77 @@ SELECT ?cls1 ?cls2 ?label WHERE
   FILTER (!isBlank(?cls1)) .
   FILTER (!isBlank(?cls2)) .
   FILTER NOT EXISTS {?cls1 owl:deprecated "true"^^xsd:boolean} .
+  # Only pairs that involve a class EFO maintains (EFO or Orphanet namespace) gate
+  # the build. Homonyms between two imported ontologies (fly and vertebrate anatomy,
+  # HP phenotypes and MONDO diseases, …) are theirs to resolve; see EBISPOT/efo#2804.
+  FILTER (STRSTARTS(STR(?cls1), "http://www.ebi.ac.uk/efo/") || STRSTARTS(STR(?cls2), "http://www.ebi.ac.uk/efo/")
+       || STRSTARTS(STR(?cls1), "http://www.orpha.net/ORDO/") || STRSTARTS(STR(?cls2), "http://www.orpha.net/ORDO/")) .
   
+  # Allowlist: cross-ontology homonyms that are distinct concepts, or EFO copies of
+  # PATO qualities awaiting curation (EBISPOT/efo#2804). Both orders are listed so
+  # the pair is exempt whichever way it is bound.
+  FILTER NOT EXISTS {
+    VALUES (?a ?b) {
+      (<http://www.ebi.ac.uk/efo/EFO_0001696> <http://purl.obolibrary.org/obo/PATO_0001323>)   # area
+      (<http://www.ebi.ac.uk/efo/EFO_0000433> <http://purl.obolibrary.org/obo/PATO_0001309>)   # duration
+      (<http://www.ebi.ac.uk/efo/EFO_0010246> <http://purl.obolibrary.org/obo/PATO_0000427>)   # recurrent
+      (<http://www.ebi.ac.uk/efo/EFO_0001695> <http://purl.obolibrary.org/obo/PATO_0000117>)   # size
+      (<http://www.ebi.ac.uk/efo/EFO_0005135> <http://purl.obolibrary.org/obo/PATO_0001034>)   # strain (organism strain vs mechanical strain)
+      (<http://www.ebi.ac.uk/efo/EFO_0001702> <http://purl.obolibrary.org/obo/PATO_0000146>)   # temperature
+      (<http://www.ebi.ac.uk/efo/EFO_0000721> <http://purl.obolibrary.org/obo/PATO_0000165>)   # time
+      (<http://www.ebi.ac.uk/efo/EFO_0001715> <http://purl.obolibrary.org/obo/PATO_0000918>)   # volume
+      (<http://purl.obolibrary.org/obo/BFO_0000019> <http://purl.obolibrary.org/obo/PATO_0000001>)   # quality (BFO vs PATO root)
+      (<http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/PATO_0001414>)   # catalytic activity (GO function vs PATO quality)
+      (<http://purl.obolibrary.org/obo/EO_0007337> <http://purl.obolibrary.org/obo/NCBITaxon_6231>)   # Nematoda (plant environment vs taxon)
+      (<http://purl.obolibrary.org/obo/PO_0009005> <http://purl.obolibrary.org/obo/NCBITaxon_1>)   # root (plant organ vs taxonomy root)
+      # EFO or Orphanet classes that duplicate an imported term, listed for curation in
+      # EBISPOT/efo#2804 (most want obsoletion with replaced_by; HP/Orphanet pairs are
+      # phenotype-vs-disease homonyms). Remove an entry once its term is curated.
+      (<http://www.ebi.ac.uk/efo/EFO_0004417> <http://purl.obolibrary.org/obo/CHEBI_32988>)   # amide
+      (<http://www.ebi.ac.uk/efo/EFO_0004416> <http://purl.obolibrary.org/obo/CHEBI_37527>)   # acid
+      (<http://www.ebi.ac.uk/efo/EFO_0003836> <http://purl.obolibrary.org/obo/CHEBI_6495>)   # lipoprotein
+      (<http://www.ebi.ac.uk/efo/EFO_0000586> <http://purl.obolibrary.org/obo/CL_0000134>)   # mesenchymal stem cell
+      (<http://www.ebi.ac.uk/efo/EFO_0005024> <http://purl.obolibrary.org/obo/CL_2000078>)   # placental pericyte
+      (<http://www.ebi.ac.uk/efo/EFO_0005497> <http://purl.obolibrary.org/obo/FBbt_00000487>)   # pharyngeal muscle cell
+      (<http://www.ebi.ac.uk/efo/EFO_0001272> <http://purl.obolibrary.org/obo/FBbt_00003004>)   # adult
+      (<http://www.ebi.ac.uk/efo/EFO_0004315> <http://purl.obolibrary.org/obo/GO_0042756>)   # drinking behavior
+      (<http://www.ebi.ac.uk/efo/EFO_0003925> <http://purl.obolibrary.org/obo/GO_0050890>)   # cognition
+      (<http://www.orpha.net/ORDO/Orphanet_93100> <http://purl.obolibrary.org/obo/HP_0000122>)   # Unilateral renal agenesis
+      (<http://www.orpha.net/ORDO/Orphanet_98613> <http://purl.obolibrary.org/obo/HP_0000524>)   # Conjunctival telangiectasia
+      (<http://www.orpha.net/ORDO/Orphanet_98671> <http://purl.obolibrary.org/obo/HP_0001138>)   # Optic neuropathy
+      (<http://www.orpha.net/ORDO/Orphanet_2128> <http://purl.obolibrary.org/obo/HP_0001528>)   # Hemihypertrophy
+      (<http://www.orpha.net/ORDO/Orphanet_289899> <http://purl.obolibrary.org/obo/HP_0001992>)   # Organic aciduria
+      (<http://www.orpha.net/ORDO/Orphanet_93957> <http://purl.obolibrary.org/obo/HP_0002451>)   # Limb dystonia
+      (<http://www.orpha.net/ORDO/Orphanet_206966> <http://purl.obolibrary.org/obo/HP_0003737>)   # Mitochondrial myopathy
+      (<http://www.orpha.net/ORDO/Orphanet_238583> <http://purl.obolibrary.org/obo/HP_0004923>)   # Hyperphenylalaninemia
+      (<http://www.orpha.net/ORDO/Orphanet_199241> <http://purl.obolibrary.org/obo/HP_0005954>)   # Pulmonary capillary hemangiomatosis
+      (<http://www.orpha.net/ORDO/Orphanet_93172> <http://purl.obolibrary.org/obo/HP_0008718>)   # Unilateral renal dysplasia
+      (<http://www.orpha.net/ORDO/Orphanet_2224> <http://purl.obolibrary.org/obo/HP_0500134>)   # Hypertryptophanemia
+      (<http://www.ebi.ac.uk/efo/EFO_1001201> <http://purl.obolibrary.org/obo/MONDO_0002687>)   # superior mesenteric artery syndrome
+      (<http://www.ebi.ac.uk/efo/EFO_1000908> <http://purl.obolibrary.org/obo/MONDO_0002688>)   # duodenal obstruction
+      (<http://www.ebi.ac.uk/efo/EFO_1000804> <http://purl.obolibrary.org/obo/MONDO_0003045>)   # anal gland neoplasm
+      (<http://www.ebi.ac.uk/efo/EFO_1001768> <http://purl.obolibrary.org/obo/MONDO_0043523>)   # cadmium poisoning
+      (<http://www.ebi.ac.uk/efo/EFO_1001792> <http://purl.obolibrary.org/obo/MONDO_0043589>)   # femoral neck fracture
+      (<http://www.ebi.ac.uk/efo/EFO_1002021> <http://purl.obolibrary.org/obo/MONDO_0043895>)   # ankle injury
+      (<http://www.ebi.ac.uk/efo/EFO_0010581> <http://purl.obolibrary.org/obo/MONDO_0800386>)   # organophosphate poisoning
+      (<http://www.ebi.ac.uk/efo/EFO_0008527> <http://purl.obolibrary.org/obo/MPATH_622>)   # steatosis
+      (<http://www.ebi.ac.uk/efo/EFO_0009659> <http://purl.obolibrary.org/obo/MPATH_90>)   # aneurysm
+      (<http://www.ebi.ac.uk/efo/EFO_0003015> <http://purl.obolibrary.org/obo/NBO_0000015>)   # aggressive behavior
+      (<http://www.ebi.ac.uk/efo/EFO_0003858> <http://purl.obolibrary.org/obo/OBA_0002342>)   # skeleton structure
+      (<http://www.ebi.ac.uk/efo/EFO_0001369> <http://purl.obolibrary.org/obo/OBA_0002827>)   # vertebral column structure
+      (<http://www.ebi.ac.uk/efo/EFO_0004348> <http://purl.obolibrary.org/obo/OBA_2045381>)   # hematocrit
+      (<http://www.ebi.ac.uk/efo/EFO_0004841> <http://purl.obolibrary.org/obo/OBA_2045459>)   # digit length ratio
+      (<http://www.ebi.ac.uk/efo/EFO_0009884> <http://purl.obolibrary.org/obo/OBA_2050350>)   # urinary sodium to potassium ratio
+      (<http://www.ebi.ac.uk/efo/EFO_0007664> <http://purl.obolibrary.org/obo/OBA_VT0002177>)   # outer ear morphology trait
+      (<http://www.ebi.ac.uk/efo/EFO_0004201> <http://purl.obolibrary.org/obo/OBI_0000703>)   # Illumina Genome Analyzer II
+      (<http://www.ebi.ac.uk/efo/EFO_0002909> <http://purl.obolibrary.org/obo/OBI_0002119>)   # microscopy assay
+      (<http://www.ebi.ac.uk/efo/EFO_0004443> <http://purl.obolibrary.org/obo/OBI_0002989>)   # material supplier
+      (<http://www.ebi.ac.uk/efo/EFO_0001458> <http://purl.obolibrary.org/obo/OBI_2100023>)   # protein assay
+      (<http://www.ebi.ac.uk/efo/EFO_0004014> <http://purl.obolibrary.org/obo/SO_0000159>)   # deletion
+      (<http://www.ebi.ac.uk/efo/EFO_0004420> <http://purl.obolibrary.org/obo/SO_0001026>)   # genome
+      (<http://www.ebi.ac.uk/efo/EFO_0007725> <http://purl.obolibrary.org/obo/UBERON_0000068>)   # embryo stage
+      (<http://www.ebi.ac.uk/efo/EFO_0700121> <http://purl.obolibrary.org/obo/UBERON_0013766>)   # epicanthal fold
+    }
+    FILTER ((?cls1 = ?a && ?cls2 = ?b) || (?cls1 = ?b && ?cls2 = ?a))
+  }
 }

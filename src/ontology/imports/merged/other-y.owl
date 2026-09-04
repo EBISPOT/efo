@@ -1,0 +1,44 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/other-y.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/other-y.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/other-y.owl>
+
+Declaration(Class(<http://dbpedia.org/resource/Western_Asia>))
+Declaration(Class(<http://dbpedia.org/resource/Yemen>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GAZ_00000448>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HANCESTRO_0002>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001025>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_yeast>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_yeast> (<http://purl.obolibrary.org/obo/go#goslim_yeast>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_yeast> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://dbpedia.org/resource/Yemen> (Yemen)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://dbpedia.org/resource/Yemen> "GAZ:00005284")
+AnnotationAssertion(rdfs:label <http://dbpedia.org/resource/Yemen> "Yemen"@en)
+SubClassOf(<http://dbpedia.org/resource/Yemen> <http://purl.obolibrary.org/obo/GAZ_00000448>)
+SubClassOf(<http://dbpedia.org/resource/Yemen> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://dbpedia.org/resource/Western_Asia>))
+SubClassOf(<http://dbpedia.org/resource/Yemen> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/HANCESTRO_0002>))
+
+
+)

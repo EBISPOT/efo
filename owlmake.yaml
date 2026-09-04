@@ -1,4 +1,4 @@
-min_owlmake_version: 0.2.4
+min_owlmake_version: 0.2.12
 id: efo
 version: 3.93.0
 version_file: src/ontology/version.txt
@@ -17,46 +17,6 @@ imports:
     copy_ontology_annotations: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/mondo_import.owl
-  - op: round-trip
-    output: src/ontology/imports/mondo_import.owl.tmp.owl
-  - op: query
-    selects:
-    - query: src/sparql/hgnc_terms.sparql
-      output: src/ontology/imports/mondo_import.owl.hgnc.tsv
-    may_fail: true
-  - op: branch
-    if:
-      condition: file_non_empty
-      filename: src/ontology/imports/mondo_import.owl.hgnc.tsv
-    then:
-    - op: shell
-      command: tail -n +2 src/ontology/imports/mondo_import.owl.hgnc.tsv | sed 's/[<>]//g' | grep -v '^$' > src/ontology/imports/mondo_import.owl.hgnc.txt
-    - op: branch
-      if:
-        condition: file_non_empty
-        filename: src/ontology/imports/mondo_import.owl.hgnc.txt
-      then:
-      - op: shell
-        command: echo "Auto-excluding $(wc -l < imports/mondo_import.owl.hgnc.txt | tr -d ' ') HGNC terms from mondo import"
-      - op: append
-        src:
-        - src/ontology/imports/mondo_import.owl.hgnc.txt
-        dst: src/ontology/iri_dependencies/mondo_exclude.txt
-      - op: sort
-        input: src/ontology/iri_dependencies/mondo_exclude.txt
-        output: src/ontology/iri_dependencies/mondo_exclude.txt
-        unique: true
-  - op: remove-terms
-    terms:
-    - rdfs:comment
-    term_files:
-    - src/ontology/iri_dependencies/mondo_exclude.txt
-  - op: remove-file
-    paths:
-    - src/ontology/imports/mondo_import.owl.tmp.owl
-    - src/ontology/imports/mondo_import.owl.hgnc.tsv
-    - src/ontology/imports/mondo_import.owl.hgnc.txt
-    force: true
   product:
     id: mondo
     mirror_from: http://purl.obolibrary.org/obo/mondo/mondo-base.owl
@@ -77,15 +37,17 @@ imports:
     copy_ontology_annotations: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/hancestro_import.owl
-  - op: remove-terms
-    term_files:
-    - src/ontology/iri_dependencies/hancestro_exclude.txt
   product:
     id: hancestro
     mirror_from: https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/HANCESTRO_
+    - http://purl.obolibrary.org/obo/AfPO_
+    - http://purl.obolibrary.org/obo/GAZ_
+    - http://purl.obolibrary.org/obo/NCIT_C25464
+    - http://dbpedia.org/resource/
     mirror_type: null
     is_large: false
 - id: uberon
@@ -109,15 +71,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/uberon_import.owl
   product:
     id: uberon
     mirror_from: http://purl.obolibrary.org/obo/uberon.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/UBERON_
     mirror_type: null
     is_large: false
 - id: po
@@ -130,15 +93,12 @@ imports:
     - src/ontology/iri_dependencies/po_terms.txt
     - src/ontology/iri_dependencies/efo-relations.txt
     copy_ontology_annotations: false
-  - op: query
-    updates:
-    - src/sparql/po-import-unique-labels.ru
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/po_import.owl
   product:
     id: po
     mirror_from: http://purl.obolibrary.org/obo/po.owl
-    make_base: false
+    make_base: true
     use_base: false
     base_iris: []
     mirror_type: null
@@ -164,15 +124,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/hp_import.owl
   product:
     id: hp
     mirror_from: http://purl.obolibrary.org/obo/hp.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/HP_
     mirror_type: null
     is_large: false
 - id: cl
@@ -196,15 +157,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/cl_import.owl
   product:
     id: cl
     mirror_from: http://purl.obolibrary.org/obo/cl.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/CL_
     mirror_type: null
     is_large: false
 - id: fbbt
@@ -228,20 +190,28 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/fbbt_import.owl
   product:
     id: fbbt
     mirror_from: http://purl.obolibrary.org/obo/fbbt.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/FBbt_
     mirror_type: null
     is_large: false
 - id: obi
   source: http://purl.obolibrary.org/obo/obi.owl
   output: src/ontology/imports/obi_import.owl
+  mirror_steps:
+  - op: remove-terms
+    axioms:
+    - ObjectPropertyDomain
+    - ObjectPropertyRange
+  - op: round-trip
+    output: src/ontology/mirror/obi.owl
   steps:
   - op: extract
     method: BOT
@@ -260,15 +230,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/obi_import.owl
   product:
     id: obi
     mirror_from: http://purl.obolibrary.org/obo/obi.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/OBI_
     mirror_type: null
     is_large: false
 - id: oba
@@ -294,15 +265,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/oba_import.owl
   product:
     id: oba
     mirror_from: http://purl.obolibrary.org/obo/oba.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/OBA_
     mirror_type: null
     is_large: false
 - id: chebi
@@ -326,20 +298,21 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/chebi_import.owl
   product:
     id: chebi
     mirror_from: http://purl.obolibrary.org/obo/chebi.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/CHEBI_
     mirror_type: null
     is_large: false
 - id: pr
   source: http://purl.obolibrary.org/obo/pr.owl
-  output: src/ontology/imports/pr_import.owl
+  output: src/ontology/imports/pr_import.owl.gz
   steps:
   - op: extract
     method: BOT
@@ -361,7 +334,7 @@ imports:
     make_base: false
     use_base: false
     base_iris: []
-    mirror_type: null
+    mirror_type: custom
     is_large: false
 - id: go
   source: http://purl.obolibrary.org/obo/go.owl
@@ -384,15 +357,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/go_import.owl
   product:
     id: go
     mirror_from: http://purl.obolibrary.org/obo/go.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/GO_
     mirror_type: null
     is_large: false
 - id: ecto
@@ -416,15 +390,16 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/ecto_import.owl
   product:
     id: ecto
     mirror_from: http://purl.obolibrary.org/obo/ecto.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/ECTO_
     mirror_type: null
     is_large: false
 - id: gsso
@@ -457,7 +432,7 @@ imports:
     make_base: false
     use_base: false
     base_iris: []
-    mirror_type: null
+    mirror_type: custom
     is_large: false
 - id: fbbi
   source: http://purl.obolibrary.org/obo/fbbi.owl
@@ -480,15 +455,367 @@ imports:
     selects:
     - annotations ontology anonymous self
     signature: true
-    trim: true
+    trim: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/fbbi_import.owl
   product:
     id: fbbi
     mirror_from: http://purl.obolibrary.org/obo/fbbi.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
+    base_iris:
+    - http://purl.obolibrary.org/obo/FBbi_
+    mirror_type: null
+    is_large: false
+- id: pato
+  source: http://purl.obolibrary.org/obo/pato.owl
+  output: src/ontology/imports/pato_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/pato_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/pato_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/pato_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/pato_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/pato_import.owl
+  product:
+    id: pato
+    mirror_from: http://purl.obolibrary.org/obo/pato.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/PATO_
+    mirror_type: null
+    is_large: false
+- id: ncbitaxon
+  source: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
+  output: src/ontology/imports/ncbitaxon_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/ncbitaxon_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/ncbitaxon_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/ncbitaxon_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/ncbitaxon_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/ncbitaxon_import.owl
+  product:
+    id: ncbitaxon
+    mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/NCBITaxon_
+    mirror_type: null
+    is_large: false
+- id: nbo
+  source: http://purl.obolibrary.org/obo/nbo.owl
+  output: src/ontology/imports/nbo_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/nbo_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/nbo_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/nbo_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/nbo_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/nbo_import.owl
+  product:
+    id: nbo
+    mirror_from: http://purl.obolibrary.org/obo/nbo.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/NBO_
+    mirror_type: null
+    is_large: false
+- id: mpath
+  source: http://purl.obolibrary.org/obo/mpath.owl
+  output: src/ontology/imports/mpath_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/mpath_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/mpath_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/mpath_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/mpath_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/mpath_import.owl
+  product:
+    id: mpath
+    mirror_from: http://purl.obolibrary.org/obo/mpath.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/MPATH_
+    mirror_type: null
+    is_large: false
+- id: bfo
+  source: http://purl.obolibrary.org/obo/bfo.owl
+  output: src/ontology/imports/bfo_import.owl
+  mirror_steps:
+  - op: remove-terms
+    axioms:
+    - DisjointClasses
+  - op: round-trip
+    output: src/ontology/mirror/bfo.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/bfo_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/bfo_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/bfo_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/bfo_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/bfo_import.owl
+  product:
+    id: bfo
+    mirror_from: http://purl.obolibrary.org/obo/bfo.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/BFO_
+    mirror_type: null
+    is_large: false
+- id: cob
+  source: http://purl.obolibrary.org/obo/cob.owl
+  output: src/ontology/imports/cob_import.owl
+  mirror_steps:
+  - op: remove-terms
+    axioms:
+    - ObjectPropertyDomain
+    - ObjectPropertyRange
+  - op: round-trip
+    output: src/ontology/mirror/cob.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/cob_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/cob_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/cob_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/cob_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/cob_import.owl
+  product:
+    id: cob
+    mirror_from: http://purl.obolibrary.org/obo/cob.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/COB_
+    mirror_type: null
+    is_large: false
+- id: iao
+  source: http://purl.obolibrary.org/obo/iao.owl
+  output: src/ontology/imports/iao_import.owl
+  mirror_steps:
+  - op: remove-terms
+    axioms:
+    - ObjectPropertyDomain
+    - ObjectPropertyRange
+  - op: round-trip
+    output: src/ontology/mirror/iao.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/iao_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/iao_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/iao_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/iao_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/iao_import.owl
+  product:
+    id: iao
+    mirror_from: http://purl.obolibrary.org/obo/iao.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/IAO_
+    mirror_type: null
+    is_large: false
+- id: so
+  source: http://purl.obolibrary.org/obo/so.owl
+  output: src/ontology/imports/so_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/so_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/so_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/so_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/so_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/so_import.owl
+  product:
+    id: so
+    mirror_from: http://purl.obolibrary.org/obo/so.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/SO_
+    mirror_type: null
+    is_large: false
+- id: exo
+  source: http://purl.obolibrary.org/obo/exo.owl
+  output: src/ontology/imports/exo_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/exo_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/exo_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/exo_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/exo_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/exo_import.owl
+  product:
+    id: exo
+    mirror_from: http://purl.obolibrary.org/obo/exo.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - http://purl.obolibrary.org/obo/ExO_
+    mirror_type: null
+    is_large: false
+- id: swisslipids
+  source: https://raw.githubusercontent.com/obophenotype/bio-attribute-ontology/master/src/ontology/imports/merged_import.owl
+  output: src/ontology/imports/swisslipids_import.owl
+  steps:
+  - op: extract
+    method: BOT
+    term_files:
+    - src/ontology/iri_dependencies/swisslipids_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    copy_ontology_annotations: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/swisslipids_bot.owl
+  - op: round-trip
+    output: src/ontology/imports/swisslipids_bot.owl
+  - op: filter
+    term_files:
+    - src/ontology/iri_dependencies/swisslipids_terms.txt
+    - src/ontology/iri_dependencies/efo-relations.txt
+    selects:
+    - annotations ontology anonymous self
+    signature: true
+    trim: false
+  - op: annotate
+    ontology_iri: http://www.ebi.ac.uk/efo/imports/swisslipids_import.owl
+  product:
+    id: swisslipids
+    mirror_from: https://raw.githubusercontent.com/obophenotype/bio-attribute-ontology/master/src/ontology/imports/merged_import.owl
+    make_base: true
+    use_base: false
+    base_iris:
+    - https://swisslipids.org/rdf/SLM_
+    - 'https://bioregistry.io/lipidmaps:'
     mirror_type: null
     is_large: false
 components:
@@ -524,8 +851,17 @@ transient_targets:
 - src/ontology/imports/fbbt_bot.owl
 - src/ontology/imports/go_bot.owl
 - src/ontology/imports/gsso_bot.owl
+- src/ontology/imports/pato_bot.owl
+- src/ontology/imports/ncbitaxon_bot.owl
+- src/ontology/imports/nbo_bot.owl
+- src/ontology/imports/mpath_bot.owl
+- src/ontology/imports/bfo_bot.owl
+- src/ontology/imports/cob_bot.owl
+- src/ontology/imports/iao_bot.owl
+- src/ontology/imports/so_bot.owl
+- src/ontology/imports/exo_bot.owl
+- src/ontology/imports/swisslipids_bot.owl
 - src/ontology/imports/hp_bot.owl
-- src/ontology/imports/mondo_import.owl.tmp.owl
 - src/ontology/imports/obi_bot.owl
 native_targets:
 - mirror-chebi
@@ -535,6 +871,16 @@ native_targets:
 - mirror-fbbt
 - mirror-go
 - mirror-gsso
+- mirror-pato
+- mirror-ncbitaxon
+- mirror-nbo
+- mirror-mpath
+- mirror-bfo
+- mirror-cob
+- mirror-iao
+- mirror-so
+- mirror-exo
+- mirror-swisslipids
 - mirror-hancestro
 - mirror-hp
 - mirror-mondo
@@ -550,6 +896,16 @@ native_targets:
 - src/ontology/mirror/fbbt.owl
 - src/ontology/mirror/go.owl
 - src/ontology/mirror/gsso.owl
+- src/ontology/mirror/pato.owl
+- src/ontology/mirror/ncbitaxon.owl
+- src/ontology/mirror/nbo.owl
+- src/ontology/mirror/mpath.owl
+- src/ontology/mirror/bfo.owl
+- src/ontology/mirror/cob.owl
+- src/ontology/mirror/iao.owl
+- src/ontology/mirror/so.owl
+- src/ontology/mirror/exo.owl
+- src/ontology/mirror/swisslipids.owl
 - src/ontology/mirror/hancestro.owl
 - src/ontology/mirror/hp.owl
 - src/ontology/mirror/mondo.owl
@@ -558,6 +914,73 @@ native_targets:
 - src/ontology/mirror/pr.owl
 - src/ontology/mirror/uberon.owl
 - src/ontology/mirror/po.owl
+use_base_merging: true
+merged_import: src/ontology/imports/merged_import.owl
+merged_import_iri: http://www.ebi.ac.uk/efo/imports/merged_import.owl
+merged_import_shards: src/ontology/imports/merged
+exclude_iri_patterns:
+- http://purl.obolibrary.org/obo/OBA_VT0002200
+- http://purl.obolibrary.org/obo/HP_0000001
+- http://purl.obolibrary.org/obo/NCIT_*
+- http://semanticscience.org/resource/SIO_*
+- http://purl.obolibrary.org/obo/ENVO_*
+- http://purl.obolibrary.org/obo/CLM_*
+- http://purl.obolibrary.org/obo/CARO_*
+- http://purl.obolibrary.org/obo/CHMO_*
+- http://purl.obolibrary.org/obo/FOODON_*
+- http://purl.obolibrary.org/obo/IDO_*
+- http://purl.obolibrary.org/obo/HsapDv_*
+- http://purl.obolibrary.org/obo/RnorDv_*
+- http://flybase.org/reports/*
+- http://purl.bioontology.org/*
+- http://purl.org/linguistics/gold/*
+- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass
+- http://purl.obolibrary.org/obo/RO_0002577
+- http://identifiers.org/hgnc/*
+- http://purl.obolibrary.org/obo/CHR_*
+- http://purl.obolibrary.org/obo/MAXO_*
+- http://purl.obolibrary.org/obo/MF_*
+- http://purl.obolibrary.org/obo/MFOMD_*
+- http://purl.obolibrary.org/obo/MONDO_0001384
+- http://purl.obolibrary.org/obo/MONDO_0000249
+- http://purl.obolibrary.org/obo/MONDO_0000746
+- http://purl.obolibrary.org/obo/MONDO_0000888
+- http://purl.obolibrary.org/obo/MONDO_0001071
+- http://purl.obolibrary.org/obo/MONDO_0001150
+- http://purl.obolibrary.org/obo/MONDO_0001273
+- http://purl.obolibrary.org/obo/MONDO_0001411
+- http://purl.obolibrary.org/obo/MONDO_0001609
+- http://purl.obolibrary.org/obo/MONDO_0002049
+- http://purl.obolibrary.org/obo/MONDO_0002155
+- http://purl.obolibrary.org/obo/MONDO_0002251
+- http://purl.obolibrary.org/obo/MONDO_0002267
+- http://purl.obolibrary.org/obo/MONDO_0002442
+- http://purl.obolibrary.org/obo/MONDO_0002637
+- http://purl.obolibrary.org/obo/MONDO_0002770
+- http://purl.obolibrary.org/obo/MONDO_0002803
+- http://purl.obolibrary.org/obo/MONDO_0003432
+- http://purl.obolibrary.org/obo/MONDO_0003634
+- http://purl.obolibrary.org/obo/MONDO_0003664
+- http://purl.obolibrary.org/obo/MONDO_0003785
+- http://purl.obolibrary.org/obo/MONDO_0004747
+- http://purl.obolibrary.org/obo/MONDO_0006788
+- http://purl.obolibrary.org/obo/MONDO_0006872
+- http://purl.obolibrary.org/obo/MONDO_0009369
+- http://purl.obolibrary.org/obo/MONDO_0011827
+- http://purl.obolibrary.org/obo/MONDO_0015610
+- http://purl.obolibrary.org/obo/MONDO_0015790
+- http://purl.obolibrary.org/obo/MONDO_0016225
+- http://purl.obolibrary.org/obo/MONDO_0017142
+- http://purl.obolibrary.org/obo/MONDO_0018381
+- http://purl.obolibrary.org/obo/MONDO_0019590
+- http://purl.obolibrary.org/obo/MONDO_0020186
+- http://purl.obolibrary.org/obo/MONDO_0020579
+- http://purl.obolibrary.org/obo/MONDO_0024238
+- http://purl.obolibrary.org/obo/MONDO_0024288
+- http://purl.obolibrary.org/obo/MONDO_0024583
+- http://purl.obolibrary.org/obo/MONDO_0054868
+- http://purl.obolibrary.org/obo/MONDO_0700096
+- http://purl.obolibrary.org/obo/PR_000011380
 edit_file: src/ontology/efo-edit.owl
 catalog_file: src/ontology/catalog-v001.xml
 emulate_robot_version: 1.9.7
@@ -579,6 +1002,16 @@ refresh_groups:
   - src/ontology/mirror/go.owl
   - src/ontology/mirror/ecto.owl
   - src/ontology/mirror/gsso.owl
+  - src/ontology/mirror/pato.owl
+  - src/ontology/mirror/ncbitaxon.owl
+  - src/ontology/mirror/nbo.owl
+  - src/ontology/mirror/mpath.owl
+  - src/ontology/mirror/bfo.owl
+  - src/ontology/mirror/cob.owl
+  - src/ontology/mirror/iao.owl
+  - src/ontology/mirror/so.owl
+  - src/ontology/mirror/exo.owl
+  - src/ontology/mirror/swisslipids.owl
   - src/ontology/mirror/fbbi.owl
   - src/ontology/mirror/phenotype.hpoa
   - src/ontology/mirror/mondo-owl.owl
@@ -586,21 +1019,7 @@ refresh_groups:
 - name: imports
   flag: IMP
   targets:
-  - src/ontology/imports/mondo_import.owl
-  - src/ontology/imports/hancestro_import.owl
-  - src/ontology/imports/uberon_import.owl
-  - src/ontology/imports/po_import.owl
-  - src/ontology/imports/hp_import.owl
-  - src/ontology/imports/cl_import.owl
-  - src/ontology/imports/fbbt_import.owl
-  - src/ontology/imports/obi_import.owl
-  - src/ontology/imports/oba_import.owl
-  - src/ontology/imports/chebi_import.owl
-  - src/ontology/imports/pr_import.owl
-  - src/ontology/imports/go_import.owl
-  - src/ontology/imports/ecto_import.owl
-  - src/ontology/imports/gsso_import.owl
-  - src/ontology/imports/fbbi_import.owl
+  - src/ontology/imports/merged_import.owl
   - check_mondo_obsoletes
   - src/ontology/components/d2p_hpoa.ttl
   - src/ontology/components/d2p_mondo-owl.ttl
@@ -612,23 +1031,9 @@ variables:
   SRC: src/ontology/efo-edit.owl
 prerequisites:
 - target: all_imports
-  input: src/ontology/imports/mondo_import.owl
+  input: src/ontology/imports/merged_import.owl
   needs:
-  - src/ontology/imports/mondo_import.owl
-  - src/ontology/imports/hancestro_import.owl
-  - src/ontology/imports/uberon_import.owl
-  - src/ontology/imports/po_import.owl
-  - src/ontology/imports/hp_import.owl
-  - src/ontology/imports/cl_import.owl
-  - src/ontology/imports/fbbt_import.owl
-  - src/ontology/imports/obi_import.owl
-  - src/ontology/imports/oba_import.owl
-  - src/ontology/imports/chebi_import.owl
-  - src/ontology/imports/pr_import.owl
-  - src/ontology/imports/go_import.owl
-  - src/ontology/imports/ecto_import.owl
-  - src/ontology/imports/gsso_import.owl
-  - src/ontology/imports/fbbi_import.owl
+  - src/ontology/imports/merged_import.owl
   steps: []
 - target: src/ontology/components/gwas_template.owl
   input: src/ontology/efo-edit.owl
@@ -912,7 +1317,7 @@ prerequisites:
   input: src/ontology/efo-edit.owl
   needs:
   - src/ontology/efo-edit.owl
-  - src/ontology/imports/mondo_import.owl
+  - src/ontology/imports/merged_import.owl
   steps:
   - op: mint
     temp_id_prefix: http://www.ebi.ac.uk/efo/EFO_099
@@ -1896,7 +2301,7 @@ artefacts:
   input: src/ontology/efo-edit.owl
   needs:
   - src/ontology/efo-edit.owl
-  - src/ontology/imports/mondo_import.owl
+  - src/ontology/imports/merged_import.owl
   steps:
   - op: merge
     inputs:

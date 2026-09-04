@@ -1,0 +1,38 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/other-1.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/other-1.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/other-1.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+Declaration(Class(<http://purl.obolibrary.org/obo/SO_0001217>))
+Declaration(Class(<http://www.ncbi.nlm.nih.gov/gene/140606>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002160>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.ncbi.nlm.nih.gov/gene/140606> (SELM (human))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://www.ncbi.nlm.nih.gov/gene/140606> "A protein coding gene SELM in human.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://www.ncbi.nlm.nih.gov/gene/140606> "gene")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://www.ncbi.nlm.nih.gov/gene/140606> "NCBIGene:140606")
+AnnotationAssertion(rdfs:comment <http://www.ncbi.nlm.nih.gov/gene/140606> "Category=external.")
+AnnotationAssertion(rdfs:label <http://www.ncbi.nlm.nih.gov/gene/140606> "SELM (human)")
+SubClassOf(<http://www.ncbi.nlm.nih.gov/gene/140606> <http://purl.obolibrary.org/obo/SO_0001217>)
+SubClassOf(<http://www.ncbi.nlm.nih.gov/gene/140606> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+
+
+)

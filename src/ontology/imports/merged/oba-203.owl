@@ -1,0 +1,45 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/oba-203.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/oba-203.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/oba-203.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_1000459>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2030004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2045413>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0001259>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000125>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002097>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/OBA_2030004> (total skin mass)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBA_2030004> "The mass of a skin of body.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/OBA_2030004> "https://orcid.org/0000-0003-2699-3066")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2030004> "mass of skin of body")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2030004> "mass of the entire skin")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBA_2030004> "total skin mass")
+EquivalentClasses(<http://purl.obolibrary.org/obo/OBA_2030004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000125> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/UBERON_0002097>)))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2030004> <http://purl.obolibrary.org/obo/OBA_1000459>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2030004> <http://purl.obolibrary.org/obo/OBA_2045413>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2030004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/OBA_VT0001259>))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2030004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/UBERON_0002097>))
+
+
+)

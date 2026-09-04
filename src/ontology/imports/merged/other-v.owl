@@ -1,0 +1,70 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/other-v.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/other-v.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/other-v.owl>
+
+Declaration(Class(<http://dbpedia.org/resource/South-Eastern_Asia>))
+Declaration(Class(<http://dbpedia.org/resource/Vietnam>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GAZ_00000448>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HANCESTRO_0002>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001025>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_virus>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#harrisons_view>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#venom_farm_animal>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#venom_large_animal>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/mondo#venom_small_animal>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/so#VAR>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_virus> (<http://purl.obolibrary.org/obo/go#goslim_virus>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_virus> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#harrisons_view> (<http://purl.obolibrary.org/obo/mondo#harrisons_view>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#harrisons_view> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#venom_farm_animal> (<http://purl.obolibrary.org/obo/mondo#venom_farm_animal>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#venom_farm_animal> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#venom_large_animal> (<http://purl.obolibrary.org/obo/mondo#venom_large_animal>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#venom_large_animal> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/mondo#venom_small_animal> (<http://purl.obolibrary.org/obo/mondo#venom_small_animal>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/mondo#venom_small_animal> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/so#VAR> (<http://purl.obolibrary.org/obo/so#VAR>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/so#VAR> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://dbpedia.org/resource/Vietnam> (Vietnam)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://dbpedia.org/resource/Vietnam> "GAZ:00003756")
+AnnotationAssertion(rdfs:label <http://dbpedia.org/resource/Vietnam> "Vietnam"@en)
+SubClassOf(<http://dbpedia.org/resource/Vietnam> <http://purl.obolibrary.org/obo/GAZ_00000448>)
+SubClassOf(<http://dbpedia.org/resource/Vietnam> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://dbpedia.org/resource/South-Eastern_Asia>))
+SubClassOf(<http://dbpedia.org/resource/Vietnam> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/HANCESTRO_0002>))
+
+
+)

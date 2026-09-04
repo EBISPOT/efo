@@ -1,0 +1,72 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/pr-h.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/pr-h.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/pr-h.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000029032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000029067>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000059739>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000060168>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_H3BKT1>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_H3BQW9>))
+Declaration(Class(<http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=44652>))
+Declaration(Class(<http://www.informatics.jax.org/marker/MGI:5621884>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002160>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/pr#has_gene_template>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/PR_H3BKT1> (piRNA-mediated silencing protein C19orf84 homolog (mouse))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:H3BKT1") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_H3BKT1> "A piRNA-mediated silencing protein C19orf84 that is encoded in the genome of mouse.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_H3BKT1> "UniProtKB:H3BKT1")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_H3BKT1> "mC19orf84")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_H3BKT1> "protein")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:H3BKT1") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_H3BKT1> "Gm38999")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:H3BKT1") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_H3BKT1> "Gm52993")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_H3BKT1> "PR:H3BKT1")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_H3BKT1> "Category=organism-gene.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_H3BKT1> "piRNA-mediated silencing protein C19orf84 homolog (mouse)")
+EquivalentClasses(<http://purl.obolibrary.org/obo/PR_H3BKT1> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000060168> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_H3BKT1> <http://purl.obolibrary.org/obo/PR_000029032>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_H3BKT1> <http://purl.obolibrary.org/obo/PR_000060168>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_H3BKT1> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_H3BKT1> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.informatics.jax.org/marker/MGI:5621884>))
+
+# Class: <http://purl.obolibrary.org/obo/PR_H3BQW9> (protein FAM229A (human))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:H3BQW9") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_H3BQW9> "A protein FAM229A that is encoded in the genome of human.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_H3BQW9> "UniProtKB:H3BQW9")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_H3BQW9> "hFAM229A")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_H3BQW9> "protein")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:H3BQW9") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_H3BQW9> "FAM229A")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_H3BQW9> "PR:H3BQW9")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_H3BQW9> "Category=organism-gene.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_H3BQW9> "protein FAM229A (human)")
+EquivalentClasses(<http://purl.obolibrary.org/obo/PR_H3BQW9> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000059739> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_H3BQW9> <http://purl.obolibrary.org/obo/PR_000029067>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_H3BQW9> <http://purl.obolibrary.org/obo/PR_000059739>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_H3BQW9> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_H3BQW9> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=44652>))
+
+
+)
