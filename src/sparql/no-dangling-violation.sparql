@@ -10,5 +10,20 @@ WHERE
   ?cls1 rdfs:subClassOf <http://www.w3.org/2002/07/owl#Thing> . 
   FILTER EXISTS {?cls1 rdfs:subClassOf ?cls3 } .
   FILTER NOT EXISTS {?cls1 owl:deprecated "true"^^xsd:boolean} .
-  FILTER (?cls1 != URI("http://www.ebi.ac.uk/efo/EFO_0000001"))
+  # EFO's root, and the roots of imported ontologies that have no parent in EFO
+  # (BFO entity, GO molecular_function, OGMS disease course, ExO, NBO, MPATH, HP, SO):
+  # expected roots, shown in OLS only behind the all-roots toggle (IAO:0000700).
+  FILTER (?cls1 NOT IN (
+    <http://www.ebi.ac.uk/efo/EFO_0000001>,
+    <http://purl.obolibrary.org/obo/BFO_0000001>,
+    <http://purl.obolibrary.org/obo/GO_0003674>,
+    <http://purl.obolibrary.org/obo/OGMS_0000063>,
+    <http://purl.obolibrary.org/obo/ExO_0000000>,
+    <http://purl.obolibrary.org/obo/ExO_0000001>,
+    <http://purl.obolibrary.org/obo/ExO_0000055>,
+    <http://purl.obolibrary.org/obo/NBO_0000243>,
+    <http://purl.obolibrary.org/obo/MPATH_1000>,
+    <http://purl.obolibrary.org/obo/HP_0032443>,
+    <http://purl.obolibrary.org/obo/SO_0000400>
+  ))
   }
