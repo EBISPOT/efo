@@ -1,4 +1,4 @@
-min_owlmake_version: 0.2.9
+min_owlmake_version: 0.2.10
 id: efo
 version: 3.93.0
 version_file: src/ontology/version.txt
@@ -37,16 +37,18 @@ imports:
     copy_ontology_annotations: false
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/hancestro_import.owl
-  - op: remove-terms
-    term_files:
-    - src/ontology/iri_dependencies/hancestro_exclude.txt
   product:
     id: hancestro
     mirror_from: https://raw.githubusercontent.com/EBISPOT/hancestro/main/hancestro.owl
-    make_base: false
+    make_base: true
     use_base: false
-    base_iris: []
-    mirror_type: custom
+    base_iris:
+    - http://purl.obolibrary.org/obo/HANCESTRO_
+    - http://purl.obolibrary.org/obo/AfPO_
+    - http://purl.obolibrary.org/obo/GAZ_
+    - http://purl.obolibrary.org/obo/NCIT_C25464
+    - http://dbpedia.org/resource/
+    mirror_type: null
     is_large: false
 - id: uberon
   source: http://purl.obolibrary.org/obo/uberon.owl
@@ -91,18 +93,15 @@ imports:
     - src/ontology/iri_dependencies/po_terms.txt
     - src/ontology/iri_dependencies/efo-relations.txt
     copy_ontology_annotations: false
-  - op: query
-    updates:
-    - src/sparql/po-import-unique-labels.ru
   - op: annotate
     ontology_iri: http://www.ebi.ac.uk/efo/imports/po_import.owl
   product:
     id: po
     mirror_from: http://purl.obolibrary.org/obo/po.owl
-    make_base: false
+    make_base: true
     use_base: false
     base_iris: []
-    mirror_type: custom
+    mirror_type: null
     is_large: false
 - id: hp
   source: http://purl.obolibrary.org/obo/hp.owl
