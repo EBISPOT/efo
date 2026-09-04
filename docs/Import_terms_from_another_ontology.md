@@ -73,7 +73,7 @@ because it includes axioms required to preserve the extracted module.
 
 ## MONDO imports
 
-MONDO is one of the ontologies merged into `imports/merged_import.owl.gz`,
+MONDO is one of the ontologies merged into the merged import (`imports/merged_import.owl`, an index over one functional-syntax file per source ontology in `imports/merged/`),
 from `mondo-base.owl`, seeded by `src/ontology/iri_dependencies/mondo_terms.txt`
 like any other import. What EFO deliberately leaves out of it — HGNC gene
 IRIs, chromosome bands, and a short list of MONDO classes EFO models itself —
@@ -81,7 +81,7 @@ is listed in `exclude_iri_patterns` in `owlmake.yaml`, which applies to the
 whole merged module. There is no separate MONDO module to rebuild:
 
 ```bash
-om make imports/merged_import.owl.gz --rebuild mirrors,imports
+om make imports/merged_import.owl --rebuild mirrors,imports
 ```
 
 ## Fixing dangling imported terms

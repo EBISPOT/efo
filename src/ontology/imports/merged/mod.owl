@@ -1,0 +1,162 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/mod.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/mod.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/mod.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00167>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00649>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00670>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00693>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00764>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00818>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00861>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00903>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00908>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_00912>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_01149>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_01155>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_01875>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_02047>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MOD_02051>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000025513>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00000> (protein modification)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00000> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00000> "MOD:00000")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00000> "protein modification")
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00167> (N-asparaginyl-glycosylphosphatidylinositolethanolamine)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00167> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00167> "MOD:00167")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00167> "N-asparaginyl-glycosylphosphatidylinositolethanolamine")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00167> <http://purl.obolibrary.org/obo/MOD_00818>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00167> <http://purl.obolibrary.org/obo/MOD_00903>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00649> (acylated residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00649> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00649> "MOD:00649")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00649> "acylated residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00649> <http://purl.obolibrary.org/obo/MOD_00000>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00649> <http://purl.obolibrary.org/obo/PR_000025513>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00670> (N-acylated residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00670> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00670> "MOD:00670")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00670> "N-acylated residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00670> <http://purl.obolibrary.org/obo/MOD_00649>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00693> (glycosylated residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00693> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00693> "MOD:00693")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00693> "glycosylated residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00693> <http://purl.obolibrary.org/obo/MOD_00764>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00764> (glycoconjugated residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00764> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00764> "MOD:00764")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00764> "glycoconjugated residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00764> <http://purl.obolibrary.org/obo/MOD_00000>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00764> <http://purl.obolibrary.org/obo/PR_000025513>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00818> (glycosylphosphatidylinositolated residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00818> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00818> "MOD:00818")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00818> "glycosylphosphatidylinositolated residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00818> <http://purl.obolibrary.org/obo/MOD_00764>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00818> <http://purl.obolibrary.org/obo/MOD_00861>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00818> <http://purl.obolibrary.org/obo/MOD_01155>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00861> (phosphorus containing modified residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00861> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00861> "MOD:00861")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00861> "phosphorus containing modified residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00861> <http://purl.obolibrary.org/obo/MOD_00000>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00861> <http://purl.obolibrary.org/obo/PR_000025513>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00903> (modified L-asparagine residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00903> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00903> "MOD:00903")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00903> "modified L-asparagine residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00903> <http://purl.obolibrary.org/obo/MOD_00000>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00903> <http://purl.obolibrary.org/obo/PR_000025513>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00908> (modified glycine residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00908> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00908> "MOD:00908")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00908> "modified glycine residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00908> <http://purl.obolibrary.org/obo/MOD_00000>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00908> <http://purl.obolibrary.org/obo/PR_000025513>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_00912> (modified L-lysine residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_00912> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_00912> "MOD:00912")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_00912> "modified L-lysine residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00912> <http://purl.obolibrary.org/obo/MOD_00000>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_00912> <http://purl.obolibrary.org/obo/PR_000025513>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_01149> (sumoylated lysine)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_01149> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_01149> "MOD:01149")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_01149> "sumoylated lysine")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_01149> <http://purl.obolibrary.org/obo/MOD_01875>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_01149> <http://purl.obolibrary.org/obo/MOD_02047>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_01149> <http://purl.obolibrary.org/obo/MOD_02051>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_01155> (lipoconjugated residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_01155> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_01155> "MOD:01155")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_01155> "lipoconjugated residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_01155> <http://purl.obolibrary.org/obo/MOD_00000>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_01155> <http://purl.obolibrary.org/obo/PR_000025513>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_01875> (N6-acylated L-lysine)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_01875> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_01875> "MOD:01875")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_01875> "N6-acylated L-lysine")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_01875> <http://purl.obolibrary.org/obo/MOD_00670>)
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_01875> <http://purl.obolibrary.org/obo/MOD_00912>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_02047> (crosslinked glycine residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_02047> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_02047> "MOD:02047")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_02047> "crosslinked glycine residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_02047> <http://purl.obolibrary.org/obo/MOD_00908>)
+
+# Class: <http://purl.obolibrary.org/obo/MOD_02051> (crosslinked L-lysine residue)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/MOD_02051> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/MOD_02051> "MOD:02051")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MOD_02051> "crosslinked L-lysine residue")
+SubClassOf(<http://purl.obolibrary.org/obo/MOD_02051> <http://purl.obolibrary.org/obo/MOD_00912>)
+
+
+)

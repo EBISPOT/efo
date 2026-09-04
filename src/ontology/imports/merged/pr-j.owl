@@ -1,0 +1,72 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/pr-j.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/pr-j.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/pr-j.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000016756>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000029032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000059810>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_J3QPC3>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_J3S6Y1>))
+Declaration(Class(<http://www.informatics.jax.org/marker/MGI:2671932>))
+Declaration(Class(<http://www.informatics.jax.org/marker/MGI:3041247>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002160>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/pr#has_gene_template>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/PR_J3QPC3> (actin maturation protease (mouse))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:J3QPC3") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_J3QPC3> "An actin maturation protease that is encoded in the genome of mouse.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_J3QPC3> "UniProtKB:J3QPC3")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:J3QPC3") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_J3QPC3> "actin aminopeptidase ACTMAP (mouse)")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_J3QPC3> "mACTMAP")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_J3QPC3> "protein")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:J3QPC3") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_J3QPC3> "Actmap")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_J3QPC3> "PR:J3QPC3")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_J3QPC3> "Category=organism-gene.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_J3QPC3> "actin maturation protease (mouse)")
+EquivalentClasses(<http://purl.obolibrary.org/obo/PR_J3QPC3> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000059810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_J3QPC3> <http://purl.obolibrary.org/obo/PR_000029032>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_J3QPC3> <http://purl.obolibrary.org/obo/PR_000059810>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_J3QPC3> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_J3QPC3> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.informatics.jax.org/marker/MGI:3041247>))
+
+# Class: <http://purl.obolibrary.org/obo/PR_J3S6Y1> (thrombospondin-type laminin G domain and EAR repeat-containing protein (mouse))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:J3S6Y1") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_J3S6Y1> "A protein TSPEAR that is encoded in the genome of mouse.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_J3S6Y1> "UniProtKB:J3S6Y1")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:J3S6Y1") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_J3S6Y1> "TSP-EAR (mouse)")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_J3S6Y1> "mTSPEAR")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_J3S6Y1> "protein")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:J3S6Y1") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_J3S6Y1> "Tnep1")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:J3S6Y1") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_J3S6Y1> "Tspear")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_J3S6Y1> "PR:J3S6Y1")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_J3S6Y1> "Category=organism-gene.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_J3S6Y1> "thrombospondin-type laminin G domain and EAR repeat-containing protein (mouse)")
+EquivalentClasses(<http://purl.obolibrary.org/obo/PR_J3S6Y1> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000016756> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_J3S6Y1> <http://purl.obolibrary.org/obo/PR_000016756>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_J3S6Y1> <http://purl.obolibrary.org/obo/PR_000029032>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_J3S6Y1> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_J3S6Y1> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.informatics.jax.org/marker/MGI:2671932>))
+
+
+)

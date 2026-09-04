@@ -1,0 +1,133 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/oba-202.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/oba-202.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/oba-202.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_25094>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_85750>))
+Declaration(Class(<http://purl.obolibrary.org/obo/HP_0003674>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MONDO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_0100004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_1000617>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2020000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2020001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2020002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2020003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2020004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2020005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2020007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2045035>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2045431>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_2050078>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBA_VT0005311>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000070>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PO_0009011>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000105>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000178>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001977>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002314>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/OBA_2020000> (age of onset of disease)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBA_2020000> "The age at which disease manifestations first appear.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020000> "age at onset of disease")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020000> "age disease symptoms begin")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/OBA_2020000> "oba")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/OBA_2020000> "OBA:2020000")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBA_2020000> "age of onset of disease")
+EquivalentClasses(<http://purl.obolibrary.org/obo/OBA_2020000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/HP_0003674> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/MONDO_0000001>)))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020000> <http://purl.obolibrary.org/obo/HP_0003674>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020000> <http://purl.obolibrary.org/obo/OBA_0000001>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/MONDO_0000001>))
+
+# Class: <http://purl.obolibrary.org/obo/OBA_2020001> (life cycle stage trait)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "obo:oba/patterns/entity_attribute_part_of") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBA_2020001> "The quality of a life cycle stage.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "obo:oba/patterns/entity_attribute_part_of") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020001> "quality of life cycle stage")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/OBA_2020001> "oba")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/OBA_2020001> "OBA:2020001")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBA_2020001> "life cycle stage trait")
+EquivalentClasses(<http://purl.obolibrary.org/obo/OBA_2020001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002314> <http://purl.obolibrary.org/obo/UBERON_0000105>)))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020001> <http://purl.obolibrary.org/obo/OBA_0000001>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002314> <http://purl.obolibrary.org/obo/UBERON_0000105>))
+
+# Class: <http://purl.obolibrary.org/obo/OBA_2020002> (plant structure trait)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "obo:oba/patterns/entity_attribute_part_of") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBA_2020002> "The quality of a plant structure.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "obo:oba/patterns/entity_attribute_part_of") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020002> "quality of plant structure")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/OBA_2020002> "oba")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/OBA_2020002> "OBA:2020002")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBA_2020002> "plant structure trait")
+EquivalentClasses(<http://purl.obolibrary.org/obo/OBA_2020002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002314> <http://purl.obolibrary.org/obo/PO_0009011>)))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020002> <http://purl.obolibrary.org/obo/OBA_0000001>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002314> <http://purl.obolibrary.org/obo/PO_0009011>))
+
+# Class: <http://purl.obolibrary.org/obo/OBA_2020003> (chemical in blood amount)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute_location") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBA_2020003> "The amount of a chemical entity when measured in blood.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute_location") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020003> "blood chemical entity amount")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/OBA_2020003> "oba")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/OBA_2020003> "OBA:2020003")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBA_2020003> "chemical in blood amount")
+EquivalentClasses(<http://purl.obolibrary.org/obo/OBA_2020003> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000178>)))))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020003> <http://purl.obolibrary.org/obo/OBA_0100004>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020003> <http://purl.obolibrary.org/obo/OBA_1000617>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020003> <http://purl.obolibrary.org/obo/PATO_0000070>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/OBA_2045431>))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000178>))))
+
+# Class: <http://purl.obolibrary.org/obo/OBA_2020004> (chemical in serum amount)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute_location") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBA_2020004> "The amount of a chemical entity when measured in blood serum.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute_location") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020004> "blood serum chemical entity amount")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/OBA_2020004> "oba")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/OBA_2020004> "OBA:2020004")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBA_2020004> "chemical in serum amount")
+EquivalentClasses(<http://purl.obolibrary.org/obo/OBA_2020004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001977>)))))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020004> <http://purl.obolibrary.org/obo/OBA_2020003>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001977>))))
+
+# Class: <http://purl.obolibrary.org/obo/OBA_2020005> (lysine in blood amount)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute_location") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBA_2020005> "The amount of a lysine when measured in blood.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute_location") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020005> "blood lysine amount")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBA_2020005> "lysine in blood amount")
+EquivalentClasses(<http://purl.obolibrary.org/obo/OBA_2020005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_25094> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000178>)))))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020005> <http://purl.obolibrary.org/obo/OBA_2050078>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020005> <http://purl.obolibrary.org/obo/OBA_VT0005311>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_25094> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000178>))))
+
+# Class: <http://purl.obolibrary.org/obo/OBA_2020007> (level of triacylglycerol (56:6) in blood serum)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute_location") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBA_2020007> "The amount of a triacylglycerol 56:6 when measured in blood serum.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/entity_attribute_location") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020007> "blood serum triacylglycerol 56:6 amount")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/OBA_2020007> "level of triacylglycerol 56:6 in blood serum")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBA_2020007> "level of triacylglycerol (56:6) in blood serum")
+EquivalentClasses(<http://purl.obolibrary.org/obo/OBA_2020007> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_85750> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001977>)))))
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020007> <http://purl.obolibrary.org/obo/OBA_2045035>)
+SubClassOf(<http://purl.obolibrary.org/obo/OBA_2020007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_85750> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001977>))))
+
+
+)

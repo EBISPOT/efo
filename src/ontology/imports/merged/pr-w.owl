@@ -1,0 +1,50 @@
+Prefix(:=<http://www.ebi.ac.uk/efo/imports/merged/pr-w.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.ebi.ac.uk/efo/imports/merged/pr-w.owl>
+<http://purl.obolibrary.org/obo/efo/releases/3.93.0/imports/merged/pr-w.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000029032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000031067>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_W8DXL4>))
+Declaration(Class(<http://www.informatics.jax.org/marker/MGI:2685267>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002160>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/pr#has_gene_template>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/PR_W8DXL4> (leucine-rich repeat, immunoglobulin-like domain and transmembrane domain-containing protein 3 (mouse))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:W8DXL4") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_W8DXL4> "A leucine-rich repeat, immunoglobulin-like domain and transmembrane domain-containing protein 3 that is encoded in the genome of mouse.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_W8DXL4> "UniProtKB:W8DXL4")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_W8DXL4> "mLRIT3")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_W8DXL4> "protein")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:W8DXL4") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_W8DXL4> "Lrit3")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_W8DXL4> "PR:W8DXL4")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_W8DXL4> "Category=organism-gene.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_W8DXL4> "leucine-rich repeat, immunoglobulin-like domain and transmembrane domain-containing protein 3 (mouse)")
+EquivalentClasses(<http://purl.obolibrary.org/obo/PR_W8DXL4> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000031067> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_W8DXL4> <http://purl.obolibrary.org/obo/PR_000029032>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_W8DXL4> <http://purl.obolibrary.org/obo/PR_000031067>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_W8DXL4> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_W8DXL4> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.informatics.jax.org/marker/MGI:2685267>))
+
+
+)

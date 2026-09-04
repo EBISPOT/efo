@@ -1,4 +1,4 @@
-min_owlmake_version: 0.2.10
+min_owlmake_version: 0.2.11
 id: efo
 version: 3.93.0
 version_file: src/ontology/version.txt
@@ -909,8 +909,9 @@ native_targets:
 - src/ontology/mirror/uberon.owl
 - src/ontology/mirror/po.owl
 use_base_merging: true
-merged_import: src/ontology/imports/merged_import.owl.gz
+merged_import: src/ontology/imports/merged_import.owl
 merged_import_iri: http://www.ebi.ac.uk/efo/imports/merged_import.owl
+merged_import_shards: src/ontology/imports/merged
 exclude_iri_patterns:
 - http://purl.obolibrary.org/obo/OBA_VT0002200
 - http://purl.obolibrary.org/obo/HP_0000001
@@ -1012,7 +1013,7 @@ refresh_groups:
 - name: imports
   flag: IMP
   targets:
-  - src/ontology/imports/merged_import.owl.gz
+  - src/ontology/imports/merged_import.owl
   - check_mondo_obsoletes
   - src/ontology/components/d2p_hpoa.ttl
   - src/ontology/components/d2p_mondo-owl.ttl
@@ -1024,9 +1025,9 @@ variables:
   SRC: src/ontology/efo-edit.owl
 prerequisites:
 - target: all_imports
-  input: src/ontology/imports/merged_import.owl.gz
+  input: src/ontology/imports/merged_import.owl
   needs:
-  - src/ontology/imports/merged_import.owl.gz
+  - src/ontology/imports/merged_import.owl
   steps: []
 - target: src/ontology/components/gwas_template.owl
   input: src/ontology/efo-edit.owl
@@ -1310,7 +1311,7 @@ prerequisites:
   input: src/ontology/efo-edit.owl
   needs:
   - src/ontology/efo-edit.owl
-  - src/ontology/imports/merged_import.owl.gz
+  - src/ontology/imports/merged_import.owl
   steps:
   - op: mint
     temp_id_prefix: http://www.ebi.ac.uk/efo/EFO_099
@@ -2294,7 +2295,7 @@ artefacts:
   input: src/ontology/efo-edit.owl
   needs:
   - src/ontology/efo-edit.owl
-  - src/ontology/imports/merged_import.owl.gz
+  - src/ontology/imports/merged_import.owl
   steps:
   - op: merge
     inputs:
