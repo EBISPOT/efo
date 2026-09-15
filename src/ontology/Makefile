@@ -358,6 +358,7 @@ REPORTS = basic-report class-count-by-prefix edges xrefs obsoletes synonyms obso
 REPORT_ARGS = $(foreach V,$(REPORTS),-s $(SPARQLDIR)/$V.sparql reports/$V.tsv)
 all_reports: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) query -f tsv -i $< $(REPORT_ARGS)
+	python3 ../scripts/canonicalize_basic_report.py reports/basic-report.tsv
 
 # ----------------------------------------
 # Release notes (refs #2826)
