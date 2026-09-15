@@ -3,12 +3,16 @@
 
 Every dynamic section is derived from artifacts of one single build:
 
-  - added / modified / genuinely-deleted classes: the Bubastis diff between the
-    previously *published* efo.owl and this release's build/efo.owl;
+  - added / modified classes: the Bubastis diff between the previously
+    *published* efo.owl and this release's build/efo.owl;
   - obsoleted classes: the delta of the owl:deprecated report (obsoletes.tsv)
     between the previous release and this build — never IRI set-difference,
     so a live class can no longer be reported as deleted;
   - header counts and class count: counted from those same inputs.
+
+The notes report obsoletions only. Classes genuinely absent from the build
+(e.g. merged away upstream) are not published in the notes; they are printed
+to stderr so the release engineer sees them.
 
 The script refuses to write notes whose inputs contradict each other (e.g. a
 "deleted" class that the obsoletes report still sees, which would mean the
@@ -172,7 +176,7 @@ def main():
 
     new_body, new_iris = section("@Classes new to this version")
     mod_body, mod_iris = section("@Classes modified from previous")
-    del_body, del_iris = section("@Classes deleted from this version")
+    _, del_iris = section("@Classes deleted from this version")
 
     for kind, found in (("added", new_iris), ("changed", mod_iris), ("deleted", del_iris)):
         if bub_counts[kind] != len(found):
@@ -199,6 +203,11 @@ def main():
         fail("classes are simultaneously newly obsoleted and new to this version: %s"
              % ", ".join(obsolete_and_new[:5]))
 
+    if del_iris:
+        print("generate_release_notes: NOTE: %d class(es) are gone from this build "
+              "(not published in the notes, which report obsoletions only): %s"
+              % (len(del_iris), ", ".join(del_iris)), file=sys.stderr)
+
     date = args.date or ordinal_date(datetime.date.today())
     replacements = {
         "@@VERSION@@": args.version,
@@ -207,11 +216,9 @@ def main():
         "@@N_CHANGED@@": str(bub_counts["changed"]),
         "@@N_ADDED@@": str(bub_counts["added"]),
         "@@N_OBSOLETED@@": str(len(newly)),
-        "@@N_DELETED@@": str(bub_counts["deleted"]),
         "@@NEW_CLASSES@@": new_body or "None.",
         "@@MODIFIED_CLASSES@@": mod_body or "None.",
         "@@OBSOLETED_CLASSES@@": format_obsoleted(newly, labels),
-        "@@DELETED_CLASSES@@": del_body or "None.",
     }
 
     notes = open(args.template, encoding="utf-8").read()
@@ -226,9 +233,9 @@ def main():
     with open(args.output, "w", encoding="utf-8") as f:
         f.write(notes)
     print("generate_release_notes: wrote %s (version %s: %d added, %d changed, "
-          "%d obsoleted, %d deleted)"
+          "%d obsoleted)"
           % (args.output, args.version, bub_counts["added"], bub_counts["changed"],
-             len(newly), bub_counts["deleted"]))
+             len(newly)))
 
 
 if __name__ == "__main__":
