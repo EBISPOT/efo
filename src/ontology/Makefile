@@ -388,15 +388,21 @@ $(BUILDDIR)/previous-obsoletes.tsv: $(PREVIOUS_RELEASE_OWL)
 $(BUILDDIR)/class-labels.tsv: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/class-labels.sparql $@
 
+# Replacements for classes that vanished from the build (e.g. merged away
+# upstream) are looked up in the pinned MONDO mirror's own obsoletion data.
+$(BUILDDIR)/mondo-mirror-obsoletes.tsv: mirror/mondo.owl
+	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/obsoletes.sparql $@
+
 ifdef RELEASE_DATE
 RELEASE_DATE_ARG = --date "$(RELEASE_DATE)"
 endif
 
-release_notes: $(BUILDDIR)/bubastis_diff.txt $(BUILDDIR)/previous-obsoletes.tsv $(BUILDDIR)/class-labels.tsv
+release_notes: $(BUILDDIR)/bubastis_diff.txt $(BUILDDIR)/previous-obsoletes.tsv $(BUILDDIR)/class-labels.tsv $(BUILDDIR)/mondo-mirror-obsoletes.tsv
 	python3 ../scripts/generate_release_notes.py \
 		--bubastis $(BUILDDIR)/bubastis_diff.txt \
 		--obsoletes reports/obsoletes.tsv \
 		--previous-obsoletes $(BUILDDIR)/previous-obsoletes.tsv \
+		--upstream-obsoletes $(BUILDDIR)/mondo-mirror-obsoletes.tsv \
 		--labels $(BUILDDIR)/class-labels.tsv \
 		--class-counts reports/class-count-by-prefix.tsv \
 		--template ../scripts/release_notes_template.txt \

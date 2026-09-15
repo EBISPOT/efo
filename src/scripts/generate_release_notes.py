@@ -12,7 +12,10 @@ Every dynamic section is derived from artifacts of one single build:
 
 The notes report a single obsoleted list: newly deprecated classes (with
 their replacements) together with classes genuinely absent from the build
-(e.g. merged away upstream), which appear as further obsoleted entries.
+(e.g. merged away upstream), which appear as further obsoleted entries. For
+the latter, the replacement is looked up in the upstream obsoletes table
+(the obsoletes query run over the pinned MONDO mirror), since EFO itself no
+longer records anything about them.
 
 The script refuses to write notes whose inputs contradict each other (e.g. a
 "deleted" class that the obsoletes report still sees, which would mean the
@@ -166,6 +169,10 @@ def main():
                     help="reports/obsoletes.tsv regenerated from this build")
     ap.add_argument("--previous-obsoletes", required=True,
                     help="obsoletes.tsv computed from the previous published efo.owl")
+    ap.add_argument("--upstream-obsoletes", default=None,
+                    help="obsoletes.tsv computed from an upstream mirror (e.g. the "
+                         "pinned mondo-base); used to find replacements for classes "
+                         "that are gone from this build")
     ap.add_argument("--labels", required=True,
                     help="class-labels TSV computed from this build")
     ap.add_argument("--class-counts", required=True,
@@ -228,12 +235,15 @@ def main():
                   file=sys.stderr)
         obsoleted[iri] = (label, repl, cons)
     removed_labels = deleted_labels(del_body)
+    upstream = read_obsoletes(args.upstream_obsoletes) if args.upstream_obsoletes else {}
     for iri in del_iris:
-        obsoleted[iri] = (removed_labels.get(iri, "(no label)"), "", "")
-    if del_iris:
-        print("generate_release_notes: NOTE: %d class(es) are gone from this build and "
-              "are listed as obsoleted without a replacement: %s"
-              % (len(del_iris), ", ".join(del_iris)), file=sys.stderr)
+        repl, cons = upstream.get(iri, ("", ""))
+        obsoleted[iri] = (removed_labels.get(iri, "(no label)"), repl, cons)
+        where = ("replacement %s found upstream" % repl) if repl else \
+                ("consider %s found upstream" % cons) if cons else \
+                "no replacement found upstream"
+        print("generate_release_notes: NOTE: %s is gone from this build; "
+              "listed as obsoleted, %s" % (iri, where), file=sys.stderr)
 
     date = args.date or ordinal_date(datetime.date.today())
     replacements = {
