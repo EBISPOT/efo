@@ -21,7 +21,8 @@ EFO 3.94.0 contains terms to cater for users, such as the GWAS Catalog, Open Tar
 
 Number of classes changed: 103
 Number of classes added: 6
-Number of classes deleted: 2
+Number of classes obsoleted: 2
+Number of classes deleted: 1
  
 
 ----------------------------------
@@ -67,7 +68,6 @@ Label(s): white matter rarefaction
 + 'white matter rarefaction' SubClassOf 'central nervous system disorder'
 + 'white matter rarefaction' SubClassOf 'has_disease_location' some 'brain white matter'
 + 'white matter rarefaction' SubClassOf 'Abnormal cerebral white matter morphology'
-
 
 ----------------------------------
 
@@ -346,6 +346,11 @@ Label(s): Bethlem myopathy
 Class: http://purl.obolibrary.org/obo/MONDO_0100100
 Label(s): SELENON-related myopathy 
 - 'SELENON-related myopathy' SubClassOf 'congenital myopathy'
++ 'SELENON-related myopathy' SubClassOf 'hereditary inclusion-body myopathy'
++ 'SELENON-related myopathy' SubClassOf 'neuromuscular disease caused by qualitative or quantitative defects of selenoprotein N1'
++ 'SELENON-related myopathy' SubClassOf 'rigid spine syndrome'
++ 'SELENON-related myopathy' SubClassOf 'hereditary neuromuscular disease'
++ 'SELENON-related myopathy' SubClassOf 'multiminicore myopathy'
 
 Class: http://purl.obolibrary.org/obo/MONDO_0100121
 Label(s): SCN4A-related myopathy, autosomal recessive 
@@ -561,6 +566,16 @@ Label(s): spinocerebellar ataxia type 2
 
 3. Obsolete Classes in EFO
 
+@Classes obsoleted in this version
+
+Class: http://purl.obolibrary.org/obo/HP_0007476
+Label(s): obsolete Anhidrotic ectodermal dysplasia
+Replaced by: HP:0000968
+
+Class: http://purl.obolibrary.org/obo/MONDO_0019398
+Label(s): obsolete desmin-related myopathy with Mallory body-like inclusions
+Replaced by: http://purl.obolibrary.org/obo/MONDO_0100100
+
 @Classes deleted from this version
 
 Class: http://purl.obolibrary.org/obo/MONDO_0011271
@@ -568,10 +583,6 @@ Label(s): rigid spine muscular dystrophy 1
 + 'rigid spine muscular dystrophy 1' SubClassOf 'SELENON-related myopathy'
 + 'rigid spine muscular dystrophy 1' SubClassOf 'rigid spine syndrome'
 + 'rigid spine muscular dystrophy 1' SubClassOf 'multiminicore myopathy'
-
-Class: http://purl.obolibrary.org/obo/MONDO_0100100
-Label(s): SELENON-related myopathy 
-+ 'SELENON-related myopathy' SubClassOf 'congenital myopathy'
 
 ----------------------------------
 4. Scope of the Ontology
