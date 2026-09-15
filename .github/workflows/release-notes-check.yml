@@ -1,0 +1,53 @@
+# Release-notes consistency gate (refs #2826).
+#
+# On any PR that touches the release notes, rebuild efo.owl strictly from the
+# committed sources (MONDO mirror pinned by mondo_mirror_version.txt),
+# regenerate every report and the notes themselves from that single build, and
+# fail if anything differs from what the PR committed. This makes it
+# impossible to ship notes, reports and ontology artifacts that describe
+# different snapshots — the failure mode behind live classes being announced
+# as deleted.
+
+name: Release notes check
+
+on:
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'ExFactor Ontology release notes.txt'
+
+jobs:
+  release_notes_consistency:
+    runs-on: ubuntu-latest
+    container: obolibrary/odkfull:v1.5.1
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch pinned Mondo mirror
+        run: cd src/ontology && make mirror/mondo.owl
+
+      - name: Rebuild ontology and reports from committed sources
+        run: |
+          cd src/ontology
+          make ROBOT_JAVA_ARGS=-Xmx6G imports/mondo_import.owl
+          make ROBOT_JAVA_ARGS=-Xmx6G build/efo.owl
+          make ROBOT_JAVA_ARGS=-Xmx6G all_reports label_synonym_dup_check
+
+      - name: Regenerate release notes from the same build
+        run: |
+          git config --global --add safe.directory "$PWD"
+          PREV_VERSION=$(git show origin/${{ github.base_ref }}:src/ontology/version.txt | tr -d '[:space:]')
+          RELEASE_DATE=$(sed -n 's/^Date Released: //p' "ExFactor Ontology release notes.txt" | head -1)
+          echo "Previous version: $PREV_VERSION; committed release date: $RELEASE_DATE"
+          cd src/ontology
+          make ROBOT_JAVA_ARGS=-Xmx6G release_notes PREVIOUS_VERSION="$PREV_VERSION" RELEASE_DATE="$RELEASE_DATE"
+
+      - name: Fail if committed notes or reports drift from the rebuild
+        run: |
+          git config --global --add safe.directory "$PWD"
+          git diff --stat -- "ExFactor Ontology release notes.txt" src/ontology/reports/
+          git diff --exit-code -- "ExFactor Ontology release notes.txt" src/ontology/reports/ \
+            || { echo "::error::Committed release notes/reports do not match a clean rebuild from the committed sources. Regenerate them from one build (make all_reports label_synonym_dup_check release_notes) and commit the result."; exit 1; }
