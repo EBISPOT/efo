@@ -49,6 +49,13 @@ gh_actions: qc $(BUILDDIR)/$(ONT).owl
 # Currently obtained using the get_mirrors script
 # (mondo, hancestro and uberon)
 
+# The MONDO mirror is pinned so that the mondo import — the one import module
+# built at CI time rather than committed — is reproducible (refs #2826).
+# Bump mondo_mirror_version.txt to move to a newer MONDO release.
+mirror/mondo.owl: mondo_mirror_version.txt
+	mkdir -p mirror
+	curl -sfL `cat $<` -o $@
+
 # ----------------------------------------
 # Imports
 # ----------------------------------------
@@ -351,6 +358,57 @@ REPORTS = basic-report class-count-by-prefix edges xrefs obsoletes synonyms obso
 REPORT_ARGS = $(foreach V,$(REPORTS),-s $(SPARQLDIR)/$V.sparql reports/$V.tsv)
 all_reports: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) query -f tsv -i $< $(REPORT_ARGS)
+
+# ----------------------------------------
+# Release notes (refs #2826)
+# ----------------------------------------
+# The notes are generated from the same build/efo.owl the reports come from,
+# in one pass: run `make all_reports` first (or let release_notes trigger the
+# build), then
+#
+#   make release_notes PREVIOUS_VERSION=3.93.0 [RELEASE_DATE="15th September 2026"]
+#
+# PREVIOUS_VERSION is the last *published* release; its efo.owl is fetched
+# from the versioned GitHub release so the diff base is pinned. RELEASE_DATE
+# defaults to today. CI regenerates the notes with the committed date and
+# fails if the result differs (.github/workflows/release-notes-check.yml).
+
+PREVIOUS_RELEASE_OWL = $(BUILDDIR)/efo-previous.owl
+
+$(PREVIOUS_RELEASE_OWL):
+	test -n "$(PREVIOUS_VERSION)" || { echo "Set PREVIOUS_VERSION, e.g. make release_notes PREVIOUS_VERSION=3.93.0"; exit 1; }
+	curl -sfL https://github.com/EBISPOT/efo/releases/download/v$(PREVIOUS_VERSION)/efo.owl -o $@
+
+$(BUILDDIR)/bubastis_diff.txt: $(PREVIOUS_RELEASE_OWL) $(BUILDDIR)/$(ONT).owl
+	java -Xmx12G -jar ../../bin/bubastis_1_3.jar -ontology1 $(PREVIOUS_RELEASE_OWL) -ontology2 $(BUILDDIR)/$(ONT).owl -output $@
+
+$(BUILDDIR)/previous-obsoletes.tsv: $(PREVIOUS_RELEASE_OWL)
+	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/obsoletes.sparql $@
+
+$(BUILDDIR)/class-labels.tsv: $(BUILDDIR)/$(ONT).owl
+	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/class-labels.sparql $@
+
+# Replacements for classes that vanished from the build (e.g. merged away
+# upstream) are looked up in the pinned MONDO mirror's own obsoletion data.
+$(BUILDDIR)/mondo-mirror-obsoletes.tsv: mirror/mondo.owl
+	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/obsoletes.sparql $@
+
+ifdef RELEASE_DATE
+RELEASE_DATE_ARG = --date "$(RELEASE_DATE)"
+endif
+
+release_notes: $(BUILDDIR)/bubastis_diff.txt $(BUILDDIR)/previous-obsoletes.tsv $(BUILDDIR)/class-labels.tsv $(BUILDDIR)/mondo-mirror-obsoletes.tsv
+	python3 ../scripts/generate_release_notes.py \
+		--bubastis $(BUILDDIR)/bubastis_diff.txt \
+		--obsoletes reports/obsoletes.tsv \
+		--previous-obsoletes $(BUILDDIR)/previous-obsoletes.tsv \
+		--upstream-obsoletes $(BUILDDIR)/mondo-mirror-obsoletes.tsv \
+		--labels $(BUILDDIR)/class-labels.tsv \
+		--class-counts reports/class-count-by-prefix.tsv \
+		--template ../scripts/release_notes_template.txt \
+		--version `cat version.txt` \
+		$(RELEASE_DATE_ARG) \
+		-o "$(RELEASEDIR)/ExFactor Ontology release notes.txt"
 
 # ----------------------------------------
 # Label/synonym duplicate check
