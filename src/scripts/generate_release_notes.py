@@ -10,9 +10,9 @@ Every dynamic section is derived from artifacts of one single build:
     so a live class can no longer be reported as deleted;
   - header counts and class count: counted from those same inputs.
 
-The notes report obsoletions only. Classes genuinely absent from the build
-(e.g. merged away upstream) are not published in the notes; they are printed
-to stderr so the release engineer sees them.
+The notes report a single obsoleted list: newly deprecated classes (with
+their replacements) together with classes genuinely absent from the build
+(e.g. merged away upstream), which appear as further obsoleted entries.
 
 The script refuses to write notes whose inputs contradict each other (e.g. a
 "deleted" class that the obsoletes report still sees, which would mean the
@@ -117,17 +117,11 @@ def parse_bubastis(path):
     return parsed, counts
 
 
-def format_obsoleted(newly, labels):
+def format_obsoleted(entries):
+    """entries: {iri: (label, repl, consider)} -> one flat obsoleted list."""
     blocks = []
-    for iri in sorted(newly):
-        repl, cons = newly[iri]
-        label_list = labels.get(iri)
-        if label_list:
-            label = ", ".join(sorted(label_list))
-        else:
-            label = "(no label)"
-            print("generate_release_notes: WARNING: no label found for obsoleted class %s" % iri,
-                  file=sys.stderr)
+    for iri in sorted(entries):
+        label, repl, cons = entries[iri]
         block = "Class: %s\nLabel(s): %s" % (iri, label)
         if repl:
             block += "\nReplaced by: %s" % repl
@@ -137,6 +131,22 @@ def format_obsoleted(newly, labels):
             block += "\nReplaced by: none"
         blocks.append(block)
     return "\n\n".join(blocks) if blocks else "None."
+
+
+def deleted_labels(body):
+    """Map Class IRI -> label for the blocks of Bubastis's deleted section."""
+    result = {}
+    current = None
+    for line in body.split("\n"):
+        m = re.match(r"^Class: (\S+)", line)
+        if m:
+            current = m.group(1)
+            continue
+        m = re.match(r"^Label\(s\): (.*?)\s*$", line)
+        if m and current:
+            result[current] = m.group(1)
+            current = None
+    return result
 
 
 def ordinal_date(dt):
@@ -176,7 +186,7 @@ def main():
 
     new_body, new_iris = section("@Classes new to this version")
     mod_body, mod_iris = section("@Classes modified from previous")
-    _, del_iris = section("@Classes deleted from this version")
+    del_body, del_iris = section("@Classes deleted from this version")
 
     for kind, found in (("added", new_iris), ("changed", mod_iris), ("deleted", del_iris)):
         if bub_counts[kind] != len(found):
@@ -203,9 +213,26 @@ def main():
         fail("classes are simultaneously newly obsoleted and new to this version: %s"
              % ", ".join(obsolete_and_new[:5]))
 
+    # One flat obsoleted list: newly deprecated classes, plus classes gone
+    # from the build entirely (e.g. merged away upstream), labelled from the
+    # Bubastis diff since they no longer exist in this build.
+    obsoleted = {}
+    for iri in newly:
+        repl, cons = newly[iri]
+        label_list = labels.get(iri)
+        if label_list:
+            label = ", ".join(sorted(label_list))
+        else:
+            label = "(no label)"
+            print("generate_release_notes: WARNING: no label found for obsoleted class %s" % iri,
+                  file=sys.stderr)
+        obsoleted[iri] = (label, repl, cons)
+    removed_labels = deleted_labels(del_body)
+    for iri in del_iris:
+        obsoleted[iri] = (removed_labels.get(iri, "(no label)"), "", "")
     if del_iris:
-        print("generate_release_notes: NOTE: %d class(es) are gone from this build "
-              "(not published in the notes, which report obsoletions only): %s"
+        print("generate_release_notes: NOTE: %d class(es) are gone from this build and "
+              "are listed as obsoleted without a replacement: %s"
               % (len(del_iris), ", ".join(del_iris)), file=sys.stderr)
 
     date = args.date or ordinal_date(datetime.date.today())
@@ -215,10 +242,10 @@ def main():
         "@@CLASS_COUNT@@": format(read_class_count(args.class_counts), ","),
         "@@N_CHANGED@@": str(bub_counts["changed"]),
         "@@N_ADDED@@": str(bub_counts["added"]),
-        "@@N_OBSOLETED@@": str(len(newly)),
+        "@@N_OBSOLETED@@": str(len(obsoleted)),
         "@@NEW_CLASSES@@": new_body or "None.",
         "@@MODIFIED_CLASSES@@": mod_body or "None.",
-        "@@OBSOLETED_CLASSES@@": format_obsoleted(newly, labels),
+        "@@OBSOLETED_CLASSES@@": format_obsoleted(obsoleted),
     }
 
     notes = open(args.template, encoding="utf-8").read()
@@ -235,7 +262,7 @@ def main():
     print("generate_release_notes: wrote %s (version %s: %d added, %d changed, "
           "%d obsoleted)"
           % (args.output, args.version, bub_counts["added"], bub_counts["changed"],
-             len(newly)))
+             len(obsoleted)))
 
 
 if __name__ == "__main__":
