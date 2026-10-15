@@ -632,6 +632,12 @@ This annotation property may be replaced with an annotation property from an ext
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by">
@@ -673304,9 +673310,9 @@ Use: http://purl.obolibrary.org/obo/HP_0007773</efo:reason_for_obsolescence>
     <!-- http://www.orpha.net/ORDO/Orphanet_98672 -->
 
     <owl:Class rdf:about="http://www.orpha.net/ORDO/Orphanet_98672">
-        <obo:IAO_0100001>http://purl.obolibrary.org/obo/MONDO_0020250</obo:IAO_0100001>
         <efo:obsoleted_in_version>3.44.0</efo:obsoleted_in_version>
-        <efo:reason_for_obsolescence>Replaced with Mondo term. Use: http://purl.obolibrary.org/obo/MONDO_0020250</efo:reason_for_obsolescence>
+        <efo:reason_for_obsolescence>MONDO_0020250 (previous replacement) was obsoleted by Mondo as a grouping term with no replacement (https://github.com/monarch-initiative/mondo/issues/9831). Consider the broader MONDO_0043878 hereditary optic atrophy.</efo:reason_for_obsolescence>
+        <oboInOwl:consider rdf:resource="http://purl.obolibrary.org/obo/MONDO_0043878"/>
         <rdfs:label>obsolete_autosomal dominant optic atrophy</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
