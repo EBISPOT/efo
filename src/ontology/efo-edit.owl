@@ -632,6 +632,12 @@ This annotation property may be replaced with an annotation property from an ext
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by">
@@ -275111,7 +275117,7 @@ ISBN 978-1-60327-285-8</efo:definition_citation>
         <obo:IAO_0000115>An idiopathic, rapidly evolving, and severely debilitating disease occurring most commonly in association with chronic ulcerative colitis. It is characterized by the presence of boggy, purplish ulcers with undermined borders, appearing mostly on the legs. The majority of cases are in people between 40 and 60 years old. Its etiology is unknown.</obo:IAO_0000115>
         <obo:IAO_0000117>Dani Welter</obo:IAO_0000117>
         <obo:IAO_0100001>http://purl.obolibrary.org/obo/MONDO_0018824</obo:IAO_0100001>
-        <efo:obsoleted_in_version>3.94.0</efo:obsoleted_in_version>
+        <efo:obsoleted_in_version>3.95.0</efo:obsoleted_in_version>
         <efo:reason_for_obsolescence>Replaced with Mondo term. Use: http://purl.obolibrary.org/obo/MONDO_0018824</efo:reason_for_obsolescence>
         <oboInOwl:hasDbXref>DOID:8553</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ICD10:L88</oboInOwl:hasDbXref>
@@ -427057,13 +427063,14 @@ Smart-seq3 is a continuation and improvement of the Smart-seq technology, specif
     <!-- http://www.ebi.ac.uk/efo/EFO_0700133 -->
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0700133">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MONDO_0020066"/>
         <obo:IAO_0000115>Kyphoscoliotic EDS (kEDS) is rare. People with kEDS may have: curvature of the spine – this starts in early childhood and often gets worse in the teenage years, joint hypermobility, loose, unstable joints that dislocate easily, weak muscle tone from childhood (hypotonia) – this may cause a delay in sitting and walking, or difficulty walking if symptoms get worse, fragile eyes that can easily be damaged, and soft, velvety skin that is stretchy, bruises easily and scars.</obo:IAO_0000115>
+        <obo:IAO_0100001>http://purl.obolibrary.org/obo/MONDO_7770749</obo:IAO_0100001>
+        <efo:obsoleted_in_version>3.95.0</efo:obsoleted_in_version>
+        <efo:reason_for_obsolescence>Replaced by Mondo term MONDO_7770749. Use: http://purl.obolibrary.org/obo/MONDO_7770749</efo:reason_for_obsolescence>
         <oboInOwl:hasDbXref>Orphanet:536545</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>EDS VI</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>kyphoscoliotic EDS</oboInOwl:hasExactSynonym>
         <rdfs:comment>Term added in response to Mondo restructuring. To be considered for replacement or obsoletion in EFO also.</rdfs:comment>
-        <rdfs:label>kyphoscoliotic Ehlers-Danlos syndrome</rdfs:label>
+        <rdfs:label>obsolete_kyphoscoliotic Ehlers-Danlos syndrome</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.ebi.ac.uk/efo/EFO_0700133"/>
@@ -673303,9 +673310,9 @@ Use: http://purl.obolibrary.org/obo/HP_0007773</efo:reason_for_obsolescence>
     <!-- http://www.orpha.net/ORDO/Orphanet_98672 -->
 
     <owl:Class rdf:about="http://www.orpha.net/ORDO/Orphanet_98672">
-        <obo:IAO_0100001>http://purl.obolibrary.org/obo/MONDO_0020250</obo:IAO_0100001>
         <efo:obsoleted_in_version>3.44.0</efo:obsoleted_in_version>
-        <efo:reason_for_obsolescence>Replaced with Mondo term. Use: http://purl.obolibrary.org/obo/MONDO_0020250</efo:reason_for_obsolescence>
+        <efo:reason_for_obsolescence>MONDO_0020250 (previous replacement) was obsoleted by Mondo as a grouping term with no replacement (https://github.com/monarch-initiative/mondo/issues/9831). Consider the broader MONDO_0043878 hereditary optic atrophy.</efo:reason_for_obsolescence>
+        <oboInOwl:consider rdf:resource="http://purl.obolibrary.org/obo/MONDO_0043878"/>
         <rdfs:label>obsolete_autosomal dominant optic atrophy</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
