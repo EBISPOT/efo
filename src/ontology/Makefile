@@ -394,16 +394,22 @@ $(BUILDDIR)/class-labels.tsv: $(BUILDDIR)/$(ONT).owl
 $(BUILDDIR)/mondo-mirror-obsoletes.tsv: mirror/mondo.owl
 	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/obsoletes.sparql $@
 
+# Classes gone from the build but still labelled (and not deprecated) in the
+# mirror are reported as removed from EFO rather than obsoleted.
+$(BUILDDIR)/mondo-mirror-labels.tsv: mirror/mondo.owl
+	$(ROBOT) query -f tsv -i $< -q $(SPARQLDIR)/class-labels.sparql $@
+
 ifdef RELEASE_DATE
 RELEASE_DATE_ARG = --date "$(RELEASE_DATE)"
 endif
 
-release_notes: $(BUILDDIR)/bubastis_diff.txt $(BUILDDIR)/previous-obsoletes.tsv $(BUILDDIR)/class-labels.tsv $(BUILDDIR)/mondo-mirror-obsoletes.tsv
+release_notes: $(BUILDDIR)/bubastis_diff.txt $(BUILDDIR)/previous-obsoletes.tsv $(BUILDDIR)/class-labels.tsv $(BUILDDIR)/mondo-mirror-obsoletes.tsv $(BUILDDIR)/mondo-mirror-labels.tsv
 	python3 ../scripts/generate_release_notes.py \
 		--bubastis $(BUILDDIR)/bubastis_diff.txt \
 		--obsoletes reports/obsoletes.tsv \
 		--previous-obsoletes $(BUILDDIR)/previous-obsoletes.tsv \
 		--upstream-obsoletes $(BUILDDIR)/mondo-mirror-obsoletes.tsv \
+		--upstream-labels $(BUILDDIR)/mondo-mirror-labels.tsv \
 		--labels $(BUILDDIR)/class-labels.tsv \
 		--class-counts reports/class-count-by-prefix.tsv \
 		--template ../scripts/release_notes_template.txt \
