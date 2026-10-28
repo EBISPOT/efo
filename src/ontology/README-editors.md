@@ -32,6 +32,12 @@ Mondo-id-switcher.jar uses the tsv template of all mapped terms, mondo_efo_mappi
 If you would like to switch back to editing EFO version 2 after pushing EFO 3 changes or running the EFO 3 pipeline, use `git checkout efo2`. If this does not work, try `git stash` then `git checkout efo2`.
 
 
+## Release reasoner
+
+- The release (`make build/efo.owl`) is classified with **ELK** (`RELEASE_REASONER` in the Makefile) and is the same ontology HermiT built before the switch. ELK only handles OWL 2 EL, so the subsumptions that EFO's definitions entail only under a full OWL 2 DL reasoner (chiefly through `ObjectUnionOf` fillers such as `has_disease_location some (X or part_of some X)`) are asserted explicitly in `components/dl_entailments.owl`, generated from `src/templates/dl_entailments.csv`. Conversely, the handful of subsumptions that ELK derives but HermiT misses (a HermiT bug with inverse properties and property chains, EBISPOT/hermit-rs#5) are listed in `src/templates/elk_pruned.csv` and removed from the ELK output, so the release does not change; delete rows there to let them in once they have been reviewed.
+- `make hermit_check` rebuilds the release with HermiT and fails if it differs from the ELK build (`build/hermit-vs-elk.txt` has the axiom diff, `build/hermit-check/` the named-hierarchy diff with re-routed edges discounted). The `HermiT check` GitHub workflow runs it weekly and on pull requests that touch the template or the Makefile. Run it locally after changing logical definitions; add any new HermiT-only subsumption to `dl_entailments.csv` (or remodel the definition inside OWL 2 EL) and rebuild the component with `make components/dl_entailments.owl`; add any new ELK-only one to `elk_pruned.csv`.
+- Unsatisfiable classes that need a DL reasoner to detect also surface only in `hermit_check`; `robot reason -r ELK` on `efo-edit.owl` remains the quick local check.
+
 ## Release Manager notes
 
 You should only attempt to make a release AFTER EFO2 has been committed and pushed.
