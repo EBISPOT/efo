@@ -172,7 +172,7 @@ edit_diff: efo_edit_git_diff.txt efo_edit_robot_diff.txt
 D2P_SOURCES=hpoa mondo-owl
 D2P_RAW=$(foreach V,$(D2P_SOURCES), components/d2p_$V.ttl)
 
-COMPONENTS=subclasses import_replaced_by anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
+COMPONENTS=subclasses import_replaced_by dl_entailments anatomagram_lung anatomagram_kidney anatomagram_pancreas anatomagram_liver
 COMPONENT_FILES=$(patsubst %, components/%.owl, $(COMPONENTS))
 FOREIGN_AXIOMS=hancestro uberon
 FOREIGN_AXIOM_FILES=$(patsubst %, components/efo_%.owl, $(FOREIGN_AXIOMS))
@@ -186,6 +186,15 @@ components/d2p_%.ttl: mirror/%.owl
 
 components/import_replaced_by.owl: ../templates/import_replaced_by.csv
 	$(ROBOT) template --template $< --prefix $(MONDOPREFIX) --prefix "snap: http://www.ifomis.org/bfo/1.1/snap#" --prefix $(EFOPREFIX) --prefix $(UBERONPREFIX) --prefix $(HPPREFIX) --ontology-iri "http://www.ebi.ac.uk/efo/components/import_replaced_by.owl" -o $@
+
+# Named subsumptions that only a full OWL 2 DL reasoner (HermiT) derives from
+# EFO's own definitions (union fillers and other constructs outside OWL 2 EL),
+# asserted so that the ELK-reasoned release has them. Rows are full IRIs; the
+# label columns are documentation only. Keep in step with `make hermit_check`
+# (Release section); the ELK-only counterpart is ../templates/elk_pruned.csv.
+components/dl_entailments.owl: ../templates/dl_entailments.csv
+	$(ROBOT) template --template $< --ontology-iri "http://www.ebi.ac.uk/efo/components/dl_entailments.owl" \
+		annotate -a rdfs:comment "Named subsumptions that only a full OWL 2 DL reasoner (HermiT) derives from EFO's definitions (constructs outside OWL 2 EL), asserted so that the ELK-reasoned release has them. Generated from src/templates/dl_entailments.csv; checked by make hermit_check." -o $@
 
 # mondo_efo_import pipeline — REMOVED in v3.88.0, replaced by direct mondo_import.owl
 #components/efo-rename.tsv: components/mondo_efo_mappings.tsv components/disease_to_phenotype_merged_signature.tsv
@@ -316,10 +325,57 @@ nuclear_strike: $(SRC) foreign_axiom_diff
 release: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT).obo $(BUILDDIR)/$(ONT).json $(BUILDDIR)/$(ONT)-base.owl
 	cp $^ $(RELEASEDIR)
 	
-$(BUILDDIR)/$(ONT).owl: $(SRC) imports/mondo_import.owl
-	$(ROBOT) merge -i $< \
-	reason -s true -m false -r hermit -v --equivalent-classes-allowed asserted-only \
-	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT).owl -o $@
+# The release is reasoned with ELK (OWL 2 EL) and is the same ontology HermiT
+# built before the switch. Two lists keep it so:
+#  - components/dl_entailments.owl (from ../templates/dl_entailments.csv): the
+#    subsumptions that only a full OWL 2 DL reasoner derives from EFO's
+#    definitions (unions and other non-EL constructs), asserted so that ELK
+#    has them;
+#  - build/elk_pruned.owl (from ../templates/elk_pruned.csv): the subsumptions
+#    ELK derives but HermiT misses (inverse property + property chain,
+#    EBISPOT/hermit-rs#5), unmerged from the ELK output so that the release
+#    does not change. Delete the template rows to let them into the release.
+# `make hermit_check` rebuilds the release with HermiT (no pruning) and fails
+# if the two differ; run it after changing logical definitions.
+RELEASE_REASONER = ELK
+
+# $(1) reasoner, $(2) output, $(3) extra commands between reason and annotate
+define reason_release
+$(ROBOT) merge -i $(SRC) \
+	reason -s true -m false -r $(1) -v --equivalent-classes-allowed asserted-only \
+	$(3) \
+	annotate -a owl:versionInfo `cat version.txt` -a rdfs:comment `date +%Y-%m-%d` -O $(BASE)/$(ONT).owl -V  $(BASE)/releases/v`cat version.txt`/$(ONT).owl -o $(2)
+endef
+
+# The pruning file keeps the template's class declarations; unmerging them is
+# harmless because every class involved is re-declared by its other axioms.
+$(BUILDDIR)/elk_pruned.owl: ../templates/elk_pruned.csv
+	$(ROBOT) template --template $< --ontology-iri "http://www.ebi.ac.uk/efo/build/elk_pruned.owl" -o $@
+
+$(BUILDDIR)/$(ONT).owl: $(SRC) imports/mondo_import.owl $(BUILDDIR)/elk_pruned.owl
+	$(call reason_release,$(RELEASE_REASONER),$@,unmerge -i $(BUILDDIR)/elk_pruned.owl)
+
+# Full-DL check of the release: the HermiT build must be identical to the ELK
+# build (both carry the same date comment when built on the same day). Any
+# difference is a subsumption to add to or drop from ../templates/dl_entailments.csv
+# (HermiT-only) or ../templates/elk_pruned.csv (ELK-only), or a modelling
+# problem to fix at source; unsatisfiable classes that only HermiT can detect
+# fail the HermiT build itself. Outputs: build/hermit-vs-elk.txt
+# (robot diff) and build/hermit-check/ (named-hierarchy diff, re-routed edges
+# discounted). Diff lines on blank nodes (_:genid) are ignored: the anonymous
+# obsoletion stubs left by the 3.77.0 OBA migration get fresh node ids on every
+# parse and so always differ, without any axiom being different.
+$(BUILDDIR)/$(ONT)-hermit.owl: $(SRC) imports/mondo_import.owl
+	$(call reason_release,hermit,$@,)
+
+hermit_check: $(BUILDDIR)/$(ONT).owl $(BUILDDIR)/$(ONT)-hermit.owl
+	$(ROBOT) diff --left $(BUILDDIR)/$(ONT)-hermit.owl --right $(BUILDDIR)/$(ONT).owl -o $(BUILDDIR)/hermit-vs-elk.txt
+	ROBOT=$(ROBOT) python3 ../scripts/reasoner_hierarchy_diff.py $(BUILDDIR)/$(ONT)-hermit.owl $(BUILDDIR)/$(ONT).owl --out-dir $(BUILDDIR)/hermit-check
+	@if grep -E '^[-+] ' $(BUILDDIR)/hermit-vs-elk.txt | grep -qv '_:genid'; then \
+		echo "hermit_check: the HermiT and ELK releases differ - see $(BUILDDIR)/hermit-vs-elk.txt and $(BUILDDIR)/hermit-check/"; exit 1; \
+	else \
+		echo "hermit_check: the HermiT and ELK releases are identical"; \
+	fi
 
 $(BUILDDIR)/$(ONT).obo: $(BUILDDIR)/$(ONT).owl
 	$(ROBOT) annotate -i $< --ontology-iri http://www.ebi.ac.uk/efo/efo.owl --version-iri http://www.ebi.ac.uk/efo/releases/v`cat version.txt`/efo.owl \
